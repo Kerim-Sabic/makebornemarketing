@@ -72,7 +72,7 @@ export default function Calendar({ params }: RouteProps) {
                 return (
                   <a
                     key={d.date}
-                    href={href('calendar', d.date)}
+                    href={href('library', 'calendar', d.date)}
                     onClick={() => setView('day')}
                     className={`daycell ${d.date === today ? 'is-today' : ''} ${d.date === selected ? 'is-selected' : ''}`}
                     aria-current={d.date === selected ? 'date' : undefined}
@@ -138,7 +138,7 @@ export default function Calendar({ params }: RouteProps) {
             {weeks[day.week - 1].map((d) => (
               <Card key={d.date} className={`card-flat ${d.date === selected ? 'card-accent' : ''}`}>
                 <div className="row-between">
-                  <a href={href('calendar', d.date)} onClick={() => setView('day')}>
+                  <a href={href('library', 'calendar', d.date)} onClick={() => setView('day')}>
                     <b>
                       {fmtDate(d.date, { weekday: 'long', day: 'numeric', month: 'short' })} · day {d.day}
                     </b>

@@ -44,26 +44,42 @@
 | Surface prefix | Used for |
 |---|---|
 | `tt-` | Brand TikTok posts (`tt-0412`), bio (`tt-bio`) |
-| `ig-` | Instagram posts and DMs (`ig-0031-site`), bio links (`ig-bio-client`) |
+| `ig-` | Instagram posts and DMs (`ig-0031-site`), bio links (`ig-bio`, `ig-bio-site`), paid boosts of our own Reels (`ig-<post>-b`), DM automation links (`ig-dm-site`), daily stories (`ig-s1103-deck`), highlights (`ig-hl-start`) |
 | `yt-` | YouTube Shorts and tutorials (`yt-0005`), channel links (`yt-bio`) |
 | `li-` | Founder LinkedIn posts (`li-0107`), profile (`li-bio`), company page (`li-page`) |
 | `x-` | Founder X posts (`x-0210`), bio (`x-bio`) |
-| `c-` | Paid and affiliate creators (`c-<handle>`) |
+| `c-` | Paid and affiliate creators (`c-<handle>`), their Meta partnership ad (`c-<handle>-p`) and TikTok Spark ad (`c-<handle>-s`) |
+| `g-` | Google Search ads, one code per ad group (`g-brand`, `g-decks`) |
 | `cr-` | Whop Content Rewards campaigns (`cr-2026-12`) |
 | `ph-` | Product Hunt (`ph-soon`, later `ph-images`) |
-| `taaft`, `uneed`, `alt`, `saashub`, `microlaunch`, `futuretools` | Directories |
+| `taaft`, `uneed`, `alt`, `saashub`, `microlaunch`, `futuretools`, `rundown` | Directories (one form only: `outreach.json` `directoryListing.codes` uses the same codes; there are no `dir-` codes) |
 | `ih-`, `rd-`, `com-` | Indie Hackers, Reddit, the agency community |
 | `press-<outlet>` | Press (`press-netokracija`) |
 
 **`utm_source`** (from strategy §12; additions marked +):
-`tiktok`, `instagram`, `youtube`, `linkedin`, `x`, `producthunt`, `taaft`, `uneed`, `reddit`, `indiehackers`, `press-<outlet>`, `review_page`, `badge`, `deck_share`, `c-<handle>`; + `alternativeto`, `saashub`, `microlaunch`, `futuretools`, `community-<name>`, `content_rewards`, `changelog`, `customer`, `portal`, `github_readme`.
+`tiktok`, `instagram`, `youtube`, `linkedin`, `x`, `producthunt`, `taaft`, `uneed`, `reddit`, `indiehackers`, `press-<outlet>`, `review_page`, `badge`, `deck_share`, `c-<handle>`; + `alternativeto`, `saashub`, `microlaunch`, `futuretools`, `community-<name>`, `content_rewards`, `changelog`, `customer`, `portal`, `github_readme`, `google` (Google Search ads), `rundown`.
 
-**`utm_medium`** (strategy §12): `organic`, `dm`, `bio`, `creator`, `affiliate`, `spark`, `partnership`, `directory`, `launch`, `press`, `product_loop`, `email`, `referral`.
+**`utm_medium`** (strategy §12; additions marked +): `organic`, `dm`, `bio`, `creator`, `affiliate`, `spark`, `partnership`, `directory`, `launch`, `press`, `product_loop`, `email`, `referral`; + `paid` (a boost of our own post that is not Spark or partnership, for example a Meta boost of our own Reel), `cpc` (Google Search ads).
 
 **`utm_campaign`** (strategy §12; additions marked +): `launch-2026-10`, `images-beat`, `domains-beat`, `agency-beat`, `leads-beat`, `bf-2026`, `day30`, `day90`; + `always-on` (bios and product loops), `creators-w1`, `creators-w2`, `cr-2026-12` (and later months), `topups-beat`, `github-beat`.
 Beat campaigns (`images-beat`, `topups-beat`, `domains-beat`, `agency-beat`, `leads-beat`, `github-beat`) are **beat:<feature>** campaigns: they exist only after that feature is live and passes the gate.
 
 **`utm_content`:** `<surface>-<post#>-<hook code>`, for example `tt-0412-r2`. Hook codes come from the hook bank (strategy §4.3: `r1`, `r2`, `f1`, `f2`, `f4`, `a3`, `d1`, `d3`, `b4`, `p2`, `p3`). For DMs the last part is the keyword: `ig-0031-site`.
+
+**Registered code families (26 Oct, for `content/ads-playbook.md` and `content/instagram-playbook.md`):**
+
+| Code | Use | Redirects with |
+|---|---|---|
+| `ig-<post>-b` | Meta boost of our own Reel (cards A01 fallback, A04) | `utm_source=instagram&utm_medium=paid&utm_content=ig-<post>-<hook>` |
+| `c-<handle>-s` | TikTok Spark ad of a creator's post (card A02) | `utm_source=tiktok&utm_medium=spark&utm_campaign=creators-w1&utm_content=c-<handle>-v1` |
+| `c-<handle>-p` | Meta partnership ad of a creator's Reel (card A01) | `utm_source=instagram&utm_medium=partnership&utm_campaign=creators-w1&utm_content=c-<handle>-v1` |
+| `g-<adgroup>` | Google Search ad group (`g-brand`, `g-decks`; cards A05, A06) | `utm_source=google&utm_medium=cpc&utm_campaign=always-on&utm_content=g-<adgroup>-<n>` |
+| `ig-dm-*` | Instagram DM automation replies (`ig-dm-site`, `ig-dm-deck`, `ig-dm-book`, `ig-dm-client`) | `utm_source=instagram&utm_medium=dm&utm_campaign=launch-2026-10` |
+| `ig-s<mmdd>-*` | Daily Instagram stories (`ig-s1103-deck`) | `utm_source=instagram&utm_medium=organic&utm_content=ig-s<mmdd>-<keyword>` |
+| `ig-hl-*` | Instagram highlights (`ig-hl-start`, `ig-hl-site`, `ig-hl-pricing`) | `utm_source=instagram&utm_medium=bio&utm_campaign=always-on` |
+| `ig-bio` | Instagram bio link 1 (client work); links 2-5 are `ig-bio-site`, `ig-bio-deck`, `ig-bio-book`, `ig-bio-review` | `utm_source=instagram&utm_medium=bio&utm_campaign=always-on` |
+
+Story stickers for C-series creatives use the creative's own code from `data/creatives.json` (`ig-c15-client`, `ig-c22-deck`, `ig-c25-book`).
 
 **Partner codes:** a `c-<handle>` redirect attaches that creator's affiliate code on the server. The public link never shows `?a=`. The code is carried through sign-up in the URL (the way the product already carries the brief and plan), stored on the account at creation, and written to the Makeborne-created checkout as `affiliate_code` and `metadata.mb_aff` (strategy §11 ask 1 and 9).
 
@@ -84,6 +100,8 @@ Beat campaigns (`images-beat`, `topups-beat`, `domains-beat`, `agency-beat`, `le
 | Creator on commission only (ch-creators) | `/go/c-<handle>` | `utm_medium=affiliate`, otherwise the same |
 | TikTok Spark boost of post 0412 (ch-boosts) | `/go/tt-0412-s` | `utm_source=tiktok&utm_medium=spark&utm_campaign=launch-2026-10&utm_content=tt-0412-r2` |
 | Meta partnership ad (ch-boosts) | `/go/c-<handle>-p` | `utm_source=instagram&utm_medium=partnership&utm_campaign=creators-w1&utm_content=c-<handle>-v1` |
+| Meta boost of our own Reel V05 (ch-boosts) | `/go/ig-v05-b` | `utm_source=instagram&utm_medium=paid&utm_campaign=launch-2026-10&utm_content=ig-v05-f2` |
+| Google Search brand ad (ch-boosts, from revenue only) | `/go/g-brand` | `utm_source=google&utm_medium=cpc&utm_campaign=always-on&utm_content=g-brand-1` |
 | Content Rewards (ch-contentrewards, from revenue only) | `/go/cr-2026-12` | `utm_source=content_rewards&utm_medium=creator&utm_campaign=cr-2026-12` |
 | TAAFT listing (ch-directories) | `/go/taaft` | `utm_source=taaft&utm_medium=directory&utm_campaign=launch-2026-10` |
 | AlternativeTo (ch-directories) | `/go/alt` | `utm_source=alternativeto&utm_medium=directory&utm_campaign=launch-2026-10` |
@@ -112,7 +130,7 @@ Beat campaigns (`images-beat`, `topups-beat`, `domains-beat`, `agency-beat`, `le
 | Platform | Setup | Bio links |
 |---|---|---|
 | TikTok | **Business account** (a clickable bio link needs a business account or 1,000 followers; some countries add business-registration rules [S, Buffer 9 Dec 2025]; BiH eligibility [U]). Commercial Music Library only | One link: `/go/tt-bio`. Bio text: "The AI studio for client work. From $20/month + tax. Full refund until you use credits." CTA in videos: "DM me SITE", answered by hand (ManyChat's TikTok channel eligibility for BiH is unknown [U]) |
-| Instagram | **Professional account**. Up to 5 bio links (widely reported, not re-confirmed this pass [U]) | 1 `/go/ig-bio-client` (client work), 2 `/go/ig-bio-site`, 3 `/go/ig-bio-deck`, 4 `/go/ig-bio-book`, 5 `/go/ig-bio-review` (the public "play the client" sample review link, only once ask 5 ships). Keyword DMs (SITE, DECK, BOOK, CLIENT) reply with a post-specific `/go/ig-<post#>-<keyword>` link, 3 copyable briefs, a 30 s uncut build, the refund line and "Reply STOP to stop" |
+| Instagram | **Professional account**. Up to 5 bio links (widely reported, not re-confirmed this pass [U]) | 1 `/go/ig-bio` (client work), 2 `/go/ig-bio-site`, 3 `/go/ig-bio-deck`, 4 `/go/ig-bio-book`, 5 `/go/ig-bio-review` (the public "play the client" sample review link, only once ask 5 ships). Keyword DMs (SITE, DECK, BOOK, CLIENT) reply with a post-specific `/go/ig-<post#>-<keyword>` link, 3 copyable briefs, a 30 s uncut build, the refund line and "Reply STOP to stop" |
 | Founder LinkedIn | Profile website field + Featured section | `/go/li-bio` to client work; Featured: the sample review link (when live) and one real build video. Company page: `/go/li-page` |
 | Founder X | Bio + pinned post | `/go/x-bio`; post links go in the first reply as `/go/x-<id>` |
 | YouTube | Channel links + every description | `/go/yt-bio`; each video gets `/go/yt-<video#>` on the first line of the description |
@@ -192,7 +210,7 @@ Badge on published sites, the review page after a decision, the client portal fo
 Apply in order; the first match wins.
 
 1. `utm_medium` is `creator` or `affiliate` and `utm_source` starts with `c-` → `ch-creators`; `utm_source=content_rewards` → `ch-contentrewards`
-2. `utm_medium` is `spark` or `partnership` → `ch-boosts`
+2. `utm_medium` is `spark`, `partnership`, `paid` or `cpc` → `ch-boosts`
 3. `utm_medium` is `product_loop` or `referral` → `ch-loops`
 4. `utm_medium=email` → `ch-email`
 5. `utm_medium=directory` → `ch-directories`

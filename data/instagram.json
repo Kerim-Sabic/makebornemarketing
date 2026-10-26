@@ -1,0 +1,1327 @@
+{
+ "meta": {
+  "version": "2026-10-26",
+  "purpose": "Instagram @makeborne set-up and operating system for the 90-day plan. Machine-readable twin of content/instagram-playbook.md.",
+  "planOfRecord": "plan/strategy.md (Instagram = the DM conversion engine, 5 Reels + 2 carousels a week). Dates and ids follow data/calendar.json; production of renders and covers is coordinated by id with data/production.json.",
+  "labels": "[F] read at the source on 26 Oct 2026, [S] secondary, [V] vendor, [E] estimate, [A] assumption, [O] owner decision, [U] unverified",
+  "status": "Nothing has been posted, connected or bought. The founder posts; the owner connects tools and approves payments.",
+  "timeZone": "Europe/Sarajevo (CET, UTC+1). From 1 Nov: UK = CET - 1 h, US Eastern = CET - 6 h."
+ },
+ "profileObserved": {
+  "readOn": "2026-10-26",
+  "source": "https://www.instagram.com/makeborne/ (logged out)",
+  "name": "Makeborne | Websites, Books & Slides",
+  "followers": 2,
+  "following": 0,
+  "bio": "Websites. Digital Products. Presentations. Make something worth sharing.",
+  "link": "makeborne.com",
+  "postsVisible": false,
+  "highlightsVisible": false,
+  "verifiedMarkReported": true,
+  "note": "Header public; no posts or highlights visible to a logged-out reader. Confirm the verified mark in the app."
+ },
+ "profile": {
+  "username": "@makeborne (keep)",
+  "accountType": "Professional, Business; linked to the Makeborne Facebook Page; 2FA with an authenticator app",
+  "nameField": {
+   "recommended": "Makeborne · AI Website Builder for Client Work",
+   "alternative": "Makeborne | AI Websites, Decks & Books",
+   "why": "The name field is searchable; \"AI website builder\" is the highest-volume phrase in our space (40,500 US searches a month [V])."
+  },
+  "bios": [
+   {
+    "id": "bio-1",
+    "recommended": true,
+    "use": "Now (Studio-first)",
+    "text": "The AI studio for client work.\nWebsites, decks and books from one brief + client review links.\nFrom $20/mo + tax. Full refund until you use credits.",
+    "chars": 148
+   },
+   {
+    "id": "bio-2",
+    "recommended": false,
+    "use": "Week-3 test if link taps per profile visit stay under 10%",
+    "text": "Build it. Send the link. Get the yes.\nAI websites, pitch decks and books for freelancers and small agencies.\nComment SITE on any Reel for the link.",
+    "chars": 147
+   },
+   {
+    "id": "bio-3",
+    "recommended": false,
+    "use": "When press or the Day-N series drives visits",
+    "text": "One sentence in. A finished site, deck or book out.\nClient review links built in. Made in Sarajevo.\nFrom $20/mo + tax. Refund until you use credits.",
+    "chars": 148
+   }
+  ],
+  "links": [
+   {
+    "order": 1,
+    "title": "Start here: client work",
+    "url": "makeborne.com/go/ig-bio",
+    "destination": "Home or /pricing until ask 7, then /client-work",
+    "note": "Registered as ig-bio in tracking.md (the one form; ig-bio-client is not used)"
+   },
+   {
+    "order": 2,
+    "title": "Websites",
+    "url": "makeborne.com/go/ig-bio-site",
+    "destination": "/sites (home until ask 7)"
+   },
+   {
+    "order": 3,
+    "title": "Decks (.pptx)",
+    "url": "makeborne.com/go/ig-bio-deck",
+    "destination": "/decks"
+   },
+   {
+    "order": 4,
+    "title": "Books and guides",
+    "url": "makeborne.com/go/ig-bio-book",
+    "destination": "/books"
+   },
+   {
+    "order": 5,
+    "title": "Play the client",
+    "url": "makeborne.com/go/ig-bio-review",
+    "destination": "Public sample review link",
+    "hold": "Only once ask 5 ships; leave empty until then"
+   }
+  ],
+  "profilePhoto": {
+   "upload": "1080x1080 PNG",
+   "design": "Flat Makeborne \"m\" mark only, ink #18181B on #F8F7F4, centred, about 55% of the circle diameter, no gradient or shadow",
+   "check": "Legible at 40 px in light and dark mode"
+  },
+  "category": "Software (displayed on the profile)",
+  "contactButtons": "Email only (the public support inbox). No phone, no WhatsApp, no address, no action buttons.",
+  "settings": [
+   "Messages -> Connected tools -> Allow access to messages: on",
+   "Message requests from everyone; story replies from everyone",
+   "Saved replies /site /deck /book /client /stop",
+   "Hidden words on for abuse and spam; never filter SITE, DECK, BOOK or CLIENT",
+   "Comments from everyone",
+   "Branded content tools on; require approval for paid-partner tags",
+   "Remixing and Reel downloads on",
+   "Activity status off",
+   "Meta Business Suite: owner and founder each with their own login"
+  ],
+  "metaVerified": "If the verified mark is a paid subscription: keep it from revenue (not the $1,000); about $14.99+ a month per account in 2026 [S]. Badge, impersonation protection and human support; no promised reach. Owner decision O-IG2.",
+  "highlights": [
+   {
+    "order": 1,
+    "name": "Start here",
+    "cover": "Play triangle (the one gradient accent)",
+    "stories": [
+     "V01",
+     "What it makes (3 output stills)",
+     "How it works",
+     "Price card",
+     "Refund rule"
+    ],
+    "link": "makeborne.com/go/ig-hl-start"
+   },
+   {
+    "order": 2,
+    "name": "Client work",
+    "cover": "Two speech bubbles",
+    "stories": [
+     "V05",
+     "C05 slides",
+     "C02",
+     "C15",
+     "C09 (once ask 5 is live)"
+    ],
+    "link": "makeborne.com/go/ig-c15-client"
+   },
+   {
+    "order": 3,
+    "name": "Sites",
+    "cover": "Browser window",
+    "stories": [
+     "Build-of-the-day site stories",
+     "V02",
+     "V16",
+     "C06 slides"
+    ],
+    "link": "makeborne.com/go/ig-hl-site"
+   },
+   {
+    "order": 4,
+    "name": "Decks",
+    "cover": "Bar chart",
+    "stories": [
+     "C22",
+     "V03",
+     "V06",
+     "C18 slides"
+    ],
+    "link": "makeborne.com/go/ig-c22-deck"
+   },
+   {
+    "order": 5,
+    "name": "Books",
+    "cover": "Open book",
+    "stories": [
+     "C25",
+     "V15",
+     "C23 pages"
+    ],
+    "link": "makeborne.com/go/ig-c25-book"
+   },
+   {
+    "order": 6,
+    "name": "Pricing",
+    "cover": "Tag",
+    "stories": [
+     "Plans and credits",
+     "Most a request can cost is shown first",
+     "Refund rule",
+     "Yearly is 20% off"
+    ],
+    "link": "makeborne.com/go/ig-hl-pricing"
+   },
+   {
+    "order": 7,
+    "name": "FAQ",
+    "cover": "Question mark",
+    "stories": [
+     "Templates?",
+     "Own domain? (not yet)",
+     "Images? (coming soon)",
+     "What does my client see?",
+     "If I cancel?",
+     "Who are you?"
+    ],
+    "link": null
+   },
+   {
+    "order": 8,
+    "name": "Day N",
+    "cover": "Calendar",
+    "stories": [
+     "Day 1",
+     "Day 5",
+     "Day 7",
+     "Day 14",
+     "weekly"
+    ],
+    "link": null
+   }
+  ],
+  "highlightCoverSpec": "1080x1920 PNG, #F8F7F4 canvas, one ink line icon centred in the middle 1080x1080, no text",
+  "pins": [
+   {
+    "slot": 1,
+    "contentId": "V01",
+    "pinOn": "2026-10-26",
+    "replaceWith": "Keep unless the home page changes"
+   },
+   {
+    "slot": 2,
+    "contentId": "C05",
+    "pinOn": "2026-10-31",
+    "interim": "C06 from 29 Oct",
+    "replaceWith": "The first Instagram post with a tracked Studio sale"
+   },
+   {
+    "slot": 3,
+    "contentId": "V05",
+    "pinOn": "2026-10-28",
+    "replaceWith": "V12 the day after ask 5 ships"
+   }
+  ]
+ },
+ "conversionGrid": [
+  {
+   "position": 1,
+   "date": "2026-10-26",
+   "time": "12:05",
+   "contentId": "V01",
+   "format": "Reel 17 s",
+   "cover": "Frame 0 of the v9 Fly-over (real home page lifting); text \"We launched today.\"",
+   "keyword": "SITE",
+   "dmLink": "makeborne.com/go/ig-v01-site"
+  },
+  {
+   "position": 2,
+   "date": "2026-10-27",
+   "time": "13:15",
+   "contentId": "V02",
+   "format": "Reel 32 s",
+   "cover": "The finished bakery site on a phone; text \"One sentence. Whole website.\"",
+   "keyword": "SITE",
+   "dmLink": "makeborne.com/go/ig-v02-site"
+  },
+  {
+   "position": 3,
+   "date": "2026-10-28",
+   "time": "13:15",
+   "contentId": "V05",
+   "format": "Reel 28 s",
+   "cover": "Phone with \"Approve this version\"; text \"Make it pop. (9th time)\"",
+   "keyword": "CLIENT",
+   "dmLink": "makeborne.com/go/ig-v05-client"
+  },
+  {
+   "position": 4,
+   "date": "2026-10-29",
+   "time": "18:00",
+   "contentId": "C06",
+   "format": "Carousel, 7 slides, music on",
+   "cover": "Slide 1 type card \"5 websites. 5 sentences.\"",
+   "keyword": "SITE",
+   "dmLink": "makeborne.com/go/ig-c06-site"
+  },
+  {
+   "position": 5,
+   "date": "2026-10-30",
+   "time": "13:15",
+   "contentId": "V07",
+   "format": "Reel 40 s",
+   "cover": "Lead finder results, names blurred, timer chip; text \"20 businesses. Before lunch.\" (use the real time)",
+   "keyword": "CLIENT",
+   "dmLink": "makeborne.com/go/ig-v07-client"
+  },
+  {
+   "position": 6,
+   "date": "2026-10-31",
+   "time": "12:00",
+   "contentId": "C05",
+   "format": "Carousel, 8 slides, music on",
+   "cover": "Slide 1 type card \"How I get a client's yes without one e-mail.\"",
+   "keyword": "CLIENT",
+   "dmLink": "makeborne.com/go/ig-c05-client"
+  },
+  {
+   "position": 7,
+   "date": "2026-11-01",
+   "time": "19:00",
+   "contentId": "V09",
+   "format": "Reel 60 s",
+   "cover": "Founder + Day 7 numbers card; text \"Day 7. Every number.\"",
+   "keyword": "CLIENT",
+   "dmLink": "makeborne.com/go/ig-v09-client"
+  },
+  {
+   "position": 8,
+   "date": "2026-11-02",
+   "time": "13:15",
+   "contentId": "V44",
+   "format": "Reel 40 s",
+   "cover": "Founder at the desk in Sarajevo; text \"Who's behind this?\"",
+   "keyword": "CLIENT",
+   "dmLink": "makeborne.com/go/ig-v44-client"
+  },
+  {
+   "position": 9,
+   "date": "2026-11-03",
+   "time": "20:15 (time test)",
+   "contentId": "V12 or V18",
+   "format": "Reel 25 s or 15 s",
+   "cover": "V12: sample review page with a comment pin, \"Be my client.\" V18: split screen, \"40 e-mails vs one link.\"",
+   "keyword": "CLIENT",
+   "dmLink": "makeborne.com/go/ig-v12-client or makeborne.com/go/ig-v18-client"
+  },
+  {
+   "position": 10,
+   "date": "2026-11-04",
+   "time": "20:15 (time test)",
+   "contentId": "V16",
+   "format": "Reel 15 s",
+   "cover": "First of the five sites, full bleed; text \"5 sites. 5 sentences.\"",
+   "keyword": "SITE",
+   "dmLink": "makeborne.com/go/ig-v16-site"
+  },
+  {
+   "position": 11,
+   "date": "2026-11-05",
+   "time": "18:00",
+   "contentId": "C18",
+   "format": "Carousel, 8 slides, music on",
+   "cover": "Slide 1 type card \"Notes in. An editable deck out.\"",
+   "keyword": "DECK",
+   "dmLink": "makeborne.com/go/ig-c18-deck"
+  },
+  {
+   "position": 12,
+   "date": "2026-11-06",
+   "time": "13:15",
+   "contentId": "V15",
+   "format": "Reel 24 s",
+   "cover": "Finished typographic book cover; text \"Notes app to book.\"",
+   "keyword": "BOOK",
+   "dmLink": "makeborne.com/go/ig-v15-book"
+  }
+ ],
+ "conversionGridNote": "All 12 are live by Fri 6 Nov, before wave-1 creators (from 10 Nov) and boost slot A (from 9 Nov). Covers: title inside the centred 1080x1350 block so it survives the 3:4 grid, the 4:5 feed and a 1:1 check.",
+ "cadence": {
+  "reelsPerWeek": 5,
+  "carouselsPerWeek": 2,
+  "storiesPerWeekday": "3-5",
+  "storiesPerWeekendDay": "1-2",
+  "trialReelsPerWeek": "up to 3 (from week 2, not on the grid, not counted)",
+  "reelDays": "Mon, Tue, Wed, Fri 13:15 (test 20:15 Tue/Wed in week 2) + Sun 19:00",
+  "carouselDays": "Thu 18:00, Sat 12:00",
+  "storyTimes": [
+   "09:00",
+   "13:20",
+   "20:30"
+  ],
+  "cutOrder": "If time breaks: cut trial reels, then the evening Story; never the comment replies"
+ },
+ "timeWindows": [
+  {
+   "slot": "Midday Reel",
+   "cet": "13:15",
+   "uk": "12:15",
+   "usEastern": "07:15 (from 1 Nov)",
+   "use": "Default (calendar)"
+  },
+  {
+   "slot": "Evening Reel (test)",
+   "cet": "20:15",
+   "uk": "19:15",
+   "usEastern": "14:15 (from 1 Nov)",
+   "use": "Week 2 Tue and Wed; week 3 Mon and Fri; adopt the winner from week 4 if 20%+ better"
+  },
+  {
+   "slot": "Carousel weekday",
+   "cet": "18:00",
+   "uk": "17:00",
+   "usEastern": "12:00",
+   "use": "Thursday"
+  },
+  {
+   "slot": "Carousel weekend",
+   "cet": "12:00",
+   "uk": "11:00",
+   "usEastern": "06:00",
+   "use": "Saturday"
+  },
+  {
+   "slot": "Sunday Reel",
+   "cet": "19:00",
+   "uk": "18:00",
+   "usEastern": "13:00",
+   "use": "Winner re-cut / Day N"
+  },
+  {
+   "slot": "Trial reels",
+   "cet": "21:00",
+   "uk": "20:00",
+   "usEastern": "15:00",
+   "use": "Hook tests (cannot be scheduled [S])"
+  }
+ ],
+ "timeEvidence": [
+  "Sprout Social (31 Mar 2026): Instagram strongest Mon-Thu midday to evening, Wednesday 12:00-21:00 viewer time [F]",
+  "Buffer (9.6M posts, 2026): top Thu 09:00, Wed 12:00, Wed 18:00; evenings 18:00-23:00 strongest [S]",
+  "Later (2024-25): 03:00-06:00 [S]. Studies disagree; our own Insights (Most active times) override them from about 100 followers"
+ ],
+ "trialReels": {
+  "use": "Hook tests only: same body, new first 2 seconds from the hook bank",
+  "autoShare": "off",
+  "promoteRule": "At 72 h, 50%+ above the original's 24 h reach and equal or better sends per reach -> share to the grid in the Sunday winner slot",
+  "eligibility": "A follower minimum is reported (one guide: 200) [S/U]"
+ },
+ "storyTemplates": [
+  "Build of the day",
+  "Poll",
+  "Question box",
+  "Behind the scenes",
+  "Keyword prompt (C15, C22, C25)",
+  "Play the client (C09, once live)",
+  "Reel share",
+  "Day N numbers"
+ ],
+ "storyLinkCodes": "Daily stories makeborne.com/go/ig-s<mmdd>-<keyword>; C-series stories use their creatives.json goLink",
+ "broadcastChannel": "Not now; revisit at 1,000 followers as a weekly changelog channel",
+ "collabs": [
+  "Wave-1 creators: collab invite + Paid partnership label + #ad; accept only reviewed posts above our median 3-second hold",
+  "Customers: after written consent (t19), week 7 onwards",
+  "Agency community host: workshop recap if allowed"
+ ],
+ "commentRules": [
+  "Founder in the app for 60 minutes after each post",
+  "Reply to every human comment within 15 minutes, with a question back",
+  "Keyword comments get the automated DM plus one of 5 rotating public replies",
+  "Pin up to 3 comments: our CTA comment, the best question with our answer, a real freelancer reaction",
+  "Objections get the strategy 4.4 answer word for word; never delete criticism",
+  "Reply with a Reel to the best comment once a week",
+  "After 7 days the DM tool cannot private-reply: answer \"DM me SITE\""
+ ],
+ "publicReplyVariants": [
+  "Sent! Check your message requests.",
+  "In your DMs now.",
+  "Just sent the 3 briefs.",
+  "Check your inbox: link and briefs are there.",
+  "Done. If you don't see it, look in Requests."
+ ],
+ "pinnedCtaComment": "Comment SITE and I'll DM you the link and 3 briefs. Sites publish on a Makeborne address. From $20/month + tax, full refund until you use credits.",
+ "engagementRoutine": {
+  "when": "13:30-14:00 CET weekdays, 15 min weekends",
+  "steps": [
+   "5 min: our own new comments and DMs",
+   "15 min: 10 thoughtful comments (15+ words, no links) on Engage-collection posts",
+   "5 min: react to 5 Stories from the same accounts",
+   "5 min: follow 3-5 relevant new accounts"
+  ],
+  "buckets": [
+   {
+    "who": "Freelance web designers and small studios",
+    "search": [
+     "freelance web designer",
+     "web design business",
+     "webflow designer",
+     "framer designer",
+     "wordpress freelancer"
+    ]
+   },
+   {
+    "who": "Agency owners and \"sell websites\" educators",
+    "search": [
+     "web design agency owner",
+     "sell websites",
+     "agency growth",
+     "client acquisition web design"
+    ]
+   },
+   {
+    "who": "Consultants and deck makers",
+    "search": [
+     "pitch deck tips",
+     "consulting tips",
+     "powerpoint tips",
+     "presentation design"
+    ]
+   },
+   {
+    "who": "Coaches and guide sellers",
+    "search": [
+     "lead magnet",
+     "digital products for coaches",
+     "ebook for coaches"
+    ]
+   },
+   {
+    "who": "AI-tools creators",
+    "search": [
+     "ai tools for business",
+     "ai website builder review"
+    ]
+   }
+  ],
+  "never": [
+   "Cold-DM pitches",
+   "Follow/unfollow",
+   "Engagement pods",
+   "Comment bots",
+   "Buying followers or views",
+   "Promoting on competitors' accounts"
+  ]
+ },
+ "captions": {
+  "formula": [
+   "Line 1 (<=125 characters): the keyword phrase + the payoff",
+   "Lines 2-3: what happens on screen, honestly (real time or sped up; a Makeborne address)",
+   "Line 4: who it is for + the plan",
+   "Line 5: From $20/month + tax. Full refund until you use credits.",
+   "Line 6: the keyword CTA",
+   "Line 7: 3-4 hashtags"
+  ],
+  "keywords": {
+   "icp1": [
+    "client approval",
+    "website for clients",
+    "web design client",
+    "freelance web designer",
+    "website review link"
+   ],
+   "icp2": [
+    "AI pitch deck",
+    "pitch deck from notes",
+    "editable PowerPoint deck",
+    "presentation maker"
+   ],
+   "icp3": [
+    "lead magnet",
+    "ebook from notes",
+    "client welcome guide",
+    "notes to book"
+   ],
+   "icp4": [
+    "website for my business",
+    "small business website",
+    "AI website builder"
+   ]
+  },
+  "hashtags": {
+   "limit": 5,
+   "use": "3-4 specific tags",
+   "evidence": "Instagram limits posts and Reels to 5 hashtags since Dec 2025; first-comment tags count towards the 5 [S, socialmediatoday.com]"
+  },
+  "ctaByFormat": [
+   {
+    "formats": "Site speedruns and slideshows (V02, V16, V22, V29, C06)",
+    "cta": "Comment SITE and I'll send the brief I used.",
+    "keyword": "SITE"
+   },
+   {
+    "formats": "Client-work POVs, tutorials, founder posts (V05, V07, V12, V13, V18, V19, V44, V09, C05)",
+    "cta": "Comment CLIENT for the workflow and 3 demo briefs.",
+    "keyword": "CLIENT"
+   },
+   {
+    "formats": "Decks (V03, V06, V14, C16, C18)",
+    "cta": "Comment DECK for the brief and the .pptx.",
+    "keyword": "DECK"
+   },
+   {
+    "formats": "Books (V15, V27, C23, C26)",
+    "cta": "Comment BOOK for the brief and the PDF.",
+    "keyword": "BOOK"
+   }
+  ]
+ },
+ "dmAutomation": {
+  "toolDecision": [
+   {
+    "option": "A. Meta native comment-to-message",
+    "cost": "$0",
+    "note": "Try first; reported limits: up to 5 keywords per automation, desktop set-up, no story trigger or follow-up logic [S/U]"
+   },
+   {
+    "option": "B. ManyChat",
+    "cost": "Free tier reportedly 25 contacts since 2 Mar 2026; paid from about $15/month [S]; pay from line b7 ($30)",
+    "note": "Use if A is missing or outgrown; check the price on ManyChat's own page"
+   },
+   {
+    "option": "C. By hand",
+    "cost": "Founder time",
+    "note": "Week-1 fallback and outage plan"
+   }
+  ],
+  "ownerDecision": "O-IG1",
+  "setupSteps": [
+   "Professional account linked to the Page; Allow access to messages on",
+   "Owner connects the tool through Meta's own login dialog",
+   "One comment automation per post and keyword (contains, any case, typo list)",
+   "Story-reply triggers for C15, C22, C25",
+   "DM keyword triggers with ig-dm-<keyword> codes",
+   "UNCUT follow-up, STOP handling and opted-out tag",
+   "Human hand-off with an out-of-hours message",
+   "Test from a second account before going live",
+   "Export counts only (dm_keyword_received); never usernames into this repo"
+  ],
+  "flows": [
+   {
+    "keyword": "SITE",
+    "trigger": "Comment containing \"site\" (any case) on a post, a story reply, or a direct message",
+    "link": "makeborne.com/go/ig-{post}-site (story: the creative's code; direct message: makeborne.com/go/ig-dm-site)",
+    "redirectsWith": "utm_source=instagram&utm_medium=dm&utm_campaign=launch-2026-10&utm_content=ig-{post}-site",
+    "message": "Hi! This is Makeborne's automatic reply (a real person reads every answer).\n\nHere's the website studio: makeborne.com/go/ig-{post}-site\n\n3 briefs to copy:\n1. \"A one-page site for a specialty coffee roastery with a monthly bean subscription.\"\n2. \"A 3-page site for a holiday rental by the sea: rooms, photos, how to book.\"\n3. \"A site for a bouldering gym in an old tram depot: prices, classes, opening hours.\"\n\nSites publish on a Makeborne address. From $20/month + tax. Full refund until you use credits.\n\nReply UNCUT for a 30-second uncut build. Reply STOP to stop these messages.",
+    "chars": 581
+   },
+   {
+    "keyword": "DECK",
+    "trigger": "Comment containing \"deck\" (any case) on a post, a story reply, or a direct message",
+    "link": "makeborne.com/go/ig-{post}-deck (story: the creative's code; direct message: makeborne.com/go/ig-dm-deck)",
+    "redirectsWith": "utm_source=instagram&utm_medium=dm&utm_campaign=launch-2026-10&utm_content=ig-{post}-deck",
+    "message": "Hi! This is Makeborne's automatic reply (a real person reads every answer).\n\nHere's the deck studio: makeborne.com/go/ig-{post}-deck\n\n3 briefs to copy:\n1. \"A 10-slide pitch deck for a coffee subscription start-up, with one chart of monthly subscribers.\"\n2. \"Turn these meeting notes into a client proposal deck:\" then paste your notes.\n3. \"A quarterly update deck for a 6-person design studio, with one revenue chart.\"\n\nEvery deck downloads as a .pptx you can edit in PowerPoint, with real charts and speaker notes. From $20/month + tax. Full refund until you use credits.\n\nReply UNCUT for a 30-second uncut build. Reply STOP to stop these messages.",
+    "chars": 649
+   },
+   {
+    "keyword": "BOOK",
+    "trigger": "Comment containing \"book\" (any case) on a post, a story reply, or a direct message",
+    "link": "makeborne.com/go/ig-{post}-book (story: the creative's code; direct message: makeborne.com/go/ig-dm-book)",
+    "redirectsWith": "utm_source=instagram&utm_medium=dm&utm_campaign=launch-2026-10&utm_content=ig-{post}-book",
+    "message": "Hi! This is Makeborne's automatic reply (a real person reads every answer).\n\nHere's the book studio: makeborne.com/go/ig-{post}-book\n\n3 briefs to copy:\n1. \"A 20-page welcome guide for new clients of a web design studio: how we work, timeline, what we need.\"\n2. \"A lead magnet: 12 mistakes small businesses make on their website, with a checklist.\"\n3. \"A short guide from these notes:\" then paste your notes or posts.\n\nBooks are text-led, for screen and PDF. From $20/month + tax. Full refund until you use credits.\n\nReply UNCUT for a 30-second uncut build. Reply STOP to stop these messages.",
+    "chars": 591
+   },
+   {
+    "keyword": "CLIENT",
+    "trigger": "Comment containing \"client\" (any case) on a post, a story reply, or a direct message",
+    "link": "makeborne.com/go/ig-{post}-client (story: the creative's code; direct message: makeborne.com/go/ig-dm-client)",
+    "redirectsWith": "utm_source=instagram&utm_medium=dm&utm_campaign=launch-2026-10&utm_content=ig-{post}-client",
+    "message": "Hi! This is Makeborne's automatic reply (a real person reads every answer).\n\nHere's the client-work flow: makeborne.com/go/ig-{post}-client\n\n3 briefs I use for client demo sites:\n1. \"A one-page site for a family bakery: hours, menu, map, warm and simple.\"\n2. \"A 3-page site for a physio clinic: services, team, booking contact.\"\n3. \"A portfolio site for a wedding photographer: minimal, big type.\"\n\nThen send one review link: your client comments on the live site and taps Approve. No account needed. Studio is $49/month, the plan for client work. Full refund until you use credits.\n\nReply UNCUT for a 30-second uncut build. Reply STOP to stop these messages.",
+    "chars": 659
+   }
+  ],
+  "followUps": [
+   {
+    "keyword": "UNCUT",
+    "when": "Only when the person replies UNCUT, inside 24 hours",
+    "message": "Here it is, real speed, no edits: {uncut_reel_link}\nThe timer on screen is the real build time.\n\nGot a question about your project? Ask here. A person answers within 4 hours, 09:00-18:00 CET, Monday to Friday.",
+    "chars": 209
+   },
+   {
+    "keyword": "STOP",
+    "when": "Any time",
+    "message": "Done. You won't get any more automatic messages from us. You can still write to us here any time.",
+    "chars": 97,
+    "action": "Tag opted-out; exclude from every automation"
+   },
+   {
+    "keyword": "(any other reply)",
+    "when": "No human reply within 15 minutes outside working hours",
+    "message": "Thanks! A person will answer you here within 4 working hours (09:00-18:00 CET, Monday to Friday).",
+    "chars": 97
+   }
+  ],
+  "compliance": [
+   "One private reply per comment, within 7 days of the comment; further messages only if the person replies, within 24 hours of that reply [F, developers.facebook.com/docs/instagram-platform/private-replies]",
+   "Promotion only inside the 24-hour window; no message tags for promotion; disclose automation [F, Messenger Platform policy]",
+   "No sequences or broadcasts outside the window",
+   "Private replies reported at 750 an hour per account [S]",
+   "Usernames and conversations are personal data: privacy notice, the tool's data-processing terms, private exports, deletion on request"
+  ],
+  "untilGoIsLive": "Before Thu 29 Oct use the long URL, e.g. makeborne.com/?utm_source=instagram&utm_medium=dm&utm_campaign=launch-2026-10&utm_content=ig-v01-site"
+ },
+ "reelSpecs": {
+  "canvas": "1080x1920, 9:16, MP4 H.264/AAC, 30 fps (60 if the capture is 60), no other app's watermark",
+  "safeZones": "Keep text and faces out of the top 250 px, the bottom 480 px and the right 120 px; hook text at 30-45% of the height",
+  "cover": "1080x1920; title inside the centred 1080x1350 block (3:4 grid, 4:5 feed) and readable in a centred 1:1 crop; 3-5 words, Inter + one Newsreader Italic word",
+  "lengths": {
+   "outputLoops": "8-15 s",
+   "speedruns": "25-35 s",
+   "povMemes": "10-28 s",
+   "founderDayN": "45-60 s",
+   "tutorials": "60-90 s",
+   "max": "under 3 minutes"
+  },
+  "firstFrame": "The finished output, already moving; never black or a logo; hook text in 7 words or fewer within 0.5 s",
+  "audio": "Original voice-over or a low Meta Sound Collection bed; no trending chart songs on the brand account",
+  "captionsOn": true,
+  "editsApp": "Use Edits for phone clips, auto-captions, covers and posting without a watermark; import house fonts; no generative effects on product footage",
+  "carousels": "1080x1350, 6-8 slides, music added at posting, slide 2 works as a second hook, alt text on every slide"
+ },
+ "weeklyReview": [
+  {
+   "metric": "Sends per reach",
+   "good": ">= 1.0% (great >= 2%) [A]",
+   "act": "Under 0.3%: rewrite the send reason"
+  },
+  {
+   "metric": "Average watch time / length",
+   "good": ">= 50% (<35 s cuts), >= 35% (60-90 s) [A]",
+   "act": "Under 30%: re-cut with 2 new hooks"
+  },
+  {
+   "metric": "Skip rate",
+   "good": "Below the account average",
+   "act": "Above average twice: change frame 0"
+  },
+  {
+   "metric": "Follows per reach",
+   "good": ">= 0.3% [A]",
+   "act": "Under 0.1%: check pins and bio"
+  },
+  {
+   "metric": "Profile visits -> link taps",
+   "good": ">= 10% [A]",
+   "act": "Under 5%: test bio 2 on Monday"
+  },
+  {
+   "metric": "DM keyword replies per 1,000 views",
+   "good": ">= 3 (plan KPI)",
+   "act": "Under 3 for 3 posts: fix the CTA"
+  },
+  {
+   "metric": "DM -> /go/ click",
+   "good": ">= 40% [A]",
+   "act": "Under 25%: shorten the DM"
+  },
+  {
+   "metric": "DM conversations -> paid (30 days)",
+   "good": ">= 3% [A]",
+   "act": "Read every question that did not buy"
+  },
+  {
+   "metric": "/go/ig-* net payers",
+   "good": ">= 1 per 10,000 views across 3+ posts = a house format",
+   "act": "Retire the bottom 50% of formats"
+  }
+ ],
+ "recycleWinners": [
+  "Re-cut with 2 new hooks (Sunday slot + trial reel)",
+  "Turn the build into a carousel",
+  "Reshare to Stories with a poll; add to the highlight",
+  "New brief, new output, \"episode 2\" after 7+ days",
+  "Pin it if it beats a pin on sales",
+  "Boost candidate if it meets the gate (data/ads.json A01/A02)"
+ ],
+ "kickoffDays": [
+  {
+   "day": 1,
+   "date": "2026-10-26",
+   "weekday": "Mon",
+   "title": "Launch: fix the profile, post the Fly-over, pin it",
+   "main": {
+    "time": "12:05",
+    "contentId": "V01",
+    "format": "Reel 17 s",
+    "keyword": "SITE",
+    "link": "makeborne.com/go/ig-v01-site",
+    "pin": "Pin 1",
+    "cover": "Frame 0 of the v9 Fly-over (real home page lifting); text \"We launched today.\"",
+    "caption": "AI studio for client work: websites, decks and books from one brief. We launched Makeborne today. Type one sentence and get a finished website, pitch deck or book. Then send your client a review link: they comment on the live page and tap Approve, no account needed. From $20/month + tax. Full refund until you use credits. Comment SITE and I'll DM you the link and 3 briefs to copy. #makeborne #websitedesign #pitchdeck #buildinpublic"
+   },
+   "checklist": [
+    "Before posting: name field, bio 1, links 1-4 (slot 5 empty), profile photo, category Software, email contact, settings (playbook 1.1-1.7)",
+    "Highlights Start here, Pricing and FAQ with their first stories",
+    "DM automations for SITE and CLIENT set up and tested from a second account",
+    "Confirm copy fixes and \"coming soon\" labels are live",
+    "12:05 post V01, then pin it (Pin 1)",
+    "Write the pinned CTA comment",
+    "12:30 Story C15 \"Reply CLIENT\" (link /go/ig-c15-client)",
+    "12:05-13:05 reply to every comment",
+    "13:30-14:00 engagement routine",
+    "20:30 Story: founder BTS + question box \"Ask me anything\""
+   ],
+   "stories": [
+    {
+     "time": "12:30",
+     "contentId": "C15",
+     "link": "makeborne.com/go/ig-c15-client"
+    },
+    {
+     "time": "20:30",
+     "template": "Behind the scenes + question box"
+    }
+   ],
+   "summary": "Day 1 · Mon 26 Oct · 12:05 · V01 (Reel 17 s) · keyword SITE"
+  },
+  {
+   "day": 2,
+   "date": "2026-10-27",
+   "weekday": "Tue",
+   "title": "Bakery speedrun Reel",
+   "main": {
+    "time": "13:15",
+    "contentId": "V02",
+    "format": "Reel 32 s",
+    "keyword": "SITE",
+    "link": "makeborne.com/go/ig-v02-site",
+    "cover": "The finished bakery site on a phone; text \"One sentence. Whole website.\"",
+    "caption": "AI website builder test: one sentence in, a whole bakery website out. Real build, one live edit, then published on a Makeborne address. The time on screen is the real build time. From $20/month + tax. Full refund until you use credits. Comment SITE for the exact brief I used. #aiwebsitebuilder #websitedesign #smallbusiness #webdesign"
+   },
+   "checklist": [
+    "09:00 Story poll \"What do you make most for clients? Sites / Decks\"",
+    "13:15 post V02",
+    "Reply to every comment for 60 minutes",
+    "13:45 share V02 to Stories with a \"New\" sticker",
+    "13:30-14:00 engagement routine",
+    "20:30 Story: BTS of the capture-bank recording"
+   ],
+   "stories": [
+    {
+     "time": "09:00",
+     "template": "Poll"
+    },
+    {
+     "time": "13:45",
+     "template": "Reel share"
+    },
+    {
+     "time": "20:30",
+     "template": "Behind the scenes"
+    }
+   ],
+   "summary": "Day 2 · Tue 27 Oct · 13:15 · V02 (Reel 32 s) · keyword SITE"
+  },
+  {
+   "day": 3,
+   "date": "2026-10-28",
+   "weekday": "Wed",
+   "title": "Client-approval POV Reel, pin it",
+   "main": {
+    "time": "13:15",
+    "contentId": "V05",
+    "format": "Reel 28 s",
+    "keyword": "CLIENT",
+    "link": "makeborne.com/go/ig-v05-client",
+    "pin": "Pin 3",
+    "cover": "Phone with \"Approve this version\"; text \"Make it pop. (9th time)\"",
+    "caption": "Client approval for freelancers, in one link. POV: the client says 'make it pop' for the 9th time. Instead, send one review link: they comment on the live site, no account, then tap Approve this version. Studio is $49/month, the plan for client work. Full refund until you use credits. Comment CLIENT and I'll send the workflow and 3 demo briefs. #freelancewebdesigner #clientwork #webdesigner #agencylife"
+   },
+   "checklist": [
+    "09:00 Story: poll result + \"Reply CLIENT\"",
+    "13:15 post V05, pin it (Pin 3)",
+    "13:20 Story C02 (link /go/ig-c02)",
+    "Reply to every comment for 60 minutes",
+    "13:30-14:00 engagement routine",
+    "20:30 Story question box \"Worst client feedback you have had?\""
+   ],
+   "stories": [
+    {
+     "time": "09:00",
+     "template": "Keyword prompt"
+    },
+    {
+     "time": "13:20",
+     "contentId": "C02",
+     "link": "makeborne.com/go/ig-c02"
+    },
+    {
+     "time": "20:30",
+     "template": "Question box"
+    }
+   ],
+   "summary": "Day 3 · Wed 28 Oct · 13:15 · V05 (Reel 28 s) · keyword CLIENT"
+  },
+  {
+   "day": 4,
+   "date": "2026-10-29",
+   "weekday": "Thu",
+   "title": "First carousel: 5 sites from 5 sentences",
+   "main": {
+    "time": "18:00",
+    "contentId": "C06",
+    "format": "Carousel, 7 slides, music on",
+    "keyword": "SITE",
+    "link": "makeborne.com/go/ig-c06-site",
+    "pin": "Pin 2 until Sat",
+    "cover": "Slide 1 type card \"5 websites. 5 sentences.\"",
+    "caption": "5 AI websites, each from one sentence. Unedited, with the time and credits each one used. Swipe and tell me which one wins. Every site publishes on a Makeborne address. From $20/month + tax. Full refund until you use credits. Comment SITE and I'll send all 5 briefs. #aiwebsitebuilder #webdesigninspiration #websitedesign #smallbusiness"
+   },
+   "checklist": [
+    "If /go/ shipped today: switch every DM link from long URLs to /go/ codes",
+    "09:00 Story build of the day (link /go/ig-s1029-site)",
+    "13:20 Story C09 only if the sample review link is live; otherwise skip",
+    "18:00 post C06 with music and alt text on every slide; pin it (Pin 2)",
+    "Reply to every comment for 60 minutes",
+    "20:30 Story: answers to yesterday's question box"
+   ],
+   "stories": [
+    {
+     "time": "09:00",
+     "template": "Build of the day",
+     "link": "makeborne.com/go/ig-s1029-site"
+    },
+    {
+     "time": "13:20",
+     "contentId": "C09",
+     "hold": "only if ask 5 is live"
+    },
+    {
+     "time": "20:30",
+     "template": "Question box answers"
+    }
+   ],
+   "summary": "Day 4 · Thu 29 Oct · 18:00 · C06 (Carousel, 7 slides, music on) · keyword SITE"
+  },
+  {
+   "day": 5,
+   "date": "2026-10-30",
+   "weekday": "Fri",
+   "title": "Lead-finder Reel",
+   "main": {
+    "time": "13:15",
+    "contentId": "V07",
+    "format": "Reel 40 s",
+    "keyword": "CLIENT",
+    "link": "makeborne.com/go/ig-v07-client",
+    "cover": "Lead finder results, names blurred, timer chip; text \"20 businesses. Before lunch.\" (use the real time)",
+    "caption": "How freelancers find local businesses to pitch: the lead finder, a demo site and a review link, tracked in a basic CRM. Real time on screen, names blurred. Studio is $49/month for client work. Full refund until you use credits. Comment CLIENT for the 3 briefs I use for demo sites. #freelancewebdesigner #leadgeneration #webdesignbusiness #clientwork"
+   },
+   "checklist": [
+    "09:00 Story poll: two heroes from C06, \"A or B?\"",
+    "13:15 post V07 (never say \"AI lead research\" or \"no website\")",
+    "13:20 Story C22 \"Reply DECK\" (link /go/ig-c22-deck)",
+    "Reply to every comment for 60 minutes",
+    "20:30 Story: one Day 5 numbers frame, add to the Day N highlight"
+   ],
+   "stories": [
+    {
+     "time": "09:00",
+     "template": "Poll"
+    },
+    {
+     "time": "13:20",
+     "contentId": "C22",
+     "link": "makeborne.com/go/ig-c22-deck"
+    },
+    {
+     "time": "20:30",
+     "template": "Day N numbers"
+    }
+   ],
+   "summary": "Day 5 · Fri 30 Oct · 13:15 · V07 (Reel 40 s) · keyword CLIENT"
+  },
+  {
+   "day": 6,
+   "date": "2026-10-31",
+   "weekday": "Sat",
+   "title": "Client-workflow carousel, make it Pin 2",
+   "main": {
+    "time": "12:00",
+    "contentId": "C05",
+    "format": "Carousel, 8 slides, music on",
+    "keyword": "CLIENT",
+    "link": "makeborne.com/go/ig-c05-client",
+    "pin": "Pin 2 (replaces C06)",
+    "cover": "Slide 1 type card \"How I get a client's yes without one e-mail.\"",
+    "caption": "How I get a client's yes without one e-mail: find the business, build the site, publish it, send one review link, they comment on the live site, they tap Approve. Every step is live today. Studio, $49/month. Full refund until you use credits. Comment CLIENT for the 3 briefs I use. #webdesignbusiness #freelancewebdesigner #clientwork #agencyowner"
+   },
+   "checklist": [
+    "12:00 post C05; pin it as Pin 2 (unpin C06)",
+    "Reply to comments for 60 minutes",
+    "16:00 Story: \"Filming next week's 10 videos\"",
+    "Post the 4 uncut 30-second build Reels (site, deck, book, client review) as trial reels if available; copy their links into the UNCUT DM message"
+   ],
+   "stories": [
+    {
+     "time": "16:00",
+     "template": "Behind the scenes"
+    }
+   ],
+   "summary": "Day 6 · Sat 31 Oct · 12:00 · C05 (Carousel, 8 slides, music on) · keyword CLIENT"
+  },
+  {
+   "day": 7,
+   "date": "2026-11-01",
+   "weekday": "Sun",
+   "title": "Day 7 numbers Reel + first Sunday review",
+   "main": {
+    "time": "19:00",
+    "contentId": "V09",
+    "format": "Reel 60 s",
+    "keyword": "CLIENT",
+    "link": "makeborne.com/go/ig-v09-client",
+    "cover": "Founder + Day 7 numbers card; text \"Day 7. Every number.\"",
+    "caption": "Day 7 of launching an AI studio for client work from Sarajevo, every number in public: [N] people paid, [N] refunds, $[MRR] MRR. What worked, what broke, what I'm changing next week. Follow for Day 14. Comment CLIENT for the client-work flow. #buildinpublic #startup #saas #indiehackers"
+   },
+   "checklist": [
+    "US clocks change today: from now US Eastern = CET - 6 h",
+    "12:00 Story \"This week in 3 frames\"",
+    "19:00 post V09 with real Whop numbers, refunds included, buyer data cropped",
+    "Sunday review: read playbook section 7 metrics for every post",
+    "Pick the week-2 winner for Sun 8 Nov",
+    "Confirm the Tue/Wed 20:15 time test"
+   ],
+   "stories": [
+    {
+     "time": "12:00",
+     "template": "Weekly recap"
+    }
+   ],
+   "summary": "Day 7 · Sun 01 Nov · 19:00 · V09 (Reel 60 s) · keyword CLIENT"
+  },
+  {
+   "day": 8,
+   "date": "2026-11-02",
+   "weekday": "Mon",
+   "title": "Who's behind this? Reel",
+   "main": {
+    "time": "13:15",
+    "contentId": "V44",
+    "format": "Reel 40 s",
+    "keyword": "CLIENT",
+    "link": "makeborne.com/go/ig-v44-client",
+    "cover": "Founder at the desk in Sarajevo; text \"Who's behind this?\"",
+    "caption": "Who's behind Makeborne, the AI studio for client work? A small studio in Sarajevo, selling worldwide. I answer support myself and our numbers are public. Ask me anything below. Comment CLIENT if you build sites for clients. #sarajevo #startup #buildinpublic"
+   },
+   "checklist": [
+    "Monday bio-link check from a phone (10 min)",
+    "Add highlights Client work, Sites, Decks, Books, Day N if missing",
+    "09:00 Story \"What should I build first? Reply with your business type\"",
+    "13:15 post V44",
+    "13:20 Story C15 \"Reply CLIENT\"",
+    "Reply to comments for 60 minutes; engagement routine",
+    "21:00 trial reel #1 (if available): V02 with hook R1"
+   ],
+   "stories": [
+    {
+     "time": "09:00",
+     "template": "Question"
+    },
+    {
+     "time": "13:20",
+     "contentId": "C15",
+     "link": "makeborne.com/go/ig-c15-client"
+    }
+   ],
+   "summary": "Day 8 · Mon 02 Nov · 13:15 · V44 (Reel 40 s) · keyword CLIENT"
+  },
+  {
+   "day": 9,
+   "date": "2026-11-03",
+   "weekday": "Tue",
+   "title": "Play-the-client Reel (or the 40-email meme) at 20:15 (time test)",
+   "main": {
+    "time": "20:15 (time test)",
+    "contentId": "V12 or V18",
+    "choose": "V12 if the sample review link (ask 5) is live, else V18",
+    "format": "Reel 25 s or 15 s",
+    "keyword": "CLIENT",
+    "link": "makeborne.com/go/ig-v12-client or makeborne.com/go/ig-v18-client",
+    "cover": "V12: sample review page with a comment pin, \"Be my client.\" V18: split screen, \"40 e-mails vs one link.\"",
+    "caption": "V12: \"Be my client for 30 seconds: open our sample review link, tap anything, leave a comment, approve it. No account. This is exactly what your clients see. Comment CLIENT and I'll send the link. #clientwork #freelancewebdesigner #webdesigner\" / V18: \"Client feedback: the 40-email thread vs one review link where your client comments on the live site and taps Approve. Send this to the person still doing feedback by email. Comment CLIENT for the workflow. #freelancerlife #webdesigner #agencylife #clientwork\""
+   },
+   "checklist": [
+    "09:00 Story build of the day (deck), link /go/ig-s1103-deck",
+    "Check: is the sample review link (ask 5) live? Yes -> V12 and re-pin it as Pin 3. No -> V18",
+    "20:15 post the Reel (time test)",
+    "Reply to comments 20:15-21:15",
+    "20:45 share it to Stories"
+   ],
+   "stories": [
+    {
+     "time": "09:00",
+     "template": "Build of the day",
+     "link": "makeborne.com/go/ig-s1103-deck"
+    },
+    {
+     "time": "20:45",
+     "template": "Reel share"
+    }
+   ],
+   "summary": "Day 9 · Tue 03 Nov · 20:15 (time test) · V12 or V18 (Reel 25 s or 15 s) · keyword CLIENT"
+  },
+  {
+   "day": 10,
+   "date": "2026-11-04",
+   "weekday": "Wed",
+   "title": "5 sites slideshow Reel at 20:15 (time test)",
+   "main": {
+    "time": "20:15 (time test)",
+    "contentId": "V16",
+    "format": "Reel 15 s",
+    "keyword": "SITE",
+    "link": "makeborne.com/go/ig-v16-site",
+    "cover": "First of the five sites, full bleed; text \"5 sites. 5 sentences.\"",
+    "caption": "AI websites from one sentence each: 5 real outputs, unedited, with the credits each one used. Which one would you send a client? Comment SITE for all 5 briefs. #aiwebsitebuilder #websitedesign #webdesigninspiration"
+   },
+   "checklist": [
+    "09:00 Story poll \"Which would you send a client? A / B\"",
+    "13:20 Story C22 \"Reply DECK\"",
+    "20:15 post V16 (time test)",
+    "Reply to comments 20:15-21:15",
+    "21:00 trial reel #2: V05 with hook F1"
+   ],
+   "stories": [
+    {
+     "time": "09:00",
+     "template": "Poll"
+    },
+    {
+     "time": "13:20",
+     "contentId": "C22",
+     "link": "makeborne.com/go/ig-c22-deck"
+    }
+   ],
+   "summary": "Day 10 · Wed 04 Nov · 20:15 (time test) · V16 (Reel 15 s) · keyword SITE"
+  },
+  {
+   "day": 11,
+   "date": "2026-11-05",
+   "weekday": "Thu",
+   "title": "Notes-to-deck carousel",
+   "main": {
+    "time": "18:00",
+    "contentId": "C18",
+    "format": "Carousel, 8 slides, music on",
+    "keyword": "DECK",
+    "link": "makeborne.com/go/ig-c18-deck",
+    "cover": "Slide 1 type card \"Notes in. An editable deck out.\"",
+    "caption": "AI pitch deck from messy notes: I pasted my notes and got an editable deck. It opens in PowerPoint with real charts and speaker notes on every slide. From $20/month + tax. Full refund until you use credits. Comment DECK for the brief and the .pptx. #pitchdeck #powerpoint #presentation #consulting"
+   },
+   "checklist": [
+    "DECK automation tested before 18:00",
+    "09:00 Story: support count this week (real number)",
+    "13:25 Story C09 only if the sample review link is live",
+    "18:00 post C18 with music and alt text",
+    "Reply to comments for 60 minutes"
+   ],
+   "stories": [
+    {
+     "time": "09:00",
+     "template": "Behind the scenes"
+    },
+    {
+     "time": "13:25",
+     "contentId": "C09",
+     "hold": "only if ask 5 is live",
+     "link": "makeborne.com/go/ig-c09-play"
+    }
+   ],
+   "summary": "Day 11 · Thu 05 Nov · 18:00 · C18 (Carousel, 8 slides, music on) · keyword DECK"
+  },
+  {
+   "day": 12,
+   "date": "2026-11-06",
+   "weekday": "Fri",
+   "title": "Notes-app-to-book Reel + boost check",
+   "main": {
+    "time": "13:15",
+    "contentId": "V15",
+    "format": "Reel 24 s",
+    "keyword": "BOOK",
+    "link": "makeborne.com/go/ig-v15-book",
+    "cover": "Finished typographic book cover; text \"Notes app to book.\"",
+    "caption": "How to turn a note into a finished guide: two lines in my notes app, a full book out, for screen and PDF. Text-led and edited in plain words. From $20/month + tax. Full refund until you use credits. Comment BOOK for the brief. #leadmagnet #ebook #writing #notesapp"
+   },
+   "checklist": [
+    "BOOK automation tested",
+    "09:00 Story question box \"Ask me anything about pricing and refunds\"",
+    "13:15 post V15 (never \"print-ready\", no picture-book framing)",
+    "13:20 Story C25 \"Reply BOOK\"",
+    "21:00 trial reel #3: V07 with hook F4",
+    "Friday boost check: which posts meet the gate for ad card A01? (data/ads.json)"
+   ],
+   "stories": [
+    {
+     "time": "09:00",
+     "template": "Question box"
+    },
+    {
+     "time": "13:20",
+     "contentId": "C25",
+     "link": "makeborne.com/go/ig-c25-book"
+    }
+   ],
+   "summary": "Day 12 · Fri 06 Nov · 13:15 · V15 (Reel 24 s) · keyword BOOK"
+  },
+  {
+   "day": 13,
+   "date": "2026-11-07",
+   "weekday": "Sat",
+   "title": "Book carousel",
+   "main": {
+    "time": "12:00",
+    "contentId": "C23",
+    "format": "Carousel, 7 slides, music on",
+    "keyword": "BOOK",
+    "link": "makeborne.com/go/ig-c23-book",
+    "cover": "Slide 1 type card \"Your notes app is full of book ideas. Here's one, finished.\"",
+    "caption": "Your notes app is full of book ideas. Here's one, finished: cover, contents, chapters and a checklist, from one brief. For screen and PDF. From $20/month + tax. Full refund until you use credits. Comment BOOK for the brief and the PDF. #leadmagnet #ebook #coach #digitalproducts"
+   },
+   "checklist": [
+    "12:00 post C23 with music and alt text",
+    "Reply to comments for 60 minutes",
+    "16:00 Story: answers to Friday's pricing questions",
+    "Build ad card A01 in draft (Ads Manager), not published"
+   ],
+   "stories": [
+    {
+     "time": "16:00",
+     "template": "Question box answers"
+    }
+   ],
+   "summary": "Day 13 · Sat 07 Nov · 12:00 · C23 (Carousel, 7 slides, music on) · keyword BOOK"
+  },
+  {
+   "day": 14,
+   "date": "2026-11-08",
+   "weekday": "Sun",
+   "title": "Winner re-cut + second Sunday review",
+   "main": {
+    "time": "19:00",
+    "contentId": "Winner (default V02 ep. 2)",
+    "format": "Reel",
+    "keyword": "as the winner",
+    "link": "makeborne.com/go/ig-v02-e02-site (default)",
+    "cover": "New frame 0 from the new output; new hook text",
+    "caption": "Formula (playbook 4.1): keyword first line with the new hook, what happens on screen, the plan, \"From $20/month + tax. Full refund until you use credits.\", the keyword CTA, 3-4 hashtags. New brief and new output: never a re-upload."
+   },
+   "checklist": [
+    "12:00 Story \"Week 2 in 3 frames\"",
+    "19:00 post the winner re-cut (or share a winning trial reel to the grid instead)",
+    "Sunday review: 13:15 vs 20:15 time test result",
+    "Pick the posts that qualify for ad card A01 (from Mon 9 Nov)",
+    "Decide which wave-1 creator collab invites to accept (from 10 Nov)"
+   ],
+   "stories": [
+    {
+     "time": "12:00",
+     "template": "Weekly recap"
+    }
+   ],
+   "summary": "Day 14 · Sun 08 Nov · 19:00 · Winner (default V02 ep. 2) (Reel) · keyword as the winner"
+  }
+ ],
+ "doDont": {
+  "do": [
+   "Originals re-exported from the project file",
+   "Product working in frame 0, real time or sped up",
+   "\"Coming soon\", no date, for unreleased features",
+   "3-4 specific hashtags and a keyword first line",
+   "Reply to every comment in the first hour",
+   "One automated DM per keyword comment, automation disclosed, STOP offered",
+   "/go/ links only, one code per post per surface",
+   "Disclose every paid or affiliated creator post",
+   "Fictional, trademark-checked businesses, or real ones only with written consent",
+   "Grow with comments and value",
+   "Keep the refund line identical to the live terms",
+   "One brand account"
+  ],
+  "dont": [
+   "Repost TikTok downloads or anything with another app's watermark",
+   "Fake timers or staged results",
+   "Promote or date unreleased features",
+   "Hashtag walls or keyword stuffing",
+   "Delete criticism",
+   "Promotional follow-ups outside 24 hours or DM sequences nobody asked for",
+   "Whop store, affiliate or tracking links; Linktree; personal data in URLs",
+   "Hide a payment or free product",
+   "Build a real business's site uninvited or show client data",
+   "Buy followers, likes or views; engagement pods; follow/unfollow; comment bots; cold-DM pitches",
+   "Say free, trial, start free, unlimited, print-ready or better than; name AI vendors",
+   "Open extra accounts before day 60"
+  ]
+ },
+ "ownerDecisions": [
+  {
+   "id": "O-IG1",
+   "decision": "DM tool: Meta native (free) or ManyChat paid tier from b7",
+   "recommendation": "Native first; ManyChat if native is missing or UNCUT/STOP logic is needed"
+  },
+  {
+   "id": "O-IG2",
+   "decision": "Keep Meta Verified (if paid) from revenue",
+   "recommendation": "Keep; review at day 60"
+  },
+  {
+   "id": "O-IG3",
+   "decision": "Bio variant",
+   "recommendation": "Bio 1 now; test bio 2 in week 3 only if link taps per profile visit stay under 10%"
+  },
+  {
+   "id": "O-IG4",
+   "decision": "13:15 vs 20:15 time test in weeks 2-3",
+   "recommendation": "Approve; adopt the winner from week 4"
+  },
+  {
+   "id": "O-IG5",
+   "decision": "Accept creator collab invites on the brand grid",
+   "recommendation": "Only reviewed, disclosed posts above our median 3-second hold"
+  }
+ ],
+ "newCodesToRegister": [
+  "ig-bio",
+  "ig-bio-site",
+  "ig-bio-deck",
+  "ig-bio-book",
+  "ig-bio-review",
+  "ig-<post>-<keyword> for every post",
+  "ig-dm-site",
+  "ig-dm-deck",
+  "ig-dm-book",
+  "ig-dm-client",
+  "ig-s<mmdd>-<keyword>",
+  "ig-hl-start",
+  "ig-hl-site",
+  "ig-hl-pricing"
+ ],
+ "sources": [
+  "https://www.instagram.com/makeborne/",
+  "https://developers.facebook.com/docs/instagram-platform/private-replies",
+  "https://developers.facebook.com/docs/messenger-platform/policy/policy-overview/",
+  "https://www.socialmediatoday.com/news/instagram-implements-new-limits-on-hashtag-use/808309/",
+  "https://sproutsocial.com/insights/best-times-to-post-on-social-media/",
+  "https://buffer.com/resources/when-is-the-best-time-to-post-on-instagram",
+  "https://www.inro.social/blog/what-is-a-reel-trial",
+  "https://www.hopperhq.com/blog/instagram-reel-size/",
+  "https://www.featurebase.app/blog/manychat-pricing",
+  "https://creatorflow.so/blog/is-meta-verified-worth-it/",
+  "content/instagram-playbook.md section 11 for the full list"
+ ]
+}

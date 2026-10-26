@@ -1,0 +1,67 @@
+<!doctype html>
+<!--
+  T06 Tutorial (V13, V17, V22, V23; V24 long YouTube at 1920x1080). Master 1080x1920, default 90 s, four steps.
+  One continuous real capture (data-media-start trims each step's window out of the same recording), a step chip per step,
+  a soft punch-in on the control being used (ui-focus-zoom style), optional founder face-cam corner (picture-in-picture,
+  312x555 at 738,28 on 9:16; 460x258 at 1432,28 on 16:9). For V24, build at 16:9 and add chapter cards between steps.
+-->
+<html
+  lang="en"
+  data-composition-variables='[
+    {"id":"title","type":"string","label":"Frame-0 line","default":"How to make a website for your rental."},
+    {"id":"step1","type":"string","label":"Step 1","default":"Step 1: one detailed sentence"},
+    {"id":"step2","type":"string","label":"Step 2","default":"Step 2: build"},
+    {"id":"step3","type":"string","label":"Step 3","default":"Step 3: edit in chat"},
+    {"id":"step4","type":"string","label":"Step 4","default":"Step 4: publish"},
+    {"id":"ctaText","type":"string","label":"CTA","default":"Comment SITE."},
+    {"id":"clockText","type":"string","label":"Clock chip on the build step","default":"Sped up ×6"},
+    {"id":"captureSrc","type":"string","label":"Full tutorial capture","default":"assets/capture/tutorial.mp4"},
+    {"id":"faceSrc","type":"string","label":"Optional face-cam","default":"assets/face/facecam.mp4"}
+  ]'
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>T06 tutorial</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link rel="stylesheet" href="assets/shared/brand.css" />
+    <style>
+      body { margin: 0; background: #f8f7f4; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: var(--mb-canvas); }
+      .clip { position: absolute; }
+      .cap { left: 65px; top: 520px; width: 950px; height: 594px; object-fit: cover; border-radius: var(--mb-radius-card); box-shadow: var(--mb-shadow); background: #fff; }
+      .step { left: var(--safe-left); top: var(--safe-top); font-size: calc(48px * var(--type-scale)); width: calc(var(--safe-right) - var(--safe-left)); }
+      #tu-clock { left: 700px; top: 540px; font-size: calc(22px * var(--type-scale)); }
+      .fmt-16x9 .cap { left: 192px; top: 200px; width: 1240px; height: 775px; }
+      .fmt-16x9 #tu-clock { left: 1180px; top: 220px; }
+    </style>
+  </head>
+  <body>
+    <div id="root" class="fmt-9x16" data-composition-id="main" data-start="0" data-duration="90" data-width="1080" data-height="1920">
+      <section id="tu-bg" class="clip" style="inset:0; background: var(--mb-canvas)" data-start="0" data-duration="90" data-track-index="0" data-track-kind="graphics"></section>
+      <video id="tu-c0" class="clip cap" data-start="0" data-duration="2" data-media-start="0" data-track-index="1" data-var-src="captureSrc" src="assets/capture/tutorial.mp4" muted playsinline></video>
+      <video id="tu-c1" class="clip cap" data-start="2" data-duration="18" data-media-start="10" data-track-index="1" data-var-src="captureSrc" src="assets/capture/tutorial.mp4" muted playsinline></video>
+      <video id="tu-c2" class="clip cap" data-start="20" data-duration="30" data-media-start="40" data-playback-rate="6" data-track-index="1" data-var-src="captureSrc" src="assets/capture/tutorial.mp4" muted playsinline></video>
+      <video id="tu-c3" class="clip cap" data-start="50" data-duration="25" data-media-start="260" data-track-index="1" data-var-src="captureSrc" src="assets/capture/tutorial.mp4" muted playsinline></video>
+      <video id="tu-c4" class="clip cap" data-start="75" data-duration="15" data-media-start="330" data-track-index="1" data-var-src="captureSrc" src="assets/capture/tutorial.mp4" muted playsinline></video>
+      <div id="tu-title" class="clip mb-display step" data-start="0" data-duration="2" data-track-index="2" data-track-kind="graphics" data-var-text="title"></div>
+      <div id="tu-s1" class="clip mb-display step" data-start="2" data-duration="18" data-track-index="2" data-track-kind="graphics" data-var-text="step1"></div>
+      <div id="tu-s2" class="clip mb-display step" data-start="20" data-duration="30" data-track-index="2" data-track-kind="graphics" data-var-text="step2"></div>
+      <div id="tu-s3" class="clip mb-display step" data-start="50" data-duration="25" data-track-index="2" data-track-kind="graphics" data-var-text="step3"></div>
+      <div id="tu-s4" class="clip mb-display step" data-start="75" data-duration="15" data-track-index="2" data-track-kind="graphics" data-var-text="step4"></div>
+      <div id="tu-clock" class="clip mb-chip-dark" data-start="20" data-duration="30" data-track-index="3" data-track-kind="graphics" data-var-text="clockText"></div>
+      <div id="captions" data-composition-id="captions" data-composition-src="compositions/captions.html" data-start="0" data-duration="90" data-track-index="4" data-track-kind="captions" data-width="1080" data-height="1920"></div>
+      <audio id="tu-vo" data-start="0" data-duration="90" data-track-index="9" data-volume="1" src="assets/audio/vo.wav"></audio>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      ["#tu-s1", "#tu-s2", "#tu-s3", "#tu-s4"].forEach((id, i) => tl.fromTo(id, { yPercent: 40, opacity: 0 }, { yPercent: 0, opacity: 1, duration: 0.45, ease: "power4.out" }, [2, 20, 50, 75][i] + 0.05));
+      // Focus punch-ins on the control in use (set transformOrigin to that control in the capture)
+      tl.fromTo("#tu-c1", { scale: 1, transformOrigin: "40% 70%" }, { scale: 1.3, duration: 0.7, ease: "power2.inOut" }, 4);
+      tl.to("#tu-c1", { scale: 1, duration: 0.6, ease: "power2.inOut" }, 17);
+      tl.fromTo("#tu-c3", { scale: 1, transformOrigin: "80% 80%" }, { scale: 1.25, duration: 0.7, ease: "power2.inOut" }, 52);
+      tl.to("#tu-c3", { scale: 1, duration: 0.6, ease: "power2.inOut" }, 72);
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

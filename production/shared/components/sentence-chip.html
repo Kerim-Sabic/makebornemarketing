@@ -1,0 +1,6 @@
+<!-- Sentence chip. Variables: briefText (string). Place inside the safe band, above the output it made.
+     Animate: tl.fromTo("#<scene>-chip", { y: 24, opacity: 0 }, { y: 0, opacity: 1, duration: 0.45, ease: "power3.out" }, t) -->
+<div id="SCENE-chip" class="mb-pill sentence-chip" style="font-size: calc(30px * var(--type-scale, 1)); max-width: 86%;">
+  <svg width="30" height="30" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l4.2-1 10-10-3.2-3.2-10 10L4 20zm12.6-15.4l3.2 3.2 1.1-1.1a1.5 1.5 0 000-2.1l-1.1-1.1a1.5 1.5 0 00-2.1 0l-1.1 1.1z" fill="#18181B"/></svg>
+  <span id="SCENE-chip-text" data-var-text="briefText">"A website for a family bakery in Leeds that opens at 7."</span>
+</div>

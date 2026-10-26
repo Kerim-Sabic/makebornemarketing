@@ -1,396 +1,343 @@
-import { use, useEffect, useState } from 'react';
-import kpisJson from '../../data/kpis.json';
-import checkpointsJson from '../../data/checkpoints.json';
-import type { CalendarPost, Checkpoint, Kpis } from '../lib/types';
-import { addDays, diffDays, fmtDate, fmtInt, fmtUsd, isIsoDate, planDay, planWeek, sarajevoToday, WINDOW_START } from '../lib/util';
-import { PLAN, TOTAL, defaultAllocation, plannedCumulative } from '../lib/budget';
-import { acquisition, aggregate, netPaid } from '../lib/actuals';
-import { contentMeta, contentTitle } from '../lib/contentIndex';
+import { use, useEffect, useMemo, type ReactNode } from 'react';
+import type { CalendarDay, CalendarPost, TodayExtra } from '../lib/types';
+import { addDays, fmtDate, fmtUsd, isIsoDate, sarajevoToday, WINDOW_START } from '../lib/util';
 import { LAST_DAY, hasDay, loadDay } from '../lib/calendarIndex';
-import { STATUS_LABEL, STATUSES, useActuals, useAllocation, useChecks, useContentStatus, useSpendLog, type Status } from '../lib/stores';
-import { BeatTag, Card, Chip, CopyButton, Empty, Page, Progress, Section, Stat } from '../components/ui';
+import { useActuals, useChecks } from '../lib/stores';
+import { weekPace } from '../lib/pace';
+import { CopyField, Steps, TickItem } from '../components/Checklist';
 import { href, type RouteProps } from '../routes';
-
-const KPIS = kpisJson as unknown as Kpis;
-const CHECKPOINTS = (checkpointsJson as unknown as { checkpoints: Checkpoint[] }).checkpoints;
-const LAST = LAST_DAY;
 
 /** Ticks are keyed by the action's text, so reordering or inserting actions in calendar.json keeps them on the right action. */
 const actionKey = (date: string, what: string) => `${date}:${what.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 48)}`;
+const slug = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 40);
+const GO_LIVE = '2026-10-29'; // /go/ short links target day (tracking.md §0)
 
-const PHASE_NAME: Record<string, string> = {
-  'launch-week': 'Launch week',
-  'phase-1': 'Phase 1 · find the format',
-  'phase-2': 'Phase 2 · proof, Black Friday, loops',
-  'phase-3': 'Phase 3 · holiday bank, January, scale',
-};
-
-function parseTime(t: string) {
-  const m = t.match(/(\d{1,2}):(\d{2})/);
-  return { hm: m ? `${m[1].padStart(2, '0')}:${m[2]}` : '—', zone: t.match(/\b(CET|CEST|UTC[+-]?\d*|ET|PT|GMT)\b/)?.[1] ?? '', sort: m ? Number(m[1]) * 60 + Number(m[2]) : 9999 };
+function hm(t: string | undefined) {
+  const m = String(t ?? '').match(/(\d{1,2}):(\d{2})/);
+  return m ? `${m[1].padStart(2, '0')}:${m[2]}` : '';
 }
+const sortKey = (t: string) => (t ? Number(t.slice(0, 2)) * 60 + Number(t.slice(3)) : 24 * 60 + 1);
+const cap = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
+const goUrl = (l: string) => `https://${l.replace(/^https?:\/\//, '')}`;
+const longUrl = (u: Record<string, string>) => `https://makeborne.com/?${new URLSearchParams(u).toString()}`;
+const sentences = (s: string) => s.split(/(?<=[.!?])\s+(?=[A-Z'"(])/).map((x) => x.trim()).filter(Boolean);
+const contentHref = (id: string) => href('library', /^C/.test(id) ? 'images' : 'videos', id);
+const CHANNEL_SHORT: Record<string, string> = { 'Instagram Reels': 'Instagram Reel', 'Instagram Stories': 'Instagram Story', 'Instagram carousel': 'Instagram carousel' };
 
 function clampDate(d: string) {
   if (d < WINDOW_START) return WINDOW_START;
-  if (d > LAST) return LAST;
+  if (d > LAST_DAY) return LAST_DAY;
   return d;
 }
+
+interface Item { key: string; time: string; text: ReactNode; label: string; tag?: ReactNode; how?: ReactNode }
+type GroupId = 'post' | 'make' | 'ads' | 'reach' | 'log';
+const GROUPS: { id: GroupId; title: string; hint: string }[] = [
+  { id: 'post', title: 'Post', hint: 'Times are Sarajevo time (CET)' },
+  { id: 'make', title: 'Make', hint: 'Videos, images and set-up' },
+  { id: 'ads', title: 'Ads', hint: 'Only when the card says so' },
+  { id: 'reach', title: 'Reach out', hint: 'People, creators, listings' },
+  { id: 'log', title: 'Log numbers', hint: 'Five minutes, every day' },
+];
+const GROUP_OF: Record<string, GroupId> = { launch: 'make', product: 'make', ads: 'ads', outreach: 'reach', analysis: 'log' };
 
 export default function Today({ params }: RouteProps) {
   const realToday = sarajevoToday();
   const requested = params[0] && isIsoDate(params[0]) ? params[0] : realToday;
   const date = clampDate(requested);
   const outside = requested !== date;
-  // loadDay falls back to day 1 for a date the calendar does not have, so the page never renders without a day.
-  const day = use(loadDay(hasDay(date) ? date : WINDOW_START));
-  const week = planWeek(date);
+  const day = use(loadDay(hasDay(date) ? date : WINDOW_START)) as CalendarDay;
+  const x = day.extra as TodayExtra;
   const go = (d: string) => (window.location.hash = href('today', clampDate(d)));
-
-  // The date field keeps a draft while the user types (a single "1" in the month would otherwise jump to January).
-  const [pick, setPick] = useState(date);
-  useEffect(() => setPick(date), [date]);
+  const [checks, setChecks] = useChecks();
+  const [actuals] = useActuals();
+  const toggle = (k: string) => setChecks((c) => ({ ...c, [k]: !c[k] }));
 
   // Warm the neighbouring days so Prev / Next do not wait for a chunk.
   useEffect(() => {
     for (const d of [addDays(date, -1), addDays(date, 1)]) if (hasDay(d)) void loadDay(d);
   }, [date]);
 
-  const posts = [...day.posts].sort((a, b) => parseTime(a.time).sort - parseTime(b.time).sort);
-  const [checks, setChecks] = useChecks();
-  const [status, setStatus] = useContentStatus();
-  const toggle = (k: string) => setChecks((c) => ({ ...c, [k]: !c[k] }));
-
-  // One-time migration from the old position keys (`<date>:a<i>`) to text keys.
-  useEffect(() => {
-    const old = day.actions.map((_, i) => `${day.date}:a${i}`);
-    if (!old.some((k) => k in checks)) return;
-    setChecks((c) => {
-      const next = { ...c };
-      day.actions.forEach((a, i) => {
-        const o = `${day.date}:a${i}`;
-        if (o in next) {
-          if (next[o]) next[actionKey(day.date, a.what)] = true;
-          delete next[o];
-        }
-      });
-      return next;
-    });
-  }, [day, checks, setChecks]);
+  const groups = useMemo(() => buildGroups(day, x, date), [day, x, date]);
+  const all = Object.values(groups).flat();
+  const done = all.filter((i) => checks[i.key]).length;
+  const pace = weekPace(actuals, date, x.targets);
+  const firm = x.money.filter((m) => !m.conditional);
+  const maybe = x.money.filter((m) => m.conditional);
+  const firmUsd = firm.reduce((s, m) => s + m.usd, 0);
+  const maybeUsd = maybe.reduce((s, m) => s + m.usd, 0);
+  const isToday = date === clampDate(realToday);
 
   return (
-    <Page
-      eyebrow={
-        <>
-          <b>Day {day.day}</b> {day.day > 90 ? '· Day-90 review' : 'of 90'} · Week {week} · {PHASE_NAME[day.phase] ?? day.phase}
-        </>
-      }
-      title={
-        <>
-          {fmtDate(date, { weekday: 'long' })}, <em>{fmtDate(date, { day: 'numeric', month: 'long' })}</em>
-        </>
-      }
-      lede={day.focus}
-      actions={
-        <div className="row">
-          <button type="button" className="btn btn-ghost btn-sm" onClick={() => go(addDays(date, -1))} disabled={date <= WINDOW_START} aria-label="Previous day">
-            ← Prev
+    <div className="page page-narrow today">
+      <header className="today-head">
+        <div className="day-nav" role="group" aria-label="Change day">
+          <button type="button" className="btn btn-ghost btn-nav" onClick={() => go(addDays(date, -1))} disabled={date <= WINDOW_START} aria-label="Previous day">
+            ←<span className="hide-xs"> Prev</span>
           </button>
-          <input
-            type="date"
-            aria-label="Pick a day"
-            value={pick}
-            min={WINDOW_START}
-            max={LAST}
-            onChange={(e) => {
-              const v = e.target.value;
-              setPick(v);
-              if (isIsoDate(v) && v >= WINDOW_START && v <= LAST && v !== date) go(v);
-            }}
-            onBlur={() => setPick(date)}
-            style={{ width: 160 }}
-          />
-          <button type="button" className="btn btn-ghost btn-sm" onClick={() => go(addDays(date, 1))} disabled={date >= LAST} aria-label="Next day">
-            Next →
-          </button>
-          {date !== clampDate(realToday) && (
-            <a className="btn btn-sm" href={href('today')}>
-              Today
-            </a>
-          )}
-        </div>
-      }
-    >
-      {outside && (
-        <div className="notice" style={{ marginBottom: 24 }}>
-          <b>Outside the window.</b>
-          <span>
-            {fmtDate(requested, { day: 'numeric', month: 'short', year: 'numeric' })} is outside the 90-day plan ({fmtDate(WINDOW_START)} to {fmtDate(LAST)}). Showing the nearest planned day.
-          </span>
-        </div>
-      )}
-
-      <div className="split">
-        <div className="stack" style={{ gap: 32 }}>
-          <Section title={<>Posts <span className="muted">· {posts.length}</span></>} aside="Times are Sarajevo time" id="posts">
-            {posts.length ? (
-              <Card className="card-flat">
-                <ol className="timeline">
-                  {posts.map((p, i) => (
-                    <PostRow key={i} post={p} status={p.contentId ? status[p.contentId] ?? 'todo' : undefined} onStatus={(s) => p.contentId && setStatus((m) => ({ ...m, [p.contentId!]: s }))} />
-                  ))}
-                </ol>
-              </Card>
-            ) : (
-              <Empty>No posts planned for this day.</Empty>
-            )}
-          </Section>
-
-          <Section title={<>Actions <span className="muted">· {day.actions.length}</span></>} id="actions" aside="Ticks are saved in this browser">
-            <Card className="card-flat">
-              <ul className="checklist">
-                {day.actions.map((a) => {
-                  const k = actionKey(date, a.what);
-                  return (
-                    <li key={k}>
-                      <label>
-                        <input type="checkbox" checked={!!checks[k]} onChange={() => toggle(k)} />
-                        <span>
-                          <span className={checks[k] ? 'done' : ''}>{a.what}</span>
-                          <span className="row" style={{ marginTop: 6 }}>
-                            <Chip tone={a.type === 'analysis' ? 'owner' : a.type === 'launch' ? 'accent' : a.type === 'ads' ? 'warn' : undefined}>{a.type}</Chip>
-                            <span className="tiny muted">{a.owner}</span>
-                          </span>
-                        </span>
-                      </label>
-                    </li>
-                  );
-                })}
-              </ul>
-            </Card>
-            {day.kpiCheck && (
-              <div className="notice notice-good" style={{ marginTop: 14 }}>
-                <b>KPI check</b>
-                <span>{day.kpiCheck}</span>
-              </div>
-            )}
-          </Section>
-        </div>
-
-        <div className="stack" style={{ gap: 20, alignContent: 'start' }}>
-          <NextDecision date={date} />
-          <KpiStatus date={date} week={week} />
-          <BudgetStatus date={date} week={week} />
-          <Routine date={date} checks={checks} toggle={toggle} />
-        </div>
-      </div>
-    </Page>
-  );
-}
-
-function PostRow({ post, status, onStatus }: { post: CalendarPost; status?: Status; onStatus: (s: Status) => void }) {
-  const t = parseTime(post.time);
-  const c = contentMeta(post.contentId);
-  const url = post.link ? `https://${post.link.replace(/^https?:\/\//, '')}` : '';
-  return (
-    <li>
-      <div className="tl-time num">
-        {t.hm}
-        <small>{t.zone}</small>
-      </div>
-      <div style={{ minWidth: 0 }}>
-        <div className="row-between" style={{ alignItems: 'flex-start' }}>
-          <div className="tl-title">
-            {post.contentId ? (
-              <a href={href('content', post.contentId)}>
-                <span className="item-id">{post.contentId}</span> {contentTitle(post.contentId)}
+          <div className="day-nav-mid">
+            {!isToday ? (
+              <a className="btn btn-sm btn-ghost" href={href('today')}>
+                Back to today
               </a>
             ) : (
-              'Unlinked slot'
+              <span className="small muted">Today</span>
             )}
           </div>
-          {status && (
-            <select className={`status-select status-${status}`} aria-label={`Status of ${post.contentId}, ${post.channel} ${t.hm}`} value={status} onChange={(e) => onStatus(e.target.value as Status)}>
-              {STATUSES.map((s) => (
-                <option key={s} value={s}>
-                  {STATUS_LABEL[s]}
-                </option>
-              ))}
-            </select>
-          )}
+          <button type="button" className="btn btn-ghost btn-nav" onClick={() => go(addDays(date, 1))} disabled={date >= LAST_DAY} aria-label="Next day">
+            <span className="hide-xs">Next </span>→
+          </button>
         </div>
-        <div className="tl-meta">
-          <Chip>{post.channel}</Chip>
-          <BeatTag tag={post.tag} />
-          {post.slot !== 'original' && <Chip tone="muted">{post.slot}</Chip>}
-          {c?.kind === 'video' && <span className="tiny muted">{c.format} · {c.lengthSec}s</span>}
-        </div>
-        {post.link && (
-          <div className="row" style={{ marginBottom: 6 }}>
-            <span className="code">{post.link}</span>
-            <CopyButton text={url} label="Copy link" ariaLabel={`Copy ${post.link.split('/go/')[1] ?? post.link} link`} />
-          </div>
+        <p className="eyebrow">
+          Week {x.week} · {done} of {all.length} done
+        </p>
+        <h1 className="display today-title">
+          Day {day.day} <em>{fmtDate(date, { weekday: 'short', day: 'numeric', month: 'short' })}</em>
+        </h1>
+        {outside && (
+          <p className="small muted" role="note">
+            {fmtDate(requested, { day: 'numeric', month: 'short', year: 'numeric' })} is outside the 90-day plan. Showing the nearest planned day.
+          </p>
         )}
-        <p className="small muted" style={{ margin: 0 }}>
-          {post.notes}
-        </p>
-      </div>
-    </li>
-  );
-}
+        <div className="today-stats">
+          <a className={`today-stat pace-${pace.status}`} href={href('results')}>
+            <span className="today-stat-label">This week</span>
+            <span className="today-stat-value">{pace.headline}</span>
+            <span className="today-stat-sub">{pace.detail}</span>
+          </a>
+          <div className="today-stat">
+            <span className="today-stat-label">Money to spend today</span>
+            <span className="today-stat-value num">{fmtUsd(firmUsd)}</span>
+            <span className="today-stat-sub">
+              {firm.length ? firm.map((m) => `${fmtUsd(m.usd)} ${m.label.split(/[,(]/)[0]}`).join(' · ') : maybe.length ? '' : 'Nothing to pay today.'}
+              {maybe.length > 0 && `${firm.length ? ' · ' : ''}+ ${fmtUsd(maybeUsd)} only if: ${maybe.map((m) => m.label.split(/[,(]/)[0]).join(', ')}`}
+            </span>
+          </div>
+        </div>
+      </header>
 
-function NextDecision({ date }: { date: string }) {
-  const upcoming = CHECKPOINTS.filter((c) => c.date >= date).sort((a, b) => a.date.localeCompare(b.date));
-  const next = upcoming[0];
-  if (!next) return <Card>All dated checkpoints are behind you.</Card>;
-  const days = diffDays(next.date, date);
-  const decisionText = (id: string) => PLAN.decisions.find((d) => d.id === id)?.question ?? id;
-  return (
-    <Card className="card-ink">
-      <p className="kicker" style={{ color: 'inherit', opacity: 0.7 }}>
-        Next decision due
-      </p>
-      <div className="row-between" style={{ alignItems: 'baseline' }}>
-        <h3 style={{ fontSize: 20, margin: 0 }}>{next.title}</h3>
-        <span className="num" style={{ fontWeight: 650 }}>
-          {days === 0 ? 'Today' : days === 1 ? 'Tomorrow' : `in ${days} days`}
-        </span>
-      </div>
-      <p className="small muted" style={{ marginTop: 4 }}>
-        {next.approx ? 'About ' : ''}
-        {fmtDate(next.date, { weekday: 'short', day: 'numeric', month: 'short' })} · Day {planDay(next.date)}
-      </p>
-      <p style={{ marginTop: 10 }}>{next.detail}</p>
-      {next.decisions.length > 0 && (
-        <ul className="list" style={{ marginTop: 8 }}>
-          {next.decisions.map((d) => (
-            <li key={d} style={{ borderColor: 'color-mix(in srgb, var(--bg) 18%, transparent)', padding: '8px 0' }}>
-              <a href={href('strategy', 'decisions')} style={{ textDecoration: 'none' }}>
-                <b>{d}</b> <span className="muted">· owner decision</span>
-                <br />
-                <span className="small">{decisionText(d)}</span>
-              </a>
-            </li>
-          ))}
-        </ul>
-      )}
-      {upcoming.length > 1 && (
-        <p className="tiny muted" style={{ marginTop: 12, marginBottom: 0 }}>
-          Then: {upcoming.slice(1, 3).map((c) => `${fmtDate(c.date, { day: 'numeric', month: 'short' })} ${c.title}`).join(' · ')}
-        </p>
-      )}
-    </Card>
-  );
-}
-
-function KpiStatus({ date, week }: { date: string; week: number }) {
-  const [actuals] = useActuals();
-  const target = KPIS.weeklyTargets[week - 1];
-  const weekStart = addDays(WINDOW_START, (week - 1) * 7);
-  const rows = acquisition(actuals).filter((e) => e.date >= weekStart && e.date <= date);
-  const a = aggregate(rows);
-  const elapsed = Math.min(7, diffDays(date, weekStart) + 1);
-  const pace = elapsed / 7;
-  const metrics = [
-    { label: 'Visits (/go/ clicks)', actual: a.clicks, target: target.visits },
-    { label: 'Sign-ups', actual: a.signups, target: target.signups },
-    { label: 'Gross paid', actual: a.paid, target: target.paid },
-    { label: 'Net paid', actual: netPaid(a), target: target.netPaid },
-    { label: 'Activated payers', actual: a.activated, target: target.activatedPayers },
-  ];
-  return (
-    <Card>
-      <div className="row-between">
-        <h3 style={{ margin: 0 }}>KPI status · week {week}</h3>
-        <a className="small" href={href('analytics')}>
-          Log actuals
-        </a>
-      </div>
-      <p className="tiny muted">
-        Week to date ({elapsed}/7 days) against {KPIS.weeklyTargets[week - 1].dates} targets. Pace line = target × {elapsed}/7.
-      </p>
-      {rows.length === 0 && (
-        <p className="small muted" style={{ margin: '6px 0 10px' }}>
-          No actuals logged for this week yet. Targets shown for reference.
-        </p>
-      )}
-      <div className="stack" style={{ gap: 12, marginTop: 8 }}>
-        {metrics.map((m) => {
-          const expected = m.target * pace;
-          const ratio = expected > 0 ? m.actual / expected : 0;
-          const tone = rows.length === 0 ? undefined : ratio >= 1 ? 'good' : ratio >= 0.7 ? 'warn' : 'bad';
-          return (
-            <div key={m.label}>
-              <div className="row-between small">
-                <span>{m.label}</span>
-                <span className="num">
-                  <b>{rows.length ? fmtInt(m.actual) : '–'}</b> <span className="muted">/ {fmtInt(m.target)}</span>
-                </span>
-              </div>
-              <Progress value={m.actual} max={m.target} tone={tone} label={`${m.label} against weekly target`} />
+      {GROUPS.map((g) =>
+        groups[g.id].length ? (
+          <section key={g.id} className="tgroup" aria-labelledby={`g-${g.id}`}>
+            <div className="tgroup-head">
+              <h2 id={`g-${g.id}`}>
+                {g.title} <span className="muted num">{groups[g.id].filter((i) => checks[i.key]).length}/{groups[g.id].length}</span>
+              </h2>
+              <span className="tiny muted">{g.hint}</span>
             </div>
-          );
-        })}
-      </div>
-      <p className="tiny muted" style={{ marginTop: 12, marginBottom: 0 }}>
-        Plan of record for week {week}: {fmtInt(target.activeSubs)} active subscribers, {fmtUsd(target.mrr)} MRR.
+            <ul className="ticklist">
+              {groups[g.id].map((i) => (
+                <TickItem key={i.key} checked={!!checks[i.key]} onToggle={() => toggle(i.key)} time={i.time} text={i.text} tag={i.tag} how={i.how} label={i.label} />
+              ))}
+            </ul>
+          </section>
+        ) : null,
+      )}
+      <p className="tiny muted" style={{ marginTop: 28 }}>
+        Ticks are saved in this browser only.
       </p>
-    </Card>
+    </div>
   );
 }
 
-function BudgetStatus({ date, week }: { date: string; week: number }) {
-  const [log] = useSpendLog();
-  const [alloc] = useAllocation();
-  const allocation = alloc ?? defaultAllocation();
-  const spent = log.filter((e) => e.date <= date).reduce((s, e) => s + e.usd, 0);
-  const planned = plannedCumulative(allocation)[week - 1] ?? 0;
-  const tone = spent > planned * 1.15 + 1 ? 'bad' : 'good';
-  return (
-    <Card>
-      <div className="row-between">
-        <h3 style={{ margin: 0 }}>Budget</h3>
-        <a className="small" href={href('budget')}>
-          Spend log
-        </a>
-      </div>
-      <div className="grid-3" style={{ gridTemplateColumns: 'repeat(3, minmax(0,1fr))', marginTop: 10, gap: 8 }}>
-        <Stat label="Spent" value={fmtUsd(spent)} tone={tone === 'bad' ? 'bad' : undefined} />
-        <Stat label="Plan by wk end" value={fmtUsd(planned)} sub="[E] pace" />
-        <Stat label="Left" value={fmtUsd(TOTAL - spent)} />
-      </div>
-      <div style={{ marginTop: 10 }}>
-        <Progress value={spent} max={TOTAL} tone={tone} label="Spent of $1,000" />
-      </div>
-      <p className="tiny muted" style={{ marginTop: 10, marginBottom: 0 }}>
-        {PLAN.budget.gate}
-      </p>
-    </Card>
+function buildGroups(day: CalendarDay, x: TodayExtra, date: string): Record<GroupId, Item[]> {
+  const g: Record<GroupId, Item[]> = { post: [], make: [], ads: [], reach: [], log: [] };
+
+  /* ---------- Post ---------- */
+  day.posts.forEach((p, i) => {
+    const e = x.posts[i];
+    const t = hm(p.time);
+    const what = CHANNEL_SHORT[p.channel] ?? p.channel;
+    const igMain = e?.igMain && x.ig ? x.ig : null;
+    const time = igMain ? hm(igMain.main.time) || t : t;
+    g.post.push({
+      key: `${date}:p:${slug(p.channel)}:${t}:${p.contentId ?? ''}`,
+      time,
+      label: `${what} ${p.contentId ?? ''} at ${time}`,
+      text: (
+        <>
+          <b>{what}</b> · {p.contentId && <span className="item-id">{p.contentId}</span>} {e?.title ?? 'Open slot'}
+        </>
+      ),
+      tag: p.tag && p.tag !== 'live' ? <span className="chip chip-beat">Only if the feature is live</span> : p.requires ? <span className="chip chip-warn">Has a condition</span> : undefined,
+      how: <PostHow post={p} e={e} ig={igMain} date={date} />,
+    });
+  });
+  // Instagram kick-off stories that are not already calendar posts.
+  if (x.ig) {
+    for (const s of x.ig.stories) {
+      if (s.contentId && day.posts.some((p) => p.contentId === s.contentId && /Stories/.test(p.channel))) continue;
+      const t = hm(s.time);
+      g.post.push({
+        key: `${date}:igs:${t}`,
+        time: t,
+        label: `Instagram Story at ${t}`,
+        text: (
+          <>
+            <b>Instagram Story</b> · {s.template ?? s.contentId}
+          </>
+        ),
+        how: (
+          <div className="how">
+            {s.link && <CopyField label="Link sticker" text={goUrl(s.link)} mono />}
+            <p className="small">
+              Story template "{s.template}". See the Instagram playbook for the template: <a href={href('library', 'instagram')}>Library › Instagram playbook</a>.
+            </p>
+          </div>
+        ),
+      });
+    }
+  }
+
+  /* ---------- Make (production) ---------- */
+  for (const m of x.make) {
+    g.make.push({
+      key: `${date}:m:${slug(m.text)}`,
+      time: m.time,
+      label: m.text,
+      text: cap(m.text),
+      how: m.ids.length ? (
+        <div className="how">
+          <p className="small">Open the sheet for each piece: the exact words on screen, the template and the time it takes.</p>
+          <ul className="linklist">
+            {m.ids.map((id) => (
+              <li key={id}>
+                <a href={contentHref(id)}>
+                  <span className="item-id">{id}</span> script, caption and prompts
+                </a>
+              </li>
+            ))}
+          </ul>
+          <p className="small">
+            How we make videos (one screen): <a href={href('library', 'production')}>Library › Production</a>.
+          </p>
+        </div>
+      ) : undefined,
+    });
+  }
+
+  /* ---------- Calendar actions ---------- */
+  const logSteps = (
+    <Steps
+      items={[
+        "Open Whop: count yesterday's new paying customers, refunds and money in.",
+        'Open each platform: views, link clicks and comments per channel.',
+        <>
+          Type them into the day sheet on <a href={href('results')}>Results</a> (one row per channel; leave a cell empty when you do not know it).
+        </>,
+      ]}
+    />
   );
+  let hasNumbers = false;
+  for (const a of day.actions) {
+    const lead = a.what.match(/^(\d{1,2}:\d{2})\b/)?.[1] ?? (/^Evening\b/i.test(a.what) ? '20:00' : '');
+    const [first, ...rest] = sentences(a.what);
+    const numbers = /^08:00 numbers/i.test(a.what);
+    hasNumbers ||= numbers;
+    g[GROUP_OF[a.type] ?? 'make'].push({
+      key: actionKey(date, a.what),
+      time: lead ? hm(lead) : '',
+      label: first,
+      text: numbers ? <><b>Yesterday's numbers:</b> {first.replace(/^08:00 numbers:\s*/i, '')}</> : first.replace(/^Evening:\s*/i, ''),
+      tag: a.budgetLineId ? <span className="chip chip-accent">budget {a.budgetLineId}</span> : undefined,
+      how:
+        rest.length || a.owner || numbers ? (
+          <div className="how">
+            {numbers && logSteps}
+            {numbers && day.kpiCheck && <p className="small muted">{day.kpiCheck}</p>}
+            <Steps items={rest} ordered={false} />
+            <p className="tiny muted">Who: {a.owner}</p>
+          </div>
+        ) : undefined,
+    });
+  }
+
+  /* ---------- Ad cards that are due ---------- */
+  for (const ad of x.ads) {
+    const verb = ad.kind === 'prep' ? 'Get ready' : ad.kind === 'check' ? 'Check' : ad.day === 1 ? 'Launch' : 'Running';
+    g.ads.unshift({
+      key: `${date}:ad:${ad.id}:${ad.kind}`,
+      time: ad.kind === 'run' && ad.day === 1 ? '00:00' : ad.kind === 'run' ? '10:00' : '',
+      label: `${verb} ad ${ad.id}`,
+      text: (
+        <>
+          <b>
+            {verb} {ad.id}
+          </b>{' '}
+          · {ad.platform} · {ad.money}
+          {ad.kind === 'run' && ad.days ? ` · day ${ad.day} of ${ad.days}` : ''}
+        </>
+      ),
+      tag: !ad.inThe1000 ? <span className="chip chip-owner">from revenue, not the $1,000</span> : undefined,
+      how: (
+        <div className="how">
+          <p className="small">{ad.note}</p>
+          <p className="small">
+            <b>Only if:</b> {ad.trigger}
+          </p>
+          <p className="small">
+            <a className="btn btn-sm" href={href('ads', ad.id)}>
+              Open card {ad.id}: every click, the copy and the stop rule
+            </a>
+          </p>
+        </div>
+      ),
+    });
+  }
+
+  /* ---------- Log numbers ---------- */
+  if (!hasNumbers) g.log.push({
+    key: `${date}:log`,
+    time: '08:00',
+    label: "Log yesterday's numbers",
+    text: (
+      <>
+        <b>Log yesterday's numbers</b> and read the day's check
+      </>
+    ),
+    how: (
+      <div className="how">
+        {logSteps}
+        {day.kpiCheck && <p className="small muted">{day.kpiCheck}</p>}
+      </div>
+    ),
+  });
+
+  for (const k of Object.keys(g) as GroupId[]) g[k].sort((a, b) => sortKey(a.time) - sortKey(b.time));
+  return g;
 }
 
-function Routine({ date, checks, toggle }: { date: string; checks: Record<string, boolean>; toggle: (k: string) => void }) {
-  const done = PLAN.routine.filter((_, i) => checks[`${date}:r${i}`]).length;
+function PostHow({ post, e, ig, date }: { post: CalendarPost; e: TodayExtra['posts'][number] | undefined; ig: TodayExtra['ig']; date: string }) {
+  const url = post.link ? goUrl(post.link) : '';
   return (
-    <Card>
-      <div className="row-between">
-        <h3 style={{ margin: 0 }}>Founder routine</h3>
-        <span className="small muted num">
-          {done}/{PLAN.routine.length}
-        </span>
-      </div>
-      <ul className="checklist" style={{ marginTop: 6 }}>
-        {PLAN.routine.map((r, i) => {
-          const k = `${date}:r${i}`;
-          return (
-            <li key={k}>
-              <label className="small">
-                <input type="checkbox" checked={!!checks[k]} onChange={() => toggle(k)} />
-                <span className={checks[k] ? 'done' : ''}>{r}</span>
-              </label>
-            </li>
-          );
-        })}
-      </ul>
-    </Card>
+    <div className="how">
+      {post.requires && (
+        <p className="notice small">
+          <b>Only if</b>
+          <span>
+            {post.requires}
+            {post.fallbackContentId ? `; otherwise post ${post.fallbackContentId}` : ''}.
+          </span>
+        </p>
+      )}
+      {ig?.main.choose && <p className="small"><b>Choose:</b> {ig.main.choose}</p>}
+      {e?.caption && <CopyField label="Caption" text={e.caption} />}
+      {!e?.caption && e?.onImage && <CopyField label="Words on the image" text={e.onImage} />}
+      {ig && <p className="small"><b>Cover:</b> {ig.main.cover}</p>}
+      {ig && <p className="small"><b>Comment keyword:</b> {ig.main.keyword} (the DM sends {ig.main.link})</p>}
+      {url && <CopyField label={date < GO_LIVE ? 'Link (from Thu 29 Oct)' : 'Link'} text={url} mono copyLabel={`Copy ${post.link.split('/go/')[1] ?? 'post'} link`} />}
+      {url && date < GO_LIVE && post.utm && <CopyField label="Link until /go/ is live" text={longUrl(post.utm)} mono copyLabel="Copy the long link" />}
+      {ig ? <Steps items={ig.checklist} /> : <Steps items={sentences(post.notes)} ordered={false} />}
+      <p className="small muted">
+        {e?.length && `${e.length} · `}
+        {post.account}
+        {post.contentId && (
+          <>
+            {' · '}
+            <a href={contentHref(post.contentId)}>Full script and prompts</a>
+          </>
+        )}
+      </p>
+    </div>
   );
 }

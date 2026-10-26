@@ -82,11 +82,80 @@ export interface Creative {
 
 export interface CalendarPost {
   channel: string; account: string; contentId: string | null; time: string; notes: string; tag: string; slot: string;
-  link: string; utm: Record<string, string>; episode?: number;
+  link: string; utm: Record<string, string>; episode?: number; requires?: string; fallbackContentId?: string;
 }
 export interface CalendarDay {
   date: string; day: number; weekday: string; week: number; phase: string; focus: string;
-  posts: CalendarPost[]; actions: { type: string; what: string; owner: string }[]; kpiCheck: string;
+  posts: CalendarPost[]; actions: { type: string; what: string; owner: string; budgetLineId?: string }[]; kpiCheck: string;
+  /** Added at build time by scripts/plan-data.mjs (todayExtras). */
+  extra?: TodayExtra;
+}
+
+export interface IgKickoff {
+  title: string;
+  main: { time: string; contentId: string; choose?: string; format: string; keyword: string; link: string; pin?: string; cover: string; caption: string };
+  checklist: string[];
+  stories: { time: string; contentId?: string; template?: string; link?: string }[];
+}
+export interface DueAd {
+  id: string; title: string; platform: string; money: string; inThe1000: boolean; trigger: string; mustEndBy: string;
+  kind: 'prep' | 'run' | 'check'; day?: number; days?: number; note: string;
+}
+export interface MoneyItem { label: string; usd: number; line: string; card?: string; conditional: boolean }
+export interface TodayExtra {
+  week: number; weekday: string;
+  targets: { dates: string; visits: number; signups: number; paid: number; netPaid: number; activatedPayers: number; mrr: number } | null;
+  ig: IgKickoff | null;
+  make: { text: string; time: string; ids: string[]; sheets: string[] }[];
+  ads: DueAd[];
+  money: MoneyItem[];
+  posts: { title: string | null; kind: 'video' | 'creative' | null; caption: string | null; onImage: string | null; hook: string | null; cta: string | null; length: string | null; igMain: boolean }[];
+}
+
+export interface WeekCard {
+  week: number; from: string; to: string; phase: string; title: string; goal: string; sunday: string;
+  actions: { date: string; type: string; what: string }[];
+  make: number;
+  money: { week: number; running: number; ads: number; items: { label: string; usd: number; line: string; date?: string }[]; liveCards: string[]; note: string } | null;
+  targets: { visits: number; paid: number; netPaid: number; activatedPayers: number; mrr: number; activeSubs: number } | null;
+  checkpoints: { date: string; title: string; approx: boolean }[];
+}
+export interface LaunchDayCard { day: number; date: string; weekday: string; focus: string; actions: string[]; posts: number }
+
+export interface ProductionSimple {
+  howWeMakeVideos: { title: string; intro: string; ways: { name: string; share: string; covers: string; steps: string[]; time: string }[]; everythingElse: string; rules: string[] };
+  weeks: { week: number; dates: string; note?: string; items: { day: string; text: string; ids: string[]; links: { sheet: string; warRoom: string }[] }[] }[];
+  launchWeekLink: string;
+}
+
+/* ---------- data/ads.json ---------- */
+export interface AdCard {
+  id: string; order: number; inThe1000: boolean; title: string; summary: string; statusTrigger: string; earliestDate: string; mustEndBy: string;
+  platform: string; toolPath: string[]; objective: string; optimization: string; bidStrategy: string; attribution: string;
+  budget: { totalUsd: number | string; perDayUsd: number | string; days: number | string; budgetLine: string; note: string };
+  countries: { code: string; name: string }[]; age: string; gender: string; languages: string[];
+  audience: { setting: string; suggestions: string[]; exclusions: string };
+  placements: { on: string[]; off: string[] };
+  creative: { contentId: string; fallbackContentId: string; file: string; mustShow: string };
+  copy: { primaryText: string; headline: string; ctaButton: string };
+  link: { url: string; redirectsWith: string; fallbackUrl?: string; fallbackRedirectsWith?: string; creatorPostUrl?: string };
+  names: Record<string, string>;
+  goodAfter48h: string[]; kill: string[]; scale: string[]; warRoomLog: string[];
+  fallbackIfNotAvailableFromBiH: string; checksBeforeLaunch: string[];
+}
+export interface AdWeek {
+  week: number; from: string; to: string; summary: string; liveCards: string[]; adSpendUsd: number;
+  adItems: { line: string; item: string; usd: number; card?: string; from?: string; to?: string }[];
+  otherPlanSpend: { line: string; item: string; usd: number; date?: string }[];
+  weekTotalUsd: number; runningTotalUsd: number; note: string;
+}
+export interface AdsFile {
+  meta: Record<string, string>;
+  sharedRules: Record<string, string>;
+  adCards: AdCard[];
+  adCalendar: AdWeek[];
+  channelVerdicts: { channel: string; inThe1000Usd: number; verdict: string; cards: string[] }[];
+  expectedRanges: Record<string, unknown>;
 }
 
 export interface Template {

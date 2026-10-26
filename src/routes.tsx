@@ -5,33 +5,55 @@ export interface RouteProps { params: string[] }
 export interface RouteDef {
   id: string;
   label: string;
-  short: string;
   blurb: string;
   load: () => Promise<{ default: ComponentType<RouteProps> }>;
   Component: LazyExoticComponent<ComponentType<RouteProps>>;
 }
 
-function def(id: string, label: string, short: string, blurb: string, load: () => Promise<{ default: ComponentType<RouteProps> }>): RouteDef {
-  return { id, label, short, blurb, load, Component: lazy(load) };
+function def(id: string, label: string, blurb: string, load: () => Promise<{ default: ComponentType<RouteProps> }>): RouteDef {
+  return { id, label, blurb, load, Component: lazy(load) };
 }
 
+/** The four main tabs plus the Library. Every page loads on its own when it is opened. */
 export const ROUTES: RouteDef[] = [
-  def('today', 'Today', '01', 'Posts, actions, pace and the next call', () => import('./pages/Today')),
-  def('strategy', 'Strategy', '02', 'North star, positioning, beats, decisions', () => import('./pages/Strategy')),
-  def('budget', 'Budget', '03', 'The $1,000 allocator and spend log', () => import('./pages/Budget')),
-  def('funnel', 'Funnel & ARR', '04', 'The 91-day model and the $1M question', () => import('./pages/Funnel')),
-  def('analytics', 'Analytics', '05', 'Daily actuals against the weekly targets', () => import('./pages/Analytics')),
-  def('predictions', 'Predictions', '06', 'Forecast, chances and the pace $1M needs', () => import('./pages/Predictions')),
-  def('content', 'Content', '07', 'Videos and creatives with scripts and prompts', () => import('./pages/Content')),
-  def('calendar', 'Calendar', '08', '90 days, by week and by day', () => import('./pages/Calendar')),
-  def('outreach', 'Outreach', '09', 'Templates, launch copy, targets, partners', () => import('./pages/Outreach')),
-  def('tracking', 'Tracking', '10', 'UTM builder, events, consent', () => import('./pages/Tracking')),
-  def('research', 'Research', '11', 'Reports, sources and verification', () => import('./pages/Research')),
+  def('today', 'Today', 'One checklist for today', () => import('./pages/Today')),
+  def('plan', 'Plan', 'The 13 weeks on one screen', () => import('./pages/Plan')),
+  def('ads', 'Ads', 'Every ad, step by step', () => import('./pages/Ads')),
+  def('results', 'Results', 'Your numbers and the forecast', () => import('./pages/Results')),
+  def('library', 'Library', 'Videos, images, playbooks, tools', () => import('./pages/Library')),
 ];
 
 export const routeById = (id: string) => ROUTES.find((r) => r.id === id);
 
-export function parseHash(hash: string): { id: string; params: string[] } {
+/**
+ * Old routes (the 11-page site) and where they live now. `#/analytics/sample` still works:
+ * parseHash and href both send it to `#/results/sample`, and the App rewrites the address bar.
+ */
+const LEGACY: Record<string, (p: string[]) => string[]> = {
+  strategy: (p) => (p[0] === 'decisions' ? ['plan', 'decisions'] : ['plan']),
+  calendar: (p) => (p[0] ? ['today', p[0]] : ['plan']),
+  analytics: (p) => ['results', ...p],
+  predictions: (p) => ['results', ...p],
+  budget: () => ['library', 'budget'],
+  funnel: () => ['library', 'funnel'],
+  content: (p) => (p[0] ? ['library', /^C/i.test(p[0]) ? 'images' : 'videos', ...p] : ['library', 'videos']),
+  outreach: (p) => ['library', 'outreach', ...p],
+  tracking: (p) => ['library', 'tracking', ...p],
+  research: (p) => ['library', 'research', ...p],
+};
+
+/** Map any route (new or old) to its canonical id and params. */
+export function canonical(id: string, params: string[]): { id: string; params: string[]; legacy: boolean } {
+  if (routeById(id)) return { id, params, legacy: false };
+  const m = LEGACY[id];
+  if (m) {
+    const [nid, ...np] = m(params);
+    return { id: nid, params: np, legacy: true };
+  }
+  return { id: 'today', params: [], legacy: false };
+}
+
+export function parseHash(hash: string): { id: string; params: string[]; legacy: boolean } {
   const clean = hash.replace(/^#\/?/, '').split('?')[0];
   const parts = clean.split('/').filter(Boolean).map((p) => {
     try {
@@ -40,8 +62,12 @@ export function parseHash(hash: string): { id: string; params: string[] } {
       return p;
     }
   });
-  const id = parts[0] && routeById(parts[0]) ? parts[0] : 'today';
-  return { id, params: parts[0] && routeById(parts[0]) ? parts.slice(1) : [] };
+  if (!parts[0]) return { id: 'today', params: [], legacy: false };
+  return canonical(parts[0], parts.slice(1));
 }
 
-export const href = (id: string, ...params: string[]) => `#/${[id, ...params].map(encodeURIComponent).join('/')}`;
+/** Link to a page. Old ids still work and resolve to their new home. */
+export function href(id: string, ...params: string[]) {
+  const c = canonical(id, params);
+  return `#/${[c.id, ...c.params].map(encodeURIComponent).join('/')}`;
+}

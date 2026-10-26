@@ -1,0 +1,23 @@
+# This repository is public. Captures, generations, renders and audio never live here.
+# The private asset library (see content/production.md section 9) holds them.
+projects/
+**/renders/
+**/.hyperframes/
+**/node_modules/
+**/assets/capture/
+**/assets/gen/
+**/assets/face/
+**/assets/audio/
+**/assets/fonts/
+**/assets/shared/
+*.mp4
+*.mov
+*.webm
+*.wav
+*.mp3
+*.m4a
+*.png
+*.jpg
+*.jpeg
+*.pdf
+*.pptx

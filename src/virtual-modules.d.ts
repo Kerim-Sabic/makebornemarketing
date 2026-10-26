@@ -6,6 +6,20 @@ declare module 'virtual:war-room/calendar-index' {
   export const DAY_LOADERS: Record<string, () => Promise<CalendarDay>>;
 }
 
+declare module 'virtual:war-room/plan-weeks' {
+  import type { LaunchDayCard, WeekCard } from './lib/types';
+  export const WEEKS: WeekCard[];
+  export const LAUNCH_DAYS: LaunchDayCard[];
+  export const IG_DECISIONS: { id: string; question: string; recommendation: string }[];
+}
+
+declare module 'virtual:war-room/production-simple' {
+  import type { ProductionSimple } from './lib/types';
+  export const SIMPLE: ProductionSimple;
+  export const DECISIONS: { id: string; question: string; recommendation: string; deadline?: string }[];
+  export const COUNTS: Record<string, number>;
+}
+
 declare module 'virtual:war-room/content-index' {
   export interface ContentMeta {
     kind: 'video' | 'creative';

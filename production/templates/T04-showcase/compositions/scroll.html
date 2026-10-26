@@ -1,0 +1,46 @@
+<!doctype html>
+<html
+  lang="en"
+  data-composition-variables='[
+    {"id":"sentence","type":"string","label":"The exact brief, in quotes","default":"\"A site for my bouldering gym.\""},
+    {"id":"series","type":"string","label":"Series tag","default":"Made from one sentence #1"},
+    {"id":"footnote","type":"string","label":"From the run log only","default":"Built in 2:41 · 38 credits · unedited"},
+    {"id":"pageSrc","type":"string","label":"390-wide full-page capture (PNG, 2x)","default":"assets/capture/page-390.png"}
+  ]'
+>
+  <head><meta charset="UTF-8" /></head>
+  <body>
+    <template>
+      <link rel="stylesheet" href="assets/shared/brand.css" />
+      <style>
+        #root { position: absolute; inset: 0; background: var(--mb-canvas); }
+        #scroll-chip { position: absolute; left: 0; right: 0; top: 820px; display: flex; justify-content: center; }
+        #scroll-phone { opacity: 0; position: absolute; left: 270px; top: 300px; width: 540px; height: 1170px; border-radius: 56px; border: 10px solid var(--mb-ink); overflow: hidden; background: #fff; box-shadow: var(--mb-shadow); }
+        #scroll-page { position: absolute; left: 0; top: 0; width: 100%; height: auto; }
+        #scroll-tag { position: absolute; left: var(--safe-left); top: 230px; font-size: calc(24px * var(--type-scale)); }
+        #scroll-foot { position: absolute; left: 0; right: 0; top: 1490px; text-align: center; font-size: calc(24px * var(--type-scale)); }
+        #scroll-end { position: absolute; left: 0; right: 0; top: 860px; display: flex; justify-content: center; align-items: center; gap: 18px; font-family: var(--mb-sans); font-weight: 640; font-size: 44px; color: var(--mb-ink); opacity: 0; }
+        #scroll-end img { height: 64px; }
+      </style>
+      <div id="root" data-composition-id="scroll" data-width="1080" data-height="1920" data-duration="8">
+        <div id="scroll-tag" class="mb-chip-dark" data-var-text="series">Made from one sentence #1</div>
+        <div id="scroll-phone"><img id="scroll-page" data-var-src="pageSrc" src="assets/capture/page-390.png" alt="" /></div>
+        <div id="scroll-chip"><div id="scroll-chip-pill" class="mb-pill" style="font-size: calc(30px * var(--type-scale))"><span data-var-text="sentence">"A site for my bouldering gym."</span></div></div>
+        <div id="scroll-foot" class="mb-footnote" data-var-text="footnote">Built in 2:41 · 38 credits · unedited</div>
+        <div id="scroll-end"><img src="assets/shared/components/mark.svg" alt="" /><span>makeborne.com</span></div>
+      </div>
+      <script>
+        // 0-2 s the sentence alone; 2-7 s the real output scrolls (one continuous move, never parked); 7-8 s the mark, loops to frame 0.
+        const tl = gsap.timeline({ paused: true });
+        tl.fromTo("#scroll-chip-pill", { scale: 1 }, { scale: 1.03, duration: 2, ease: "none" }, 0);
+        tl.to("#scroll-chip", { y: 560, duration: 0.5, ease: "power3.inOut" }, 1.75);
+        tl.fromTo("#scroll-phone", { opacity: 0, y: 60 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, 1.9);
+        // Scroll distance: set to (page height in px at 540 wide) - 1150. 2600 suits a ~3,750 px tall 390-wide page.
+        tl.fromTo("#scroll-page", { y: 0 }, { y: -2600, duration: 4.9, ease: "power1.inOut" }, 2.1);
+        tl.to(["#scroll-phone", "#scroll-chip", "#scroll-foot", "#scroll-tag"], { opacity: 0, duration: 0.25, ease: "power2.in" }, 7.0);
+        tl.fromTo("#scroll-end", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, 7.1);
+        window.__timelines["scroll"] = tl;
+      </script>
+    </template>
+  </body>
+</html>

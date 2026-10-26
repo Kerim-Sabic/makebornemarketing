@@ -6,19 +6,17 @@ It reads the plan's own files at build time (`data/*.json`, `plan/*.md`, `resear
 
 ## Pages
 
+Four tabs and a Library. On a phone the tabs sit in a bottom bar; on a desktop, in the top bar.
+
 | Route | What it does |
 |---|---|
-| `#/today` (or `#/today/2026-11-16`) | Posts and actions from `data/calendar.json`, week-to-date KPI pace against `data/kpis.json`, budget spent against plan, the next dated checkpoint from `data/checkpoints.json`, and the founder routine. Ticks are saved in the browser. |
-| `#/strategy` | Executive summary, north star, messaging house, ICPs, live-vs-coming features and beats, phases, channels, scenarios, the $1M conditions, growth asks, risks and owner decisions (from `data/plan.json`). |
-| `#/budget` | Interactive $1,000 allocator starting from `plan.json` budget lines with a sum check, cumulative plan-vs-actual chart, spend log (localStorage, JSON export and import) and the kill and scale rules. |
-| `#/funnel` | The daily cohort model from `data/funnel.json`, ported to TypeScript (`src/lib/funnelModel.ts`) and checked against every scenario's `referenceOutputs`. Presets, sliders, MRR / ARR / active-subscriber charts over 91 days, the weekly table, and a "what must be true for $1M ARR" readout that solves for the traffic or conversion needed. |
-| `#/analytics` (or `#/analytics/sample`) | A spreadsheet-style day sheet (one row per channel, arrow / Enter navigation, Ctrl+Enter saves, PageUp / PageDown change the day, paste a block from a spreadsheet), CSV and JSON import and export compatible with `data/actuals.template.json`, the weekly scorecard (north star and guardrails, red / amber / green), "this week, plainly" (the kill, scale, refund-brake, boost and D4 reinvestment rules applied to the data, plus checkpoints due), the funnel (visits → sign-ups → checkout → paid → activated against the kpis.json stages, overall and per channel), weekly charts against the targets, new / churned / net MRR from cohorts, CAC and payback by channel and budget line (using the spend log), the content leaderboard and the alert rules. `/sample` shows 28 invented days labelled SAMPLE; they are generated in memory and never saved, exported or mixed with logged rows. |
-| `#/predictions` (or `#/predictions/sample`) | Forecast of MRR, ARR, payers, sign-ups and visits at +30, +60, +90 days and on the day-90 review (24 Jan 2027) with 10th-90th percentile bands, the chance of each checkpoint in `data/checkpoints.json` and of $1M ARR (2,000 seeded Monte Carlo runs in the browser), the required pace for $1M, $500k and the plan base, a scenario sandbox, a per-channel outlook with the channel to feed next by marginal CAC, every input with its data and plan values, and the method and its limits. No forecast under 7 logged days. The engine is `src/lib/forecast.ts`. |
-| `#/content` (or `#/content/V01`) | Filterable library of `data/videos.json` and `data/creatives.json` with full scripts, captions, prompts and ad variants, copy buttons and a per-item status (to do, filming, posted, winner). |
-| `#/calendar` (or `#/calendar/2026-11-27`) | 90-day grid with week and day detail, linked to the content items. |
-| `#/outreach` | Templates, launch copy (Product Hunt, Show HN, Reddit, X, LinkedIn, Indie Hackers, newsletters, press, directories), targets, the affiliate program and the compliance tables from `data/outreach.json`. |
-| `#/tracking` | UTM and `/go/` builder following `content/tracking.md` (validation, channel mapping, beat warnings, a local code register with CSV export), the event spec, the consent prerequisites, and the rules and rituals. |
-| `#/research` (or `#/research/paid-acquisition`) | Every Markdown report rendered with a table of contents, evidence labels and jump links to its Sources and Verification sections, plus full-text search. |
+| `#/today` (or `#/today/2026-11-12`) | One checklist for the day, grouped Post / Make / Ads / Reach out / Log numbers. Each line has a time, a tick box (saved in this browser) and a "How" panel with the exact caption, link and steps. It merges `data/calendar.json` (posts and actions), `data/instagram.json` `kickoffDays`, `data/production.json` `simple.weeks` and the `data/ads.json` ad cards that are due. At the top: the day number, "on track / not on track" from your logged numbers, today's money to spend, and previous / next day. |
+| `#/plan` (or `#/plan/decisions`) | "The plan in one screen" (who we sell to, what we say, how we get customers, where the $1,000 goes, the target), the seven launch-week days and the 13 week cards (goal, 5-10 key actions, money this week, the Sunday checkpoint), then the owner decisions with a recommendation each. |
+| `#/ads` (or `#/ads/A01`) | The $1,000 money bar (spent from the spend log against the planned running total by week), the pre-flight checklist, the "if Bosnia billing does not work" fallback, and the seven ad cards in order. A card opens to: when to launch and every click, budget, who sees it and where, the creative and the words (with copy buttons), the link and names, good-after-48-hours, STOP, SCALE, and what to log (with a "Log spend" form). Cards A04-A07 are marked "from revenue, not the $1,000". |
+| `#/results` (or `#/results/sample`, `#/results/forecast`) | Today's entry (the day sheet), a three-line verdict (on track?, what to do this week, the 24 Jan forecast range), then collapsible panels: totals, scorecard, this week, funnel, weekly charts, monthly revenue, cost per customer, content, alerts, rows, import and export, forecast, chances, required pace, sandbox, channel outlook, inputs and method. `/sample` shows 28 invented days, never saved. |
+| `#/library` | Searchable index (sections and the text of every document): Videos, Images, Production, Instagram playbook, Ads playbook, Where to post, Outreach, Full strategy, Tracking (the `/go/` and UTM builder), Budget detail, Funnel calculator, 90-day calendar, Research. Each opens as `#/library/<section>/…` and loads on its own. |
+
+Old links keep working: `#/strategy`, `#/calendar`, `#/analytics`, `#/predictions`, `#/budget`, `#/funnel`, `#/content`, `#/outreach`, `#/tracking` and `#/research` (with their deep links) open their new home and the address bar is rewritten (`src/routes.tsx`).
 
 ## Run it
 
@@ -32,13 +30,13 @@ npm run preview   # serve dist/ locally
 npm run check     # after a build: render every route, test the funnel model and the forecast maths, scan dist/
 ```
 
-`npm run check` renders all routes (including every research report and deep links) through Vite's SSR loader and fails on any error, compares the TypeScript funnel model with each scenario's `referenceOutputs` in `data/funnel.json` (within 1%), tests the forecast and analytics maths with a fixed seed (`scripts/check-forecast.mjs`: empty and short data states, band ordering, monotonic sanity checks, plan-like data landing on the plan, the required-pace solver, the kill / scale rules), fails when a `data/plan.json` scenario's `mrrDay90` drifts more than 5% from the calculator, scans the plan files for known confidential markers (see `scripts/check-routes.mjs`), and checks the built page for missing assets, the CSP and network calls.
+`npm run check` renders all routes (the four tabs, the Library, every research report, deep links and the old routes), checks that old hashes redirect, checks the Today and Plan joins in `scripts/plan-data.mjs` (dated money adds up to $1,000, every make-list item lands on a day, the one-form tracking codes), through Vite's SSR loader and fails on any error, compares the TypeScript funnel model with each scenario's `referenceOutputs` in `data/funnel.json` (within 1%), tests the forecast and analytics maths with a fixed seed (`scripts/check-forecast.mjs`: empty and short data states, band ordering, monotonic sanity checks, plan-like data landing on the plan, the required-pace solver, the kill / scale rules), fails when a `data/plan.json` scenario's `mrrDay90` drifts more than 5% from the calculator, scans the plan files for known confidential markers (see `scripts/check-routes.mjs`), and checks the built page for missing assets, the CSP and network calls.
 
 ## Edit the data
 
 - Change any file in `data/`, `plan/`, `research/` or `content/`, then rebuild (or keep `npm run dev` running). The JSON shapes are typed loosely in `src/lib/types.ts`; new fields are ignored, renamed fields need a matching change there.
 - `data/checkpoints.json` (added for this site) lists the dated decision checkpoints shown as "next decision due". It was collected from `content/tracking.md` §6.5 and §7.5, `plan/strategy.md` §6 and §17 and the calendar actions. Dates marked `approx` are planning guesses.
-- The live-today and coming-soon feature lists on the Strategy page are constants at the top of `src/pages/Strategy.tsx`. Move an item when its feature passes the six-box gate.
+- The live-today and coming-soon feature lists on the Library > Full strategy page are constants at the top of `src/pages/Strategy.tsx`. Move an item when its feature passes the six-box gate.
 - If you change the funnel formulas, change `data/funnel_model.py` and `src/lib/funnelModel.ts` together, regenerate `referenceOutputs`, update the `data/plan.json` scenarios and the `plan/strategy.md` 14.2 table from the same run, and run `npm run check`.
 - Pages load only the data they show: `scripts/data-plugin.mjs` builds slim indexes at build time (calendar per day, content titles, document metadata) and each research document loads on its own. Nothing is generated into the repository.
 - Owner-only notes go in `private/` (gitignored). The research page does not read that folder.
@@ -69,7 +67,7 @@ GitHub Pages sites are public on free plans, even from a private repository. Use
 ## Notes
 
 - Stack: Vite 7, React 19, TypeScript 5.9, `marked` for Markdown, bundled Inter and Newsreader fonts (SIL Open Font License). Charts are hand-written SVG (no chart library). Dependency versions are pinned exactly in `package.json`.
-- Light and dark themes follow the system setting, with a manual switch in the sidebar.
+- Light and dark themes follow the system setting, with a manual switch (Auto / Light / Dark) in the top bar.
 - Accessibility: keyboard focus styles, labelled inputs, a skip link, native `<dialog>` for item details, reduced-motion support, and tables that scroll inside their own frame so the page never scrolls sideways down to 360 px.
 
 ## Licence

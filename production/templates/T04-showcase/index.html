@@ -1,0 +1,42 @@
+<!doctype html>
+<!--
+  T04 Output showcase: real Makeborne outputs only, with the sentence that made them.
+  index.html mounts ONE scene. Default: compositions/scroll.html (V29 "Made from one sentence", 8 s, cover C28).
+  Swap data-composition-src / data-composition-id / data-duration for:
+    compositions/slides.html     V16 5 sites (15 s, also TikTok photo-mode stills via snapshot), V15/V27 book riffle, V03 deck fan
+    compositions/triptych.html   V10 / C29 one brief, three deliverables in one brand (6 s hero, loopable)
+  Ken Burns and parallax are GSAP transforms on <img> children of a timed mask; outputs are never redrawn or regenerated.
+-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>T04 output showcase</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link rel="stylesheet" href="assets/shared/brand.css" />
+    <style>
+      body { margin: 0; background: #f8f7f4; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: var(--mb-canvas); }
+    </style>
+  </head>
+  <body>
+    <div id="root" class="fmt-9x16" data-composition-id="main" data-start="0" data-duration="8" data-width="1080" data-height="1920">
+      <div
+        id="scroll"
+        data-composition-id="scroll"
+        data-composition-src="compositions/scroll.html"
+        data-variable-values='{"sentence":"\"A site for my bouldering gym.\"","series":"Made from one sentence #1","footnote":"Built in 2:41 · 38 credits · unedited"}'
+        data-start="0"
+        data-duration="8"
+        data-track-index="1"
+        data-track-kind="graphics"
+        data-width="1080"
+        data-height="1920"
+      ></div>
+      <audio id="sc-music" data-start="0" data-duration="8" data-track-index="8" data-volume="0.9" src="assets/audio/music.wav"></audio>
+    </div>
+    <script>
+      window.__timelines["main"] = gsap.timeline({ paused: true });
+    </script>
+  </body>
+</html>

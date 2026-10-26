@@ -23,9 +23,12 @@ function scriptText(v: Video) {
 
 type Kind = 'videos' | 'creatives';
 
-export default function Content({ params }: RouteProps) {
+/** Library > Videos (kind "videos") and Library > Images (kind "creatives"); params[0] opens one item. */
+export default function Content({ params, kind: fixedKind }: RouteProps & { kind?: Kind }) {
   const openId = params[0];
-  const [kind, setKind] = useState<Kind>(() => (openId?.startsWith('C') ? 'creatives' : 'videos'));
+  const [kindState, setKindState] = useState<Kind>(() => (openId?.startsWith('C') ? 'creatives' : 'videos'));
+  const kind = fixedKind ?? kindState;
+  const setKind = (k: Kind) => (fixedKind ? (window.location.hash = href('library', k === 'videos' ? 'videos' : 'images')) : setKindState(k));
   const [status, setStatus] = useContentStatus();
   const [q, setQ] = useState('');
   const [f, setF] = useState({ format: '', platform: '', priority: '', week: '', tag: '', status: '' });
@@ -76,13 +79,9 @@ export default function Content({ params }: RouteProps) {
 
   return (
     <Page
-      eyebrow={`${VIDEOS.length} videos · ${CREATIVES.length} creatives · plan only, nothing posted`}
-      title={
-        <>
-          The <em>library</em>
-        </>
-      }
-      lede="Every script, caption, prompt and ad variant in the plan. Beat items stay parked until their feature passes the gate. Status is saved in this browser."
+      eyebrow={`Library · ${VIDEOS.length} videos · ${CREATIVES.length} images · plan only, nothing posted`}
+      title={kind === 'videos' ? <>Every <em>video</em></> : <>Every <em>image</em></>}
+      lede={kind === 'videos' ? 'Every script, hook, caption and shot list. Tap a video for the full sheet. Items marked as a beat wait until that feature is live. Status is saved in this browser.' : 'Every static, carousel and story: the exact words, the layout and the ad variants. Tap one for the full sheet. Status is saved in this browser.'}
     >
       <div className="row-between" style={{ marginBottom: 18 }}>
         <Segmented
@@ -94,7 +93,7 @@ export default function Content({ params }: RouteProps) {
           }}
           options={[
             { value: 'videos', label: `Videos · ${VIDEOS.length}` },
-            { value: 'creatives', label: `Creatives · ${CREATIVES.length}` },
+            { value: 'creatives', label: `Images · ${CREATIVES.length}` },
           ]}
         />
         <div className="row small muted">
@@ -132,7 +131,7 @@ export default function Content({ params }: RouteProps) {
         </ul>
       )}
 
-      <Sheet open={!!open} onClose={() => (window.location.hash = href('content'))} wide title={open ? `${open.item.id} · ${open.kind === 'video' ? open.item.title : open.item.concept}` : ''}>
+      <Sheet open={!!open} onClose={() => (window.location.hash = href('library', isV ? 'videos' : 'images'))} wide title={open ? `${open.item.id} · ${open.kind === 'video' ? open.item.title : open.item.concept}` : ''}>
         {open?.kind === 'video' && <VideoDetail v={open.item} status={st(open.item.id)} onStatus={(s) => setSt(open.item.id, s)} />}
         {open?.kind === 'creative' && <CreativeDetail c={open.item} status={st(open.item.id)} onStatus={(s) => setSt(open.item.id, s)} />}
       </Sheet>

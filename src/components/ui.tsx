@@ -1,4 +1,4 @@
-import { useEffect, useId, useRef, useState, type KeyboardEvent, type ReactNode } from 'react';
+import { createContext, useContext, useEffect, useId, useRef, useState, type KeyboardEvent, type ReactNode } from 'react';
 import { BEAT_LABELS, normTag } from '../lib/util';
 
 export function Page(props: { eyebrow?: ReactNode; title: ReactNode; lede?: ReactNode; actions?: ReactNode; children: ReactNode }) {
@@ -17,7 +17,35 @@ export function Page(props: { eyebrow?: ReactNode; title: ReactNode; lede?: Reac
   );
 }
 
+/**
+ * Inside <Folds>, every Section becomes a collapsible panel (closed unless its id is `open`).
+ * Results uses it to stack the Analytics and Predictions sections under one short verdict.
+ */
+const FoldContext = createContext<{ open?: string } | null>(null);
+export function Folds({ open, children }: { open?: string; children: ReactNode }) {
+  return <FoldContext.Provider value={{ open }}>{children}</FoldContext.Provider>;
+}
+
 export function Section(props: { title: ReactNode; kicker?: ReactNode; aside?: ReactNode; id?: string; children: ReactNode; className?: string }) {
+  const fold = useContext(FoldContext);
+  if (fold)
+    return (
+      <details className={`fold ${props.className ?? ''}`} id={props.id} open={!!props.id && fold.open === props.id}>
+        <summary>
+          <span className="fold-title">
+            <span className="fold-h">{props.title}</span>
+            {props.kicker && <span className="fold-kicker">{props.kicker}</span>}
+          </span>
+          <svg className="fold-chev" viewBox="0 0 12 12" width="14" height="14" aria-hidden="true">
+            <path d="M3 4.5l3 3 3-3" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+          </svg>
+        </summary>
+        <div className="fold-body">
+          {props.aside && <div className="section-aside" style={{ marginBottom: 12 }}>{props.aside}</div>}
+          {props.children}
+        </div>
+      </details>
+    );
   return (
     <section className={`section ${props.className ?? ''}`} id={props.id} aria-labelledby={props.id ? `${props.id}-h` : undefined}>
       <div className="section-head">
@@ -54,6 +82,33 @@ export function BeatTag({ tag }: { tag: string | null | undefined }) {
     <span className={`chip ${live ? 'chip-live' : 'chip-beat'}`} title={live ? 'Live at launch: may be promoted' : 'Not live today: never promote as available now'}>
       {live ? 'Live' : (BEAT_LABELS[t] ?? t).replace('Beat: ', 'Beat · ')}
     </span>
+  );
+}
+
+/** Plain meanings of the few marketing words the plan cannot avoid. */
+export const GLOSSARY: Record<string, string> = {
+  CAC: 'Cost per customer: what a source cost, divided by the paying customers it brought (after refunds).',
+  MRR: 'Monthly revenue: what all active subscriptions bring in each month.',
+  ARR: "Yearly revenue at today's pace: monthly revenue × 12.",
+  CTR: 'Click rate: the share of people who saw the ad and clicked the link.',
+  CPC: 'Cost per click.',
+  CPM: 'Cost per 1,000 times the ad was shown.',
+  ICP: 'The kind of customer we aim at.',
+  UTM: 'Tags on a link that tell us which post or ad a visitor came from.',
+  Spark: "TikTok Spark ad: pays to show an existing TikTok post (ours or a creator's) to more people, with its likes and comments.",
+  Partnership: "Meta partnership ad: pays to show a creator's own Reel, under their name and ours.",
+  'net payers': 'Paying customers after refunds.',
+  'activated payers': 'Paying customers who sent a client review link, or published or exported a deck or book, within 7 days.',
+};
+
+/** A word with its plain meaning on hover, focus and tap. */
+export function Term({ t, children }: { t: string; children?: ReactNode }) {
+  const meaning = GLOSSARY[t];
+  if (!meaning) return <>{children ?? t}</>;
+  return (
+    <abbr className="term" title={meaning} tabIndex={0}>
+      {children ?? t}
+    </abbr>
   );
 }
 

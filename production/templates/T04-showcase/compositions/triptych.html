@@ -1,0 +1,48 @@
+<!doctype html>
+<!-- Triptych: one brief, three real deliverables in one brand (V10 frame 0 and loop, C29 static). 6 s, loopable.
+     9:16 stacks site (16:10), slide (16:9) and book cover (portrait) vertically; 16:9 aligns them on one baseline. -->
+<html
+  lang="en"
+  data-composition-variables='[
+    {"id":"brief","type":"string","label":"The one brief","default":"\"A garden-design studio in Bristol: website, pitch deck and client welcome guide.\""},
+    {"id":"line","type":"string","label":"Line","default":"One brief. Website, deck and guide."}
+  ]'
+>
+  <head><meta charset="UTF-8" /></head>
+  <body>
+    <template>
+      <link rel="stylesheet" href="assets/shared/brand.css" />
+      <style>
+        #root { position: absolute; inset: 0; background: var(--mb-canvas); }
+        #tri-line { position: absolute; left: var(--safe-left); width: calc(var(--safe-right) - var(--safe-left)); top: 280px; font-size: calc(54px * var(--type-scale)); }
+        #tri-brief { position: absolute; left: var(--safe-left); top: 420px; max-width: 880px; font-size: calc(24px * var(--type-scale)); }
+        .tri { position: absolute; }
+        .tri img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+        #tri-site { left: 65px; top: 560px; width: 620px; height: 388px; }
+        #tri-deck { left: 395px; top: 800px; width: 620px; height: 349px; }
+        #tri-book { left: 120px; top: 1000px; width: 280px; height: 396px; }
+        .fmt-16x9 #tri-site { left: 192px; top: 420px; width: 640px; height: 400px; }
+        .fmt-16x9 #tri-deck { left: 870px; top: 445px; width: 667px; height: 375px; }
+        .fmt-16x9 #tri-book { left: 1575px; top: 560px; width: 180px; height: 260px; }
+      </style>
+      <div id="root" data-composition-id="triptych" data-width="1080" data-height="1920" data-duration="6">
+        <div id="tri-line" class="mb-display" data-var-text="line">One brief. Website, deck and guide.</div>
+        <div id="tri-brief" class="mb-pill" data-var-text="brief"></div>
+        <div id="tri-site" class="tri mb-card"><img src="assets/capture/tri-site.png" alt="" /></div>
+        <div id="tri-deck" class="tri mb-card"><img src="assets/capture/tri-deck.png" alt="" /></div>
+        <div id="tri-book" class="tri mb-card"><img src="assets/capture/tri-book.png" alt="" /></div>
+      </div>
+      <script>
+        const tl = gsap.timeline({ paused: true });
+        ["#tri-site", "#tri-deck", "#tri-book"].forEach((id, i) => {
+          tl.fromTo(id, { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.45, ease: "power3.out" }, 0.1 + i * 0.12);
+          tl.fromTo(`${id} img`, { scale: 1 }, { scale: 1.035, duration: 6, ease: "none" }, 0);
+        });
+        // parallax: the three layers drift at different speeds so the frame never parks
+        tl.fromTo("#tri-site", { x: 0 }, { x: -10, duration: 6, ease: "none" }, 0);
+        tl.fromTo("#tri-book", { x: 0 }, { x: 12, duration: 6, ease: "none" }, 0);
+        window.__timelines["triptych"] = tl;
+      </script>
+    </template>
+  </body>
+</html>

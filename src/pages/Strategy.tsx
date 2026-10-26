@@ -69,7 +69,7 @@ export default function Strategy({ params }: RouteProps) {
     >
       <nav className="pill-nav" aria-label="Jump to section" style={{ marginBottom: 36 }}>
         {SECTIONS.map(([id, label]) => (
-          <a key={id} className="chip chip-muted" href={href('strategy', id)} style={{ textDecoration: 'none' }}>
+          <a key={id} className="chip chip-muted" href={href('library', 'strategy', id)} style={{ textDecoration: 'none' }}>
             {label}
           </a>
         ))}

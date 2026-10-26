@@ -1,0 +1,57 @@
+<!doctype html>
+<!--
+  T07 Cinematic hook: a 1.5-2.5 s generated plate (Higgsfield or another model) + masked HTML type, then a hard cut to the
+  real capture. Only as an A/B "B variant" of a proven real-UI piece (V02-B, V07-B, V18-B, V40-B, V48-B), and only after
+  owner decision P-D1. The plate never shows product UI, outputs, people, faces, logos, readable signs or real businesses.
+  The "AI-generated scene" chip stays on screen for every frame of the plate. Realistic plate: also switch on the TikTok AIGC
+  label and YouTube "altered or synthetic" = Yes; Meta may add "AI info" automatically.
+  Prepend: render this 2.5 s and place it before the A-variant's frame 0 in that video's project (shift the A clips by 2.5 s),
+  or mount the A project as a sub-composition after this one.
+-->
+<html
+  lang="en"
+  data-composition-variables='[
+    {"id":"hookLead","type":"string","label":"Hook line","default":"40 emails of feedback."},
+    {"id":"hookAccent","type":"string","label":"Accent word","default":"Or one link."},
+    {"id":"aiLabelText","type":"string","label":"AI label (never empty)","default":"AI-generated scene"},
+    {"id":"plateSrc","type":"string","label":"Generated plate (5 s, 9:16, no text)","default":"assets/gen/plate.mp4"},
+    {"id":"nextSrc","type":"string","label":"First real shot after the cut","default":"assets/capture/first-real-shot.mp4"}
+  ]'
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>T07 cinematic hook</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link rel="stylesheet" href="assets/shared/brand.css" />
+    <style>
+      body { margin: 0; background: #18181b; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #18181b; }
+      .clip { position: absolute; }
+      #ch-plate, #ch-next { inset: 0; width: 100%; height: 100%; object-fit: cover; }
+      #ch-type { left: var(--safe-left); width: calc(var(--safe-right) - var(--safe-left)); top: 330px; }
+      #ch-lead { font-size: calc(70px * var(--type-scale)); color: #fff; text-shadow: 0 2px 24px rgba(0,0,0,.4); }
+      #ch-acc { font-size: calc(80px * var(--type-scale)); }
+      .mask { overflow: hidden; padding: 0.05em 0 0.12em; }
+      #ch-ai { left: var(--safe-left); top: 1180px; }
+    </style>
+  </head>
+  <body>
+    <div id="root" class="fmt-9x16" data-composition-id="main" data-start="0" data-duration="3" data-width="1080" data-height="1920">
+      <video id="ch-plate" class="clip" data-start="0" data-duration="2.5" data-media-start="0.5" data-track-index="0" data-var-src="plateSrc" src="assets/gen/plate.mp4" muted playsinline></video>
+      <video id="ch-next" class="clip" data-start="2.5" data-duration="0.5" data-track-index="0" data-var-src="nextSrc" src="assets/capture/first-real-shot.mp4" muted playsinline></video>
+      <div id="ch-type" class="clip" data-start="0" data-duration="2.5" data-track-index="1" data-track-kind="graphics">
+        <div class="mask"><div id="ch-lead" class="mb-display" data-var-text="hookLead">40 emails of feedback.</div></div>
+        <div class="mask"><div id="ch-acc" class="mb-accent" data-var-text="hookAccent">Or one link.</div></div>
+      </div>
+      <div id="ch-ai" class="clip mb-chip-dark" style="font-size: calc(22px * var(--type-scale)); background: rgba(24,24,27,.78)" data-start="0" data-duration="2.5" data-track-index="2" data-track-kind="graphics" data-var-text="aiLabelText">AI-generated scene</div>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#ch-plate", { scale: 1.04 }, { scale: 1.0, duration: 2.5, ease: "none" }, 0);
+      tl.fromTo("#ch-lead", { yPercent: 110 }, { yPercent: 0, duration: 0.55, ease: "power4.out" }, 0.1);
+      tl.fromTo("#ch-acc", { yPercent: 110 }, { yPercent: 0, duration: 0.55, ease: "power4.out" }, 0.75);
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

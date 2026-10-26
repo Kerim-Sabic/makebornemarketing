@@ -1,0 +1,75 @@
+<!doctype html>
+<!--
+  T05 Founder face-to-camera (V08, V09, V11, V19, V21, V31, V39, V43, V44, V45, V47; also V38 customer call).
+  Master 1080x1920, default 45 s. A-roll = the founder's phone video (eye level, window light), sound kept on the video.
+  Overlays: Day-N pill (0-3 s), one numbers ledger (count-up to the REAL figure typed on the day), b-roll inserts (screen
+  captures from the capture bank) and the captions track. Cards never cover the face: inserts sit in the lower half.
+  LinkedIn plays muted: captions are mandatory on every cut.
+-->
+<html
+  lang="en"
+  data-composition-variables='[
+    {"id":"dayLabel","type":"string","label":"Series pill","default":"Day 1"},
+    {"id":"hookLine","type":"string","label":"Frame-0 line (in the top band)","default":"Day 1. We launched today."},
+    {"id":"n1Label","type":"string","label":"Ledger label 1","default":"paid"},
+    {"id":"n1","type":"number","label":"Ledger value 1 (real, never rounded up)","default":0},
+    {"id":"n2Label","type":"string","label":"Ledger label 2","default":"refunded"},
+    {"id":"n2","type":"number","label":"Ledger value 2","default":0},
+    {"id":"n3Label","type":"string","label":"Ledger label 3","default":"MRR ($)"},
+    {"id":"n3","type":"number","label":"Ledger value 3","default":0},
+    {"id":"arollSrc","type":"string","label":"Founder A-roll","default":"assets/face/aroll.mp4"},
+    {"id":"broll1Src","type":"string","label":"B-roll 1 (screen capture)","default":"assets/capture/broll-1.mp4"},
+    {"id":"broll2Src","type":"string","label":"B-roll 2 (screen capture)","default":"assets/capture/broll-2.mp4"}
+  ]'
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>T05 founder</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link rel="stylesheet" href="assets/shared/brand.css" />
+    <style>
+      body { margin: 0; background: #18181b; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #18181b; }
+      .clip { position: absolute; }
+      #fd-aroll { inset: 0; width: 100%; height: 100%; object-fit: cover; }
+      .insert { left: 65px; top: 760px; width: 950px; height: 594px; object-fit: cover; border-radius: var(--mb-radius-card); box-shadow: var(--mb-shadow); background: #fff; }
+      #fd-day { left: var(--safe-left); top: var(--safe-top); font-size: calc(26px * var(--type-scale)); }
+      #fd-hook { left: var(--safe-left); width: calc(var(--safe-right) - var(--safe-left)); top: 340px; font-size: calc(56px * var(--type-scale)); color: #fff; text-shadow: 0 2px 18px rgba(0,0,0,.35); }
+      #fd-ledger { left: 65px; top: 760px; width: 950px; padding: 36px 44px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+      .n { font-family: var(--mb-sans); font-weight: 700; letter-spacing: -0.04em; font-size: calc(72px * var(--type-scale)); color: var(--mb-ink); font-variant-numeric: tabular-nums; }
+      .nl { font-size: calc(24px * var(--type-scale)); }
+    </style>
+  </head>
+  <body>
+    <div id="root" class="fmt-9x16" data-composition-id="main" data-start="0" data-duration="45" data-width="1080" data-height="1920">
+      <video id="fd-aroll" class="clip" data-start="0" data-duration="45" data-track-index="0" data-has-audio="true" data-var-src="arollSrc" src="assets/face/aroll.mp4" playsinline></video>
+      <video id="fd-broll1" class="clip insert" data-start="2" data-duration="10" data-track-index="1" data-var-src="broll1Src" src="assets/capture/broll-1.mp4" muted playsinline></video>
+      <video id="fd-broll2" class="clip insert" data-start="12" data-duration="12" data-track-index="1" data-var-src="broll2Src" src="assets/capture/broll-2.mp4" muted playsinline></video>
+      <div id="fd-day" class="clip mb-chip-dark" data-start="0" data-duration="3" data-track-index="2" data-track-kind="graphics" data-var-text="dayLabel">Day 1</div>
+      <div id="fd-hook" class="clip mb-display" data-start="0" data-duration="2.5" data-track-index="2" data-track-kind="graphics" data-var-text="hookLine">Day 1. We launched today.</div>
+      <div id="fd-ledger" class="clip mb-card" data-start="24" data-duration="8" data-track-index="3" data-track-kind="graphics">
+        <div><div id="fd-n1" class="n">0</div><div class="nl mb-footnote" data-var-text="n1Label">paid</div></div>
+        <div><div id="fd-n2" class="n">0</div><div class="nl mb-footnote" data-var-text="n2Label">refunded</div></div>
+        <div><div id="fd-n3" class="n">0</div><div class="nl mb-footnote" data-var-text="n3Label">MRR ($)</div></div>
+      </div>
+      <div id="captions" data-composition-id="captions" data-composition-src="compositions/captions.html" data-start="0" data-duration="45" data-track-index="4" data-track-kind="captions" data-width="1080" data-height="1920"></div>
+    </div>
+    <script>
+      const v = window.__hyperframes ? window.__hyperframes.getVariables() : {};
+      const tl = gsap.timeline({ paused: true });
+      // Punch-ins on emphasis: 1.00 -> 1.08 on the a-roll at sentence starts (edit these times to the transcript)
+      tl.fromTo("#fd-aroll", { scale: 1 }, { scale: 1.08, duration: 0.35, ease: "power2.out" }, 24);
+      tl.to("#fd-aroll", { scale: 1, duration: 0.35, ease: "power2.inOut" }, 32);
+      tl.fromTo("#fd-broll1", { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4, ease: "power2.out" }, 2);
+      tl.fromTo("#fd-broll2", { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4, ease: "power2.out" }, 12);
+      tl.fromTo("#fd-ledger", { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4, ease: "power2.out" }, 24);
+      // Count-up to the real figure (no rounding: the final frame must equal the typed value)
+      [["#fd-n1", v.n1 || 0], ["#fd-n2", v.n2 || 0], ["#fd-n3", v.n3 || 0]].forEach(([id, val], i) => {
+        const o = { n: 0 };
+        tl.to(o, { n: val, duration: 1.1, ease: "power2.out", onUpdate: () => { document.querySelector(id).textContent = Math.round(o.n).toLocaleString("en-US"); } }, 24.3 + i * 0.15);
+      });
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+<!doctype html>
+<!--
+  Slides: one real output per slide with its sentence chip and run-log footnote (V16 five sites, V15/V27 book riffle at 0.6 s a page,
+  V03 deck fan). Mount with data-duration = 1.0 (cover) + 2.4 x items + 1.6 (CTA). Default: 5 items = 14.6 s (V16 is 15 s).
+  For TikTok photo mode / Instagram carousel, export each slide as a still: npx hyperframes snapshot --at 0.6,2.6,5.0,7.4,9.8,12.2,14.0
+-->
+<html
+  lang="en"
+  data-composition-variables='[
+    {"id":"cover","type":"string","label":"Cover line","default":"5 websites, each from one sentence."},
+    {"id":"cta","type":"string","label":"CTA slide","default":"Comment SITE for all 5 briefs."},
+    {"id":"s1","type":"string","label":"Slide 1 sentence","default":"\"A small coffee roastery in Sarajevo.\""},
+    {"id":"s2","type":"string","label":"Slide 2 sentence","default":"\"A bouldering gym in an old tram depot.\""},
+    {"id":"s3","type":"string","label":"Slide 3 sentence","default":"\"A 28-seat osteria in Ljubljana.\""},
+    {"id":"s4","type":"string","label":"Slide 4 sentence","default":"\"A handoff tracker for small logistics teams.\""},
+    {"id":"s5","type":"string","label":"Slide 5 sentence","default":"\"A seafood smokehouse by the harbour.\""},
+    {"id":"f1","type":"string","label":"Slide 1 run log","default":"Built in 2:41 · 38 credits · unedited"},
+    {"id":"f2","type":"string","label":"Slide 2 run log","default":"Built in 2:41 · 38 credits · unedited"},
+    {"id":"f3","type":"string","label":"Slide 3 run log","default":"Built in 2:41 · 38 credits · unedited"},
+    {"id":"f4","type":"string","label":"Slide 4 run log","default":"Built in 2:41 · 38 credits · unedited"},
+    {"id":"f5","type":"string","label":"Slide 5 run log","default":"Built in 2:41 · 38 credits · unedited"}
+  ]'
+>
+  <head><meta charset="UTF-8" /></head>
+  <body>
+    <template>
+      <link rel="stylesheet" href="assets/shared/brand.css" />
+      <style>
+        #root { position: absolute; inset: 0; background: var(--mb-canvas); }
+        .sl { position: absolute; inset: 0; opacity: 0; }
+        .sl-sent { position: absolute; left: var(--safe-left); width: calc(var(--safe-right) - var(--safe-left)); top: 290px; font-size: calc(44px * var(--type-scale)); }
+        .sl-card { position: absolute; left: 140px; top: 470px; width: 800px; height: 780px; }
+        .sl-card img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+        .sl-foot { position: absolute; left: 0; right: 0; top: 1280px; text-align: center; font-size: calc(22px * var(--type-scale)); }
+        #sl-cover, #sl-cta { display: flex; align-items: center; justify-content: center; text-align: center; padding: 0 var(--safe-left); }
+        #sl-cover .mb-display, #sl-cta .mb-display { font-size: calc(76px * var(--type-scale)); }
+      </style>
+      <div id="root" data-composition-id="slides" data-width="1080" data-height="1920" data-duration="14.6">
+        <div id="sl-cover" class="sl"><div class="mb-display" data-var-text="cover">5 websites, each from one sentence.</div></div>
+        <div id="sl-1" class="sl"><div class="sl-sent mb-display" data-var-text="s1"></div><div class="sl-card mb-card"><img src="assets/capture/out-1.png" alt="" /></div><div class="sl-foot mb-footnote" data-var-text="f1"></div></div>
+        <div id="sl-2" class="sl"><div class="sl-sent mb-display" data-var-text="s2"></div><div class="sl-card mb-card"><img src="assets/capture/out-2.png" alt="" /></div><div class="sl-foot mb-footnote" data-var-text="f2"></div></div>
+        <div id="sl-3" class="sl"><div class="sl-sent mb-display" data-var-text="s3"></div><div class="sl-card mb-card"><img src="assets/capture/out-3.png" alt="" /></div><div class="sl-foot mb-footnote" data-var-text="f3"></div></div>
+        <div id="sl-4" class="sl"><div class="sl-sent mb-display" data-var-text="s4"></div><div class="sl-card mb-card"><img src="assets/capture/out-4.png" alt="" /></div><div class="sl-foot mb-footnote" data-var-text="f4"></div></div>
+        <div id="sl-5" class="sl"><div class="sl-sent mb-display" data-var-text="s5"></div><div class="sl-card mb-card"><img src="assets/capture/out-5.png" alt="" /></div><div class="sl-foot mb-footnote" data-var-text="f5"></div></div>
+        <div id="sl-cta" class="sl"><div class="mb-display" data-var-text="cta">Comment SITE for all 5 briefs.</div></div>
+      </div>
+      <script>
+        const tl = gsap.timeline({ paused: true });
+        const ids = ["#sl-cover", "#sl-1", "#sl-2", "#sl-3", "#sl-4", "#sl-5", "#sl-cta"];
+        const starts = [0, 1.0, 3.4, 5.8, 8.2, 10.6, 13.0];
+        ids.forEach((id, i) => {
+          const s = starts[i];
+          const e = i < ids.length - 1 ? starts[i + 1] : 14.6;
+          tl.fromTo(id, { opacity: 0, x: i ? 60 : 0 }, { opacity: 1, x: 0, duration: 0.28, ease: "power3.out" }, s);
+          // Ken Burns on the real output: 1.00 -> 1.04 across the hold, origin at the hero
+          tl.fromTo(`${id} img`, { scale: 1, transformOrigin: "50% 0%" }, { scale: 1.04, duration: e - s, ease: "none" }, s);
+          if (i < ids.length - 1) tl.to(id, { opacity: 0, x: -60, duration: 0.22, ease: "power2.in" }, e - 0.22);
+        });
+        window.__timelines["slides"] = tl;
+      </script>
+    </template>
+  </body>
+</html>

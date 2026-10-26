@@ -9,9 +9,9 @@ import { href, type RouteProps } from '../routes';
 
 const TRACKING = trackingMd;
 
-// Values from content/tracking.md section 1.2. Beat campaigns exist only after that feature passes the gate.
-const SOURCES = ['tiktok', 'instagram', 'youtube', 'linkedin', 'x', 'producthunt', 'taaft', 'uneed', 'reddit', 'indiehackers', 'press-<outlet>', 'review_page', 'badge', 'deck_share', 'c-<handle>', 'alternativeto', 'saashub', 'microlaunch', 'futuretools', 'community-<name>', 'content_rewards', 'changelog', 'customer', 'portal', 'github_readme'];
-const MEDIUMS = ['organic', 'dm', 'bio', 'creator', 'affiliate', 'spark', 'partnership', 'directory', 'launch', 'press', 'product_loop', 'email', 'referral'];
+// Values from content/tracking.md section 1.2 (paid, cpc and google added 26 Oct for the ads playbook). Beat campaigns exist only after that feature passes the gate.
+const SOURCES = ['tiktok', 'instagram', 'youtube', 'linkedin', 'x', 'producthunt', 'taaft', 'uneed', 'reddit', 'indiehackers', 'press-<outlet>', 'review_page', 'badge', 'deck_share', 'c-<handle>', 'alternativeto', 'saashub', 'microlaunch', 'futuretools', 'community-<name>', 'content_rewards', 'changelog', 'customer', 'portal', 'github_readme', 'google', 'rundown'];
+const MEDIUMS = ['organic', 'dm', 'bio', 'creator', 'affiliate', 'spark', 'partnership', 'directory', 'launch', 'press', 'product_loop', 'email', 'referral', 'paid', 'cpc'];
 const CAMPAIGNS = ['launch-2026-10', 'always-on', 'creators-w1', 'creators-w2', 'bf-2026', 'day30', 'day90', 'cr-2026-12', 'images-beat', 'topups-beat', 'domains-beat', 'agency-beat', 'leads-beat', 'github-beat'];
 const BEAT_CAMPAIGNS = new Set(['images-beat', 'topups-beat', 'domains-beat', 'agency-beat', 'leads-beat', 'github-beat']);
 const PREFIXES: { p: string; label: string; source: string; standalone?: boolean }[] = [
@@ -21,6 +21,7 @@ const PREFIXES: { p: string; label: string; source: string; standalone?: boolean
   { p: 'li', label: 'li- Founder LinkedIn', source: 'linkedin' },
   { p: 'x', label: 'x- Founder X', source: 'x' },
   { p: 'c', label: 'c- Creator (public handle)', source: 'c-<handle>' },
+  { p: 'g', label: 'g- Google Search ad group', source: 'google' },
   { p: 'cr', label: 'cr- Content Rewards', source: 'content_rewards' },
   { p: 'ph', label: 'ph- Product Hunt', source: 'producthunt' },
   { p: 'ih', label: 'ih- Indie Hackers', source: 'indiehackers' },
@@ -34,6 +35,7 @@ const PREFIXES: { p: string; label: string; source: string; standalone?: boolean
   { p: 'saashub', label: 'saashub (directory)', source: 'saashub', standalone: true },
   { p: 'microlaunch', label: 'microlaunch (directory)', source: 'microlaunch', standalone: true },
   { p: 'futuretools', label: 'futuretools (directory)', source: 'futuretools', standalone: true },
+  { p: 'rundown', label: 'rundown (The Rundown Supertools)', source: 'rundown', standalone: true },
 ];
 const DESTS = [
   { v: '/', label: 'Home', live: true },
@@ -50,7 +52,7 @@ const HOOKS = [...new Set(['r1', 'r2', 'f1', 'f2', 'f4', 'a3', 'd1', 'd3', 'b4',
 function mapChannel(src: string, med: string) {
   if ((med === 'creator' || med === 'affiliate') && src.startsWith('c-')) return 'ch-creators';
   if (src === 'content_rewards') return 'ch-contentrewards';
-  if (med === 'spark' || med === 'partnership') return 'ch-boosts';
+  if (med === 'spark' || med === 'partnership' || med === 'paid' || med === 'cpc') return 'ch-boosts';
   if (med === 'product_loop' || med === 'referral') return 'ch-loops';
   if (med === 'email') return 'ch-email';
   if (med === 'directory') return 'ch-directories';
@@ -191,6 +193,10 @@ function Builder() {
       setMedium('email');
       setCampaign('always-on');
       setId(sarajevoToday().replace(/-/g, ''));
+    } else if (p === 'g') {
+      setMedium('cpc');
+      setCampaign('always-on');
+      setId('brand');
     } else if (p === 'cr') {
       setMedium('creator');
       setCampaign('cr-2026-12');
@@ -198,7 +204,7 @@ function Builder() {
     } else {
       setMedium('organic');
       setCampaign('launch-2026-10');
-      if (!id || /^\d{8}$/.test(id) || id === '2026-12' || id === 'soon') setId('0001');
+      if (!id || /^\d{8}$/.test(id) || id === '2026-12' || id === 'soon' || id === 'brand') setId('0001');
     }
   };
 
@@ -226,7 +232,7 @@ function Builder() {
           {!pre.standalone && (
             <Field label={prefix === 'c' ? 'Id (blank = handle)' : 'Post # or id'}>{(fid) => <input id={fid} type="text" value={id} onChange={(e) => setId(e.target.value)} placeholder="0412" />}</Field>
           )}
-          <Field label={medium === 'dm' ? 'DM keyword' : 'Suffix (optional)'} hint={medium === 'dm' ? 'site, deck, book, client' : 'bio, s (Spark), p (partnership)…'}>
+          <Field label={medium === 'dm' ? 'DM keyword' : 'Suffix (optional)'} hint={medium === 'dm' ? 'site, deck, book, client' : 'bio, b (paid boost), s (Spark), p (partnership)…'}>
             {(fid) => <input id={fid} type="text" value={suffix} onChange={(e) => setSuffix(e.target.value)} />}
           </Field>
           {needsHandle && (

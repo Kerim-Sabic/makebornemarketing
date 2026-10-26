@@ -1,0 +1,106 @@
+/* Makeborne house system for HyperFrames templates ("made, not generated").
+   Source of truth: content/creatives.md section 2 and research/creative-assets.md section 4.
+   tools/new-project.mjs copies this file to <project>/assets/shared/brand.css.
+   Sub-compositions load it with <link rel="stylesheet" href="assets/shared/brand.css"> (links are hoisted). */
+
+@font-face {
+  font-family: "Inter MB";
+  src: url("../fonts/inter-latin-wght-normal.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: block;
+}
+@font-face {
+  font-family: "Newsreader MB";
+  src: url("../fonts/newsreader-latin-400-italic.woff2") format("woff2");
+  font-style: italic;
+  font-weight: 400;
+  font-display: block;
+}
+
+:root {
+  /* colour */
+  --mb-canvas: #f8f7f4;
+  --mb-ink: #18181b; /* locked here until the owner picks #18181B or #18191E (decision P-D6) */
+  --mb-ink-2: #5c616d;
+  --mb-hair: #e4e1da;
+  --mb-white: #ffffff;
+  --mb-grad-a: #2858cb;
+  --mb-grad-b: #6355cf;
+  --mb-coral: #f76f53; /* at most once per piece */
+
+  /* depth */
+  --mb-shadow: 0 2px 6px rgba(20, 22, 40, 0.12), 0 50px 90px -35px rgba(30, 40, 90, 0.35);
+  --mb-shadow-contact: 0 2px 6px rgba(20, 22, 40, 0.12);
+  --mb-radius-card: 18px;
+  --mb-radius-pill: 999px;
+
+  /* type */
+  --mb-sans: "Inter MB", "Inter", sans-serif;
+  --mb-serif: "Newsreader MB", serif;
+  --mb-display-weight: 680;
+  --mb-display-tracking: -0.05em;
+  --mb-display-leading: 0.96;
+}
+
+/* Safe zones. Every word and the product sit inside the band; nothing readable outside it.
+   9:16 uses the strictest union of TikTok (top bar, right rail, caption block) and Reels/Stories
+   third-party guidance (14% top, 35% bottom, 6% sides) [U: check each platform's template before export]. */
+.fmt-9x16 { --safe-top: 270px; --safe-bottom: 1250px; --safe-left: 65px; --safe-right: 950px; --type-scale: 1.35; --caption-y: 1060px; }
+.fmt-4x5  { --safe-top: 76px;  --safe-bottom: 1214px; --safe-left: 76px; --safe-right: 1004px; --type-scale: 1.15; --caption-y: 1040px; }
+.fmt-1x1  { --safe-top: 76px;  --safe-bottom: 1004px; --safe-left: 76px; --safe-right: 1004px; --type-scale: 1.05; --caption-y: 860px; }
+.fmt-16x9 { --safe-top: 108px; --safe-bottom: 972px;  --safe-left: 192px; --safe-right: 1728px; --type-scale: 1;   --caption-y: 900px; }
+
+/* Shared atoms (markup in shared/components/*.html) */
+.mb-display {
+  font-family: var(--mb-sans);
+  font-weight: var(--mb-display-weight);
+  letter-spacing: var(--mb-display-tracking);
+  line-height: var(--mb-display-leading);
+  color: var(--mb-ink);
+}
+.mb-accent {
+  font-family: var(--mb-serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.09em;
+  background: linear-gradient(90deg, var(--mb-grad-a), var(--mb-grad-b));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.mb-card {
+  background: var(--mb-white);
+  border-radius: var(--mb-radius-card);
+  box-shadow: var(--mb-shadow);
+  overflow: hidden;
+}
+.mb-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 26px;
+  background: var(--mb-white);
+  border: 1px solid var(--mb-hair);
+  border-radius: var(--mb-radius-pill);
+  box-shadow: var(--mb-shadow);
+  font-family: var(--mb-sans);
+  font-weight: 560;
+  color: var(--mb-ink);
+}
+.mb-chip-dark {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  background: var(--mb-ink);
+  color: var(--mb-white);
+  border-radius: var(--mb-radius-pill);
+  font-family: var(--mb-sans);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+.mb-footnote {
+  font-family: var(--mb-sans);
+  font-weight: 450;
+  color: var(--mb-ink-2);
+}

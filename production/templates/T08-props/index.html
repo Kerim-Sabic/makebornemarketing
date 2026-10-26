@@ -1,0 +1,60 @@
+<!doctype html>
+<!--
+  T08 Honest props (V05 inbox stack, V18 email thread, V26 4:58 p.m. notification, V40 crossed-out fake sale banner,
+  V21/V37 comment cards). Generic, typeset objects with INVENTED names and addresses only. They are props, not Makeborne UI
+  and not a copy of any real app's UI: no real inbox, no platform logos, no real handles (blur or omit). Master 1080x1920, 4 s.
+  Registry starting points if a richer look is wanted: notification-cascade, chat-message, typing-indicator.
+-->
+<html
+  lang="en"
+  data-composition-variables='[
+    {"id":"m1","type":"string","label":"Mail 1 subject (top, newest)","default":"can you make it pop?"},
+    {"id":"m2","type":"string","label":"Mail 2","default":"Re: Re: homepage v3"},
+    {"id":"m3","type":"string","label":"Mail 3","default":"Re: logo bigger?"},
+    {"id":"m4","type":"string","label":"Mail 4","default":"Fwd: small changes"},
+    {"id":"sender","type":"string","label":"Invented sender","default":"Dana (Client)"},
+    {"id":"badge","type":"string","label":"Badge","default":"9"},
+    {"id":"line","type":"string","label":"Hook line","default":"POV: &#39;make it pop&#39; for the 9th time."}
+  ]'
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>T08 props</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link rel="stylesheet" href="assets/shared/brand.css" />
+    <style>
+      body { margin: 0; background: #f8f7f4; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: var(--mb-canvas); }
+      .clip { position: absolute; }
+      #pr-line { left: var(--safe-left); width: calc(var(--safe-right) - var(--safe-left)); top: var(--safe-top); font-size: calc(54px * var(--type-scale)); }
+      #pr-stack { left: 90px; width: 900px; top: 520px; }
+      .mail { position: relative; margin-bottom: 18px; padding: 26px 30px; display: grid; grid-template-columns: 1fr auto; gap: 6px; }
+      .from { font-family: var(--mb-sans); font-weight: 640; font-size: 30px; color: var(--mb-ink); }
+      .subj { grid-column: 1 / 3; font-family: var(--mb-sans); font-size: 30px; color: var(--mb-ink-2); }
+      .when { font-family: var(--mb-sans); font-size: 24px; color: var(--mb-ink-2); }
+      #pr-badge { position: absolute; right: -14px; top: -14px; width: 58px; height: 58px; border-radius: 50%; background: var(--mb-coral); color: #fff; font: 700 30px var(--mb-sans); display: grid; place-items: center; }
+    </style>
+  </head>
+  <body>
+    <div id="root" class="fmt-9x16" data-composition-id="main" data-start="0" data-duration="4" data-width="1080" data-height="1920">
+      <section id="pr-bg" class="clip" style="inset:0; background: var(--mb-canvas)" data-start="0" data-duration="4" data-track-index="0" data-track-kind="graphics"></section>
+      <div id="pr-line" class="clip mb-display" data-start="0" data-duration="4" data-track-index="2" data-track-kind="graphics" data-var-text="line">POV: 'make it pop' for the 9th time.</div>
+      <div id="pr-stack" class="clip" data-start="0" data-duration="4" data-track-index="1" data-track-kind="graphics">
+        <div id="pr-m1" class="mail mb-card"><span class="from" data-var-text="sender">Dana (Client)</span><span class="when">16:58</span><span class="subj" data-var-text="m1">can you make it pop?</span><span id="pr-badge" data-var-text="badge">9</span></div>
+        <div id="pr-m2" class="mail mb-card"><span class="from" data-var-text="sender">Dana (Client)</span><span class="when">15:12</span><span class="subj" data-var-text="m2">Re: Re: homepage v3</span></div>
+        <div id="pr-m3" class="mail mb-card"><span class="from" data-var-text="sender">Dana (Client)</span><span class="when">11:40</span><span class="subj" data-var-text="m3">Re: logo bigger?</span></div>
+        <div id="pr-m4" class="mail mb-card"><span class="from" data-var-text="sender">Dana (Client)</span><span class="when">09:03</span><span class="subj" data-var-text="m4">Fwd: small changes</span></div>
+      </div>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      // Frame 0 already shows the stack (never black); the newest mail drops in on the first beat and the badge pops.
+      ["#pr-m4", "#pr-m3", "#pr-m2"].forEach((id, i) => tl.set(id, { opacity: 1 }, 0));
+      tl.fromTo("#pr-m1", { y: -60, opacity: 0.2 }, { y: 0, opacity: 1, duration: 0.35, ease: "power3.out" }, 0.25);
+      tl.fromTo("#pr-badge", { scale: 0.4 }, { scale: 1, duration: 0.3, ease: "back.out(2)" }, 0.55);
+      tl.fromTo("#pr-stack", { y: 0 }, { y: 24, duration: 4, ease: "none" }, 0);
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

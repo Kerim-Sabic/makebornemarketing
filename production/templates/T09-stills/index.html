@@ -1,0 +1,76 @@
+<!doctype html>
+<!--
+  T09 Stills: statics, carousels, LinkedIn document pages, stories, X cards, OG images, thumbnails, PH gallery.
+  Master 1080x1350 (4:5). One page = one 1-second clip; export with
+    npx hyperframes snapshot --at 0.5,1.5,2.5 --output stills/<Cid>        (one PNG per page)
+  Other sizes: set the root data-width/data-height (and the viewport) to the creative's size and add a .size-<WxH> rule:
+    1080x1080, 1200x1200, 1080x1920 (story: text only between y 270 and 1250), 1600x900, 1920x1080, 1200x630, 1280x720, 1270x760.
+  LinkedIn document: export pages, then join to PDF (e.g. img2pdf) - or build the deck in Makeborne itself (C07, C20, C38, C45).
+  Layouts: .lay-proof (C01-style capture top 60% + headline), .lay-type (C03/C04/C08/C12/C30/C31/C37 type only),
+           .lay-step (C05/C18/C23 carousel card: step number, caption, capture card), .lay-end (price + refund strip).
+  The COMPOSE text of every creative in data/creatives.json (generationPrompt) is the exact spec: copy its words verbatim.
+-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1350" />
+    <title>T09 stills</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link rel="stylesheet" href="assets/shared/brand.css" />
+    <style>
+      body { margin: 0; background: #f8f7f4; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: var(--mb-canvas); }
+      .page { position: absolute; inset: 0; background: var(--mb-canvas); }
+      .lockup { position: absolute; left: 7%; top: 5%; display: flex; align-items: center; gap: 12px; font: 640 30px var(--mb-sans); color: var(--mb-ink); }
+      .lockup img { height: 56px; }
+      .strip { position: absolute; left: 7%; right: 7%; top: 89%; border-top: 1px solid var(--mb-hair); padding-top: 18px; display: flex; justify-content: space-between; font: 450 26px var(--mb-sans); }
+      .strip b { font-weight: 500; color: var(--mb-ink); }
+      .strip span { color: var(--mb-ink-2); }
+      /* .lay-proof */
+      .lay-proof .shot { position: absolute; left: 7%; width: 86%; top: 12%; height: 46%; }
+      .lay-proof .shot img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+      .lay-proof .chip { position: absolute; left: calc(7% - 10px); top: calc(12% - 40px); font-size: 28px; }
+      .lay-proof .head { position: absolute; left: 7%; right: 7%; top: 62%; font-size: 84px; }
+      .lay-proof .sub { position: absolute; left: 7%; right: 7%; top: 81%; font-size: 34px; }
+      /* .lay-type */
+      .lay-type .head { position: absolute; left: 7%; right: 7%; top: 52%; font-size: 96px; }
+      .lay-type .strike { position: absolute; left: 7%; top: 14%; display: grid; gap: 14px; font: 450 30px var(--mb-sans); color: var(--mb-ink-2); }
+      .lay-type .strike s { text-decoration-thickness: 2px; }
+      /* .lay-step */
+      .lay-step .num { position: absolute; left: 7%; top: 11%; font: 680 40px var(--mb-sans); color: var(--mb-ink); }
+      .lay-step .cap { position: absolute; left: 7%; right: 7%; top: 16%; font-size: 58px; }
+      .lay-step .shot { position: absolute; left: 7%; width: 86%; top: 34%; height: 54%; }
+      .lay-step .shot img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="3" data-width="1080" data-height="1350" data-no-timeline>
+      <!-- Page 1: C01 proof split -->
+      <section id="pg-1" class="page lay-proof clip" data-start="0" data-duration="1" data-track-index="0" data-track-kind="graphics">
+        <div class="lockup"><img src="assets/shared/components/mark.svg" alt="" />Makeborne</div>
+        <div class="shot mb-card"><img src="assets/capture/c01-hero-1440x900.png" alt="" /></div>
+        <div class="chip mb-pill">A website for a small coffee roastery in Sarajevo.</div>
+        <div class="head mb-display">Send your client a real website before the first <span class="mb-accent">call.</span></div>
+        <div class="sub mb-footnote">Studio, $49/month: build it, send the review link, get the yes.</div>
+        <div class="strip"><b>makeborne.com</b><span>From $20/month + tax · Full refund until you use credits</span></div>
+      </section>
+      <!-- Page 2: C03 text-only stance -->
+      <section id="pg-2" class="page lay-type clip" data-start="1" data-duration="1" data-track-index="0" data-track-kind="graphics">
+        <div class="lockup"><img src="assets/shared/components/mark.svg" alt="" />Makeborne</div>
+        <div class="strike"><s>Re: Re: homepage v3</s><s>Fwd: small changes</s><s>Re: logo bigger?</s><s>Re: Re: Re: final final</s><s>Re: can we make it pop</s><s>Re: one more thing</s></div>
+        <div class="head mb-display">40 emails of feedback. Or one <span class="mb-accent">link.</span></div>
+        <div class="strip"><b>makeborne.com</b><span>From $20/month + tax · Full refund until you use credits</span></div>
+      </section>
+      <!-- Page 3: C05 carousel step card -->
+      <section id="pg-3" class="page lay-step clip" data-start="2" data-duration="1" data-track-index="0" data-track-kind="graphics">
+        <div class="lockup" style="font-size:22px"><img src="assets/shared/components/mark.svg" alt="" style="height:40px" />Makeborne</div>
+        <div class="num">1</div>
+        <div class="cap mb-display">Find the business. Lead finder: what kind of business, and where.</div>
+        <div class="shot mb-card"><img src="assets/capture/c05-lead-finder.png" alt="" /></div>
+      </section>
+    </div>
+    <script>
+      window.__timelines["main"] = gsap.timeline({ paused: true });
+    </script>
+  </body>
+</html>

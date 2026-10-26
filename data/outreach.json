@@ -1122,11 +1122,11 @@
       "url": "https://makeborne.com/go/{directoryCode}",
       "codes": {
         "taaft": "taaft",
-        "alternativeto": "dir-alternativeto",
-        "saashub": "dir-saashub",
-        "microlaunch": "dir-microlaunch",
-        "futuretools": "dir-futuretools",
-        "rundown": "dir-rundown",
+        "alternativeto": "alt",
+        "saashub": "saashub",
+        "microlaunch": "microlaunch",
+        "futuretools": "futuretools",
+        "rundown": "rundown",
         "uneed": "uneed"
       },
       "tagline": "The AI studio for client work.",

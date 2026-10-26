@@ -1,12 +1,16 @@
 // Build-time slim indexes of the plan's data, so a page loads only what it shows.
 //   virtual:war-room/calendar-index   date, day and phase of every day, plus one lazy loader per day
-//   virtual:war-room/calendar-day/<d> one calendar day (its own small chunk)
+//   virtual:war-room/calendar-day/<d> one calendar day (its own small chunk), plus the Today page's joins (scripts/plan-data.mjs):
+//                                     the week's targets, Instagram kick-off steps, what to make, ad cards due, today's money
+//   virtual:war-room/plan-weeks       13 week cards and the launch-week day cards for the Plan page
+//   virtual:war-room/production-simple  "How we make videos" and the weekly make-lists from data/production.json
 //   virtual:war-room/content-index    id -> title, kind, format, length and hook code of every video and creative
 //   virtual:war-room/funnel-scenarios id, name, inputs and reference outputs of every data/funnel.json scenario
 //   virtual:war-room/docs-index       metadata of every Markdown document (the text itself loads per document)
 // The source files stay the single source of truth: nothing is generated into the repository.
-import { readFileSync, readdirSync } from 'node:fs';
+import { readFileSync, readdirSync, statSync } from 'node:fs';
 import { join } from 'node:path';
+import { planWeeks, todayExtras } from './plan-data.mjs';
 
 const PREFIX = 'virtual:war-room/';
 const RESOLVED = '\0' + PREFIX;
@@ -19,7 +23,30 @@ export function warRoomData() {
     ctx.addWatchFile(abs(p));
     return readFileSync(abs(p), 'utf8');
   };
-  const json = (ctx, p) => JSON.parse(read(ctx, p));
+  // Parsed files are cached by modification time: 91 day chunks would otherwise parse calendar.json 91 times.
+  const cache = new Map();
+  const json = (ctx, p) => {
+    ctx.addWatchFile(abs(p));
+    const mtime = statSync(abs(p)).mtimeMs;
+    const hit = cache.get(p);
+    if (hit && hit.mtime === mtime) return hit.value;
+    const text = readFileSync(abs(p), 'utf8');
+    const value = p.endsWith('.json') ? JSON.parse(text) : text;
+    cache.set(p, { mtime, value });
+    return value;
+  };
+  const files = (ctx) => ({
+    calendar: json(ctx, 'data/calendar.json'),
+    instagram: json(ctx, 'data/instagram.json'),
+    production: json(ctx, 'data/production.json'),
+    ads: json(ctx, 'data/ads.json'),
+    kpis: json(ctx, 'data/kpis.json'),
+    creatives: json(ctx, 'data/creatives.json'),
+    videos: json(ctx, 'data/videos.json'),
+    checkpoints: json(ctx, 'data/checkpoints.json'),
+    plan: json(ctx, 'data/plan.json'),
+    calendarMd: json(ctx, 'content/calendar.md'),
+  });
 
   return {
     name: 'war-room-data',
@@ -45,7 +72,19 @@ export function warRoomData() {
         const date = what.slice('calendar-day/'.length);
         const day = json(this, 'data/calendar.json').find((d) => d.date === date);
         if (!day) this.error(`No calendar day ${date} in data/calendar.json`);
-        return `export default ${JSON.stringify(day)};\n`;
+        return `export default ${JSON.stringify({ ...day, extra: todayExtras(files(this), date) })};\n`;
+      }
+
+      if (what === 'plan-weeks') {
+        const { weeks, launchDays } = planWeeks(files(this));
+        const igDecisions = json(this, 'data/instagram.json').ownerDecisions.map((d) => ({ id: d.id, question: d.decision, recommendation: d.recommendation }));
+        return `export const WEEKS = ${JSON.stringify(weeks)};\nexport const LAUNCH_DAYS = ${JSON.stringify(launchDays)};\nexport const IG_DECISIONS = ${JSON.stringify(igDecisions)};\n`;
+      }
+
+      if (what === 'production-simple') {
+        const p = json(this, 'data/production.json');
+        const decisions = p.decisions.map((d) => ({ id: d.id, question: d.question, recommendation: d.recommendation, deadline: d.deadline }));
+        return `export const SIMPLE = ${JSON.stringify(p.simple)};\nexport const DECISIONS = ${JSON.stringify(decisions)};\nexport const COUNTS = ${JSON.stringify(p.meta.counts)};\n`;
       }
 
       if (what === 'content-index') {

@@ -1,0 +1,140 @@
+import { lazy, Suspense, useEffect, useMemo, useState, type ReactNode } from 'react';
+import { DOCS, docBySlug, loadSearchCorpus } from '../lib/docs';
+import { Chip, Empty, Page } from '../components/ui';
+import { href, type RouteProps } from '../routes';
+
+// Every Library page is its own chunk: opening the Library loads only this index.
+const Content = lazy(() => import('./Content'));
+const Production = lazy(() => import('./Production'));
+const Outreach = lazy(() => import('./Outreach'));
+const Tracking = lazy(() => import('./Tracking'));
+const Research = lazy(() => import('./Research'));
+const Budget = lazy(() => import('./Budget'));
+const Funnel = lazy(() => import('./Funnel'));
+const Calendar = lazy(() => import('./Calendar'));
+const Strategy = lazy(() => import('./Strategy'));
+const DocPage = lazy(() => import('./Research').then((m) => ({ default: ({ slug }: { slug: string }) => <m.DocView doc={docBySlug(slug)!} back={{ href: href('library'), label: 'Library' }} /> })));
+
+interface Item { id: string; title: string; blurb: string; group: string; words: string; doc?: string; render: (rest: string[]) => ReactNode }
+const ITEMS: Item[] = [
+  { id: 'videos', group: 'Make', title: 'Videos', blurb: '60 videos: hook, script, caption, shot list and status.', words: 'reels tiktok shorts script hook caption', render: (r) => <Content params={r} kind="videos" /> },
+  { id: 'images', group: 'Make', title: 'Images', blurb: '48 statics, carousels and stories: exact words, layout and ad variants.', words: 'creatives carousel story static picture', render: (r) => <Content params={r} kind="creatives" /> },
+  { id: 'production', group: 'Make', title: 'Production', blurb: 'How we make videos (one screen), the weekly make-list, then every per-video sheet.', words: 'hyperframes templates capture film edit', doc: 'production', render: () => <Production /> },
+  { id: 'instagram', group: 'Playbooks', title: 'Instagram playbook', blurb: 'Profile, bio links, the 12-post grid, DM keywords, stories and the first 14 days.', words: 'instagram bio dm keyword reels stories highlights', doc: 'instagram-playbook', render: () => <DocPage slug="instagram-playbook" /> },
+  { id: 'ads-playbook', group: 'Playbooks', title: 'Ads playbook', blurb: 'Why each ad, the platform rules, set-up from Bosnia, and the read-outs.', words: 'meta tiktok google spark partnership boost', doc: 'ads-playbook', render: () => <DocPage slug="ads-playbook" /> },
+  { id: 'where-to-post', group: 'Playbooks', title: 'Where to post', blurb: 'Every channel and directory, when to post there and which link to use.', words: 'channels directories taaft product hunt reddit', doc: 'where-to-post', render: () => <DocPage slug="where-to-post" /> },
+  { id: 'outreach', group: 'Playbooks', title: 'Outreach', blurb: 'Message templates, launch copy, who to contact, the partner program, the rules.', words: 'email dm templates creators press product hunt affiliate', render: (r) => <Outreach params={r} /> },
+  { id: 'strategy', group: 'Playbooks', title: 'Full strategy', blurb: 'The whole plan of record: positioning, customers, phases, channels, risks.', words: 'strategy positioning icp phases risks scenarios', render: (r) => <Strategy params={r} /> },
+  { id: 'tracking', group: 'Tools', title: 'Tracking', blurb: 'Build a /go/ link with the right tags (UTM builder), the events and consent.', words: 'utm link go code builder consent pixel', render: (r) => <Tracking params={r} /> },
+  { id: 'budget', group: 'Tools', title: 'Budget detail', blurb: 'The $1,000 by line, the allocator and the spend log.', words: 'money spend log allocation', render: () => <Budget /> },
+  { id: 'funnel', group: 'Tools', title: 'Funnel calculator', blurb: 'The 91-day model: what visits and conversion give, and what $1M a year needs.', words: 'model forecast calculator arr mrr', render: () => <Funnel /> },
+  { id: 'calendar', group: 'Tools', title: '90-day calendar', blurb: 'Every day of the plan in one grid, with its posts and actions.', words: 'calendar grid days', render: (r) => <Calendar params={r} /> },
+  { id: 'research', group: 'Evidence', title: 'Research', blurb: 'Every report with its sources and verification, and search inside every document.', words: 'reports sources evidence', render: (r) => <Research params={r} /> },
+];
+const GROUPS = ['Make', 'Playbooks', 'Tools', 'Evidence'];
+
+export default function Library({ params }: RouteProps) {
+  const item = ITEMS.find((i) => i.id === params[0]);
+  if (!item) return <LibraryIndex />;
+  return (
+    <>
+      <nav className="crumb" aria-label="Breadcrumb">
+        <a href={href('library')}>Library</a>
+        <span aria-hidden="true"> › </span>
+        <span aria-current="page">{item.title}</span>
+      </nav>
+      <Suspense fallback={<div className="loading" role="status">Loading {item.title}…</div>}>{item.render(params.slice(1))}</Suspense>
+    </>
+  );
+}
+
+function LibraryIndex() {
+  const [q, setQ] = useState('');
+  const t = q.trim().toLowerCase();
+  const [corpus, setCorpus] = useState<Map<string, string> | null>(null);
+  useEffect(() => {
+    if (t.length < 3 || corpus) return;
+    let live = true;
+    loadSearchCorpus().then((c) => live && setCorpus(c), () => undefined);
+    return () => {
+      live = false;
+    };
+  }, [t, corpus]);
+  const items = ITEMS.filter((i) => !t || `${i.title} ${i.blurb} ${i.words}`.toLowerCase().includes(t));
+  const docHits = useMemo(() => {
+    if (t.length < 3 || !corpus) return [];
+    return DOCS.map((d) => ({ d, n: (corpus.get(d.slug) ?? '').split(t).length - 1 }))
+      .filter((x) => x.n > 0)
+      .sort((a, b) => b.n - a.n)
+      .slice(0, 12);
+  }, [t, corpus]);
+  const docHref = (slug: string) => {
+    const own = ITEMS.find((i) => i.doc === slug);
+    return own ? href('library', own.id) : href('library', 'research', slug);
+  };
+
+  return (
+    <Page
+      eyebrow={`${ITEMS.length} sections · ${DOCS.length} documents`}
+      title={
+        <>
+          The <em>library</em>
+        </>
+      }
+      lede="Everything behind the plan: every video and image, the playbooks, the tools and the research. Search finds a section or any word inside the documents."
+    >
+      <div className="filters" role="search">
+        <div className="field grow">
+          <label htmlFor="lib-q">Search the library</label>
+          <input id="lib-q" type="search" value={q} onChange={(e) => setQ(e.target.value)} onFocus={() => void loadSearchCorpus().catch(() => undefined)} placeholder="e.g. Spark, bio link, refund, carousel" />
+        </div>
+      </div>
+      {GROUPS.map((g) => {
+        const list = items.filter((i) => i.group === g);
+        if (!list.length) return null;
+        return (
+          <section key={g} className="section" aria-labelledby={`lg-${g}`}>
+            <div className="section-head">
+              <h2 id={`lg-${g}`}>{g}</h2>
+            </div>
+            <div className="libgrid">
+              {list.map((i) => (
+                <a key={i.id} className="card libcard" href={href('library', i.id)}>
+                  <span className="libcard-title">{i.title}</span>
+                  <span className="small muted">{i.blurb}</span>
+                  <span className="libcard-go" aria-hidden="true">
+                    →
+                  </span>
+                </a>
+              ))}
+            </div>
+          </section>
+        );
+      })}
+      {t.length >= 3 && (
+        <section className="section" aria-labelledby="lg-docs">
+          <div className="section-head">
+            <h2 id="lg-docs">Inside the documents</h2>
+          </div>
+          {!corpus ? (
+            <p className="small muted" role="status">
+              Searching…
+            </p>
+          ) : docHits.length === 0 ? (
+            <Empty>No document mentions “{q}”.</Empty>
+          ) : (
+            <ul className="linklist">
+              {docHits.map(({ d, n }) => (
+                <li key={d.slug}>
+                  <a href={docHref(d.slug)}>{d.title}</a> <Chip tone="accent">{n} matches</Chip> <span className="tiny muted">{d.path}</span>
+                </li>
+              ))}
+            </ul>
+          )}
+        </section>
+      )}
+      {!items.length && t.length < 3 && <Empty>No section matches “{q}”.</Empty>}
+    </Page>
+  );
+}
+

@@ -1,0 +1,25 @@
+<!doctype html>
+<!-- Placeholder captions track. Replace with: node production/tools/captions-to-html.mjs assets/transcript.json compositions/captions.html -->
+<html lang="en">
+  <head><meta charset="UTF-8" /></head>
+  <body>
+    <template>
+      <link rel="stylesheet" href="assets/shared/brand.css" />
+      <style>
+        #root { position: absolute; inset: 0; pointer-events: none; }
+        .cap { position: absolute; left: 0; right: 0; top: var(--caption-y, 1060px); display: flex; justify-content: center; opacity: 0; }
+        .cap-text { max-width: 82%; text-align: center; padding: 12px 24px; border-radius: 22px; background: rgba(255,255,255,.94); box-shadow: var(--mb-shadow-contact); font-family: var(--mb-sans); font-weight: 640; letter-spacing: -0.02em; font-size: calc(52px * var(--type-scale, 1)); color: var(--mb-ink); }
+      </style>
+      <div id="root" data-composition-id="captions" data-width="1080" data-height="1920" data-duration="32">
+        <div id="cap-0" class="cap"><span class="cap-text">One sentence. Watch.</span></div>
+      </div>
+      <script>
+        const tl = gsap.timeline({ paused: true });
+        tl.fromTo("#cap-0", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.12, ease: "power2.out" }, 0.2);
+        tl.to("#cap-0", { opacity: 0, duration: 0.1, ease: "power2.in" }, 1.8);
+        tl.set("#cap-0", { opacity: 0, visibility: "hidden" }, 1.9);
+        window.__timelines["captions"] = tl;
+      </script>
+    </template>
+  </body>
+</html>

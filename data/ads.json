@@ -1,0 +1,1558 @@
+{
+ "meta": {
+  "version": "2026-10-26",
+  "purpose": "Paid media for the Makeborne 90-day plan: one simple card per ad the owner will actually run, in the order he runs them, plus a week-by-week spend calendar that reconciles to the $1,000. Companion to content/ads-playbook.md.",
+  "planOfRecord": "plan/strategy.md section 6 (budget lines b1-b9) and content/tracking.md section 7 (kill and scale). Where they disagree with this file, the plan wins.",
+  "labels": "[F] read at the platform page on 26 Oct 2026, [S] secondary, [V] vendor, [E] estimate, [A] assumption, [O] owner decision, [U] unverified",
+  "status": "Nothing here has been bought, created or launched. The owner opens every account, adds every payment method and presses every Publish button.",
+  "howToRead": "Each card has a one-line summary for the collapsed view (title, date, $, platform, audience); everything else is the expanded detail. Cards A01-A03 spend the $1,000 (lines b5 and b9). Cards A04-A07 are paid from revenue under owner decision D4 and are not part of the $1,000.",
+  "inThe1000": "Paid media inside the $1,000 is line b5 ($200: A01 + A02) and at most $52 of the reserve b9 (A03). Everything else in the $1,000 is creators, listings, the DM tool and fees (strategy 6.2); adCalendar lists all of it so the running total reaches $1,000.",
+  "blackout": "No paid ads from Fri 20 Nov to Wed 2 Dec 2026 (Black Friday prices).",
+  "timeZone": "All dates and times Europe/Sarajevo (CET, UTC+1). Create every ad account in this time zone and in USD.",
+  "adCalendarDates": "Each money item has the day it moves (date, or from-to for ads), from content/calendar.md \"The $1,000, by date\". The Today page shows it as today's money."
+ },
+ "sharedRules": {
+  "spendGate": "No card launches until /go/ short links, first-touch storage and mb_src/mb_campaign/mb_aff on Makeborne-created Whop checkouts are live (strategy 6.1).",
+  "creativeGate": "A post can be boosted only when it is 48+ hours old, has 3x the account median views, keeps 65%+ of viewers at 3 seconds, and has 1+ tracked sale on its /go/ code or 5+ link clicks per 1,000 views. Live features only; copy rules met.",
+  "links": "Every ad links to makeborne.com/go/<code>. Never a Whop store, affiliate or tracking link. Leave the platform URL-parameter field empty: the /go/ redirect adds the UTMs.",
+  "copyRules": "No free, trial, unlimited, print-ready, AI vendor names, competitor names or better-than claims. Prices say + tax. Real timers or sped up. No income promises.",
+  "killScaleShared": "Kill a source at $100 with 0 net payers or $150 with 1. Pause it if more than 20% of its buyers refund within 14 days. Never fund above $120 CAC. Scale only at CAC <= $50 over 3+ net payers, +20% at most every 48-72 hours.",
+  "biHRule": "Accounts in Makeborne's own legal name only. Never an account in someone else's name, a rented or bought account, a fake country or a VPN."
+ },
+ "adCards": [
+  {
+   "id": "A01",
+   "order": 1,
+   "inThe1000": true,
+   "title": "Boost the best wave-1 creator Reel (client approval) as a Meta partnership ad",
+   "summary": "A01 · Thu 12 Nov · $96 ($24/day x 4) · Meta (Instagram + Facebook Reels) · freelancers and agency owners, 16 English-speaking countries, 18+",
+   "statusTrigger": "All true at the Friday or Sunday boost check: (1) a wave-1 creator Instagram Reel is 48+ hours old; (2) it has 3x the creator's median views; (3) 65%+ of viewers still watching at 3 seconds; (4) 1+ tracked sale on /go/c-<handle> OR 5+ link clicks per 1,000 views; (5) the creator has sent the partnership ad code; (6) the spend gate is live; (7) the Meta ad account bills from Bosnia and Herzegovina. If no creator Reel qualifies, use our own V05 Reel if it meets (1)-(4).",
+   "earliestDate": "2026-11-12",
+   "mustEndBy": "2026-11-19 23:59 CET (the blackout starts 20 Nov)",
+   "platform": "Meta (Instagram and Facebook)",
+   "toolPath": [
+    "Meta Ads Manager -> Create -> objective Traffic -> Continue",
+    "Campaign: name mb-meta-traffic-slota-20261112; Special ad categories: none; Advantage campaign budget: off",
+    "Ad set: Conversion location Website; Performance goal Maximise number of landing page views (if it asks for a pixel or dataset, choose Maximise number of link clicks; do not create a pixel)",
+    "Ad set: Daily budget $24.00; start Thu 12 Nov 00:00, end Sun 15 Nov 23:59",
+    "Ad set: Advantage+ audience on; controls: the 16 countries, minimum age 18, language English (All) if offered",
+    "Ad set: Placements = Manual; tick only Instagram Reels, Facebook Reels, Instagram Feed, Instagram Explore",
+    "Ad: Identity = Makeborne Page + @makeborne; Partnership ad on -> Use partnership ad code -> paste the creator's code",
+    "Ad: Destination Website, URL below, URL parameters empty, CTA Learn more, headline below; Advantage+ creative enhancements all OFF; multi-advertiser ads OFF",
+    "Confirm beneficiary and payer = Makeborne -> Publish by Wed 11 Nov so review finishes in time"
+   ],
+   "objective": "Traffic",
+   "optimization": "Landing page views (fallback: link clicks). No pixel and no conversion event: sales are counted on the /go/ code in Whop.",
+   "bidStrategy": "Highest volume (no cap)",
+   "attribution": "Not used for decisions. Judge on /go/ sales within 7 days of the last click.",
+   "budget": {
+    "totalUsd": 96,
+    "perDayUsd": 24,
+    "days": 4,
+    "budgetLine": "b5",
+    "note": "Half of b5 ($200); A02 is the other half."
+   },
+   "countries": [
+    {
+     "code": "US",
+     "name": "United States"
+    },
+    {
+     "code": "GB",
+     "name": "United Kingdom"
+    },
+    {
+     "code": "CA",
+     "name": "Canada"
+    },
+    {
+     "code": "AU",
+     "name": "Australia"
+    },
+    {
+     "code": "IE",
+     "name": "Ireland"
+    },
+    {
+     "code": "NZ",
+     "name": "New Zealand"
+    },
+    {
+     "code": "DE",
+     "name": "Germany"
+    },
+    {
+     "code": "AT",
+     "name": "Austria"
+    },
+    {
+     "code": "CH",
+     "name": "Switzerland"
+    },
+    {
+     "code": "NL",
+     "name": "Netherlands"
+    },
+    {
+     "code": "BE",
+     "name": "Belgium"
+    },
+    {
+     "code": "LU",
+     "name": "Luxembourg"
+    },
+    {
+     "code": "SE",
+     "name": "Sweden"
+    },
+    {
+     "code": "NO",
+     "name": "Norway"
+    },
+    {
+     "code": "DK",
+     "name": "Denmark"
+    },
+    {
+     "code": "FI",
+     "name": "Finland"
+    }
+   ],
+   "age": "Minimum 18 (control). Suggestion 24-54.",
+   "gender": "All",
+   "languages": [
+    "English (All)"
+   ],
+   "audience": {
+    "setting": "Advantage+ audience ON",
+    "suggestions": [
+     "Interests: Web design",
+     "Freelancing",
+     "Small business",
+     "Graphic design"
+    ],
+    "exclusions": "None (no custom audiences exist before the consent banner)"
+   },
+   "placements": {
+    "on": [
+     "Instagram Reels",
+     "Facebook Reels",
+     "Instagram Feed",
+     "Instagram Explore and Explore home"
+    ],
+    "off": [
+     "Instagram and Facebook Stories",
+     "Audience Network",
+     "Messenger",
+     "Threads",
+     "In-stream video",
+     "Search results"
+    ]
+   },
+   "creative": {
+    "contentId": "Best qualifying wave-1 Lane A creator Reel (default V32, else V34)",
+    "fallbackContentId": "V05 (our own Instagram Reel: Ad setup -> Use existing post)",
+    "file": "The Reel exactly as posted (9:16, 1080x1920 MP4). Nothing is uploaded: the ad runs the post itself, so its likes and comments stay.",
+    "mustShow": "#ad at the start of the creator caption, the Paid partnership label, live features only"
+   },
+   "copy": {
+    "primaryText": "The creator's own caption (partnership ads run it). Fallback V05 Reel: \"Your client comments on the live site and taps Approve. No login, no screenshots, no 40-e-mail thread.\" (ad-copy A2-M1, 102 characters)",
+    "headline": "One link. One yes.",
+    "ctaButton": "Learn more"
+   },
+   "link": {
+    "url": "https://makeborne.com/go/c-<handle>-p",
+    "redirectsWith": "utm_source=instagram&utm_medium=partnership&utm_campaign=creators-w1&utm_content=c-<handle>-v1 (+ the creator's affiliate code on the server)",
+    "fallbackUrl": "https://makeborne.com/go/ig-v05-b",
+    "fallbackRedirectsWith": "utm_source=instagram&utm_medium=paid&utm_campaign=launch-2026-10&utm_content=ig-v05-f2"
+   },
+   "names": {
+    "campaign": "mb-meta-traffic-slota-20261112",
+    "adSet": "t1en-advplus-reelsfeed-24d",
+    "ad": "c-<handle>-v1 (fallback: ig-v05-f2)"
+   },
+   "goodAfter48h": [
+    "About $48 spent",
+    "CPM $15 or less",
+    "Link CTR 0.8% or more",
+    "CPC $1.00 or less",
+    "At least 40 landing page views (80%+ of link clicks)",
+    "At least 1 checkout opened on this code"
+   ],
+   "kill": [
+    "At $10: no delivery or CPM above $40 -> check review status and placements",
+    "At $30: link CTR under 0.5% OR CPC over $2.00 -> turn the ad off",
+    "At $50: 0 checkouts opened on this code -> turn the ad off",
+    "Source rule: $100 with 0 net payers or $150 with 1 -> never boost this source again"
+   ],
+   "scale": [
+    "No budget increase during the 4 days (too short to read).",
+    "After the slot: if this source reaches CAC $50 or less over 3+ net payers, run card A03."
+   ],
+   "warRoomLog": [
+    "Ads page (this card, \"Log spend\"): add one spend-log row per day (date, line b5, card A01, $ spent).",
+    "Results page: one daily row for ch-boosts: spend, link clicks, /go/ visits, checkouts opened, gross paid.",
+    "Library > Videos or Images: set the boosted post to \"winner\" if it produced 1+ net payer.",
+    "Private log (never this repo): CPM, link CTR, CPC, landing-page-view rate, checkouts opened, gross paid; re-check refunds 14 days after the last day and write the final CAC."
+   ],
+   "fallbackIfNotAvailableFromBiH": "If Meta cannot bill from Bosnia and Herzegovina by Mon 9 Nov: run this slot on TikTok with card A02's settings at $51/day x 2 days = $102 (the extra $6 comes from reserve b9). If neither platform bills by 9 Nov, the whole $200 of b5 moves to creator rehires (strategy 6.2). Never borrow someone else's account.",
+   "checksBeforeLaunch": [
+    "Spend gate live",
+    "Partnership ad code received and valid for 60 days",
+    "Landing page for the post's format live (or the home page via /go/)",
+    "AI daily limit raised (D6)",
+    "/go/ code registered",
+    "EU and UK price copy says + tax"
+   ]
+  },
+  {
+   "id": "A02",
+   "order": 2,
+   "inThe1000": true,
+   "title": "Spark-boost the best-selling TikTok (default: the comment-reply site speedrun)",
+   "summary": "A02 · Thu 3 Dec · $104 ($52/day x 2) · TikTok · freelancers and small-business owners, 16 English-speaking countries, 18-54",
+   "statusTrigger": "All true at the Tue 1 Dec check: (1) a TikTok post (ours or a creator's) is 48+ hours old; (2) 3x the account median views; (3) 65%+ still watching at 3 seconds; (4) 1+ tracked sale on its /go/ code OR 5+ link clicks per 1,000 views; (5) its caption is 100 characters or less and meets the copy rules (Spark cannot edit it); (6) for a creator post, a 60-day Spark code; (7) the TikTok ad account exists and bills from Bosnia and Herzegovina; (8) spend gate live.",
+   "earliestDate": "2026-12-03",
+   "mustEndBy": "2026-12-04 23:59 CET",
+   "platform": "TikTok",
+   "toolPath": [
+    "TikTok Ads Manager -> Campaign -> Create -> manual campaign (not Smart+) -> objective Traffic",
+    "Campaign: name mb-tt-traffic-slotb-20261203; campaign budget Daily $52; budget optimisation off",
+    "Ad group: name t1en-broad-tiktokonly-52d; optimisation location Website",
+    "Ad group: Placement -> Select placement -> TikTok only (untick Pangle and Global App Bundle); comments on; downloads off",
+    "Ad group: Targeting -> the 16 countries, language English, ages 18-24, 25-34, 35-44, 45-54, gender all, no interests (broad)",
+    "Ad group: Daily budget $52; start Thu 3 Dec 00:00, end Fri 4 Dec 23:59; dayparting off",
+    "Ad group: Optimisation goal Click; bid strategy Maximum delivery; billing CPC",
+    "Ad: Identity -> Spark Ads -> Use TikTok account to deliver Spark Ads -> + Add authorized post -> pick our post (or paste the creator's code)",
+    "Ad: Destination Website URL below; CTA Learn more; no pixel, no events -> Submit by Tue 1 Dec"
+   ],
+   "objective": "Traffic",
+   "optimization": "Clicks (landing-page-view optimisation needs a TikTok pixel, which we do not have [U])",
+   "bidStrategy": "Maximum delivery (lowest cost)",
+   "attribution": "Not used for decisions. Judge on /go/ sales within 7 days of the last click.",
+   "budget": {
+    "totalUsd": 104,
+    "perDayUsd": 52,
+    "days": 2,
+    "budgetLine": "b5",
+    "note": "TikTok needs more than $50 a day per campaign [F, ads.tiktok.com budget page, updated Jul 2026]; $50.00 may be refused."
+   },
+   "countries": [
+    {
+     "code": "US",
+     "name": "United States"
+    },
+    {
+     "code": "GB",
+     "name": "United Kingdom"
+    },
+    {
+     "code": "CA",
+     "name": "Canada"
+    },
+    {
+     "code": "AU",
+     "name": "Australia"
+    },
+    {
+     "code": "IE",
+     "name": "Ireland"
+    },
+    {
+     "code": "NZ",
+     "name": "New Zealand"
+    },
+    {
+     "code": "DE",
+     "name": "Germany"
+    },
+    {
+     "code": "AT",
+     "name": "Austria"
+    },
+    {
+     "code": "CH",
+     "name": "Switzerland"
+    },
+    {
+     "code": "NL",
+     "name": "Netherlands"
+    },
+    {
+     "code": "BE",
+     "name": "Belgium"
+    },
+    {
+     "code": "LU",
+     "name": "Luxembourg"
+    },
+    {
+     "code": "SE",
+     "name": "Sweden"
+    },
+    {
+     "code": "NO",
+     "name": "Norway"
+    },
+    {
+     "code": "DK",
+     "name": "Denmark"
+    },
+    {
+     "code": "FI",
+     "name": "Finland"
+    }
+   ],
+   "age": "18-54 (25-54 if the post is a Lane A client-work post)",
+   "gender": "All",
+   "languages": [
+    "English"
+   ],
+   "audience": {
+    "setting": "Broad: no interests or behaviours",
+    "suggestions": [],
+    "exclusions": "None"
+   },
+   "placements": {
+    "on": [
+     "TikTok"
+    ],
+    "off": [
+     "Pangle",
+     "Global App Bundle",
+     "other partner placements"
+    ]
+   },
+   "creative": {
+    "contentId": "Best qualifying TikTok post (default V04, the comment-reply site speedrun)",
+    "fallbackContentId": "V02 (bakery speedrun) or V05 (approval POV)",
+    "file": "The TikTok exactly as posted (9:16, 1080x1920). Spark runs the post itself with its likes and comments.",
+    "mustShow": "Commercial Music Library audio only; \"a Makeborne address\", never \"your own domain\"; for creator posts #ad and the Paid partnership disclosure"
+   },
+   "copy": {
+    "primaryText": "The post's organic caption (cannot be edited). For V04 it must read like ad-copy S1-T1: \"Comment your business. I'll build the next one live.\" (52 characters)",
+    "headline": "n/a on TikTok (display name: Makeborne)",
+    "ctaButton": "Learn more"
+   },
+   "link": {
+    "url": "https://makeborne.com/go/tt-v04-s",
+    "redirectsWith": "utm_source=tiktok&utm_medium=spark&utm_campaign=launch-2026-10&utm_content=tt-v04-r2",
+    "creatorPostUrl": "https://makeborne.com/go/c-<handle>-s redirecting with utm_source=tiktok&utm_medium=spark&utm_campaign=creators-w1&utm_content=c-<handle>-v1 (code registered in tracking.md)"
+   },
+   "names": {
+    "campaign": "mb-tt-traffic-slotb-20261203",
+    "adGroup": "t1en-broad-tiktokonly-52d",
+    "ad": "tt-v04-r2"
+   },
+   "goodAfter48h": [
+    "About $104 spent (the whole slot)",
+    "CPM $8 or less",
+    "Link CTR 0.6% or more",
+    "CPC $1.00 or less",
+    "At least 70 clicks",
+    "At least 1 checkout opened on this code"
+   ],
+   "kill": [
+    "At $10: no delivery or CPM above $25 -> check review status",
+    "At $30: link CTR under 0.5% OR CPC over $2.00 -> turn the ad off",
+    "At $50: 0 checkouts opened on this code -> turn the ad off",
+    "Source rule: $100 with 0 net payers or $150 with 1"
+   ],
+   "scale": [
+    "No budget increase during the 2 days.",
+    "After the slot: if CAC is $50 or less over 3+ net payers, run card A03 (TikTok's own limit: at most +30% per change, 2+ days apart [F])."
+   ],
+   "warRoomLog": [
+    "Ads page (this card, \"Log spend\"): add one spend-log row per day (date, line b5, card A02, $ spent).",
+    "Results page: one daily row for ch-boosts: spend, link clicks, /go/ visits, checkouts opened, gross paid.",
+    "Library > Videos or Images: set the boosted post to \"winner\" if it produced 1+ net payer.",
+    "Private log (never this repo): CPM, link CTR, CPC, landing-page-view rate, checkouts opened, gross paid; re-check refunds 14 days after the last day and write the final CAC."
+   ],
+   "fallbackIfNotAvailableFromBiH": "If no TikTok ad account can be opened or billed from Bosnia and Herzegovina: boost the Instagram re-edit of the same post on Meta with card A01 settings (own-Reel option), $26/day x 4 days = $104, link https://makeborne.com/go/ig-v04-b. If neither platform works, b5 goes to creator rehires. Never register under another country.",
+   "checksBeforeLaunch": [
+    "Spend gate live",
+    "Caption already 100 characters or less and compliant",
+    "Spark code valid 60 days (creator post)",
+    "AI daily limit raised",
+    "/go/ code registered",
+    "Not inside 20 Nov-2 Dec"
+   ]
+  },
+  {
+   "id": "A03",
+   "order": 3,
+   "inThe1000": true,
+   "title": "Re-run the ad that sold, for 2 more days (only if it hit the CAC target)",
+   "summary": "A03 · from Sat 5 Dec · max $52 · Meta $25/day x 2 or TikTok $52 x 1 · same audience as the winner",
+   "statusTrigger": "The source behind A01 or A02 has CAC $50 or less over 3+ net payers (counted on its /go/ code), its refunds are 20% or less, and the date is outside 20 Nov-2 Dec. Otherwise this card never runs and the $52 stays in the reserve.",
+   "earliestDate": "2026-12-05",
+   "mustEndBy": "2026-12-20 23:59 CET",
+   "platform": "Same as the winning card (Meta or TikTok)",
+   "toolPath": [
+    "Ads Manager -> the winning campaign -> Duplicate -> new 2-day schedule (TikTok: 1 day) -> same audience, placements, creative and link -> name with today's date -> Publish",
+    "Do not edit the original ad (that resets learning and muddies the read)"
+   ],
+   "objective": "Traffic (same as the winner)",
+   "optimization": "Same as the winner",
+   "bidStrategy": "Same as the winner",
+   "attribution": "Not used for decisions",
+   "budget": {
+    "totalUsd": 52,
+    "perDayUsd": "Meta $25 (2 days = $50) or TikTok $52 (1 day)",
+    "days": "2 (Meta) or 1 (TikTok)",
+    "budgetLine": "b9 (reserve use c: extend a winning Spark or partnership ad)",
+    "note": "The rest of the reserve stays for its other uses (bonus overflow, creator rehire, Content Rewards pilot)."
+   },
+   "countries": [
+    {
+     "code": "US",
+     "name": "United States"
+    },
+    {
+     "code": "GB",
+     "name": "United Kingdom"
+    },
+    {
+     "code": "CA",
+     "name": "Canada"
+    },
+    {
+     "code": "AU",
+     "name": "Australia"
+    },
+    {
+     "code": "IE",
+     "name": "Ireland"
+    },
+    {
+     "code": "NZ",
+     "name": "New Zealand"
+    },
+    {
+     "code": "DE",
+     "name": "Germany"
+    },
+    {
+     "code": "AT",
+     "name": "Austria"
+    },
+    {
+     "code": "CH",
+     "name": "Switzerland"
+    },
+    {
+     "code": "NL",
+     "name": "Netherlands"
+    },
+    {
+     "code": "BE",
+     "name": "Belgium"
+    },
+    {
+     "code": "LU",
+     "name": "Luxembourg"
+    },
+    {
+     "code": "SE",
+     "name": "Sweden"
+    },
+    {
+     "code": "NO",
+     "name": "Norway"
+    },
+    {
+     "code": "DK",
+     "name": "Denmark"
+    },
+    {
+     "code": "FI",
+     "name": "Finland"
+    }
+   ],
+   "age": "Same as the winner",
+   "gender": "All",
+   "languages": [
+    "English"
+   ],
+   "audience": {
+    "setting": "Same as the winner",
+    "suggestions": [],
+    "exclusions": "None"
+   },
+   "placements": {
+    "on": [
+     "Same as the winner"
+    ],
+    "off": []
+   },
+   "creative": {
+    "contentId": "The winning post from A01 or A02",
+    "fallbackContentId": "none",
+    "file": "Same post (no new upload)",
+    "mustShow": "Same"
+   },
+   "copy": {
+    "primaryText": "Same as the winner",
+    "headline": "Same as the winner",
+    "ctaButton": "Learn more"
+   },
+   "link": {
+    "url": "Same /go/ code as the winner (one code per ad, so its sales add up)",
+    "redirectsWith": "Same"
+   },
+   "names": {
+    "campaign": "mb-<meta|tt>-traffic-ext-<yyyymmdd>",
+    "adSet": "same as the winner",
+    "ad": "same utm_content as the winner"
+   },
+   "goodAfter48h": [
+    "CAC stays $50 or less including these days",
+    "CTR within 20% of the original slot"
+   ],
+   "kill": [
+    "At $30: CTR under 0.5% or CPC over $2.00 -> off",
+    "Any new refund that pushes the source above 20% -> off"
+   ],
+   "scale": [
+    "Anything beyond $52 comes from revenue under D4 (30% of last week's net new cash), +20% per step, at most every 48-72 hours."
+   ],
+   "warRoomLog": [
+    "Ads page (this card, \"Log spend\"): add one spend-log row per day (date, line b9, card A03, $ spent).",
+    "Results page: one daily row for ch-boosts: spend, link clicks, /go/ visits, checkouts opened, gross paid.",
+    "Library > Videos or Images: set the boosted post to \"winner\" if it produced 1+ net payer.",
+    "Private log (never this repo): CPM, link CTR, CPC, landing-page-view rate, checkouts opened, gross paid; re-check refunds 14 days after the last day and write the final CAC."
+   ],
+   "fallbackIfNotAvailableFromBiH": "Only exists if A01 or A02 ran, so the platform already works.",
+   "checksBeforeLaunch": [
+    "Scale rule met and written down",
+    "Not inside 20 Nov-2 Dec"
+   ]
+  },
+  {
+   "id": "A04",
+   "order": 4,
+   "inThe1000": false,
+   "title": "January: buy sales on Meta with the 3-6 posts that already sold (from revenue)",
+   "summary": "A04 · Mon 4 Jan 2027 · $30/day from revenue (D4) · Meta Advantage+ sales · 16 countries, 18+, Advantage+ audience",
+   "statusTrigger": "All true: consent banner live; server-side Purchase events from the Whop webhook live, with event IDs and consent checks; 3+ posts each with tracked sales; D4 has released cash (a source at CAC $50 or less on 3+ payers).",
+   "earliestDate": "2027-01-04",
+   "mustEndBy": "2027-01-24 (day-90 review)",
+   "platform": "Meta (Instagram and Facebook)",
+   "toolPath": [
+    "Meta Ads Manager -> Create -> objective Sales -> Advantage+ sales campaign",
+    "Conversion location Website; dataset = the Makeborne dataset with Conversions API Purchase; event Purchase",
+    "One ad set; Advantage+ audience with the 16 countries and minimum age 18 as controls; Advantage+ placements",
+    "Daily budget $30; 3-6 ads (the proven posts); Advantage+ creative enhancements off",
+    "Attribution 7-day click, 1-day view (default)"
+   ],
+   "objective": "Sales",
+   "optimization": "Purchase (server-side, consented visitors only)",
+   "bidStrategy": "Highest volume",
+   "attribution": "7-day click, 1-day view. Compare 7-day click with /go/ first-touch sales weekly; decide on /go/ and Whop.",
+   "budget": {
+    "totalUsd": "up to 630 (21 days x $30), capped each week by D4",
+    "perDayUsd": 30,
+    "days": 21,
+    "budgetLine": "revenue (D4), not the $1,000",
+    "note": "Learning will stay \"limited\" (50 purchases a week would cost about $2,500 at a $50 CPA). Accepted; judge on weekly CAC."
+   },
+   "countries": [
+    {
+     "code": "US",
+     "name": "United States"
+    },
+    {
+     "code": "GB",
+     "name": "United Kingdom"
+    },
+    {
+     "code": "CA",
+     "name": "Canada"
+    },
+    {
+     "code": "AU",
+     "name": "Australia"
+    },
+    {
+     "code": "IE",
+     "name": "Ireland"
+    },
+    {
+     "code": "NZ",
+     "name": "New Zealand"
+    },
+    {
+     "code": "DE",
+     "name": "Germany"
+    },
+    {
+     "code": "AT",
+     "name": "Austria"
+    },
+    {
+     "code": "CH",
+     "name": "Switzerland"
+    },
+    {
+     "code": "NL",
+     "name": "Netherlands"
+    },
+    {
+     "code": "BE",
+     "name": "Belgium"
+    },
+    {
+     "code": "LU",
+     "name": "Luxembourg"
+    },
+    {
+     "code": "SE",
+     "name": "Sweden"
+    },
+    {
+     "code": "NO",
+     "name": "Norway"
+    },
+    {
+     "code": "DK",
+     "name": "Denmark"
+    },
+    {
+     "code": "FI",
+     "name": "Finland"
+    }
+   ],
+   "age": "18+ (control)",
+   "gender": "All",
+   "languages": [
+    "English (All)"
+   ],
+   "audience": {
+    "setting": "Advantage+ audience ON",
+    "suggestions": [],
+    "exclusions": "Existing customers, only if a consented customer list may legally be used; otherwise none"
+   },
+   "placements": {
+    "on": [
+     "Advantage+ placements"
+    ],
+    "off": []
+   },
+   "creative": {
+    "contentId": "The 3-6 posts with the most tracked net sales by 31 Dec",
+    "fallbackContentId": "none",
+    "file": "Existing posts (Use existing post)",
+    "mustShow": "Live features only"
+   },
+   "copy": {
+    "primaryText": "Per post: A1-M1, A2-M1 or D1-M1 from content/ad-copy.md",
+    "headline": "Win the client first / One link. One yes. / A real chart, not a picture",
+    "ctaButton": "Learn more"
+   },
+   "link": {
+    "url": "https://makeborne.com/go/ig-<post>-b",
+    "redirectsWith": "utm_source=instagram&utm_medium=paid&utm_campaign=always-on&utm_content=ig-<post>-<hook>"
+   },
+   "names": {
+    "campaign": "mb-meta-sales-asc-20270104",
+    "adSet": "t1en-advplus-allplacements-30d",
+    "ad": "ig-<post>-<hook>"
+   },
+   "goodAfter48h": [
+    "CPM $20 or less",
+    "Link CTR 0.8% or more",
+    "At least 1 purchase on the /go/ codes by $60 spent"
+   ],
+   "kill": [
+    "$100 spent with 0 net payers -> off",
+    "Weekly CAC above $120 -> off",
+    "Refunds above 20% -> pause"
+   ],
+   "scale": [
+    "CAC $50 or less over 3+ net payers -> +20% every 72 hours, capped by the week's D4 amount"
+   ],
+   "warRoomLog": [
+    "Ads page (this card, \"Log spend\"): add one spend-log row per day (date, line revenue, card A04, $ spent).",
+    "Results page: one daily row for ch-boosts: spend, link clicks, /go/ visits, checkouts opened, gross paid.",
+    "Library > Videos or Images: set the boosted post to \"winner\" if it produced 1+ net payer.",
+    "Private log (never this repo): CPM, link CTR, CPC, landing-page-view rate, checkouts opened, gross paid; re-check refunds 14 days after the last day and write the final CAC."
+   ],
+   "fallbackIfNotAvailableFromBiH": "If Meta still cannot bill: put the D4 cash into creator rehires and Content Rewards instead.",
+   "checksBeforeLaunch": [
+    "Consent banner tested with Reject all (no request reaches Meta)",
+    "Purchase events de-duplicated by event ID",
+    "D4 amount set this Monday"
+   ]
+  },
+  {
+   "id": "A05",
+   "order": 5,
+   "inThe1000": false,
+   "title": "Google: defend the brand name, only if a competitor bids on \"makeborne\"",
+   "summary": "A05 · only if someone bids on our name · $5/day from revenue · Google Search · people searching \"makeborne\"",
+   "statusTrigger": "The weekly check (from week 3) finds another advertiser's ad on a Google search for \"makeborne\".",
+   "earliestDate": "2026-11-09",
+   "mustEndBy": "Stop when the competitor stops (checked weekly)",
+   "platform": "Google Ads (Search)",
+   "toolPath": [
+    "ads.google.com -> New campaign -> without guidance -> Search -> Website visits",
+    "Networks: untick Search partners and Display",
+    "Locations: the 16 countries, \"Presence: people in or regularly in\"; language English",
+    "Budget $5/day; bidding Maximize clicks with a $3.00 maximum CPC; broad match off, AI Max off, automatically created assets off",
+    "Ad group G1: keywords [makeborne], [makeborne ai], [makeborne.com], \"make borne\"; responsive search ad from ad-copy section 6 G1"
+   ],
+   "objective": "Website visits",
+   "optimization": "Clicks",
+   "bidStrategy": "Maximize clicks, $3.00 max CPC",
+   "attribution": "No Google tag before consent; judge on /go/g-brand sales",
+   "budget": {
+    "totalUsd": "about $35 a week while needed",
+    "perDayUsd": 5,
+    "days": "as long as a competitor bids",
+    "budgetLine": "revenue (D4), not the $1,000",
+    "note": "Google asks BiH-registered advertisers to complete identity verification, and manual payments are not available in BiH, so automatic card payments [S]."
+   },
+   "countries": [
+    {
+     "code": "US",
+     "name": "United States"
+    },
+    {
+     "code": "GB",
+     "name": "United Kingdom"
+    },
+    {
+     "code": "CA",
+     "name": "Canada"
+    },
+    {
+     "code": "AU",
+     "name": "Australia"
+    },
+    {
+     "code": "IE",
+     "name": "Ireland"
+    },
+    {
+     "code": "NZ",
+     "name": "New Zealand"
+    },
+    {
+     "code": "DE",
+     "name": "Germany"
+    },
+    {
+     "code": "AT",
+     "name": "Austria"
+    },
+    {
+     "code": "CH",
+     "name": "Switzerland"
+    },
+    {
+     "code": "NL",
+     "name": "Netherlands"
+    },
+    {
+     "code": "BE",
+     "name": "Belgium"
+    },
+    {
+     "code": "LU",
+     "name": "Luxembourg"
+    },
+    {
+     "code": "SE",
+     "name": "Sweden"
+    },
+    {
+     "code": "NO",
+     "name": "Norway"
+    },
+    {
+     "code": "DK",
+     "name": "Denmark"
+    },
+    {
+     "code": "FI",
+     "name": "Finland"
+    }
+   ],
+   "age": "n/a",
+   "gender": "n/a",
+   "languages": [
+    "English"
+   ],
+   "audience": {
+    "setting": "Keywords only, no audiences",
+    "suggestions": [],
+    "exclusions": "Shared negative list mb-negatives-shared"
+   },
+   "placements": {
+    "on": [
+     "Google Search"
+    ],
+    "off": [
+     "Search partners",
+     "Display Network"
+    ]
+   },
+   "creative": {
+    "contentId": "ad-copy G1 (text ad)",
+    "fallbackContentId": "none",
+    "file": "Responsive search ad",
+    "mustShow": "Makeborne: Official Site"
+   },
+   "copy": {
+    "primaryText": "Descriptions: \"Websites, decks and books from one brief, plus a review link your client can approve.\" / \"Plans from $20/month + tax. Full refund until you use credits. Cancel any time.\"",
+    "headline": "Makeborne: Official Site | The AI Studio for Client Work | From $20/Month",
+    "ctaButton": "n/a (search ad)"
+   },
+   "link": {
+    "url": "https://makeborne.com/go/g-brand",
+    "redirectsWith": "utm_source=google&utm_medium=cpc&utm_campaign=always-on&utm_content=g-brand-1"
+   },
+   "names": {
+    "campaign": "mb-google-search-g1brand-<yyyymmdd>",
+    "adGroup": "g1-brand-exact",
+    "ad": "g-brand-1"
+   },
+   "goodAfter48h": [
+    "CTR 20%+ on brand terms",
+    "CPC under $1"
+   ],
+   "kill": [
+    "Competitor gone for 2 weekly checks -> pause"
+   ],
+   "scale": [
+    "None"
+   ],
+   "warRoomLog": [
+    "Ads page (this card, \"Log spend\"): add one spend-log row per day (date, line revenue, card A05, $ spent).",
+    "Results page: one daily row for ch-boosts: spend, link clicks, /go/ visits, checkouts opened, gross paid.",
+    "Library > Videos or Images: set the boosted post to \"winner\" if it produced 1+ net payer.",
+    "Private log (never this repo): CPM, link CTR, CPC, landing-page-view rate, checkouts opened, gross paid; re-check refunds 14 days after the last day and write the final CAC."
+   ],
+   "fallbackIfNotAvailableFromBiH": "If verification fails: the owner reports the competitor's trademark use to Google instead; no ads.",
+   "checksBeforeLaunch": [
+    "Advertiser verification passed",
+    "google and cpc are in tracking.md (done 26 Oct)"
+   ]
+  },
+  {
+   "id": "A06",
+   "order": 6,
+   "inThe1000": false,
+   "title": "Google: a 15-day test on \"AI presentation maker\" searches (optional, from revenue)",
+   "summary": "A06 · Mon 11 Jan 2027 · $150 ($10/day x 15) from revenue · Google Search · people searching for AI deck makers in US/UK/CA/AU/IE/NZ",
+   "statusTrigger": "All true: the /decks landing page is live; organic /go/ visit-to-paid is 1.5%+ over the last 2 weeks; D4 cash is available; the owner says yes. Otherwise skip it: at about $6.44 a click a payer costs about $640 at 1% visit-to-paid.",
+   "earliestDate": "2027-01-11",
+   "mustEndBy": "2027-01-25",
+   "platform": "Google Ads (Search)",
+   "toolPath": [
+    "Same set-up as A05, with locations US, GB, CA, AU, IE, NZ; budget $10/day; ad group G2 decks",
+    "Keywords (exact and phrase only): [ai presentation maker], \"ai presentation maker\", [ai powerpoint generator], [pitch deck maker], [presentation from notes], [editable pptx from notes]",
+    "Optional second ad group, no competitor names in the ads and not shown in the EEA: [gamma alternative], [gamma ai alternative]",
+    "Attach the negative list mb-negatives-shared to the G2 ad group only (it contains \"gamma\")"
+   ],
+   "objective": "Website visits",
+   "optimization": "Clicks",
+   "bidStrategy": "Maximize clicks, $3.00 max CPC",
+   "attribution": "No Google tag before consent; judge on /go/g-decks sales",
+   "budget": {
+    "totalUsd": 150,
+    "perDayUsd": 10,
+    "days": 15,
+    "budgetLine": "revenue (D4), not the $1,000",
+    "note": "US estimates: ai presentation maker 14,800 searches a month at $6.44; gamma alternative 50 at $7.01; gamma ai alternative 390 at $7.18 [V, seodata.dev, 2026]."
+   },
+   "countries": [
+    {
+     "code": "US",
+     "name": "United States"
+    },
+    {
+     "code": "GB",
+     "name": "United Kingdom"
+    },
+    {
+     "code": "CA",
+     "name": "Canada"
+    },
+    {
+     "code": "AU",
+     "name": "Australia"
+    },
+    {
+     "code": "IE",
+     "name": "Ireland"
+    },
+    {
+     "code": "NZ",
+     "name": "New Zealand"
+    }
+   ],
+   "age": "n/a",
+   "gender": "n/a",
+   "languages": [
+    "English"
+   ],
+   "audience": {
+    "setting": "Keywords only",
+    "suggestions": [],
+    "exclusions": "mb-negatives-shared plus: open source, download, apk, ios, android, logo maker, image generator, children's book, google slides, chatgpt, student"
+   },
+   "placements": {
+    "on": [
+     "Google Search"
+    ],
+    "off": [
+     "Search partners",
+     "Display Network"
+    ]
+   },
+   "creative": {
+    "contentId": "ad-copy G2 (text ad)",
+    "fallbackContentId": "none",
+    "file": "Responsive search ad",
+    "mustShow": "Decks From Your Notes; Editable PowerPoint Decks"
+   },
+   "copy": {
+    "primaryText": "Descriptions: \"Paste your notes and get a designed deck you can open and edit in PowerPoint.\" / \"Real, editable charts and speaker notes on every slide. Plans from $20/month.\"",
+    "headline": "Decks From Your Notes | Editable PowerPoint Decks | Real Charts, Not Pictures",
+    "ctaButton": "n/a (search ad)"
+   },
+   "link": {
+    "url": "https://makeborne.com/go/g-decks",
+    "redirectsWith": "utm_source=google&utm_medium=cpc&utm_campaign=always-on&utm_content=g-decks-1"
+   },
+   "names": {
+    "campaign": "mb-google-search-g2decks-20270111",
+    "adGroup": "g2-decks-exact",
+    "ad": "g-decks-1"
+   },
+   "goodAfter48h": [
+    "CTR 4%+",
+    "CPC $3.00 or less",
+    "1 checkout opened by $60 spent"
+   ],
+   "kill": [
+    "At $30: CTR under 2% -> pause the keyword",
+    "At $60: 0 checkouts opened -> pause the campaign",
+    "$100 with 0 net payers -> stop"
+   ],
+   "scale": [
+    "Only at CAC $50 or less over 3+ net payers (unlikely at these CPCs)"
+   ],
+   "warRoomLog": [
+    "Ads page (this card, \"Log spend\"): add one spend-log row per day (date, line revenue, card A06, $ spent).",
+    "Results page: one daily row for ch-boosts: spend, link clicks, /go/ visits, checkouts opened, gross paid.",
+    "Library > Videos or Images: set the boosted post to \"winner\" if it produced 1+ net payer.",
+    "Private log (never this repo): CPM, link CTR, CPC, landing-page-view rate, checkouts opened, gross paid; re-check refunds 14 days after the last day and write the final CAC."
+   ],
+   "fallbackIfNotAvailableFromBiH": "Skip it; the plan does not need Google.",
+   "checksBeforeLaunch": [
+    "Search-terms report read daily for the first 3 days; add negatives"
+   ]
+  },
+  {
+   "id": "A07",
+   "order": 7,
+   "inThe1000": false,
+   "title": "January: remind people who visited and agreed to cookies (optional, from revenue)",
+   "summary": "A07 · from Mon 11 Jan 2027 · $5/day from revenue · Meta · consenting /go/ visitors of the last 30 days who did not pay",
+   "statusTrigger": "The consent banner and a consented pixel have been live for 30+ days; the audience has at least the platform minimum of people; A04 is running or finished; D4 cash is available; the legal check on retargeting is done.",
+   "earliestDate": "2027-01-11",
+   "mustEndBy": "2027-01-24",
+   "platform": "Meta (Instagram and Facebook)",
+   "toolPath": [
+    "Audiences -> Create -> Custom audience -> Website -> visitors of /sites, /decks, /books, /client-work in the last 30 days (consented only) -> exclude purchasers",
+    "Ads Manager -> Create -> Traffic (or Sales if Purchase events are healthy) -> that custom audience -> Advantage+ placements -> $5/day"
+   ],
+   "objective": "Traffic or Sales",
+   "optimization": "Landing page views or Purchase",
+   "bidStrategy": "Highest volume",
+   "attribution": "7-day click",
+   "budget": {
+    "totalUsd": "up to 70",
+    "perDayUsd": 5,
+    "days": 14,
+    "budgetLine": "revenue (D4), not the $1,000",
+    "note": "Small on purpose. Stop if frequency goes above 4 in 7 days."
+   },
+   "countries": [
+    {
+     "code": "US",
+     "name": "United States"
+    },
+    {
+     "code": "GB",
+     "name": "United Kingdom"
+    },
+    {
+     "code": "CA",
+     "name": "Canada"
+    },
+    {
+     "code": "AU",
+     "name": "Australia"
+    },
+    {
+     "code": "IE",
+     "name": "Ireland"
+    },
+    {
+     "code": "NZ",
+     "name": "New Zealand"
+    },
+    {
+     "code": "DE",
+     "name": "Germany"
+    },
+    {
+     "code": "AT",
+     "name": "Austria"
+    },
+    {
+     "code": "CH",
+     "name": "Switzerland"
+    },
+    {
+     "code": "NL",
+     "name": "Netherlands"
+    },
+    {
+     "code": "BE",
+     "name": "Belgium"
+    },
+    {
+     "code": "LU",
+     "name": "Luxembourg"
+    },
+    {
+     "code": "SE",
+     "name": "Sweden"
+    },
+    {
+     "code": "NO",
+     "name": "Norway"
+    },
+    {
+     "code": "DK",
+     "name": "Denmark"
+    },
+    {
+     "code": "FI",
+     "name": "Finland"
+    }
+   ],
+   "age": "18+",
+   "gender": "All",
+   "languages": [
+    "English (All)"
+   ],
+   "audience": {
+    "setting": "Custom audience (consented website visitors, 30 days)",
+    "suggestions": [],
+    "exclusions": "Purchasers in the last 180 days"
+   },
+   "placements": {
+    "on": [
+     "Advantage+ placements"
+    ],
+    "off": []
+   },
+   "creative": {
+    "contentId": "C30 (price and refund static) and V12 (play the client, if live)",
+    "fallbackContentId": "C29",
+    "file": "C30 1080x1350 PNG; V12 the posted Reel",
+    "mustShow": "+ tax next to the price"
+   },
+   "copy": {
+    "primaryText": "Websites, decks and books from $20/month + tax. Full refund until you use credits. (ad-copy C30 variant)",
+    "headline": "From $20/month",
+    "ctaButton": "Learn more"
+   },
+   "link": {
+    "url": "https://makeborne.com/go/ig-c30-r",
+    "redirectsWith": "utm_source=instagram&utm_medium=paid&utm_campaign=always-on&utm_content=ig-c30-pr1"
+   },
+   "names": {
+    "campaign": "mb-meta-traffic-retarget-20270111",
+    "adSet": "consent30d-noncustomers-5d",
+    "ad": "ig-c30-pr1"
+   },
+   "goodAfter48h": [
+    "Frequency under 3",
+    "CTR 1.5%+"
+   ],
+   "kill": [
+    "$50 with 0 net payers -> off",
+    "Frequency above 4 in 7 days -> off"
+   ],
+   "scale": [
+    "None in this window"
+   ],
+   "warRoomLog": [
+    "Ads page (this card, \"Log spend\"): add one spend-log row per day (date, line revenue, card A07, $ spent).",
+    "Results page: one daily row for ch-boosts: spend, link clicks, /go/ visits, checkouts opened, gross paid.",
+    "Library > Videos or Images: set the boosted post to \"winner\" if it produced 1+ net payer.",
+    "Private log (never this repo): CPM, link CTR, CPC, landing-page-view rate, checkouts opened, gross paid; re-check refunds 14 days after the last day and write the final CAC."
+   ],
+   "fallbackIfNotAvailableFromBiH": "Skip.",
+   "checksBeforeLaunch": [
+    "Legal check on retargeting and the EDPB tracking-link view done (tracking.md 5.2)"
+   ]
+  }
+ ],
+ "adCalendar": [
+  {
+   "week": 1,
+   "from": "2026-10-26",
+   "to": "2026-11-01",
+   "summary": "Week 1 (2026-10-26 to 2026-11-01): no ads live · $64 this week ($0 on ads) · $64 of $1,000 so far",
+   "liveCards": [],
+   "adSpendUsd": 0,
+   "adItems": [],
+   "otherPlanSpend": [
+    {
+     "line": "b1",
+     "item": "TAAFT listing, Mon 26 Oct (submit it first)",
+     "usd": 49,
+     "date": "2026-10-26"
+    },
+    {
+     "line": "b7",
+     "item": "DM tool, month 1 (only if Meta's free automation is missing; otherwise $0 and it rolls to the reserve)",
+     "usd": 15,
+     "date": "2026-10-26"
+    }
+   ],
+   "weekTotalUsd": 64,
+   "runningTotalUsd": 64,
+   "note": "Organic only. The owner opens the Meta and TikTok ad accounts (USD, Europe/Sarajevo) and tests the card with no campaign running."
+  },
+  {
+   "week": 2,
+   "from": "2026-11-02",
+   "to": "2026-11-08",
+   "summary": "Week 2 (2026-11-02 to 2026-11-08): no ads live · $162 this week ($0 on ads) · $226 of $1,000 so far",
+   "liveCards": [],
+   "adSpendUsd": 0,
+   "adItems": [],
+   "otherPlanSpend": [
+    {
+     "line": "b2",
+     "item": "Wave-1 creator fees, first half (5 x $30), Fri 6 Nov, only if the spend gate is live",
+     "usd": 150,
+     "date": "2026-11-06"
+    },
+    {
+     "line": "b8",
+     "item": "Payout transfer fees for the first half",
+     "usd": 12,
+     "date": "2026-11-06"
+    }
+   ],
+   "weekTotalUsd": 162,
+   "runningTotalUsd": 226,
+   "note": "Build A01 in draft on Sat 7 Nov. Mon 9 Nov is the deadline for ad accounts billable from BiH."
+  },
+  {
+   "week": 3,
+   "from": "2026-11-09",
+   "to": "2026-11-15",
+   "summary": "Week 3 (2026-11-09 to 2026-11-15): live: A01 · $96 this week ($96 on ads) · $322 of $1,000 so far",
+   "liveCards": [
+    "A01"
+   ],
+   "adSpendUsd": 96,
+   "adItems": [
+    {
+     "line": "b5",
+     "item": "A01 Meta partnership ad, Thu 12 - Sun 15 Nov",
+     "usd": 96,
+     "card": "A01",
+     "from": "2026-11-12",
+     "to": "2026-11-15"
+    }
+   ],
+   "otherPlanSpend": [],
+   "weekTotalUsd": 96,
+   "runningTotalUsd": 322,
+   "note": "Wave-1 first videos post from Tue 10 Nov. A01 starts only when a Reel meets its trigger."
+  },
+  {
+   "week": 4,
+   "from": "2026-11-16",
+   "to": "2026-11-22",
+   "summary": "Week 4 (2026-11-16 to 2026-11-22): no ads live · $75 this week ($0 on ads) · $397 of $1,000 so far",
+   "liveCards": [],
+   "adSpendUsd": 0,
+   "adItems": [],
+   "otherPlanSpend": [
+    {
+     "line": "b3",
+     "item": "Per-view bonuses, first payout (cap $40 a video)",
+     "usd": 45,
+     "date": "2026-11-20"
+    },
+    {
+     "line": "b6",
+     "item": "Uneed slot for the images Product Hunt day (only if images pass the gate; otherwise held)",
+     "usd": 30,
+     "date": "2026-11-17"
+    }
+   ],
+   "weekTotalUsd": 75,
+   "runningTotalUsd": 397,
+   "note": "Mon 16 Nov offer check. The second half of the wave-1 fees moves to Mon 23 Nov (week 5), on delivery of video 2. The blackout starts Fri 20 Nov: anything left of A01 must finish by Thu 19 Nov."
+  },
+  {
+   "week": 5,
+   "from": "2026-11-23",
+   "to": "2026-11-29",
+   "summary": "Week 5 (2026-11-23 to 2026-11-29): no ads live · $223 this week ($0 on ads) · $620 of $1,000 so far",
+   "liveCards": [],
+   "adSpendUsd": 0,
+   "adItems": [],
+   "otherPlanSpend": [
+    {
+     "line": "b2",
+     "item": "Wave-1 creator fees, second half (5 x $30), Mon 23 Nov, on delivery of video 2",
+     "usd": 150,
+     "date": "2026-11-23"
+    },
+    {
+     "line": "b3",
+     "item": "Per-view bonuses, second payout",
+     "usd": 45,
+     "date": "2026-11-27"
+    },
+    {
+     "line": "b7",
+     "item": "DM tool, month 2 (if paid)",
+     "usd": 15,
+     "date": "2026-11-26"
+    },
+    {
+     "line": "b8",
+     "item": "Payout transfer fees for the second half and the bonuses",
+     "usd": 13,
+     "date": "2026-11-23"
+    }
+   ],
+   "weekTotalUsd": 223,
+   "runningTotalUsd": 620,
+   "note": "Blackout: no ads. Wed 25 Nov day-30 numbers."
+  },
+  {
+   "week": 6,
+   "from": "2026-11-30",
+   "to": "2026-12-06",
+   "summary": "Week 6 (2026-11-30 to 2026-12-06): live: A02 · $244 this week ($104 on ads) · $864 of $1,000 so far",
+   "liveCards": [
+    "A02"
+   ],
+   "adSpendUsd": 104,
+   "adItems": [
+    {
+     "line": "b5",
+     "item": "A02 TikTok Spark, Thu 3 - Fri 4 Dec",
+     "usd": 104,
+     "card": "A02",
+     "from": "2026-12-03",
+     "to": "2026-12-04"
+    }
+   ],
+   "otherPlanSpend": [
+    {
+     "line": "b4",
+     "item": "Wave-2 visual creators (or a rehire of the best wave-1 creator if images are not live by 30 Nov)",
+     "usd": 140,
+     "date": "2026-12-04"
+    }
+   ],
+   "weekTotalUsd": 244,
+   "runningTotalUsd": 864,
+   "note": "Mon 30 Nov paid-CAC check. Consent banner target about 6 Dec."
+  },
+  {
+   "week": 7,
+   "from": "2026-12-07",
+   "to": "2026-12-13",
+   "summary": "Week 7 (2026-12-07 to 2026-12-13): live: A03 (only if the scale rule is met) · $52 this week ($52 on ads) · $916 of $1,000 so far",
+   "liveCards": [
+    "A03 (only if the scale rule is met)"
+   ],
+   "adSpendUsd": 52,
+   "adItems": [
+    {
+     "line": "b9",
+     "item": "A03 extension of the winner, at most $52 (otherwise it stays in the reserve)",
+     "usd": 52,
+     "card": "A03",
+     "from": "2026-12-05",
+     "to": "2026-12-06"
+    }
+   ],
+   "otherPlanSpend": [],
+   "weekTotalUsd": 52,
+   "runningTotalUsd": 916,
+   "note": "If A03 does not run, the $52 stays in the reserve."
+  },
+  {
+   "week": 8,
+   "from": "2026-12-14",
+   "to": "2026-12-20",
+   "summary": "Week 8 (2026-12-14 to 2026-12-20): no ads live · $84 this week ($0 on ads) · $1,000 of $1,000 so far",
+   "liveCards": [],
+   "adSpendUsd": 0,
+   "adItems": [],
+   "otherPlanSpend": [
+    {
+     "line": "b9",
+     "item": "Rest of the reserve: bonus overflow, rehire of the lowest-CAC creator, or a small Content Rewards pilot, only under the scale rule",
+     "usd": 84,
+     "date": "2026-12-14"
+    }
+   ],
+   "weekTotalUsd": 84,
+   "runningTotalUsd": 1000,
+   "note": "Anything still unspent on Thu 24 Dec (day 60) goes to the best source."
+  },
+  {
+   "week": 9,
+   "from": "2026-12-21",
+   "to": "2026-12-27",
+   "summary": "Week 9 (2026-12-21 to 2026-12-27): no ads live · $0 this week ($0 on ads) · $1,000 of $1,000 so far",
+   "liveCards": [],
+   "adSpendUsd": 0,
+   "adItems": [],
+   "otherPlanSpend": [],
+   "weekTotalUsd": 0,
+   "runningTotalUsd": 1000,
+   "note": "Holiday half cadence. The $1,000 is fully allocated."
+  },
+  {
+   "week": 10,
+   "from": "2026-12-28",
+   "to": "2027-01-03",
+   "summary": "Week 10 (2026-12-28 to 2027-01-03): no ads live · $0 this week ($0 on ads) · $1,000 of $1,000 so far",
+   "liveCards": [],
+   "adSpendUsd": 0,
+   "adItems": [],
+   "otherPlanSpend": [],
+   "weekTotalUsd": 0,
+   "runningTotalUsd": 1000,
+   "note": "Bank January content."
+  },
+  {
+   "week": 11,
+   "from": "2027-01-04",
+   "to": "2027-01-10",
+   "summary": "Week 11 (2027-01-04 to 2027-01-10): live: A04 (revenue), A05 (revenue, only if someone bids on our name) · $0 this week ($0 on ads) · $1,000 of $1,000 so far",
+   "liveCards": [
+    "A04 (revenue)",
+    "A05 (revenue, only if someone bids on our name)"
+   ],
+   "adSpendUsd": 0,
+   "adItems": [],
+   "otherPlanSpend": [],
+   "weekTotalUsd": 0,
+   "runningTotalUsd": 1000,
+   "note": "From here, ads are paid from revenue under D4, not the $1,000."
+  },
+  {
+   "week": 12,
+   "from": "2027-01-11",
+   "to": "2027-01-17",
+   "summary": "Week 12 (2027-01-11 to 2027-01-17): live: A04 (revenue), A06 (revenue, optional), A07 (revenue, optional) · $0 this week ($0 on ads) · $1,000 of $1,000 so far",
+   "liveCards": [
+    "A04 (revenue)",
+    "A06 (revenue, optional)",
+    "A07 (revenue, optional)"
+   ],
+   "adSpendUsd": 0,
+   "adItems": [],
+   "otherPlanSpend": [],
+   "weekTotalUsd": 0,
+   "runningTotalUsd": 1000,
+   "note": ""
+  },
+  {
+   "week": 13,
+   "from": "2027-01-18",
+   "to": "2027-01-24",
+   "summary": "Week 13 (2027-01-18 to 2027-01-24): live: A04 (revenue), A06 (revenue, optional), A07 (revenue, optional) · $0 this week ($0 on ads) · $1,000 of $1,000 so far",
+   "liveCards": [
+    "A04 (revenue)",
+    "A06 (revenue, optional)",
+    "A07 (revenue, optional)"
+   ],
+   "adSpendUsd": 0,
+   "adItems": [],
+   "otherPlanSpend": [],
+   "weekTotalUsd": 0,
+   "runningTotalUsd": 1000,
+   "note": "Sun 24 Jan: day-90 review."
+  }
+ ],
+ "sources": [
+  "https://developers.facebook.com/documentation/ads-commerce/marketing-api/currencies (BAM not listed; USD and EUR listed; read 26 Oct 2026)",
+  "https://www.facebook.com/terms.php (effective 1 Jan 2025)",
+  "https://ads.tiktok.com/resources/help/article/budget (updated Jul 2026)",
+  "https://ads.tiktok.com/help/article/placements-available-locations (updated Jun 2025)",
+  "https://support.google.com/adspolicy/answer/11512520 ; https://support.google.com/google-ads/answer/2393016 (via search, 26 Oct 2026)",
+  "https://www.jonloomer.com/qvt/landing-page-views-no-longer-require-a-pixel/ ; https://www.jonloomer.com/meta-ads-attribution-2026/",
+  "https://www.seodata.dev/keyword/ai-presentation-maker ; https://www.seodata.dev/keyword/gamma-alternative ; https://www.seodata.dev/keyword/lovable-alternatives",
+  "content/ads-playbook.md ; plan/strategy.md section 6 ; content/tracking.md section 7"
+ ],
+ "reconciliation": {
+  "byLine": [
+   {
+    "line": "b1",
+    "planUsd": 49,
+    "calendarUsd": 49
+   },
+   {
+    "line": "b2",
+    "planUsd": 300,
+    "calendarUsd": 300
+   },
+   {
+    "line": "b3",
+    "planUsd": 90,
+    "calendarUsd": 90
+   },
+   {
+    "line": "b4",
+    "planUsd": 140,
+    "calendarUsd": 140
+   },
+   {
+    "line": "b5",
+    "planUsd": 200,
+    "calendarUsd": 200
+   },
+   {
+    "line": "b6",
+    "planUsd": 30,
+    "calendarUsd": 30
+   },
+   {
+    "line": "b7",
+    "planUsd": 30,
+    "calendarUsd": 30
+   },
+   {
+    "line": "b8",
+    "planUsd": 25,
+    "calendarUsd": 25
+   },
+   {
+    "line": "b9",
+    "planUsd": 136,
+    "calendarUsd": 136
+   }
+  ],
+  "totalUsd": 1000,
+  "adSpendInThe1000Usd": 252,
+  "note": "Every plan line b1-b9 appears in adCalendar at its plan amount (data/plan.json budget.lines). Dates are planned and gated: a line that fails its gate moves later; it is never spent early. Lines b4, b6, b7 and b9 can end up unspent and roll into the reserve or the best source, exactly as strategy 6.2 says. Ads inside the $1,000: A01 $96 + A02 $104 (b5) + A03 up to $52 (b9)."
+ },
+ "channelVerdicts": [
+  {
+   "channel": "Meta partnership ad / own-Reel boost",
+   "inThe1000Usd": 96,
+   "verdict": "Yes, gated",
+   "cards": [
+    "A01"
+   ]
+  },
+  {
+   "channel": "TikTok Spark",
+   "inThe1000Usd": 104,
+   "verdict": "Yes, gated, if a BiH ad account works",
+   "cards": [
+    "A02"
+   ]
+  },
+  {
+   "channel": "Extension of a winner",
+   "inThe1000Usd": 52,
+   "verdict": "Only at CAC <= $50 over 3+ net payers (reserve b9)",
+   "cards": [
+    "A03"
+   ]
+  },
+  {
+   "channel": "Google Search",
+   "inThe1000Usd": 0,
+   "verdict": "Not worth it on this budget; brand defence and a decks test from revenue only",
+   "cards": [
+    "A05",
+    "A06"
+   ]
+  },
+  {
+   "channel": "Reddit Ads",
+   "inThe1000Usd": 0,
+   "verdict": "Organic only; a readable paid test costs $3,000-5,000",
+   "cards": []
+  },
+  {
+   "channel": "LinkedIn Ads, X Ads, YouTube in-stream",
+   "inThe1000Usd": 0,
+   "verdict": "Organic only",
+   "cards": []
+  },
+  {
+   "channel": "Meta Advantage+ sales, retargeting",
+   "inThe1000Usd": 0,
+   "verdict": "January from revenue, after consent and server-side purchase events",
+   "cards": [
+    "A04",
+    "A07"
+   ]
+  }
+ ],
+ "expectedRanges": {
+  "note": "Our arithmetic [E] on labelled inputs; see content/ads-playbook.md section 9. Visit-to-paid low/base/high 0.4/1.0/2.0%.",
+  "A01": {
+   "netPayers": {
+    "low": 0.1,
+    "base": 0.5,
+    "high": 2.9
+   },
+   "cacUsd": {
+    "low": null,
+    "base": 190,
+    "high": 33
+   }
+  },
+  "A02": {
+   "netPayers": {
+    "low": 0.1,
+    "base": 0.6,
+    "high": 4.6
+   },
+   "cacUsd": {
+    "low": null,
+    "base": 170,
+    "high": 23
+   }
+  },
+  "b5Total": {
+   "netPayers": {
+    "low": 0.1,
+    "base": 1.1,
+    "high": 7.5
+   },
+   "cacUsd": {
+    "low": null,
+    "base": 180,
+    "high": 27
+   }
+  }
+ }
+}

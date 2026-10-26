@@ -1,35 +1,23 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useMemo, useState } from 'react';
 import kpisJson from '../../data/kpis.json';
 import checkpointsJson from '../../data/checkpoints.json';
 import type { ActualEntry, Checkpoint, Kpis } from '../lib/types';
 import { ACTUALS_TEMPLATE, CSV_HEADER, acquisition, aggregate, byChannel, byWeek, cac, entryKey, mergeEntries, netPaid, parseActualsText, toActualsCsv, toActualsJson } from '../lib/actuals';
 import { useActuals, useMrrSnapshots, useSpendLog } from '../lib/stores';
-import { addDays, downloadText, fmtCompactUsd, fmtDate, fmtInt, fmtPct, fmtUsd, isIsoDate, planWeek, readFileText, sarajevoToday, WINDOW_START } from '../lib/util';
+import { addDays, downloadText, fmtCompactUsd, fmtDate, fmtInt, fmtPct, fmtUsd, isIsoDate, planWeek, readFileText, sarajevoToday } from '../lib/util';
 import { contentTitle } from '../lib/contentIndex';
 import { LINES } from '../lib/budget';
 import { analyse } from '../lib/forecast';
 import { SAMPLE_AS_OF, sampleData } from '../lib/sample';
 import { RAG_LABEL, cacByChannel, cacByLine, contentLeaderboard, funnelSteps, mrrByWeek, paidChannelRows, ragTone, scorecard, weekActions, type FunnelStep, type Rag } from '../lib/analytics';
 import { GUARD } from '../lib/planRates';
-import { Card, Chip, Details, Empty, Page, Section, Segmented, Stat } from '../components/ui';
+import { Card, Chip, Details, Empty, Section, Segmented, Stat } from '../components/ui';
 import { Chart } from '../components/Chart';
-import { DaySheet } from '../components/DaySheet';
-import { href, type RouteProps } from '../routes';
+import { href } from '../routes';
 
 const KPIS = kpisJson as unknown as Kpis;
 const CHECKPOINTS = (checkpointsJson as unknown as { checkpoints: Checkpoint[] }).checkpoints;
 const WEEKS = KPIS.weeklyTargets.map((w) => `W${w.week}`);
-const SECTIONS: [string, string][] = [
-  ['entry', 'Log a day'],
-  ['scorecard', 'Scorecard'],
-  ['actions', 'This week'],
-  ['funnel', 'Funnel'],
-  ['weekly', 'Weekly targets'],
-  ['mrr', 'MRR'],
-  ['cac', 'CAC & payback'],
-  ['best', 'Content'],
-  ['rows', 'Rows'],
-];
 
 const fmtCac = (c: number | null) => (c == null ? '–' : Number.isFinite(c) ? fmtUsd(c) : '∞');
 const fmtMonths = (m: number | null) => (m == null ? '–' : Number.isFinite(m) ? `${m.toFixed(1)} mo` : '∞');
@@ -37,9 +25,11 @@ function RagChip({ rag, children }: { rag: Rag; children?: React.ReactNode }) {
   return <Chip tone={ragTone(rag)}>{children ?? RAG_LABEL[rag]}</Chip>;
 }
 
-export default function Analytics({ params }: RouteProps) {
-  const sample = params[0] === 'sample';
-  const section = sample ? params[1] : params[0];
+/**
+ * Every Analytics section (scorecard, this week, funnel, weekly charts, monthly revenue, cost per customer,
+ * content, alerts, rows, import and export). Results shows them as collapsible panels under the day sheet and the verdict.
+ */
+export function AnalyticsPanels({ sample, onEditRow, setMsg }: { sample: boolean; onEditRow: (e: ActualEntry) => void; setMsg: (m: string) => void }) {
   const [realEntries, setEntries] = useActuals();
   const [realSnaps, setSnaps] = useMrrSnapshots();
   const [realLog] = useSpendLog();
@@ -49,16 +39,8 @@ export default function Analytics({ params }: RouteProps) {
   const log = S ? S.spend : realLog;
   const today = sarajevoToday();
   const asOf = S ? SAMPLE_AS_OF : today;
-  const [msg, setMsg] = useState('');
-  const [sheetDate, setSheetDate] = useState(() => (today < WINDOW_START ? WINDOW_START : today));
   const [scope, setScope] = useState<'all' | 'week'>('all');
   const [rankBy, setRankBy] = useState<'signups' | 'paid'>('signups');
-
-  useEffect(() => {
-    if (!section) return;
-    const raf = requestAnimationFrame(() => document.getElementById(section)?.scrollIntoView({ block: 'start' }));
-    return () => cancelAnimationFrame(raf);
-  }, [section]);
 
   const acq = useMemo(() => acquisition(entries), [entries]);
   const tot = aggregate(acq);
@@ -116,107 +98,18 @@ export default function Analytics({ params }: RouteProps) {
   );
 
   const blendedCac = cac(aggregate(paidChannelRows(acq)));
-  const base = sample ? href('analytics', 'sample') : href('analytics');
 
   return (
-    <Page
-      eyebrow={sample ? 'SAMPLE data · invented numbers · nothing is saved' : 'Daily actuals · localStorage · compatible with data/actuals.template.json'}
-      title={
-        <>
-          What <em>actually</em> happened
-        </>
-      }
-      lede="Log one row per channel per day, read the scorecard on Sunday, and act on the kill and scale rules. Leave a cell empty when it is unknown, never 0. Aggregate numbers only: no buyer names, emails or Whop IDs."
-      actions={
-        <div className="row">
-          {sample ? (
-            <a className="btn btn-accent btn-sm" href={href('analytics')}>
-              Leave sample
-            </a>
-          ) : (
-            <a className="btn btn-ghost btn-sm" href={href('analytics', 'sample')}>
-              Show SAMPLE data
-            </a>
-          )}
-          <label className={`btn btn-ghost btn-sm ${sample ? 'is-disabled' : ''}`} aria-disabled={sample || undefined}>
-            Import CSV / JSON
-            <input type="file" disabled={sample} accept=".csv,.json,text/csv,application/json" onChange={(e) => { void onImport(e.target.files?.[0]); e.target.value = ''; }} />
-          </label>
-          <button type="button" className="btn btn-ghost btn-sm" disabled={sample || !realEntries.length} onClick={() => downloadText(`actuals-${today}.json`, toActualsJson(realEntries, realSnaps))}>
-            Export JSON
-          </button>
-          <button type="button" className="btn btn-ghost btn-sm" disabled={sample || !realEntries.length} onClick={() => downloadText(`actuals-${today}.csv`, toActualsCsv(realEntries), 'text/csv')}>
-            Export CSV
-          </button>
-          <button type="button" className="btn btn-ghost btn-sm" onClick={() => downloadText('actuals-template.csv', CSV_HEADER.join(',') + '\r\n', 'text/csv')}>
-            Blank CSV
-          </button>
+    <>
+      <Section id="totals" title="Totals so far" kicker="Everything logged in this browser">
+        <div className="statband">
+          <Stat label="Visits (/go/ clicks)" value={fmtInt(tot.clicks)} sub={`${fmtInt(tot.views)} views logged`} />
+          <Stat label="Sign-ups" value={fmtInt(tot.signups)} sub={tot.clicks ? `${fmtPct(tot.signups / tot.clicks)} of visits` : '–'} />
+          <Stat label="Paying customers (after refunds)" value={`${fmtInt(tot.paid)} / ${fmtInt(netPaid(tot))}`} sub={tot.clicks ? `${fmtPct(tot.paid / tot.clicks, 2)} of visits` : '–'} />
+          <Stat label="Using it with a client" value={fmtInt(tot.activated)} sub="the north star, filled 7 days later" />
+          <Stat label="Cost per paying customer (paid sources)" value={fmtCac(blendedCac)} tone={blendedCac != null && blendedCac > GUARD.cacTarget ? 'warn' : undefined} sub={`${fmtUsd(tot.spend)} spend ÷ paying customers after refunds`} />
+          <Stat label="Sales we can trace to a source" value={tot.paid ? fmtPct(1 - unknownPaid / tot.paid, 0) : '–'} tone={tot.paid && 1 - unknownPaid / tot.paid < 0.9 ? 'warn' : undefined} sub="target 90% or more from week 2" />
         </div>
-      }
-    >
-      {sample && (
-        <div className="notice sample-banner" role="note" style={{ marginBottom: 20 }}>
-          <b>SAMPLE</b>
-          <span>
-            28 invented days (26 Oct - 22 Nov 2026) so you can see every view working. Your own rows are untouched and hidden while this is on; nothing here is saved or exported. <a href={href('predictions', 'sample')}>See the predictions for this sample</a> or <a href={href('analytics')}>go back to your data</a>.
-          </span>
-        </div>
-      )}
-      {!sample && realEntries.length === 0 && (
-        <div className="notice" style={{ marginBottom: 20 }}>
-          <b>No actuals yet.</b>
-          <span>
-            Log today below or import a CSV / JSON export. To see what the page does with a month of numbers, <a href={href('analytics', 'sample')}>open the SAMPLE data</a> (kept apart from your rows).
-          </span>
-        </div>
-      )}
-      <p className="small muted" role="status" aria-live="polite" style={{ minHeight: 20, marginTop: -8 }}>
-        {msg}
-      </p>
-
-      <div className="statband">
-        <Stat label="Visits (/go/ clicks)" value={fmtInt(tot.clicks)} sub={`${fmtInt(tot.views)} views logged`} />
-        <Stat label="Sign-ups" value={fmtInt(tot.signups)} sub={tot.clicks ? `${fmtPct(tot.signups / tot.clicks)} of visits` : '–'} />
-        <Stat label="Gross / net paid" value={`${fmtInt(tot.paid)} / ${fmtInt(netPaid(tot))}`} sub={tot.clicks ? `${fmtPct(tot.paid / tot.clicks, 2)} of visits` : '–'} />
-        <Stat label="Activated payers" value={fmtInt(tot.activated)} sub="north star, filled 7 days later" />
-        <Stat label="Blended paid CAC" value={fmtCac(blendedCac)} tone={blendedCac != null && blendedCac > GUARD.cacTarget ? 'warn' : undefined} sub={`${fmtUsd(tot.spend)} spend ÷ net payers of paid channels`} />
-        <Stat label="Attribution coverage" value={tot.paid ? fmtPct(1 - unknownPaid / tot.paid, 0) : '–'} tone={tot.paid && 1 - unknownPaid / tot.paid < 0.9 ? 'warn' : undefined} sub="target ≥ 90% from week 2" />
-      </div>
-
-      <nav className="pill-nav" aria-label="Jump to section" style={{ margin: '24px 0 0' }}>
-        {SECTIONS.map(([id, label]) => (
-          <a key={id} className="chip chip-muted" href={sample ? href('analytics', 'sample', id) : href('analytics', id)} style={{ textDecoration: 'none' }}>
-            {label}
-          </a>
-        ))}
-        <a className="chip chip-accent" href={sample ? href('predictions', 'sample') : href('predictions')} style={{ textDecoration: 'none' }}>
-          Predictions →
-        </a>
-      </nav>
-
-      <Section id="entry" title="Log a day" kicker="One row per channel per day">
-        {sample ? (
-          <Empty>
-            Entry is off while the SAMPLE is shown, so invented numbers can never reach your log. <a href={href('analytics', 'entry')}>Back to your data</a>.
-          </Empty>
-        ) : (
-          <Card>
-            <DaySheet date={sheetDate} setDate={setSheetDate} entries={realEntries} setEntries={setEntries} onMsg={setMsg} />
-          </Card>
-        )}
-        <Details summary="Sources of truth for each field">
-          <dl className="kv small">
-            {Object.entries(ACTUALS_TEMPLATE.meta.sourcesOfTruth as Record<string, string>).map(([k, v]) => (
-              <div key={k} style={{ display: 'contents' }}>
-                <dt>{k}</dt>
-                <dd>{v}</dd>
-              </div>
-            ))}
-          </dl>
-          <p className="tiny muted">
-            {String(ACTUALS_TEMPLATE.meta.privacy)} "Activated" is the north-star count for that day's payers: fill it in 7 days later. "Checkouts" (checkout opened) is optional; without it the funnel reads sign-up to paid directly.
-          </p>
-        </Details>
       </Section>
 
       <Section
@@ -271,7 +164,7 @@ export default function Analytics({ params }: RouteProps) {
             <p className="small">{plan.reinvest.why}</p>
             <p className="tiny muted">Net new cash, last 7 days ≈ {fmtUsd(plan.reinvest.base)} (first payments less refunds, Whop fees of 5% + $0.30) [E].</p>
             <p className="small" style={{ marginTop: 12 }}>
-              <a href={sample ? href('predictions', 'sample') : href('predictions')}>Where this pace leads: Predictions →</a>
+              <a href={sample ? href('results', 'sample', 'forecast') : href('results', 'forecast')}>Where this pace leads: the forecast →</a>
             </p>
           </Card>
         </div>
@@ -338,7 +231,7 @@ export default function Analytics({ params }: RouteProps) {
         <p className="footnote">Colour: green at or above the stage target, amber within 20%, red below. The same targets apply to every channel; the plan expects creator traffic to convert about 1.5x the blend [A].</p>
       </Section>
 
-      <Section id="weekly" title="Against the weekly targets" kicker="Plan of record, base case">
+      <Section id="weekly" title="Weekly charts against the targets" kicker="Plan of record, base case">
         <div className="grid-2">
           {chartPair('Visits', weekly.map((w, i) => (shown(i) ? w.clicks : null)), KPIS.weeklyTargets.map((t) => t.visits), (n) => fmtInt(n), 'Actual = /go/ clicks logged.')}
           {chartPair('Sign-ups', weekly.map((w, i) => (shown(i) ? w.signups : null)), KPIS.weeklyTargets.map((t) => t.signups), (n) => fmtInt(n))}
@@ -347,7 +240,7 @@ export default function Analytics({ params }: RouteProps) {
         </div>
       </Section>
 
-      <Section id="mrr" title="MRR: new, churned and net" kicker="Cohorts rebuilt from logged payers">
+      <Section id="mrr" title="Monthly revenue (MRR): new, lost and net" kicker="Rebuilt from the paying customers you logged">
         <Card>
           <Chart
             ariaLabel="Weekly new MRR, churned MRR and end-of-week net MRR against the weekly MRR target"
@@ -370,10 +263,10 @@ export default function Analytics({ params }: RouteProps) {
         <MrrSnapshots snaps={snaps} setSnaps={setSnaps} readOnly={sample} />
       </Section>
 
-      <Section id="cac" title="CAC and payback" kicker="Spend log and actuals · payback on contribution at 60% credit use">
+      <Section id="cac" title="Cost per customer (CAC) and payback" kicker="Spend log and actuals · months until a customer has paid back what they cost">
         <div className="grid-2">
           <Card>
-            <h3>CAC by channel</h3>
+            <h3>Cost per customer by channel</h3>
             {cacCh.length === 0 ? (
               <Empty>Log spend on an actuals row (boosts, creators, listings) to read CAC by channel.</Empty>
             ) : (
@@ -511,12 +404,7 @@ export default function Analytics({ params }: RouteProps) {
       <LoggedRows
         entries={entries}
         sample={sample}
-        onEdit={(e) => {
-          setSheetDate(e.date);
-          const el = document.getElementById('entry');
-          el?.scrollIntoView();
-          window.setTimeout(() => el?.querySelector<HTMLInputElement>('.daysheet input')?.focus({ preventScroll: true }), 50);
-        }}
+        onEdit={onEditRow}
         onDelete={(e) => setEntries((cur) => cur.filter((x) => entryKey(x) !== entryKey(e)))}
         onClear={() => {
           if (window.confirm('Delete every logged row in this browser? Export first if you need a copy.')) {
@@ -525,10 +413,37 @@ export default function Analytics({ params }: RouteProps) {
           }
         }}
       />
-      <p className="tiny muted" style={{ marginTop: 24 }}>
-        <a href={base}>Top of page</a>
-      </p>
-    </Page>
+
+      <Section id="files" title="Import and export" kicker="CSV and JSON, compatible with data/actuals.template.json">
+        <div className="row">
+          <label className={`btn btn-ghost btn-sm ${sample ? 'is-disabled' : ''}`} aria-disabled={sample || undefined}>
+            Import CSV / JSON
+            <input type="file" disabled={sample} accept=".csv,.json,text/csv,application/json" onChange={(e) => { void onImport(e.target.files?.[0]); e.target.value = ''; }} />
+          </label>
+          <button type="button" className="btn btn-ghost btn-sm" disabled={sample || !realEntries.length} onClick={() => downloadText(`actuals-${today}.json`, toActualsJson(realEntries, realSnaps))}>
+            Export JSON
+          </button>
+          <button type="button" className="btn btn-ghost btn-sm" disabled={sample || !realEntries.length} onClick={() => downloadText(`actuals-${today}.csv`, toActualsCsv(realEntries), 'text/csv')}>
+            Export CSV
+          </button>
+          <button type="button" className="btn btn-ghost btn-sm" onClick={() => downloadText('actuals-template.csv', CSV_HEADER.join(',') + '\r\n', 'text/csv')}>
+            Blank CSV
+          </button>
+        </div>
+        <p className="footnote">Keep exports out of the repository. Aggregate numbers only: no buyer names, emails or Whop IDs.</p>
+        <Details summary="Where each number comes from">
+          <dl className="kv small">
+            {Object.entries(ACTUALS_TEMPLATE.meta.sourcesOfTruth as Record<string, string>).map(([k, v]) => (
+              <div key={k} style={{ display: 'contents' }}>
+                <dt>{k}</dt>
+                <dd>{v}</dd>
+              </div>
+            ))}
+          </dl>
+          <p className="tiny muted">{String(ACTUALS_TEMPLATE.meta.privacy)}</p>
+        </Details>
+      </Section>
+    </>
   );
 }
 

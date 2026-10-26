@@ -1,4 +1,4 @@
-import { use, useEffect, useMemo, useState } from 'react';
+import { use, useEffect, useMemo, useState, type ReactNode } from 'react';
 import { DOCS, docBySlug, loadDocSource, loadSearchCorpus, type Doc, type DocGroup } from '../lib/docs';
 import { renderMarkdown } from '../components/Markdown';
 import { Card, Chip, Empty, Page } from '../components/ui';
@@ -106,7 +106,8 @@ function DocIndex() {
   );
 }
 
-function DocView({ doc }: { doc: Doc }) {
+/** One document with its contents. Library pages (playbooks, production) pass their own back link and an optional intro. */
+export function DocView({ doc, back, before }: { doc: Doc; back?: { href: string; label: string }; before?: ReactNode }) {
   const source = use(loadDocSource(doc));
   const { html, headings } = useMemo(() => renderMarkdown(source, doc.slug), [source, doc.slug]);
   const toc = headings.filter((h) => h.depth === 2 || h.depth === 3);
@@ -127,8 +128,8 @@ function DocView({ doc }: { doc: Doc }) {
   return (
     <div className="page">
       <div className="row-between" style={{ marginBottom: 22 }}>
-        <a href={href('research')} className="small">
-          ← All documents
+        <a href={back?.href ?? href('research')} className="small">
+          ← {back?.label ?? 'All documents'}
         </a>
         <div className="row">
           {evidence.map((h) => (
@@ -139,6 +140,7 @@ function DocView({ doc }: { doc: Doc }) {
           <span className="code">{doc.path}</span>
         </div>
       </div>
+      {before}
       <div className="docs-layout">
         <nav className="toc" aria-label="Contents">
           <p className="kicker">Contents</p>
@@ -154,12 +156,14 @@ function DocView({ doc }: { doc: Doc }) {
         </nav>
         <article>
           <div className="prose" dangerouslySetInnerHTML={{ __html: html }} />
+          {!back && (
           <Card className="card-flat" >
             <div className="row-between">
               {prev ? <a href={href('research', prev.slug)}>← {prev.title}</a> : <span />}
               {next ? <a href={href('research', next.slug)}>{next.title} →</a> : <span />}
             </div>
           </Card>
+          )}
         </article>
       </div>
     </div>

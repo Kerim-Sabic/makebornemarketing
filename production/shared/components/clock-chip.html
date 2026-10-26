@@ -1,0 +1,7 @@
+<!-- Clock chip. Variables: clockText (string), for example "Real time · 0:52" or "Sped up ×8".
+     Rule: the capture <video> under it plays with data-playback-rate="1" for "Real time", or the same factor the chip states.
+     Never show compressed time as real time. Top-right of the safe band, above the build footage, for the whole build segment. -->
+<div id="SCENE-clock" class="mb-chip-dark clock-chip" style="font-size: calc(26px * var(--type-scale, 1));">
+  <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="13" r="8" stroke="#fff" stroke-width="2" fill="none"/><path d="M12 9v4l3 2M9 2h6" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+  <span id="SCENE-clock-text" data-var-text="clockText">Real time · 0:52</span>
+</div>

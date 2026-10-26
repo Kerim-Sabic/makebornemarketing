@@ -1,18 +1,16 @@
 import { useId, useMemo, useState } from 'react';
 import checkpointsJson from '../../data/checkpoints.json';
-import type { Checkpoint } from '../lib/types';
-import { useActuals, useMrrSnapshots } from '../lib/stores';
-import { addDays, diffDays, fmtCompact, fmtCompactUsd, fmtDate, fmtInt, fmtPct, fmtUsd, sarajevoToday, WINDOW_START } from '../lib/util';
+import type { ActualEntry, Checkpoint } from '../lib/types';
+import { addDays, diffDays, fmtCompact, fmtCompactUsd, fmtDate, fmtInt, fmtPct, fmtUsd, WINDOW_START } from '../lib/util';
 import {
   DAMPING, DAY90, ELASTICITY, MAX_DAILY_GROWTH, MIN_DAYS, PLAN_LOG_SD, PRIOR_DAYS, RUNS, TRAIL_DAYS,
-  analyse, centralParams, channelOutlook, feedNext, planMrr, runForecast, simulate,
+  centralParams, channelOutlook, feedNext, planMrr, simulate,
   type Analysis, type Band, type Est, type Forecast, type SimParams,
 } from '../lib/forecast';
 import { planBase, priceForStudioShare } from '../lib/planRates';
-import { SAMPLE_AS_OF, sampleData } from '../lib/sample';
-import { Card, Chip, Details, Page, Section, Stat } from '../components/ui';
+import { Card, Chip, Details, Section, Stat } from '../components/ui';
 import { Chart } from '../components/Chart';
-import { href, type RouteProps } from '../routes';
+import { href } from '../routes';
 
 const CHECKPOINTS = (checkpointsJson as unknown as { checkpoints: Checkpoint[] }).checkpoints;
 const ONE_M_MRR = 1_000_000 / 12;
@@ -22,62 +20,16 @@ const fmtProb = (p: number) => (p >= 0.995 ? '≥ 99%' : p <= 0.005 ? '< 1%' : `
 const fmtX = (x: number | null) => (x == null ? '–' : x >= 10 ? `${Math.round(x)}×` : `${x.toFixed(1)}×`);
 const short = (iso: string) => fmtDate(iso, { day: 'numeric', month: 'short' });
 
-export default function Predictions({ params }: RouteProps) {
-  const sample = params[0] === 'sample';
-  const [realEntries] = useActuals();
-  const [realSnaps] = useMrrSnapshots();
-  const S = sample ? sampleData() : null;
-  const entries = S ? S.entries : realEntries;
-  const snaps = S ? S.snaps : realSnaps;
-  const asOf = S ? SAMPLE_AS_OF : sarajevoToday();
-
-  const analysis = useMemo(() => analyse(entries, { asOf, snaps }), [entries, asOf, snaps]);
-  const fc = useMemo<Forecast | null>(() => (analysis.status === 'ok' ? runForecast(analysis) : null), [analysis]);
+/**
+ * The forecast, the chances, the pace $1M needs, the sandbox, the channel outlook, the inputs and the method.
+ * Results computes the analysis and the forecast once and shows these as collapsible panels.
+ */
+export function PredictionsPanels({ entries, analysis, fc }: { entries: ActualEntry[]; analysis: Analysis; fc: Forecast | null }) {
   const outlook = useMemo(() => channelOutlook(entries, analysis), [entries, analysis]);
   const next = feedNext(outlook);
   const n = analysis.obs.dataDays;
-
   return (
-    <Page
-      eyebrow={sample ? 'SAMPLE data · invented numbers · nothing is saved' : fc ? `Forecast from ${n} logged days · ${RUNS.toLocaleString('en-US')} seeded runs · computed in this browser` : `${n} logged day${n === 1 ? '' : 's'} · the forecast starts at ${MIN_DAYS}`}
-      title={
-        <>
-          Where this <em>pace</em> leads
-        </>
-      }
-      lede="A forecast from your logged actuals, with the plan's base case as a prior that fades as days come in. Ranges, not promises: read the method at the bottom before quoting a number."
-      actions={
-        sample ? (
-          <a className="btn btn-accent btn-sm" href={href('predictions')}>
-            Leave sample
-          </a>
-        ) : (
-          <a className="btn btn-ghost btn-sm" href={href('predictions', 'sample')}>
-            Show SAMPLE data
-          </a>
-        )
-      }
-    >
-      {sample && (
-        <div className="notice sample-banner" role="note" style={{ marginBottom: 20 }}>
-          <b>SAMPLE</b>
-          <span>
-            Forecast from 28 invented days (to {fmtDate(SAMPLE_AS_OF)}), dated as if today were {fmtDate(SAMPLE_AS_OF)}. Your own numbers are not used or changed. <a href={href('analytics', 'sample')}>See the sample in Analytics</a> · <a href={href('predictions')}>back to your data</a>.
-          </span>
-        </div>
-      )}
-
-      {fc ? <Summary fc={fc} next={next} /> : <NotEnough a={analysis} sample={sample} />}
-
-      {fc && analysis.staleDays > 3 && (
-        <div className="notice" style={{ marginTop: 16 }}>
-          <b>Stale data.</b>
-          <span>
-            The last logged day is {fmtDate(analysis.obs.last!)}, {analysis.staleDays} days ago. The forecast projects the missing days; log them on the <a href={href('analytics', 'entry')}>Analytics page</a> for a better read.
-          </span>
-        </div>
-      )}
-
+    <>
       {fc && <ForecastSection fc={fc} />}
       {fc && <Probabilities fc={fc} />}
       {fc && <Pace fc={fc} />}
@@ -85,9 +37,11 @@ export default function Predictions({ params }: RouteProps) {
       {n > 0 && <Outlook rows={outlook} next={next} />}
       <Estimates a={analysis} />
       <Method />
-    </Page>
+    </>
   );
 }
+
+export { Summary as ForecastSummary, NotEnough as ForecastNotEnough };
 
 /* ---------- top: plain English ---------- */
 
@@ -464,7 +418,7 @@ function Slider(props: { label: string; value: number; min: number; max: number;
 
 function Outlook({ rows, next }: { rows: ReturnType<typeof channelOutlook>; next: ReturnType<typeof feedNext> }) {
   return (
-    <Section id="channels" title="Channel outlook" kicker={`Each channel's own ${TRAIL_DAYS}-day trend and CAC · next 30 days`}>
+    <Section id="outlook" title="Channel outlook" kicker={`Each channel's own ${TRAIL_DAYS}-day trend and CAC · next 30 days`}>
       {next ? (
         <div className={`notice ${next.reason.startsWith('lowest') ? 'notice-good' : ''}`} style={{ marginBottom: 16 }}>
           <b>Feed next: {next.channel.channel}.</b>

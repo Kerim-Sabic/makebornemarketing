@@ -1636,7 +1636,7 @@ ZORBY&CO D.O.O., {companyAddress}, Sarajevo, Bosnia and Herzegovina
 ### 4.9 Directory listing
 
 - **Name:** Makeborne
-- **URL:** https://makeborne.com/go/{directoryCode}. Codes: taaft `taaft`, alternativeto `dir-alternativeto`, saashub `dir-saashub`, microlaunch `dir-microlaunch`, futuretools `dir-futuretools`, rundown `dir-rundown`, uneed `uneed`
+- **URL:** https://makeborne.com/go/{directoryCode}. Codes: taaft `taaft`, alternativeto `alt`, saashub `saashub`, microlaunch `microlaunch`, futuretools `futuretools`, rundown `rundown`, uneed `uneed`
 - **Tagline:** The AI studio for client work.
 - **Long tagline:** One brief in. A client-ready website, deck or book out.
 - **Short description (143 chars):** Makeborne turns one brief into a website, a deck or a book, then lets your client comment and approve through a review link, no account needed.

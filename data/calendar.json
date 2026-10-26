@@ -83,7 +83,7 @@
     "notes": "Keyword prompt CLIENT (free-tier automation). Stories are not counted in the cadence. Until /go/ is live (target Thu 29 Oct) use the full makeborne.com URL with these UTMs; never a Whop store or tracking link.",
     "tag": "live",
     "slot": "original",
-    "link": "makeborne.com/go/ig-c15",
+    "link": "makeborne.com/go/ig-c15-client",
     "utm": {
      "utm_source": "instagram",
      "utm_medium": "organic",
@@ -282,7 +282,7 @@
   "actions": [
    {
     "type": "launch",
-    "what": "When the TAAFT listing is live: free directories AlternativeTo (as an alternative to Lovable, Gamma, Framer and Wix), SaaSHub, Microlaunch, Future Tools (t13; /go/dir-* codes from outreach.json launchCopy.directoryListing).",
+    "what": "When the TAAFT listing is live: free directories AlternativeTo (as an alternative to Lovable, Gamma, Framer and Wix), SaaSHub, Microlaunch, Future Tools (t13; links /go/alt, /go/saashub, /go/microlaunch and /go/futuretools, the tracking.md short codes).",
     "owner": "Owner"
    },
    {
@@ -685,7 +685,7 @@
     "notes": "Keyword DECK.",
     "tag": "live",
     "slot": "original",
-    "link": "makeborne.com/go/ig-c22",
+    "link": "makeborne.com/go/ig-c22-deck",
     "utm": {
      "utm_source": "instagram",
      "utm_medium": "organic",
@@ -1046,7 +1046,7 @@
     "notes": "Keyword DM prompt; not counted in the cadence.",
     "tag": "live",
     "slot": "original",
-    "link": "makeborne.com/go/ig-c15",
+    "link": "makeborne.com/go/ig-c15-client",
     "utm": {
      "utm_source": "instagram",
      "utm_medium": "organic",
@@ -1170,8 +1170,8 @@
     "channel": "Instagram Reels",
     "account": "Makeborne brand Instagram (professional)",
     "contentId": "V12",
-    "time": "13:15 CET (Europe/Sarajevo, UTC+1)",
-    "notes": "HOLD: post only once ga5 (sample review link) is live. If it is not live today, skip this slot and re-slot it the day after ga5 ships. Native re-edit of the same-week piece (new cover/caption, no TikTok watermark). CTA: 'Comment CLIENT' (keyword DM t21 returns the /go/ link, 3 briefs, a 30 s uncut build and the refund line).",
+    "time": "20:15 CET (Europe/Sarajevo, UTC+1)",
+    "notes": "Posting-time test: this Reel goes out at 20:15 CET instead of the usual 13:15 (Tue 3 and Wed 4 Nov; compare 72 h reach with the 13:15 Reels on Sunday 8 Nov). HOLD: post only once ga5 (sample review link) is live. If it is not live today, skip this slot and re-slot it the day after ga5 ships. Native re-edit of the same-week piece (new cover/caption, no TikTok watermark). CTA: 'Comment CLIENT' (keyword DM t21 returns the /go/ link, 3 briefs, a 30 s uncut build and the refund line).",
     "tag": "live",
     "slot": "re-edit",
     "requires": "growth ask ga5 (public 'play the client' sample review link) is live",
@@ -1308,8 +1308,8 @@
     "channel": "Instagram Reels",
     "account": "Makeborne brand Instagram (professional)",
     "contentId": "V16",
-    "time": "13:15 CET (Europe/Sarajevo, UTC+1)",
-    "notes": "Native re-edit of the same-week piece (new cover/caption, no TikTok watermark). CTA: 'Comment SITE' (keyword DM t21 returns the /go/ link, 3 briefs, a 30 s uncut build and the refund line).",
+    "time": "20:15 CET (Europe/Sarajevo, UTC+1)",
+    "notes": "Posting-time test: this Reel goes out at 20:15 CET instead of the usual 13:15 (Tue 3 and Wed 4 Nov; compare 72 h reach with the 13:15 Reels on Sunday 8 Nov). Native re-edit of the same-week piece (new cover/caption, no TikTok watermark). CTA: 'Comment SITE' (keyword DM t21 returns the /go/ link, 3 briefs, a 30 s uncut build and the refund line).",
     "tag": "live",
     "slot": "re-edit",
     "link": "makeborne.com/go/ig-v16",
@@ -1329,7 +1329,7 @@
     "notes": "Keyword DM prompt; not counted in the cadence.",
     "tag": "live",
     "slot": "original",
-    "link": "makeborne.com/go/ig-c22",
+    "link": "makeborne.com/go/ig-c22-deck",
     "utm": {
      "utm_source": "instagram",
      "utm_medium": "organic",
@@ -1624,7 +1624,7 @@
     "notes": "Keyword DM prompt; not counted in the cadence.",
     "tag": "live",
     "slot": "original",
-    "link": "makeborne.com/go/ig-c25",
+    "link": "makeborne.com/go/ig-c25-book",
     "utm": {
      "utm_source": "instagram",
      "utm_medium": "organic",
@@ -1927,7 +1927,7 @@
     "notes": "Keyword DM prompt; not counted in the cadence.",
     "tag": "live",
     "slot": "original",
-    "link": "makeborne.com/go/ig-c15",
+    "link": "makeborne.com/go/ig-c15-client",
     "utm": {
      "utm_source": "instagram",
      "utm_medium": "organic",
@@ -2230,7 +2230,7 @@
     "notes": "Keyword DM prompt; not counted in the cadence.",
     "tag": "live",
     "slot": "original",
-    "link": "makeborne.com/go/ig-c22",
+    "link": "makeborne.com/go/ig-c22-deck",
     "utm": {
      "utm_source": "instagram",
      "utm_medium": "organic",
@@ -2572,7 +2572,7 @@
     "notes": "Keyword DM prompt; not counted in the cadence.",
     "tag": "live",
     "slot": "original",
-    "link": "makeborne.com/go/ig-c25",
+    "link": "makeborne.com/go/ig-c25-book",
     "utm": {
      "utm_source": "instagram",
      "utm_medium": "organic",
@@ -2743,7 +2743,7 @@
   "actions": [
    {
     "type": "ads",
-    "what": "Boost slot A runs Sat-Sun if a post qualified: TikTok Spark $52/day x 2 days (~$104). Stop after $30-50 if link CTR <0.5% or CPC >$2. Judge on /go/ sales.",
+    "what": "Boost slot A (ad card A01) runs Thu 12 - Sun 15 Nov if a post qualified: Meta partnership ad $24/day x 4 days ($96). If the qualifier is a TikTok and no Reel qualifies, run card A02 settings instead ($52/day x 2). Stop after $30-50 if link CTR <0.5% or CPC >$2. Judge on /go/ sales.",
     "budgetLineId": "b5",
     "owner": "Founder"
    },
@@ -2905,7 +2905,7 @@
     "notes": "Keyword DM prompt; not counted in the cadence.",
     "tag": "live",
     "slot": "original",
-    "link": "makeborne.com/go/ig-c15",
+    "link": "makeborne.com/go/ig-c15-client",
     "utm": {
      "utm_source": "instagram",
      "utm_medium": "organic",
@@ -3263,7 +3263,7 @@
     "notes": "Keyword DM prompt; not counted in the cadence.",
     "tag": "live",
     "slot": "original",
-    "link": "makeborne.com/go/ig-c22",
+    "link": "makeborne.com/go/ig-c22-deck",
     "utm": {
      "utm_source": "instagram",
      "utm_medium": "organic",
@@ -3652,7 +3652,7 @@
     "notes": "Keyword DM prompt; not counted in the cadence.",
     "tag": "live",
     "slot": "original",
-    "link": "makeborne.com/go/ig-c25",
+    "link": "makeborne.com/go/ig-c25-book",
     "utm": {
      "utm_source": "instagram",
      "utm_medium": "organic",
@@ -4052,7 +4052,7 @@
     "notes": "Keyword DM prompt; not counted in the cadence.",
     "tag": "live",
     "slot": "original",
-    "link": "makeborne.com/go/ig-c15",
+    "link": "makeborne.com/go/ig-c15-client",
     "utm": {
      "utm_source": "instagram",
      "utm_medium": "organic",
@@ -4354,7 +4354,7 @@
     "notes": "Keyword DM prompt; not counted in the cadence.",
     "tag": "live",
     "slot": "original",
-    "link": "makeborne.com/go/ig-c22",
+    "link": "makeborne.com/go/ig-c22-deck",
     "utm": {
      "utm_source": "instagram",
      "utm_medium": "organic",
@@ -4667,7 +4667,7 @@
     "notes": "Keyword DM prompt; not counted in the cadence.",
     "tag": "live",
     "slot": "original",
-    "link": "makeborne.com/go/ig-c25",
+    "link": "makeborne.com/go/ig-c25-book",
     "utm": {
      "utm_source": "instagram",
      "utm_medium": "organic",
@@ -4989,7 +4989,7 @@
     "notes": "Keyword DM prompt; not counted in the cadence.",
     "tag": "live",
     "slot": "original",
-    "link": "makeborne.com/go/ig-c15",
+    "link": "makeborne.com/go/ig-c15-client",
     "utm": {
      "utm_source": "instagram",
      "utm_medium": "organic",
@@ -5308,7 +5308,7 @@
     "notes": "Keyword DM prompt; not counted in the cadence.",
     "tag": "live",
     "slot": "original",
-    "link": "makeborne.com/go/ig-c22",
+    "link": "makeborne.com/go/ig-c22-deck",
     "utm": {
      "utm_source": "instagram",
      "utm_medium": "organic",
@@ -5507,7 +5507,7 @@
   "actions": [
    {
     "type": "ads",
-    "what": "Boost slot B from today: Meta partnership ad on the best qualifying post (~$24/day x 4 days, Thu-Sun, ~$96), geos US/UK/CA/AU/IE/NZ/DACH/Nordics/Benelux. Same stop rules.",
+    "what": "Boost slot B (ad card A02) from today: TikTok Spark on the best qualifying post ($52/day x 2 days, Thu 3 - Fri 4 Dec, $104), geos US/UK/CA/AU/IE/NZ/DACH/Nordics/Benelux. If slot A ran on TikTok, run this slot on Meta (card A01 settings). Same stop rules.",
     "budgetLineId": "b5",
     "owner": "Founder"
    },
@@ -5601,7 +5601,7 @@
     "notes": "Keyword DM prompt; not counted in the cadence.",
     "tag": "live",
     "slot": "original",
-    "link": "makeborne.com/go/ig-c25",
+    "link": "makeborne.com/go/ig-c25-book",
     "utm": {
      "utm_source": "instagram",
      "utm_medium": "organic",
@@ -5915,7 +5915,7 @@
     "notes": "Keyword DM prompt; not counted in the cadence.",
     "tag": "live",
     "slot": "original",
-    "link": "makeborne.com/go/ig-c15",
+    "link": "makeborne.com/go/ig-c15-client",
     "utm": {
      "utm_source": "instagram",
      "utm_medium": "organic",
@@ -6203,7 +6203,7 @@
     "notes": "Keyword DM prompt; not counted in the cadence.",
     "tag": "live",
     "slot": "original",
-    "link": "makeborne.com/go/ig-c22",
+    "link": "makeborne.com/go/ig-c22-deck",
     "utm": {
      "utm_source": "instagram",
      "utm_medium": "organic",
@@ -6513,7 +6513,7 @@
     "notes": "Keyword DM prompt; not counted in the cadence.",
     "tag": "live",
     "slot": "original",
-    "link": "makeborne.com/go/ig-c25",
+    "link": "makeborne.com/go/ig-c25-book",
     "utm": {
      "utm_source": "instagram",
      "utm_medium": "organic",
@@ -6810,7 +6810,7 @@
     "notes": "Keyword DM prompt; not counted in the cadence.",
     "tag": "live",
     "slot": "original",
-    "link": "makeborne.com/go/ig-c15",
+    "link": "makeborne.com/go/ig-c15-client",
     "utm": {
      "utm_source": "instagram",
      "utm_medium": "organic",
@@ -7113,7 +7113,7 @@
     "notes": "Keyword DM prompt; not counted in the cadence.",
     "tag": "live",
     "slot": "original",
-    "link": "makeborne.com/go/ig-c22",
+    "link": "makeborne.com/go/ig-c22-deck",
     "utm": {
      "utm_source": "instagram",
      "utm_medium": "organic",
@@ -7429,7 +7429,7 @@
     "notes": "Keyword DM prompt; not counted in the cadence.",
     "tag": "live",
     "slot": "original",
-    "link": "makeborne.com/go/ig-c25",
+    "link": "makeborne.com/go/ig-c25-book",
     "utm": {
      "utm_source": "instagram",
      "utm_medium": "organic",
@@ -8611,7 +8611,7 @@
     "notes": "Keyword DM prompt; not counted in the cadence.",
     "tag": "live",
     "slot": "original",
-    "link": "makeborne.com/go/ig-c15",
+    "link": "makeborne.com/go/ig-c15-client",
     "utm": {
      "utm_source": "instagram",
      "utm_medium": "organic",
@@ -8886,7 +8886,7 @@
     "notes": "Keyword DM prompt; not counted in the cadence.",
     "tag": "live",
     "slot": "original",
-    "link": "makeborne.com/go/ig-c22",
+    "link": "makeborne.com/go/ig-c22-deck",
     "utm": {
      "utm_source": "instagram",
      "utm_medium": "organic",
@@ -9189,7 +9189,7 @@
     "notes": "Keyword DM prompt; not counted in the cadence.",
     "tag": "live",
     "slot": "original",
-    "link": "makeborne.com/go/ig-c25",
+    "link": "makeborne.com/go/ig-c25-book",
     "utm": {
      "utm_source": "instagram",
      "utm_medium": "organic",
@@ -9475,7 +9475,7 @@
     "notes": "Keyword DM prompt; not counted in the cadence.",
     "tag": "live",
     "slot": "original",
-    "link": "makeborne.com/go/ig-c15",
+    "link": "makeborne.com/go/ig-c15-client",
     "utm": {
      "utm_source": "instagram",
      "utm_medium": "organic",
@@ -9755,7 +9755,7 @@
     "notes": "Keyword DM prompt; not counted in the cadence.",
     "tag": "live",
     "slot": "original",
-    "link": "makeborne.com/go/ig-c22",
+    "link": "makeborne.com/go/ig-c22-deck",
     "utm": {
      "utm_source": "instagram",
      "utm_medium": "organic",
@@ -10072,7 +10072,7 @@
     "notes": "Keyword DM prompt; not counted in the cadence.",
     "tag": "live",
     "slot": "original",
-    "link": "makeborne.com/go/ig-c25",
+    "link": "makeborne.com/go/ig-c25-book",
     "utm": {
      "utm_source": "instagram",
      "utm_medium": "organic",
@@ -10354,7 +10354,7 @@
     "notes": "Keyword DM prompt; not counted in the cadence.",
     "tag": "live",
     "slot": "original",
-    "link": "makeborne.com/go/ig-c15",
+    "link": "makeborne.com/go/ig-c15-client",
     "utm": {
      "utm_source": "instagram",
      "utm_medium": "organic",
@@ -10619,7 +10619,7 @@
     "notes": "Keyword DM prompt; not counted in the cadence.",
     "tag": "live",
     "slot": "original",
-    "link": "makeborne.com/go/ig-c22",
+    "link": "makeborne.com/go/ig-c22-deck",
     "utm": {
      "utm_source": "instagram",
      "utm_medium": "organic",
@@ -10927,7 +10927,7 @@
     "notes": "Keyword DM prompt; not counted in the cadence.",
     "tag": "live",
     "slot": "original",
-    "link": "makeborne.com/go/ig-c25",
+    "link": "makeborne.com/go/ig-c25-book",
     "utm": {
      "utm_source": "instagram",
      "utm_medium": "organic",

@@ -1,12 +1,18 @@
 <!doctype html>
 <!--
-  T07 Cinematic hook: a 1.5-2.5 s generated plate (Higgsfield or another model) + masked HTML type, then a hard cut to the
-  real capture. Only as an A/B "B variant" of a proven real-UI piece (V02-B, V07-B, V18-B, V40-B, V48-B), and only after
-  owner decision P-D1. The plate never shows product UI, outputs, people, faces, logos, readable signs or real businesses.
-  The "AI-generated scene" chip stays on screen for every frame of the plate. Realistic plate: also switch on the TikTok AIGC
+  T07 Higgsfield clip slots. This file is the HOOK slot: a 1-3 s Higgsfield clip (clip in at frame 0), the "AI-generated
+  scene" chip on every frame of it, the hook line typed over the clip in HTML, then a hard cut to the first REAL capture.
+  The other slots are sub-compositions in compositions/:
+    bridge.html       0.5-3 s scene or transition in the middle of a video (clip in, label, optional line, cut back to real)
+    match-to-ui.html  1.5 s "the shop becomes its website": push into the shop window, the real published site grows out of it
+    endplate.html     2-4 s end card (T01 wording) over a darkened Higgsfield clip
+  and T04 compositions/i2v.html for an AI camera move on a real Makeborne output.
+  Every slot, its clip section (clipFrom-clipTo), its variables and the exact Higgsfield prompt are in data/production.json
+  (higgsfield.shots and perVideo[].higgsfield). The clip never shows product UI, outputs (except i2v of a real output of a live
+  feature), people, faces, logos, readable signs or real businesses. Realistic clip: also switch on the TikTok AIGC
   label and YouTube "altered or synthetic" = Yes; Meta may add "AI info" automatically.
-  Prepend: render this 2.5 s and place it before the A-variant's frame 0 in that video's project (shift the A clips by 2.5 s),
-  or mount the A project as a sub-composition after this one.
+  Set data-media-start on #ch-plate to the section's clipFrom. Prepend this render before the real cut (shift the real clips
+  by the hook length), or mount the real project as a sub-composition after it.
 -->
 <html
   lang="en"

@@ -29,7 +29,7 @@
     "account": "Makeborne brand TikTok (business account)",
     "contentId": "V02",
     "time": "13:00 CET (Europe/Sarajevo, UTC+1)",
-    "notes": "Fixture business (fictional, trademark-checked). Real measured time or 'sped up xN' chip. Say 'a Makeborne address', never 'your own domain'. Until /go/ is live (target Thu 29 Oct) use the full makeborne.com URL with these UTMs; never a Whop store or tracking link.",
+    "notes": "REAL VERSION (A/B pair AB4 with the Higgsfield post of 2026-11-25): no generated scenes, no AI label needed. Fixture business (fictional, trademark-checked). Real measured time or 'sped up xN' chip. Say 'a Makeborne address', never 'your own domain'. Until /go/ is live (target Thu 29 Oct) use the full makeborne.com URL with these UTMs; never a Whop store or tracking link.",
     "tag": "live",
     "slot": "original",
     "link": "makeborne.com/go/tt-v02",
@@ -39,14 +39,16 @@
      "utm_campaign": "launch-2026-10",
      "utm_content": "tt-v02-r3"
     },
-    "episode": 1
+    "episode": 1,
+    "version": "real",
+    "abPair": "AB4"
    },
    {
     "channel": "TikTok",
     "account": "Makeborne brand TikTok (business account)",
     "contentId": "V03",
     "time": "21:00 CET (Europe/Sarajevo, UTC+1)",
-    "notes": "Day-1 deck speedrun (D1) with the real stopwatch on screen. Until /go/ is live (target Thu 29 Oct) use the full makeborne.com URL with these UTMs; never a Whop store or tracking link.",
+    "notes": "REAL VERSION (A/B pair AB3 with the Higgsfield post of 2026-11-24): no generated scenes, no AI label needed. Day-1 deck speedrun (D1) with the real stopwatch on screen. Until /go/ is live (target Thu 29 Oct) use the full makeborne.com URL with these UTMs; never a Whop store or tracking link.",
     "tag": "live",
     "slot": "original",
     "link": "makeborne.com/go/tt-v03",
@@ -56,7 +58,9 @@
      "utm_campaign": "launch-2026-10",
      "utm_content": "tt-v03-d1"
     },
-    "episode": 1
+    "episode": 1,
+    "version": "real",
+    "abPair": "AB3"
    },
    {
     "channel": "Instagram Reels",
@@ -648,7 +652,7 @@
     "account": "Makeborne brand TikTok (business account)",
     "contentId": "V07",
     "time": "21:00 CET (Europe/Sarajevo, UTC+1)",
-    "notes": "Lead finder (live), results blurred: names, addresses, phones, emails. Never call it 'AI lead research'.",
+    "notes": "HIGGSFIELD VERSION (A/B pair AB1 with the real post of 2026-12-07): HF01, HF02 in the HyperFrames slots; 'AI-generated scene' label on screen; TikTok AI-generated content on / YouTube altered or synthetic = Yes / Meta AI label. Lead finder (live), results blurred: names, addresses, phones, emails. Never call it 'AI lead research'.",
     "tag": "live",
     "slot": "original",
     "link": "makeborne.com/go/tt-v07",
@@ -658,14 +662,16 @@
      "utm_campaign": "launch-2026-10",
      "utm_content": "tt-v07-f4"
     },
-    "episode": 1
+    "episode": 1,
+    "version": "higgsfield",
+    "abPair": "AB1"
    },
    {
     "channel": "Instagram Reels",
     "account": "Makeborne brand Instagram (professional)",
     "contentId": "V07",
     "time": "13:15 CET (Europe/Sarajevo, UTC+1)",
-    "notes": "Native re-edit of the same-week piece (new cover/caption, no TikTok watermark). CTA: 'Comment CLIENT' (keyword DM t21 returns the /go/ link, 3 briefs, a 30 s uncut build and the refund line).",
+    "notes": "HIGGSFIELD VERSION: HF01, HF02 in the HyperFrames slots; 'AI-generated scene' label on screen; TikTok AI-generated content on / YouTube altered or synthetic = Yes / Meta AI label. Native re-edit of the same-week piece (new cover/caption, no TikTok watermark). CTA: 'Comment CLIENT' (keyword DM t21 returns the /go/ link, 3 briefs, a 30 s uncut build and the refund line).",
     "tag": "live",
     "slot": "re-edit",
     "link": "makeborne.com/go/ig-v07",
@@ -675,7 +681,8 @@
      "utm_campaign": "launch-2026-10",
      "utm_content": "ig-v07-f4"
     },
-    "episode": 1
+    "episode": 1,
+    "version": "higgsfield"
    },
    {
     "channel": "Instagram Stories",
@@ -733,7 +740,7 @@
     "account": "Makeborne YouTube channel",
     "contentId": "V07",
     "time": "13:30 CET (Europe/Sarajevo, UTC+1)",
-    "notes": "Native re-edit of the same-week piece (new cover/caption, no TikTok watermark).",
+    "notes": "HIGGSFIELD VERSION: HF01, HF02 in the HyperFrames slots; 'AI-generated scene' label on screen; TikTok AI-generated content on / YouTube altered or synthetic = Yes / Meta AI label. Native re-edit of the same-week piece (new cover/caption, no TikTok watermark).",
     "tag": "live",
     "slot": "re-edit",
     "link": "makeborne.com/go/yt-v07",
@@ -743,7 +750,8 @@
      "utm_campaign": "launch-2026-10",
      "utm_content": "yt-v07-f4"
     },
-    "episode": 1
+    "episode": 1,
+    "version": "higgsfield"
    }
   ],
   "actions": [
@@ -1154,7 +1162,7 @@
     "account": "Makeborne brand TikTok (business account)",
     "contentId": "V14",
     "time": "13:00 CET (Europe/Sarajevo, UTC+1)",
-    "notes": "",
+    "notes": "HIGGSFIELD VERSION: HF03 in the HyperFrames slots; 'AI-generated scene' label on screen; TikTok AI-generated content on / YouTube altered or synthetic = Yes / Meta AI label.",
     "tag": "live",
     "slot": "original",
     "link": "makeborne.com/go/tt-v14",
@@ -1164,7 +1172,8 @@
      "utm_campaign": "launch-2026-10",
      "utm_content": "tt-v14-d2"
     },
-    "episode": 1
+    "episode": 1,
+    "version": "higgsfield"
    },
    {
     "channel": "Instagram Reels",
@@ -1224,7 +1233,7 @@
     "account": "Makeborne YouTube channel",
     "contentId": "V15",
     "time": "13:30 CET (Europe/Sarajevo, UTC+1)",
-    "notes": "Native re-edit of the same-week piece (new cover/caption, no TikTok watermark). Re-edit of a TikTok piece; loop the last frame into frame 0; link in description and pinned comment.",
+    "notes": "HIGGSFIELD VERSION: HF05, HF06, HF04 in the HyperFrames slots; 'AI-generated scene' label on screen; TikTok AI-generated content on / YouTube altered or synthetic = Yes / Meta AI label. Native re-edit of the same-week piece (new cover/caption, no TikTok watermark). Re-edit of a TikTok piece; loop the last frame into frame 0; link in description and pinned comment.",
     "tag": "live",
     "slot": "re-edit",
     "link": "makeborne.com/go/yt-v15",
@@ -1234,7 +1243,8 @@
      "utm_campaign": "launch-2026-10",
      "utm_content": "yt-v15-b4"
     },
-    "episode": 1
+    "episode": 1,
+    "version": "higgsfield"
    }
   ],
   "actions": [
@@ -1292,7 +1302,7 @@
     "account": "Makeborne brand TikTok (business account)",
     "contentId": "V16",
     "time": "21:30 CET (Europe/Sarajevo, UTC+1)",
-    "notes": "",
+    "notes": "HIGGSFIELD VERSION: HF07, HF08 in the HyperFrames slots; 'AI-generated scene' label on screen; TikTok AI-generated content on / YouTube altered or synthetic = Yes / Meta AI label.",
     "tag": "live",
     "slot": "original",
     "link": "makeborne.com/go/tt-v16",
@@ -1302,14 +1312,15 @@
      "utm_campaign": "launch-2026-10",
      "utm_content": "tt-v16-s1"
     },
-    "episode": 1
+    "episode": 1,
+    "version": "higgsfield"
    },
    {
     "channel": "Instagram Reels",
     "account": "Makeborne brand Instagram (professional)",
     "contentId": "V16",
     "time": "20:15 CET (Europe/Sarajevo, UTC+1)",
-    "notes": "Posting-time test: this Reel goes out at 20:15 CET instead of the usual 13:15 (Tue 3 and Wed 4 Nov; compare 72 h reach with the 13:15 Reels on Sunday 8 Nov). Native re-edit of the same-week piece (new cover/caption, no TikTok watermark). CTA: 'Comment SITE' (keyword DM t21 returns the /go/ link, 3 briefs, a 30 s uncut build and the refund line).",
+    "notes": "HIGGSFIELD VERSION: HF07, HF08 in the HyperFrames slots; 'AI-generated scene' label on screen; TikTok AI-generated content on / YouTube altered or synthetic = Yes / Meta AI label. Posting-time test: this Reel goes out at 20:15 CET instead of the usual 13:15 (Tue 3 and Wed 4 Nov; compare 72 h reach with the 13:15 Reels on Sunday 8 Nov). Native re-edit of the same-week piece (new cover/caption, no TikTok watermark). CTA: 'Comment SITE' (keyword DM t21 returns the /go/ link, 3 briefs, a 30 s uncut build and the refund line).",
     "tag": "live",
     "slot": "re-edit",
     "link": "makeborne.com/go/ig-v16",
@@ -1319,7 +1330,8 @@
      "utm_campaign": "launch-2026-10",
      "utm_content": "ig-v16-s1"
     },
-    "episode": 1
+    "episode": 1,
+    "version": "higgsfield"
    },
    {
     "channel": "Instagram Stories",
@@ -1377,7 +1389,7 @@
     "account": "Makeborne YouTube channel",
     "contentId": "V29",
     "time": "13:30 CET (Europe/Sarajevo, UTC+1)",
-    "notes": "Native re-edit of the same-week piece (new cover/caption, no TikTok watermark). Re-edit of a TikTok piece; loop the last frame into frame 0; link in description and pinned comment.",
+    "notes": "REAL VERSION (A/B pair AB2 with the Higgsfield post of 2026-11-19): no generated scenes, no AI label needed. Native re-edit of the same-week piece (new cover/caption, no TikTok watermark). Re-edit of a TikTok piece; loop the last frame into frame 0; link in description and pinned comment.",
     "tag": "live",
     "slot": "re-edit",
     "coverId": "C28",
@@ -1388,7 +1400,9 @@
      "utm_campaign": "launch-2026-10",
      "utm_content": "yt-v29-s4"
     },
-    "episode": 1
+    "episode": 1,
+    "version": "real",
+    "abPair": "AB2"
    }
   ],
   "actions": [
@@ -1428,7 +1442,7 @@
     "account": "Makeborne brand TikTok (business account)",
     "contentId": "V15",
     "time": "13:00 CET (Europe/Sarajevo, UTC+1)",
-    "notes": "",
+    "notes": "HIGGSFIELD VERSION: HF05, HF06, HF04 in the HyperFrames slots; 'AI-generated scene' label on screen; TikTok AI-generated content on / YouTube altered or synthetic = Yes / Meta AI label.",
     "tag": "live",
     "slot": "original",
     "link": "makeborne.com/go/tt-v15",
@@ -1438,7 +1452,8 @@
      "utm_campaign": "launch-2026-10",
      "utm_content": "tt-v15-b4"
     },
-    "episode": 1
+    "episode": 1,
+    "version": "higgsfield"
    },
    {
     "channel": "Instagram carousel",
@@ -1570,7 +1585,7 @@
     "account": "Makeborne brand TikTok (business account)",
     "contentId": "V18",
     "time": "13:00 CET (Europe/Sarajevo, UTC+1)",
-    "notes": "",
+    "notes": "REAL VERSION (A/B pair AB6 with the Higgsfield post of 2026-12-11): no generated scenes, no AI label needed.",
     "tag": "live",
     "slot": "original",
     "link": "makeborne.com/go/tt-v18",
@@ -1580,7 +1595,9 @@
      "utm_campaign": "launch-2026-10",
      "utm_content": "tt-v18-a3"
     },
-    "episode": 1
+    "episode": 1,
+    "version": "real",
+    "abPair": "AB6"
    },
    {
     "channel": "TikTok",
@@ -1604,7 +1621,7 @@
     "account": "Makeborne brand Instagram (professional)",
     "contentId": "V15",
     "time": "13:15 CET (Europe/Sarajevo, UTC+1)",
-    "notes": "Native re-edit of the same-week piece (new cover/caption, no TikTok watermark). CTA: 'Comment BOOK' (keyword DM t21 returns the /go/ link, 3 briefs, a 30 s uncut build and the refund line).",
+    "notes": "HIGGSFIELD VERSION: HF05, HF06, HF04 in the HyperFrames slots; 'AI-generated scene' label on screen; TikTok AI-generated content on / YouTube altered or synthetic = Yes / Meta AI label. Native re-edit of the same-week piece (new cover/caption, no TikTok watermark). CTA: 'Comment BOOK' (keyword DM t21 returns the /go/ link, 3 briefs, a 30 s uncut build and the refund line).",
     "tag": "live",
     "slot": "re-edit",
     "link": "makeborne.com/go/ig-v15",
@@ -1614,7 +1631,8 @@
      "utm_campaign": "launch-2026-10",
      "utm_content": "ig-v15-b4"
     },
-    "episode": 1
+    "episode": 1,
+    "version": "higgsfield"
    },
    {
     "channel": "Instagram Stories",
@@ -2335,7 +2353,7 @@
     "account": "Makeborne brand TikTok (business account)",
     "contentId": "V27",
     "time": "13:00 CET (Europe/Sarajevo, UTC+1)",
-    "notes": "",
+    "notes": "HIGGSFIELD VERSION: HF09, HF10 in the HyperFrames slots; 'AI-generated scene' label on screen; TikTok AI-generated content on / YouTube altered or synthetic = Yes / Meta AI label.",
     "tag": "live",
     "slot": "original",
     "link": "makeborne.com/go/tt-v27",
@@ -2345,7 +2363,8 @@
      "utm_campaign": "launch-2026-10",
      "utm_content": "tt-v27-b5"
     },
-    "episode": 1
+    "episode": 1,
+    "version": "higgsfield"
    },
    {
     "channel": "Instagram carousel",
@@ -2552,7 +2571,7 @@
     "account": "Makeborne brand Instagram (professional)",
     "contentId": "V27",
     "time": "13:15 CET (Europe/Sarajevo, UTC+1)",
-    "notes": "Native re-edit of the same-week piece (new cover/caption, no TikTok watermark). CTA: 'Comment BOOK' (keyword DM t21 returns the /go/ link, 3 briefs, a 30 s uncut build and the refund line).",
+    "notes": "HIGGSFIELD VERSION: HF09, HF10 in the HyperFrames slots; 'AI-generated scene' label on screen; TikTok AI-generated content on / YouTube altered or synthetic = Yes / Meta AI label. Native re-edit of the same-week piece (new cover/caption, no TikTok watermark). CTA: 'Comment BOOK' (keyword DM t21 returns the /go/ link, 3 briefs, a 30 s uncut build and the refund line).",
     "tag": "live",
     "slot": "re-edit",
     "link": "makeborne.com/go/ig-v27",
@@ -2562,7 +2581,8 @@
      "utm_campaign": "launch-2026-10",
      "utm_content": "ig-v27-b5"
     },
-    "episode": 1
+    "episode": 1,
+    "version": "higgsfield"
    },
    {
     "channel": "Instagram Stories",
@@ -3500,7 +3520,7 @@
     "account": "Makeborne YouTube channel",
     "contentId": "V29",
     "time": "13:30 CET (Europe/Sarajevo, UTC+1)",
-    "notes": "daily 8-second 'Made from one sentence' series (cover C28), episode 2: new brief and new output, never a re-upload. Native re-edit of the same-week piece (new cover/caption, no TikTok watermark). Re-edit of a TikTok piece; loop the last frame into frame 0; link in description and pinned comment.",
+    "notes": "HIGGSFIELD VERSION (A/B pair AB2 with the real post of 2026-11-04): HF12, HF13, HF23 in the HyperFrames slots; 'AI-generated scene' label on screen; TikTok AI-generated content on / YouTube altered or synthetic = Yes / Meta AI label. daily 8-second 'Made from one sentence' series (cover C28), episode 2: new brief and new output, never a re-upload. Native re-edit of the same-week piece (new cover/caption, no TikTok watermark). Re-edit of a TikTok piece; loop the last frame into frame 0; link in description and pinned comment.",
     "tag": "live",
     "slot": "re-edit",
     "coverId": "C28",
@@ -3511,7 +3531,9 @@
      "utm_campaign": "launch-2026-10",
      "utm_content": "yt-v29-e02-s4"
     },
-    "episode": 2
+    "episode": 2,
+    "version": "higgsfield",
+    "abPair": "AB2"
    },
    {
     "channel": "Creator TikTok",
@@ -4100,7 +4122,7 @@
     "account": "Makeborne YouTube channel",
     "contentId": "V29",
     "time": "13:30 CET (Europe/Sarajevo, UTC+1)",
-    "notes": "daily 8-second 'Made from one sentence' series (cover C28), episode 3: new brief and new output, never a re-upload. Native re-edit of the same-week piece (new cover/caption, no TikTok watermark). Re-edit of a TikTok piece; loop the last frame into frame 0; link in description and pinned comment.",
+    "notes": "HIGGSFIELD VERSION (A/B pair AB2 with the real post of 2026-11-04): HF12, HF13, HF23 in the HyperFrames slots; 'AI-generated scene' label on screen; TikTok AI-generated content on / YouTube altered or synthetic = Yes / Meta AI label. daily 8-second 'Made from one sentence' series (cover C28), episode 3: new brief and new output, never a re-upload. Native re-edit of the same-week piece (new cover/caption, no TikTok watermark). Re-edit of a TikTok piece; loop the last frame into frame 0; link in description and pinned comment.",
     "tag": "live",
     "slot": "re-edit",
     "coverId": "C28",
@@ -4111,7 +4133,9 @@
      "utm_campaign": "launch-2026-10",
      "utm_content": "yt-v29-e03-s4"
     },
-    "episode": 3
+    "episode": 3,
+    "version": "higgsfield",
+    "abPair": "AB2"
    }
   ],
   "actions": [
@@ -4169,7 +4193,7 @@
     "account": "Makeborne brand TikTok (business account)",
     "contentId": "V03",
     "time": "13:00 CET (Europe/Sarajevo, UTC+1)",
-    "notes": "one-sentence deck speedrun, episode 3: new brief and new output, never a re-upload.",
+    "notes": "HIGGSFIELD VERSION (A/B pair AB3 with the real post of 2026-10-26): HF03 in the HyperFrames slots; 'AI-generated scene' label on screen; TikTok AI-generated content on / YouTube altered or synthetic = Yes / Meta AI label. one-sentence deck speedrun, episode 3: new brief and new output, never a re-upload.",
     "tag": "live",
     "slot": "original",
     "link": "makeborne.com/go/tt-v03-e03",
@@ -4179,14 +4203,16 @@
      "utm_campaign": "launch-2026-10",
      "utm_content": "tt-v03-e03-d1"
     },
-    "episode": 3
+    "episode": 3,
+    "version": "higgsfield",
+    "abPair": "AB3"
    },
    {
     "channel": "Instagram Reels",
     "account": "Makeborne brand Instagram (professional)",
     "contentId": "V03",
     "time": "13:15 CET (Europe/Sarajevo, UTC+1)",
-    "notes": "one-sentence deck speedrun, episode 3: new brief and new output, never a re-upload. Native re-edit of the same-week piece (new cover/caption, no TikTok watermark). CTA: 'Comment DECK' (keyword DM t21 returns the /go/ link, 3 briefs, a 30 s uncut build and the refund line).",
+    "notes": "HIGGSFIELD VERSION: HF03 in the HyperFrames slots; 'AI-generated scene' label on screen; TikTok AI-generated content on / YouTube altered or synthetic = Yes / Meta AI label. one-sentence deck speedrun, episode 3: new brief and new output, never a re-upload. Native re-edit of the same-week piece (new cover/caption, no TikTok watermark). CTA: 'Comment DECK' (keyword DM t21 returns the /go/ link, 3 briefs, a 30 s uncut build and the refund line).",
     "tag": "live",
     "slot": "re-edit",
     "link": "makeborne.com/go/ig-v03-e03",
@@ -4196,7 +4222,8 @@
      "utm_campaign": "launch-2026-10",
      "utm_content": "ig-v03-e03-d1"
     },
-    "episode": 3
+    "episode": 3,
+    "version": "higgsfield"
    },
    {
     "channel": "LinkedIn",
@@ -4317,7 +4344,7 @@
     "account": "Makeborne brand TikTok (business account)",
     "contentId": "V02",
     "time": "21:30 CET (Europe/Sarajevo, UTC+1)",
-    "notes": "one-sentence site speedrun, episode 4: new brief and new output, never a re-upload.",
+    "notes": "HIGGSFIELD VERSION (A/B pair AB4 with the real post of 2026-10-26): HF11 in the HyperFrames slots; 'AI-generated scene' label on screen; TikTok AI-generated content on / YouTube altered or synthetic = Yes / Meta AI label. one-sentence site speedrun, episode 4: new brief and new output, never a re-upload.",
     "tag": "live",
     "slot": "original",
     "link": "makeborne.com/go/tt-v02-e04",
@@ -4327,7 +4354,9 @@
      "utm_campaign": "launch-2026-10",
      "utm_content": "tt-v02-e04-r3"
     },
-    "episode": 4
+    "episode": 4,
+    "version": "higgsfield",
+    "abPair": "AB4"
    },
    {
     "channel": "Instagram Reels",
@@ -4613,7 +4642,7 @@
     "account": "Makeborne brand TikTok (business account)",
     "contentId": "V40",
     "time": "13:00 CET (Europe/Sarajevo, UTC+1)",
-    "notes": "",
+    "notes": "REAL VERSION (A/B pair AB5 with the Higgsfield post of 2026-11-30): no generated scenes, no AI label needed.",
     "tag": "live",
     "slot": "original",
     "link": "makeborne.com/go/tt-v40",
@@ -4623,7 +4652,9 @@
      "utm_campaign": "launch-2026-10",
      "utm_content": "tt-v40-bf1"
     },
-    "episode": 1
+    "episode": 1,
+    "version": "real",
+    "abPair": "AB5"
    },
    {
     "channel": "TikTok",
@@ -4732,7 +4763,7 @@
     "account": "Makeborne brand Instagram (professional)",
     "contentId": "C30",
     "time": "13:30 CET (Europe/Sarajevo, UTC+1)",
-    "notes": "Black Friday story: price anchor and risk reversal, plus 'yearly is 20% off' (already true). No countdown, no extra discount (D5). Not counted in the cadence.",
+    "notes": "REAL VERSION (A/B pair AB7 with the Higgsfield story of 2026-11-30): the typeset story. Black Friday story: price anchor and risk reversal, plus 'yearly is 20% off' (already true). No countdown, no extra discount (D5). Not counted in the cadence.",
     "tag": "live",
     "slot": "original",
     "link": "makeborne.com/go/ig-c30",
@@ -4742,7 +4773,9 @@
      "utm_campaign": "launch-2026-10",
      "utm_content": "ig-c30-pr1"
     },
-    "episode": 1
+    "episode": 1,
+    "version": "real",
+    "abPair": "AB7"
    }
   ],
   "actions": [
@@ -4934,7 +4967,7 @@
     "account": "Makeborne brand TikTok (business account)",
     "contentId": "V40",
     "time": "13:00 CET (Europe/Sarajevo, UTC+1)",
-    "notes": "Re-cut of an earlier one-off (new hook and caption).",
+    "notes": "HIGGSFIELD VERSION (A/B pair AB5 with the real post of 2026-11-27): HF14 in the HyperFrames slots; 'AI-generated scene' label on screen; TikTok AI-generated content on / YouTube altered or synthetic = Yes / Meta AI label. Re-cut of an earlier one-off (new hook and caption).",
     "tag": "live",
     "slot": "original",
     "link": "makeborne.com/go/tt-v40-e02",
@@ -4944,7 +4977,9 @@
      "utm_campaign": "launch-2026-10",
      "utm_content": "tt-v40-e02-bf1"
     },
-    "episode": 2
+    "episode": 2,
+    "version": "higgsfield",
+    "abPair": "AB5"
    },
    {
     "channel": "TikTok",
@@ -4969,7 +5004,7 @@
     "account": "Makeborne brand Instagram (professional)",
     "contentId": "V40",
     "time": "13:15 CET (Europe/Sarajevo, UTC+1)",
-    "notes": "Re-cut of an earlier one-off (new hook and caption). Native re-edit of the same-week piece (new cover/caption, no TikTok watermark). CTA: 'Comment SITE' (keyword DM t21 returns the /go/ link, 3 briefs, a 30 s uncut build and the refund line).",
+    "notes": "HIGGSFIELD VERSION: HF14 in the HyperFrames slots; 'AI-generated scene' label on screen; TikTok AI-generated content on / YouTube altered or synthetic = Yes / Meta AI label. Re-cut of an earlier one-off (new hook and caption). Native re-edit of the same-week piece (new cover/caption, no TikTok watermark). CTA: 'Comment SITE' (keyword DM t21 returns the /go/ link, 3 briefs, a 30 s uncut build and the refund line).",
     "tag": "live",
     "slot": "re-edit",
     "link": "makeborne.com/go/ig-v40-e02",
@@ -4979,7 +5014,8 @@
      "utm_campaign": "launch-2026-10",
      "utm_content": "ig-v40-e02-bf1"
     },
-    "episode": 2
+    "episode": 2,
+    "version": "higgsfield"
    },
    {
     "channel": "Instagram Stories",
@@ -5039,7 +5075,7 @@
     "account": "Makeborne YouTube channel",
     "contentId": "V29",
     "time": "13:30 CET (Europe/Sarajevo, UTC+1)",
-    "notes": "daily 8-second 'Made from one sentence' series (cover C28), episode 4: new brief and new output, never a re-upload. Native re-edit of the same-week piece (new cover/caption, no TikTok watermark). Re-edit of a TikTok piece; loop the last frame into frame 0; link in description and pinned comment.",
+    "notes": "REAL VERSION (A/B pair AB2 with the Higgsfield post of 2026-11-19): no generated scenes, no AI label needed. daily 8-second 'Made from one sentence' series (cover C28), episode 4: new brief and new output, never a re-upload. Native re-edit of the same-week piece (new cover/caption, no TikTok watermark). Re-edit of a TikTok piece; loop the last frame into frame 0; link in description and pinned comment.",
     "tag": "live",
     "slot": "re-edit",
     "coverId": "C28",
@@ -5050,24 +5086,28 @@
      "utm_campaign": "launch-2026-10",
      "utm_content": "yt-v29-e04-s4"
     },
-    "episode": 4
+    "episode": 4,
+    "version": "real",
+    "abPair": "AB2"
    },
    {
     "channel": "Instagram Stories",
     "account": "Makeborne brand Instagram (professional)",
     "contentId": "C30",
     "time": "13:30 CET (Europe/Sarajevo, UTC+1)",
-    "notes": "Cyber Monday story, same message. Not counted in the cadence.",
+    "notes": "HIGGSFIELD VERSION (A/B pair AB7 with the real story of 2026-11-27): the same words over the HF14 frame grab (T09 lay-plate), 'AI-generated scene' label on, Meta AI label on. Own short link so the two stories can be told apart. Cyber Monday story, same message. Not counted in the cadence.",
     "tag": "live",
     "slot": "original",
-    "link": "makeborne.com/go/ig-c30",
+    "link": "makeborne.com/go/ig-c30-e02",
     "utm": {
      "utm_source": "instagram",
      "utm_medium": "organic",
      "utm_campaign": "launch-2026-10",
-     "utm_content": "ig-c30-pr1"
+     "utm_content": "ig-c30-e02-pr1"
     },
-    "episode": 1
+    "episode": 1,
+    "version": "higgsfield",
+    "abPair": "AB7"
    }
   ],
   "actions": [
@@ -5547,7 +5587,7 @@
     "account": "Makeborne brand TikTok (business account)",
     "contentId": "V25",
     "time": "13:00 CET (Europe/Sarajevo, UTC+1)",
-    "notes": "Format episode 2: new brief/output and a new hook, never a re-upload.",
+    "notes": "HIGGSFIELD VERSION: HF17 in the HyperFrames slots; 'AI-generated scene' label on screen; TikTok AI-generated content on / YouTube altered or synthetic = Yes / Meta AI label. Format episode 2: new brief/output and a new hook, never a re-upload.",
     "tag": "live",
     "slot": "original",
     "link": "makeborne.com/go/tt-v25-e02",
@@ -5557,7 +5597,8 @@
      "utm_campaign": "launch-2026-10",
      "utm_content": "tt-v25-e02-f6"
     },
-    "episode": 2
+    "episode": 2,
+    "version": "higgsfield"
    },
    {
     "channel": "TikTok",
@@ -5860,7 +5901,7 @@
     "account": "Makeborne brand TikTok (business account)",
     "contentId": "V07",
     "time": "13:00 CET (Europe/Sarajevo, UTC+1)",
-    "notes": "Format episode 4: new brief/output and a new hook, never a re-upload.",
+    "notes": "REAL VERSION (A/B pair AB1 with the Higgsfield post of 2026-10-30): no generated scenes, no AI label needed. Format episode 4: new brief/output and a new hook, never a re-upload.",
     "tag": "live",
     "slot": "original",
     "link": "makeborne.com/go/tt-v07-e04",
@@ -5870,7 +5911,9 @@
      "utm_campaign": "launch-2026-10",
      "utm_content": "tt-v07-e04-f4"
     },
-    "episode": 4
+    "episode": 4,
+    "version": "real",
+    "abPair": "AB1"
    },
    {
     "channel": "TikTok",
@@ -6018,7 +6061,7 @@
     "account": "Makeborne brand TikTok (business account)",
     "contentId": "V26",
     "time": "13:00 CET (Europe/Sarajevo, UTC+1)",
-    "notes": "Format episode 2: new brief/output and a new hook, never a re-upload.",
+    "notes": "HIGGSFIELD VERSION: HF19 in the HyperFrames slots; 'AI-generated scene' label on screen; TikTok AI-generated content on / YouTube altered or synthetic = Yes / Meta AI label. Format episode 2: new brief/output and a new hook, never a re-upload.",
     "tag": "live",
     "slot": "original",
     "link": "makeborne.com/go/tt-v26-e02",
@@ -6028,7 +6071,8 @@
      "utm_campaign": "launch-2026-10",
      "utm_content": "tt-v26-e02-f7"
     },
-    "episode": 2
+    "episode": 2,
+    "version": "higgsfield"
    },
    {
     "channel": "Instagram Reels",
@@ -6459,7 +6503,7 @@
     "account": "Makeborne brand TikTok (business account)",
     "contentId": "V18",
     "time": "13:00 CET (Europe/Sarajevo, UTC+1)",
-    "notes": "Format episode 2: new brief/output and a new hook, never a re-upload.",
+    "notes": "HIGGSFIELD VERSION (A/B pair AB6 with the real post of 2026-11-06): HF20 in the HyperFrames slots; 'AI-generated scene' label on screen; TikTok AI-generated content on / YouTube altered or synthetic = Yes / Meta AI label. Format episode 2: new brief/output and a new hook, never a re-upload.",
     "tag": "live",
     "slot": "original",
     "link": "makeborne.com/go/tt-v18-e02",
@@ -6469,7 +6513,9 @@
      "utm_campaign": "launch-2026-10",
      "utm_content": "tt-v18-e02-a3"
     },
-    "episode": 2
+    "episode": 2,
+    "version": "higgsfield",
+    "abPair": "AB6"
    },
    {
     "channel": "TikTok",
@@ -7375,7 +7421,7 @@
     "account": "Makeborne brand TikTok (business account)",
     "contentId": "V48",
     "time": "13:00 CET (Europe/Sarajevo, UTC+1)",
-    "notes": "Format episode 2: new brief/output and a new hook, never a re-upload.",
+    "notes": "HIGGSFIELD VERSION: HF22 in the HyperFrames slots; 'AI-generated scene' label on screen; TikTok AI-generated content on / YouTube altered or synthetic = Yes / Meta AI label. Format episode 2: new brief/output and a new hook, never a re-upload.",
     "tag": "live",
     "slot": "original",
     "link": "makeborne.com/go/tt-v48-e02",
@@ -7385,7 +7431,8 @@
      "utm_campaign": "launch-2026-10",
      "utm_content": "tt-v48-e02-r5"
     },
-    "episode": 2
+    "episode": 2,
+    "version": "higgsfield"
    },
    {
     "channel": "TikTok",
@@ -7973,7 +8020,7 @@
     "account": "Makeborne brand TikTok (business account)",
     "contentId": "V29",
     "time": "13:00 CET (Europe/Sarajevo, UTC+1)",
-    "notes": "daily 8-second 'Made from one sentence' series (cover C28), episode 7: new brief and new output, never a re-upload. Banked in week 8 (half cadence 21 Dec - 3 Jan).",
+    "notes": "HIGGSFIELD VERSION: HF12, HF13, HF23 in the HyperFrames slots; 'AI-generated scene' label on screen; TikTok AI-generated content on / YouTube altered or synthetic = Yes / Meta AI label. daily 8-second 'Made from one sentence' series (cover C28), episode 7: new brief and new output, never a re-upload. Banked in week 8 (half cadence 21 Dec - 3 Jan).",
     "tag": "live",
     "slot": "original",
     "coverId": "C28",
@@ -7984,14 +8031,15 @@
      "utm_campaign": "launch-2026-10",
      "utm_content": "tt-v29-e07-s4"
     },
-    "episode": 7
+    "episode": 7,
+    "version": "higgsfield"
    },
    {
     "channel": "YouTube Shorts",
     "account": "Makeborne YouTube channel",
     "contentId": "V29",
     "time": "13:30 CET (Europe/Sarajevo, UTC+1)",
-    "notes": "daily 8-second 'Made from one sentence' series (cover C28), episode 7: new brief and new output, never a re-upload. Native re-edit of the same-week piece (new cover/caption, no TikTok watermark). Banked re-edit.",
+    "notes": "HIGGSFIELD VERSION: HF12, HF13, HF23 in the HyperFrames slots; 'AI-generated scene' label on screen; TikTok AI-generated content on / YouTube altered or synthetic = Yes / Meta AI label. daily 8-second 'Made from one sentence' series (cover C28), episode 7: new brief and new output, never a re-upload. Native re-edit of the same-week piece (new cover/caption, no TikTok watermark). Banked re-edit.",
     "tag": "live",
     "slot": "re-edit",
     "coverId": "C28",
@@ -8002,7 +8050,8 @@
      "utm_campaign": "launch-2026-10",
      "utm_content": "yt-v29-e07-s4"
     },
-    "episode": 7
+    "episode": 7,
+    "version": "higgsfield"
    }
   ],
   "actions": [
@@ -8391,7 +8440,7 @@
     "account": "Makeborne brand TikTok (business account)",
     "contentId": "V29",
     "time": "13:00 CET (Europe/Sarajevo, UTC+1)",
-    "notes": "daily 8-second 'Made from one sentence' series (cover C28), episode 8: new brief and new output, never a re-upload. Banked in week 8 (half cadence 21 Dec - 3 Jan).",
+    "notes": "HIGGSFIELD VERSION: HF12, HF13, HF23 in the HyperFrames slots; 'AI-generated scene' label on screen; TikTok AI-generated content on / YouTube altered or synthetic = Yes / Meta AI label. daily 8-second 'Made from one sentence' series (cover C28), episode 8: new brief and new output, never a re-upload. Banked in week 8 (half cadence 21 Dec - 3 Jan).",
     "tag": "live",
     "slot": "original",
     "coverId": "C28",
@@ -8402,14 +8451,15 @@
      "utm_campaign": "launch-2026-10",
      "utm_content": "tt-v29-e08-s4"
     },
-    "episode": 8
+    "episode": 8,
+    "version": "higgsfield"
    },
    {
     "channel": "YouTube Shorts",
     "account": "Makeborne YouTube channel",
     "contentId": "V29",
     "time": "13:30 CET (Europe/Sarajevo, UTC+1)",
-    "notes": "daily 8-second 'Made from one sentence' series (cover C28), episode 8: new brief and new output, never a re-upload. Native re-edit of the same-week piece (new cover/caption, no TikTok watermark). Banked re-edit.",
+    "notes": "HIGGSFIELD VERSION: HF12, HF13, HF23 in the HyperFrames slots; 'AI-generated scene' label on screen; TikTok AI-generated content on / YouTube altered or synthetic = Yes / Meta AI label. daily 8-second 'Made from one sentence' series (cover C28), episode 8: new brief and new output, never a re-upload. Native re-edit of the same-week piece (new cover/caption, no TikTok watermark). Banked re-edit.",
     "tag": "live",
     "slot": "re-edit",
     "coverId": "C28",
@@ -8420,7 +8470,8 @@
      "utm_campaign": "launch-2026-10",
      "utm_content": "yt-v29-e08-s4"
     },
-    "episode": 8
+    "episode": 8,
+    "version": "higgsfield"
    }
   ],
   "actions": [
@@ -8554,7 +8605,7 @@
     "account": "Makeborne brand TikTok (business account)",
     "contentId": "V42",
     "time": "13:00 CET (Europe/Sarajevo, UTC+1)",
-    "notes": "",
+    "notes": "HIGGSFIELD VERSION: HF25, HF01, HF02 in the HyperFrames slots; 'AI-generated scene' label on screen; TikTok AI-generated content on / YouTube altered or synthetic = Yes / Meta AI label.",
     "tag": "live",
     "slot": "original",
     "link": "makeborne.com/go/tt-v42",
@@ -8564,7 +8615,8 @@
      "utm_campaign": "launch-2026-10",
      "utm_content": "tt-v42-f8"
     },
-    "episode": 1
+    "episode": 1,
+    "version": "higgsfield"
    },
    {
     "channel": "TikTok",
@@ -8591,7 +8643,7 @@
     "account": "Makeborne brand Instagram (professional)",
     "contentId": "V42",
     "time": "13:15 CET (Europe/Sarajevo, UTC+1)",
-    "notes": "Native re-edit of the same-week piece (new cover/caption, no TikTok watermark). CTA: 'Comment CLIENT' (keyword DM t21 returns the /go/ link, 3 briefs, a 30 s uncut build and the refund line).",
+    "notes": "HIGGSFIELD VERSION: HF25, HF01, HF02 in the HyperFrames slots; 'AI-generated scene' label on screen; TikTok AI-generated content on / YouTube altered or synthetic = Yes / Meta AI label. Native re-edit of the same-week piece (new cover/caption, no TikTok watermark). CTA: 'Comment CLIENT' (keyword DM t21 returns the /go/ link, 3 briefs, a 30 s uncut build and the refund line).",
     "tag": "live",
     "slot": "re-edit",
     "link": "makeborne.com/go/ig-v42",
@@ -8601,7 +8653,8 @@
      "utm_campaign": "launch-2026-10",
      "utm_content": "ig-v42-f8"
     },
-    "episode": 1
+    "episode": 1,
+    "version": "higgsfield"
    },
    {
     "channel": "Instagram Stories",
@@ -8659,7 +8712,7 @@
     "account": "Makeborne YouTube channel",
     "contentId": "V42",
     "time": "13:30 CET (Europe/Sarajevo, UTC+1)",
-    "notes": "Native re-edit of the same-week piece (new cover/caption, no TikTok watermark). Re-edit of a TikTok piece; loop the last frame into frame 0; link in description and pinned comment.",
+    "notes": "HIGGSFIELD VERSION: HF25, HF01, HF02 in the HyperFrames slots; 'AI-generated scene' label on screen; TikTok AI-generated content on / YouTube altered or synthetic = Yes / Meta AI label. Native re-edit of the same-week piece (new cover/caption, no TikTok watermark). Re-edit of a TikTok piece; loop the last frame into frame 0; link in description and pinned comment.",
     "tag": "live",
     "slot": "re-edit",
     "link": "makeborne.com/go/yt-v42",
@@ -8669,7 +8722,8 @@
      "utm_campaign": "launch-2026-10",
      "utm_content": "yt-v42-f8"
     },
-    "episode": 1
+    "episode": 1,
+    "version": "higgsfield"
    }
   ],
   "actions": [
@@ -8719,7 +8773,7 @@
     "account": "Makeborne brand TikTok (business account)",
     "contentId": "V41",
     "time": "13:00 CET (Europe/Sarajevo, UTC+1)",
-    "notes": "",
+    "notes": "HIGGSFIELD VERSION: HF24 in the HyperFrames slots; 'AI-generated scene' label on screen; TikTok AI-generated content on / YouTube altered or synthetic = Yes / Meta AI label.",
     "tag": "live",
     "slot": "original",
     "link": "makeborne.com/go/tt-v41",
@@ -8729,14 +8783,15 @@
      "utm_campaign": "launch-2026-10",
      "utm_content": "tt-v41-d4"
     },
-    "episode": 1
+    "episode": 1,
+    "version": "higgsfield"
    },
    {
     "channel": "Instagram Reels",
     "account": "Makeborne brand Instagram (professional)",
     "contentId": "V41",
     "time": "13:15 CET (Europe/Sarajevo, UTC+1)",
-    "notes": "Native re-edit of the same-week piece (new cover/caption, no TikTok watermark). CTA: 'Comment DECK' (keyword DM t21 returns the /go/ link, 3 briefs, a 30 s uncut build and the refund line).",
+    "notes": "HIGGSFIELD VERSION: HF24 in the HyperFrames slots; 'AI-generated scene' label on screen; TikTok AI-generated content on / YouTube altered or synthetic = Yes / Meta AI label. Native re-edit of the same-week piece (new cover/caption, no TikTok watermark). CTA: 'Comment DECK' (keyword DM t21 returns the /go/ link, 3 briefs, a 30 s uncut build and the refund line).",
     "tag": "live",
     "slot": "re-edit",
     "link": "makeborne.com/go/ig-v41",
@@ -8746,7 +8801,8 @@
      "utm_campaign": "launch-2026-10",
      "utm_content": "ig-v41-d4"
     },
-    "episode": 1
+    "episode": 1,
+    "version": "higgsfield"
    },
    {
     "channel": "LinkedIn",

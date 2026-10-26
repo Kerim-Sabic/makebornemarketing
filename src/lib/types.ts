@@ -106,7 +106,7 @@ export interface TodayExtra {
   week: number; weekday: string;
   targets: { dates: string; visits: number; signups: number; paid: number; netPaid: number; activatedPayers: number; mrr: number } | null;
   ig: IgKickoff | null;
-  make: { text: string; time: string; ids: string[]; sheets: string[] }[];
+  make: { text: string; time: string; ids: string[]; sheets: string[]; shots: HfShotCard[] }[];
   ads: DueAd[];
   money: MoneyItem[];
   posts: { title: string | null; kind: 'video' | 'creative' | null; caption: string | null; onImage: string | null; hook: string | null; cta: string | null; length: string | null; igMain: boolean }[];
@@ -122,9 +122,51 @@ export interface WeekCard {
 }
 export interface LaunchDayCard { day: number; date: string; weekday: string; focus: string; actions: string[]; posts: number }
 
+/** The copyable part of one Higgsfield shot (Today's "How" panel). */
+export interface HfShotCard {
+  id: string; title: string; for: string[]; model: string; mode: string; cameraPreset: string; durationSec: number; aspect: string; resolution: string;
+  takes: number; credits: number; prompt: string; negative: string; referenceImage: string | null; keepRule: string; gate: string | null;
+}
+export interface HfShot extends HfShotCard { role: string; job: string; week: number; month: number; generateOn: string; creditsPerTake: number; seed: string; label: string; conditional: boolean; fallback: string | null; file: string }
+export interface AbSide { date: string; go: string; also?: { date: string; go: string } }
+export interface HfPlan {
+  role: string; hardRules: string[]; presets: string; everyShot: string;
+  modelGuide: { job: string; model: string; why: string }[];
+  totals: { shots: number; conditionalShots: number; plannedCredits90Days: number; conditionalCredits90Days: number; videosNow: number; videosGated: number; creatives: number; abPairs: number };
+  mix: {
+    target: string; why: string[];
+    measured: { higgsfieldVideos: number; seconds: number; realSec: number; higgsfieldSec: number; hyperframesOnlySec: number; realPct: number; higgsfieldPct: number; hyperframesOnlyPct: number; wholePlanHiggsfieldPct: number; wholePlanNote: string };
+    rows: { id: string; gated: boolean; lengthSec: number; realSec: number; higgsfieldSec: number; hyperframesOnlySec: number; higgsfieldPct: number }[];
+  };
+  abTests: { metric: string; weeklyShift: string; caveat: string; pairs: { id: string; video: string; surface: string; note: string; real: AbSide; higgsfield: AbSide }[] };
+  shots: HfShot[];
+}
+export interface ProductionBudget {
+  title: string; separateFromAdsBudget: boolean; rule: string; owner: string; logging: string;
+  tier: { recommended: string; priceUSD: number; creditsPerMonth: number; priceSource: string; conflicts: string; why: string; notThis: string };
+  month1: { from: string; to: string; items: { item: string; usd: number }[]; totalUSD: number; capUSD: number; capNote: string };
+  credits: {
+    month1: { available: number; planned: number; conditional: number; reserve: number; reserveFor: string };
+    perShotRule: string;
+    byWeek: { week: number; dates: string; month: number; generateOn: string | null; shots: string[]; plannedCredits: number; conditionalCredits: number }[];
+    creditCosts: { model: string; credits: number; source: string }[];
+  };
+  month2Rule: { decideOn: string; evidence: string; keepPlus: string; downgrade: string; cancel: string; month3: string };
+  ninetyDays: { plannedUSD: string; capUSD: number; note: string };
+}
+export interface ProductionSheets {
+  videos: {
+    id: string; title: string; week: number; makeWith: string; template: string; readiness: string;
+    mix: { lengthSec: number; realSec: number; higgsfieldSec: number; hyperframesOnlySec: number };
+    slots: { slot: string; at: string; composition: string; variables: Record<string, string> }[];
+    higgsfield: { shots: string[]; seconds: number; credits: number; posts: string[]; postedAs: string; readiness: string; sections: { slot: string; shot: string; at: string; clip: string; line: string }[] } | null;
+  }[];
+  creatives: { id: string; title: string; week: number; makeWith: string; template: string; readiness: string; variables: Record<string, string | number>; higgsfield: { frameFrom: string; layout: string; posts: string[]; readiness: string } | null }[];
+}
+
 export interface ProductionSimple {
-  howWeMakeVideos: { title: string; intro: string; ways: { name: string; share: string; covers: string; steps: string[]; time: string }[]; everythingElse: string; rules: string[] };
-  weeks: { week: number; dates: string; note?: string; items: { day: string; text: string; ids: string[]; links: { sheet: string; warRoom: string }[] }[] }[];
+  howWeMakeVideos: { title: string; intro: string; ways: { name: string; share: string; covers: string; steps: string[]; time: string }[]; everythingElse: string; rules: string[]; budget?: string; mix?: string };
+  weeks: { week: number; dates: string; note?: string; items: { day: string; text: string; ids: string[]; links: { sheet: string; warRoom: string }[]; hf?: string[] }[] }[];
   launchWeekLink: string;
 }
 

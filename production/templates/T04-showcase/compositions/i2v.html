@@ -1,0 +1,47 @@
+<!doctype html>
+<!--
+  T04 slot "i2v": a Higgsfield image-to-video take whose START FRAME is a real Makeborne output (a published site's first
+  screen, a deck slide or a book page, rendered by a LIVE feature on the clean marketing account for this post; never an
+  unreleased feature, client material or customer data). The model only moves the camera; the
+  take is kept only if every letter and every layout block matches the start frame at 100% zoom on every frame (otherwise
+  use the plain Ken Burns in slides.html instead). The sentence that made the output and the run-log footnote are HTML.
+  The label reads "AI camera move on a real Makeborne output" and stays on for the whole slot. 2-2.5 s by default.
+  Mount with data-composition-src="compositions/i2v.html" data-composition-id="i2v".
+-->
+<html
+  lang="en"
+  data-composition-variables='[
+    {"id":"clipSrc","type":"string","label":"Image-to-video take (start frame = the real output)","default":"assets/gen/i2v.mp4"},
+    {"id":"sentence","type":"string","label":"The exact brief, in quotes","default":"\"A small coffee roastery in Sarajevo.\""},
+    {"id":"footnote","type":"string","label":"From the run log only","default":"Built in 2:41 · 38 credits · unedited"},
+    {"id":"aiLabelText","type":"string","label":"AI label (never empty)","default":"AI camera move on a real Makeborne output"}
+  ]'
+>
+  <head><meta charset="UTF-8" /></head>
+  <body>
+    <template>
+      <link rel="stylesheet" href="assets/shared/brand.css" />
+      <style>
+        #root { position: absolute; inset: 0; overflow: hidden; background: var(--mb-canvas); }
+        #iv-clip { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+        #iv-chip { position: absolute; left: 0; right: 0; top: 1500px; display: flex; justify-content: center; }
+        #iv-foot { position: absolute; left: 0; right: 0; top: 1610px; text-align: center; font-size: calc(22px * var(--type-scale)); }
+        #iv-foot span { background: rgba(248,247,244,.9); padding: 6px 12px; border-radius: 10px; }
+        #iv-ai { position: absolute; left: var(--safe-left); top: 1180px; font-size: calc(20px * var(--type-scale)); background: rgba(24,24,27,.78); }
+      </style>
+      <div id="root" class="fmt-9x16" data-composition-id="i2v" data-width="1080" data-height="1920" data-duration="2.5">
+        <video id="iv-clip" class="clip" data-start="0" data-duration="2.5" data-media-start="0" data-track-index="0" data-var-src="clipSrc" src="assets/gen/i2v.mp4" muted playsinline></video>
+        <div id="iv-chip" class="clip" data-start="0" data-duration="2.5" data-track-index="1" data-track-kind="graphics"><div class="mb-pill" style="font-size: calc(26px * var(--type-scale))"><span data-var-text="sentence">"A small coffee roastery in Sarajevo."</span></div></div>
+        <div id="iv-foot" class="clip mb-footnote" data-start="0" data-duration="2.5" data-track-index="2" data-track-kind="graphics"><span data-var-text="footnote">Built in 2:41 · 38 credits · unedited</span></div>
+        <div id="iv-ai" class="clip mb-chip-dark" data-start="0" data-duration="2.5" data-track-index="3" data-track-kind="graphics" data-var-text="aiLabelText">AI camera move on a real Makeborne output</div>
+      </div>
+      <script>
+        // The model's camera move is the motion; HTML only brings the chip and footnote in. Nothing redraws the output.
+        const tl = gsap.timeline({ paused: true });
+        tl.fromTo("#iv-chip", { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.35, ease: "power3.out" }, 0.1);
+        tl.fromTo("#iv-foot", { opacity: 0 }, { opacity: 1, duration: 0.3, ease: "power2.out" }, 0.35);
+        window.__timelines["i2v"] = tl;
+      </script>
+    </template>
+  </body>
+</html>

@@ -7,7 +7,8 @@
     1080x1080, 1200x1200, 1080x1920 (story: text only between y 270 and 1250), 1600x900, 1920x1080, 1200x630, 1280x720, 1270x760.
   LinkedIn document: export pages, then join to PDF (e.g. img2pdf) - or build the deck in Makeborne itself (C07, C20, C38, C45).
   Layouts: .lay-proof (C01-style capture top 60% + headline), .lay-type (C03/C04/C08/C12/C30/C31/C37 type only),
-           .lay-step (C05/C18/C23 carousel card: step number, caption, capture card), .lay-end (price + refund strip).
+           .lay-step (C05/C18/C23 carousel card: step number, caption, capture card), .lay-end (price + refund strip),
+           .lay-plate (C28/C30 Higgsfield version: a frame grab of a planned Higgsfield clip behind the type, AI label on).
   The COMPOSE text of every creative in data/creatives.json (generationPrompt) is the exact spec: copy its words verbatim.
 -->
 <html lang="en">
@@ -41,10 +42,19 @@
       .lay-step .cap { position: absolute; left: 7%; right: 7%; top: 16%; font-size: 58px; }
       .lay-step .shot { position: absolute; left: 7%; width: 86%; top: 34%; height: 54%; }
       .lay-step .shot img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+      /* .lay-plate: a frame grab from a Higgsfield clip (never a product screen), darkened, with the type in white */
+      .lay-plate .plate { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+      .lay-plate .shade { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(24,24,27,.15) 0%, rgba(24,24,27,.7) 70%); }
+      .lay-plate .head { position: absolute; left: 7%; right: 7%; top: 52%; font-size: 92px; color: #fff; }
+      .lay-plate .lockup { color: #fff; }
+      .lay-plate .lockup img { filter: invert(1); }
+      .lay-plate .strip { border-top-color: rgba(255,255,255,.4); }
+      .lay-plate .strip b, .lay-plate .strip span { color: #fff; }
+      .lay-plate .ai { position: absolute; left: 7%; top: 84%; font-size: 22px; background: rgba(24,24,27,.78); }
     </style>
   </head>
   <body>
-    <div id="root" data-composition-id="main" data-start="0" data-duration="3" data-width="1080" data-height="1350" data-no-timeline>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="4" data-width="1080" data-height="1350" data-no-timeline>
       <!-- Page 1: C01 proof split -->
       <section id="pg-1" class="page lay-proof clip" data-start="0" data-duration="1" data-track-index="0" data-track-kind="graphics">
         <div class="lockup"><img src="assets/shared/components/mark.svg" alt="" />Makeborne</div>
@@ -67,6 +77,15 @@
         <div class="num">1</div>
         <div class="cap mb-display">Find the business. Lead finder: what kind of business, and where.</div>
         <div class="shot mb-card"><img src="assets/capture/c05-lead-finder.png" alt="" /></div>
+      </section>
+      <!-- Page 4: C30 Higgsfield version (lay-plate): frame grab of HF15, the price line in HTML -->
+      <section id="pg-4" class="page lay-plate clip" data-start="3" data-duration="1" data-track-index="0" data-track-kind="graphics">
+        <img class="plate" src="assets/gen/hf15-frame.png" alt="" />
+        <div class="shade"></div>
+        <div class="lockup"><img src="assets/shared/components/mark.svg" alt="" />Makeborne</div>
+        <div class="head mb-display">The price on Black Friday is the price every <span class="mb-accent">day.</span></div>
+        <div class="ai mb-chip-dark">AI-generated scene</div>
+        <div class="strip"><b>makeborne.com</b><span>From $20/month + tax · Full refund until you use credits</span></div>
       </section>
     </div>
     <script>

@@ -20,6 +20,13 @@ declare module 'virtual:war-room/production-simple' {
   export const COUNTS: Record<string, number>;
 }
 
+declare module 'virtual:war-room/production-hf' {
+  import type { HfPlan, ProductionBudget, ProductionSheets } from './lib/types';
+  export const BUDGET: ProductionBudget;
+  export const HF: HfPlan;
+  export const SHEETS: ProductionSheets;
+}
+
 declare module 'virtual:war-room/content-index' {
   export interface ContentMeta {
     kind: 'video' | 'creative';

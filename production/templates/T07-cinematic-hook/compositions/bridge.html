@@ -1,0 +1,48 @@
+<!doctype html>
+<!--
+  T07 slot "bridge" (also used for "scene" and "transition"): a 0.5-3 s Higgsfield clip in the middle of a video.
+  Clip in (hard cut or after a real shot), the "AI-generated scene" chip on every frame, an optional line of HTML type over
+  the clip, then a hard cut back to the next real capture in the parent composition. No product UI, outputs, people, faces,
+  logos or readable text in the clip itself: every letter on screen is this HTML.
+  Mount from the parent: data-composition-src="compositions/bridge.html" data-composition-id="bridge" with
+  data-variable-values for plateSrc / lineText / aiLabelText and data-duration = the section length in the plan.
+  Set data-media-start on #br-plate to the section's clipFrom (seconds into the generated file) from data/production.json.
+-->
+<html
+  lang="en"
+  data-composition-variables='[
+    {"id":"plateSrc","type":"string","label":"Generated clip (9:16, no text)","default":"assets/gen/plate.mp4"},
+    {"id":"lineText","type":"string","label":"Line over the clip (leave empty for a pure transition)","default":"Then I pitch them."},
+    {"id":"aiLabelText","type":"string","label":"AI label (never empty)","default":"AI-generated scene"}
+  ]'
+>
+  <head><meta charset="UTF-8" /></head>
+  <body>
+    <template>
+      <link rel="stylesheet" href="assets/shared/brand.css" />
+      <style>
+        #root { position: absolute; inset: 0; overflow: hidden; background: #18181b; }
+        #br-plate { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+        #br-shade { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(24,24,27,.35) 0%, rgba(24,24,27,0) 38%); }
+        #br-line { position: absolute; left: var(--safe-left); width: calc(var(--safe-right) - var(--safe-left)); top: 330px; font-size: calc(60px * var(--type-scale)); color: #fff; text-shadow: 0 2px 24px rgba(0,0,0,.4); }
+        .br-mask { overflow: hidden; padding: 0.05em 0 0.12em; }
+        #br-ai { position: absolute; left: var(--safe-left); top: 1180px; font-size: calc(22px * var(--type-scale)); background: rgba(24,24,27,.78); }
+      </style>
+      <div id="root" class="fmt-9x16" data-composition-id="bridge" data-width="1080" data-height="1920" data-duration="2">
+        <video id="br-plate" class="clip" data-start="0" data-duration="2" data-media-start="0" data-track-index="0" data-var-src="plateSrc" src="assets/gen/plate.mp4" muted playsinline></video>
+        <div id="br-shade" class="clip" data-start="0" data-duration="2" data-track-index="1" data-track-kind="graphics"></div>
+        <div id="br-type" class="clip" data-start="0" data-duration="2" data-track-index="2" data-track-kind="graphics">
+          <div class="br-mask"><div id="br-line" class="mb-display" data-var-text="lineText">Then I pitch them.</div></div>
+        </div>
+        <div id="br-ai" class="clip mb-chip-dark" data-start="0" data-duration="2" data-track-index="3" data-track-kind="graphics" data-var-text="aiLabelText">AI-generated scene</div>
+      </div>
+      <script>
+        // The clip keeps moving (never parked); the line rises once and holds; the label is on from the first frame to the last.
+        const tl = gsap.timeline({ paused: true });
+        tl.fromTo("#br-plate", { scale: 1.03 }, { scale: 1.0, duration: 2, ease: "none" }, 0);
+        tl.fromTo("#br-line", { yPercent: 110 }, { yPercent: 0, duration: 0.5, ease: "power4.out" }, 0.1);
+        window.__timelines["bridge"] = tl;
+      </script>
+    </template>
+  </body>
+</html>

@@ -23,7 +23,7 @@ Render on a local disk with at least 20 GB free. Never render on the network dri
 
 ### T01-endcard
 
-- **Purpose:** True end card: mark, 'Make yours at makeborne.com', price, refund line, keyword CTA
+- **Purpose:** True end card: mark, 'Make yours at makeborne.com', price, refund line, keyword CTA. In a Higgsfield cut the same words sit over the clip in T07 endplate.html
 - **Inputs:** headLead, headAccent, priceLine, refundLine, ctaText
 - **Length:** 2.5 s
 - **Sizes:** 9:16, 4:5, 1:1, 16:9
@@ -33,7 +33,7 @@ Render on a local disk with at least 20 GB free. Never render on the network dri
 
 ### T02-speedrun
 
-- **Purpose:** Frame-0 output on a phone, composer, sped or real-time build with clock chip, 3 labels, one chat edit, publish, loop
+- **Purpose:** Frame-0 output on a phone, composer, sped or real-time build with clock chip, 3 labels, one chat edit, publish, loop. Higgsfield cut: mount the T07 hook before frame 0 and the bridge/endplate slots at the times in the sheet
 - **Inputs:** hookLine, briefText, timerLine, clockText, label1-3, editRequest, liveText, ctaText, phoneScrollSrc, composerSrc, buildSrc (+ data-playback-rate), editSrc, publishSrc, musicSrc, voSrc
 - **Length:** 32 s
 - **Sizes:** 9:16 master, 4:5, 16:9
@@ -53,13 +53,13 @@ Render on a local disk with at least 20 GB free. Never render on the network dri
 
 ### T04-showcase
 
-- **Purpose:** Real outputs with their sentence: 8 s scroll episode, 15 s slides (and photo-mode stills), 6 s triptych
-- **Inputs:** sentence, series, footnote (run log), pageSrc, s1-s5 / f1-f5, brief, line
+- **Purpose:** Real outputs with their sentence: 8 s scroll episode, 15 s slides (and photo-mode stills), 6 s triptych; i2v: an AI camera move over a real output (Higgsfield image-to-video take, letter-checked) with its sentence and run-log footnote
+- **Inputs:** sentence, series, footnote (run log), pageSrc, s1-s5 / f1-f5, brief, line, i2v: clipSrc, sentence, footnote, aiLabelText ('AI camera move on a real Makeborne output')
 - **Length:** 8 / 14.6 / 6 s
 - **Sizes:** 9:16, 4:5, 1:1, 16:9 (triptych)
 - **Registry blocks:** parallax-zoom; pan-stations; swipe-rail; screen-flow-carousel (install with `npx hyperframes add <name>` inside the project)
-- **Used by:** V10, V15, V16, V29, V37, C27, C28
-- **State:** Scaffold (scroll, slides, triptych sub-compositions)
+- **Used by:** V10, V15, V16, V29, V37, C27, C28, V27, V51
+- **State:** Scaffold (scroll, slides, triptych, i2v sub-compositions)
 
 ### T05-founder
 
@@ -83,17 +83,17 @@ Render on a local disk with at least 20 GB free. Never render on the network dri
 
 ### T07-cinematic-hook
 
-- **Purpose:** 2.5 s generated plate + masked HTML hook + AI label, hard cut to the real capture
-- **Inputs:** hookLead, hookAccent, aiLabelText, plateSrc, nextSrc
-- **Length:** 3 s
-- **Sizes:** 9:16, 4:5
+- **Purpose:** Higgsfield clip slots: clip in, 'AI-generated scene' label, HyperFrames type over the clip, hard cut to the real UI. index.html = hook (1-3 s); compositions/bridge.html = scene or transition (0.5-3 s); compositions/match-to-ui.html = the shop becomes its website (1.5 s, the real site grows out of the window); compositions/endplate.html = the end card over a darkened clip (2-4 s)
+- **Inputs:** hook: hookLead, hookAccent, aiLabelText, plateSrc, nextSrc, bridge: plateSrc, lineText, aiLabelText, match: plateSrc, siteSrc (real capture), sentence, aiLabelText, endplate: plateSrc, headLead, headAccent, priceLine, refundLine, ctaText, aiLabelText, every slot: data-media-start on the clip = the section's clip start
+- **Length:** hook 1-3 / bridge 0.5-3 / match 1.5 / endplate 2-4 s
+- **Sizes:** 9:16 (Higgsfield cuts are TikTok, Reels and Shorts), 4:5 recomposed only for Reels feed tests
 - **Registry blocks:** focus-blur-resolve; beat-freeze-cut (install with `npx hyperframes add <name>` inside the project)
-- **Used by:** V02-B, V07-B, V18-B, V40-B, V42-B, V48-B
-- **State:** Scaffold; used only after P-D1
+- **Used by:** V02, V03, V07, V14, V15, V16, V18, V25, V26, V27, V29, V40, V41, V42, V48, V51, V55, V56, V58, V59
+- **State:** Hook slot scaffolded earlier; bridge, match-to-ui and endplate sub-compositions added 26 Oct 2026 (hyperframes check: only the expected missing media and the usual structural warnings)
 
 ### T08-props
 
-- **Purpose:** Honest props with invented names: inbox stack, e-mail thread, notification over a clock, crossed-out fake sale banner, comment card
+- **Purpose:** Honest props with invented names: inbox stack, e-mail thread, notification over a clock, crossed-out fake sale banner, comment card. In a Higgsfield cut (V26, V40) the prop is typed over the T07 hook clip instead of the canvas
 - **Inputs:** m1-m4, sender, badge, line
 - **Length:** 4 s
 - **Sizes:** 9:16, 4:5
@@ -103,13 +103,13 @@ Render on a local disk with at least 20 GB free. Never render on the network dri
 
 ### T09-stills
 
-- **Purpose:** Every static: proof split, type only, carousel step card, end strip; one page per second, exported with snapshot
-- **Inputs:** page markup per creative (COMPOSE text from creatives.json), capture PNGs
+- **Purpose:** Every static: proof split, type only, carousel step card, end strip, plate (Higgsfield frame grab behind the type, AI label on); one page per second, exported with snapshot
+- **Inputs:** page markup per creative (COMPOSE text from creatives.json), capture PNGs, lay-plate: a Higgsfield frame grab (never a product screen) + the creative's headline
 - **Length:** 1 per page s
 - **Sizes:** 1080x1350, 1080x1080, 1200x1200, 1080x1920, 1600x900, 1920x1080, 1200x630, 1280x720, 1270x760
 - **Registry blocks:** grain-overlay (2%) (install with `npx hyperframes add <name>` inside the project)
-- **Used by:** C01-C48 (except C07, C20, C38, C45), V16 photo-mode pages, video covers
-- **State:** Scaffold (3 sample pages)
+- **Used by:** C01-C48 (except C07, C20, C38, C45), V16 photo-mode pages, video covers, C28-HF and C30-HF (lay-plate)
+- **State:** Scaffold (4 sample pages, page 4 = lay-plate)
 
 ### T10-ugc-pack
 
@@ -139,3 +139,4 @@ Render on a local disk with at least 20 GB free. Never render on the network dri
 - Fonts: Inter and Newsreader Italic come from `assets/fonts/` via `assets/shared/brand.css`.
 - Variables live on the root `<html>` so the Studio panel and `render --batch` can drive them; sub-compositions take `data-variable-values` on their host.
 - Speed honesty: `data-playback-rate` on the build video must equal the factor in the clock chip.
+- Higgsfield clips: mount the T07 slot the sheet names (`perVideo[].template.hfSlots`), set `data-media-start` on the clip to the section's clip start, keep the AI label chip on for every generated frame, and type every word in HTML. Image-to-video takes go in T04 `compositions/i2v.html` and are kept only if every letter matches the real output.

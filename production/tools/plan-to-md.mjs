@@ -33,12 +33,14 @@ for (const w of S.ways) {
   ol(w.steps);
 }
 p(S.everythingElse);
-p(`**Four rules:** ${S.rules.join(" ")}`);
+p(`**The rules:** ${S.rules.join(" ")}`);
+if (S.budget) p(`**Money:** ${S.budget} Details: section 12.`);
+if (S.mix) p(`**The mix:** ${S.mix} Every shot and its prompt: section 3b.`);
 h(3, "This week's production (week 1 is the launch-week plan in section 13)");
 for (const wk of P.simple.weeks) {
   L.push(`<details><summary><strong>Week ${wk.week}</strong> (${wk.dates})</summary>`, "");
   for (const it of wk.items) {
-    const links = it.ids.length ? " " + it.ids.map((id) => `[${id}](#${id.toLowerCase()})`).join(" ") : "";
+    const links = (it.ids.length ? " " + it.ids.map((id) => `[${id}](#${id.toLowerCase()})`).join(" ") : "") + (it.hf?.length ? " · shots " + it.hf.map((id) => `[${id}](#${id.toLowerCase()})`).join(" ") : "");
     L.push(`- [ ] ${it.text}${links}`);
   }
   L.push("", "</details>", "");
@@ -52,8 +54,8 @@ ul([
   "**Real screen captures are the backbone.** Conversion content for AI tools shows the visible UI, the finished artifact and a next step " + cite("lightreel") + "; text-plus-product statics lead Meta hit rates " + cite("motion-2026") + "; fully AI-made versions of the same ads did worse on sales impact than human-made ones " + cite("syracuse-ipsos") + "; and the AI tells (uncanny visuals, fast montages that hide flaws) are what get ads pulled " + cite("nng-ai-ad") + ". No controlled public study of screen recording versus AI b-roll for SaaS exists (searched 26 Oct 2026; vendor opinions only " + cite("arcade-demo") + ").",
   "**HyperFrames does the whole edit.** Every overlay letter is HTML, so type is exact; speed chips, captions, format variants and stills come from the same projects; it renders locally for $0 and the v9/v10/v12-v14 films prove the pipeline.",
   "**The founder is the trust engine.** Day-N videos, the voice on every speedrun, no synthetic voice.",
-  "**Higgsfield is a narrow, optional test,** not part of the base stack: a 2.5 s labelled opening shot with no text, no people and no product, tested as a B-variant against a real-UI A-variant. Not for product shots, outputs, avatars, UGC ads or testimonials.",
-  "**The mix:** about 90% of posted seconds are real (captures, founder, real B-roll), at most 10% generated, and 0 generated product images. Of the 48 creatives, 36 are real screenshots composed in HyperFrames, 8 are typeset HyperFrames stills, 4 are built inside Makeborne itself, and none uses AI-generated art.",
+  "**Higgsfield is a planned part of production** (its own budget, not the $1,000): the cinematic seconds around the real product (scroll-stopping hooks, mood scenes, transitions, seasonal beats and camera moves over real outputs of live features), always labelled. Not for product shots, fake outputs, people, avatars, UGC ads or testimonials.",
+  `**The mix:** ${P.higgsfield.mix.target} Measured on the plan: ${P.higgsfield.mix.measured.realPct}% real, ${P.higgsfield.mix.measured.higgsfieldPct}% Higgsfield, ${P.higgsfield.mix.measured.hyperframesOnlyPct}% HyperFrames-only cards across the ${P.higgsfield.mix.measured.higgsfieldVideos} Higgsfield videos. ${P.higgsfield.mix.measured.wholePlanNote} 0 generated product images. Of the 48 creatives, 36 are real screenshots composed in HyperFrames, 8 are typeset HyperFrames stills, 4 are built inside Makeborne itself; C28 and C30 add a Higgsfield frame grab behind the type in their Higgsfield version.`,
 ]);
 h(3, "Tools");
 table(["Tool", "Role", "Use for", "Plan and cost", "Rights notes"], P.tools.map((t) => [t.name, t.role, t.useFor.join("; "), `${t.plan} ($${t.costUSDMonth}/month)`, t.rights]));
@@ -63,7 +65,7 @@ ul([`**Products:** ${R.products.join("; ")}.`, `**Pricing:** ${R.pricing}`, `**C
 p("Sources: " + R.sources.map((id) => `${src[id].url} (${src[id].date}, ${src[id].label})`).join("; ") + ".");
 h(3, "Alternatives, only where clearly better");
 ul([
-  "**Veo, Kling, Seedance directly:** no. Higgsfield already exposes them; a second subscription adds cost and a second rights regime for five test shots.",
+  "**Veo, Kling, Seedance directly:** no. Higgsfield already exposes them; a second subscription adds cost and a second rights regime, and Higgsfield's camera presets and Cinema Studio are the reason to use it.",
   "**Runway:** no job in this plan needs it.",
   "**CapCut for the final edit and captions:** no. HyperFrames covers both; CapCut's reported terms grant a broad licence to uploaded content [U] " + cite("capcut") + ", which is wrong for unreleased product and creator footage. TikTok's own editor covers reply bubbles and Stitch.",
   "**ElevenLabs for voice:** not now. The founder's voice is the brand. If a faceless series is ever approved, Starter is about $6/month with a commercial licence; the free tier is non-commercial " + cite("elevenlabs") + ".",
@@ -89,16 +91,53 @@ p("Each template is a HyperFrames project skeleton that follows the composition 
 table(["Template", "Purpose", "Inputs (variables)", "Length", "Sizes", "Registry blocks"], P.templates.map((t) => [t.id, t.purpose, t.inputs.join(", "), `${t.lengthSec} s`, t.sizes.join(", "), t.registry.join("; ")]));
 p("**Shared components** (`production/shared/components/`): flat mark, sentence chip, clock chip (`Real time · m:ss` / `Sped up ×N`), keyword CTA, AI label (`AI-generated scene`), concept line (`Projects shown are AI-generated concepts.`), ad disclosure (`Ad · Paid partnership with Makeborne`). **Tools** (`production/tools/`): `new-project.mjs`, `make-formats.mjs` (the v9 pattern: edit the master, regenerate 4:5, 1:1 and 16:9; recompose, never crop), `captions-to-html.mjs` (transcript to the captions sub-composition).");
 
+// 3a. Higgsfield plan
+const HF = P.higgsfield;
+h(2, "3a. Higgsfield: the plan");
+p(`**Role.** ${HF.role}`);
+table(["Job", "How", "Shots"], HF.jobs.map((j) => [j.job, j.how, j.shots.map((id) => `[${id}](#${id.toLowerCase()})`).join(" ")]));
+p("**Best model per job:**");
+table(["Job", "Model", "Why"], HF.modelGuide.map((m) => [m.job, m.model, m.why]));
+p(`**Camera presets.** ${HF.presets}`);
+p(`**Every shot.** ${HF.everyShot}`);
+p("**Hard rules (never broken):**");
+ul(HF.hardRules);
+h(3, "The mix, and why");
+p(`**Target:** ${HF.mix.target}`);
+p(`**Measured on this plan:** ${HF.mix.measured.higgsfieldVideos} Higgsfield videos, ${HF.mix.measured.seconds} s: ${HF.mix.measured.realSec} s real (${HF.mix.measured.realPct}%), ${HF.mix.measured.higgsfieldSec} s Higgsfield (${HF.mix.measured.higgsfieldPct}%), ${HF.mix.measured.hyperframesOnlySec} s HyperFrames-only cards (${HF.mix.measured.hyperframesOnlyPct}%). ${HF.mix.measured.wholePlanNote}`);
+table(["Video", "Length", "Real s", "Higgsfield s", "HyperFrames-only s", "Higgsfield %", "When"], HF.mix.rows.map((r) => [`[${r.id}](#${r.id.toLowerCase()})`, r.lengthSec, r.realSec, r.higgsfieldSec, r.hyperframesOnlySec, `${r.higgsfieldPct}%`, r.gated ? "only once its feature is live" : "now"]));
+ul(HF.mix.why);
+h(3, "A/B: real vs Higgsfield");
+p(`**Metric:** ${HF.abTests.metric} **Weekly shift:** ${HF.abTests.weeklyShift} ${HF.abTests.caveat}`);
+table(["Pair", "Item", "Surface", "Real", "Higgsfield", "Note"], HF.abTests.pairs.map((a) => [a.id, `[${a.video}](#${a.video.toLowerCase()})`, a.surface, `${a.real.date} /go/${a.real.go}${a.real.also ? ` + ${a.real.also.date} /go/${a.real.also.go}` : ""}`, `${a.higgsfield.date} /go/${a.higgsfield.go}${a.higgsfield.also ? ` + ${a.higgsfield.also.date} /go/${a.higgsfield.also.go}` : ""}`, a.note]));
+
+// 3b. every shot
+h(2, "3b. Higgsfield shots: every prompt");
+p(`${HF.totals.shots} shots (${HF.totals.conditionalShots} only once their feature is live), ${HF.totals.plannedCredits90Days} credits planned over the 90 days (+${HF.totals.conditionalCredits90Days} conditional). Seed guidance for every shot: ${HF.shots[0].seed}`);
+table(["Shot", "For", "Role", "Make on", "Model", "Preset", "Length", "Takes", "Credits"], HF.shots.map((x) => [`[${x.id}](#${x.id.toLowerCase()})`, x.for.join(", "), x.role, x.generateOn, `${x.model} (${x.mode})`, x.cameraPreset, `${x.durationSec} s`, x.takes, `${x.credits}${x.conditional ? " (if live)" : ""}`]));
+for (const x of HF.shots) {
+  h(4, x.id);
+  L.push(`**${x.title}** · ${x.job} · make on ${x.generateOn}${x.gate ? ` · **only if ${x.gate}**` : ""}`, "");
+  L.push(`- **Model / mode / preset:** ${x.model} · ${x.mode} · ${x.cameraPreset} · ${x.durationSec} s · ${x.aspect} · ${x.resolution} · ${x.takes} takes × ${x.creditsPerTake} = **${x.credits} credits**`);
+  if (x.referenceImage) L.push(`- **Reference image (start frame):** ${x.referenceImage}`);
+  L.push(`- **Prompt:** "${x.prompt}"`);
+  L.push(`- **Negative:** ${x.negative}`);
+  L.push(`- **Keep rule:** ${x.keepRule}`);
+  if (x.fallback) L.push(`- **Fallback:** ${x.fallback}`);
+  L.push(`- **Label:** ${x.label}`);
+  L.push(`- **File:** \`${x.file}\``, "");
+}
+
 // 4. per-video
 h(2, "4. Per-video production sheet (all 60)");
-table(["ID", "P", "First post", "Pipeline", "Template", "Len", "B-variant", "Min (first / repeat)", "Ready"], P.perVideo.map((v) => [`[${v.id}](#${v.id.toLowerCase()})`, v.priority, v.firstPost, v.pipeline, v.template.id, `${v.lengthSec}s`, v.higgsfield ? v.higgsfield.variant : "-", `${v.estMinutes.total} / ${v.estMinutes.repeatTotal}`, v.readiness]));
+table(["ID", "P", "First post", "Make with", "Pipeline", "Template", "Len", "Higgsfield (shots, s, credits)", "Min (first / repeat)", "Ready"], P.perVideo.map((v) => [`[${v.id}](#${v.id.toLowerCase()})`, v.priority, v.firstPost, v.makeWith, v.pipeline, v.template.id, `${v.lengthSec}s`, v.higgsfield ? `${v.higgsfield.shots.join(" ")} · ${v.higgsfield.seconds} s · ${v.higgsfield.credits} cr` : "-", `${v.estMinutes.total} / ${v.estMinutes.repeatTotal}`, v.readiness]));
 h(3, "Details");
 for (const v of P.perVideo) {
   const raw = vById[v.id];
   const p0 = v.priority === "P0";
   h(4, v.id);
   L.push(`**${v.title}** · ${v.priority} · week ${v.week} · ${v.lengthSec} s · first post ${v.firstPost} · **readiness: ${v.readiness}**`, "");
-  L.push(`- **Pipeline / template:** ${v.pipeline} / ${v.template.id}. **Tools:** ${v.toolMix.join(", ")}.`);
+  L.push(`- **Make with:** ${v.makeWith}. **Pipeline / template:** ${v.pipeline} / ${v.template.id}. **Tools:** ${v.toolMix.join(", ")}.`);
   L.push(`- **Capture in the app:**`);
   v.capture.forEach((c) => L.push(`  - ${c}`));
   const vars = Object.entries(v.template.variables || {});
@@ -111,12 +150,19 @@ for (const v of P.perVideo) {
   L.push(`- **Captions:** ${v.captions}`);
   L.push(`- **Disclosure:** ${v.disclosure.join(" ")}`);
   L.push(`- **Render:** ${v.renderSizes.join("; ")}.`);
-  L.push(`- **Time and cost:** capture ${v.estMinutes.capture} min, edit ${v.estMinutes.edit} min, about ${v.estMinutes.total} min the first time (${v.estMinutes.repeatTotal} min once routine). Tool cost $0${v.higgsfield ? `; B-variant about $${v.higgsfield.estCostUSD}` : ""}. ${v.estToolCostUSD.note}.`);
+  L.push(`- **Time and cost:** capture ${v.estMinutes.capture} min, edit ${v.estMinutes.edit} min, about ${v.estMinutes.total} min the first time (${v.estMinutes.repeatTotal} min once routine). Tool cost ${v.higgsfield ? `${v.estToolCostUSD.credits} Higgsfield credits (about $${v.estToolCostUSD.usd} at Plus, production budget)` : "$0"}. ${v.estToolCostUSD.note}.`);
+  L.push(`- **Mix:** ${v.mix.realSec} s real, ${v.mix.higgsfieldSec} s Higgsfield, ${v.mix.hyperframesOnlySec} s HyperFrames-only.`);
   if (v.higgsfield) {
     const x = v.higgsfield;
-    L.push(`- **Higgsfield (${x.variant}, only after P-D1):** model ${x.model}; camera ${x.cameraPreset}; ${x.duration}; ${x.aspect}; about ${x.estCredits} credits.`);
-    L.push(`  - Prompt: "${x.prompt}"`);
-    L.push(`  - Negative: ${x.negative}. Use: ${x.use} Label: ${x.label}.`);
+    L.push(`- **Higgsfield version (${x.version}):** ${x.postedAs}. Posts: ${x.posts.join("; ") || "when the feature is live"}. Readiness: ${x.readiness}.`);
+    L.push(`  - Sections: ${x.sections.map((sec) => `${sec.at} ${sec.slot} from [${sec.shot}](#${sec.shot.toLowerCase()}) (clip ${sec.clip})${sec.line ? ` "${sec.line}"` : ""} → \`${sec.composition}\``).join("; ")}. ${x.sectionsNote}`);
+    L.push(`  - HyperFrames slot variables: ${v.template.hfSlots.map((sl) => `${sl.slot} ${sl.at}: ${Object.entries(sl.variables).map(([k, val]) => `\`${k}\` = ${val}`).join(", ")}`).join(" | ")}`);
+    for (const pr of x.prompts) {
+      L.push(`  - **${pr.shot}** (${pr.model}, ${pr.mode}, ${pr.cameraPreset}, ${pr.durationSec} s, ${pr.aspect}, ${pr.takes} takes, ${pr.credits} credits)${pr.referenceImage ? ` · start frame: ${pr.referenceImage}` : ""}`);
+      L.push(`    - Prompt: "${pr.prompt}"`);
+      L.push(`    - Negative and keep rule: see [${pr.shot}](#${pr.shot.toLowerCase()}).`);
+    }
+    L.push(`  - Label: ${x.label} Credits: ${x.credits} (${x.creditsNote})`);
   }
   if (p0) L.push(`- **P0 checks:** ${raw.checks.join(" · ")}`);
   L.push("");
@@ -124,14 +170,16 @@ for (const v of P.perVideo) {
 
 // 5. creatives
 h(2, "5. Image production sheet (all 48)");
-p("**What each still is made of.** Real product screenshot composited in a HyperFrames still: 36. HyperFrames-rendered typographic still: 8. Built inside Makeborne (the export is the creative): 4. AI-generated art in the v14 reference style: **0**. The v14 sheet stays the internal quality bar for the images beat; posting concept art as if Makeborne made it would show a coming feature as live. After the images beat, image-led creatives use real outputs of the shipped product, which carry the product's own machine-readable marking.");
-table(["ID", "Type", "Made of", "Template / layout", "Sizes", "First post", "Min", "Ready"], P.perCreative.map((c) => [`[${c.id}](#${c.id.toLowerCase()})`, c.type, c.imageKind, `${c.template.id} · ${c.template.layout}`, c.sizes.join("; "), c.firstPost, c.estMinutes, c.readiness]));
+p("**What each still is made of.** Real product screenshot composited in a HyperFrames still: 36. HyperFrames-rendered typographic still: 8. Built inside Makeborne (the export is the creative): 4. AI-generated art in the v14 reference style: **0**. Higgsfield frame grabs behind the type (never a product screen): C28 and C30, in their Higgsfield versions only. The v14 sheet stays the internal quality bar for the images beat; posting concept art as if Makeborne made it would show a coming feature as live. After the images beat, image-led creatives use real outputs of the shipped product, which carry the product's own machine-readable marking.");
+table(["ID", "Type", "Make with", "Made of", "Template / layout", "Sizes", "First post", "Min", "Ready"], P.perCreative.map((c) => [`[${c.id}](#${c.id.toLowerCase()})`, c.type, c.makeWith, c.imageKind, `${c.template.id} · ${c.template.layout}`, c.sizes.join("; "), c.firstPost, c.estMinutes, c.readiness]));
 h(3, "Capture lists");
 for (const c of P.perCreative) {
   h(4, c.id);
   L.push(`**${c.concept}** · ${c.type} · ${c.platform} · ${c.sizes.join("; ")}`, "");
   L.push(`- **Capture:** ${c.capture}`);
   L.push(`- **Compose:** ${c.compose} Headline: "${cById[c.id].headline}"`);
+  L.push(`- **Template variables:** ${Object.entries(c.template.variables || {}).map(([k, val]) => `\`${k}\` = ${val}`).join("; ")}`);
+  if (c.higgsfield) L.push(`- **Higgsfield version (${c.higgsfield.version}):** frame grab of [${c.higgsfield.frameFrom}](#${c.higgsfield.frameFrom.toLowerCase()}) (${c.higgsfield.frameAt}), layout ${c.higgsfield.layout}. ${c.higgsfield.creditsNote}. Posts: ${c.higgsfield.posts.join("; ")}. Label: ${c.higgsfield.label}. Readiness: ${c.higgsfield.readiness}.`);
   L.push(`- **Disclosure:** ${c.disclosure}. **Readiness:** ${c.readiness}. About ${c.estMinutes} min.`, "");
 }
 
@@ -173,11 +221,25 @@ p("**A fake 'customer' testimonial by an AI avatar is not allowed, in any form, 
 p("**Music rights:** brand TikTok uses the Commercial Music Library only; Instagram/Facebook and YouTube use their own libraries on their own platforms; Mixkit 'Opalescent' only after the licence is re-read, never on TikTok ads. Log every track ID in the rights log.");
 p("**Generated material:** keep the prompt, model, plan, date and credits for every generated shot; download only paid-plan (unwatermarked) files; never upload unreleased UI, client material, customer data or creator footage to a generator whose terms allow training.");
 
-// 12. costs
-h(2, "12. Costs");
+// 12. production budget and costs
+h(2, "12. Production budget and costs");
+const B = P.productionBudget;
+p(`**${B.title}.** ${B.rule} ${B.owner}`);
+ul([
+  `**Recommended tier:** ${B.tier.recommended}, $${B.tier.priceUSD}/month for ${B.tier.creditsPerMonth.toLocaleString("en-US")} credits. ${B.tier.priceSource}`,
+  `**Conflicting figures:** ${B.tier.conflicts}`,
+  `**Why this tier:** ${B.tier.why}`,
+  `**Not this:** ${B.tier.notThis}`,
+  `**Month 1 (${B.month1.from} to ${B.month1.to}):** ${B.month1.items.map((i) => `${i.item} $${i.usd}`).join("; ")}. Total **$${B.month1.totalUSD}** (cap $${B.month1.capUSD}: ${B.month1.capNote})`,
+  `**Credits, month 1:** ${B.credits.month1.available} available, ${B.credits.month1.planned} planned, ${B.credits.month1.conditional} only if beat features go live, ${B.credits.month1.reserve} reserve (${B.credits.month1.reserveFor}). ${B.credits.perShotRule}`,
+]);
+table(["Week", "Dates", "Month", "Make on", "Shots", "Planned credits", "If live"], B.credits.byWeek.filter((w) => w.shots.length).map((w) => [w.week, w.dates, w.month, w.generateOn ?? "-", w.shots.map((id) => `[${id}](#${id.toLowerCase()})`).join(" "), w.plannedCredits, w.conditionalCredits]));
+table(["Model and setting", "Credits a take", "Source"], B.credits.creditCosts.map((c) => [c.model, c.credits, c.source]));
+p(`**Month 2 and after.** Decide ${B.month2Rule.decideOn}. ${B.month2Rule.evidence} **Keep Plus:** ${B.month2Rule.keepPlus} **Downgrade:** ${B.month2Rule.downgrade} **Cancel:** ${B.month2Rule.cancel} **Month 3:** ${B.month2Rule.month3}`);
+p(`**90 days:** $${B.ninetyDays.plannedUSD}; cap $${B.ninetyDays.capUSD}. ${B.ninetyDays.note} **Logging:** ${B.logging}`);
 p(P.costs.note);
 table(["Stack", "Monthly", "What", "Who pays"], P.costs.stacks.map((s) => [s.name, `$${s.monthlyUSD}`, s.items.join("; "), s.pays]));
-p(`**90-day totals:** minimal $${P.costs.ninetyDayTotalUSD.minimal}; recommended $${P.costs.ninetyDayTotalUSD.recommended}; max about $${P.costs.ninetyDayTotalUSD.max}.`);
+p(`**90-day production totals:** fallback $${P.costs.ninetyDayTotalUSD.fallback}; recommended $${P.costs.ninetyDayTotalUSD.recommended}; cap $${P.costs.ninetyDayTotalUSD.max}. None of it is in the $1,000.`);
 table(["Unit", "Tool cost (USD)", "Other"], P.costs.perUnit.map((u) => [u.what, u.toolUSD, u.other]));
 
 // 13. launch week
@@ -205,6 +267,7 @@ const T = ["# Production templates", "", "HyperFrames scaffolds for the launch p
 for (const t of P.templates) {
   T.push(`### ${t.id}`, "", `- **Purpose:** ${t.purpose}`, `- **Inputs:** ${t.inputs.join(", ")}`, `- **Length:** ${t.lengthSec} s`, `- **Sizes:** ${t.sizes.join(", ")}`, `- **Registry blocks:** ${t.registry.join("; ")} (install with \`npx hyperframes add <name>\` inside the project)`, `- **Used by:** ${t.usedBy.join(", ")}`, `- **State:** ${t.status}`, "");
 }
-T.push("## Contract reminders", "", "- One paused timeline per composition, registered on `window.__timelines[\"<composition id>\"]`.", "- Time a `<video>` or its wrapper, never both; captures are `muted` unless their own sound is wanted (`data-has-audio=\"true\"`).", "- Animate transforms and opacity only; never `top`/`left`/`width`/`height`, never `visibility` on a `.clip`.", "- Fonts: Inter and Newsreader Italic come from `assets/fonts/` via `assets/shared/brand.css`.", "- Variables live on the root `<html>` so the Studio panel and `render --batch` can drive them; sub-compositions take `data-variable-values` on their host.", "- Speed honesty: `data-playback-rate` on the build video must equal the factor in the clock chip.", "");
+T.push("## Contract reminders", "", "- One paused timeline per composition, registered on `window.__timelines[\"<composition id>\"]`.", "- Time a `<video>` or its wrapper, never both; captures are `muted` unless their own sound is wanted (`data-has-audio=\"true\"`).", "- Animate transforms and opacity only; never `top`/`left`/`width`/`height`, never `visibility` on a `.clip`.", "- Fonts: Inter and Newsreader Italic come from `assets/fonts/` via `assets/shared/brand.css`.", "- Variables live on the root `<html>` so the Studio panel and `render --batch` can drive them; sub-compositions take `data-variable-values` on their host.", "- Speed honesty: `data-playback-rate` on the build video must equal the factor in the clock chip.",
+  "- Higgsfield clips: mount the T07 slot the sheet names (`perVideo[].template.hfSlots`), set `data-media-start` on the clip to the section's clip start, keep the AI label chip on for every generated frame, and type every word in HTML. Image-to-video takes go in T04 `compositions/i2v.html` and are kept only if every letter matches the real output.", "");
 fs.writeFileSync(path.join(repo, "production/templates/README.md"), T.join("\n"));
 console.log("md", L.join("\n").length, "bytes");

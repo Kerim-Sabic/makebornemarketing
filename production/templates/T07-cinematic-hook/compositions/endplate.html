@@ -1,0 +1,69 @@
+<!doctype html>
+<!--
+  T07 slot "endplate": the end card (T01 wording) typed over a darkened, softened Higgsfield clip. 2-4 s.
+  The clip is mood only (the shop with its lights on, the empty pitch room, the bookshelf); the words, price, refund line
+  and keyword CTA are HTML. The "AI-generated scene" chip is held for the whole slot. Use the flat T01 end card instead when
+  the video has no Higgsfield clip, or on LinkedIn and X where the plan keeps the cut real-only.
+  Mount with data-composition-src="compositions/endplate.html" data-composition-id="endplate".
+  Set data-media-start on #ep-plate to the section's clipFrom from data/production.json.
+-->
+<html
+  lang="en"
+  data-composition-variables='[
+    {"id":"plateSrc","type":"string","label":"Generated clip (9:16, no text)","default":"assets/gen/plate.mp4"},
+    {"id":"headLead","type":"string","label":"Headline lead","default":"Make yours at"},
+    {"id":"headAccent","type":"string","label":"Accent word","default":"makeborne.com"},
+    {"id":"priceLine","type":"string","label":"Price line","default":"From $20/mo + tax"},
+    {"id":"refundLine","type":"string","label":"Refund line","default":"Full refund until you use credits"},
+    {"id":"ctaText","type":"string","label":"Keyword CTA (per platform)","default":"Comment SITE"},
+    {"id":"aiLabelText","type":"string","label":"AI label (never empty)","default":"AI-generated scene"}
+  ]'
+>
+  <head><meta charset="UTF-8" /></head>
+  <body>
+    <template>
+      <link rel="stylesheet" href="assets/shared/brand.css" />
+      <style>
+        #root { position: absolute; inset: 0; overflow: hidden; background: #18181b; }
+        #ep-plate { position: absolute; inset: -24px; width: calc(100% + 48px); height: calc(100% + 48px); object-fit: cover; filter: blur(6px); }
+        #ep-shade { position: absolute; inset: 0; background: rgba(24,24,27,.52); }
+        #ep-stack {
+          position: absolute; left: var(--safe-left); right: calc(100% - var(--safe-right));
+          top: var(--safe-top); bottom: calc(100% - var(--safe-bottom));
+          display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 30px; text-align: center;
+        }
+        #ep-lockup { display: flex; align-items: center; gap: 16px; font-family: var(--mb-sans); font-weight: 640; font-size: calc(34px * var(--type-scale)); color: #fff; }
+        #ep-lockup img { height: calc(56px * var(--type-scale)); width: auto; filter: invert(1); }
+        .ep-mask { overflow: hidden; padding: 0.06em 0.04em 0.12em; }
+        #ep-head { font-size: calc(78px * var(--type-scale)); color: #fff; }
+        #ep-price, #ep-refund { font-size: calc(34px * var(--type-scale)); color: rgba(255,255,255,.86); }
+        #ep-ai { position: absolute; left: var(--safe-left); top: 1180px; font-size: calc(22px * var(--type-scale)); background: rgba(24,24,27,.78); }
+      </style>
+      <div id="root" class="fmt-9x16" data-composition-id="endplate" data-width="1080" data-height="1920" data-duration="3">
+        <video id="ep-plate" class="clip" data-start="0" data-duration="3" data-media-start="0" data-track-index="0" data-var-src="plateSrc" src="assets/gen/plate.mp4" muted playsinline></video>
+        <div id="ep-shade" class="clip" data-start="0" data-duration="3" data-track-index="1" data-track-kind="graphics"></div>
+        <section id="ep-card" class="clip" data-start="0" data-duration="3" data-track-index="2" data-track-kind="graphics">
+          <div id="ep-stack">
+            <div id="ep-lockup"><img src="assets/shared/components/mark.svg" alt="" /><span>Makeborne</span></div>
+            <div class="ep-mask"><div id="ep-head" class="mb-display"><span data-var-text="headLead">Make yours at</span> <span class="mb-accent" data-var-text="headAccent">makeborne.com</span></div></div>
+            <div class="ep-mask"><div id="ep-price" class="mb-footnote" data-var-text="priceLine">From $20/mo + tax</div></div>
+            <div class="ep-mask"><div id="ep-refund" class="mb-footnote" data-var-text="refundLine">Full refund until you use credits</div></div>
+            <div id="ep-cta" class="mb-pill" style="font-size: calc(36px * var(--type-scale))"><span data-var-text="ctaText">Comment SITE</span></div>
+          </div>
+        </section>
+        <div id="ep-ai" class="clip mb-chip-dark" data-start="0" data-duration="3" data-track-index="3" data-track-kind="graphics" data-var-text="aiLabelText">AI-generated scene</div>
+      </div>
+      <script>
+        // Same masked rise as T01; the clip drifts slowly underneath so the frame never parks.
+        const tl = gsap.timeline({ paused: true });
+        tl.fromTo("#ep-plate", { scale: 1.0 }, { scale: 1.04, duration: 3, ease: "none" }, 0);
+        tl.fromTo("#ep-lockup", { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: "power4.out" }, 0.0);
+        tl.fromTo("#ep-head", { yPercent: 110 }, { yPercent: 0, duration: 0.6, ease: "power4.out" }, 0.08);
+        tl.fromTo("#ep-price", { yPercent: 110 }, { yPercent: 0, duration: 0.5, ease: "power4.out" }, 0.3);
+        tl.fromTo("#ep-refund", { yPercent: 110 }, { yPercent: 0, duration: 0.5, ease: "power4.out" }, 0.38);
+        tl.fromTo("#ep-cta", { y: 24, opacity: 0, scale: 0.96 }, { y: 0, opacity: 1, scale: 1, duration: 0.45, ease: "power3.out" }, 0.55);
+        window.__timelines["endplate"] = tl;
+      </script>
+    </template>
+  </body>
+</html>

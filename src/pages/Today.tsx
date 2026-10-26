@@ -5,6 +5,7 @@ import { LAST_DAY, hasDay, loadDay } from '../lib/calendarIndex';
 import { useActuals, useChecks } from '../lib/stores';
 import { weekPace } from '../lib/pace';
 import { CopyField, Steps, TickItem } from '../components/Checklist';
+import { HfShotBody } from '../components/HfShot';
 import { href, type RouteProps } from '../routes';
 
 /** Ticks are keyed by the action's text, so reordering or inserting actions in calendar.json keeps them on the right action. */
@@ -196,20 +197,39 @@ function buildGroups(day: CalendarDay, x: TodayExtra, date: string): Record<Grou
       time: m.time,
       label: m.text,
       text: cap(m.text),
-      how: m.ids.length ? (
+      tag: m.shots.length ? `Higgsfield · ~${Math.round(m.shots.reduce((a, s) => a + s.credits, 0))} credits` : undefined,
+      how: m.ids.length || m.shots.length ? (
         <div className="how">
-          <p className="small">Open the sheet for each piece: the exact words on screen, the template and the time it takes.</p>
-          <ul className="linklist">
-            {m.ids.map((id) => (
-              <li key={id}>
-                <a href={contentHref(id)}>
-                  <span className="item-id">{id}</span> script, caption and prompts
-                </a>
-              </li>
-            ))}
-          </ul>
+          {m.shots.length > 0 && (
+            <>
+              <p className="small">
+                Higgsfield (production budget, not the $1,000). Copy each prompt and negative exactly; 9:16, 1080p, the camera preset on the card. Upload only what the card says: never unfinished features, client work or customer data. The 'AI-generated scene' label goes on in HyperFrames.
+              </p>
+              {m.shots.map((s) => (
+                <div key={s.id} className="hf-shot-today">
+                  <p className="small">
+                    <b>{s.id}</b> {s.title}
+                    {s.gate ? ` (only if ${s.gate})` : ''}
+                  </p>
+                  <HfShotBody s={s} />
+                </div>
+              ))}
+            </>
+          )}
+          {m.ids.length > 0 && <p className="small">Open the sheet for each piece: the exact words on screen, the template and the time it takes.</p>}
+          {m.ids.length > 0 && (
+            <ul className="linklist">
+              {m.ids.map((id) => (
+                <li key={id}>
+                  <a href={contentHref(id)}>
+                    <span className="item-id">{id}</span> script, caption and prompts
+                  </a>
+                </li>
+              ))}
+            </ul>
+          )}
           <p className="small">
-            How we make videos (one screen): <a href={href('library', 'production')}>Library › Production</a>.
+            How we make videos, the production budget and every Higgsfield shot: <a href={href('library', 'production')}>Library › Production</a>.
           </p>
         </div>
       ) : undefined,

@@ -69,6 +69,13 @@ function cardLine(c) {
   return { id: c.id, title: c.title, platform: c.platform, money, inThe1000: c.inThe1000, trigger: c.statusTrigger, mustEndBy: c.mustEndBy };
 }
 
+/** The copyable part of one Higgsfield shot (data/production.json higgsfield.shots) for Today's "How" panel. */
+function shotCard(production, id) {
+  const s = production.higgsfield?.shots.find((x) => x.id === id);
+  if (!s) throw new Error(`production.json simple.weeks names Higgsfield shot ${id}, which is not in higgsfield.shots`);
+  return { id: s.id, title: s.title, for: s.for, model: s.model, mode: s.mode, cameraPreset: s.cameraPreset, durationSec: s.durationSec, aspect: s.aspect, resolution: s.resolution, takes: s.takes, credits: s.credits, prompt: s.prompt, negative: s.negative, referenceImage: s.referenceImage, keepRule: s.keepRule, gate: s.gate };
+}
+
 export function todayExtras(files, date) {
   const { calendar, instagram, production, ads, kpis, creatives, videos } = files;
   const week = Math.min(13, Math.max(1, weekOf(date)));
@@ -84,7 +91,7 @@ export function todayExtras(files, date) {
   const make = (pw?.items ?? [])
     // "Any" items (beat pieces, made only if the feature is live) go on the Monday of their week.
     .filter((i) => i.day === weekday || (i.day === 'Any' && weekday === 'Mon'))
-    .map((i) => ({ text: i.text.replace(new RegExp(`^${weekday}(\\s+\\d{1,2}:\\d{2})?:\\s*`), ''), time: hm(i.text.slice(0, 12)), ids: i.ids, sheets: i.links.map((l) => l.sheet) }));
+    .map((i) => ({ text: i.text.replace(new RegExp(`^${weekday}(\\s+\\d{1,2}:\\d{2})?:\\s*`), ''), time: hm(i.text.slice(0, 12)), ids: i.ids, sheets: i.links.map((l) => l.sheet), shots: (i.hf ?? []).map((id) => shotCard(production, id)) }));
 
   // Ad cards that are due: a day of their run window, the day before (get it ready) or a weekly check.
   const dueAds = [];

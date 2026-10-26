@@ -1,0 +1,51 @@
+<!doctype html>
+<!--
+  T07 slot "match": the shop becomes its website. A Higgsfield clip of the business (shop window at dawn) pushes in; the
+  window's rectangle opens into a phone that plays the REAL capture of the published site (390-wide phone scroll from the
+  run). The generated pixels and the real capture never mix inside one frame region: the plate is outside the phone, the
+  real site is inside it. The "AI-generated scene" chip stays on while any generated pixel is visible (0 - 1.15 s).
+  1.5 s by default. Mount with data-composition-src="compositions/match-to-ui.html" data-composition-id="match".
+  Set data-media-start on #mt-plate to the section's clipFrom from data/production.json.
+-->
+<html
+  lang="en"
+  data-composition-variables='[
+    {"id":"plateSrc","type":"string","label":"Generated clip of the shop (9:16, no text)","default":"assets/gen/plate.mp4"},
+    {"id":"siteSrc","type":"string","label":"REAL phone capture of the published site","default":"assets/capture/phone-scroll.mp4"},
+    {"id":"sentence","type":"string","label":"The exact brief, in quotes","default":"\"A website for a family bakery in Leeds that opens at 7.\""},
+    {"id":"aiLabelText","type":"string","label":"AI label (never empty)","default":"AI-generated scene"}
+  ]'
+>
+  <head><meta charset="UTF-8" /></head>
+  <body>
+    <template>
+      <link rel="stylesheet" href="assets/shared/brand.css" />
+      <style>
+        #root { position: absolute; inset: 0; overflow: hidden; background: var(--mb-canvas); }
+        #mt-plate { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transform-origin: 50% 46%; }
+        #mt-phone { position: absolute; left: 270px; top: 300px; width: 540px; height: 1170px; border-radius: 56px; border: 10px solid var(--mb-ink); overflow: hidden; background: #fff; box-shadow: var(--mb-shadow); transform-origin: 50% 46%; }
+        #mt-site { position: absolute; left: 0; top: 0; width: 100%; height: 100%; object-fit: cover; object-position: top; }
+        #mt-chip { position: absolute; left: 0; right: 0; top: 1520px; display: flex; justify-content: center; }
+        #mt-ai { position: absolute; left: var(--safe-left); top: 1180px; font-size: calc(22px * var(--type-scale)); background: rgba(24,24,27,.78); }
+      </style>
+      <div id="root" class="fmt-9x16" data-composition-id="match" data-width="1080" data-height="1920" data-duration="1.5">
+        <video id="mt-plate" class="clip" data-start="0" data-duration="1.2" data-media-start="0" data-track-index="0" data-var-src="plateSrc" src="assets/gen/plate.mp4" muted playsinline></video>
+        <div id="mt-phone">
+          <video id="mt-site" class="clip" data-start="0.35" data-duration="1.15" data-track-index="1" data-var-src="siteSrc" src="assets/capture/phone-scroll.mp4" muted playsinline></video>
+        </div>
+        <div id="mt-chip" class="clip" data-start="0.6" data-duration="0.9" data-track-index="2" data-track-kind="graphics"><div class="mb-pill" style="font-size: calc(26px * var(--type-scale))"><span data-var-text="sentence">"A website for a family bakery in Leeds that opens at 7."</span></div></div>
+        <div id="mt-ai" class="clip mb-chip-dark" data-start="0" data-duration="1.2" data-track-index="3" data-track-kind="graphics" data-var-text="aiLabelText">AI-generated scene</div>
+      </div>
+      <script>
+        // Push into the window (plate scales up), the phone grows out of the window rectangle, then the plate fades out
+        // behind it so the real site is all that is left. Transforms and opacity only.
+        const tl = gsap.timeline({ paused: true });
+        tl.fromTo("#mt-plate", { scale: 1.0 }, { scale: 1.35, duration: 1.2, ease: "power2.in" }, 0);
+        tl.fromTo("#mt-phone", { scale: 0.32, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.7, ease: "power3.out" }, 0.35);
+        tl.to("#mt-plate", { opacity: 0, duration: 0.25, ease: "power1.in" }, 0.9);
+        tl.fromTo("#mt-chip", { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.3, ease: "power3.out" }, 0.6);
+        window.__timelines["match"] = tl;
+      </script>
+    </template>
+  </body>
+</html>

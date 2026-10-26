@@ -3,7 +3,8 @@
 //   virtual:war-room/calendar-day/<d> one calendar day (its own small chunk), plus the Today page's joins (scripts/plan-data.mjs):
 //                                     the week's targets, Instagram kick-off steps, what to make, ad cards due, today's money
 //   virtual:war-room/plan-weeks       13 week cards and the launch-week day cards for the Plan page
-//   virtual:war-room/production-simple  "How we make videos" and the weekly make-lists from data/production.json
+//   virtual:war-room/production-simple  "How we make videos" and the weekly make-lists from data/production.json (Plan + Production)
+//   virtual:war-room/production-hf      the production budget, the Higgsfield plan and shots, slim per-video / per-creative sheets
 //   virtual:war-room/content-index    id -> title, kind, format, length and hook code of every video and creative
 //   virtual:war-room/funnel-scenarios id, name, inputs and reference outputs of every data/funnel.json scenario
 //   virtual:war-room/docs-index       metadata of every Markdown document (the text itself loads per document)
@@ -85,6 +86,25 @@ export function warRoomData() {
         const p = json(this, 'data/production.json');
         const decisions = p.decisions.map((d) => ({ id: d.id, question: d.question, recommendation: d.recommendation, deadline: d.deadline }));
         return `export const SIMPLE = ${JSON.stringify(p.simple)};\nexport const DECISIONS = ${JSON.stringify(decisions)};\nexport const COUNTS = ${JSON.stringify(p.meta.counts)};\n`;
+      }
+
+      // Only Library > Production loads this one (the Plan page imports production-simple for the decisions).
+      if (what === 'production-hf') {
+        const p = json(this, 'data/production.json');
+        const { shots, mix, abTests, role, hardRules, modelGuide, presets, everyShot, totals } = p.higgsfield;
+        const hf = { role, hardRules, modelGuide, presets, everyShot, totals, mix, abTests, shots };
+        const sheets = {
+          videos: p.perVideo.map((v) => ({
+            id: v.id, title: v.title, week: v.week, makeWith: v.makeWith, template: v.template.id, mix: v.mix, readiness: v.readiness,
+            slots: (v.template.hfSlots ?? []).map((s) => ({ slot: s.slot, at: s.at, composition: s.composition, variables: s.variables })),
+            higgsfield: v.higgsfield && { shots: v.higgsfield.shots, seconds: v.higgsfield.seconds, credits: v.higgsfield.credits, posts: v.higgsfield.posts, postedAs: v.higgsfield.postedAs, readiness: v.higgsfield.readiness, sections: v.higgsfield.sections.map((s) => ({ slot: s.slot, shot: s.shot, at: s.at, clip: s.clip, line: s.line })) },
+          })),
+          creatives: p.perCreative.map((c) => ({
+            id: c.id, title: c.concept, week: c.week, makeWith: c.makeWith, template: `${c.template.id} · ${c.template.layout}`, variables: c.template.variables, readiness: c.readiness,
+            higgsfield: c.higgsfield && { frameFrom: c.higgsfield.frameFrom, layout: c.higgsfield.layout, posts: c.higgsfield.posts, readiness: c.higgsfield.readiness },
+          })),
+        };
+        return `export const BUDGET = ${JSON.stringify(p.productionBudget)};\nexport const HF = ${JSON.stringify(hf)};\nexport const SHEETS = ${JSON.stringify(sheets)};\n`;
       }
 
       if (what === 'content-index') {

@@ -21,6 +21,7 @@ Rules that matter most:
 - A sped-up build always carries the `Sped up ×N` chip, and `data-playback-rate` on the video equals N.
 - Captures, generations, audio and renders never go into this public repository (`production/.gitignore` blocks them). They live in the private asset library (`content/production.md` section 9).
 - Render on a local disk with at least 20 GB free, never on the network drive.
-- Nothing here buys, generates or posts anything. Optional paid tools (Higgsfield) wait for the owner's decision P-D1.
+- Nothing here buys, generates or posts anything. Higgsfield is a planned part of production with its own budget (not the $1,000); the owner signs up himself (P-D1). Every shot, its prompt and its credits are in `data/production.json` `higgsfield.shots`; every generated second carries the AI label and never shows product UI, people or text.
+- Higgsfield clips go into HyperFrames slots: `templates/T07-cinematic-hook/` (hook, `compositions/bridge.html`, `compositions/match-to-ui.html`, `compositions/endplate.html`) and `templates/T04-showcase/compositions/i2v.html` (camera move over a real output). Each video's slots and variables are in `perVideo[].template.hfSlots`.
 
 HyperFrames is pinned to `hyperframes@0.8.205` in each template's `package.json`. T01 passed `npx hyperframes check` and was snapshotted in 9:16 and 16:9 on 26 Oct 2026; the other templates lint clean apart from the expected missing-media errors.

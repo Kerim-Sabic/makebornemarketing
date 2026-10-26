@@ -8,6 +8,10 @@
 // 6. Tests the forecast and analytics maths with a fixed seed (scripts/check-forecast.mjs).
 // 7. Checks the Today and Plan joins (scripts/plan-data.mjs): dated money adds up to $1,000, every make-list item and Instagram
 //    kick-off day lands on a day, 13 complete week cards, and the one-form tracking codes from content/tracking.md.
+// 8. Checks the production plan (data/production.json): the production budget is separate from the $1,000 (nothing in
+//    ads.json or plan.json names Higgsfield), every Higgsfield shot has a full prompt card and credits and is generated on a
+//    day and used by an item, every item says how it is made, the Higgsfield videos stay at 60-70% real / 20-30% Higgsfield,
+//    every HyperFrames slot file exists, and every A/B pair has both sides marked on the calendar.
 import { createServer } from 'vite';
 import { readFileSync, existsSync, readdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
@@ -105,6 +109,123 @@ try {
     else console.log('  ok   one-form tracking codes; 3-4 Nov Reels at 20:15 for the time test');
   }
 
+  // ---------- production budget, Higgsfield and HyperFrames (data/production.json) ----------
+  console.log('\nProduction budget, Higgsfield shots and HyperFrames slots (data/production.json)');
+  {
+    const j = (p) => JSON.parse(readFileSync(join(root, p), 'utf8'));
+    const P = j('data/production.json');
+    const ads = j('data/ads.json');
+    const planJ = j('data/plan.json');
+    const cal = j('data/calendar.json');
+    const before = failures;
+    const B = P.productionBudget;
+    // 1. The production budget is its own pot and never touches the $1,000.
+    if (!B || B.separateFromAdsBudget !== true) fail('productionBudget missing or not marked separateFromAdsBudget');
+    else {
+      const m1 = B.month1.items.reduce((s, i) => s + i.usd, 0);
+      if (Math.abs(m1 - B.month1.totalUSD) > 0.001) fail(`productionBudget month 1 items add up to $${m1}, not $${B.month1.totalUSD}`);
+      if (B.month1.totalUSD > B.month1.capUSD) fail('productionBudget month 1 total is above its cap');
+      if (B.tier.priceUSD !== B.month1.totalUSD) fail('productionBudget tier price and month 1 total differ');
+      const c = B.credits.month1;
+      if (Math.abs(c.planned + c.conditional + c.reserve - c.available) > 0.001 || c.reserve < 0) fail(`month 1 credits do not add up (${c.planned} + ${c.conditional} + ${c.reserve} vs ${c.available})`);
+      const plannedW = B.credits.byWeek.filter((w) => w.month === 1).reduce((s, w) => s + w.plannedCredits, 0);
+      if (Math.abs(plannedW - c.planned) > 0.001) fail(`weekly credits of month 1 add up to ${plannedW}, not ${c.planned}`);
+      if (c.planned + c.conditional > B.tier.creditsPerMonth) fail('month 1 plans more credits than the tier gives');
+    }
+    const adsMoney = ads.adCalendar.flatMap((w) => [...w.adItems.map((a) => `${a.item} ${a.line ?? ''}`), ...w.otherPlanSpend.map((o) => `${o.item} ${o.line ?? ''}`)]);
+    const leak = adsMoney.filter((t) => /higgsfield|production budget|production tool/i.test(t));
+    if (leak.length) fail(`the $1,000 (ads.json adCalendar) has production items: ${leak.join('; ')}`);
+    if (/higgsfield/i.test(JSON.stringify(planJ))) fail('plan.json names Higgsfield: production money is not part of the $1,000 plan');
+    const adsTotal = ads.adCalendar.at(-1)?.runningTotalUsd;
+    if (adsTotal !== 1000) fail(`ads.json running total is ${adsTotal}, not 1000`);
+    // 2. Every Higgsfield shot has a full prompt card and credits.
+    const H = P.higgsfield;
+    const shots = new Map(H.shots.map((s) => [s.id, s]));
+    for (const s of H.shots) {
+      const miss = ['prompt', 'negative', 'model', 'mode', 'cameraPreset', 'aspect', 'resolution', 'seed', 'keepRule', 'label', 'generateOn'].filter((k) => !s[k] || String(s[k]).trim().length < 3);
+      if (miss.length) fail(`${s.id}: missing ${miss.join(', ')}`);
+      if (!(s.durationSec > 0) || !(s.takes >= 1) || !(s.creditsPerTake > 0) || Math.abs(s.credits - s.takes * s.creditsPerTake) > 0.001) fail(`${s.id}: credits ${s.credits} do not match ${s.takes} takes x ${s.creditsPerTake}`);
+      if (String(s.prompt).length < 120) fail(`${s.id}: prompt too short to be exact`);
+      if (s.aspect !== '9:16') fail(`${s.id}: aspect ${s.aspect}, the plan masters 9:16`);
+      const i2v = s.mode === 'image-to-video';
+      if (i2v ? !s.referenceImage || !/Nothing in the image changes/.test(s.prompt) : !/No people/.test(s.prompt)) fail(`${s.id}: ${i2v ? 'image-to-video needs a reference image and the no-change line' : 'text-to-video prompt must say No people'}`);
+      if (/\b(makeborne|testimonial|avatar|customer|user interface|dashboard)\b/i.test(s.prompt)) fail(`${s.id}: prompt asks for the brand, a person or UI`);
+      if (!!s.gate !== !!s.conditional) fail(`${s.id}: gate and conditional disagree`);
+      if (!s.for?.length) fail(`${s.id}: used by nothing`);
+    }
+    const sumPlanned = H.shots.filter((s) => !s.conditional).reduce((a, s) => a + s.credits, 0);
+    if (Math.abs(sumPlanned - H.totals.plannedCredits90Days) > 0.001) fail('higgsfield.totals.plannedCredits90Days does not match the shots');
+    // 3. Every item names how it is made; Higgsfield items carry their shots, prompts, slots and label.
+    const WAYS = ['real only', 'Higgsfield hook + real', 'Higgsfield scene + HyperFrames type', 'HyperFrames only'];
+    const used = new Set();
+    let hfSec = 0;
+    let hfLen = 0;
+    let hfReal = 0;
+    for (const v of P.perVideo) {
+      if (!WAYS.includes(v.makeWith)) fail(`${v.id}: makeWith "${v.makeWith}"`);
+      if (!v.template?.id || !v.readiness || !v.mix) fail(`${v.id}: template, readiness or mix missing`);
+      if (v.mix && Math.abs(v.mix.realSec + v.mix.higgsfieldSec + v.mix.hyperframesOnlySec - v.lengthSec) > 0.01) fail(`${v.id}: mix seconds do not add up to ${v.lengthSec}`);
+      if (v.makeWith.startsWith('Higgsfield') !== !!v.higgsfield) fail(`${v.id}: makeWith and higgsfield disagree`);
+      if (!v.higgsfield) continue;
+      const x = v.higgsfield;
+      for (const id of x.shots) {
+        used.add(id);
+        const s = shots.get(id);
+        if (!s) fail(`${v.id}: unknown shot ${id}`);
+        else if (!s.for.includes(v.id)) fail(`${v.id}: shot ${id} does not list it`);
+      }
+      for (const pr of x.prompts) {
+        const s = shots.get(pr.shot);
+        if (!s || pr.prompt !== s.prompt || pr.negative !== s.negative || pr.credits !== s.credits) fail(`${v.id}: prompt copy of ${pr.shot} differs from higgsfield.shots`);
+      }
+      if (x.prompts.length !== x.shots.length) fail(`${v.id}: ${x.shots.length} shots but ${x.prompts.length} prompts`);
+      if (!/AI-generated scene|AI camera move/.test(x.label)) fail(`${v.id}: no on-screen AI label`);
+      if (!v.template.hfSlots?.length || v.template.hfSlots.length !== x.sections.length) fail(`${v.id}: HyperFrames slots missing`);
+      for (const sl of v.template.hfSlots ?? []) {
+        const file = sl.composition.split(' ')[0];
+        if (!existsSync(join(root, 'production/templates', file))) fail(`${v.id}: slot template ${file} does not exist`);
+        if (!sl.variables.aiLabelText) fail(`${v.id}: slot ${sl.slot} has no aiLabelText`);
+      }
+      for (const sec of x.sections) if (!x.shots.includes(sec.shot)) fail(`${v.id}: section uses ${sec.shot} outside its shot list`);
+      if (!/needs .*live/.test(v.readiness)) {
+        hfSec += v.mix.higgsfieldSec;
+        hfLen += v.mix.lengthSec;
+        hfReal += v.mix.realSec;
+      }
+    }
+    for (const c of P.perCreative) {
+      if (!WAYS.includes(c.makeWith)) fail(`${c.id}: makeWith "${c.makeWith}"`);
+      if (!c.template?.id || !c.template.variables || !c.readiness) fail(`${c.id}: template, variables or readiness missing`);
+      if (c.higgsfield) {
+        if (!shots.has(c.higgsfield.frameFrom)) fail(`${c.id}: frame grab of unknown shot ${c.higgsfield.frameFrom}`);
+        used.add(c.higgsfield.frameFrom);
+      }
+    }
+    for (const s of H.shots) if (!used.has(s.id)) fail(`${s.id}: no video or image uses it`);
+    // 4. The mix in the Higgsfield videos: 60-70% real, 20-30% Higgsfield.
+    const hfPct = Math.round((hfSec / hfLen) * 100);
+    const realPct = Math.round((hfReal / hfLen) * 100);
+    if (hfPct < 20 || hfPct > 30 || realPct < 60 || realPct > 70) fail(`mix in the Higgsfield videos is ${realPct}% real / ${hfPct}% Higgsfield (target 60-70 / 20-30)`);
+    if (hfPct !== H.mix.measured.higgsfieldPct || realPct !== H.mix.measured.realPct) fail('higgsfield.mix.measured is stale');
+    // 5. Each shot has a "generate" line on a day, every make-list shot id exists, and the owner's sign-up is on the list.
+    const items = P.simple.weeks.flatMap((w) => w.items);
+    for (const i of items) for (const id of i.hf ?? []) if (!shots.has(id)) fail(`make-list item names unknown shot ${id}: ${i.text}`);
+    const genned = new Set(items.filter((i) => /generate \d+ Higgsfield/.test(i.text)).flatMap((i) => i.hf ?? []));
+    for (const s of H.shots) if (!genned.has(s.id)) fail(`${s.id}: no "generate" line in simple.weeks`);
+    if (!items.some((i) => /signs up for Higgsfield/.test(i.text))) fail('no owner sign-up line in simple.weeks');
+    // 6. Calendar: Higgsfield posts belong to Higgsfield videos; every A/B pair has both sides on the calendar.
+    const vHf = new Set(P.perVideo.filter((v) => v.higgsfield).map((v) => v.id));
+    const posts = cal.flatMap((d) => d.posts.map((p) => ({ ...p, date: d.date })));
+    for (const p of posts) if (p.version === 'higgsfield' && /^V/.test(p.contentId) && !vHf.has(p.contentId)) fail(`${p.date} ${p.contentId}: Higgsfield post for a real-only video`);
+    for (const a of H.abTests.pairs) {
+      for (const side of ['real', 'higgsfield']) {
+        const ok = posts.some((p) => p.contentId === a.video && p.channel === a.surface && p.date === a[side].date && p.version === side && p.abPair === a.id && String(p.link).endsWith(`/go/${a[side].go}`));
+        if (!ok) fail(`${a.id}: the ${side} post on ${a[side].date} is not marked on the calendar`);
+      }
+    }
+    if (failures === before) console.log(`  ok   production budget separate from the $1,000 ($${B.month1.totalUSD} month 1, cap $${B.month1.capUSD}); ${H.shots.length} shots, each with a prompt, negative and credits; mix ${realPct}% real / ${hfPct}% Higgsfield; ${H.abTests.pairs.length} A/B pairs on the calendar`);
+  }
+
   // ---------- forecast maths ----------
   console.log('\nForecast and analytics maths (seeded)');
   try {
@@ -182,6 +303,11 @@ try {
       ['#/library/videos/V01', 'Script'],
       ['#/library/images/C05', 'Generation prompt'],
       ['#/library/production', 'How we make <em>videos</em>'],
+      ['#/library/production', 'Separate from the $1,000.'],
+      ['#/library/production', 'Copy prompt HF01'],
+      ['#/library/production', 'Per-video sheets'],
+      ['#/today/2026-10-27', 'Higgsfield Plus'],
+      ['#/today/2026-10-28', 'Higgsfield shots for V07'],
       ['#/library/instagram', 'Instagram playbook'],
       ['#/library/ads-playbook', 'Ads playbook'],
       ['#/library/where-to-post', 'master posting sheet'],

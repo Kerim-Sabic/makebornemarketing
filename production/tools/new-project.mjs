@@ -82,6 +82,19 @@ if (item?.script) {
   lines.push("");
 }
 if (item?.headline) lines.push(`**Headline:** ${item.headline}`, `**Subcopy:** ${item.subcopy}`, "");
+if (plan?.higgsfield?.sections) {
+  // The Higgsfield version: where each clip goes, which HyperFrames slot it uses, and the exact prompt to copy.
+  lines.push(`## Higgsfield version (${plan.higgsfield.version})`, "", `${plan.higgsfield.postedAs}. Readiness: ${plan.higgsfield.readiness}.`, "");
+  lines.push("| At | Slot | Shot and clip section | Line over the clip | HyperFrames file |", "|---|---|---|---|---|");
+  for (const s of plan.higgsfield.sections) lines.push(`| ${s.at} | ${s.slot} | ${s.shot} ${s.clip} | ${s.line || "-"} | ${s.composition} |`);
+  lines.push("");
+  for (const p of plan.higgsfield.prompts) {
+    lines.push(`### ${p.shot}: ${p.title}`, "", `${p.model} · ${p.mode} · ${p.cameraPreset} · ${p.durationSec} s · ${p.aspect} · ${p.resolution} · ${p.takes} takes · ${p.credits} credits`, "");
+    if (p.referenceImage) lines.push(`Start frame: ${p.referenceImage}`, "");
+    lines.push("Prompt:", "", "```text", p.prompt, "```", "", "Negative:", "", "```text", p.negative, "```", "", `Seed: ${p.seed}`, "");
+  }
+  lines.push(`Label: ${plan.higgsfield.label}`, "");
+}
 if (plan) lines.push("## Production plan (data/production.json)", "", "```json", JSON.stringify(plan, null, 2), "```", "");
 lines.push("## Before posting", "", "Run the quality bar in content/production.md section 7, then `npx hyperframes check --json` and `npx hyperframes snapshot --review`.");
 fs.writeFileSync(path.join(out, "BRIEF.md"), lines.join("\n") + "\n");

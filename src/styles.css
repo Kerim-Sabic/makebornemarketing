@@ -2941,3 +2941,15 @@ abbr.term {
 .section-first {
   scroll-margin-top: 72px;
 }
+
+/* Higgsfield shot cards (Library › Production, Today "How") */
+.hf-shot {
+  display: grid;
+  gap: 10px;
+  min-width: 0;
+}
+.hf-shot-today + .hf-shot-today {
+  border-top: 1px solid var(--line);
+  margin-top: 12px;
+  padding-top: 12px;
+}

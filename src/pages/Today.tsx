@@ -15,6 +15,8 @@ import { href, ROUTES, type RouteProps } from '../routes';
 const actionKey = (date: string, what: string) => `${date}:${what.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 48)}`;
 const slug = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 40);
 const GO_LIVE = '2026-10-29'; // /go/ short links target day (tracking.md §0)
+/** The public launch: Wed 28 Oct 2026 at 19:00 Sarajevo time (18:00 UTC). No launch post goes out before it. */
+const LAUNCH_DATE = '2026-10-28';
 
 function hm(t: string | undefined) {
   const m = String(t ?? '').match(/(\d{1,2}):(\d{2})/);
@@ -254,7 +256,8 @@ function buildGroups(day: CalendarDay, x: TodayExtra, date: string): Record<Grou
   const g: Record<GroupId, Item[]> = { post: [], make: [], ads: [], reach: [], log: [] };
 
   /* ---------- Post ---------- */
-  day.posts.forEach((p, i) => {
+  // Before the public launch (Wed 28 Oct 19:00 CET) nothing is posted that says "we launched".
+  (date < LAUNCH_DATE ? [] : day.posts).forEach((p, i) => {
     const e = x.posts[i];
     const t = hm(p.time);
     const what = CHANNEL_SHORT[p.channel] ?? p.channel;
@@ -279,7 +282,7 @@ function buildGroups(day: CalendarDay, x: TodayExtra, date: string): Record<Grou
       how: <PostHow post={p} e={e} ig={igMain} date={date} />,
     });
   });
-  // One-off dated reminders from data/posting.json (for example: post V01 before midnight on launch day).
+  // One-off dated reminders from data/posting.json (for example: do not post V01 before the launch).
   for (const r of x.reminders ?? []) {
     const gid: GroupId = r.group in g ? (r.group as GroupId) : 'post';
     g[gid].push({
@@ -287,7 +290,7 @@ function buildGroups(day: CalendarDay, x: TodayExtra, date: string): Record<Grou
       time: hm(r.time),
       label: r.text,
       text: <b>{r.text}</b>,
-      tag: <span className="chip chip-warn">tonight</span>,
+      tag: <span className="chip chip-warn">important</span>,
       how: (
         <div className="how">
           <p className="small">{plain(r.how)}</p>

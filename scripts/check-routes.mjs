@@ -284,7 +284,8 @@ try {
       if (hit >= 0 && !x.posts[hit].file?.ready) fail(`today ${it.date}: ${it.id} on ${day.posts[hit].channel} is not linked to its file`);
     }
     const launch = todayExtras(files, '2026-10-26');
-    if (!launch.reminders.some((r) => /V01 before midnight/.test(r.text))) fail('26 Oct has no "Post V01 before midnight" item');
+    if (!launch.reminders.some((r) => /Do not post V01/.test(r.text))) fail('26 Oct has no "Do not post V01" item (the launch is Wed 28 Oct 19:00 CET)');
+    if ((P.reminders ?? []).some((r) => /before midnight/i.test(r.text))) fail('posting.json still says "Post V01 before midnight"');
     const v01 = todayExtras(files, '2026-10-26').posts.find((p, i) => files.calendar[0].posts[i].contentId === 'V01' && files.calendar[0].posts[i].channel === 'TikTok');
     if (!v01?.file?.files?.includes('V01_tiktok_9x16.mp4') || !v01.file.laterFiles?.includes('V01_tiktok_9x16_justlaunched.mp4')) fail('26 Oct TikTok V01 does not show V01_tiktok_9x16.mp4 and its _justlaunched variant');
     // The sync script: a missing renders folder is a no-op that exits 0 and leaves the JSON untouched.
@@ -363,11 +364,10 @@ try {
       ['#/today', 'Log numbers'],
       ['#/today', 'Start here'],
       ['#/today', 'How to use this site'],
-      ['#/today/2026-10-26', 'ready to post'],
-      ['#/today/2026-10-26', 'V01_tiktok_9x16.mp4'],
-      ['#/today/2026-10-26', 'Post V01 before midnight'],
-      ['#/today/2026-10-26', 'Before you post anything'],
-      ['#/today/2026-10-27', 'to make'],
+      ['#/today/2026-10-29', 'ready to post'],
+      ['#/today/2026-10-26', 'Do not post V01 tonight'],
+      ['#/today/2026-10-29', 'Before you post anything'],
+      ['#/today/2026-10-29', 'to make'],
       ['#/today/2026-10-29', 'C06_carousel_01.jpg'],
       ['#/today/2026-10-26', 'TAAFT'],
       ['#/today/2026-11-03', 'Instagram Reel'],

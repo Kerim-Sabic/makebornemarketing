@@ -54,7 +54,8 @@ const DEFAULTS = {
     { key: 'uncut', text: 'Remove the "30-second uncut build" line from the DM', how: 'The keyword DM promises a 30-second uncut build, and that recording does not exist yet. Take the line out of the DM until it is recorded.' },
   ],
   reminders: [
-    { date: '2026-10-26', time: '23:00', group: 'post', text: 'Post V01 before midnight, or use the _justlaunched file tomorrow', how: 'The V01 files say "We launched today." Post them tonight (TikTok, Instagram Reel, YouTube Shorts). From Tue 27 Oct use the _justlaunched files instead ("We just launched.") and write "We just launched Makeborne" in the captions.' },
+    { date: '2026-10-26', time: '18:00', group: 'post', text: 'Do not post V01 tonight: the public launch is Wed 28 Oct at 19:00 CET', how: 'The owner moved the public launch to Wednesday 28 October 2026 at 19:00 Sarajevo time (18:00 UTC). The V01 files say "We launched today." They go out on Wed 28 Oct at 19:00, not before. From Thu 29 Oct use the _justlaunched files instead. Nothing that says "we launched" or "live now" goes out before Wed 19:00.' },
+    { date: '2026-10-27', time: '18:00', group: 'post', text: 'Do not post V01 yet: the public launch is Wed 28 Oct at 19:00 CET', how: 'The V01 files say "We launched today." They go out on Wed 28 Oct at 19:00 (TikTok, Instagram Reel, YouTube Shorts). Nothing that says "we launched" or "live now" goes out before then.' },
   ],
 };
 

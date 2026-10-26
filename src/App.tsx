@@ -1,6 +1,7 @@
 import { Component, Suspense, startTransition, useEffect, useRef, useState, type ErrorInfo, type ReactNode } from 'react';
 import { ROUTES, href, parseHash, routeById } from './routes';
-import { planDay, sarajevoToday, useStored, WINDOW_DAYS } from './lib/util';
+import { planDay, sarajevoToday, useStored, WINDOW_DAYS, writeStore } from './lib/util';
+import { START_HERE_KEY } from './lib/stores';
 
 type Theme = 'system' | 'light' | 'dark';
 
@@ -168,7 +169,19 @@ export function App({ initialHash }: { initialHash?: string }) {
             <route.Component params={params} />
           </Suspense>
         </ErrorBoundary>
-        <footer className="foot">Private plan. Static site, no trackers: your ticks and numbers stay in this browser.</footer>
+        <footer className="foot">
+          <a
+            className="foot-help"
+            href={href('today')}
+            onClick={() => {
+              writeStore(START_HERE_KEY, false);
+              window.scrollTo({ top: 0 });
+            }}
+          >
+            How to use this site
+          </a>
+          <span>Private plan. Static site, no trackers: your ticks and numbers stay in this browser.</span>
+        </footer>
       </main>
       <nav className="tabbar" aria-label="Main">
         {links('tabbar-item')}

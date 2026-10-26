@@ -115,7 +115,7 @@ export function AnalyticsPanels({ sample, onEditRow, setMsg }: { sample: boolean
       <Section
         id="scorecard"
         title={<>Weekly scorecard · week {week}</>}
-        kicker={`North star and guardrails · ${KPIS.weeklyTargets[week - 1].dates}${week === currentWeek && planWeek(asOf) === week && week !== lastComplete ? ' · week to date' : ''}`}
+        kicker={`The main goal and the safety checks · ${KPIS.weeklyTargets[week - 1].dates}${week === currentWeek && planWeek(asOf) === week && week !== lastComplete ? ' · week to date' : ''}`}
         aside={
           <label className="row small" style={{ gap: 6 }}>
             Week
@@ -147,7 +147,7 @@ export function AnalyticsPanels({ sample, onEditRow, setMsg }: { sample: boolean
         <p className="footnote">Green meets the plan; amber is within 20% (refunds 15-20%, CAC $50-62.50); red needs action. Grey means the number is not in this log or the cohort is not 7 days old yet.</p>
       </Section>
 
-      <Section id="actions" title="This week, plainly" kicker={`Kill and scale rules applied to the data · as of ${fmtDate(asOf)}`}>
+      <Section id="actions" title="This week, plainly" kicker={`The stop and scale rules applied to your numbers · as of ${fmtDate(asOf)}`}>
         <div className="split">
           <Card>
             <ol className="actions">
@@ -174,7 +174,7 @@ export function AnalyticsPanels({ sample, onEditRow, setMsg }: { sample: boolean
       <Section
         id="funnel"
         title="Funnel"
-        kicker="Visits → sign-ups → checkout → paid → activated, against data/kpis.json"
+        kicker="Visits → sign-ups → checkout → paid → using it with a client, against the plan"
         aside={<Segmented label="Funnel scope" value={scope} onChange={setScope} options={[{ value: 'all', label: 'All logged days' }, { value: 'week', label: `Week ${week}` }]} />}
       >
         <FunnelView steps={funnel.steps} />
@@ -231,7 +231,7 @@ export function AnalyticsPanels({ sample, onEditRow, setMsg }: { sample: boolean
         <p className="footnote">Colour: green at or above the stage target, amber within 20%, red below. The same targets apply to every channel; the plan expects creator traffic to convert about 1.5x the blend [A].</p>
       </Section>
 
-      <Section id="weekly" title="Weekly charts against the targets" kicker="Plan of record, base case">
+      <Section id="weekly" title="Weekly charts against the targets" kicker="Against the plan's main (base) case">
         <div className="grid-2">
           {chartPair('Visits', weekly.map((w, i) => (shown(i) ? w.clicks : null)), KPIS.weeklyTargets.map((t) => t.visits), (n) => fmtInt(n), 'Actual = /go/ clicks logged.')}
           {chartPair('Sign-ups', weekly.map((w, i) => (shown(i) ? w.signups : null)), KPIS.weeklyTargets.map((t) => t.signups), (n) => fmtInt(n))}
@@ -263,7 +263,7 @@ export function AnalyticsPanels({ sample, onEditRow, setMsg }: { sample: boolean
         <MrrSnapshots snaps={snaps} setSnaps={setSnaps} readOnly={sample} />
       </Section>
 
-      <Section id="cac" title="Cost per customer (CAC) and payback" kicker="Spend log and actuals · months until a customer has paid back what they cost">
+      <Section id="cac" title="Cost per customer (CAC) and payback" kicker="What each customer cost, and how many months until they pay it back">
         <div className="grid-2">
           <Card>
             <h3>Cost per customer by channel</h3>
@@ -338,7 +338,7 @@ export function AnalyticsPanels({ sample, onEditRow, setMsg }: { sample: boolean
       </Section>
 
       <div className="grid-2" style={{ marginTop: 48 }}>
-        <Section id="best" title="Content leaderboard" kicker="Ids and /go/ codes in the notes" aside={<Segmented label="Rank content by" value={rankBy} onChange={setRankBy} options={[{ value: 'signups', label: 'Sign-ups' }, { value: 'paid', label: 'Paid' }]} />}>
+        <Section id="best" title="Content leaderboard" kicker="Which videos and images brought sign-ups (from the codes in your notes)" aside={<Segmented label="Rank content by" value={rankBy} onChange={setRankBy} options={[{ value: 'signups', label: 'Sign-ups' }, { value: 'paid', label: 'Paid' }]} />}>
           {ranking.length === 0 ? (
             <Empty>Put content ids (V01, C12) or /go/ codes (tt-v01-l1) in the notes to rank posts.</Empty>
           ) : (
@@ -375,7 +375,7 @@ export function AnalyticsPanels({ sample, onEditRow, setMsg }: { sample: boolean
           )}
           <p className="footnote">A row that names several posts credits each of them, so totals can exceed the day's numbers. Re-cut the top 10% with two new hooks; retire the bottom half on Sunday.</p>
         </Section>
-        <Section id="alerts" title="Alert rules" kicker="kpis.json">
+        <Section id="alerts" title="Warnings" kicker="When a number goes off track">
           <div className="table-wrap" style={{ maxHeight: 460, overflowY: 'auto' }}>
             <table>
               <thead>
@@ -414,7 +414,7 @@ export function AnalyticsPanels({ sample, onEditRow, setMsg }: { sample: boolean
         }}
       />
 
-      <Section id="files" title="Import and export" kicker="CSV and JSON, compatible with data/actuals.template.json">
+      <Section id="files" title="Import and export" kicker="Save a copy of your numbers, or load them on another device">
         <div className="row">
           <label className={`btn btn-ghost btn-sm ${sample ? 'is-disabled' : ''}`} aria-disabled={sample || undefined}>
             Import CSV / JSON

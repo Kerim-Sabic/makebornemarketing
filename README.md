@@ -18,6 +18,24 @@ Four tabs and a Library. On a phone the tabs sit in a bottom bar; on a desktop, 
 
 Old links keep working: `#/strategy`, `#/calendar`, `#/analytics`, `#/predictions`, `#/budget`, `#/funnel`, `#/content`, `#/outreach`, `#/tracking` and `#/research` (with their deep links) open their new home and the address bar is rewritten (`src/routes.tsx`).
 
+## First visit and plain words
+
+- The first time Today opens it shows a **Start here** card: five steps (open Today, do the items top to bottom, tick them, enter numbers in Results each evening, read the Plan week card and the Results verdict on Sunday) and one line per tab. "Got it" hides it (saved in this browser); "How to use this" on Today and "How to use this site" at the bottom of every page bring it back.
+- Plan text is shown in plain words at display time only (`src/lib/plain.tsx`): shorthand like "PH" or "[U]" is spelled out, and the plan's terms and codes (CAC, Spark, TAAFT, decisions D1, growth asks ga1, budget lines b1, templates t08, ad cards A01, hooks like (F2)) get a meaning you can tap (`virtual:war-room/glossary` builds the code meanings from the data files). Long paragraphs show one or two sentences with a "More" button. The data files, and so the plan's numbers and rules, are not changed.
+
+## Finished launch-week files
+
+The rendered videos and images live outside the repository, in the renders folder named in `data/posting.json` (`folder`), next to the render agent's `POSTING.md`. Nothing in that folder is copied here: only file names, platforms, times, captions, hashtags, keywords, links, covers and disclosures.
+
+```bash
+node scripts/sync-posting.mjs                 # read POSTING.md from the default renders folder, rewrite data/posting.json
+node scripts/sync-posting.mjs --dir <folder>  # another folder
+```
+
+Run it after new renders land, then commit `data/posting.json`. When the folder or `POSTING.md` is missing (Netlify, another computer) the script says so, leaves the JSON alone and exits 0; the build only reads the committed JSON. `items` is rewritten on every sync; `toMake` (why a post has no file yet), `beforePosting` (the one-time checklist) and `reminders` (dated one-off Today items) are hand-written and kept.
+
+Today joins it to each post (`postingFor` in `scripts/plan-data.mjs`): a post with its file shows "✓ ready to post" and a "File: … (in <folder>)" line, its How panel has the finished caption, cover, keyword and disclosure (and, after launch day, the `_justlaunched` file); every other post says "to make", with the reason when there is one. Library › Production lists the finished files and what is still to make.
+
 ## Run it
 
 Requires Node 20.19+ (or 22.12+).
@@ -30,7 +48,7 @@ npm run preview   # serve dist/ locally
 npm run check     # after a build: render every route, test the funnel model and the forecast maths, scan dist/
 ```
 
-`npm run check` renders all routes (the four tabs, the Library, every research report, deep links and the old routes), checks that old hashes redirect, checks the Today and Plan joins in `scripts/plan-data.mjs` (dated money adds up to $1,000, every make-list item lands on a day, the one-form tracking codes), checks the production plan (the production budget is its own pot and nothing in the $1,000 names Higgsfield; every Higgsfield shot has a prompt, a negative, settings and credits, a "generate" line on a day and a video or image that uses it; every item says how it is made; the Higgsfield videos stay at 60-70% real and 20-30% Higgsfield; every A/B pair is marked on the calendar), through Vite's SSR loader and fails on any error, compares the TypeScript funnel model with each scenario's `referenceOutputs` in `data/funnel.json` (within 1%), tests the forecast and analytics maths with a fixed seed (`scripts/check-forecast.mjs`: empty and short data states, band ordering, monotonic sanity checks, plan-like data landing on the plan, the required-pace solver, the kill / scale rules), fails when a `data/plan.json` scenario's `mrrDay90` drifts more than 5% from the calculator, scans the plan files for known confidential markers (see `scripts/check-routes.mjs`), and checks the built page for missing assets, the CSP and network calls.
+`npm run check` renders all routes (the four tabs, the Library, every research report, deep links and the old routes), checks that old hashes redirect, checks the Today and Plan joins in `scripts/plan-data.mjs` (dated money adds up to $1,000, every make-list item lands on a day, the one-form tracking codes), checks the production plan (the production budget is its own pot and nothing in the $1,000 names Higgsfield; every Higgsfield shot has a prompt, a negative, settings and credits, a "generate" line on a day and a video or image that uses it; every item says how it is made; the Higgsfield videos stay at 60-70% real and 20-30% Higgsfield; every A/B pair is marked on the calendar), through Vite's SSR loader and fails on any error, compares the TypeScript funnel model with each scenario's `referenceOutputs` in `data/funnel.json` (within 1%), tests the forecast and analytics maths with a fixed seed (`scripts/check-forecast.mjs`: empty and short data states, band ordering, monotonic sanity checks, plan-like data landing on the plan, the required-pace solver, the kill / scale rules), fails when a `data/plan.json` scenario's `mrrDay90` drifts more than 5% from the calculator, scans the plan files for known confidential markers (see `scripts/check-routes.mjs`), checks `data/posting.json` and the sync script (plain file names only, no media in the repo, ready files linked on Today, the Start here card renders, and a missing renders folder is a clean no-op), and checks the built page for missing assets, the CSP and network calls.
 
 ## Edit the data
 

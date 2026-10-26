@@ -109,7 +109,16 @@ export interface TodayExtra {
   make: { text: string; time: string; ids: string[]; sheets: string[]; shots: HfShotCard[] }[];
   ads: DueAd[];
   money: MoneyItem[];
-  posts: { title: string | null; kind: 'video' | 'creative' | null; caption: string | null; onImage: string | null; hook: string | null; cta: string | null; length: string | null; igMain: boolean }[];
+  posts: { title: string | null; kind: 'video' | 'creative' | null; caption: string | null; onImage: string | null; hook: string | null; cta: string | null; length: string | null; igMain: boolean; file: PostFile | null }[];
+  reminders: { date: string; time: string; group: string; text: string; how: string }[];
+  beforePosting: { key: string; text: string; how: string }[];
+}
+/** A calendar post's finished file (data/posting.json, scripts/sync-posting.mjs); `ready: false` means "to make". */
+export interface PostFile {
+  ready: boolean; reason: string | null;
+  files?: string[]; laterFiles?: string[]; folder?: string; cover?: string | null;
+  caption?: string | null; hashtags?: string[]; captionNote?: string | null; ytTitle?: string | null;
+  keyword?: string | null; disclosure?: string | null; makeUp?: { date: string; time: string } | null;
 }
 
 export interface WeekCard {

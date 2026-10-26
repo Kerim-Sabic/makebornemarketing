@@ -2,20 +2,22 @@ import { useEffect, useMemo, useRef, useState, type ClipboardEvent, type Keyboar
 import type { ActualEntry } from '../lib/types';
 import { BUDGET_LINE_IDS, CHANNELS, entryKey, mergeEntries, normaliseEntry } from '../lib/actuals';
 import { addDays, fmtDate, fmtInt, fmtUsd, isIsoDate, planDay } from '../lib/util';
+import { CODES } from 'virtual:war-room/glossary';
+import { Term } from './ui';
 
 /** Spreadsheet-style entry: one row per channel for one day. Columns follow the actuals template order. */
 const COLS = [
-  { k: 'spend', label: 'Spend $', money: true },
-  { k: 'impressions', label: 'Impr.' },
-  { k: 'views', label: 'Views' },
-  { k: 'clicks', label: '/go/ clicks' },
-  { k: 'signups', label: 'Sign-ups' },
-  { k: 'checkouts', label: 'Checkouts' },
-  { k: 'paid', label: 'Paid' },
-  { k: 'revenue', label: 'Revenue $', money: true },
-  { k: 'refunds', label: 'Refunds' },
-  { k: 'activated', label: 'Activated' },
-  { k: 'studioOrScale', label: 'Studio+' },
+  { k: 'spend', label: 'Spend $', money: true, tip: 'Money spent on this channel today, in dollars.' },
+  { k: 'impressions', label: 'Impr.', tip: 'Impressions: how many times the post or ad was shown.' },
+  { k: 'views', label: 'Views', tip: 'Video views the platform reports.' },
+  { k: 'clicks', label: '/go/ clicks', tip: 'Clicks on the /go/ short links for this channel.' },
+  { k: 'signups', label: 'Sign-ups', tip: 'New accounts created.' },
+  { k: 'checkouts', label: 'Checkouts', tip: 'Checkouts opened in Whop (people who started to pay).' },
+  { k: 'paid', label: 'Paid', tip: 'New paying customers today.' },
+  { k: 'revenue', label: 'Revenue $', money: true, tip: 'Money in today, in dollars.' },
+  { k: 'refunds', label: 'Refunds', tip: 'Customers refunded today.' },
+  { k: 'activated', label: 'Activated', tip: 'Paying customers who used it with a client within 7 days (sent a review link, or published or exported a deck or book).' },
+  { k: 'studioOrScale', label: 'Studio+', tip: 'New paying customers on the Studio plan or bigger.' },
 ] as const;
 type NumKey = (typeof COLS)[number]['k'];
 const CORE = ['ch-tiktok', 'ch-instagram', 'ch-youtube', 'ch-linkedin', 'ch-x'];
@@ -210,7 +212,9 @@ export function DaySheet(props: { date: string; setDate: (d: string) => void; en
                 <th scope="col">Channel</th>
                 {COLS.map((c) => (
                   <th key={c.k} scope="col" className="n">
-                    {c.label}
+                    <Term t={c.label} meaning={c.tip}>
+                      {c.label}
+                    </Term>
                   </th>
                 ))}
                 <th scope="col">Notes</th>
@@ -251,7 +255,7 @@ export function DaySheet(props: { date: string; setDate: (d: string) => void; en
                       <option value="">–</option>
                       {BUDGET_LINE_IDS.map((b) => (
                         <option key={b} value={b}>
-                          {b}
+                          {CODES[b] ? `${b} · ${CODES[b].replace(/^Budget line \w+ of the \$1,000: /, '')}` : b}
                         </option>
                       ))}
                     </select>

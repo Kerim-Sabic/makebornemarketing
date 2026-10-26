@@ -9,7 +9,7 @@
 //   virtual:war-room/funnel-scenarios id, name, inputs and reference outputs of every data/funnel.json scenario
 //   virtual:war-room/docs-index       metadata of every Markdown document (the text itself loads per document)
 // The source files stay the single source of truth: nothing is generated into the repository.
-import { readFileSync, readdirSync, statSync } from 'node:fs';
+import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs';
 import { join } from 'node:path';
 import { planWeeks, todayExtras } from './plan-data.mjs';
 
@@ -47,6 +47,8 @@ export function warRoomData() {
     checkpoints: json(ctx, 'data/checkpoints.json'),
     plan: json(ctx, 'data/plan.json'),
     calendarMd: json(ctx, 'content/calendar.md'),
+    // Finished launch-week files (scripts/sync-posting.mjs). Optional: without it every post simply says "to make".
+    posting: existsSync(abs('data/posting.json')) ? json(ctx, 'data/posting.json') : null,
   });
 
   return {
@@ -105,6 +107,27 @@ export function warRoomData() {
           })),
         };
         return `export const BUDGET = ${JSON.stringify(p.productionBudget)};\nexport const HF = ${JSON.stringify(hf)};\nexport const SHEETS = ${JSON.stringify(sheets)};\n`;
+      }
+
+      // Plain meanings of the plan's short codes (decisions, growth asks, budget lines, templates, hooks, ad cards), so pages
+      // can show "ga3" or "t08" with a tap-to-read meaning instead of an unexplained code.
+      if (what === 'glossary') {
+        const plan = json(this, 'data/plan.json');
+        const codes = {};
+        const cut = (t, n = 110) => {
+          const x = String(t).replace(/\s+/g, ' ').trim();
+          return x.length > n ? `${x.slice(0, n - 1).replace(/\s+\S*$/, '')}…` : x;
+        };
+        for (const d of plan.decisions) codes[d.id] = `Owner decision ${d.id}: ${cut(d.question)} (Plan › Decisions)`;
+        for (const d of json(this, 'data/instagram.json').ownerDecisions) codes[d.id] = `Instagram decision: ${cut(d.decision)}`;
+        for (const d of json(this, 'data/production.json').decisions) codes[d.id] = `Production decision: ${cut(d.question)}`;
+        for (const g of plan.growthAsks) codes[g.id] = `Request to engineering (${g.id}): ${cut(g.ask.split(/:\s/)[0] === 'Attribution plumbing' ? 'the /go/ short links that record which post or ad each visitor and customer came from' : g.ask)}`;
+        for (const l of plan.budget.lines) codes[l.id] = `Budget line ${l.id} of the $1,000: ${cut(l.item.split(/:\s|\(/)[0])}`;
+        for (const t of json(this, 'data/outreach.json').templates) codes[t.id.slice(0, 3)] = `Message template ${t.id.slice(0, 3)} (Library › Outreach): ${cut(t.purpose ?? t.id)}`;
+        for (const c of json(this, 'data/ads.json').adCards) codes[c.id] = `Ad card ${c.id} (Ads tab): ${cut(c.title)}`;
+        const hooks = read(this, 'plan/strategy.md').match(/### 4\.3 Hook bank[\s\S]*?(?=\r?\n### )/)?.[0] ?? '';
+        for (const m of hooks.matchAll(/^- ([A-Z]\d) (".+?")/gm)) codes[`hook:${m[1]}`] = `Hook ${m[1]}, the video's opening line: ${m[2]}`;
+        return `export const CODES = ${JSON.stringify(codes)};\n`;
       }
 
       if (what === 'content-index') {

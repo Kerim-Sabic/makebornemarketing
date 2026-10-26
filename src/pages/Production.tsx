@@ -2,7 +2,9 @@ import * as productionModule from 'virtual:war-room/production-simple';
 import * as hfModule from 'virtual:war-room/production-hf';
 import type { HfPlan, HfShot, HfShotCard, ProductionBudget, ProductionSheets, ProductionSimple } from '../lib/types';
 import { docBySlug } from '../lib/docs';
-import { planWeek, sarajevoToday } from '../lib/util';
+import { fmtDate, planWeek, sarajevoToday } from '../lib/util';
+import { plain, Short } from '../lib/plain';
+import postingJson from '../../data/posting.json';
 import { Card, Details } from '../components/ui';
 import { HfShotBody } from '../components/HfShot';
 import { DocView } from './Research';
@@ -15,6 +17,60 @@ const HF = hfModule.HF as HfPlan;
 const SHEETS = hfModule.SHEETS as ProductionSheets;
 const contentHref = (id: string) => href('library', /^C/.test(id) ? 'images' : 'videos', id);
 const n = (x: number) => x.toLocaleString('en-US', { maximumFractionDigits: 1 });
+const dm = (iso: string) => fmtDate(iso, { day: 'numeric', month: 'short' });
+/** "2026-10-26 to 2026-11-01" -> "26 Oct – 1 Nov". */
+const weekDates = (s: string) => {
+  const m = s.match(/(\d{4}-\d{2}-\d{2})\D+(\d{4}-\d{2}-\d{2})/);
+  return m ? `${dm(m[1])} – ${dm(m[2])}` : s;
+};
+interface PostingItem { id: string; title: string; platforms: string[]; date: string | null; time: string | null; bank: boolean; ready: boolean; files: { name: string }[] }
+const POSTING = postingJson as unknown as { folder: string; syncedAt: string; items: PostingItem[]; toMake: Record<string, string> };
+
+/** The finished launch-week files (data/posting.json): what is ready to post, and what is still to make and why. */
+function FinishedFiles() {
+  const ids = [...new Set(POSTING.items.map((i) => i.id))];
+  return (
+    <section style={{ marginTop: 28 }} aria-labelledby="prod-files">
+      <h2 id="prod-files">Finished files</h2>
+      <p className="small muted">
+        Ready to post, in <code>{POSTING.folder}</code> (checked {dm(POSTING.syncedAt)}). Today shows each file on the day it goes out. To refresh this list, run <code>node scripts/sync-posting.mjs</code>.
+      </p>
+      <Details summary={`The ${ids.length} finished pieces and where each one goes (${POSTING.items.length} posts)`}>
+        <ul className="filelist">
+          {ids.map((id) => {
+            const rows = POSTING.items.filter((i) => i.id === id);
+            return (
+              <li key={id}>
+                <a className="item-id" href={contentHref(id)}>
+                  {id}
+                </a>{' '}
+                <b>{rows[0].title}</b> {rows.every((r) => r.ready) ? <span className="chip chip-good">✓ ready</span> : <span className="chip chip-warn">some files missing</span>}
+                <ul className="filelist-rows">
+                  {rows.map((r) => (
+                    <li key={r.platforms.join('/')}>
+                      <span>{r.platforms.join(' / ')}</span>
+                      <span className="muted">{r.date ? `${fmtDate(r.date, { weekday: 'short', day: 'numeric', month: 'short' })} ${r.time ?? ''}` : 'spare (not on the calendar yet)'}</span>
+                      <code>{r.files.length > 2 ? `${r.files[0].name} … ${r.files[r.files.length - 1].name}` : r.files.map((f) => f.name).join(', ')}</code>
+                    </li>
+                  ))}
+                </ul>
+              </li>
+            );
+          })}
+        </ul>
+      </Details>
+      <Details summary={`Still to make in launch week (${Object.keys(POSTING.toMake).length}), and why`}>
+        <ul className="bullets small">
+          {Object.entries(POSTING.toMake).map(([id, why]) => (
+            <li key={id}>
+              <a href={contentHref(id)}>{id}</a>: {plain(why)}
+            </li>
+          ))}
+        </ul>
+      </Details>
+    </section>
+  );
+}
 
 function IdLinks({ ids }: { ids: string[] }) {
   return (
@@ -281,7 +337,7 @@ function SheetsSection() {
                     {v.slots.map((s, i) => {
                       const sec = v.higgsfield?.sections[i];
                       return (
-                        <tr key={`${s.slot}-${s.at}`}>
+                        <tr key={`${s.slot}-${s.at}-${i}`}>
                           <td>{s.at}</td>
                           <td>
                             {s.slot}
@@ -360,7 +416,10 @@ export default function Production() {
       <h2 className="display" style={{ fontSize: 'clamp(28px, 4vw, 42px)' }}>
         How we make <em>videos</em>
       </h2>
-      <p className="lede">{h.intro}</p>
+      <p className="lede">
+        <Short t={h.intro} max={110} />
+      </p>
+      <FinishedFiles />
       <div className="grid-2" style={{ marginTop: 20 }}>
         {h.ways.map((w) => (
           <Card key={w.name}>
@@ -408,16 +467,16 @@ export default function Production() {
             open={w.week === week}
             summary={
               <>
-                Week {w.week} · {w.dates.replace(/2026-|2027-/g, '')}
+                Week {w.week} · {weekDates(w.dates)}
                 {w.week === week ? ' · this week' : ''}
               </>
             }
           >
-            {w.note && <p className="small muted">{w.note}</p>}
+            {w.note && <p className="small muted">{plain(w.note)}</p>}
             <ul className="bullets">
               {w.items.map((i) => (
                 <li key={i.text}>
-                  {i.text}
+                  {plain(i.text)}
                   {(i.ids.length > 0 || (i.hf?.length ?? 0) > 0) && <IdLinks ids={[...i.ids, ...(i.hf ?? [])]} />}
                 </li>
               ))}

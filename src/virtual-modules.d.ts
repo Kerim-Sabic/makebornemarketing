@@ -56,3 +56,8 @@ declare module 'virtual:war-room/funnel-scenarios' {
   import type { FunnelInputs } from './lib/funnelModel';
   export const SCENARIOS: { id: string; name: string; inputs: FunnelInputs; referenceOutputs: Record<string, unknown> }[];
 }
+
+declare module 'virtual:war-room/glossary' {
+  /** Code -> plain meaning: D1, O-IG1, P-D1, ga1, b1, t08, A01 and hook:F2. */
+  export const CODES: Record<string, string>;
+}

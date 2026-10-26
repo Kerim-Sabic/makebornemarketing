@@ -12,11 +12,13 @@ const PRODUCTION_DECISIONS = productionModule.DECISIONS as Decision[];
 interface Decision { id: string; question: string; recommendation: string }
 import { fmtDate, fmtInt, fmtUsd, planWeek, sarajevoToday } from '../lib/util';
 import { Details, Page, Term } from '../components/ui';
+import { plain, Short } from '../lib/plain';
 import { href, type RouteProps } from '../routes';
 
 const PLAN = planJson as unknown as PlanT;
 const short = (iso: string) => fmtDate(iso, { day: 'numeric', month: 'short' });
 const range = (a: string, b: string) => `${fmtDate(a, { weekday: 'short', day: 'numeric', month: 'short' })} – ${fmtDate(b, { weekday: 'short', day: 'numeric', month: 'short' })}`;
+const cap = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
 const TYPE_LABEL: Record<string, string> = { launch: 'Launch', ads: 'Ads', outreach: 'Reach out', product: 'Product', analysis: 'Numbers', make: 'Make' };
 
 /** Where the $1,000 goes, grouped in plain words from the plan's budget lines. */
@@ -50,6 +52,7 @@ export default function Plan({ params }: RouteProps) {
           The plan, <em>week by week</em>
         </>
       }
+      lede="On Sunday, open this week's card and answer its checkpoint question."
     >
       <section className="oneScreen card" aria-labelledby="one-h">
         <h2 id="one-h" className="kicker">
@@ -78,7 +81,7 @@ export default function Plan({ params }: RouteProps) {
               {money.map((m, i) => (
                 <span key={m.label}>
                   {i ? ', ' : ''}
-                  <b className="num">{fmtUsd(m.usd)}</b> {m.label}
+                  <b className="num">{fmtUsd(m.usd)}</b> {plain(m.label)}
                 </span>
               ))}
               . Nothing is paid before the tracking links work (except the $49 listing). <a href={href('ads')}>Ads in detail</a>.
@@ -110,14 +113,14 @@ export default function Plan({ params }: RouteProps) {
                     {d.weekday} {short(d.date)}
                     {d.date === today && <span className="chip chip-accent">today</span>}
                   </span>
-                  <span className="wcard-sub">{d.focus.split(/[.:]/)[0]}</span>
+                  <span className="wcard-sub">{plain(d.focus.split(/[.:]/)[0])}</span>
                 </span>
                 <span className="wcard-side num">{d.posts} posts</span>
               </summary>
               <div className="wcard-body">
                 <ul className="bullets">
                   {d.actions.map((a) => (
-                    <li key={a}>{a}</li>
+                    <li key={a}>{plain(a)}</li>
                   ))}
                 </ul>
                 <a className="btn btn-sm" href={href('today', d.date)}>
@@ -143,7 +146,7 @@ export default function Plan({ params }: RouteProps) {
                 <span className="wcard-n num">W{w.week}</span>
                 <span className="wcard-main">
                   <span className="wcard-title">
-                    {w.title.replace(/^Phase [\d/]+:\s*/, '').replace(/^Launch week.*$/, 'Launch week')}
+                    {plain(cap(w.title.replace(/^Phase [\d/]+:\s*/, '').replace(/^Launch week.*$/, 'Launch week')))}
                     {w.week === thisWeek && <span className="chip chip-accent">this week</span>}
                   </span>
                   <span className="wcard-sub">{range(w.from, w.to)}</span>
@@ -155,7 +158,9 @@ export default function Plan({ params }: RouteProps) {
               </summary>
               <div className="wcard-body">
                 <h3>Goal</h3>
-                <p>{w.goal}</p>
+                <p>
+                  <Short t={w.goal} />
+                </p>
                 <h3>Key actions</h3>
                 <ol className="keyacts">
                   {w.actions.map((a) => (
@@ -163,7 +168,7 @@ export default function Plan({ params }: RouteProps) {
                       <span className="tiny muted num">
                         {fmtDate(a.date, { weekday: 'short', day: 'numeric' })} · {TYPE_LABEL[a.type] ?? a.type}
                       </span>
-                      <span>{a.what}</span>
+                      <span>{plain(a.what)}</span>
                     </li>
                   ))}
                 </ol>
@@ -175,7 +180,7 @@ export default function Plan({ params }: RouteProps) {
                       <li key={m.label}>
                         <b className="num">{fmtUsd(m.usd)}</b>
                         <span>
-                          {m.label} <span className="tiny muted">({m.line}{m.date ? `, ${short(m.date)}` : ''})</span>
+                          {plain(m.label)} <span className="tiny muted">({plain(m.line)}{m.date ? `, ${short(m.date)}` : ''})</span>
                         </span>
                       </li>
                     ))}
@@ -184,7 +189,7 @@ export default function Plan({ params }: RouteProps) {
                   <p className="small">$0 from the $1,000 this week.</p>
                 )}
                 <p className="small muted">
-                  {fmtUsd(w.money?.running ?? 0)} of the $1,000 used by the end of this week. {w.money?.note}
+                  {fmtUsd(w.money?.running ?? 0)} of the $1,000 used by the end of this week. <Short t={w.money?.note} max={120} />
                 </p>
                 <h3>Checkpoint on Sunday {short(w.to)}</h3>
                 {w.targets && (
@@ -196,7 +201,7 @@ export default function Plan({ params }: RouteProps) {
                   <ul className="bullets">
                     {w.checkpoints.map((c) => (
                       <li key={c.date + c.title}>
-                        <b>{fmtDate(c.date, { weekday: 'short', day: 'numeric', month: 'short' })}</b>: {c.title}
+                        <b>{fmtDate(c.date, { weekday: 'short', day: 'numeric', month: 'short' })}</b>: {plain(c.title)}
                         {c.approx ? ' (approximate)' : ''}
                       </li>
                     ))}
@@ -204,7 +209,7 @@ export default function Plan({ params }: RouteProps) {
                 )}
                 {w.sunday && (
                   <Details summary="The full Sunday check">
-                    <p className="small">{w.sunday}</p>
+                    <p className="small">{plain(w.sunday)}</p>
                   </Details>
                 )}
                 <p style={{ marginTop: 14 }}>
@@ -230,8 +235,8 @@ export default function Plan({ params }: RouteProps) {
             <li key={d.id}>
               <span className="item-id">{d.id}</span>
               <span>
-                <b>{d.question}</b>
-                <span className="dec-rec">Recommended: {d.recommendation}</span>
+                <b>{plain(d.question)}</b>
+                <span className="dec-rec">Recommended: {plain(d.recommendation)}</span>
               </span>
             </li>
           ))}

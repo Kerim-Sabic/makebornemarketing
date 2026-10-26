@@ -6,6 +6,7 @@ import { fmtDate, fmtUsd, isIsoDate, planWeek, sarajevoToday, uid } from '../lib
 import { useChecks, useSpendLog } from '../lib/stores';
 import { CopyField, Steps, TickItem } from '../components/Checklist';
 import { Details, Page, Term } from '../components/ui';
+import { plain, Short } from '../lib/plain';
 import { href, type RouteProps } from '../routes';
 
 const ADS = adsJson as unknown as AdsFile;
@@ -51,7 +52,7 @@ export default function Ads({ params }: RouteProps) {
           Every ad, <em>step by step</em>
         </>
       }
-      lede="Open a card when its day comes. It tells you when to launch, what to click, how much to spend, who sees it, the exact words and link, and when to stop."
+      lede="Open a card only when Today says it is due. Each card has every click, the money, the words, the link and when to stop."
     >
       <section className="card moneybar" aria-labelledby="money-h">
         <div className="row-between">
@@ -89,7 +90,7 @@ export default function Ads({ params }: RouteProps) {
           ))}
         </ol>
         <p className="tiny muted" style={{ margin: 0 }}>
-          Solid bar: spent. Faint bar: planned so far (ads.json adCalendar). Coloured weeks have an ad; the highlighted week is now. Ads A04-A07 are paid from revenue and are not in this bar.
+          Solid bar: what you spent. Faint bar: what the plan expected by now. Coloured weeks have an ad; the highlighted week is this week. Ads A04-A07 are paid from revenue, so they are not in this bar.
         </p>
       </section>
 
@@ -105,7 +106,7 @@ export default function Ads({ params }: RouteProps) {
         </div>
         <ul className="ticklist card card-flat">
           {PREFLIGHT.map((p) => (
-            <TickItem key={p.key} checked={!!checks[`ads-pre:${p.key}`]} onToggle={() => setChecks((c) => ({ ...c, [`ads-pre:${p.key}`]: !c[`ads-pre:${p.key}`] }))} text={p.text} label={p.text} how={<p className="small">{p.how}</p>} />
+            <TickItem key={p.key} checked={!!checks[`ads-pre:${p.key}`]} onToggle={() => setChecks((c) => ({ ...c, [`ads-pre:${p.key}`]: !c[`ads-pre:${p.key}`] }))} text={plain(p.text)} label={p.text} how={<p className="small">{plain(p.how)}</p>} />
           ))}
         </ul>
         <p className="notice small" style={{ marginTop: 12 }}>
@@ -115,17 +116,17 @@ export default function Ads({ params }: RouteProps) {
         <Details summary="Rules for every ad">
           <dl className="kv small">
             <dt>Money gate</dt>
-            <dd>{ADS.sharedRules.spendGate}</dd>
+            <dd>{plain(ADS.sharedRules.spendGate)}</dd>
             <dt>Which posts</dt>
-            <dd>{ADS.sharedRules.creativeGate}</dd>
+            <dd>{plain(ADS.sharedRules.creativeGate)}</dd>
             <dt>Links</dt>
-            <dd>{ADS.sharedRules.links}</dd>
+            <dd>{plain(ADS.sharedRules.links)}</dd>
             <dt>Words</dt>
-            <dd>{ADS.sharedRules.copyRules}</dd>
+            <dd>{plain(ADS.sharedRules.copyRules)}</dd>
             <dt>Stop and scale</dt>
-            <dd>{ADS.sharedRules.killScaleShared}</dd>
+            <dd>{plain(ADS.sharedRules.killScaleShared)}</dd>
             <dt>No ads</dt>
-            <dd>{ADS.meta.blackout}</dd>
+            <dd>{plain(ADS.meta.blackout)}</dd>
           </dl>
         </Details>
       </section>
@@ -181,46 +182,49 @@ function AdCardView({ c, open }: { c: AdCard; open: boolean }) {
       <summary>
         <span className="item-id">{c.id}</span>
         <span className="adline">
-          <b className="adline-title">{c.title}</b>
+          <b className="adline-title">{plain(c.title)}</b>
           <span className="adline-meta">
             <span>{when}</span>
             <span className="num">{totalShort(c)}</span>
             <span>{platformShort}</span>
-            <span className="adline-aud">{audience}</span>
+            <span className="adline-aud">{plain(audience)}</span>
           </span>
         </span>
         {!c.inThe1000 && <span className="chip chip-owner">from revenue, not the $1,000</span>}
       </summary>
       <div className="adcard-body">
+        <p className="in-short">
+          <b>In short:</b> earliest {short(c.earliestDate)}, {money(c)}. Launch only when every point under 1 is true; turn it off as soon as a STOP line under 6 is hit.
+        </p>
         <Block n={1} title="When to launch it">
-          <p>{c.statusTrigger}</p>
+          <Trigger t={c.statusTrigger} />
           <p className="small">
             <b>Earliest:</b> {short(c.earliestDate)} · <b>Must end by:</b> {c.mustEndBy}
           </p>
           <Details summary={`Check before you press Publish (${c.checksBeforeLaunch.length})`}>
-            <Steps items={c.checksBeforeLaunch} ordered={false} />
+            <Steps items={c.checksBeforeLaunch.map((x) => plain(x))} ordered={false} />
           </Details>
           <p className="small muted">
-            <b>If the platform cannot bill from Bosnia:</b> {c.fallbackIfNotAvailableFromBiH}
+            <b>If the platform cannot bill from Bosnia:</b> <Short t={c.fallbackIfNotAvailableFromBiH} max={140} />
           </p>
           <h4>Click by click</h4>
-          <Steps items={c.toolPath.map((s) => s.replace(/->/g, '›'))} />
+          <Steps items={c.toolPath.map((s) => plain(s.replace(/->/g, '›')))} />
           <dl className="kv small">
             <dt>Goal in the ad tool</dt>
-            <dd>{c.objective}</dd>
+            <dd>{plain(c.objective)}</dd>
             <dt>Optimise for</dt>
-            <dd>{c.optimization}</dd>
+            <dd>{plain(c.optimization)}</dd>
             <dt>Bidding</dt>
-            <dd>{c.bidStrategy}</dd>
+            <dd>{plain(c.bidStrategy)}</dd>
             <dt>How we judge it</dt>
-            <dd>{c.attribution}</dd>
+            <dd>{plain(c.attribution)}</dd>
           </dl>
         </Block>
 
         <Block n={2} title="Budget">
           <p className="adbig num">{money(c)}</p>
           <p className="small">
-            <b>From:</b> {c.inThe1000 ? `budget line ${c.budget.budgetLine}${lineName(c.budget.budgetLine.split(' ')[0]) ? ` (${lineName(c.budget.budgetLine.split(' ')[0])})` : ''}` : 'revenue, not the $1,000 (owner decision D4: 30% of last week\'s new cash at most)'}. {c.budget.note}
+            <b>From:</b> {c.inThe1000 ? `budget line ${c.budget.budgetLine}${lineName(c.budget.budgetLine.split(' ')[0]) ? ` (${lineName(c.budget.budgetLine.split(' ')[0])})` : ''}` : plain("revenue, not the $1,000 (owner decision D4: 30% of last week's new cash at most)")}. <Short t={c.budget.note} max={140} />
           </p>
         </Block>
 
@@ -229,18 +233,18 @@ function AdCardView({ c, open }: { c: AdCard; open: boolean }) {
             <dt>Countries ({c.countries.length})</dt>
             <dd>{c.countries.map((x) => x.name).join(', ')}</dd>
             <dt>Age</dt>
-            <dd>{c.age}</dd>
+            <dd>{plain(c.age)}</dd>
             <dt>Gender</dt>
-            <dd>{c.gender}</dd>
+            <dd>{plain(c.gender)}</dd>
             <dt>Language</dt>
             <dd>{c.languages.join(', ') || 'Any'}</dd>
             <dt>Audience</dt>
             <dd>
-              {c.audience.setting}
+              {plain(c.audience.setting)}
               {c.audience.suggestions.length > 0 && <> · suggestions: {c.audience.suggestions.join(', ')}</>}
             </dd>
             <dt>Leave out</dt>
-            <dd>{c.audience.exclusions}</dd>
+            <dd>{plain(c.audience.exclusions)}</dd>
             <dt>Show it in</dt>
             <dd>{c.placements.on.join(', ')}</dd>
             {c.placements.off.length > 0 && (
@@ -254,11 +258,11 @@ function AdCardView({ c, open }: { c: AdCard; open: boolean }) {
 
         <Block n={4} title="The ad itself">
           <p>
-            <b>Use:</b> {c.creative.contentId}
+            <b>Use:</b> {plain(c.creative.contentId)}
             {c.creative.fallbackContentId && c.creative.fallbackContentId !== 'none' && (
               <>
                 <br />
-                <b>Fallback:</b> {c.creative.fallbackContentId}
+                <b>Fallback:</b> {plain(c.creative.fallbackContentId)}
               </>
             )}
           </p>
@@ -272,10 +276,10 @@ function AdCardView({ c, open }: { c: AdCard; open: boolean }) {
             </p>
           )}
           <p className="small">
-            <b>File:</b> {c.creative.file}
+            <b>File:</b> <Short t={c.creative.file} max={120} />
           </p>
           <p className="small">
-            <b>Must show:</b> {c.creative.mustShow}
+            <b>Must show:</b> {plain(c.creative.mustShow)}
           </p>
           <CopyField label="Primary text" text={c.copy.primaryText} />
           <CopyField label="Headline" text={c.copy.headline} />
@@ -284,9 +288,14 @@ function AdCardView({ c, open }: { c: AdCard; open: boolean }) {
 
         <Block n={5} title="Link and names">
           <CopyField label="Link" text={c.link.url} mono copyLabel={`Copy the ${c.id} link`} />
-          <p className="tiny muted">Leave the platform's URL-parameter field empty: the /go/ link adds the tags. It redirects with {c.link.redirectsWith}.</p>
+          <p className="tiny muted">Leave the platform's "URL parameters" field empty: the /go/ link adds the tracking tags itself.</p>
+          <Details summary="The tags it adds">
+            <p className="tiny muted mono" style={{ overflowWrap: 'anywhere' }}>
+              {c.link.redirectsWith}
+            </p>
+          </Details>
           {c.link.fallbackUrl && <CopyField label="Fallback link" text={c.link.fallbackUrl} mono copyLabel={`Copy the ${c.id} fallback link`} />}
-          {c.link.creatorPostUrl && <p className="small">For a creator's post: {c.link.creatorPostUrl}</p>}
+          {c.link.creatorPostUrl && <p className="small">For a creator's post: {plain(c.link.creatorPostUrl)}</p>}
           {nameEntries.map(([k, v]) => (
             <CopyField key={k} label={NAME_LABEL[k] ?? k} text={v} mono copyLabel={`Copy the ${c.id} ${(NAME_LABEL[k] ?? k).toLowerCase()}`} />
           ))}
@@ -294,22 +303,43 @@ function AdCardView({ c, open }: { c: AdCard; open: boolean }) {
 
         <Block n={6} title="After 48 hours">
           <h4>Good looks like</h4>
-          <Steps items={c.goodAfter48h} ordered={false} />
+          <Steps items={c.goodAfter48h.map((x) => plain(x))} ordered={false} />
           <h4 className="stop">STOP if</h4>
-          <Steps items={c.kill.map((k) => k.replace(/->/g, '→'))} ordered={false} />
+          <Steps items={c.kill.map((k) => plain(k))} ordered={false} />
           <h4 className="scale">SCALE if</h4>
-          <Steps items={c.scale} ordered={false} />
+          <Steps items={c.scale.map((x) => plain(x))} ordered={false} />
           <p className="tiny muted">
             <Term t="CPM">CPM</Term>: cost per 1,000 views · <Term t="CTR">CTR</Term>: click rate · <Term t="CPC">CPC</Term>: cost per click · <Term t="CAC">CAC</Term>: cost per paying customer.
           </p>
         </Block>
 
         <Block n={7} title="What to log">
-          <Steps items={c.warRoomLog} ordered={false} />
-          {c.inThe1000 ? <LogSpend c={c} /> : <p className="small">Revenue-paid: log the spend on <a href={href('results')}>Results</a> (channel ch-boosts, budget line "revenue"), not in the $1,000 spend log.</p>}
+          <Steps items={c.warRoomLog.map((x) => plain(x))} ordered={false} />
+          {c.inThe1000 ? <LogSpend c={c} /> : <p className="small">Paid from revenue: log the spend on <a href={href('results')}>Results</a> (row "boosts", budget line "revenue"), not in the $1,000 spend log.</p>}
         </Block>
       </div>
     </details>
+  );
+}
+
+/** "All true …: (1) …; (2) …" as a numbered list, so each condition can be checked on its own. */
+function Trigger({ t }: { t: string }) {
+  const m = t.match(/^(.*?):\s*\(1\)\s*([\s\S]*)$/);
+  if (!m) return <p>{plain(t)}</p>;
+  const items = m[2].split(/;\s*\(\d+\)\s*/);
+  const last = items[items.length - 1].split(/\.\s+(?=[A-Z])/);
+  items[items.length - 1] = last[0].replace(/\.$/, '');
+  const tail = last.slice(1).join('. ');
+  return (
+    <>
+      <p>{plain(m[1])}:</p>
+      <ol className="trigger-list">
+        {items.map((x, i) => (
+          <li key={i}>{plain(x)}</li>
+        ))}
+      </ol>
+      {tail && <p className="small">{plain(tail)}</p>}
+    </>
   );
 }
 

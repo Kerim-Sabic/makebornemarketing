@@ -18,3 +18,6 @@ export const useAllocation = () => useStored<Record<string, number> | null>('bud
 
 /* Per-day checklists (calendar actions and the founder routine) */
 export const useChecks = () => useStored<Record<string, boolean>>('checks', {});
+
+/* The "Start here" card on Today: true once dismissed. The footer's "How to use this" link sets it back to false. */
+export const START_HERE_KEY = 'start-here-hidden';

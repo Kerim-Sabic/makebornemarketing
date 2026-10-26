@@ -2,7 +2,7 @@ import { useId, useState, type ReactNode } from 'react';
 import { CopyButton } from './ui';
 
 /** One line: a big tick box, the time, the text, and a "How" button that opens the exact steps underneath. */
-export function TickItem(props: { checked: boolean; onToggle: () => void; time?: string; text: ReactNode; tag?: ReactNode; how?: ReactNode; label: string }) {
+export function TickItem(props: { checked: boolean; onToggle: () => void; time?: string; text: ReactNode; tag?: ReactNode; sub?: ReactNode; how?: ReactNode; label: string }) {
   const [open, setOpen] = useState(false);
   const id = useId();
   return (
@@ -10,10 +10,11 @@ export function TickItem(props: { checked: boolean; onToggle: () => void; time?:
       <div className="ti-row">
         <input id={`${id}-c`} type="checkbox" className="tick" checked={props.checked} onChange={props.onToggle} aria-label={`Done: ${props.label}`} />
         <label htmlFor={`${id}-c`} className="ti-main">
-          <span className={`ti-time num ${props.time ? '' : 'is-empty'}`}>{props.time || 'Any'}</span>
+          {props.time !== undefined && <span className={`ti-time num ${props.time ? '' : 'is-empty'}`}>{props.time || 'Any time'}</span>}
           <span className="ti-text">
             {props.text}
             {props.tag && <span className="ti-tag">{props.tag}</span>}
+            {props.sub && <span className="ti-sub">{props.sub}</span>}
           </span>
         </label>
         {props.how && (

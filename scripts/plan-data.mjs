@@ -76,8 +76,35 @@ function shotCard(production, id) {
   return { id: s.id, title: s.title, for: s.for, model: s.model, mode: s.mode, cameraPreset: s.cameraPreset, durationSec: s.durationSec, aspect: s.aspect, resolution: s.resolution, takes: s.takes, credits: s.credits, prompt: s.prompt, negative: s.negative, referenceImage: s.referenceImage, keepRule: s.keepRule, gate: s.gate };
 }
 
+/**
+ * The finished file for one calendar post, from data/posting.json (scripts/sync-posting.mjs reads the render folder's POSTING.md).
+ * Ready: the file names to post (after the first slot, a "_justlaunched" variant replaces a "launched today" file), the
+ * caption and the rest of the posting sheet. Not ready: "to make", with the hand-written reason when there is one.
+ */
+export function postingFor(posting, post, date) {
+  if (!posting || !post.contentId) return null;
+  const it = posting.items.find((i) => i.id === post.contentId && i.platforms.includes(post.channel));
+  if (!it) return { ready: false, reason: posting.toMake?.[post.contentId] ?? null };
+  const after = !!it.date && date > it.date;
+  return {
+    ready: it.ready,
+    reason: it.ready ? null : posting.toMake?.[post.contentId] ?? 'Some files are missing from the renders folder.',
+    files: it.files.map((f) => (after && f.later ? f.later : f.name)),
+    laterFiles: !after ? it.files.map((f) => f.later).filter(Boolean) : [],
+    folder: posting.folder,
+    cover: it.cover,
+    caption: it.caption,
+    hashtags: it.hashtags,
+    captionNote: it.captionNote,
+    ytTitle: it.ytTitle,
+    keyword: it.keyword,
+    disclosure: it.disclosure,
+    makeUp: it.makeUp && date === it.date ? it.makeUp : null,
+  };
+}
+
 export function todayExtras(files, date) {
-  const { calendar, instagram, production, ads, kpis, creatives, videos } = files;
+  const { calendar, instagram, production, ads, kpis, creatives, videos, posting } = files;
   const week = Math.min(13, Math.max(1, weekOf(date)));
   const t = kpis.weeklyTargets[week - 1];
   const weekStart = addDays(START, (week - 1) * 7);
@@ -128,8 +155,10 @@ export function todayExtras(files, date) {
       cta: v?.cta ?? c?.cta ?? null,
       length: v ? `${v.format}, ${v.lengthSec} s` : c ? `${c.type}, ${c.size}` : null,
       igMain: !!isIgMain,
+      file: postingFor(posting, p, date),
     };
   });
+  const anyReady = posts.some((p) => p.file?.ready);
 
   return {
     week,
@@ -140,6 +169,9 @@ export function todayExtras(files, date) {
     ads: dueAds,
     money,
     posts,
+    reminders: (posting?.reminders ?? []).filter((r) => r.date === date),
+    // The one-time "Before posting" checklist rides along on every day that has a finished file.
+    beforePosting: anyReady ? posting.beforePosting ?? [] : [],
   };
 }
 

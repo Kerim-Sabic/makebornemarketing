@@ -99,16 +99,64 @@ export const GLOSSARY: Record<string, string> = {
   Partnership: "Meta partnership ad: pays to show a creator's own Reel, under their name and ours.",
   'net payers': 'Paying customers after refunds.',
   'activated payers': 'Paying customers who sent a client review link, or published or exported a deck or book, within 7 days.',
+  TAAFT: "There's An AI For That: a large directory of AI tools. Our first paid listing.",
+  Uneed: 'A launch directory for new products, with paid pick-your-date launch slots.',
+  PPC: 'Pay-per-click: ads you pay for only when someone clicks.',
+  attribution: 'Knowing which post, ad or creator each visitor and customer came from (the /go/ links do this).',
+  'spend gate': 'The rule that no money is spent on ads or creators until the tracking links work.',
+  blackout: 'The days with no paid ads at all (20 Nov to 2 Dec, when Black Friday makes ads expensive).',
+  'Lane A': 'Creators who sell websites: freelance web designers, agencies, "sell sites to local businesses".',
+  'Lane B': 'Creators who make decks, productivity or side-hustle content.',
+  'wave-1': 'The first group of 5 paid creators (they post between 10 and 22 Nov).',
+  'wave-2': 'The second, smaller group of paid creators, for image-led builds.',
+  beat: 'A feature-launch moment: posts about a feature that go out only once that feature is live.',
+  Whop: 'The checkout and payments service Makeborne sells through.',
+  pixel: 'A tracking snippet from Meta, TikTok or Google on the website. Not installed before the consent banner.',
+  'Advantage+': "Meta's automatic audience: Meta decides who sees the ad within our limits.",
+  UGC: 'User-generated content: videos made by creators instead of by us.',
+  speedrun: 'A video of one build in real time, start to finish.',
+  'end card': 'The last seconds of a video: logo, price and where to click.',
+  'go/no-go': 'A yes-or-no decision on a set day.',
+  gated: 'Waiting for a condition (for example a feature going live) before it can run.',
+  organic: 'Not paid: normal posts.',
+  'gross payers': 'New paying customers before refunds.',
 };
 
-/** A word with its plain meaning on hover, focus and tap. */
-export function Term({ t, children }: { t: string; children?: ReactNode }) {
-  const meaning = GLOSSARY[t];
+/**
+ * A word or code with its plain meaning: hover or focus shows it as a tooltip, and a tap opens it inline (phones have no
+ * hover). Inside a tick-box label or a <summary>, the tap only opens the meaning; it does not tick or toggle.
+ */
+export function Term({ t, children, meaning: given }: { t: string; children?: ReactNode; meaning?: string }) {
+  const meaning = given ?? GLOSSARY[t];
+  const [open, setOpen] = useState(false);
   if (!meaning) return <>{children ?? t}</>;
+  const toggle = (e: { preventDefault: () => void; stopPropagation: () => void }) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setOpen((o) => !o);
+  };
   return (
-    <abbr className="term" title={meaning} tabIndex={0}>
-      {children ?? t}
-    </abbr>
+    <>
+      <abbr
+        className="term"
+        title={meaning}
+        tabIndex={0}
+        role="button"
+        aria-expanded={open}
+        onClick={toggle}
+        onKeyDown={(e) => {
+          if (e.key === 'Enter' || e.key === ' ') toggle(e);
+          else if (e.key === 'Escape') setOpen(false);
+        }}
+      >
+        {children ?? t}
+      </abbr>
+      {open && (
+        <span className="term-tip" role="note">
+          {meaning}
+        </span>
+      )}
+    </>
   );
 }
 

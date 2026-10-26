@@ -94,13 +94,13 @@ export default function Funnel() {
 
   return (
     <Page
-      eyebrow="Model of record · data/funnel.json · 91 days"
+      eyebrow="The model behind the plan · 91 days"
       title={
         <>
           The funnel, <em>day by day</em>
         </>
       }
-      lede="A daily cohort model: organic and paid visits, conversion, refunds, churn, loops and the D4 reinvestment rule. Pick a preset, then move the sliders. Every input carries its evidence label."
+      lede="Pick a case (Low, Base, High …), then move the sliders to see what visits, sign-up rates and refunds do to revenue. Each input shows how sure we are of it."
     >
       <div className="row-between" style={{ marginBottom: 20 }}>
         <Segmented

@@ -1,12 +1,15 @@
 import { use, useEffect, useMemo, type ReactNode } from 'react';
-import type { CalendarDay, CalendarPost, TodayExtra } from '../lib/types';
-import { addDays, fmtDate, fmtUsd, isIsoDate, sarajevoToday, WINDOW_START } from '../lib/util';
+import type { CalendarDay, CalendarPost, PostFile, TodayExtra } from '../lib/types';
+import { addDays, fmtDate, fmtUsd, isIsoDate, sarajevoToday, useStored, WINDOW_START } from '../lib/util';
 import { LAST_DAY, hasDay, loadDay } from '../lib/calendarIndex';
 import { useActuals, useChecks } from '../lib/stores';
 import { weekPace } from '../lib/pace';
 import { CopyField, Steps, TickItem } from '../components/Checklist';
 import { HfShotBody } from '../components/HfShot';
-import { href, type RouteProps } from '../routes';
+import { Details } from '../components/ui';
+import { plain } from '../lib/plain';
+import { START_HERE_KEY } from '../lib/stores';
+import { href, ROUTES, type RouteProps } from '../routes';
 
 /** Ticks are keyed by the action's text, so reordering or inserting actions in calendar.json keeps them on the right action. */
 const actionKey = (date: string, what: string) => `${date}:${what.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 48)}`;
@@ -31,7 +34,7 @@ function clampDate(d: string) {
   return d;
 }
 
-interface Item { key: string; time: string; text: ReactNode; label: string; tag?: ReactNode; how?: ReactNode }
+interface Item { key: string; time: string; text: ReactNode; label: string; tag?: ReactNode; sub?: ReactNode; how?: ReactNode }
 type GroupId = 'post' | 'make' | 'ads' | 'reach' | 'log';
 const GROUPS: { id: GroupId; title: string; hint: string }[] = [
   { id: 'post', title: 'Post', hint: 'Times are Sarajevo time (CET)' },
@@ -68,9 +71,20 @@ export default function Today({ params }: RouteProps) {
   const firmUsd = firm.reduce((s, m) => s + m.usd, 0);
   const maybeUsd = maybe.reduce((s, m) => s + m.usd, 0);
   const isToday = date === clampDate(realToday);
+  const [startHidden, setStartHidden] = useStored<boolean>(START_HERE_KEY, false);
+  const before = x.beforePosting ?? [];
+  const beforeDone = before.filter((b) => checks[`before-posting:${b.key}`]).length;
+  const beforeList = (
+    <ul className="ticklist">
+      {before.map((b) => (
+        <TickItem key={b.key} checked={!!checks[`before-posting:${b.key}`]} onToggle={() => toggle(`before-posting:${b.key}`)} text={b.text} label={b.text} how={<p className="small">{plain(b.how)}</p>} />
+      ))}
+    </ul>
+  );
 
   return (
     <div className="page page-narrow today">
+      {!startHidden && <StartHere onClose={() => setStartHidden(true)} />}
       <header className="today-head">
         <div className="day-nav" role="group" aria-label="Change day">
           <button type="button" className="btn btn-ghost btn-nav" onClick={() => go(addDays(date, -1))} disabled={date <= WINDOW_START} aria-label="Previous day">
@@ -83,6 +97,18 @@ export default function Today({ params }: RouteProps) {
               </a>
             ) : (
               <span className="small muted">Today</span>
+            )}
+            {startHidden && (
+              <button
+                type="button"
+                className="btn btn-sm btn-ghost"
+                onClick={() => {
+                  setStartHidden(false);
+                  window.scrollTo({ top: 0 });
+                }}
+              >
+                How to use this
+              </button>
             )}
           </div>
           <button type="button" className="btn btn-ghost btn-nav" onClick={() => go(addDays(date, 1))} disabled={date >= LAST_DAY} aria-label="Next day">
@@ -126,9 +152,20 @@ export default function Today({ params }: RouteProps) {
               </h2>
               <span className="tiny muted">{g.hint}</span>
             </div>
+            {g.id === 'post' && before.length > 0 &&
+              (beforeDone < before.length ? (
+                <div className="before-post" role="group" aria-labelledby="bp-h">
+                  <p id="bp-h" className="before-post-h">
+                    <b>Before you post anything</b> <span className="muted num">{beforeDone}/{before.length}</span> <span className="tiny muted">· once, not every day</span>
+                  </p>
+                  {beforeList}
+                </div>
+              ) : (
+                <Details summary={<span className="small">✓ Before posting: all {before.length} done (music, DM keywords, DM text)</span>}>{beforeList}</Details>
+              ))}
             <ul className="ticklist">
               {groups[g.id].map((i) => (
-                <TickItem key={i.key} checked={!!checks[i.key]} onToggle={() => toggle(i.key)} time={i.time} text={i.text} tag={i.tag} how={i.how} label={i.label} />
+                <TickItem key={i.key} checked={!!checks[i.key]} onToggle={() => toggle(i.key)} time={i.time} text={i.text} tag={i.tag} sub={i.sub} how={i.how} label={i.label} />
               ))}
             </ul>
           </section>
@@ -139,6 +176,78 @@ export default function Today({ params }: RouteProps) {
       </p>
     </div>
   );
+}
+
+const HOW_STEPS: ReactNode[] = [
+  'Each morning, open Today.',
+  <>
+    Do the items from top to bottom. Tap <b>How</b> for the exact words, links and files.
+  </>,
+  'Tick each one off when it is done.',
+  <>
+    Each evening, type your numbers into <a href={href('results')}>Results</a>.
+  </>,
+  <>
+    On Sunday, read this week's card on <a href={href('plan')}>Plan</a> and the verdict on <a href={href('results')}>Results</a>.
+  </>,
+];
+const TAB_USE: Record<string, string> = {
+  today: "today's list: what to post, make and send",
+  plan: 'the 13 weeks, the money for each week and the decisions',
+  ads: 'each ad, click by click, on the day it is due',
+  results: 'your numbers each evening, and the verdict',
+  library: 'every video, image, playbook and tool',
+};
+
+/** The first-visit card: five steps and one line per tab. Hidden with "Got it"; "How to use this" brings it back. */
+function StartHere({ onClose }: { onClose: () => void }) {
+  return (
+    <section className="start-here card" aria-labelledby="start-h">
+      <div className="start-here-top">
+        <div>
+          <p className="kicker">New here?</p>
+          <h2 id="start-h">Start here</h2>
+        </div>
+        <button type="button" className="btn btn-sm" onClick={onClose}>
+          Got it, hide this
+        </button>
+      </div>
+      <ol className="start-steps">
+        {HOW_STEPS.map((s, i) => (
+          <li key={i}>{s}</li>
+        ))}
+      </ol>
+      <dl className="start-tabs">
+        {ROUTES.map((r) => (
+          <div key={r.id}>
+            <dt>
+              <a href={href(r.id)}>{r.label}</a>
+            </dt>
+            <dd>{TAB_USE[r.id] ?? r.blurb}</dd>
+          </div>
+        ))}
+      </dl>
+      <p className="tiny muted">To see this again, tap "How to use this" at the top of Today or at the bottom of any page.</p>
+    </section>
+  );
+}
+
+/** "File: V01_reel_9x16.mp4 (in <the renders folder>)" under a post whose finished file exists, or why it is still to make. */
+function FileLine({ f }: { f: PostFile | null }) {
+  if (!f) return null;
+  if (!f.ready) return f.reason ? <span className="ti-file is-todo">To make: {plain(f.reason)}</span> : null;
+  const files = f.files ?? [];
+  const name = files.length > 2 ? `${files[0]} … ${files[files.length - 1]}` : files.join(' + ');
+  return (
+    <span className="ti-file">
+      {files.length > 1 ? `Files (${files.length})` : 'File'}: <code>{name}</code> <span className="muted">(in {f.folder})</span>
+    </span>
+  );
+}
+
+function FileTag({ f }: { f: PostFile | null }) {
+  if (!f) return null;
+  return f.ready ? <span className="chip chip-good">✓ ready to post</span> : <span className="chip chip-muted">to make</span>;
 }
 
 function buildGroups(day: CalendarDay, x: TodayExtra, date: string): Record<GroupId, Item[]> {
@@ -160,10 +269,32 @@ function buildGroups(day: CalendarDay, x: TodayExtra, date: string): Record<Grou
           <b>{what}</b> · {p.contentId && <span className="item-id">{p.contentId}</span>} {e?.title ?? 'Open slot'}
         </>
       ),
-      tag: p.tag && p.tag !== 'live' ? <span className="chip chip-beat">Only if the feature is live</span> : p.requires ? <span className="chip chip-warn">Has a condition</span> : undefined,
+      tag: (
+        <>
+          <FileTag f={e?.file ?? null} />
+          {p.tag && p.tag !== 'live' ? <span className="chip chip-beat">Only if the feature is live</span> : p.requires ? <span className="chip chip-warn">Has a condition</span> : null}
+        </>
+      ),
+      sub: <FileLine f={e?.file ?? null} />,
       how: <PostHow post={p} e={e} ig={igMain} date={date} />,
     });
   });
+  // One-off dated reminders from data/posting.json (for example: post V01 before midnight on launch day).
+  for (const r of x.reminders ?? []) {
+    const gid: GroupId = r.group in g ? (r.group as GroupId) : 'post';
+    g[gid].push({
+      key: `${date}:rem:${slug(r.text)}`,
+      time: hm(r.time),
+      label: r.text,
+      text: <b>{r.text}</b>,
+      tag: <span className="chip chip-warn">tonight</span>,
+      how: (
+        <div className="how">
+          <p className="small">{plain(r.how)}</p>
+        </div>
+      ),
+    });
+  }
   // Instagram kick-off stories that are not already calendar posts.
   if (x.ig) {
     for (const s of x.ig.stories) {
@@ -196,7 +327,7 @@ function buildGroups(day: CalendarDay, x: TodayExtra, date: string): Record<Grou
       key: `${date}:m:${slug(m.text)}`,
       time: m.time,
       label: m.text,
-      text: cap(m.text),
+      text: plain(cap(m.text)),
       tag: m.shots.length ? `Higgsfield · ~${Math.round(m.shots.reduce((a, s) => a + s.credits, 0))} credits` : undefined,
       how: m.ids.length || m.shots.length ? (
         <div className="how">
@@ -258,14 +389,14 @@ function buildGroups(day: CalendarDay, x: TodayExtra, date: string): Record<Grou
       key: actionKey(date, a.what),
       time: lead ? hm(lead) : '',
       label: first,
-      text: numbers ? <><b>Yesterday's numbers:</b> {first.replace(/^08:00 numbers:\s*/i, '')}</> : first.replace(/^Evening:\s*/i, ''),
-      tag: a.budgetLineId ? <span className="chip chip-accent">budget {a.budgetLineId}</span> : undefined,
+      text: numbers ? <><b>Yesterday's numbers:</b> {plain(first.replace(/^08:00 numbers:\s*/i, ''))}</> : plain(cap(first.replace(/^Evening:\s*/i, ''))),
+      tag: a.budgetLineId ? <span className="chip chip-accent">budget line {a.budgetLineId}</span> : undefined,
       how:
         rest.length || a.owner || numbers ? (
           <div className="how">
             {numbers && logSteps}
-            {numbers && day.kpiCheck && <p className="small muted">{day.kpiCheck}</p>}
-            <Steps items={rest} ordered={false} />
+            {numbers && day.kpiCheck && <p className="small muted">{plain(day.kpiCheck)}</p>}
+            <Steps items={rest.map((r) => plain(r))} ordered={false} />
             <p className="tiny muted">Who: {a.owner}</p>
           </div>
         ) : undefined,
@@ -291,9 +422,9 @@ function buildGroups(day: CalendarDay, x: TodayExtra, date: string): Record<Grou
       tag: !ad.inThe1000 ? <span className="chip chip-owner">from revenue, not the $1,000</span> : undefined,
       how: (
         <div className="how">
-          <p className="small">{ad.note}</p>
+          <p className="small">{plain(ad.note)}</p>
           <p className="small">
-            <b>Only if:</b> {ad.trigger}
+            <b>Only if:</b> {plain(ad.trigger)}
           </p>
           <p className="small">
             <a className="btn btn-sm" href={href('ads', ad.id)}>
@@ -318,7 +449,7 @@ function buildGroups(day: CalendarDay, x: TodayExtra, date: string): Record<Grou
     how: (
       <div className="how">
         {logSteps}
-        {day.kpiCheck && <p className="small muted">{day.kpiCheck}</p>}
+        {day.kpiCheck && <p className="small muted">{plain(day.kpiCheck)}</p>}
       </div>
     ),
   });
@@ -329,25 +460,58 @@ function buildGroups(day: CalendarDay, x: TodayExtra, date: string): Record<Grou
 
 function PostHow({ post, e, ig, date }: { post: CalendarPost; e: TodayExtra['posts'][number] | undefined; ig: TodayExtra['ig']; date: string }) {
   const url = post.link ? goUrl(post.link) : '';
+  const f = e?.file?.ready ? e.file : null;
+  // The finished posting sheet's caption (per platform, from POSTING.md) wins over the plan's draft caption.
+  const caption = f?.caption ? [f.caption, (f.hashtags ?? []).join(' ')].filter(Boolean).join('\n\n') : e?.caption;
   return (
     <div className="how">
+      {e?.file && !e.file.ready && (
+        <p className="notice small">
+          <b>To make</b>
+          <span>{e.file.reason ? plain(e.file.reason) : 'No finished file yet: make it from the full script (link below).'}</span>
+        </p>
+      )}
+      {f && (
+        <div className="how-file">
+          {(f.files?.length ?? 0) > 2 && (
+            <p className="small">
+              <b>All {f.files?.length} files, in this order:</b> <code>{f.files?.join(', ')}</code>
+            </p>
+          )}
+          {f.laterFiles && f.laterFiles.length > 0 && (
+            <p className="small muted">
+              After today, post <code>{f.laterFiles.join(', ')}</code> instead ("We just launched").
+            </p>
+          )}
+          {f.makeUp && (
+            <p className="small muted">
+              Missed this slot? Post it {fmtDate(f.makeUp.date, { weekday: 'short', day: 'numeric', month: 'short' })} at {f.makeUp.time} instead.
+            </p>
+          )}
+          {f.cover && <p className="small"><b>Cover:</b> <code>{f.cover}</code>{post.channel === 'TikTok' ? ' (on TikTok pick the frame at 0 or 1 s: it is the same picture)' : ''}</p>}
+          {f.keyword && <p className="small"><b>Keyword:</b> {f.keyword}</p>}
+          {f.disclosure && <p className="small"><b>Ad label or AI note:</b> {f.disclosure}</p>}
+          {f.ytTitle && <CopyField label="YouTube title" text={f.ytTitle} />}
+          {f.captionNote && <p className="small muted">{cap(f.captionNote)}</p>}
+        </div>
+      )}
       {post.requires && (
         <p className="notice small">
           <b>Only if</b>
           <span>
-            {post.requires}
+            {plain(post.requires)}
             {post.fallbackContentId ? `; otherwise post ${post.fallbackContentId}` : ''}.
           </span>
         </p>
       )}
-      {ig?.main.choose && <p className="small"><b>Choose:</b> {ig.main.choose}</p>}
-      {e?.caption && <CopyField label="Caption" text={e.caption} />}
-      {!e?.caption && e?.onImage && <CopyField label="Words on the image" text={e.onImage} />}
-      {ig && <p className="small"><b>Cover:</b> {ig.main.cover}</p>}
+      {ig?.main.choose && <p className="small"><b>Choose:</b> {plain(ig.main.choose)}</p>}
+      {caption && <CopyField label={f?.caption ? (f.ytTitle ? 'Description' : 'Caption') : 'Caption'} text={caption} />}
+      {!caption && e?.onImage && <CopyField label="Words on the image" text={e.onImage} />}
+      {ig && !f?.cover && <p className="small"><b>Cover:</b> {ig.main.cover}</p>}
       {ig && <p className="small"><b>Comment keyword:</b> {ig.main.keyword} (the DM sends {ig.main.link})</p>}
       {url && <CopyField label={date < GO_LIVE ? 'Link (from Thu 29 Oct)' : 'Link'} text={url} mono copyLabel={`Copy ${post.link.split('/go/')[1] ?? 'post'} link`} />}
       {url && date < GO_LIVE && post.utm && <CopyField label="Link until /go/ is live" text={longUrl(post.utm)} mono copyLabel="Copy the long link" />}
-      {ig ? <Steps items={ig.checklist} /> : <Steps items={sentences(post.notes)} ordered={false} />}
+      {ig ? <Steps items={ig.checklist.map((c) => plain(c))} /> : <Steps items={sentences(post.notes).map((n) => plain(n))} ordered={false} />}
       <p className="small muted">
         {e?.length && `${e.length} · `}
         {post.account}

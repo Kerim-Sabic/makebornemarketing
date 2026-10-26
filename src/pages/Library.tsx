@@ -2,6 +2,7 @@ import { lazy, Suspense, useEffect, useMemo, useState, type ReactNode } from 're
 import { DOCS, docBySlug, loadSearchCorpus } from '../lib/docs';
 import { Chip, Empty, Page } from '../components/ui';
 import { href, type RouteProps } from '../routes';
+import { plain } from '../lib/plain';
 
 // Every Library page is its own chunk: opening the Library loads only this index.
 const Content = lazy(() => import('./Content'));
@@ -15,21 +16,21 @@ const Calendar = lazy(() => import('./Calendar'));
 const Strategy = lazy(() => import('./Strategy'));
 const DocPage = lazy(() => import('./Research').then((m) => ({ default: ({ slug }: { slug: string }) => <m.DocView doc={docBySlug(slug)!} back={{ href: href('library'), label: 'Library' }} /> })));
 
-interface Item { id: string; title: string; blurb: string; group: string; words: string; doc?: string; render: (rest: string[]) => ReactNode }
+interface Item { id: string; title: string; blurb: string; howto: string; group: string; words: string; doc?: string; render: (rest: string[]) => ReactNode }
 const ITEMS: Item[] = [
-  { id: 'videos', group: 'Make', title: 'Videos', blurb: '60 videos: hook, script, caption, shot list and status.', words: 'reels tiktok shorts script hook caption', render: (r) => <Content params={r} kind="videos" /> },
-  { id: 'images', group: 'Make', title: 'Images', blurb: '48 statics, carousels and stories: exact words, layout and ad variants.', words: 'creatives carousel story static picture', render: (r) => <Content params={r} kind="creatives" /> },
-  { id: 'production', group: 'Make', title: 'Production', blurb: 'How we make videos (one screen), the weekly make-list, then every per-video sheet.', words: 'hyperframes templates capture film edit', doc: 'production', render: () => <Production /> },
-  { id: 'instagram', group: 'Playbooks', title: 'Instagram playbook', blurb: 'Profile, bio links, the 12-post grid, DM keywords, stories and the first 14 days.', words: 'instagram bio dm keyword reels stories highlights', doc: 'instagram-playbook', render: () => <DocPage slug="instagram-playbook" /> },
-  { id: 'ads-playbook', group: 'Playbooks', title: 'Ads playbook', blurb: 'Why each ad, the platform rules, set-up from Bosnia, and the read-outs.', words: 'meta tiktok google spark partnership boost', doc: 'ads-playbook', render: () => <DocPage slug="ads-playbook" /> },
-  { id: 'where-to-post', group: 'Playbooks', title: 'Where to post', blurb: 'Every channel and directory, when to post there and which link to use.', words: 'channels directories taaft product hunt reddit', doc: 'where-to-post', render: () => <DocPage slug="where-to-post" /> },
-  { id: 'outreach', group: 'Playbooks', title: 'Outreach', blurb: 'Message templates, launch copy, who to contact, the partner program, the rules.', words: 'email dm templates creators press product hunt affiliate', render: (r) => <Outreach params={r} /> },
-  { id: 'strategy', group: 'Playbooks', title: 'Full strategy', blurb: 'The whole plan of record: positioning, customers, phases, channels, risks.', words: 'strategy positioning icp phases risks scenarios', render: (r) => <Strategy params={r} /> },
-  { id: 'tracking', group: 'Tools', title: 'Tracking', blurb: 'Build a /go/ link with the right tags (UTM builder), the events and consent.', words: 'utm link go code builder consent pixel', render: (r) => <Tracking params={r} /> },
-  { id: 'budget', group: 'Tools', title: 'Budget detail', blurb: 'The $1,000 by line, the allocator and the spend log.', words: 'money spend log allocation', render: () => <Budget /> },
-  { id: 'funnel', group: 'Tools', title: 'Funnel calculator', blurb: 'The 91-day model: what visits and conversion give, and what $1M a year needs.', words: 'model forecast calculator arr mrr', render: () => <Funnel /> },
-  { id: 'calendar', group: 'Tools', title: '90-day calendar', blurb: 'Every day of the plan in one grid, with its posts and actions.', words: 'calendar grid days', render: (r) => <Calendar params={r} /> },
-  { id: 'research', group: 'Evidence', title: 'Research', blurb: 'Every report with its sources and verification, and search inside every document.', words: 'reports sources evidence', render: (r) => <Research params={r} /> },
+  { id: 'videos', howto: 'Open a video when Today names it: the script, the words on screen and the caption are on its sheet.', group: 'Make', title: 'Videos', blurb: '60 videos: hook, script, caption, shot list and status.', words: 'reels tiktok shorts script hook caption', render: (r) => <Content params={r} kind="videos" /> },
+  { id: 'images', howto: 'Open an image when Today names it: the exact words, the layout and the sizes are on its sheet.', group: 'Make', title: 'Images', blurb: '48 statics, carousels and stories: exact words, layout and ad variants.', words: 'creatives carousel story static picture', render: (r) => <Content params={r} kind="creatives" /> },
+  { id: 'production', howto: 'Nothing to do here daily: Today lists what to make. Come here for the finished files and the full method.', group: 'Make', title: 'Production', blurb: 'How we make videos, what to make each week, and the sheet for every video and image.', words: 'hyperframes templates capture film edit', doc: 'production', render: () => <Production /> },
+  { id: 'instagram', howto: 'Use this when you set up or change the Instagram profile, or when Today points here.', group: 'Playbooks', title: 'Instagram playbook', blurb: 'Profile, bio links, the 12-post grid, DM keywords, stories and the first 14 days.', words: 'instagram bio dm keyword reels stories highlights', doc: 'instagram-playbook', render: () => <DocPage slug="instagram-playbook" /> },
+  { id: 'ads-playbook', howto: 'Background for the Ads tab. Read it once before the first ad; the Ads tab has the steps.', group: 'Playbooks', title: 'Ads playbook', blurb: 'Why each ad, the platform rules, setting up from Bosnia, and how to read the results.', words: 'meta tiktok google spark partnership boost', doc: 'ads-playbook', render: () => <DocPage slug="ads-playbook" /> },
+  { id: 'where-to-post', howto: "Look up a channel: when to post there and which link to use. Today already has each day's posts.", group: 'Playbooks', title: 'Where to post', blurb: 'Every channel and directory, when to post there and which link to use.', words: 'channels directories taaft product hunt reddit', doc: 'where-to-post', render: () => <DocPage slug="where-to-post" /> },
+  { id: 'outreach', howto: 'Copy a message from here when Today names a template (t01 to t23). Nothing is ever sent for you.', group: 'Playbooks', title: 'Outreach', blurb: 'Message templates, launch copy, who to contact, the partner program, the rules.', words: 'email dm templates creators press product hunt affiliate', render: (r) => <Outreach params={r} /> },
+  { id: 'strategy', howto: 'The full plan, for reference. You do not need it for the daily work.', group: 'Playbooks', title: 'Full strategy', blurb: 'The whole plan in full: what we say, who we sell to, the phases, channels and risks.', words: 'strategy positioning icp phases risks scenarios', render: (r) => <Strategy params={r} /> },
+  { id: 'tracking', howto: 'Make a new /go/ tracking link here when a post or creator needs one.', group: 'Tools', title: 'Tracking', blurb: 'Make a /go/ short link with the right tracking tags, plus the events and the cookie banner.', words: 'utm link go code builder consent pixel', render: (r) => <Tracking params={r} /> },
+  { id: 'budget', howto: 'Log each payment here (or on the ad card) so the $1,000 bar stays true.', group: 'Tools', title: 'Budget detail', blurb: 'The $1,000 by line, the allocator and the spend log.', words: 'money spend log allocation', render: () => <Budget /> },
+  { id: 'funnel', howto: 'For what-if questions: move the sliders to see what the plan needs. Not needed daily.', group: 'Tools', title: 'Funnel calculator', blurb: 'The model behind the plan: what visits and sign-up rates give, and what $1M a year needs.', words: 'model forecast calculator arr mrr', render: () => <Funnel /> },
+  { id: 'calendar', howto: 'See any day of the 90 at a glance. Tap a day to open it as a checklist on Today.', group: 'Tools', title: '90-day calendar', blurb: 'Every day of the plan in one grid, with its posts and actions.', words: 'calendar grid days', render: (r) => <Calendar params={r} /> },
+  { id: 'research', howto: 'The evidence behind the plan, for reference. Search finds any word.', group: 'Evidence', title: 'Research', blurb: 'Every report with its sources and verification, and search inside every document.', words: 'reports sources evidence', render: (r) => <Research params={r} /> },
 ];
 const GROUPS = ['Make', 'Playbooks', 'Tools', 'Evidence'];
 
@@ -43,6 +44,7 @@ export default function Library({ params }: RouteProps) {
         <span aria-hidden="true"> › </span>
         <span aria-current="page">{item.title}</span>
       </nav>
+      {params.length === 1 && <p className="lib-howto">{plain(item.howto)}</p>}
       <Suspense fallback={<div className="loading" role="status">Loading {item.title}…</div>}>{item.render(params.slice(1))}</Suspense>
     </>
   );
@@ -81,7 +83,7 @@ function LibraryIndex() {
           The <em>library</em>
         </>
       }
-      lede="Everything behind the plan: every video and image, the playbooks, the tools and the research. Search finds a section or any word inside the documents."
+      lede="Look things up here when Today sends you: every video and image, the playbooks, the tools and the research. Search finds any word."
     >
       <div className="filters" role="search">
         <div className="field grow">

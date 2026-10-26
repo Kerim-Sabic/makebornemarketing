@@ -12,8 +12,12 @@
 //    ads.json or plan.json names Higgsfield), every Higgsfield shot has a full prompt card and credits and is generated on a
 //    day and used by an item, every item says how it is made, the Higgsfield videos stay at 60-70% real / 20-30% Higgsfield,
 //    every HyperFrames slot file exists, and every A/B pair has both sides marked on the calendar.
+// 9. Checks the finished launch-week files (data/posting.json, written by scripts/sync-posting.mjs): every item names a
+//    content id, a platform and files, no media sits in the repo, the Today join links the ready files to their posts, and
+//    the sync script exits cleanly and leaves the JSON alone when the renders folder is missing (as on Netlify).
 import { createServer } from 'vite';
-import { readFileSync, existsSync, readdirSync } from 'node:fs';
+import { readFileSync, existsSync, readdirSync, mkdtempSync, rmSync, writeFileSync } from 'node:fs';
+import { tmpdir } from 'node:os';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { runForecastChecks } from './check-forecast.mjs';
@@ -75,6 +79,7 @@ try {
       calendar: j('data/calendar.json'), instagram: j('data/instagram.json'), production: j('data/production.json'), ads: j('data/ads.json'),
       kpis: j('data/kpis.json'), creatives: j('data/creatives.json'), videos: j('data/videos.json'), checkpoints: j('data/checkpoints.json'),
       plan: j('data/plan.json'), calendarMd: readFileSync(join(root, 'content/calendar.md'), 'utf8'),
+      posting: existsSync(join(root, 'data/posting.json')) ? j('data/posting.json') : null,
     };
     let money = 0;
     let make = 0;
@@ -226,6 +231,85 @@ try {
     if (failures === before) console.log(`  ok   production budget separate from the $1,000 ($${B.month1.totalUSD} month 1, cap $${B.month1.capUSD}); ${H.shots.length} shots, each with a prompt, negative and credits; mix ${realPct}% real / ${hfPct}% Higgsfield; ${H.abTests.pairs.length} A/B pairs on the calendar`);
   }
 
+  // ---------- finished files (data/posting.json, scripts/sync-posting.mjs) ----------
+  console.log('\nFinished launch-week files (data/posting.json and scripts/sync-posting.mjs)');
+  {
+    const before = failures;
+    const P = JSON.parse(readFileSync(join(root, 'data/posting.json'), 'utf8'));
+    const ok = Array.isArray(P.items) && P.items.length > 0 && typeof P.folder === 'string';
+    if (!ok) fail('data/posting.json has no items or no folder');
+    const contentIds = new Set([...JSON.parse(readFileSync(join(root, 'data/videos.json'), 'utf8')).map((v) => v.id), ...JSON.parse(readFileSync(join(root, 'data/creatives.json'), 'utf8')).map((c) => c.id)]);
+    for (const it of P.items ?? []) {
+      if (!contentIds.has(it.id)) fail(`posting.json: ${it.id} is not a video or image in the plan`);
+      if (!it.platforms?.length || !it.files?.length) fail(`posting.json: ${it.id} has no platform or no files`);
+      for (const f of it.files ?? []) if (!/^[\w.-]+\.(mp4|mov|jpe?g|png|webp)$/i.test(f.name) || /[\\/]/.test(f.name)) fail(`posting.json: ${it.id} file "${f.name}" is not a plain file name`);
+      if (it.ready && !it.files.every((f) => f.exists)) fail(`posting.json: ${it.id} is marked ready with a missing file`);
+      if (it.date && !/^\d{4}-\d{2}-\d{2}$/.test(it.date)) fail(`posting.json: ${it.id} date ${it.date}`);
+    }
+    for (const k of ['toMake', 'beforePosting', 'reminders']) if (!P[k]) fail(`posting.json: hand-written ${k} is missing`);
+    for (const id of ['V04', 'V07', 'V08', 'V09', 'V10', 'C02', 'C05', 'C15', 'C17']) if (!P.toMake?.[id]) fail(`posting.json: no "to make" reason for ${id}`);
+    if ((P.beforePosting ?? []).length !== 3) fail('posting.json: the before-posting checklist should have its 3 steps');
+    // No media in the repository: paths only.
+    const media = [];
+    const walkMedia = (dir) => {
+      for (const e of readdirSync(join(root, dir), { withFileTypes: true })) {
+        if (['node_modules', 'dist', '.git', 'private'].includes(e.name)) continue;
+        const rel = `${dir}/${e.name}`;
+        if (e.isDirectory()) walkMedia(rel);
+        else if (/\.(mp4|mov|webm)$/i.test(e.name) || /^[VC]\d{2}_.*\.(jpe?g|png)$/i.test(e.name)) media.push(rel);
+      }
+    };
+    walkMedia('.');
+    if (media.length) fail(`media files in the repo (keep them in the renders folder): ${media.slice(0, 5).join(', ')}`);
+    // The Today join: every ready item that has a calendar slot is linked from that day's post.
+    const { todayExtras } = await import('./plan-data.mjs');
+    const j = (p) => JSON.parse(readFileSync(join(root, p), 'utf8'));
+    const files = {
+      calendar: j('data/calendar.json'), instagram: j('data/instagram.json'), production: j('data/production.json'), ads: j('data/ads.json'),
+      kpis: j('data/kpis.json'), creatives: j('data/creatives.json'), videos: j('data/videos.json'), checkpoints: j('data/checkpoints.json'),
+      plan: j('data/plan.json'), calendarMd: readFileSync(join(root, 'content/calendar.md'), 'utf8'), posting: P,
+    };
+    let linked = 0;
+    let toMake = 0;
+    for (const d of files.calendar) {
+      const x = todayExtras(files, d.date);
+      linked += x.posts.filter((p) => p.file?.ready).length;
+      toMake += x.posts.filter((p) => p.file && !p.file.ready).length;
+      if (x.posts.some((p) => p.file?.ready) && x.beforePosting.length !== 3) fail(`today ${d.date}: a ready post without the before-posting checklist`);
+    }
+    for (const it of (P.items ?? []).filter((i) => i.ready && i.date)) {
+      const x = todayExtras(files, it.date);
+      const day = files.calendar.find((d) => d.date === it.date);
+      const hit = day?.posts.findIndex((p) => p.contentId === it.id && it.platforms.includes(p.channel));
+      if (hit >= 0 && !x.posts[hit].file?.ready) fail(`today ${it.date}: ${it.id} on ${day.posts[hit].channel} is not linked to its file`);
+    }
+    const launch = todayExtras(files, '2026-10-26');
+    if (!launch.reminders.some((r) => /V01 before midnight/.test(r.text))) fail('26 Oct has no "Post V01 before midnight" item');
+    const v01 = todayExtras(files, '2026-10-26').posts.find((p, i) => files.calendar[0].posts[i].contentId === 'V01' && files.calendar[0].posts[i].channel === 'TikTok');
+    if (!v01?.file?.files?.includes('V01_tiktok_9x16.mp4') || !v01.file.laterFiles?.includes('V01_tiktok_9x16_justlaunched.mp4')) fail('26 Oct TikTok V01 does not show V01_tiktok_9x16.mp4 and its _justlaunched variant');
+    // The sync script: a missing renders folder is a no-op that exits 0 and leaves the JSON untouched.
+    const { syncPosting, parsePosting } = await import('./sync-posting.mjs');
+    const tmp = mkdtempSync(join(tmpdir(), 'mb-posting-'));
+    try {
+      const out = join(tmp, 'posting.json');
+      writeFileSync(out, '{"keep":true}');
+      const logs = [];
+      const r = syncPosting({ dir: join(tmp, 'no-such-renders-folder'), out, log: (m) => logs.push(m) });
+      if (r.synced || readFileSync(out, 'utf8') !== '{"keep":true}') fail('sync-posting changed the JSON although the folder is missing');
+      if (!/folder not found/.test(logs.join(' '))) fail('sync-posting did not say the folder is missing');
+      const r2 = syncPosting({ dir: join(tmp, 'no-such-renders-folder'), out: join(tmp, 'absent.json'), log: () => {} });
+      if (r2.synced || existsSync(join(tmp, 'absent.json'))) fail('sync-posting wrote a JSON although the folder is missing');
+      const { spawnSync } = await import('node:child_process');
+      const run = spawnSync(process.execPath, [join(root, 'scripts/sync-posting.mjs'), '--dir', join(tmp, 'missing'), '--out', join(tmp, 'cli.json')], { encoding: 'utf8' });
+      if (run.status !== 0 || existsSync(join(tmp, 'cli.json'))) fail(`node scripts/sync-posting.mjs with a missing folder exited ${run.status}`);
+      const sample = parsePosting('## Videos\n\n### V01 · "We launched today."\n\n| | |\n|---|---|\n| **TikTok** | `V01_tiktok_9x16.mp4` · calendar Mon 26 Oct 12:00 |\n| **Cover** | `V01_cover.jpg` |\n| **Keyword** | SITE |\n\nTikTok caption:\n> Hello.\n> #makeborne\n');
+      if (sample.length !== 1 || sample[0].date !== '2026-10-26' || sample[0].time !== '12:00' || sample[0].caption !== 'Hello.' || sample[0].hashtags[0] !== '#makeborne' || sample[0].cover !== 'V01_cover.jpg') fail(`parsePosting sample: ${JSON.stringify(sample[0])}`);
+    } finally {
+      rmSync(tmp, { recursive: true, force: true });
+    }
+    if (failures === before) console.log(`  ok   ${P.items.length} finished items (${P.items.filter((i) => i.ready).length} ready); ${linked} calendar posts linked to a ready file, ${toMake} say "to make"; no media in the repo; sync with a missing folder is a clean no-op`);
+  }
+
   // ---------- forecast maths ----------
   console.log('\nForecast and analytics maths (seeded)');
   try {
@@ -242,7 +326,7 @@ try {
     [/\$10 ?(?:a|\/|per) ?day (?:of (?:limit|cap) )?covers/i, 'daily AI spend figure'],
     [/45[-–]55 (?:h|hours)/i, 'staffing load'],
     [/BiH checklist|withholding tax|merchant[- ]of[- ]record|legal basis for product-update/i, 'open legal or tax question'],
-    [/Z:\\|src\/lib\/hosting|client-review-page\.tsx|LEGACY_SITE_URL_TEMPLATE|docs\/release-review|release\/minimum-launch|release worktree|alba\.makeborne\.site/i, 'internal code or infrastructure path'],
+    [/Z:\\(?!\\?makeborne-marketing\\{1,2}launch-week\\{1,2}renders)|src\/lib\/hosting|client-review-page\.tsx|LEGACY_SITE_URL_TEMPLATE|docs\/release-review|release\/minimum-launch|release worktree|alba\.makeborne\.site/i, 'internal code or infrastructure path'],
   ];
   const scanDirs = ['data', 'plan', 'research', 'content', 'src'];
   const files = ['README.md'];
@@ -277,6 +361,14 @@ try {
     const routes = [
       // The four tabs.
       ['#/today', 'Log numbers'],
+      ['#/today', 'Start here'],
+      ['#/today', 'How to use this site'],
+      ['#/today/2026-10-26', 'ready to post'],
+      ['#/today/2026-10-26', 'V01_tiktok_9x16.mp4'],
+      ['#/today/2026-10-26', 'Post V01 before midnight'],
+      ['#/today/2026-10-26', 'Before you post anything'],
+      ['#/today/2026-10-27', 'to make'],
+      ['#/today/2026-10-29', 'C06_carousel_01.jpg'],
       ['#/today/2026-10-26', 'TAAFT'],
       ['#/today/2026-11-03', 'Instagram Reel'],
       ['#/today/2026-11-11', 'Get ready A01'],

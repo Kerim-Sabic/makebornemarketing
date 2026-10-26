@@ -119,7 +119,7 @@ function ForecastSection({ fc }: { fc: Forecast }) {
   const maxShown = Math.max(...fc.band.p90, ...planVals.map((v) => v ?? 0));
   const d90 = fc.horizons.find((h) => h.date === DAY90);
   return (
-    <Section id="forecast" title="Forecast" kicker={`From ${fmtDate(a.asOf)} · base = median, range = 10th to 90th percentile`}>
+    <Section id="forecast" title="Forecast" kicker={`From ${fmtDate(a.asOf)} · the middle guess, and a likely range (8 in 10 outcomes land inside it)`}>
       {d90 && (
         <div className="statband" style={{ marginBottom: 16 }}>
           <Stat label={`MRR on ${short(DAY90)}`} value={fmtCompactUsd(d90.mrr.p50)} sub={`range ${range(d90.mrr, fmtCompactUsd)}`} tone="accent" />
@@ -201,7 +201,7 @@ function BandCell({ b, f }: { b: Band; f: (n: number) => string }) {
 function Probabilities({ fc }: { fc: Forecast }) {
   const title = (date: string) => CHECKPOINTS.find((c) => c.date === date)?.title;
   return (
-    <Section id="chances" title="Chance of each checkpoint" kicker="data/checkpoints.json · share of the Monte Carlo runs that reach it">
+    <Section id="chances" title="Chance of each checkpoint" kicker="How many of 2,000 simulated futures reach each checkpoint">
       <ul className="probs">
         {fc.probabilities.map((p) => {
           const tone = p.decided ? (p.probability ? 'good' : 'bad') : p.probability >= 0.7 ? 'good' : p.probability >= 0.3 ? 'warn' : 'bad';
@@ -346,7 +346,7 @@ function Sandbox({ a, fc }: { a: Analysis; fc: Forecast | null }) {
     <Section
       id="sandbox"
       title="Scenario sandbox"
-      kicker={fc ? 'Override any input; the projection updates as you move' : 'Plan inputs blended with the few days logged: a scenario, not a forecast'}
+      kicker={fc ? 'Override any input; the projection updates as you move' : 'What if: change an input and see the result. A scenario, not a forecast'}
       aside={
         <button type="button" className="btn btn-sm btn-ghost" disabled={!touched} onClick={() => setO(NO_OVERRIDES)}>
           {fc ? 'Reset to the forecast' : 'Reset'}
@@ -418,7 +418,7 @@ function Slider(props: { label: string; value: number; min: number; max: number;
 
 function Outlook({ rows, next }: { rows: ReturnType<typeof channelOutlook>; next: ReturnType<typeof feedNext> }) {
   return (
-    <Section id="outlook" title="Channel outlook" kicker={`Each channel's own ${TRAIL_DAYS}-day trend and CAC · next 30 days`}>
+    <Section id="outlook" title="Channel outlook" kicker={`Each channel's own ${TRAIL_DAYS}-day trend and cost per customer · next 30 days`}>
       {next ? (
         <div className={`notice ${next.reason.startsWith('lowest') ? 'notice-good' : ''}`} style={{ marginBottom: 16 }}>
           <b>Feed next: {next.channel.channel}.</b>

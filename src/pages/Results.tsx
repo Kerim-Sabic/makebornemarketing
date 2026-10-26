@@ -14,8 +14,11 @@ import { Card, Folds, Page, Term } from '../components/ui';
 import { AnalyticsPanels } from './Analytics';
 import { PredictionsPanels } from './Predictions';
 import { href, type RouteProps } from '../routes';
+import { plain } from '../lib/plain';
 
 const KPIS = kpisJson as unknown as Kpis;
+/** The analytics rules' verbs, in plain words for the verdict. */
+const VERB: Record<string, string> = { Kill: 'Stop', Scale: 'Spend more', Freeze: 'Hold' };
 const CHECKPOINTS = (checkpointsJson as unknown as { checkpoints: Checkpoint[] }).checkpoints;
 
 export default function Results({ params }: RouteProps) {
@@ -57,6 +60,7 @@ export default function Results({ params }: RouteProps) {
           Your <em>numbers</em>
         </>
       }
+      lede="Each evening, type today's numbers into the table. The verdict under it says whether you are on track and what to do this week."
       actions={
         sample ? (
           <a className="btn btn-accent btn-sm" href={href('results')}>
@@ -81,7 +85,7 @@ export default function Results({ params }: RouteProps) {
       <section className="section-first" aria-labelledby="entry-h" id="entry">
         <div className="section-head">
           <div>
-            <p className="kicker">One row per channel · leave a cell empty when you do not know it</p>
+            <p className="kicker">One row per channel · leave a cell empty when you do not know it · tap a column name for its meaning</p>
             <h2 id="entry-h">Today's entry</h2>
           </div>
         </div>
@@ -107,7 +111,7 @@ export default function Results({ params }: RouteProps) {
           </li>
           <li>
             <b>This week:</b>{' '}
-            {todo.length ? todo.map((a) => `${a.verb}: ${a.text.replace(/\bch-(\w+)/g, '$1')}`).join(" ") : 'Follow the plan: post every day, reach out, and log the numbers. No paid source has enough data to change yet.'}{' '}
+            {todo.length ? plain(todo.map((a) => `${VERB[a.verb] ?? a.verb}: ${a.text}`).join(' ')) :'Follow the plan: post every day, reach out, and log the numbers. No paid source has enough data to change yet.'}{' '}
             {plan.reinvest.amount > 0 && `Put ${fmtUsd(plan.reinvest.amount)} of revenue back into the best source on Monday.`}
           </li>
           <li>
@@ -128,7 +132,7 @@ export default function Results({ params }: RouteProps) {
       <div className="section">
         <div className="section-head">
           <div>
-            <p className="kicker">Tap a panel to open it</p>
+            <p className="kicker">Optional · tap a panel to open it</p>
             <h2>The detail</h2>
           </div>
         </div>

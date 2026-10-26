@@ -73,13 +73,13 @@ export default function Tracking({ params }: RouteProps) {
   const tab = (['builder', 'events', 'consent', 'rules'].includes(params[0]) ? params[0] : 'builder') as Tab;
   return (
     <Page
-      eyebrow="Cookieless today · no pixels before consent"
+      eyebrow="No cookies today · no ad tracking before the cookie banner"
       title={
         <>
           Every link, <em>accounted for</em>
         </>
       }
-      lede="One lowercase standard for /go/ links and UTMs, the events the app should emit, and the consent work that must land before any ad pixel."
+      lede="Make a /go/ short link with the right tags, so every visit and sale is counted against the post, ad or creator that brought it."
     >
       <div style={{ marginBottom: 26 }}>
         <Segmented

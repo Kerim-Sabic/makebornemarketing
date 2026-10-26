@@ -1,0 +1,2522 @@
+{
+  "meta": {
+    "title": "Makeborne funnel and ARR calculator inputs",
+    "version": "2026-10-26",
+    "window": "2026-10-26 to 2027-01-24 (13 weeks, 91 days; day 1 = Mon 26 Oct 2026)",
+    "currency": "USD",
+    "labels": {
+      "F": "verified fact",
+      "S": "secondary source",
+      "V": "vendor or self-reported",
+      "E": "our estimate or arithmetic",
+      "A": "assumption to replace with week 1-2 data",
+      "O": "owner decision",
+      "U": "unverified"
+    },
+    "howToUse": "Load defaults, let the visitor pick low / base / high for each input (or type a value), run the daily model described in formulas, and show MRR, ARR, active subscribers, paid CAC and the weekly table. referenceOutputs in each scenario let the website check its implementation (match within ~1%).",
+    "masterPlan": "plan/strategy.md; data/plan.json; data/kpis.json",
+    "liveOnly": "The model promotes nothing. Inputs that depend on features that are not live are tagged beat:<feature> and must stay off until that beat passes the gate.",
+    "consistencyNotes": [
+      "1. At the research desk's own inputs (creator CPM $5, 0.6% view-to-visit, 1.0% visit-to-paid) a paid creator payer costs about $98, double the $50 gate, and Content Rewards at 0.24% click costs about $78. The plan's base (~46k visits including loops, ~$174k ARR) therefore only holds if creator traffic converts ~1.5x the blended rate or clicks at 0.8%+. The baseStrict scenario shows the downside. Check this at the 30 Nov paid-CAC check with real /go/ data (16 Nov is too early to read the creator test).",
+      "2. The plan's 50,000 base visits include ~6,000 loop visits. Here loops are modelled as payers (viralCoefficient), so qualifiedVisits in referenceOutputs is lower than 50,000; add loopVisitsImplied for a like-for-like total.",
+      "3. Yearly subscribers are not churned inside the window (the plan's model churned everyone), which lifts end MRR slightly for the same gross payers.",
+      "4. The calculator base reproduces the plan's 13-week totals (about 500 gross payers, about 390 active, about $14.5k MRR) but not its weekly table: launch week here is about 24 gross payers on about 2,350 organic visits against the plan's 35 on 3,500, because the plan's weekly visits already include paid and loop traffic. data/kpis.json weeklyTargets keep the plan-of-record table.",
+      "5. The weekly shape and channel split are estimates. Replace visitsPerDay with measured /go/ and counter data from week 2 (re-forecast rule, strategy.md 13).",
+      "6. plan.json scenarios and the strategy.md 14.2 table were regenerated from this calculator on 26 Oct 2026 (python data/funnel_model.py), so the site shows one set of numbers. The earlier hand model was higher for high and breakout: high MRR day 30 / day 60 $14.7k / $29.8k (calculator $8.9k / $23.2k) and breakout $15.4k / $45.1k (calculator $8.6k / $31.7k), because the calculator back-loads paid traffic behind the D4 reinvestment caps. Visits including loop-implied visits are about 94k for high (hand model 110k) and about 117k for breakout (hand model 150k). Under D4 (30% of weekly net cash, at most 1.5x growth a week, $150 floor, $2,000 weekly cap) breakout reinvests about $1,978 by the end of week 8 (about $989 into Content Rewards) and about $10.8k over 13 weeks (about $5.4k into Content Rewards); base about $1.8k and high about $4.6k into Content Rewards. Loops reach about 12% of breakout payers in week 8 (16% at most). scripts/check-routes.mjs fails if a plan.json scenario's mrrDay90 drifts more than 5% from its referenceOutputs.mrrEnd."
+    ]
+  },
+  "defaults": {
+    "horizonDays": {
+      "value": 91,
+      "unit": "days",
+      "label": "Model window",
+      "source": "[F] 26 Oct 2026 (day 1) to 24 Jan 2027 = 13 weeks; strategy.md section 7"
+    },
+    "prices": {
+      "value": {
+        "create": 20,
+        "studio": 49,
+        "scale": 99
+      },
+      "unit": "USD per month",
+      "source": "[F] launch pricing",
+      "yearlyUsd": {
+        "create": 192,
+        "studio": 470.4,
+        "scale": 950.4
+      }
+    },
+    "yearlyDiscount": {
+      "value": 0.2,
+      "unit": "share",
+      "source": "[F] yearly is 20% off"
+    },
+    "weeklyShape": {
+      "base": [
+        0.07,
+        0.05,
+        0.07,
+        0.08,
+        0.09,
+        0.07,
+        0.08,
+        0.08,
+        0.06,
+        0.05,
+        0.09,
+        0.1,
+        0.11
+      ],
+      "breakout": [
+        0.03,
+        0.03,
+        0.04,
+        0.05,
+        0.08,
+        0.07,
+        0.09,
+        0.09,
+        0.07,
+        0.06,
+        0.11,
+        0.13,
+        0.15
+      ],
+      "unit": "share of 90-day organic visits per week (13 values, sum 1)",
+      "source": "[A] strategy.md section 14.1: launch, creator waves, images beat (beat:images), Black Friday dip, holiday dip, January lift"
+    },
+    "visitsPerDay": {
+      "unit": "qualified visits per day, averaged over 91 days (organic and earned channels only; paid and loop traffic are computed separately)",
+      "source": "[E] strategy.md section 14.2 base source table, split by channel; low = 0.4x, high = 1.6x base",
+      "channels": {
+        "ch-tiktok": {
+          "name": "Brand TikTok (organic)",
+          "low": 35.2,
+          "base": 87.9,
+          "high": 140.7
+        },
+        "ch-instagram": {
+          "name": "Brand Instagram incl. keyword DMs (organic)",
+          "low": 26.4,
+          "base": 65.9,
+          "high": 105.5
+        },
+        "ch-youtube": {
+          "name": "YouTube Shorts and tutorials (organic)",
+          "low": 8.8,
+          "base": 22.0,
+          "high": 35.2
+        },
+        "ch-linkedin": {
+          "name": "Founder LinkedIn",
+          "low": 19.8,
+          "base": 49.5,
+          "high": 79.1
+        },
+        "ch-x": {
+          "name": "Founder X",
+          "low": 11.0,
+          "base": 27.5,
+          "high": 44.0
+        },
+        "ch-community": {
+          "name": "Indie Hackers, r/SideProject, one agency community",
+          "low": 4.4,
+          "base": 11.0,
+          "high": 17.6
+        },
+        "ch-producthunt": {
+          "name": "Product Hunt (coming-soon page, then the images launch)",
+          "low": 13.2,
+          "base": 33.0,
+          "high": 52.7
+        },
+        "ch-directories": {
+          "name": "AI directories (TAAFT, AlternativeTo, SaaSHub, Uneed...)",
+          "low": 11.0,
+          "base": 27.5,
+          "high": 44.0
+        },
+        "ch-search": {
+          "name": "Search, comparison pages, AI answers and direct (model bucket, not a plan channel id)",
+          "low": 11.0,
+          "base": 27.5,
+          "high": 44.0
+        },
+        "ch-press": {
+          "name": "Regional and European press",
+          "low": 6.6,
+          "base": 16.5,
+          "high": 26.4
+        }
+      },
+      "notes": [
+        "ch-producthunt and part of ch-directories depend on beat:images (main Product Hunt launch and the Uneed slot). If images slip, move those visits later or set them to 0.",
+        "Visits cover only makeborne.com sessions that land on a real page (home, format pages, pricing, examples). Bot and internal visits are excluded."
+      ]
+    },
+    "signupRate": {
+      "low": 0.03,
+      "base": 0.05,
+      "high": 0.055,
+      "unit": "share of qualified visits that create an account",
+      "label": "Visit to account created",
+      "source": "[A] no published benchmark for a paid-only builder with no trial; replace with week-2 data (app DB account_created / counter landing_viewed)"
+    },
+    "checkoutOpenRate": {
+      "low": 0.5,
+      "base": 0.6,
+      "high": 0.65,
+      "unit": "share of new accounts that open a Makeborne-created checkout",
+      "label": "Account to checkout opened",
+      "source": "[A] account creation sits before plan choice in the launch funnel (product-funnel-audit.md section 2)"
+    },
+    "checkoutToPaidRate": {
+      "low": 0.2667,
+      "base": 0.3333,
+      "high": 0.3637,
+      "unit": "share of opened checkouts that pay",
+      "label": "Checkout opened to paid",
+      "source": "[A] measure from day 1: checkout records vs Whop payment.succeeded"
+    },
+    "paidRate": {
+      "low": 0.1333,
+      "base": 0.2,
+      "high": 0.2364,
+      "unit": "share of new accounts that pay within 30 days",
+      "label": "Account to paid",
+      "source": "[E] checkoutOpenRate x checkoutToPaidRate",
+      "note": "visit-to-paid = signupRate x paidRate = 0.4% / 1.0% / 1.3% (1.6% breakout), the plan's scenario inputs (strategy.md section 14.2)"
+    },
+    "planMix": {
+      "low": {
+        "create": 0.65,
+        "studio": 0.27,
+        "scale": 0.08
+      },
+      "base": {
+        "create": 0.55,
+        "studio": 0.35,
+        "scale": 0.1
+      },
+      "high": {
+        "create": 0.5,
+        "studio": 0.38,
+        "scale": 0.12
+      },
+      "unit": "share of new payers by plan",
+      "source": "[A] strategy.md section 14.2"
+    },
+    "yearlyShare": {
+      "low": 0.15,
+      "base": 0.15,
+      "high": 0.15,
+      "unit": "share of new payers on yearly plans",
+      "label": "Yearly share",
+      "source": "[A] strategy.md section 14.1"
+    },
+    "monthlyChurn": {
+      "low": 0.12,
+      "base": 0.1,
+      "high": 0.08,
+      "unit": "share of monthly subscribers who do not renew at each 30-day renewal",
+      "label": "Monthly churn",
+      "source": "[A] strategy.md section 14.2; yearly subscribers do not churn inside the window"
+    },
+    "refundRate": {
+      "low": 0.2,
+      "base": 0.15,
+      "high": 0.12,
+      "unit": "share of gross payers refunded within 14 days",
+      "label": "Refund rate",
+      "source": "[A] strategy.md guardrail 15%; brake at 20% per source"
+    },
+    "viralCoefficient": {
+      "low": 0.03,
+      "base": 0.1,
+      "high": 0.12,
+      "unit": "new gross payers from product loops per active subscriber per 30 days",
+      "label": "Loop coefficient (k, monthly)",
+      "source": "[A] calibrated so loops reach ~15% of weekly payers by week 13 in base (plan target 20%, which also counts affiliates; affiliates sit in the creators bucket here)",
+      "note": "Loops = review page 'Review powered by Makeborne', badge with UTM and referral code, referral credits, deck and book share links. Most of these are product asks 6, 12 and 13 and are not live at launch, so k is near 0 until they ship."
+    },
+    "creatorCPM": {
+      "low": 20,
+      "base": 5,
+      "high": 3,
+      "unit": "USD per 1,000 creator views, all-in (flat fee + per-view bonus)",
+      "label": "Paid creator effective CPM",
+      "source": "[E] $60 for 2 videos at 1,500 / 6,000 / 10,000 views per post (research/paid-acquisition.md section 9.2 views per post; high is our midpoint)"
+    },
+    "creatorClickRate": {
+      "low": 0.003,
+      "base": 0.008,
+      "high": 0.009,
+      "unit": "/go/ visits per creator view",
+      "label": "Creator view to visit",
+      "source": "[A] research/paid-acquisition.md 9.2 uses 0.3 / 0.6 / 1.0%; research/short-form-video.md section 12 'good' funnel 0.8%. Base uses 0.8% with format-matched pages and use-my-brief links"
+    },
+    "adCPC": {
+      "low": 2.0,
+      "base": 1.0,
+      "high": 0.7,
+      "unit": "USD per link click on boosted posts (Spark / partnership)",
+      "label": "Boost CPC",
+      "source": "[V] Meta SaaS median CPC ~$2.02 (Superads, Jul 2025-Jul 2026); TikTok utility software CPC $1.22 (Focus Digital, 2025); plan kill rule CPC > $2"
+    },
+    "contentRewardsCPM": {
+      "low": 1.65,
+      "base": 1.65,
+      "high": 1.6,
+      "unit": "USD per 1,000 approved views, incl. ~3% processing",
+      "label": "Content Rewards CPM",
+      "source": "[F] plan rate $1.60 per 1,000 (Lovable's effective $1.56; contentrewards.com campaign page read 26 Oct 2026) + ~3% processing [A]"
+    },
+    "contentRewardsClickRate": {
+      "low": 0.0015,
+      "base": 0.003,
+      "high": 0.004,
+      "unit": "visits per approved Content Rewards view",
+      "label": "Content Rewards view to visit",
+      "source": "[A] plan base implies ~0.24% (1.9M views -> 4,500 visits, strategy.md 14.2); research/platforms-community.md uses 0.2-0.5%"
+    },
+    "paidConversionMultiplier": {
+      "low": 1.0,
+      "base": 1.5,
+      "high": 1.6,
+      "unit": "x the blended visit-to-paid rate, for creator and Content Rewards visits (boosts stay 1.0)",
+      "label": "Warm-traffic uplift",
+      "source": "[A] creator traffic arrives through use-my-brief links and format-matched pages; unproven. See consistency note 1"
+    },
+    "paymentFees": {
+      "pct": {
+        "low": 0.07,
+        "base": 0.05,
+        "high": 0.045
+      },
+      "fixedUsd": 0.3,
+      "unit": "share of payment + fixed per payment",
+      "source": "[F] docs.whop.com/fees: 2.7% + $0.30, +1.5% international, +1% FX, optional add-ons (Billing 0.5%, Tax 2%); base assumes ~5% blended [A]"
+    },
+    "reinvestment": {
+      "share": 0.3,
+      "reducedShare": 0.1,
+      "startWeek": 3,
+      "cacTargetUsd": 50,
+      "minPaidPayers": 3,
+      "contentRewardsShare": 0.5,
+      "contentRewardsMinMrrUsd": 1500,
+      "maxWeeklyUsd": {
+        "low": 300,
+        "base": 500,
+        "high": 1500,
+        "breakout": 2000
+      },
+      "maxWeeklyGrowth": 1.5,
+      "growthFloorUsd": 150,
+      "source": "[O] decision D4 (strategy.md 6.3): 30% of last week's net new cash into sources at or under target CAC, 10% when CAC is up to 25% above, 0% beyond. Weekly cap and +50%/week growth cap [A] stand in for creator supply and the +20-30% per 48-72 h scale step"
+    },
+    "budget": {
+      "totalUsd": 1000,
+      "visitLines": [
+        {
+          "lineId": "b2",
+          "bucket": "creators",
+          "usd": 300,
+          "weeks": [
+            3,
+            4
+          ],
+          "note": "Wave-1 flat fees; posts 9-22 Nov"
+        },
+        {
+          "lineId": "b3",
+          "bucket": "creators",
+          "usd": 90,
+          "weeks": [
+            3,
+            4
+          ],
+          "note": "Wave-1 per-view bonus pool"
+        },
+        {
+          "lineId": "b4",
+          "bucket": "creators",
+          "usd": 140,
+          "weeks": [
+            5,
+            6
+          ],
+          "note": "Wave-2 visual creators only after images pass the gate (beat:images); else rehire best wave-1 creator"
+        },
+        {
+          "lineId": "b5",
+          "bucket": "boosts",
+          "usd": 104,
+          "weeks": [
+            3
+          ],
+          "note": "Boost slot A (TikTok Spark 2 days x $52), no earlier than 9 Nov"
+        },
+        {
+          "lineId": "b5",
+          "bucket": "boosts",
+          "usd": 96,
+          "weeks": [
+            6
+          ],
+          "note": "Boost slot B (Meta partnership ~$24/day x 4) from 3 Dec; no boosts 20 Nov-2 Dec"
+        },
+        {
+          "lineId": "b9",
+          "bucket": "creators",
+          "usd": 136,
+          "weeks": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "conditional": true,
+          "note": "Reserve: released only when the scale rule is met"
+        }
+      ],
+      "nonVisitLines": [
+        {
+          "lineId": "b1",
+          "usd": 49,
+          "note": "TAAFT listing; its visits sit in ch-directories"
+        },
+        {
+          "lineId": "b6",
+          "usd": 30,
+          "note": "Uneed slot on the images day (beat:images); visits in ch-directories"
+        },
+        {
+          "lineId": "b7",
+          "usd": 30,
+          "note": "Instagram DM automation; no direct visits"
+        },
+        {
+          "lineId": "b8",
+          "usd": 25,
+          "note": "Creator payout fees and FX; no direct visits"
+        }
+      ],
+      "source": "[O] plan.json budget.lines b1-b9; weeks are our placement of the plan's timing"
+    },
+    "activationRate": {
+      "weeks1to4": 0.6,
+      "after": 0.7,
+      "unit": "share of net payers who become activated payers (north star)",
+      "source": "[A] strategy.md section 2"
+    },
+    "firstSiteBuildCostUsd": {
+      "median": 0.93,
+      "worst": 1.35,
+      "unit": "USD provider cost per first website build",
+      "source": "[F] measured 18 Oct 2026, 20 samples (product-funnel-audit.md 8.1)"
+    },
+    "firstBuildsPerPayerDay1": {
+      "value": 2,
+      "source": "[A] product-funnel-audit.md 8.1"
+    },
+    "contributionPerSubMonth": {
+      "value": {
+        "create": 13.26,
+        "studio": 32.66,
+        "scale": 65.66
+      },
+      "unit": "USD per subscriber-month at 60% credit use, after card fee and Billing + Tax add-ons",
+      "source": "[E] product-funnel-audit.md 8.2"
+    },
+    "creditCostUsd": {
+      "value": 0.03,
+      "source": "[F] about $0.03 of provider cost per credit"
+    },
+    "preview": {
+      "enabled": false,
+      "fromWeek": 4,
+      "paidRateUplift": {
+        "low": 1.1,
+        "base": 1.3,
+        "high": 1.6
+      },
+      "takeRate": 0.5,
+      "costUsd": 0.9,
+      "label": "Capped first-build preview (OWNER DECISION D2, not live)",
+      "source": "[O]/[A] strategy.md D2: about 30 credits (~$0.90), publish and export locked, one per verified email; uplift is an assumption"
+    }
+  },
+  "formulas": [
+    {
+      "id": "organicVisits",
+      "words": "Organic visits for the window = sum of visitsPerDay over all channels x horizonDays. Organic visits on a day = that total x weeklyShape[week] / 7."
+    },
+    {
+      "id": "visitToPaid",
+      "words": "Visit-to-paid = signupRate x paidRate, where paidRate = checkoutOpenRate x checkoutToPaidRate. If the preview option is on from its start week, multiply by preview.paidRateUplift."
+    },
+    {
+      "id": "budgetSpend",
+      "words": "Each budget line with a bucket (creators, boosts, contentRewards) is spread evenly across the days of its listed weeks. Lines marked conditional (the b9 reserve) are only spent in a week where the reinvestment rule allows spending (CAC test passed)."
+    },
+    {
+      "id": "costPerVisit",
+      "words": "Cost per paid visit: creators = creatorCPM / (1000 x creatorClickRate); boosts = adCPC; Content Rewards = contentRewardsCPM / (1000 x contentRewardsClickRate)."
+    },
+    {
+      "id": "paidVisits",
+      "words": "Paid visits on a day = spend in each bucket that day / that bucket's cost per visit, summed over buckets."
+    },
+    {
+      "id": "loopPayers",
+      "words": "Gross payers from loops on a day = viralCoefficient / 30 x active subscribers at the end of the previous day. Loop traffic is not added to visits; loopVisitsImplied = loop gross payers / visit-to-paid, for display only."
+    },
+    {
+      "id": "grossPaid",
+      "words": "Gross new payers on a day = organic visits x visit-to-paid + sum over paid buckets of (paid visits x visit-to-paid x paidConversionMultiplier[bucket]) + loop payers."
+    },
+    {
+      "id": "netPaid",
+      "words": "Net new payers = gross x (1 - refundRate). Refunds are taken on the day of purchase (they happen within 14 days)."
+    },
+    {
+      "id": "yearlySplit",
+      "words": "Net payers split into yearly (x yearlyShare) and monthly (x (1 - yearlyShare)). Yearly subscribers stay active for the whole window."
+    },
+    {
+      "id": "churn",
+      "words": "Each day's monthly cohort survives at each 30-day renewal: active = cohort x (1 - monthlyChurn) ^ floor(age in days / 30)."
+    },
+    {
+      "id": "blendedPrice",
+      "words": "Blended monthly list price = sum over plans of planMix x monthly price (Create $20, Studio $49, Scale $99)."
+    },
+    {
+      "id": "mrr",
+      "words": "MRR = active monthly subscribers x blended price + active yearly subscribers x blended price x (1 - yearlyDiscount). ARR = MRR x 12. Net ARPU = blended price x (1 - yearlyShare x yearlyDiscount)."
+    },
+    {
+      "id": "netNewCash",
+      "words": "Net new cash on a day = (new monthly net payers x blended price + new yearly net payers x blended price x 12 x (1 - yearlyDiscount)) x (1 - feePct) - net payers x feeFixed - preview AI cost. Renewals are excluded (the D4 rule reinvests net NEW cash)."
+    },
+    {
+      "id": "paidCac",
+      "words": "Paid CAC = cumulative paid spend / cumulative net payers from paid buckets (paid visits x visit-to-paid x multiplier x (1 - refundRate))."
+    },
+    {
+      "id": "reinvestment",
+      "words": "Every Monday from week 3: if cumulative paid net payers >= 3 and paid CAC <= $50, reinvest 30% of last week's net new cash; if CAC is within 25% above $50, reinvest 10%; otherwise 0. Cap the week at min(maxWeeklyUsd, max(growthFloorUsd, last week's reinvestment x maxWeeklyGrowth)). Send contentRewardsShare (50%) to Content Rewards once MRR >= $1,500, the rest to creator rehires."
+    },
+    {
+      "id": "activated",
+      "words": "Activated payers (north star) = net payers x activationRate (60% in weeks 1-4, 70% after)."
+    },
+    {
+      "id": "aiLimit",
+      "words": "AI daily limit needed on the peak day = peak gross payers per day x firstBuildsPerPayerDay1 x first site build cost (median $0.93, worst $1.35)."
+    },
+    {
+      "id": "contribution",
+      "words": "Monthly contribution at the end = active subscribers x sum over plans of planMix x contributionPerSubMonth. Excludes tax, hosting, email, support, disputes and payout fees."
+    },
+    {
+      "id": "previewCost",
+      "words": "If the preview is on: preview AI cost per day = (visits x signupRate) x preview.takeRate x preview.costUsd, subtracted from net new cash."
+    }
+  ],
+  "outputs": [
+    "qualifiedVisits",
+    "loopVisitsImplied",
+    "grossPaid",
+    "netPaid",
+    "activatedPayers",
+    "activeEnd",
+    "mrrDay30",
+    "mrrDay60",
+    "mrrEnd",
+    "arrEnd",
+    "netArpu",
+    "paidSpendTotal",
+    "reinvestedFromRevenue",
+    "paidCac",
+    "loopShareOverall",
+    "netNewCashFirstPayments",
+    "peakGrossPerDay",
+    "aiLimitNeededPerDayUsd",
+    "monthlyContributionEnd",
+    "previewAiCost"
+  ],
+  "scenarios": [
+    {
+      "id": "low",
+      "name": "Low",
+      "note": "No format works; the paywall before the 'wow' holds conversion at 0.4%; paid CAC never passes the $50 test, so the reserve is never released and nothing is reinvested. plan.json and strategy.md 14.2 use these calculator figures (consistency note 6).",
+      "inputs": {
+        "days": 91,
+        "weeklyShape": [
+          0.07,
+          0.05,
+          0.07,
+          0.08,
+          0.09,
+          0.07,
+          0.08,
+          0.08,
+          0.06,
+          0.05,
+          0.09,
+          0.1,
+          0.11
+        ],
+        "visitsPerDay": {
+          "ch-tiktok": 35.2,
+          "ch-instagram": 26.4,
+          "ch-youtube": 8.8,
+          "ch-linkedin": 19.8,
+          "ch-x": 11.0,
+          "ch-community": 4.4,
+          "ch-producthunt": 13.2,
+          "ch-directories": 11.0,
+          "ch-search": 11.0,
+          "ch-press": 6.6
+        },
+        "signupRate": 0.03,
+        "checkoutOpenRate": 0.5,
+        "checkoutToPaidRate": 0.2667,
+        "paidRate": 0.1333,
+        "planMix": {
+          "create": 0.65,
+          "studio": 0.27,
+          "scale": 0.08
+        },
+        "yearlyShare": 0.15,
+        "yearlyDiscount": 0.2,
+        "monthlyChurn": 0.12,
+        "refundRate": 0.2,
+        "viralCoefficient": 0.03,
+        "creatorCPM": 20,
+        "creatorClickRate": 0.003,
+        "adCPC": 2.0,
+        "contentRewardsCPM": 1.65,
+        "contentRewardsClickRate": 0.0015,
+        "paidConversionMultiplier": {
+          "creators": 1.0,
+          "boosts": 1.0,
+          "contentRewards": 1.0
+        },
+        "feePct": 0.07,
+        "feeFixed": 0.3,
+        "budgetSchedule": [
+          {
+            "lineId": "b2",
+            "bucket": "creators",
+            "usd": 300,
+            "weeks": [
+              3,
+              4
+            ],
+            "note": "Wave-1 flat fees; posts 9-22 Nov"
+          },
+          {
+            "lineId": "b3",
+            "bucket": "creators",
+            "usd": 90,
+            "weeks": [
+              3,
+              4
+            ],
+            "note": "Wave-1 per-view bonus pool"
+          },
+          {
+            "lineId": "b4",
+            "bucket": "creators",
+            "usd": 140,
+            "weeks": [
+              5,
+              6
+            ],
+            "note": "Wave-2 visual creators only after images pass the gate (beat:images); else rehire best wave-1 creator"
+          },
+          {
+            "lineId": "b5",
+            "bucket": "boosts",
+            "usd": 104,
+            "weeks": [
+              3
+            ],
+            "note": "Boost slot A (TikTok Spark 2 days x $52), no earlier than 9 Nov"
+          },
+          {
+            "lineId": "b5",
+            "bucket": "boosts",
+            "usd": 96,
+            "weeks": [
+              6
+            ],
+            "note": "Boost slot B (Meta partnership ~$24/day x 4) from 3 Dec; no boosts 20 Nov-2 Dec"
+          },
+          {
+            "lineId": "b9",
+            "bucket": "creators",
+            "usd": 136,
+            "weeks": [
+              5,
+              6,
+              7,
+              8
+            ],
+            "conditional": true,
+            "note": "Reserve: released only when the scale rule is met"
+          }
+        ],
+        "reinvest": {
+          "startWeek": 3,
+          "share": 0.3,
+          "reducedShare": 0.1,
+          "cacTarget": 50,
+          "minPaidPayers": 3,
+          "contentRewardsShare": 0.5,
+          "contentRewardsMinMrr": 1500,
+          "maxWeeklyUsd": 300,
+          "maxWeeklyGrowth": 1.5,
+          "growthFloorUsd": 150
+        },
+        "activationRate": {
+          "weeks1to4": 0.6,
+          "after": 0.7
+        },
+        "firstBuildsPerPayerDay1": 2,
+        "firstSiteBuildCostUsd": {
+          "median": 0.93,
+          "worst": 1.35
+        },
+        "contributionPerSubMonth": {
+          "create": 13.26,
+          "studio": 32.66,
+          "scale": 65.66
+        },
+        "preview": {
+          "enabled": false,
+          "fromWeek": 4,
+          "paidRateUplift": 1.0,
+          "takeRate": 0.0,
+          "costUsd": 0.9
+        }
+      },
+      "referenceOutputs": {
+        "qualifiedVisits": 13593,
+        "grossPaid": 56,
+        "netPaid": 45,
+        "loopShareOverall": 0.032,
+        "activeEnd": 41,
+        "mrrDay30": 437,
+        "mrrDay60": 881,
+        "mrrEnd": 1345,
+        "arrEnd": 16146,
+        "paidSpendTotal": 730,
+        "reinvestedFromRevenue": 0,
+        "paidCac": 1271.2,
+        "netArpu": 33.13,
+        "visitToPaid": 0.004,
+        "loopVisitsImplied": 445,
+        "activatedPayers": 30,
+        "netNewCashFirstPayments": 3253,
+        "previewAiCost": 0,
+        "peakGrossPerDay": 0.9,
+        "aiLimitNeededPerDayUsd": [
+          2,
+          2
+        ],
+        "monthlyContributionEnd": 925
+      },
+      "referenceWeekly": [
+        {
+          "week": 1,
+          "visits": 939,
+          "signups": 28,
+          "grossPaid": 3.8,
+          "netPaid": 3.0,
+          "loopShare": 0.002,
+          "paidSpend": 0,
+          "activeSubs": 3,
+          "mrr": 100
+        },
+        {
+          "week": 2,
+          "visits": 671,
+          "signups": 20,
+          "grossPaid": 2.7,
+          "netPaid": 2.2,
+          "loopShare": 0.01,
+          "paidSpend": 0,
+          "activeSubs": 5,
+          "mrr": 172
+        },
+        {
+          "week": 3,
+          "visits": 1020,
+          "signups": 31,
+          "grossPaid": 4.1,
+          "netPaid": 3.3,
+          "loopShare": 0.011,
+          "paidSpend": 299,
+          "activeSubs": 8,
+          "mrr": 281
+        },
+        {
+          "week": 4,
+          "visits": 1102,
+          "signups": 33,
+          "grossPaid": 4.5,
+          "netPaid": 3.6,
+          "loopShare": 0.016,
+          "paidSpend": 195,
+          "activeSubs": 12,
+          "mrr": 400
+        },
+        {
+          "week": 5,
+          "visits": 1218,
+          "signups": 37,
+          "grossPaid": 5.0,
+          "netPaid": 4.0,
+          "loopShare": 0.019,
+          "paidSpend": 70,
+          "activeSubs": 16,
+          "mrr": 524
+        },
+        {
+          "week": 6,
+          "visits": 997,
+          "signups": 30,
+          "grossPaid": 4.1,
+          "netPaid": 3.3,
+          "loopShare": 0.029,
+          "paidSpend": 166,
+          "activeSubs": 19,
+          "mrr": 624
+        },
+        {
+          "week": 7,
+          "visits": 1073,
+          "signups": 32,
+          "grossPaid": 4.4,
+          "netPaid": 3.5,
+          "loopShare": 0.032,
+          "paidSpend": 0,
+          "activeSubs": 22,
+          "mrr": 731
+        },
+        {
+          "week": 8,
+          "visits": 1073,
+          "signups": 32,
+          "grossPaid": 4.5,
+          "netPaid": 3.6,
+          "loopShare": 0.037,
+          "paidSpend": 0,
+          "activeSubs": 25,
+          "mrr": 837
+        },
+        {
+          "week": 9,
+          "visits": 805,
+          "signups": 24,
+          "grossPaid": 3.4,
+          "netPaid": 2.7,
+          "loopShare": 0.054,
+          "paidSpend": 0,
+          "activeSubs": 28,
+          "mrr": 910
+        },
+        {
+          "week": 10,
+          "visits": 671,
+          "signups": 20,
+          "grossPaid": 2.9,
+          "netPaid": 2.3,
+          "loopShare": 0.069,
+          "paidSpend": 0,
+          "activeSubs": 29,
+          "mrr": 966
+        },
+        {
+          "week": 11,
+          "visits": 1207,
+          "signups": 36,
+          "grossPaid": 5.0,
+          "netPaid": 4.0,
+          "loopShare": 0.043,
+          "paidSpend": 0,
+          "activeSubs": 33,
+          "mrr": 1079
+        },
+        {
+          "week": 12,
+          "visits": 1341,
+          "signups": 40,
+          "grossPaid": 5.6,
+          "netPaid": 4.5,
+          "loopShare": 0.043,
+          "paidSpend": 0,
+          "activeSubs": 36,
+          "mrr": 1205
+        },
+        {
+          "week": 13,
+          "visits": 1475,
+          "signups": 44,
+          "grossPaid": 6.2,
+          "netPaid": 4.9,
+          "loopShare": 0.043,
+          "paidSpend": 0,
+          "activeSubs": 41,
+          "mrr": 1345
+        }
+      ]
+    },
+    {
+      "id": "base",
+      "name": "Base (plan of record)",
+      "note": "1.0% visit-to-paid; blended paid CAC ~$48 with use-my-brief links; ~$3.6k reinvested from revenue (half into Content Rewards from ~week 5). plan.json and strategy.md 14.2 use these calculator figures (consistency note 6).",
+      "inputs": {
+        "days": 91,
+        "weeklyShape": [
+          0.07,
+          0.05,
+          0.07,
+          0.08,
+          0.09,
+          0.07,
+          0.08,
+          0.08,
+          0.06,
+          0.05,
+          0.09,
+          0.1,
+          0.11
+        ],
+        "visitsPerDay": {
+          "ch-tiktok": 87.9,
+          "ch-instagram": 65.9,
+          "ch-youtube": 22.0,
+          "ch-linkedin": 49.5,
+          "ch-x": 27.5,
+          "ch-community": 11.0,
+          "ch-producthunt": 33.0,
+          "ch-directories": 27.5,
+          "ch-search": 27.5,
+          "ch-press": 16.5
+        },
+        "signupRate": 0.05,
+        "checkoutOpenRate": 0.6,
+        "checkoutToPaidRate": 0.3333,
+        "paidRate": 0.2,
+        "planMix": {
+          "create": 0.55,
+          "studio": 0.35,
+          "scale": 0.1
+        },
+        "yearlyShare": 0.15,
+        "yearlyDiscount": 0.2,
+        "monthlyChurn": 0.1,
+        "refundRate": 0.15,
+        "viralCoefficient": 0.1,
+        "creatorCPM": 5,
+        "creatorClickRate": 0.008,
+        "adCPC": 1.0,
+        "contentRewardsCPM": 1.65,
+        "contentRewardsClickRate": 0.003,
+        "paidConversionMultiplier": {
+          "creators": 1.5,
+          "boosts": 1.0,
+          "contentRewards": 1.5
+        },
+        "feePct": 0.05,
+        "feeFixed": 0.3,
+        "budgetSchedule": [
+          {
+            "lineId": "b2",
+            "bucket": "creators",
+            "usd": 300,
+            "weeks": [
+              3,
+              4
+            ],
+            "note": "Wave-1 flat fees; posts 9-22 Nov"
+          },
+          {
+            "lineId": "b3",
+            "bucket": "creators",
+            "usd": 90,
+            "weeks": [
+              3,
+              4
+            ],
+            "note": "Wave-1 per-view bonus pool"
+          },
+          {
+            "lineId": "b4",
+            "bucket": "creators",
+            "usd": 140,
+            "weeks": [
+              5,
+              6
+            ],
+            "note": "Wave-2 visual creators only after images pass the gate (beat:images); else rehire best wave-1 creator"
+          },
+          {
+            "lineId": "b5",
+            "bucket": "boosts",
+            "usd": 104,
+            "weeks": [
+              3
+            ],
+            "note": "Boost slot A (TikTok Spark 2 days x $52), no earlier than 9 Nov"
+          },
+          {
+            "lineId": "b5",
+            "bucket": "boosts",
+            "usd": 96,
+            "weeks": [
+              6
+            ],
+            "note": "Boost slot B (Meta partnership ~$24/day x 4) from 3 Dec; no boosts 20 Nov-2 Dec"
+          },
+          {
+            "lineId": "b9",
+            "bucket": "creators",
+            "usd": 136,
+            "weeks": [
+              5,
+              6,
+              7,
+              8
+            ],
+            "conditional": true,
+            "note": "Reserve: released only when the scale rule is met"
+          }
+        ],
+        "reinvest": {
+          "startWeek": 3,
+          "share": 0.3,
+          "reducedShare": 0.1,
+          "cacTarget": 50,
+          "minPaidPayers": 3,
+          "contentRewardsShare": 0.5,
+          "contentRewardsMinMrr": 1500,
+          "maxWeeklyUsd": 500,
+          "maxWeeklyGrowth": 1.5,
+          "growthFloorUsd": 150
+        },
+        "activationRate": {
+          "weeks1to4": 0.6,
+          "after": 0.7
+        },
+        "firstBuildsPerPayerDay1": 2,
+        "firstSiteBuildCostUsd": {
+          "median": 0.93,
+          "worst": 1.35
+        },
+        "contributionPerSubMonth": {
+          "create": 13.26,
+          "studio": 32.66,
+          "scale": 65.66
+        },
+        "preview": {
+          "enabled": false,
+          "fromWeek": 4,
+          "paidRateUplift": 1.0,
+          "takeRate": 0.0,
+          "costUsd": 0.9
+        }
+      },
+      "referenceOutputs": {
+        "qualifiedVisits": 40927,
+        "grossPaid": 497,
+        "netPaid": 423,
+        "loopShareOverall": 0.105,
+        "activeEnd": 394,
+        "mrrDay30": 3763,
+        "mrrDay60": 8600,
+        "mrrEnd": 14492,
+        "arrEnd": 173907,
+        "paidSpendTotal": 4462,
+        "reinvestedFromRevenue": 3596,
+        "paidCac": 47.6,
+        "netArpu": 36.91,
+        "visitToPaid": 0.01,
+        "loopVisitsImplied": 5216,
+        "activatedPayers": 287,
+        "netNewCashFirstPayments": 34878,
+        "previewAiCost": 0,
+        "peakGrossPerDay": 8.4,
+        "aiLimitNeededPerDayUsd": [
+          16,
+          23
+        ],
+        "monthlyContributionEnd": 9953
+      },
+      "referenceWeekly": [
+        {
+          "week": 1,
+          "visits": 2346,
+          "signups": 117,
+          "grossPaid": 23.7,
+          "netPaid": 20.1,
+          "loopShare": 0.008,
+          "paidSpend": 0,
+          "activeSubs": 20,
+          "mrr": 742
+        },
+        {
+          "week": 2,
+          "visits": 1676,
+          "signups": 84,
+          "grossPaid": 17.4,
+          "netPaid": 14.8,
+          "loopShare": 0.035,
+          "paidSpend": 0,
+          "activeSubs": 35,
+          "mrr": 1287
+        },
+        {
+          "week": 3,
+          "visits": 2762,
+          "signups": 138,
+          "grossPaid": 30.3,
+          "netPaid": 25.7,
+          "loopShare": 0.035,
+          "paidSpend": 299,
+          "activeSubs": 61,
+          "mrr": 2236
+        },
+        {
+          "week": 4,
+          "visits": 3250,
+          "signups": 162,
+          "grossPaid": 37.1,
+          "netPaid": 31.5,
+          "loopShare": 0.047,
+          "paidSpend": 345,
+          "activeSubs": 92,
+          "mrr": 3399
+        },
+        {
+          "week": 5,
+          "visits": 3567,
+          "signups": 178,
+          "grossPaid": 40.9,
+          "netPaid": 34.8,
+          "loopShare": 0.061,
+          "paidSpend": 329,
+          "activeSubs": 126,
+          "mrr": 4636
+        },
+        {
+          "week": 6,
+          "visits": 3099,
+          "signups": 155,
+          "grossPaid": 37.5,
+          "netPaid": 31.9,
+          "loopShare": 0.086,
+          "paidSpend": 487,
+          "activeSubs": 156,
+          "mrr": 5760
+        },
+        {
+          "week": 7,
+          "visits": 3185,
+          "signups": 159,
+          "grossPaid": 38.3,
+          "netPaid": 32.6,
+          "loopShare": 0.103,
+          "paidSpend": 297,
+          "activeSubs": 187,
+          "mrr": 6890
+        },
+        {
+          "week": 8,
+          "visits": 3195,
+          "signups": 160,
+          "grossPaid": 39.2,
+          "netPaid": 33.3,
+          "loopShare": 0.119,
+          "paidSpend": 303,
+          "activeSubs": 218,
+          "mrr": 8022
+        },
+        {
+          "week": 9,
+          "visits": 2700,
+          "signups": 135,
+          "grossPaid": 35.8,
+          "netPaid": 30.4,
+          "loopShare": 0.149,
+          "paidSpend": 403,
+          "activeSubs": 244,
+          "mrr": 9011
+        },
+        {
+          "week": 10,
+          "visits": 2530,
+          "signups": 127,
+          "grossPaid": 35.5,
+          "netPaid": 30.2,
+          "loopShare": 0.168,
+          "paidSpend": 500,
+          "activeSubs": 271,
+          "mrr": 9968
+        },
+        {
+          "week": 11,
+          "visits": 3871,
+          "signups": 194,
+          "grossPaid": 49.7,
+          "netPaid": 42.2,
+          "loopShare": 0.135,
+          "paidSpend": 500,
+          "activeSubs": 309,
+          "mrr": 11365
+        },
+        {
+          "week": 12,
+          "visits": 4206,
+          "signups": 210,
+          "grossPaid": 53.9,
+          "netPaid": 45.8,
+          "loopShare": 0.141,
+          "paidSpend": 500,
+          "activeSubs": 349,
+          "mrr": 12868
+        },
+        {
+          "week": 13,
+          "visits": 4541,
+          "signups": 227,
+          "grossPaid": 58.3,
+          "netPaid": 49.5,
+          "loopShare": 0.147,
+          "paidSpend": 500,
+          "activeSubs": 394,
+          "mrr": 14492
+        }
+      ]
+    },
+    {
+      "id": "baseStrict",
+      "name": "Base, strict research inputs",
+      "note": "Same as base but with the research desk's 0.6% creator click rate, 0.24% Content Rewards click rate and no warm-traffic uplift. Paid CAC lands near $100, the D4 rule never releases money, and day-91 ARR falls to ~$134k. This is what happens if creator traffic converts like average traffic.",
+      "inputs": {
+        "days": 91,
+        "weeklyShape": [
+          0.07,
+          0.05,
+          0.07,
+          0.08,
+          0.09,
+          0.07,
+          0.08,
+          0.08,
+          0.06,
+          0.05,
+          0.09,
+          0.1,
+          0.11
+        ],
+        "visitsPerDay": {
+          "ch-tiktok": 87.9,
+          "ch-instagram": 65.9,
+          "ch-youtube": 22.0,
+          "ch-linkedin": 49.5,
+          "ch-x": 27.5,
+          "ch-community": 11.0,
+          "ch-producthunt": 33.0,
+          "ch-directories": 27.5,
+          "ch-search": 27.5,
+          "ch-press": 16.5
+        },
+        "signupRate": 0.05,
+        "checkoutOpenRate": 0.6,
+        "checkoutToPaidRate": 0.3333,
+        "paidRate": 0.2,
+        "planMix": {
+          "create": 0.55,
+          "studio": 0.35,
+          "scale": 0.1
+        },
+        "yearlyShare": 0.15,
+        "yearlyDiscount": 0.2,
+        "monthlyChurn": 0.1,
+        "refundRate": 0.15,
+        "viralCoefficient": 0.1,
+        "creatorCPM": 5,
+        "creatorClickRate": 0.006,
+        "adCPC": 1.0,
+        "contentRewardsCPM": 1.65,
+        "contentRewardsClickRate": 0.0024,
+        "paidConversionMultiplier": {
+          "creators": 1.0,
+          "boosts": 1.0,
+          "contentRewards": 1.0
+        },
+        "feePct": 0.05,
+        "feeFixed": 0.3,
+        "budgetSchedule": [
+          {
+            "lineId": "b2",
+            "bucket": "creators",
+            "usd": 300,
+            "weeks": [
+              3,
+              4
+            ],
+            "note": "Wave-1 flat fees; posts 9-22 Nov"
+          },
+          {
+            "lineId": "b3",
+            "bucket": "creators",
+            "usd": 90,
+            "weeks": [
+              3,
+              4
+            ],
+            "note": "Wave-1 per-view bonus pool"
+          },
+          {
+            "lineId": "b4",
+            "bucket": "creators",
+            "usd": 140,
+            "weeks": [
+              5,
+              6
+            ],
+            "note": "Wave-2 visual creators only after images pass the gate (beat:images); else rehire best wave-1 creator"
+          },
+          {
+            "lineId": "b5",
+            "bucket": "boosts",
+            "usd": 104,
+            "weeks": [
+              3
+            ],
+            "note": "Boost slot A (TikTok Spark 2 days x $52), no earlier than 9 Nov"
+          },
+          {
+            "lineId": "b5",
+            "bucket": "boosts",
+            "usd": 96,
+            "weeks": [
+              6
+            ],
+            "note": "Boost slot B (Meta partnership ~$24/day x 4) from 3 Dec; no boosts 20 Nov-2 Dec"
+          },
+          {
+            "lineId": "b9",
+            "bucket": "creators",
+            "usd": 136,
+            "weeks": [
+              5,
+              6,
+              7,
+              8
+            ],
+            "conditional": true,
+            "note": "Reserve: released only when the scale rule is met"
+          }
+        ],
+        "reinvest": {
+          "startWeek": 3,
+          "share": 0.3,
+          "reducedShare": 0.1,
+          "cacTarget": 50,
+          "minPaidPayers": 3,
+          "contentRewardsShare": 0.5,
+          "contentRewardsMinMrr": 1500,
+          "maxWeeklyUsd": 500,
+          "maxWeeklyGrowth": 1.5,
+          "growthFloorUsd": 150
+        },
+        "activationRate": {
+          "weeks1to4": 0.6,
+          "after": 0.7
+        },
+        "firstBuildsPerPayerDay1": 2,
+        "firstSiteBuildCostUsd": {
+          "median": 0.93,
+          "worst": 1.35
+        },
+        "contributionPerSubMonth": {
+          "create": 13.26,
+          "studio": 32.66,
+          "scale": 65.66
+        },
+        "preview": {
+          "enabled": false,
+          "fromWeek": 4,
+          "paidRateUplift": 1.0,
+          "takeRate": 0.0,
+          "costUsd": 0.9
+        }
+      },
+      "referenceOutputs": {
+        "qualifiedVisits": 34351,
+        "grossPaid": 386,
+        "netPaid": 329,
+        "loopShareOverall": 0.111,
+        "activeEnd": 304,
+        "mrrDay30": 3424,
+        "mrrDay60": 7102,
+        "mrrEnd": 11177,
+        "arrEnd": 134129,
+        "paidSpendTotal": 730,
+        "reinvestedFromRevenue": 0,
+        "paidCac": 102.7,
+        "netArpu": 36.91,
+        "visitToPaid": 0.01,
+        "loopVisitsImplied": 4297,
+        "activatedPayers": 221,
+        "netNewCashFirstPayments": 27095,
+        "previewAiCost": 0,
+        "peakGrossPerDay": 6.3,
+        "aiLimitNeededPerDayUsd": [
+          12,
+          17
+        ],
+        "monthlyContributionEnd": 7678
+      },
+      "referenceWeekly": [
+        {
+          "week": 1,
+          "visits": 2346,
+          "signups": 117,
+          "grossPaid": 23.7,
+          "netPaid": 20.1,
+          "loopShare": 0.008,
+          "paidSpend": 0,
+          "activeSubs": 20,
+          "mrr": 742
+        },
+        {
+          "week": 2,
+          "visits": 1676,
+          "signups": 84,
+          "grossPaid": 17.4,
+          "netPaid": 14.8,
+          "loopShare": 0.035,
+          "paidSpend": 0,
+          "activeSubs": 35,
+          "mrr": 1287
+        },
+        {
+          "week": 3,
+          "visits": 2684,
+          "signups": 134,
+          "grossPaid": 27.9,
+          "netPaid": 23.7,
+          "loopShare": 0.038,
+          "paidSpend": 299,
+          "activeSubs": 59,
+          "mrr": 2162
+        },
+        {
+          "week": 4,
+          "visits": 2915,
+          "signups": 146,
+          "grossPaid": 30.8,
+          "netPaid": 26.2,
+          "loopShare": 0.053,
+          "paidSpend": 195,
+          "activeSubs": 85,
+          "mrr": 3128
+        },
+        {
+          "week": 5,
+          "visits": 3100,
+          "signups": 155,
+          "grossPaid": 33.3,
+          "netPaid": 28.3,
+          "loopShare": 0.068,
+          "paidSpend": 70,
+          "activeSubs": 112,
+          "mrr": 4125
+        },
+        {
+          "week": 6,
+          "visits": 2526,
+          "signups": 126,
+          "grossPaid": 28.1,
+          "netPaid": 23.9,
+          "loopShare": 0.101,
+          "paidSpend": 166,
+          "activeSubs": 134,
+          "mrr": 4954
+        },
+        {
+          "week": 7,
+          "visits": 2681,
+          "signups": 134,
+          "grossPaid": 30.2,
+          "netPaid": 25.7,
+          "loopShare": 0.112,
+          "paidSpend": 0,
+          "activeSubs": 158,
+          "mrr": 5832
+        },
+        {
+          "week": 8,
+          "visits": 2681,
+          "signups": 134,
+          "grossPaid": 30.7,
+          "netPaid": 26.1,
+          "loopShare": 0.128,
+          "paidSpend": 0,
+          "activeSubs": 182,
+          "mrr": 6714
+        },
+        {
+          "week": 9,
+          "visits": 2011,
+          "signups": 101,
+          "grossPaid": 24.5,
+          "netPaid": 20.9,
+          "loopShare": 0.181,
+          "paidSpend": 0,
+          "activeSubs": 200,
+          "mrr": 7370
+        },
+        {
+          "week": 10,
+          "visits": 1676,
+          "signups": 84,
+          "grossPaid": 21.6,
+          "netPaid": 18.3,
+          "loopShare": 0.223,
+          "paidSpend": 0,
+          "activeSubs": 215,
+          "mrr": 7913
+        },
+        {
+          "week": 11,
+          "visits": 3016,
+          "signups": 151,
+          "grossPaid": 35.4,
+          "netPaid": 30.1,
+          "loopShare": 0.149,
+          "paidSpend": 0,
+          "activeSubs": 241,
+          "mrr": 8890
+        },
+        {
+          "week": 12,
+          "visits": 3352,
+          "signups": 168,
+          "grossPaid": 39.4,
+          "netPaid": 33.5,
+          "loopShare": 0.15,
+          "paidSpend": 0,
+          "activeSubs": 271,
+          "mrr": 9971
+        },
+        {
+          "week": 13,
+          "visits": 3687,
+          "signups": 184,
+          "grossPaid": 43.5,
+          "netPaid": 37.0,
+          "loopShare": 0.153,
+          "paidSpend": 0,
+          "activeSubs": 304,
+          "mrr": 11177
+        }
+      ]
+    },
+    {
+      "id": "basePreview",
+      "name": "Base + capped first-build preview from 16 Nov (OWNER DECISION D2)",
+      "note": "Not a plan of record. Assumes the preview lifts account-to-paid by 30% from week 4, half of new accounts use it at ~$0.90 of AI cost each. Requires owner approval, abuse limits and a legal check; numbers are illustrative.",
+      "inputs": {
+        "days": 91,
+        "weeklyShape": [
+          0.07,
+          0.05,
+          0.07,
+          0.08,
+          0.09,
+          0.07,
+          0.08,
+          0.08,
+          0.06,
+          0.05,
+          0.09,
+          0.1,
+          0.11
+        ],
+        "visitsPerDay": {
+          "ch-tiktok": 87.9,
+          "ch-instagram": 65.9,
+          "ch-youtube": 22.0,
+          "ch-linkedin": 49.5,
+          "ch-x": 27.5,
+          "ch-community": 11.0,
+          "ch-producthunt": 33.0,
+          "ch-directories": 27.5,
+          "ch-search": 27.5,
+          "ch-press": 16.5
+        },
+        "signupRate": 0.05,
+        "checkoutOpenRate": 0.6,
+        "checkoutToPaidRate": 0.3333,
+        "paidRate": 0.2,
+        "planMix": {
+          "create": 0.55,
+          "studio": 0.35,
+          "scale": 0.1
+        },
+        "yearlyShare": 0.15,
+        "yearlyDiscount": 0.2,
+        "monthlyChurn": 0.1,
+        "refundRate": 0.15,
+        "viralCoefficient": 0.1,
+        "creatorCPM": 5,
+        "creatorClickRate": 0.008,
+        "adCPC": 1.0,
+        "contentRewardsCPM": 1.65,
+        "contentRewardsClickRate": 0.003,
+        "paidConversionMultiplier": {
+          "creators": 1.5,
+          "boosts": 1.0,
+          "contentRewards": 1.5
+        },
+        "feePct": 0.05,
+        "feeFixed": 0.3,
+        "budgetSchedule": [
+          {
+            "lineId": "b2",
+            "bucket": "creators",
+            "usd": 300,
+            "weeks": [
+              3,
+              4
+            ],
+            "note": "Wave-1 flat fees; posts 9-22 Nov"
+          },
+          {
+            "lineId": "b3",
+            "bucket": "creators",
+            "usd": 90,
+            "weeks": [
+              3,
+              4
+            ],
+            "note": "Wave-1 per-view bonus pool"
+          },
+          {
+            "lineId": "b4",
+            "bucket": "creators",
+            "usd": 140,
+            "weeks": [
+              5,
+              6
+            ],
+            "note": "Wave-2 visual creators only after images pass the gate (beat:images); else rehire best wave-1 creator"
+          },
+          {
+            "lineId": "b5",
+            "bucket": "boosts",
+            "usd": 104,
+            "weeks": [
+              3
+            ],
+            "note": "Boost slot A (TikTok Spark 2 days x $52), no earlier than 9 Nov"
+          },
+          {
+            "lineId": "b5",
+            "bucket": "boosts",
+            "usd": 96,
+            "weeks": [
+              6
+            ],
+            "note": "Boost slot B (Meta partnership ~$24/day x 4) from 3 Dec; no boosts 20 Nov-2 Dec"
+          },
+          {
+            "lineId": "b9",
+            "bucket": "creators",
+            "usd": 136,
+            "weeks": [
+              5,
+              6,
+              7,
+              8
+            ],
+            "conditional": true,
+            "note": "Reserve: released only when the scale rule is met"
+          }
+        ],
+        "reinvest": {
+          "startWeek": 3,
+          "share": 0.3,
+          "reducedShare": 0.1,
+          "cacTarget": 50,
+          "minPaidPayers": 3,
+          "contentRewardsShare": 0.5,
+          "contentRewardsMinMrr": 1500,
+          "maxWeeklyUsd": 500,
+          "maxWeeklyGrowth": 1.5,
+          "growthFloorUsd": 150
+        },
+        "activationRate": {
+          "weeks1to4": 0.6,
+          "after": 0.7
+        },
+        "firstBuildsPerPayerDay1": 2,
+        "firstSiteBuildCostUsd": {
+          "median": 0.93,
+          "worst": 1.35
+        },
+        "contributionPerSubMonth": {
+          "create": 13.26,
+          "studio": 32.66,
+          "scale": 65.66
+        },
+        "preview": {
+          "enabled": true,
+          "fromWeek": 4,
+          "paidRateUplift": 1.3,
+          "takeRate": 0.5,
+          "costUsd": 0.9
+        }
+      },
+      "referenceOutputs": {
+        "qualifiedVisits": 41980,
+        "grossPaid": 644,
+        "netPaid": 547,
+        "loopShareOverall": 0.102,
+        "activeEnd": 511,
+        "mrrDay30": 4204,
+        "mrrDay60": 11114,
+        "mrrEnd": 18822,
+        "arrEnd": 225860,
+        "paidSpendTotal": 5079,
+        "reinvestedFromRevenue": 4212,
+        "paidCac": 36.9,
+        "netArpu": 36.91,
+        "visitToPaid": 0.01,
+        "loopVisitsImplied": 6539,
+        "activatedPayers": 373,
+        "netNewCashFirstPayments": 44359,
+        "previewAiCost": 792,
+        "peakGrossPerDay": 10.9,
+        "aiLimitNeededPerDayUsd": [
+          20,
+          29
+        ],
+        "monthlyContributionEnd": 12925
+      },
+      "referenceWeekly": [
+        {
+          "week": 1,
+          "visits": 2346,
+          "signups": 117,
+          "grossPaid": 23.7,
+          "netPaid": 20.1,
+          "loopShare": 0.008,
+          "paidSpend": 0,
+          "activeSubs": 20,
+          "mrr": 742
+        },
+        {
+          "week": 2,
+          "visits": 1676,
+          "signups": 84,
+          "grossPaid": 17.4,
+          "netPaid": 14.8,
+          "loopShare": 0.035,
+          "paidSpend": 0,
+          "activeSubs": 35,
+          "mrr": 1287
+        },
+        {
+          "week": 3,
+          "visits": 2762,
+          "signups": 138,
+          "grossPaid": 30.3,
+          "netPaid": 25.7,
+          "loopShare": 0.035,
+          "paidSpend": 299,
+          "activeSubs": 61,
+          "mrr": 2236
+        },
+        {
+          "week": 4,
+          "visits": 3250,
+          "signups": 162,
+          "grossPaid": 47.8,
+          "netPaid": 40.6,
+          "loopShare": 0.038,
+          "paidSpend": 345,
+          "activeSubs": 101,
+          "mrr": 3735
+        },
+        {
+          "week": 5,
+          "visits": 3567,
+          "signups": 178,
+          "grossPaid": 52.8,
+          "netPaid": 44.8,
+          "loopShare": 0.053,
+          "paidSpend": 329,
+          "activeSubs": 145,
+          "mrr": 5343
+        },
+        {
+          "week": 6,
+          "visits": 3185,
+          "signups": 159,
+          "grossPaid": 50.0,
+          "netPaid": 42.5,
+          "loopShare": 0.076,
+          "paidSpend": 538,
+          "activeSubs": 186,
+          "mrr": 6860
+        },
+        {
+          "week": 7,
+          "visits": 3590,
+          "signups": 180,
+          "grossPaid": 57.4,
+          "netPaid": 48.8,
+          "loopShare": 0.084,
+          "paidSpend": 534,
+          "activeSubs": 233,
+          "mrr": 8588
+        },
+        {
+          "week": 8,
+          "visits": 3590,
+          "signups": 180,
+          "grossPaid": 58.5,
+          "netPaid": 49.7,
+          "loopShare": 0.101,
+          "paidSpend": 534,
+          "activeSubs": 279,
+          "mrr": 10305
+        },
+        {
+          "week": 9,
+          "visits": 2865,
+          "signups": 143,
+          "grossPaid": 49.7,
+          "netPaid": 42.3,
+          "loopShare": 0.139,
+          "paidSpend": 500,
+          "activeSubs": 317,
+          "mrr": 11698
+        },
+        {
+          "week": 10,
+          "visits": 2530,
+          "signups": 127,
+          "grossPaid": 46.2,
+          "netPaid": 39.3,
+          "loopShare": 0.168,
+          "paidSpend": 500,
+          "activeSubs": 352,
+          "mrr": 12956
+        },
+        {
+          "week": 11,
+          "visits": 3871,
+          "signups": 194,
+          "grossPaid": 64.6,
+          "netPaid": 54.9,
+          "loopShare": 0.135,
+          "paidSpend": 500,
+          "activeSubs": 401,
+          "mrr": 14773
+        },
+        {
+          "week": 12,
+          "visits": 4206,
+          "signups": 210,
+          "grossPaid": 70.1,
+          "netPaid": 59.6,
+          "loopShare": 0.141,
+          "paidSpend": 500,
+          "activeSubs": 454,
+          "mrr": 16720
+        },
+        {
+          "week": 13,
+          "visits": 4541,
+          "signups": 227,
+          "grossPaid": 75.8,
+          "netPaid": 64.4,
+          "loopShare": 0.147,
+          "paidSpend": 500,
+          "activeSubs": 511,
+          "mrr": 18822
+        }
+      ],
+      "tag": "owner-decision:D2"
+    },
+    {
+      "id": "high",
+      "name": "High",
+      "note": "One or two 1M-view product posts, k = 0.12, ~$9k reinvested. plan.json and strategy.md 14.2 use these calculator figures (consistency note 6).",
+      "inputs": {
+        "days": 91,
+        "weeklyShape": [
+          0.07,
+          0.05,
+          0.07,
+          0.08,
+          0.09,
+          0.07,
+          0.08,
+          0.08,
+          0.06,
+          0.05,
+          0.09,
+          0.1,
+          0.11
+        ],
+        "visitsPerDay": {
+          "ch-tiktok": 140.7,
+          "ch-instagram": 105.5,
+          "ch-youtube": 35.2,
+          "ch-linkedin": 79.1,
+          "ch-x": 44.0,
+          "ch-community": 17.6,
+          "ch-producthunt": 52.7,
+          "ch-directories": 44.0,
+          "ch-search": 44.0,
+          "ch-press": 26.4
+        },
+        "signupRate": 0.055,
+        "checkoutOpenRate": 0.65,
+        "checkoutToPaidRate": 0.3637,
+        "paidRate": 0.2364,
+        "planMix": {
+          "create": 0.5,
+          "studio": 0.38,
+          "scale": 0.12
+        },
+        "yearlyShare": 0.15,
+        "yearlyDiscount": 0.2,
+        "monthlyChurn": 0.08,
+        "refundRate": 0.12,
+        "viralCoefficient": 0.12,
+        "creatorCPM": 3,
+        "creatorClickRate": 0.009,
+        "adCPC": 0.7,
+        "contentRewardsCPM": 1.6,
+        "contentRewardsClickRate": 0.004,
+        "paidConversionMultiplier": {
+          "creators": 1.6,
+          "boosts": 1.0,
+          "contentRewards": 1.6
+        },
+        "feePct": 0.045,
+        "feeFixed": 0.3,
+        "budgetSchedule": [
+          {
+            "lineId": "b2",
+            "bucket": "creators",
+            "usd": 300,
+            "weeks": [
+              3,
+              4
+            ],
+            "note": "Wave-1 flat fees; posts 9-22 Nov"
+          },
+          {
+            "lineId": "b3",
+            "bucket": "creators",
+            "usd": 90,
+            "weeks": [
+              3,
+              4
+            ],
+            "note": "Wave-1 per-view bonus pool"
+          },
+          {
+            "lineId": "b4",
+            "bucket": "creators",
+            "usd": 140,
+            "weeks": [
+              5,
+              6
+            ],
+            "note": "Wave-2 visual creators only after images pass the gate (beat:images); else rehire best wave-1 creator"
+          },
+          {
+            "lineId": "b5",
+            "bucket": "boosts",
+            "usd": 104,
+            "weeks": [
+              3
+            ],
+            "note": "Boost slot A (TikTok Spark 2 days x $52), no earlier than 9 Nov"
+          },
+          {
+            "lineId": "b5",
+            "bucket": "boosts",
+            "usd": 96,
+            "weeks": [
+              6
+            ],
+            "note": "Boost slot B (Meta partnership ~$24/day x 4) from 3 Dec; no boosts 20 Nov-2 Dec"
+          },
+          {
+            "lineId": "b9",
+            "bucket": "creators",
+            "usd": 136,
+            "weeks": [
+              5,
+              6,
+              7,
+              8
+            ],
+            "conditional": true,
+            "note": "Reserve: released only when the scale rule is met"
+          }
+        ],
+        "reinvest": {
+          "startWeek": 3,
+          "share": 0.3,
+          "reducedShare": 0.1,
+          "cacTarget": 50,
+          "minPaidPayers": 3,
+          "contentRewardsShare": 0.5,
+          "contentRewardsMinMrr": 1500,
+          "maxWeeklyUsd": 1500,
+          "maxWeeklyGrowth": 1.5,
+          "growthFloorUsd": 150
+        },
+        "activationRate": {
+          "weeks1to4": 0.6,
+          "after": 0.7
+        },
+        "firstBuildsPerPayerDay1": 2,
+        "firstSiteBuildCostUsd": {
+          "median": 0.93,
+          "worst": 1.35
+        },
+        "contributionPerSubMonth": {
+          "create": 13.26,
+          "studio": 32.66,
+          "scale": 65.66
+        },
+        "preview": {
+          "enabled": false,
+          "fromWeek": 4,
+          "paidRateUplift": 1.0,
+          "takeRate": 0.0,
+          "costUsd": 0.9
+        }
+      },
+      "referenceOutputs": {
+        "qualifiedVisits": 80973,
+        "grossPaid": 1429,
+        "netPaid": 1257,
+        "loopShareOverall": 0.115,
+        "activeEnd": 1200,
+        "mrrDay30": 8910,
+        "mrrDay60": 23190,
+        "mrrEnd": 47069,
+        "arrEnd": 564822,
+        "paidSpendTotal": 9983,
+        "reinvestedFromRevenue": 9117,
+        "paidCac": 20.0,
+        "netArpu": 39.28,
+        "visitToPaid": 0.013,
+        "loopVisitsImplied": 12682,
+        "activatedPayers": 860,
+        "netNewCashFirstPayments": 110995,
+        "previewAiCost": 0,
+        "peakGrossPerDay": 27.9,
+        "aiLimitNeededPerDayUsd": [
+          52,
+          75
+        ],
+        "monthlyContributionEnd": 32302
+      },
+      "referenceWeekly": [
+        {
+          "week": 1,
+          "visits": 3753,
+          "signups": 206,
+          "grossPaid": 49.3,
+          "netPaid": 43.4,
+          "loopShare": 0.011,
+          "paidSpend": 0,
+          "activeSubs": 43,
+          "mrr": 1705
+        },
+        {
+          "week": 2,
+          "visits": 2681,
+          "signups": 147,
+          "grossPaid": 36.5,
+          "netPaid": 32.1,
+          "loopShare": 0.044,
+          "paidSpend": 0,
+          "activeSubs": 75,
+          "mrr": 2965
+        },
+        {
+          "week": 3,
+          "visits": 4487,
+          "signups": 247,
+          "grossPaid": 65.7,
+          "netPaid": 57.8,
+          "loopShare": 0.043,
+          "paidSpend": 299,
+          "activeSubs": 133,
+          "mrr": 5237
+        },
+        {
+          "week": 4,
+          "visits": 5287,
+          "signups": 291,
+          "grossPaid": 81.1,
+          "netPaid": 71.4,
+          "loopShare": 0.057,
+          "paidSpend": 345,
+          "activeSubs": 205,
+          "mrr": 8041
+        },
+        {
+          "week": 5,
+          "visits": 5756,
+          "signups": 317,
+          "grossPaid": 88.8,
+          "netPaid": 78.1,
+          "loopShare": 0.075,
+          "paidSpend": 329,
+          "activeSubs": 281,
+          "mrr": 11024
+        },
+        {
+          "week": 6,
+          "visits": 5130,
+          "signups": 282,
+          "grossPaid": 85.1,
+          "netPaid": 74.9,
+          "loopShare": 0.102,
+          "paidSpend": 538,
+          "activeSubs": 353,
+          "mrr": 13868
+        },
+        {
+          "week": 7,
+          "visits": 5784,
+          "signups": 318,
+          "grossPaid": 97.7,
+          "netPaid": 86.0,
+          "loopShare": 0.111,
+          "paidSpend": 540,
+          "activeSubs": 436,
+          "mrr": 17108
+        },
+        {
+          "week": 8,
+          "visits": 6480,
+          "signups": 356,
+          "grossPaid": 114.7,
+          "netPaid": 100.9,
+          "loopShare": 0.116,
+          "paidSpend": 793,
+          "activeSubs": 532,
+          "mrr": 20888
+        },
+        {
+          "week": 9,
+          "visits": 6349,
+          "signups": 349,
+          "grossPaid": 123.1,
+          "netPaid": 108.3,
+          "loopShare": 0.131,
+          "paidSpend": 1139,
+          "activeSubs": 634,
+          "mrr": 24887
+        },
+        {
+          "week": 10,
+          "visits": 6806,
+          "signups": 374,
+          "grossPaid": 139.8,
+          "netPaid": 123.0,
+          "loopShare": 0.137,
+          "paidSpend": 1500,
+          "activeSubs": 750,
+          "mrr": 29414
+        },
+        {
+          "week": 11,
+          "visits": 8951,
+          "signups": 492,
+          "grossPaid": 171.3,
+          "netPaid": 150.7,
+          "loopShare": 0.133,
+          "paidSpend": 1500,
+          "activeSubs": 892,
+          "mrr": 34997
+        },
+        {
+          "week": 12,
+          "visits": 9487,
+          "signups": 522,
+          "grossPaid": 182.3,
+          "netPaid": 160.4,
+          "loopShare": 0.147,
+          "paidSpend": 1500,
+          "activeSubs": 1042,
+          "mrr": 40872
+        },
+        {
+          "week": 13,
+          "visits": 10023,
+          "signups": 551,
+          "grossPaid": 193.6,
+          "netPaid": 170.3,
+          "loopShare": 0.16,
+          "paidSpend": 1500,
+          "activeSubs": 1200,
+          "mrr": 47069
+        }
+      ]
+    },
+    {
+      "id": "breakout",
+      "name": "Breakout ($1M ARR)",
+      "note": "Back-loaded traffic, 1.6% visit-to-paid, creator CAC ~$11, ~$10.8k reinvested from revenue under the D4 rule (about half into Content Rewards), images pass the gate by ~week 5 (beat:images). Organic visitsPerDay were raised 2% on 26 Oct so that ARR at day 91 clears $1M (before that the calculator gave $0.99M). No cold-start, no-free-tier precedent exists (strategy.md section 15). Calculator breakout: ~2,319 gross, ~2,027 active, ~$83.4k MRR, ~$1.00M ARR; ~117k visits including loop-implied visits.",
+      "inputs": {
+        "days": 91,
+        "weeklyShape": [
+          0.03,
+          0.03,
+          0.04,
+          0.05,
+          0.08,
+          0.07,
+          0.09,
+          0.09,
+          0.07,
+          0.06,
+          0.11,
+          0.13,
+          0.15
+        ],
+        "visitsPerDay": {
+          "ch-tiktok": 134.5,
+          "ch-instagram": 100.9,
+          "ch-youtube": 33.7,
+          "ch-linkedin": 75.7,
+          "ch-x": 42.0,
+          "ch-community": 16.8,
+          "ch-producthunt": 50.5,
+          "ch-directories": 42.0,
+          "ch-search": 42.0,
+          "ch-press": 25.2
+        },
+        "signupRate": 0.06,
+        "checkoutOpenRate": 0.7,
+        "checkoutToPaidRate": 0.381,
+        "paidRate": 0.2667,
+        "planMix": {
+          "create": 0.45,
+          "studio": 0.42,
+          "scale": 0.13
+        },
+        "yearlyShare": 0.15,
+        "yearlyDiscount": 0.2,
+        "monthlyChurn": 0.07,
+        "refundRate": 0.1,
+        "viralCoefficient": 0.15,
+        "creatorCPM": 2,
+        "creatorClickRate": 0.01,
+        "adCPC": 0.5,
+        "contentRewardsCPM": 1.6,
+        "contentRewardsClickRate": 0.005,
+        "paidConversionMultiplier": {
+          "creators": 1.6,
+          "boosts": 1.0,
+          "contentRewards": 1.6
+        },
+        "feePct": 0.045,
+        "feeFixed": 0.3,
+        "budgetSchedule": [
+          {
+            "lineId": "b2",
+            "bucket": "creators",
+            "usd": 300,
+            "weeks": [
+              3,
+              4
+            ],
+            "note": "Wave-1 flat fees; posts 9-22 Nov"
+          },
+          {
+            "lineId": "b3",
+            "bucket": "creators",
+            "usd": 90,
+            "weeks": [
+              3,
+              4
+            ],
+            "note": "Wave-1 per-view bonus pool"
+          },
+          {
+            "lineId": "b4",
+            "bucket": "creators",
+            "usd": 140,
+            "weeks": [
+              5,
+              6
+            ],
+            "note": "Wave-2 visual creators only after images pass the gate (beat:images); else rehire best wave-1 creator"
+          },
+          {
+            "lineId": "b5",
+            "bucket": "boosts",
+            "usd": 104,
+            "weeks": [
+              3
+            ],
+            "note": "Boost slot A (TikTok Spark 2 days x $52), no earlier than 9 Nov"
+          },
+          {
+            "lineId": "b5",
+            "bucket": "boosts",
+            "usd": 96,
+            "weeks": [
+              6
+            ],
+            "note": "Boost slot B (Meta partnership ~$24/day x 4) from 3 Dec; no boosts 20 Nov-2 Dec"
+          },
+          {
+            "lineId": "b9",
+            "bucket": "creators",
+            "usd": 136,
+            "weeks": [
+              5,
+              6,
+              7,
+              8
+            ],
+            "conditional": true,
+            "note": "Reserve: released only when the scale rule is met"
+          }
+        ],
+        "reinvest": {
+          "startWeek": 3,
+          "share": 0.3,
+          "reducedShare": 0.1,
+          "cacTarget": 50,
+          "minPaidPayers": 3,
+          "contentRewardsShare": 0.5,
+          "contentRewardsMinMrr": 1500,
+          "maxWeeklyUsd": 2000,
+          "maxWeeklyGrowth": 1.5,
+          "growthFloorUsd": 150
+        },
+        "activationRate": {
+          "weeks1to4": 0.6,
+          "after": 0.7
+        },
+        "firstBuildsPerPayerDay1": 2,
+        "firstSiteBuildCostUsd": {
+          "median": 0.93,
+          "worst": 1.35
+        },
+        "contributionPerSubMonth": {
+          "create": 13.26,
+          "studio": 32.66,
+          "scale": 65.66
+        },
+        "preview": {
+          "enabled": false,
+          "fromWeek": 4,
+          "paidRateUplift": 1.0,
+          "takeRate": 0.0,
+          "costUsd": 0.9
+        }
+      },
+      "referenceOutputs": {
+        "qualifiedVisits": 98970,
+        "grossPaid": 2319,
+        "netPaid": 2087,
+        "loopShareOverall": 0.121,
+        "activeEnd": 2027,
+        "mrrDay30": 8586,
+        "mrrDay60": 31690,
+        "mrrEnd": 83377,
+        "arrEnd": 1000527,
+        "paidSpendTotal": 11692,
+        "reinvestedFromRevenue": 10826,
+        "paidCac": 10.7,
+        "netArpu": 41.18,
+        "visitToPaid": 0.016,
+        "loopVisitsImplied": 17580,
+        "activatedPayers": 1443,
+        "netNewCashFirstPayments": 193154,
+        "previewAiCost": 0,
+        "peakGrossPerDay": 57.2,
+        "aiLimitNeededPerDayUsd": [
+          106,
+          154
+        ],
+        "monthlyContributionEnd": 57195
+      },
+      "referenceWeekly": [
+        {
+          "week": 1,
+          "visits": 1538,
+          "signups": 92,
+          "grossPaid": 24.9,
+          "netPaid": 22.4,
+          "loopShare": 0.013,
+          "paidSpend": 0,
+          "activeSubs": 22,
+          "mrr": 924
+        },
+        {
+          "week": 2,
+          "visits": 1538,
+          "signups": 92,
+          "grossPaid": 25.7,
+          "netPaid": 23.2,
+          "loopShare": 0.044,
+          "paidSpend": 0,
+          "activeSubs": 46,
+          "mrr": 1878
+        },
+        {
+          "week": 3,
+          "visits": 3233,
+          "signups": 194,
+          "grossPaid": 63.6,
+          "netPaid": 57.2,
+          "loopShare": 0.039,
+          "paidSpend": 299,
+          "activeSubs": 103,
+          "mrr": 4233
+        },
+        {
+          "week": 4,
+          "visits": 4147,
+          "signups": 249,
+          "grossPaid": 86.3,
+          "netPaid": 77.7,
+          "loopShare": 0.055,
+          "paidSpend": 345,
+          "activeSubs": 181,
+          "mrr": 7433
+        },
+        {
+          "week": 5,
+          "visits": 5535,
+          "signups": 332,
+          "grossPaid": 110.1,
+          "netPaid": 99.1,
+          "loopShare": 0.071,
+          "paidSpend": 329,
+          "activeSubs": 279,
+          "mrr": 11474
+        },
+        {
+          "week": 6,
+          "visits": 5671,
+          "signups": 340,
+          "grossPaid": 120.3,
+          "netPaid": 108.2,
+          "loopShare": 0.094,
+          "paidSpend": 538,
+          "activeSubs": 386,
+          "mrr": 15872
+        },
+        {
+          "week": 7,
+          "visits": 6840,
+          "signups": 410,
+          "grossPaid": 146.3,
+          "netPaid": 131.6,
+          "loopShare": 0.105,
+          "paidSpend": 540,
+          "activeSubs": 514,
+          "mrr": 21173
+        },
+        {
+          "week": 8,
+          "visits": 7868,
+          "signups": 472,
+          "grossPaid": 177.5,
+          "netPaid": 159.7,
+          "loopShare": 0.115,
+          "paidSpend": 793,
+          "activeSubs": 670,
+          "mrr": 27569
+        },
+        {
+          "week": 9,
+          "visits": 8216,
+          "signups": 493,
+          "grossPaid": 202.0,
+          "netPaid": 181.8,
+          "loopShare": 0.129,
+          "paidSpend": 1139,
+          "activeSubs": 846,
+          "mrr": 34796
+        },
+        {
+          "week": 10,
+          "visits": 10017,
+          "signups": 601,
+          "grossPaid": 259.9,
+          "netPaid": 233.9,
+          "loopShare": 0.127,
+          "paidSpend": 1709,
+          "activeSubs": 1072,
+          "mrr": 44108
+        },
+        {
+          "week": 11,
+          "visits": 13764,
+          "signups": 826,
+          "grossPaid": 340.2,
+          "netPaid": 306.2,
+          "loopShare": 0.123,
+          "paidSpend": 2000,
+          "activeSubs": 1369,
+          "mrr": 56312
+        },
+        {
+          "week": 12,
+          "visits": 14789,
+          "signups": 887,
+          "grossPaid": 367.3,
+          "netPaid": 330.6,
+          "loopShare": 0.143,
+          "paidSpend": 2000,
+          "activeSubs": 1686,
+          "mrr": 69386
+        },
+        {
+          "week": 13,
+          "visits": 15814,
+          "signups": 949,
+          "grossPaid": 395.2,
+          "netPaid": 355.7,
+          "loopShare": 0.162,
+          "paidSpend": 2000,
+          "activeSubs": 2027,
+          "mrr": 83377
+        }
+      ]
+    }
+  ]
+}

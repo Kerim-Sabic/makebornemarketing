@@ -1,0 +1,18 @@
+node_modules/
+dist/
+*.local
+.DS_Store
+Thumbs.db
+.vercel/
+# Private exports of the daily log or spend log never belong in this repo
+actuals-*.json
+actuals-*.csv
+spend-log-*.json
+
+__pycache__/
+*.pyc
+# Python bytecode (data/funnel_model.py)
+__pycache__/
+*.pyc
+# Owner-only notes (billing defect, staffing, legal and tax checks): never commit
+private/

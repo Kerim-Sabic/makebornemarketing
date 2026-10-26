@@ -1,0 +1,5108 @@
+[
+  {
+    "id": "V01",
+    "title": "The Fly-over, pinned: 'We launched today'",
+    "format": "demo",
+    "platforms": [
+      "TikTok",
+      "Instagram Reels",
+      "YouTube Shorts",
+      "X",
+      "LinkedIn"
+    ],
+    "icp": "all",
+    "lane": "A+B",
+    "lengthSec": 17,
+    "hook": {
+      "line": "We launched today. This is the real studio.",
+      "visual": "Frame 0 of the v9 Fly-over: the real makeborne.com home page already lifting toward camera (never black), headline text over the top third."
+    },
+    "script": [
+      {
+        "t": "0-2s",
+        "visual": "v9 frame 0, camera already moving over the real home page",
+        "onScreenText": "We launched today. This is the real studio.",
+        "voiceover": "None (music only), or founder: 'We launched today.'"
+      },
+      {
+        "t": "2-12s",
+        "visual": "v9 fly-over continues: composer, mode chips, style cards, client steps lift off the page",
+        "onScreenText": "Websites. Books. Decks.",
+        "voiceover": "None"
+      },
+      {
+        "t": "12-14.5s",
+        "visual": "v9 end line",
+        "onScreenText": "One idea. Every possibility.",
+        "voiceover": "None"
+      },
+      {
+        "t": "14.5-17s",
+        "visual": "New 2.5 s end card on canvas #F8F7F4, flat m, Inter display",
+        "onScreenText": "makeborne.com · from $20/mo + tax · full refund until you use credits",
+        "voiceover": "None"
+      }
+    ],
+    "cta": "Pinned post. TikTok: 'Link in bio, or DM me SITE'. Instagram: 'Comment SITE for the link and 3 briefs to copy'. X/LinkedIn: link in the first reply/comment.",
+    "caption": "We launched Makeborne today: an AI studio that makes websites, books and presentations from one brief, plus client review links. From $20/month + tax. Full refund until you use credits. Comment SITE and I'll send the link.",
+    "hashtags": [
+      "#makeborne",
+      "#websitedesign",
+      "#pitchdeck",
+      "#buildinpublic"
+    ],
+    "sound": "IG/LinkedIn/X/YouTube: the film's Mixkit 'Opalescent' mix as recorded in the film notes (licence text unread on 26 Oct [U]; re-read before any paid use). TikTok: swap to a Commercial Music Library track until the Mixkit licence is confirmed for TikTok commercial use.",
+    "shotList": [
+      "No new filming. Re-export v9 9:16 with a 2-3 s end card appended",
+      "16:9 version from the 4K render for X and LinkedIn",
+      "4:5 recomposed from the 5:4 master for Instagram feed (recompose, never crop a 16:9 master)",
+      "Cover frame: a moving frame of the home page with the hook text centred"
+    ],
+    "assetsNeeded": [
+      "2.5 s end card (HyperFrames, house tokens)",
+      "Side-by-side check of v9 frames against today's live home page (captured 14 Oct)",
+      "Hook text overlay inside the safe zone"
+    ],
+    "reuseExisting": [
+      "film library (private)/v9-flyover/renders/makeborne-v9-flyover-9x16-1080x1920-60fps.mp4",
+      "film library (private)/v9-flyover/renders/makeborne-v9-flyover-16x9-3840x2160-60fps.mp4",
+      "film library (private)/v9-flyover/renders/makeborne-v9-flyover-master-1440x1152-60fps.mp4"
+    ],
+    "effort": "low",
+    "priority": "P0",
+    "week": 1,
+    "tag": "live",
+    "whyItWorks": "The only finished, honest brand film in the bank: it shows the real home page (research/creative-assets.md §2.1, §3). Polished films earn mostly paid reach, so it is a pinned trust asset and a paid-test candidate, not the volume engine (research/short-form-video.md §14).",
+    "goLinks": [
+      "makeborne.com/go/ig-v01",
+      "makeborne.com/go/li-v01",
+      "makeborne.com/go/tt-v01",
+      "makeborne.com/go/x-v01",
+      "makeborne.com/go/yt-v01"
+    ],
+    "utm": {
+      "utm_campaign": "launch-2026-10",
+      "utm_content": "<surface>-v01-l1",
+      "utm_medium": "organic"
+    },
+    "hookCode": "L1",
+    "budgetLine": null,
+    "checks": [
+      "Home page in the film must still match the live page; if a section changed, cut before it",
+      "The page shows style previews labelled as AI concepts: keep that label readable or cut those frames",
+      "End card must not say free or trial"
+    ]
+  },
+  {
+    "id": "V02",
+    "title": "One sentence in, a whole website out (bakery speedrun)",
+    "format": "speedrun",
+    "platforms": [
+      "TikTok",
+      "Instagram Reels",
+      "YouTube Shorts",
+      "X"
+    ],
+    "icp": "icp4",
+    "lane": "A+B",
+    "lengthSec": 32,
+    "hook": {
+      "line": "One sentence in. A whole website out.",
+      "visual": "Frame 0: the finished bakery site scrolling on a phone (390-wide capture), the one-line brief pinned on top as a sentence chip."
+    },
+    "script": [
+      {
+        "t": "0-2s",
+        "visual": "Finished site scrolling on a phone; sentence chip 'A website for a family bakery in Leeds that opens at 7.'",
+        "onScreenText": "One sentence in. A whole website out.",
+        "voiceover": "One sentence. Watch."
+      },
+      {
+        "t": "2-5s",
+        "visual": "Hard cut to the real composer at 2x UI scale; the brief is typed by hand; Plan, then Create",
+        "onScreenText": "Timer's on.",
+        "voiceover": "I type one sentence about a bakery."
+      },
+      {
+        "t": "5-20s",
+        "visual": "The build streams in the studio; cut-ins on headline, menu and opening hours. Clock chip: '[real time]' filled from the recording, or 'sped up ×N' if compressed. Never show compressed time as real time.",
+        "onScreenText": "Headline. / Menu. / Opening hours.",
+        "voiceover": "It writes the page, picks the type, lays out the menu."
+      },
+      {
+        "t": "20-28s",
+        "visual": "One chat edit ('make it warmer and put the opening hours at the top'); only that section changes; Publish; the real Makeborne address appears",
+        "onScreenText": "Live. [real time]",
+        "voiceover": "One edit, publish, and it's live on a Makeborne address."
+      },
+      {
+        "t": "28-32s",
+        "visual": "Back to the frame-0 phone shot so it loops",
+        "onScreenText": "What should I build next? Comment it.",
+        "voiceover": "Tell me what to build next."
+      }
+    ],
+    "cta": "'DM me SITE' (TikTok, bio link) / 'Comment SITE' (Instagram DM with link, 3 briefs and the uncut build).",
+    "caption": "AI website for a bakery from one sentence, real build, one edit, published. From $20/month + tax, full refund until you use credits. Comment SITE for the brief I used.",
+    "hashtags": [
+      "#websitedesign",
+      "#smallbusiness",
+      "#aiwebsitebuilder",
+      "#bakery"
+    ],
+    "sound": "Brand TikTok: Commercial Music Library track only (business account) under original voice-over. Instagram/YouTube: original voice-over plus a library track cleared for business use [U: re-check each platform's business library]. No trending chart songs on brand accounts.",
+    "shotList": [
+      "Composer, typed live at 2x UI scale",
+      "Studio build, full uncut recording (keep it for the 90-150 s full cut and the landing page)",
+      "One chat edit",
+      "Publish dialog and the live address in a browser",
+      "390-wide phone scroll of the published site for frame 0 and the loop"
+    ],
+    "assetsNeeded": [
+      "A clean demo account",
+      "One fictional brief; check the business name the build invents against real trademarks and local businesses",
+      "Clock chip graphic",
+      "Full 90-150 s cut from the same recording"
+    ],
+    "reuseExisting": [],
+    "effort": "low",
+    "priority": "P0",
+    "week": 1,
+    "tag": "live",
+    "whyItWorks": "Result-first speedruns are the highest-converting format for a paid-only tool: the viewer sees the exact job they would pay for (research/short-form-video.md §3, formats 1-2). TikTok wants the proposition inside 3 s [F, TikTok Ads Help, Jun 2025].",
+    "goLinks": [
+      "makeborne.com/go/ig-v02",
+      "makeborne.com/go/tt-v02",
+      "makeborne.com/go/x-v02",
+      "makeborne.com/go/yt-v02"
+    ],
+    "utm": {
+      "utm_campaign": "launch-2026-10",
+      "utm_content": "<surface>-v02-r3",
+      "utm_medium": "organic"
+    },
+    "hookCode": "R3",
+    "budgetLine": "b5 (boost candidate only if it passes the qualify rule)",
+    "checks": [
+      "Builds take minutes (research/product-funnel-audit.md §2, step 9): the punch cut must carry the 'sped up ×N' chip",
+      "Say 'a Makeborne address', never 'your own domain'",
+      "No 'free'"
+    ]
+  },
+  {
+    "id": "V03",
+    "title": "Pitch deck from one sentence",
+    "format": "speedrun",
+    "platforms": [
+      "TikTok",
+      "Instagram Reels",
+      "YouTube Shorts",
+      "LinkedIn",
+      "X"
+    ],
+    "icp": "icp2",
+    "lane": "B",
+    "lengthSec": 30,
+    "hook": {
+      "line": "Pitch deck from one sentence. Timer's on.",
+      "visual": "Frame 0: the finished title slide and a chart slide fanned on the canvas, the brief as a sentence chip above."
+    },
+    "script": [
+      {
+        "t": "0-2s",
+        "visual": "Finished deck: title slide, then the chart slide slides in",
+        "onScreenText": "Pitch deck from one sentence. Timer's on.",
+        "voiceover": "One sentence. A whole pitch deck."
+      },
+      {
+        "t": "2-5s",
+        "visual": "Composer set to Presentation; brief typed: 'A 10-slide pitch for a bike repair shop raising money for a second workshop.'",
+        "onScreenText": "One sentence.",
+        "voiceover": "Presentation, one sentence, create."
+      },
+      {
+        "t": "5-20s",
+        "visual": "Slides arrive one by one, dealt on the beat. Clock chip: '[real time]' filled from the recording, or 'sped up ×N' if compressed. Never show compressed time as real time.",
+        "onScreenText": "Story. / Numbers. / The ask.",
+        "voiceover": "It builds the story, the numbers slide and the ask."
+      },
+      {
+        "t": "20-27s",
+        "visual": "Export PPTX; the file opens in PowerPoint; click the chart: it's a real chart object",
+        "onScreenText": "Opens in PowerPoint. Real chart.",
+        "voiceover": "And it opens in PowerPoint. That chart is real, not a picture."
+      },
+      {
+        "t": "27-30s",
+        "visual": "Back to the frame-0 fan",
+        "onScreenText": "Comment DECK.",
+        "voiceover": "Comment DECK and I'll send the brief."
+      }
+    ],
+    "cta": "'Comment DECK' (Instagram) / 'DM me DECK' (TikTok) / link in first comment (LinkedIn, X).",
+    "caption": "How to make a pitch deck from one sentence, then open it in PowerPoint with a real, editable chart. From $20/month. Comment DECK for the brief.",
+    "hashtags": [
+      "#pitchdeck",
+      "#presentation",
+      "#powerpoint",
+      "#startup"
+    ],
+    "sound": "Brand TikTok: Commercial Music Library track only (business account) under original voice-over. Instagram/YouTube: original voice-over plus a library track cleared for business use [U: re-check each platform's business library]. No trending chart songs on brand accounts.",
+    "shotList": [
+      "Composer in Presentation mode",
+      "Uncut deck build",
+      "PPTX export and open in PowerPoint",
+      "Click-to-select the chart, data sheet open"
+    ],
+    "assetsNeeded": [
+      "Fictional brief (no real company)",
+      "PowerPoint on the recording machine",
+      "Clock chip"
+    ],
+    "reuseExisting": [
+      "film library (private)/v12/assets/real/book_sheet.jpg, deck_sheet.jpg (deck_sheet.jpg as a frame-0 fallback; never let the 'Tern' name be legible)"
+    ],
+    "effort": "low",
+    "priority": "P0",
+    "week": 1,
+    "tag": "live",
+    "whyItWorks": "ICP 2's job is 'notes in, editable deck out'. Gamma's creators win with one input and one finished result (research/creative-assets.md §5.1); the PPTX proof answers 'is it a picture?' before it is asked.",
+    "goLinks": [
+      "makeborne.com/go/ig-v03",
+      "makeborne.com/go/li-v03",
+      "makeborne.com/go/tt-v03",
+      "makeborne.com/go/x-v03",
+      "makeborne.com/go/yt-v03"
+    ],
+    "utm": {
+      "utm_campaign": "launch-2026-10",
+      "utm_content": "<surface>-v03-d1",
+      "utm_medium": "organic"
+    },
+    "hookCode": "D1",
+    "budgetLine": "b5 (boost candidate only if it qualifies)",
+    "checks": [
+      "Use the measured time; strategy hook D1 says '40 seconds' only if that is the real time",
+      "Decks are typography-led today: no generated images on any slide"
+    ]
+  },
+  {
+    "id": "V04",
+    "title": "Replying to @___: here's your bakery's website (comment-reply series)",
+    "format": "speedrun",
+    "platforms": [
+      "TikTok",
+      "Instagram Reels"
+    ],
+    "icp": "icp4",
+    "lane": "A+B",
+    "lengthSec": 32,
+    "hook": {
+      "line": "Replying to @___: here's your bakery's website.",
+      "visual": "Frame 0: the TikTok reply bubble with the commenter's request, over the finished site scrolling on a phone."
+    },
+    "script": [
+      {
+        "t": "0-2s",
+        "visual": "Reply bubble ('can you do one for a bakery in Porto?') over the finished site on a phone",
+        "onScreenText": "Replying to @___: here's your bakery's website.",
+        "voiceover": "You asked for a bakery in Porto. Here it is."
+      },
+      {
+        "t": "2-5s",
+        "visual": "Composer: the commenter's own words pasted as the brief",
+        "onScreenText": "Your words. Timer's on.",
+        "voiceover": "I paste exactly what you wrote."
+      },
+      {
+        "t": "5-20s",
+        "visual": "Build streams; cut-ins. Clock chip: '[real time]' filled from the recording, or 'sped up ×N' if compressed. Never show compressed time as real time.",
+        "onScreenText": "3-5 word labels",
+        "voiceover": "Here's the menu, the hours, the story."
+      },
+      {
+        "t": "20-28s",
+        "visual": "One edit the commenter asked for; preview (published only with their written OK)",
+        "onScreenText": "Built. [real time]",
+        "voiceover": "One change, and that's yours."
+      },
+      {
+        "t": "28-32s",
+        "visual": "Loop to frame 0",
+        "onScreenText": "Comment your business. I'll build the next one.",
+        "voiceover": "Comment your business and I'll build the next one."
+      }
+    ],
+    "cta": "'Comment your business, I'll build the next one.' Pinned comment: makeborne.com/go/tt-v04 (text).",
+    "caption": "Built a bakery website for a commenter from one sentence. Comment your business type and city and I'll build the next one. From $20/month + tax, full refund until you use credits.",
+    "hashtags": [
+      "#websitedesign",
+      "#smallbusiness",
+      "#replyingtocomments",
+      "#aiwebsitebuilder"
+    ],
+    "sound": "Brand TikTok: Commercial Music Library track only (business account) under original voice-over. Instagram/YouTube: original voice-over plus a library track cleared for business use [U: re-check each platform's business library]. No trending chart songs on brand accounts.",
+    "shotList": [
+      "Screenshot of the comment (handle blurred unless they agree to be shown)",
+      "Composer and build",
+      "Phone scroll of the result",
+      "Loop frame"
+    ],
+    "assetsNeeded": [
+      "A private consent log of requests and written OKs (never in this repo)",
+      "Template project per business type to keep it under 45 minutes"
+    ],
+    "reuseExisting": [],
+    "effort": "low",
+    "priority": "P0",
+    "week": 1,
+    "tag": "live",
+    "whyItWorks": "The comment becomes the next video, so the series feeds itself and the commenter shares it (research/short-form-video.md §0.3, §3). Plan rule D15 allows it with consent.",
+    "goLinks": [
+      "makeborne.com/go/ig-v04",
+      "makeborne.com/go/tt-v04"
+    ],
+    "utm": {
+      "utm_campaign": "launch-2026-10",
+      "utm_content": "<surface>-v04-r2",
+      "utm_medium": "organic"
+    },
+    "hookCode": "R2",
+    "budgetLine": "b5 (boost candidate only if it qualifies)",
+    "checks": [
+      "Only for someone who asked",
+      "Public information only; no personal data",
+      "Unpublished by default; publish only with written OK",
+      "Never imply the business endorses Makeborne",
+      "If the commenter names no real business, build a fictional one of that type"
+    ]
+  },
+  {
+    "id": "V05",
+    "title": "POV: the client says 'make it pop' for the 9th time",
+    "format": "POV",
+    "platforms": [
+      "TikTok",
+      "Instagram Reels",
+      "LinkedIn",
+      "YouTube Shorts"
+    ],
+    "icp": "icp1",
+    "lane": "A",
+    "lengthSec": 28,
+    "hook": {
+      "line": "POV: the client says 'make it pop' for the 9th time.",
+      "visual": "Frame 0: an email notification stack, the top one reading 'can you make it pop?', a small '9' badge, freelancer's hand on the trackpad."
+    },
+    "script": [
+      {
+        "t": "0-2s",
+        "visual": "Email stack with 'make it pop' (invented names, no real inbox)",
+        "onScreenText": "POV: 'make it pop' for the 9th time.",
+        "voiceover": "None (sigh), or: 'Ninth time.'"
+      },
+      {
+        "t": "2-6s",
+        "visual": "Freelancer copies a client review link from the project instead of replying",
+        "onScreenText": "So I sent one link instead.",
+        "voiceover": "So I stopped replying and sent one link."
+      },
+      {
+        "t": "6-14s",
+        "visual": "Phone, client side: the live site opens with no account; tap on the hero; type 'warmer colours, bigger phone number'",
+        "onScreenText": "Client comments on the live site. No account.",
+        "voiceover": "My client taps the exact spot and comments. No account, no screenshots."
+      },
+      {
+        "t": "14-22s",
+        "visual": "Laptop: the comment appears; freelancer types the change in chat; only that section changes",
+        "onScreenText": "Fix exactly that.",
+        "voiceover": "I fix exactly that."
+      },
+      {
+        "t": "22-28s",
+        "visual": "Phone: client taps Approve; the approved state appears",
+        "onScreenText": "Approved.",
+        "voiceover": "And they approve it. Done."
+      }
+    ],
+    "cta": "'Comment CLIENT' (Instagram DM: the client-work page, Studio plan, 3 briefs). LinkedIn: link in the first comment.",
+    "caption": "How freelancers get client approval in one link: the client comments on the live site, no account, then taps Approve. Studio plan $49/month, best for client work. Comment CLIENT.",
+    "hashtags": [
+      "#freelancer",
+      "#webdesigner",
+      "#clientwork",
+      "#agencylife"
+    ],
+    "sound": "Brand TikTok: Commercial Music Library track only (business account) under original voice-over. Instagram/YouTube: original voice-over plus a library track cleared for business use [U: re-check each platform's business library]. No trending chart songs on brand accounts. LinkedIn cut: no music, captions only.",
+    "shotList": [
+      "Inbox prop (made-up names and addresses)",
+      "Copy review link in the studio",
+      "Phone screen recording of the review page (comment, Approve)",
+      "Laptop: comment arrives, chat fix",
+      "Over-shoulder hand shot for texture"
+    ],
+    "assetsNeeded": [
+      "A demo client project and a review link on a test account",
+      "A second phone or browser profile to play the client",
+      "Burned-in captions"
+    ],
+    "reuseExisting": [
+      "film library (private)/v14/renders/v14_draft_1080p60.mp4 (25.7-29.1 s client comment/fix/Approve segment as a motion reference only; it shows a concept slide, so prefer a fresh real capture)"
+    ],
+    "effort": "med",
+    "priority": "P0",
+    "week": 1,
+    "tag": "live",
+    "whyItWorks": "This is the paying ICP's pain (revision rounds) and the Studio plan's reason to exist. Real people on screen lift LinkedIn video engagement (+14%, face to camera +34%) [F, LinkedIn Creative Labs via PPC Land, Jul 2025]. It also seeds the review-page loop.",
+    "goLinks": [
+      "makeborne.com/go/ig-v05",
+      "makeborne.com/go/li-v05",
+      "makeborne.com/go/tt-v05",
+      "makeborne.com/go/yt-v05"
+    ],
+    "utm": {
+      "utm_campaign": "launch-2026-10",
+      "utm_content": "<surface>-v05-f2",
+      "utm_medium": "organic"
+    },
+    "hookCode": "F2",
+    "budgetLine": "b5 (boost candidate only if it qualifies)",
+    "checks": [
+      "Review links expire after 3-90 days (default 14): show only what the review page really shows",
+      "Never show a real client"
+    ]
+  },
+  {
+    "id": "V06",
+    "title": "It's a real chart, not a picture",
+    "format": "demo",
+    "platforms": [
+      "TikTok",
+      "Instagram Reels",
+      "LinkedIn",
+      "X"
+    ],
+    "icp": "icp2",
+    "lane": "B",
+    "lengthSec": 25,
+    "hook": {
+      "line": "It's a real chart, not a picture.",
+      "visual": "Frame 0: a cursor clicking a bar on a finished slide and the chart's selection handles appearing in PowerPoint."
+    },
+    "script": [
+      {
+        "t": "0-2s",
+        "visual": "Click on the chart in PowerPoint; selection handles appear",
+        "onScreenText": "It's a real chart, not a picture.",
+        "voiceover": "This chart is real. Watch."
+      },
+      {
+        "t": "2-8s",
+        "visual": "Split frame: the slide before and after a one-value edit in chat ('change Q2 to 21')",
+        "onScreenText": "Change one thing.",
+        "voiceover": "I asked for one change."
+      },
+      {
+        "t": "8-14s",
+        "visual": "Only the one bar moves; everything else stays exactly put",
+        "onScreenText": "Only that thing changes.",
+        "voiceover": "Only that value moved. Nothing else touched."
+      },
+      {
+        "t": "14-21s",
+        "visual": "PPTX opens in PowerPoint; chart data sheet opens; type a number; the bar updates",
+        "onScreenText": "Opens in PowerPoint. Edit the data.",
+        "voiceover": "Download it, open it in PowerPoint, edit the data yourself."
+      },
+      {
+        "t": "21-25s",
+        "visual": "Back to frame 0",
+        "onScreenText": "Comment DECK.",
+        "voiceover": "Comment DECK."
+      }
+    ],
+    "cta": "'Comment DECK' / link in first comment.",
+    "caption": "AI pitch deck you can actually edit: the chart opens in PowerPoint as a real chart. Change one value and only that value changes. Comment DECK.",
+    "hashtags": [
+      "#powerpoint",
+      "#pitchdeck",
+      "#consulting",
+      "#presentation"
+    ],
+    "sound": "Original founder voice-over and real UI sound (keys, click, publish chime); quiet Commercial Music Library bed on TikTok.",
+    "shotList": [
+      "The v12 before/after of slide 6 as the split frame",
+      "Fresh capture of a chat edit on a new fictional deck",
+      "PowerPoint chart-data editing at 2x scale"
+    ],
+    "assetsNeeded": [
+      "A new fictional deck for the PowerPoint segment",
+      "Crop to hide any brand name on the v12 slides"
+    ],
+    "reuseExisting": [
+      "film library (private)/v12/assets/real/deck/slide-06.png",
+      "film library (private)/v12/assets/real/deck-edit/slide-06.png (real product runs: 12, 18, 25, 30 -> 12, 21, 25, 30; the 'Tern' name must never be legible, slide 6 is safe)"
+    ],
+    "effort": "low",
+    "priority": "P0",
+    "week": 1,
+    "tag": "live",
+    "whyItWorks": "The most honest precision demo in the bank (research/creative-assets.md §3, 'Change one thing. Only that thing changes.'). It answers the 'is it just a picture/template?' objection (strategy §4.4).",
+    "goLinks": [
+      "makeborne.com/go/ig-v06",
+      "makeborne.com/go/li-v06",
+      "makeborne.com/go/tt-v06",
+      "makeborne.com/go/x-v06"
+    ],
+    "utm": {
+      "utm_campaign": "launch-2026-10",
+      "utm_content": "<surface>-v06-d3",
+      "utm_medium": "organic"
+    },
+    "hookCode": "D3",
+    "budgetLine": null,
+    "checks": [
+      "Confirm on the launch build that exported charts are native PPTX charts before posting"
+    ]
+  },
+  {
+    "id": "V07",
+    "title": "I found 20 local businesses to pitch, before lunch",
+    "format": "demo",
+    "platforms": [
+      "TikTok",
+      "Instagram Reels",
+      "LinkedIn",
+      "YouTube Shorts"
+    ],
+    "icp": "icp1",
+    "lane": "A",
+    "lengthSec": 40,
+    "hook": {
+      "line": "I found 20 local businesses to pitch in [real time].",
+      "visual": "Frame 0: the lead finder results list filling in (names, addresses and contacts blurred), a counter ticking to 20."
+    },
+    "script": [
+      {
+        "t": "0-2s",
+        "visual": "Results list filling, details blurred",
+        "onScreenText": "I found 20 local businesses to pitch in [real time].",
+        "voiceover": "Twenty local businesses to pitch. Here's how."
+      },
+      {
+        "t": "2-10s",
+        "visual": "Lead finder: 'Local businesses', type 'dentists', city 'Austin, Texas', how many: 20; start search",
+        "onScreenText": "Business type. City. Go.",
+        "voiceover": "I pick a business type and a city."
+      },
+      {
+        "t": "10-20s",
+        "visual": "Results with what the finder really shows (e.g. found on the web, public contact or 'No public email'); save the best ones to the CRM",
+        "onScreenText": "Save the good ones.",
+        "voiceover": "I save the ones worth pitching straight into my CRM."
+      },
+      {
+        "t": "20-32s",
+        "visual": "CRM board: leads in stages; open one; build a demo site from a brief written for that type of business (fictional demo content)",
+        "onScreenText": "Then build them something.",
+        "voiceover": "Then I build a first version I can show them."
+      },
+      {
+        "t": "32-40s",
+        "visual": "Create a review link for the demo; move the card to 'Demo sent'",
+        "onScreenText": "Send the link. Track the follow-up.",
+        "voiceover": "Send the link, track the follow-up. Comment CLIENT."
+      }
+    ],
+    "cta": "'Comment CLIENT' / LinkedIn link in first comment.",
+    "caption": "How freelancers find local businesses to pitch: lead finder, a demo site and a review link, tracked in a basic CRM. Studio plan, best for client work. Comment CLIENT.",
+    "hashtags": [
+      "#freelancer",
+      "#webdesign",
+      "#leadgeneration",
+      "#clientwork"
+    ],
+    "sound": "Original founder voice-over and real UI sound (keys, click, publish chime); quiet Commercial Music Library bed on TikTok.",
+    "shotList": [
+      "Lead finder search (map search only)",
+      "Results list, blurred",
+      "Save to CRM",
+      "CRM stages",
+      "Demo build and review link"
+    ],
+    "assetsNeeded": [
+      "Blur mask for every business name, address, phone and email",
+      "A fictional demo brief for the business type",
+      "Clock chip"
+    ],
+    "reuseExisting": [],
+    "effort": "med",
+    "priority": "P0",
+    "week": 1,
+    "tag": "live",
+    "whyItWorks": "'Win before the call' is pillar 1 for the paying ICP; the lead finder is live and few competitors bundle it with the builder (strategy §4.2). Hook F4 from the plan.",
+    "goLinks": [
+      "makeborne.com/go/ig-v07",
+      "makeborne.com/go/li-v07",
+      "makeborne.com/go/tt-v07",
+      "makeborne.com/go/yt-v07"
+    ],
+    "utm": {
+      "utm_campaign": "launch-2026-10",
+      "utm_content": "<surface>-v07-f4",
+      "utm_medium": "organic"
+    },
+    "hookCode": "F4",
+    "budgetLine": null,
+    "checks": [
+      "Show only steps that are live in production: before filming, confirm which lead-finder steps (profile reading, ranking for your offer, 'redesign their website') ship today; anything that belongs to AI lead research is a later beat",
+      "Do not claim 'no website' unless the finder shows that field",
+      "No automated cold email; never headline 'email outreach' (strategy risk 21)",
+      "Do not build or publish a site for a real business without its written OK"
+    ]
+  },
+  {
+    "id": "V08",
+    "title": "Founder Day 1: we launched, comment what to build first",
+    "format": "founder",
+    "platforms": [
+      "LinkedIn",
+      "TikTok",
+      "Instagram Reels",
+      "X"
+    ],
+    "icp": "icp1",
+    "lane": "A",
+    "lengthSec": 45,
+    "hook": {
+      "line": "We launched today. Comment what you want built first.",
+      "visual": "Frame 0: founder face to camera at the desk in Sarajevo, laptop showing a finished site; caption bar 'Day 1'."
+    },
+    "script": [
+      {
+        "t": "0-2s",
+        "visual": "Founder to camera, laptop visible",
+        "onScreenText": "Day 1. We launched today.",
+        "voiceover": "We launched Makeborne today."
+      },
+      {
+        "t": "2-12s",
+        "visual": "Cut to a real build clip (from V02) playing on the laptop",
+        "onScreenText": "Websites. Books. Decks.",
+        "voiceover": "It makes websites, books and presentations from one brief."
+      },
+      {
+        "t": "12-24s",
+        "visual": "Phone: a client review link, comment, Approve (from V05)",
+        "onScreenText": "And your client approves on one link.",
+        "voiceover": "And it's built for client work: your client comments on the live site and approves it."
+      },
+      {
+        "t": "24-36s",
+        "visual": "Founder to camera",
+        "onScreenText": "From $20/mo + tax. Full refund until you use credits.",
+        "voiceover": "It's paid from day one, from twenty dollars a month. If you don't use a credit, you get every cent back."
+      },
+      {
+        "t": "36-45s",
+        "visual": "Founder to camera, smiling",
+        "onScreenText": "Comment what I should build first.",
+        "voiceover": "Comment what you want built first, and I'll build it on camera."
+      }
+    ],
+    "cta": "Comment what to build first (feeds V04). LinkedIn/X: link in the first comment/reply.",
+    "caption": "Day 1. I launched Makeborne today: an AI studio for client work, from Sarajevo. Websites, books and decks from one brief, plus client review links. From $20/month + tax, full refund until you use credits. Comment what I should build first.",
+    "hashtags": [
+      "#buildinpublic",
+      "#startup",
+      "#freelancer",
+      "#sarajevo"
+    ],
+    "sound": "Founder voice, no music or a very low bed; LinkedIn plays muted by default, so burned-in captions carry it.",
+    "shotList": [
+      "Face to camera, window light, phone at eye level",
+      "B-roll from V02 and V05 captures"
+    ],
+    "assetsNeeded": [
+      "V02 and V05 recordings",
+      "Day-N caption bar template"
+    ],
+    "reuseExisting": [],
+    "effort": "low",
+    "priority": "P0",
+    "week": 1,
+    "tag": "live",
+    "whyItWorks": "Building in public on LinkedIn is what Base44's founder credits [F, self-reported, CEO Insider 4 Aug 2025]. The comment ask feeds the comment-reply series.",
+    "goLinks": [
+      "makeborne.com/go/ig-v08",
+      "makeborne.com/go/li-v08",
+      "makeborne.com/go/tt-v08",
+      "makeborne.com/go/x-v08"
+    ],
+    "utm": {
+      "utm_campaign": "launch-2026-10",
+      "utm_content": "<surface>-v08-p4",
+      "utm_medium": "organic"
+    },
+    "hookCode": "P4",
+    "budgetLine": null,
+    "checks": [
+      "Say 'a small studio' unless 'solo founder' is literally true",
+      "No competitor valuation numbers unless re-checked on the posting day"
+    ]
+  },
+  {
+    "id": "V09",
+    "title": "Founder Day 7: exactly how many people paid",
+    "format": "founder",
+    "platforms": [
+      "LinkedIn",
+      "X",
+      "TikTok",
+      "Instagram Reels"
+    ],
+    "icp": "icp1",
+    "lane": "A",
+    "lengthSec": 60,
+    "hook": {
+      "line": "Day 7: here's exactly how many people paid.",
+      "visual": "Frame 0: founder to camera holding the phone with a cropped Whop payments screen (buyer data hidden), the payer count readable."
+    },
+    "script": [
+      {
+        "t": "0-2s",
+        "visual": "Founder with cropped Whop screen",
+        "onScreenText": "Day 7: exactly how many people paid.",
+        "voiceover": "Seven days in. Here's exactly how many people paid."
+      },
+      {
+        "t": "2-15s",
+        "visual": "Screen: payer count, refunds, MRR (real numbers, buyer data cropped)",
+        "onScreenText": "[N] paid · [N] refunded · $[MRR]",
+        "voiceover": "[N] people paid, [N] asked for a refund, and that's [MRR] a month."
+      },
+      {
+        "t": "15-35s",
+        "visual": "Founder to camera; cut-ins of what people built (only with consent)",
+        "onScreenText": "What worked. What broke.",
+        "voiceover": "Here's what worked, and here's what broke."
+      },
+      {
+        "t": "35-50s",
+        "visual": "Screen: the post or source that sold most (from /go/ data)",
+        "onScreenText": "Best source: [source]",
+        "voiceover": "The best source this week was [source]."
+      },
+      {
+        "t": "50-60s",
+        "visual": "Founder to camera",
+        "onScreenText": "Next week: [one thing]",
+        "voiceover": "Next week I'm doing [one thing]. Follow for day 14."
+      }
+    ],
+    "cta": "Follow for Day 14. Link in first comment.",
+    "caption": "Day 7 of launching an AI studio for client work from Sarajevo, with every number in public: [N] payers, [N] refunds, $[MRR] MRR. What worked and what broke.",
+    "hashtags": [
+      "#buildinpublic",
+      "#indiehackers",
+      "#startup",
+      "#saas"
+    ],
+    "sound": "Founder voice, no music or a very low bed; LinkedIn plays muted by default, so burned-in captions carry it.",
+    "shotList": [
+      "Face to camera",
+      "Cropped screen recordings of Whop and the /go/ source report"
+    ],
+    "assetsNeeded": [
+      "Sunday numbers from the weekly source report",
+      "Crop/blur every buyer name and email"
+    ],
+    "reuseExisting": [],
+    "effort": "low",
+    "priority": "P0",
+    "week": 1,
+    "tag": "live",
+    "whyItWorks": "Public numbers are the trust engine and a free press angle (D11, D19). Cluely's numbered episodes had a median of 552K TikTok views [F, public counts via viral.app, Oct 2026], although its views did not convert, which is why this series carries real product proof too.",
+    "goLinks": [
+      "makeborne.com/go/ig-v09",
+      "makeborne.com/go/li-v09",
+      "makeborne.com/go/tt-v09",
+      "makeborne.com/go/x-v09"
+    ],
+    "utm": {
+      "utm_campaign": "launch-2026-10",
+      "utm_content": "<surface>-v09-p2",
+      "utm_medium": "organic"
+    },
+    "hookCode": "P2",
+    "budgetLine": null,
+    "checks": [
+      "Real numbers only, refunds included; never round up",
+      "No buyer data on screen"
+    ]
+  },
+  {
+    "id": "V10",
+    "title": "One brief: the site, the pitch deck and the client guide",
+    "format": "demo",
+    "platforms": [
+      "TikTok",
+      "Instagram Reels",
+      "YouTube Shorts",
+      "LinkedIn",
+      "X"
+    ],
+    "icp": "icp1",
+    "lane": "A",
+    "lengthSec": 30,
+    "hook": {
+      "line": "One brief. The website, the deck and the client guide.",
+      "visual": "Frame 0: three finished outputs in one brand side by side (phone site, deck slide, book page), the brief chip above them."
+    },
+    "script": [
+      {
+        "t": "0-2s",
+        "visual": "Three outputs in one brand",
+        "onScreenText": "One brief. Website, deck and guide.",
+        "voiceover": "One brief. Three client deliverables."
+      },
+      {
+        "t": "2-10s",
+        "visual": "Composer: Website mode, brief; build (sped-up chip)",
+        "onScreenText": "1. The website",
+        "voiceover": "First the website."
+      },
+      {
+        "t": "10-18s",
+        "visual": "Switch to Presentation with the same brief; deck arrives",
+        "onScreenText": "2. The pitch deck",
+        "voiceover": "Same brief, now the pitch deck."
+      },
+      {
+        "t": "18-26s",
+        "visual": "Switch to Book: a client welcome guide; page riffle",
+        "onScreenText": "3. The client guide",
+        "voiceover": "And a welcome guide for the client."
+      },
+      {
+        "t": "26-30s",
+        "visual": "All three again",
+        "onScreenText": "Comment CLIENT.",
+        "voiceover": "Comment CLIENT for the brief."
+      }
+    ],
+    "cta": "'Comment CLIENT'.",
+    "caption": "One brief, three client deliverables: a website, a pitch deck and a welcome guide in one brand. Studio $49/month, best for client work. Comment CLIENT.",
+    "hashtags": [
+      "#freelancer",
+      "#agencylife",
+      "#clientwork",
+      "#webdesign"
+    ],
+    "sound": "Brand TikTok: Commercial Music Library track only (business account) under original voice-over. Instagram/YouTube: original voice-over plus a library track cleared for business use [U: re-check each platform's business library]. No trending chart songs on brand accounts.",
+    "shotList": [
+      "Three builds from the same brief (record each uncut)",
+      "Book page riffle",
+      "Hero three-up composition on canvas"
+    ],
+    "assetsNeeded": [
+      "One fictional client brief",
+      "Three-up layout template"
+    ],
+    "reuseExisting": [],
+    "effort": "med",
+    "priority": "P0",
+    "week": 1,
+    "tag": "live",
+    "whyItWorks": "Pillar 3 'one brief, three deliverables' is the line no single competitor covers (strategy §3.2, §4.2): Lovable and Base44 build apps, Gamma builds decks.",
+    "goLinks": [
+      "makeborne.com/go/ig-v10",
+      "makeborne.com/go/li-v10",
+      "makeborne.com/go/tt-v10",
+      "makeborne.com/go/x-v10",
+      "makeborne.com/go/yt-v10"
+    ],
+    "utm": {
+      "utm_campaign": "launch-2026-10",
+      "utm_content": "<surface>-v10-x2",
+      "utm_medium": "organic"
+    },
+    "hookCode": "X2",
+    "budgetLine": null,
+    "checks": [
+      "These are three builds from one brief, not one click: say 'same brief', never 'it made all three automatically'",
+      "Books are for screen and PDF; do not say print-ready"
+    ]
+  },
+  {
+    "id": "V11",
+    "title": "Founder: why there's no free plan",
+    "format": "founder",
+    "platforms": [
+      "LinkedIn",
+      "X",
+      "TikTok",
+      "Instagram Reels"
+    ],
+    "icp": "icp1",
+    "lane": "A",
+    "lengthSec": 50,
+    "hook": {
+      "line": "Everyone said 'add a free plan'. Here's why I didn't.",
+      "visual": "Frame 0: founder to camera, pricing page on the laptop behind, the three plan cards readable."
+    },
+    "script": [
+      {
+        "t": "0-2s",
+        "visual": "Founder to camera",
+        "onScreenText": "Everyone said 'add a free plan'.",
+        "voiceover": "Everyone told me to add a free plan."
+      },
+      {
+        "t": "2-15s",
+        "visual": "Founder; cut to the pricing page",
+        "onScreenText": "Every build costs real money.",
+        "voiceover": "Every build costs us real money, so free users would be paid for by paying ones."
+      },
+      {
+        "t": "15-30s",
+        "visual": "Screen: the most a request can cost, shown before Send",
+        "onScreenText": "You see the max cost before it runs.",
+        "voiceover": "Instead you see the most a request can cost before it starts."
+      },
+      {
+        "t": "30-42s",
+        "visual": "Screen: sample review link, the examples gallery or an uncut build",
+        "onScreenText": "Watch it first. Play the client.",
+        "voiceover": "Watch a full uncut build first, or open our sample review link and play the client."
+      },
+      {
+        "t": "42-50s",
+        "visual": "Founder",
+        "onScreenText": "Full refund until you use credits.",
+        "voiceover": "And if you don't use a credit, you get every cent back."
+      }
+    ],
+    "cta": "Link in first comment to the uncut build page.",
+    "caption": "No free tier, on purpose. Watch the uncut build, play the client on our sample review link (once it is live), and if you don't use a credit you get every cent back.",
+    "hashtags": [
+      "#buildinpublic",
+      "#saas",
+      "#pricing",
+      "#startup"
+    ],
+    "sound": "Founder voice, no music or a very low bed; LinkedIn plays muted by default, so burned-in captions carry it.",
+    "shotList": [
+      "Face to camera",
+      "Pricing page",
+      "Cost-before-send UI",
+      "Uncut build or sample review link"
+    ],
+    "assetsNeeded": [
+      "The sample review link if it has shipped (ask 5); otherwise cut that line"
+    ],
+    "reuseExisting": [],
+    "effort": "low",
+    "priority": "P1",
+    "week": 2,
+    "tag": "live",
+    "whyItWorks": "The contrarian stance is the press and Indie Hackers angle in the messaging house, and it pre-empts the top objection (strategy §4.1, §4.4).",
+    "goLinks": [
+      "makeborne.com/go/ig-v11",
+      "makeborne.com/go/li-v11",
+      "makeborne.com/go/tt-v11",
+      "makeborne.com/go/x-v11"
+    ],
+    "utm": {
+      "utm_campaign": "launch-2026-10",
+      "utm_content": "<surface>-v11-p3",
+      "utm_medium": "organic"
+    },
+    "hookCode": "P3",
+    "budgetLine": null,
+    "checks": [
+      "Prerequisite: ga5 sample review link ('play the client') live and ga7 /examples gallery live. Until then use the CTA 'Watch the uncut build' and do not mention the sample link or the gallery",
+      "If the owner adopts D1 (7-day / 100-credit refund), update the refund line in this and every other video",
+      "Free tier stays an owner decision (D17)"
+    ],
+    "prerequisites": [
+      "ga5 sample review link ('play the client') live",
+      "ga7 /examples gallery live"
+    ]
+  },
+  {
+    "id": "V12",
+    "title": "Be the client for 30 seconds (sample review link)",
+    "format": "demo",
+    "platforms": [
+      "Instagram Reels",
+      "TikTok",
+      "LinkedIn"
+    ],
+    "icp": "icp1",
+    "lane": "A",
+    "lengthSec": 25,
+    "hook": {
+      "line": "Be my client for 30 seconds. Tap anything.",
+      "visual": "Frame 0: phone held out to camera showing the sample review page, a finger hovering over the hero."
+    },
+    "script": [
+      {
+        "t": "0-2s",
+        "visual": "Phone held out, sample review page",
+        "onScreenText": "Be my client for 30 seconds.",
+        "voiceover": "You're the client now."
+      },
+      {
+        "t": "2-10s",
+        "visual": "Tap the headline, leave a comment",
+        "onScreenText": "Tap anything. Comment.",
+        "voiceover": "Tap anything and comment. No account."
+      },
+      {
+        "t": "10-18s",
+        "visual": "Request changes or Approve",
+        "onScreenText": "Approve or ask for changes.",
+        "voiceover": "Approve it, or ask for changes."
+      },
+      {
+        "t": "18-25s",
+        "visual": "End card with the /go/ link to the sample review",
+        "onScreenText": "Try it: link in bio",
+        "voiceover": "The link is in my bio. Try it."
+      }
+    ],
+    "cta": "Bio link / DM CLIENT: the public sample review link.",
+    "caption": "Play the client: open our sample review link, comment on the live page and approve it. No account. This is what your clients see. Comment CLIENT for the link.",
+    "hashtags": [
+      "#freelancer",
+      "#clientwork",
+      "#webdesigner",
+      "#agencylife"
+    ],
+    "sound": "Original founder voice-over and real UI sound (keys, click, publish chime); quiet Commercial Music Library bed on TikTok.",
+    "shotList": [
+      "Phone POV of the sample review page",
+      "Hand-held over-the-shoulder"
+    ],
+    "assetsNeeded": [
+      "The public sample review link (growth ask 5) must be live"
+    ],
+    "reuseExisting": [],
+    "effort": "low",
+    "priority": "P1",
+    "week": 2,
+    "tag": "live",
+    "whyItWorks": "The plan's trial substitute at zero AI cost (strategy §10.4); activation means a review link sent, so showing the client side sells the job.",
+    "goLinks": [
+      "makeborne.com/go/ig-v12",
+      "makeborne.com/go/li-v12",
+      "makeborne.com/go/tt-v12"
+    ],
+    "utm": {
+      "utm_campaign": "launch-2026-10",
+      "utm_content": "<surface>-v12-f1",
+      "utm_medium": "organic"
+    },
+    "hookCode": "F1",
+    "budgetLine": null,
+    "checks": [
+      "Prerequisite: ga5 sample review link ('play the client') live. Until then use the CTA 'Watch the uncut build' and do not mention the sample link or the gallery",
+      "Post only after ask 5 ships; review links themselves are live today"
+    ],
+    "prerequisites": [
+      "ga5 sample review link ('play the client') live"
+    ]
+  },
+  {
+    "id": "V13",
+    "title": "How I get a client to approve a site in one link (tutorial)",
+    "format": "tutorial",
+    "platforms": [
+      "YouTube Shorts",
+      "TikTok",
+      "LinkedIn",
+      "Instagram Reels"
+    ],
+    "icp": "icp1",
+    "lane": "A",
+    "lengthSec": 75,
+    "hook": {
+      "line": "How I get a client to approve a site in one link.",
+      "visual": "Frame 0: the 'Approved' state on a phone, then a rewind effect to the studio."
+    },
+    "script": [
+      {
+        "t": "0-2s",
+        "visual": "Approved state on phone",
+        "onScreenText": "How I get approval in one link.",
+        "voiceover": "Here's how I get a client to approve a site in one link."
+      },
+      {
+        "t": "2-20s",
+        "visual": "Studio: create a review link, choose expiry (3-90 days), copy",
+        "onScreenText": "Step 1: create the review link",
+        "voiceover": "Step one: create a review link and pick how long it stays open."
+      },
+      {
+        "t": "20-40s",
+        "visual": "Client phone: anonymous comment pinned to the section",
+        "onScreenText": "Step 2: they comment on the live page",
+        "voiceover": "Step two: they comment right on the page. No account."
+      },
+      {
+        "t": "40-60s",
+        "visual": "Studio: comments listed, fixes made in chat, new version",
+        "onScreenText": "Step 3: fix in chat",
+        "voiceover": "Step three: I fix each comment in chat."
+      },
+      {
+        "t": "60-75s",
+        "visual": "Client taps Approve; studio shows the decision",
+        "onScreenText": "Step 4: Approve",
+        "voiceover": "Step four: they approve, and I have it in writing. Comment CLIENT."
+      }
+    ],
+    "cta": "'Comment CLIENT' / YouTube: link in description to the client-work page.",
+    "caption": "Client approval link tutorial: how to send a website for review, collect comments on the live page and get it approved. Works for sites, decks and books.",
+    "hashtags": [
+      "#clientapproval",
+      "#webdesign",
+      "#freelancetips",
+      "#tutorial"
+    ],
+    "sound": "Original founder voice-over and real UI sound (keys, click, publish chime); quiet Commercial Music Library bed on TikTok.",
+    "shotList": [
+      "Studio review-link dialog",
+      "Client phone capture",
+      "Comments list and chat fixes",
+      "Approve"
+    ],
+    "assetsNeeded": [
+      "Demo project",
+      "Step captions"
+    ],
+    "reuseExisting": [],
+    "effort": "med",
+    "priority": "P1",
+    "week": 2,
+    "tag": "live",
+    "whyItWorks": "Search intent ('client approval link') plus the Studio job; longer tutorials get more reach on TikTok (120-180 s about 10x the views of under-30 s) [F, Socialinsider H1 2026, 21 Aug 2026].",
+    "goLinks": [
+      "makeborne.com/go/ig-v13",
+      "makeborne.com/go/li-v13",
+      "makeborne.com/go/tt-v13",
+      "makeborne.com/go/yt-v13"
+    ],
+    "utm": {
+      "utm_campaign": "launch-2026-10",
+      "utm_content": "<surface>-v13-f3",
+      "utm_medium": "organic"
+    },
+    "hookCode": "F3",
+    "budgetLine": null,
+    "checks": [
+      "Say 'review link', not 'client portal for agencies' (agency tools are a later beat)"
+    ]
+  },
+  {
+    "id": "V14",
+    "title": "My slides vs the deck I made from the same notes",
+    "format": "before-after",
+    "platforms": [
+      "TikTok",
+      "Instagram Reels",
+      "LinkedIn",
+      "X"
+    ],
+    "icp": "icp2",
+    "lane": "B",
+    "lengthSec": 27,
+    "hook": {
+      "line": "My slides vs. the deck I made from the same notes. Be honest.",
+      "visual": "Frame 0: split screen, left a cramped bullet-point slide, right the finished Makeborne slide."
+    },
+    "script": [
+      {
+        "t": "0-2s",
+        "visual": "Split screen",
+        "onScreenText": "My slides vs. the same notes in Makeborne.",
+        "voiceover": "Same notes. Be honest."
+      },
+      {
+        "t": "2-10s",
+        "visual": "Left: flick through 4 cramped slides made by hand",
+        "onScreenText": "Before: 2 hours",
+        "voiceover": "This is mine. Two hours."
+      },
+      {
+        "t": "10-20s",
+        "visual": "Right: paste the notes; build (chip); slides dealt in",
+        "onScreenText": "After: [real time]",
+        "voiceover": "Same notes, pasted in."
+      },
+      {
+        "t": "20-27s",
+        "visual": "Both side by side; poll sticker",
+        "onScreenText": "Left or right?",
+        "voiceover": "Left or right? Comment."
+      }
+    ],
+    "cta": "'Comment DECK'.",
+    "caption": "Before and after: my hand-made slides vs a deck built from the same notes, exported to PowerPoint. Which would you present? Comment DECK for the brief.",
+    "hashtags": [
+      "#pitchdeck",
+      "#beforeandafter",
+      "#presentation",
+      "#consultant"
+    ],
+    "sound": "Brand TikTok: Commercial Music Library track only (business account) under original voice-over. Instagram/YouTube: original voice-over plus a library track cleared for business use [U: re-check each platform's business library]. No trending chart songs on brand accounts.",
+    "shotList": [
+      "Make the 'before' deck honestly (founder's own notes, fictional company)",
+      "Uncut after build"
+    ],
+    "assetsNeeded": [
+      "Before deck",
+      "Fictional notes"
+    ],
+    "reuseExisting": [],
+    "effort": "low",
+    "priority": "P1",
+    "week": 2,
+    "tag": "live",
+    "whyItWorks": "Before/after was Gamma's highest-engagement creator angle [V, Passionfroot Q2 2025; LightReel 24 Oct 2026].",
+    "goLinks": [
+      "makeborne.com/go/ig-v14",
+      "makeborne.com/go/li-v14",
+      "makeborne.com/go/tt-v14",
+      "makeborne.com/go/x-v14"
+    ],
+    "utm": {
+      "utm_campaign": "launch-2026-10",
+      "utm_content": "<surface>-v14-d2",
+      "utm_medium": "organic"
+    },
+    "hookCode": "D2",
+    "budgetLine": null,
+    "checks": [
+      "The 'before' must be genuinely ours; never use someone else's deck"
+    ]
+  },
+  {
+    "id": "V15",
+    "title": "Your notes app is full of book ideas: here's one, finished",
+    "format": "demo",
+    "platforms": [
+      "Instagram Reels",
+      "TikTok",
+      "YouTube Shorts"
+    ],
+    "icp": "icp3",
+    "lane": "B",
+    "lengthSec": 24,
+    "hook": {
+      "line": "Your notes app is full of book ideas. Here's one, finished.",
+      "visual": "Frame 0: a phone notes list ('book about fixing old furniture'), then a hard cut to the finished book cover."
+    },
+    "script": [
+      {
+        "t": "0-2s",
+        "visual": "Notes app list on phone",
+        "onScreenText": "Your notes app is full of book ideas.",
+        "voiceover": "Your notes app is full of book ideas."
+      },
+      {
+        "t": "2-6s",
+        "visual": "Cover of the finished text-led book",
+        "onScreenText": "Here's one, finished.",
+        "voiceover": "Here's one, finished."
+      },
+      {
+        "t": "6-18s",
+        "visual": "Page riffle: contents, chapter opener, a checklist page",
+        "onScreenText": "Contents. Chapters. Checklists.",
+        "voiceover": "Contents, chapters, checklists. Ready to read on screen or as a PDF."
+      },
+      {
+        "t": "18-24s",
+        "visual": "Composer in Book mode with the one-line idea",
+        "onScreenText": "Comment BOOK.",
+        "voiceover": "Comment BOOK and I'll send the prompt."
+      }
+    ],
+    "cta": "'Comment BOOK'.",
+    "caption": "How to turn a note into a finished guide: one line in, a full book out, for screen and PDF. Comment BOOK for the brief.",
+    "hashtags": [
+      "#writing",
+      "#ebook",
+      "#leadmagnet",
+      "#notesapp"
+    ],
+    "sound": "Brand TikTok: Commercial Music Library track only (business account) under original voice-over. Instagram/YouTube: original voice-over plus a library track cleared for business use [U: re-check each platform's business library]. No trending chart songs on brand accounts.",
+    "shotList": [
+      "Notes-app prop",
+      "Book riffle from real output",
+      "Composer in Book mode"
+    ],
+    "assetsNeeded": [
+      "Crop bracketed placeholders from the v12 pages"
+    ],
+    "reuseExisting": [
+      "film library (private)/v12/assets/real/book-repair/page-01.png ... page-17.png (The Repair Table: real product run)",
+      "film library (private)/v12/assets/real/book_sheet.jpg"
+    ],
+    "effort": "low",
+    "priority": "P1",
+    "week": 2,
+    "tag": "live",
+    "whyItWorks": "ICP 3 message from the plan; the v10 'notes list' insight without its spent devices (research/short-form-video.md §14).",
+    "goLinks": [
+      "makeborne.com/go/ig-v15",
+      "makeborne.com/go/tt-v15",
+      "makeborne.com/go/yt-v15"
+    ],
+    "utm": {
+      "utm_campaign": "launch-2026-10",
+      "utm_content": "<surface>-v15-b4",
+      "utm_medium": "organic"
+    },
+    "hookCode": "B4",
+    "budgetLine": null,
+    "checks": [
+      "Text-led only: no picture-book or gift framing until images pass the gate",
+      "No 'print-ready' and no KDP claim (KDP needs AI disclosure)"
+    ]
+  },
+  {
+    "id": "V16",
+    "title": "5 websites, each from one sentence (swipe)",
+    "format": "slideshow",
+    "platforms": [
+      "TikTok",
+      "Instagram Reels"
+    ],
+    "icp": "icp4",
+    "lane": "B",
+    "lengthSec": 15,
+    "hook": {
+      "line": "5 websites, each from one sentence. Swipe.",
+      "visual": "Slide 1: the best output on a phone mockup, sentence chip under it, '1/5' marker."
+    },
+    "script": [
+      {
+        "t": "slide 1 (0-2s)",
+        "visual": "Best site on a phone, sentence chip",
+        "onScreenText": "5 websites, each from one sentence.",
+        "voiceover": "None (music)"
+      },
+      {
+        "t": "slides 2-5",
+        "visual": "One real output per slide with its sentence chip and credits used",
+        "onScreenText": "'A site for a bouldering gym.' · [N] credits",
+        "voiceover": "None"
+      },
+      {
+        "t": "slide 6",
+        "visual": "CTA card",
+        "onScreenText": "Comment SITE for all 5 briefs.",
+        "voiceover": "None"
+      }
+    ],
+    "cta": "'Comment SITE for all 5 briefs'.",
+    "caption": "5 AI websites made from one sentence each, real outputs, unedited, with the credits each one used. Which one wins? Comment SITE for the briefs.",
+    "hashtags": [
+      "#websitedesign",
+      "#webdesigninspiration",
+      "#smallbusiness",
+      "#aiwebsitebuilder"
+    ],
+    "sound": "TikTok photo mode: Commercial Music Library track. Instagram carousel: no audio or a cleared library track.",
+    "shotList": [
+      "Phone-mockup frames of 5 real fixture outputs",
+      "Sentence chip on every frame"
+    ],
+    "assetsNeeded": [
+      "5 real outputs; check every invented business name against real trademarks; never show the synthetic 'Tide Tables' fixtures or real-business redesigns"
+    ],
+    "reuseExisting": [
+      "Product repo real outputs (Relay Operations, Crux Yard, Osteria Brina and similar fixtures; 390-wide captures are native 9:16) - read only"
+    ],
+    "effort": "low",
+    "priority": "P1",
+    "week": 2,
+    "tag": "live",
+    "whyItWorks": "Carousels earn saves and comments at low effort [V, ttcalculator Q3 2025-Q1 2026]; Instagram carousels out-engage Reels in Buffer's 2026 data (6.9% vs 3.3%) [V, Buffer 19 Mar 2026].",
+    "goLinks": [
+      "makeborne.com/go/ig-v16",
+      "makeborne.com/go/tt-v16"
+    ],
+    "utm": {
+      "utm_campaign": "launch-2026-10",
+      "utm_content": "<surface>-v16-s1",
+      "utm_medium": "organic"
+    },
+    "hookCode": "S1",
+    "budgetLine": null,
+    "checks": [
+      "Unedited outputs only; say so"
+    ]
+  },
+  {
+    "id": "V17",
+    "title": "How to put your AI-built site on GitHub (manual export)",
+    "format": "tutorial",
+    "platforms": [
+      "X",
+      "YouTube Shorts",
+      "YouTube"
+    ],
+    "icp": "icp1",
+    "lane": "A",
+    "lengthSec": 60,
+    "hook": {
+      "line": "Your site isn't locked in. Here's the code on GitHub.",
+      "visual": "Frame 0: the GitHub repo page with the exported site files and the README, split with the live site."
+    },
+    "script": [
+      {
+        "t": "0-2s",
+        "visual": "Split: live site and GitHub repo",
+        "onScreenText": "Your site isn't locked in.",
+        "voiceover": "You own this. Here's the code on GitHub."
+      },
+      {
+        "t": "2-20s",
+        "visual": "Studio: export to GitHub (manual)",
+        "onScreenText": "Export to GitHub",
+        "voiceover": "From the studio, export to GitHub."
+      },
+      {
+        "t": "20-40s",
+        "visual": "GitHub: files, README; or download the source ZIP",
+        "onScreenText": "Or download the source",
+        "voiceover": "Or just download the source."
+      },
+      {
+        "t": "40-60s",
+        "visual": "Founder voice over the repo",
+        "onScreenText": "Manual export today.",
+        "voiceover": "It's a manual export today. Take your work anywhere."
+      }
+    ],
+    "cta": "Link in first reply (X) / description (YouTube).",
+    "caption": "How to export an AI-built website to GitHub: a manual export of the full source, plus a source download any time.",
+    "hashtags": [
+      "#github",
+      "#webdev",
+      "#nocode",
+      "#freelancer"
+    ],
+    "sound": "Voice-over only (X and YouTube).",
+    "shotList": [
+      "Export flow",
+      "Repo page",
+      "Source download"
+    ],
+    "assetsNeeded": [
+      "A test GitHub account/repo with nothing private visible"
+    ],
+    "reuseExisting": [],
+    "effort": "low",
+    "priority": "P2",
+    "week": 3,
+    "tag": "live",
+    "whyItWorks": "Pillar 4 'you own it' answers lock-in fear; developers are not the ICP, so it stays on X and YouTube (strategy §9).",
+    "goLinks": [
+      "makeborne.com/go/x-v17",
+      "makeborne.com/go/yt-v17"
+    ],
+    "utm": {
+      "utm_campaign": "launch-2026-10",
+      "utm_content": "<surface>-v17-t3",
+      "utm_medium": "organic"
+    },
+    "hookCode": "T3",
+    "budgetLine": null,
+    "checks": [
+      "Never say 'sync' or imply edits flow back (two-way sync is beat:github-sync)",
+      "No tokens, org names or private repos on screen"
+    ]
+  },
+  {
+    "id": "V18",
+    "title": "40-email feedback thread vs one link",
+    "format": "meme",
+    "platforms": [
+      "TikTok",
+      "Instagram Reels",
+      "LinkedIn"
+    ],
+    "icp": "icp1",
+    "lane": "A",
+    "lengthSec": 15,
+    "hook": {
+      "line": "40-email feedback thread vs one link.",
+      "visual": "Frame 0: left half an endless email thread scrolling fast, right half a single review link card."
+    },
+    "script": [
+      {
+        "t": "0-2s",
+        "visual": "Split: thread scrolling vs one link",
+        "onScreenText": "40 emails vs one link.",
+        "voiceover": "None"
+      },
+      {
+        "t": "2-9s",
+        "visual": "Left: 'RE: RE: RE: final_v7_FINAL'; right: client comments pinned on the live page",
+        "onScreenText": "'final_v7_FINAL' vs comments on the page",
+        "voiceover": "None"
+      },
+      {
+        "t": "9-15s",
+        "visual": "Right: Approve; left: still scrolling",
+        "onScreenText": "Approved. (Left: still scrolling.)",
+        "voiceover": "None"
+      }
+    ],
+    "cta": "'Comment CLIENT'.",
+    "caption": "The client feedback thread vs one review link where the client comments on the live site and approves it. Comment CLIENT.",
+    "hashtags": [
+      "#freelancerlife",
+      "#clientsfromhell",
+      "#webdesigner",
+      "#agencylife"
+    ],
+    "sound": "Commercial Music Library comedic track on TikTok; no voice needed.",
+    "shotList": [
+      "Fake email thread (invented names)",
+      "Review page capture"
+    ],
+    "assetsNeeded": [
+      "Email thread prop"
+    ],
+    "reuseExisting": [],
+    "effort": "low",
+    "priority": "P1",
+    "week": 2,
+    "tag": "live",
+    "whyItWorks": "Hook A3 in the plan; relatable pain gets sends, which Instagram weighs for non-follower reach [S, Kompozy summary 25 Sep 2026].",
+    "goLinks": [
+      "makeborne.com/go/ig-v18",
+      "makeborne.com/go/li-v18",
+      "makeborne.com/go/tt-v18"
+    ],
+    "utm": {
+      "utm_campaign": "launch-2026-10",
+      "utm_content": "<surface>-v18-a3",
+      "utm_medium": "organic"
+    },
+    "hookCode": "A3",
+    "budgetLine": null,
+    "checks": [
+      "No real client names or emails"
+    ]
+  },
+  {
+    "id": "V19",
+    "title": "3 things I send a client before the first call",
+    "format": "listicle",
+    "platforms": [
+      "LinkedIn",
+      "TikTok",
+      "Instagram Reels"
+    ],
+    "icp": "icp1",
+    "lane": "A",
+    "lengthSec": 45,
+    "hook": {
+      "line": "3 things I send a client before the first call.",
+      "visual": "Frame 0: founder (or creator) holding up three fingers; behind, a laptop with a demo site."
+    },
+    "script": [
+      {
+        "t": "0-2s",
+        "visual": "Three fingers to camera",
+        "onScreenText": "3 things before the first call.",
+        "voiceover": "Three things I send before the first call."
+      },
+      {
+        "t": "2-15s",
+        "visual": "1: a demo site built from their public info (fictional example on screen)",
+        "onScreenText": "1. A real first version",
+        "voiceover": "One: a real first version of their site."
+      },
+      {
+        "t": "15-28s",
+        "visual": "2: a short proposal deck from the same brief",
+        "onScreenText": "2. A one-page proposal deck",
+        "voiceover": "Two: a short proposal deck in the same brand."
+      },
+      {
+        "t": "28-40s",
+        "visual": "3: a review link so they can comment",
+        "onScreenText": "3. A link they can comment on",
+        "voiceover": "Three: a link they can comment on before we even talk."
+      },
+      {
+        "t": "40-45s",
+        "visual": "Founder",
+        "onScreenText": "Comment CLIENT.",
+        "voiceover": "Comment CLIENT for my brief."
+      }
+    ],
+    "cta": "'Comment CLIENT' / LinkedIn first comment.",
+    "caption": "How to win a web design client before the first call: a first-version site, a proposal deck and a review link. All made in one studio.",
+    "hashtags": [
+      "#freelancetips",
+      "#webdesign",
+      "#salestips",
+      "#agencyowner"
+    ],
+    "sound": "Founder voice, no music or a very low bed; LinkedIn plays muted by default, so burned-in captions carry it.",
+    "shotList": [
+      "Face to camera",
+      "Screen inserts of site, deck and review link"
+    ],
+    "assetsNeeded": [
+      "Fictional prospect brief"
+    ],
+    "reuseExisting": [],
+    "effort": "low",
+    "priority": "P1",
+    "week": 3,
+    "tag": "live",
+    "whyItWorks": "Listicles retain through the count; this one maps one-to-one onto the agency hero line 'Send your client a real website before the first call'.",
+    "goLinks": [
+      "makeborne.com/go/ig-v19",
+      "makeborne.com/go/li-v19",
+      "makeborne.com/go/tt-v19"
+    ],
+    "utm": {
+      "utm_campaign": "launch-2026-10",
+      "utm_content": "<surface>-v19-f5",
+      "utm_medium": "organic"
+    },
+    "hookCode": "F5",
+    "budgetLine": null,
+    "checks": [
+      "Demo for a real prospect only with their OK; on screen use a fictional one"
+    ]
+  },
+  {
+    "id": "V20",
+    "title": "Stitch: 'what should a small business website have?' then build it",
+    "format": "reaction",
+    "platforms": [
+      "TikTok"
+    ],
+    "icp": "icp4",
+    "lane": "B",
+    "lengthSec": 60,
+    "hook": {
+      "line": "You said every small business site needs these 5 things. Let's build one.",
+      "visual": "Frame 0: the stitched creator's tip clip (first 3-5 s, as TikTok's Stitch allows), then hard cut to the composer."
+    },
+    "script": [
+      {
+        "t": "0-4s",
+        "visual": "Stitched clip (only from creators who enable Stitch; credit them)",
+        "onScreenText": "Let's test this.",
+        "voiceover": "You said every small business site needs these five things."
+      },
+      {
+        "t": "4-15s",
+        "visual": "Composer: a fictional business brief that names the five things",
+        "onScreenText": "Their 5 rules, one brief",
+        "voiceover": "I put all five in one sentence."
+      },
+      {
+        "t": "15-45s",
+        "visual": "Build (chip); tick each rule off on screen",
+        "onScreenText": "✔ Hours ✔ Phone ✔ Map...",
+        "voiceover": "Hours, phone, location, services, booking button."
+      },
+      {
+        "t": "45-60s",
+        "visual": "Finished site, all five ticked",
+        "onScreenText": "5/5. Credit: @creator",
+        "voiceover": "Five out of five. Thanks for the checklist."
+      }
+    ],
+    "cta": "'DM me SITE' / bio link.",
+    "caption": "Testing a web designer's small business website checklist: one brief, five rules, one build. Credit to the original creator.",
+    "hashtags": [
+      "#stitch",
+      "#smallbusinesstips",
+      "#websitedesign",
+      "#webdesigntips"
+    ],
+    "sound": "Original audio of the stitched clip plus voice-over (stitch keeps the source audio for the stitched part).",
+    "shotList": [
+      "Stitch inside the TikTok app",
+      "Build capture",
+      "Checklist overlay"
+    ],
+    "assetsNeeded": [
+      "A tip video from a creator who allows stitches; add value, never mock"
+    ],
+    "reuseExisting": [],
+    "effort": "low",
+    "priority": "P2",
+    "week": 3,
+    "tag": "live",
+    "whyItWorks": "Borrows an existing audience's question and answers it with product proof (research/short-form-video.md §3, format 9).",
+    "goLinks": [
+      "makeborne.com/go/tt-v20"
+    ],
+    "utm": {
+      "utm_campaign": "launch-2026-10",
+      "utm_content": "<surface>-v20-r7",
+      "utm_medium": "organic"
+    },
+    "hookCode": "R7",
+    "budgetLine": null,
+    "checks": [
+      "Never use a real business; never imply the creator endorses Makeborne"
+    ]
+  },
+  {
+    "id": "V21",
+    "title": "Founder reads the first week's comments (and answers them)",
+    "format": "reaction",
+    "platforms": [
+      "TikTok",
+      "Instagram Reels",
+      "LinkedIn"
+    ],
+    "icp": "icp1",
+    "lane": "A",
+    "lengthSec": 55,
+    "hook": {
+      "line": "You asked if it's just templates. Let's check.",
+      "visual": "Frame 0: a real comment screenshot ('isn't this just a template?', handle blurred) next to the founder's face."
+    },
+    "script": [
+      {
+        "t": "0-2s",
+        "visual": "Comment card + founder",
+        "onScreenText": "'Isn't this just a template?'",
+        "voiceover": "You asked if this is just templates."
+      },
+      {
+        "t": "2-25s",
+        "visual": "Brief and result side by side; one live edit",
+        "onScreenText": "Brief → result → one live edit",
+        "voiceover": "Here's the brief, the result, and a live edit nobody planned."
+      },
+      {
+        "t": "25-40s",
+        "visual": "Second comment: 'can I use my own domain?'",
+        "onScreenText": "'Own domain?' Not yet.",
+        "voiceover": "Own domain? Not yet. Sites publish on a Makeborne address today, and you can download the source."
+      },
+      {
+        "t": "40-55s",
+        "visual": "Third comment: 'does it make images?'",
+        "onScreenText": "'Images?' Not yet.",
+        "voiceover": "Images? Not yet. Today it's typography or your own photos."
+      }
+    ],
+    "cta": "'Ask me anything in the comments.'",
+    "caption": "Answering the honest questions from launch week: is it templates, can I use my own domain, does it make images. Straight answers.",
+    "hashtags": [
+      "#buildinpublic",
+      "#ama",
+      "#webdesign",
+      "#startup"
+    ],
+    "sound": "Original founder voice-over and real UI sound (keys, click, publish chime); quiet Commercial Music Library bed on TikTok.",
+    "shotList": [
+      "Comment cards (handles blurred)",
+      "Face to camera",
+      "Brief/result split"
+    ],
+    "assetsNeeded": [
+      "3 real comments"
+    ],
+    "reuseExisting": [],
+    "effort": "low",
+    "priority": "P2",
+    "week": 3,
+    "tag": "live",
+    "whyItWorks": "Answers the objections that stop a paid-only purchase, in public, and turns comments into content.",
+    "goLinks": [
+      "makeborne.com/go/ig-v21",
+      "makeborne.com/go/li-v21",
+      "makeborne.com/go/tt-v21"
+    ],
+    "utm": {
+      "utm_campaign": "launch-2026-10",
+      "utm_content": "<surface>-v21-p5",
+      "utm_medium": "organic"
+    },
+    "hookCode": "P5",
+    "budgetLine": null,
+    "checks": [
+      "Use the objection answers word for word from strategy §4.4; no dates for coming features"
+    ]
+  },
+  {
+    "id": "V22",
+    "title": "How to make a website for your holiday rental (tutorial)",
+    "format": "tutorial",
+    "platforms": [
+      "YouTube Shorts",
+      "TikTok",
+      "Instagram Reels"
+    ],
+    "icp": "icp4",
+    "lane": "B",
+    "lengthSec": 90,
+    "hook": {
+      "line": "How to make a website for your holiday rental, no code.",
+      "visual": "Frame 0: the finished rental site on a phone, the 'Book a stay' section in view."
+    },
+    "script": [
+      {
+        "t": "0-2s",
+        "visual": "Finished site on phone",
+        "onScreenText": "How to make a website for your rental.",
+        "voiceover": "Here's how to make a website for your holiday rental."
+      },
+      {
+        "t": "2-20s",
+        "visual": "Brief written live: location, rooms, house rules, contact",
+        "onScreenText": "Step 1: one detailed sentence",
+        "voiceover": "Step one: describe the place in one or two sentences."
+      },
+      {
+        "t": "20-50s",
+        "visual": "Build (chip); use your own photos if you have them",
+        "onScreenText": "Step 2: build",
+        "voiceover": "Step two: build it. Use your own photos if you have them."
+      },
+      {
+        "t": "50-75s",
+        "visual": "Edits in chat: house rules, check-in times",
+        "onScreenText": "Step 3: edit in chat",
+        "voiceover": "Step three: tell it what to change."
+      },
+      {
+        "t": "75-90s",
+        "visual": "Publish to a Makeborne address",
+        "onScreenText": "Step 4: publish",
+        "voiceover": "Step four: publish. It's live on a Makeborne address. Comment SITE."
+      }
+    ],
+    "cta": "'Comment SITE' / YouTube description link.",
+    "caption": "How to make a website for your Airbnb or holiday rental without code: brief, build, edit, publish. From $20/month.",
+    "hashtags": [
+      "#airbnbhost",
+      "#holidayrental",
+      "#howto",
+      "#websitedesign"
+    ],
+    "sound": "Original founder voice-over and real UI sound (keys, click, publish chime); quiet Commercial Music Library bed on TikTok.",
+    "shotList": [
+      "Full tutorial capture",
+      "Step cards"
+    ],
+    "assetsNeeded": [
+      "Fictional rental; founder's own photos only if used"
+    ],
+    "reuseExisting": [],
+    "effort": "med",
+    "priority": "P1",
+    "week": 3,
+    "tag": "live",
+    "whyItWorks": "Matches a real search query; TikTok search insights and transcripts feed discovery [S, Search Engine Land].",
+    "goLinks": [
+      "makeborne.com/go/ig-v22",
+      "makeborne.com/go/tt-v22",
+      "makeborne.com/go/yt-v22"
+    ],
+    "utm": {
+      "utm_campaign": "launch-2026-10",
+      "utm_content": "<surface>-v22-t1",
+      "utm_medium": "organic"
+    },
+    "hookCode": "T1",
+    "budgetLine": null,
+    "checks": [
+      "Check photo upload works on production before saying 'use your own photos'",
+      "No custom domain claim"
+    ]
+  },
+  {
+    "id": "V23",
+    "title": "How to turn a messy brief into a pitch deck (tutorial)",
+    "format": "tutorial",
+    "platforms": [
+      "YouTube Shorts",
+      "TikTok",
+      "LinkedIn"
+    ],
+    "icp": "icp2",
+    "lane": "B",
+    "lengthSec": 90,
+    "hook": {
+      "line": "How to turn a messy brief into a pitch deck.",
+      "visual": "Frame 0: a wall of messy pasted notes, then the finished title slide snapping in front of them."
+    },
+    "script": [
+      {
+        "t": "0-2s",
+        "visual": "Messy notes then finished slide",
+        "onScreenText": "Messy brief → pitch deck",
+        "voiceover": "Messy notes in. Pitch deck out."
+      },
+      {
+        "t": "2-25s",
+        "visual": "Paste notes into the composer, Presentation mode",
+        "onScreenText": "Step 1: paste the mess",
+        "voiceover": "Paste the mess. Don't clean it up."
+      },
+      {
+        "t": "25-55s",
+        "visual": "Build (chip); deck arrives",
+        "onScreenText": "Step 2: build",
+        "voiceover": "Build it."
+      },
+      {
+        "t": "55-75s",
+        "visual": "Chat edits: 'merge slides 3 and 4', 'make the ask clearer'",
+        "onScreenText": "Step 3: edit in chat",
+        "voiceover": "Tell it what to change."
+      },
+      {
+        "t": "75-90s",
+        "visual": "Export PPTX/PDF",
+        "onScreenText": "Step 4: export",
+        "voiceover": "Export to PowerPoint or PDF. Comment DECK."
+      }
+    ],
+    "cta": "'Comment DECK'.",
+    "caption": "Pitch deck tutorial: paste messy notes, build, edit in chat, export to PowerPoint or PDF.",
+    "hashtags": [
+      "#pitchdeck",
+      "#howto",
+      "#presentationtips",
+      "#founder"
+    ],
+    "sound": "Original founder voice-over and real UI sound (keys, click, publish chime); quiet Commercial Music Library bed on TikTok.",
+    "shotList": [
+      "Full tutorial capture"
+    ],
+    "assetsNeeded": [
+      "Fictional messy notes"
+    ],
+    "reuseExisting": [],
+    "effort": "med",
+    "priority": "P1",
+    "week": 3,
+    "tag": "live",
+    "whyItWorks": "Search-led tutorial for ICP 2; LinkedIn video does best at 120-180 s in Socialinsider's H1 2026 data [F].",
+    "goLinks": [
+      "makeborne.com/go/li-v23",
+      "makeborne.com/go/tt-v23",
+      "makeborne.com/go/yt-v23"
+    ],
+    "utm": {
+      "utm_campaign": "launch-2026-10",
+      "utm_content": "<surface>-v23-t2",
+      "utm_medium": "organic"
+    },
+    "hookCode": "T2",
+    "budgetLine": null,
+    "checks": []
+  },
+  {
+    "id": "V24",
+    "title": "The full client workflow, start to finish (long YouTube tutorial)",
+    "format": "tutorial",
+    "platforms": [
+      "YouTube"
+    ],
+    "icp": "icp1",
+    "lane": "A",
+    "lengthSec": 540,
+    "hook": {
+      "line": "From finding a client to their approval, in one studio.",
+      "visual": "Frame 0: a 3-panel cold open (lead list blurred, demo site, Approved stamp on a phone)."
+    },
+    "script": [
+      {
+        "t": "0-0:20",
+        "visual": "Cold open: the three panels",
+        "onScreenText": "Find → build → approve",
+        "voiceover": "In the next nine minutes: find a client, build their first version, and get it approved."
+      },
+      {
+        "t": "0:20-2:30",
+        "visual": "Lead finder and CRM",
+        "onScreenText": "1. Find and track",
+        "voiceover": "Finding local businesses and tracking them."
+      },
+      {
+        "t": "2:30-5:00",
+        "visual": "Demo site build from a brief, one edit, publish",
+        "onScreenText": "2. Build the first version",
+        "voiceover": "Building the first version they'll see."
+      },
+      {
+        "t": "5:00-7:00",
+        "visual": "Review link; client comments; fixes; Approve",
+        "onScreenText": "3. Review and approval",
+        "voiceover": "Sending the review link and getting the yes."
+      },
+      {
+        "t": "7:00-8:30",
+        "visual": "Deck and guide from the same brief; PPTX; manual GitHub export",
+        "onScreenText": "4. The extras",
+        "voiceover": "The proposal deck, the guide, and exporting the code."
+      },
+      {
+        "t": "8:30-9:00",
+        "visual": "Pricing and refund line",
+        "onScreenText": "makeborne.com · from $20/mo + tax · full refund until you use credits",
+        "voiceover": "Studio is forty-nine a month. Full refund until you use credits."
+      }
+    ],
+    "cta": "Description link /go/yt-v24; chapters.",
+    "caption": "How freelancers can run client website work in one place: lead finder, AI site build, client review link and approval, deck and GitHub export. Chapters below.",
+    "hashtags": [
+      "#webdesign",
+      "#freelancing",
+      "#tutorial",
+      "#clientwork"
+    ],
+    "sound": "Voice-over; no music under speech.",
+    "shotList": [
+      "Screen capture at 2x UI scale",
+      "Face-cam corner optional",
+      "Chapter cards"
+    ],
+    "assetsNeeded": [
+      "Thumbnail 1280x720 x3 for Test & Compare",
+      "Chapters"
+    ],
+    "reuseExisting": [],
+    "effort": "high",
+    "priority": "P1",
+    "week": 3,
+    "tag": "live",
+    "whyItWorks": "The plan's long tutorial every 2 weeks from week 3; Shorts link to it; YouTube Test & Compare picks thumbnails on watch time [V, SEJ / vidIQ Jul 2026].",
+    "goLinks": [
+      "makeborne.com/go/yt-v24"
+    ],
+    "utm": {
+      "utm_campaign": "launch-2026-10",
+      "utm_content": "<surface>-v24-t4",
+      "utm_medium": "organic"
+    },
+    "hookCode": "T4",
+    "budgetLine": null,
+    "checks": [
+      "Do not call it 'agency tools' (that's a beat)",
+      "Blur every real business in the lead finder"
+    ]
+  },
+  {
+    "id": "V25",
+    "title": "My client pipeline lives next to the sites I build (CRM)",
+    "format": "demo",
+    "platforms": [
+      "LinkedIn",
+      "Instagram Reels",
+      "TikTok"
+    ],
+    "icp": "icp1",
+    "lane": "A",
+    "lengthSec": 30,
+    "hook": {
+      "line": "My client pipeline lives next to the sites I build.",
+      "visual": "Frame 0: the CRM board with cards moving from 'Lead' to 'Approved' (names blurred or fictional)."
+    },
+    "script": [
+      {
+        "t": "0-2s",
+        "visual": "CRM board, a card moving",
+        "onScreenText": "Pipeline next to the work.",
+        "voiceover": "My pipeline sits right next to the work."
+      },
+      {
+        "t": "2-14s",
+        "visual": "Open a lead; its demo site and review link attached",
+        "onScreenText": "Lead → demo → review",
+        "voiceover": "Each lead has its demo and review link attached."
+      },
+      {
+        "t": "14-24s",
+        "visual": "Client approves; move the card",
+        "onScreenText": "Approved → won",
+        "voiceover": "When they approve, I move it."
+      },
+      {
+        "t": "24-30s",
+        "visual": "Board view",
+        "onScreenText": "Basic CRM. Built in.",
+        "voiceover": "A basic CRM, built in. Comment CLIENT."
+      }
+    ],
+    "cta": "'Comment CLIENT'.",
+    "caption": "A basic CRM inside the AI website studio: leads, demo sites and review links in one place. Studio plan, best for client work.",
+    "hashtags": [
+      "#crm",
+      "#freelancer",
+      "#webdesignbusiness",
+      "#clientwork"
+    ],
+    "sound": "Original founder voice-over and real UI sound (keys, click, publish chime); quiet Commercial Music Library bed on TikTok.",
+    "shotList": [
+      "CRM board capture with fictional leads"
+    ],
+    "assetsNeeded": [
+      "Fictional CRM data on a demo account"
+    ],
+    "reuseExisting": [],
+    "effort": "low",
+    "priority": "P2",
+    "week": 6,
+    "tag": "live",
+    "whyItWorks": "Shows breadth for the Studio buyer without overclaiming (pillar 1).",
+    "goLinks": [
+      "makeborne.com/go/ig-v25",
+      "makeborne.com/go/li-v25",
+      "makeborne.com/go/tt-v25"
+    ],
+    "utm": {
+      "utm_campaign": "launch-2026-10",
+      "utm_content": "<surface>-v25-f6",
+      "utm_medium": "organic"
+    },
+    "hookCode": "F6",
+    "budgetLine": null,
+    "checks": [
+      "Call it a basic CRM; show only features in the launch build"
+    ]
+  },
+  {
+    "id": "V26",
+    "title": "POV: the client wants last year's deck at 5 p.m.",
+    "format": "POV",
+    "platforms": [
+      "TikTok",
+      "Instagram Reels"
+    ],
+    "icp": "icp2",
+    "lane": "A",
+    "lengthSec": 20,
+    "hook": {
+      "line": "POV: 4:58 p.m. 'Can you resend last year's deck?'",
+      "visual": "Frame 0: a phone notification over a clock reading 4:58."
+    },
+    "script": [
+      {
+        "t": "0-2s",
+        "visual": "Notification over clock",
+        "onScreenText": "4:58 p.m. 'Resend last year's deck?'",
+        "voiceover": "None"
+      },
+      {
+        "t": "2-10s",
+        "visual": "Projects library: search, open the deck",
+        "onScreenText": "Projects library",
+        "voiceover": "None (keys)"
+      },
+      {
+        "t": "10-16s",
+        "visual": "Change the year on the title slide in chat; export PPTX",
+        "onScreenText": "One edit. Export.",
+        "voiceover": "None"
+      },
+      {
+        "t": "16-20s",
+        "visual": "Clock 5:00; laptop closes",
+        "onScreenText": "5:00. Done.",
+        "voiceover": "None"
+      }
+    ],
+    "cta": "'Comment DECK'.",
+    "caption": "Every client site, deck and book in one projects library: find it, change one thing, export. Comment DECK.",
+    "hashtags": [
+      "#freelancerlife",
+      "#pitchdeck",
+      "#workhacks",
+      "#agencylife"
+    ],
+    "sound": "Commercial Music Library ticking or comedic track.",
+    "shotList": [
+      "Notification prop",
+      "Projects library capture",
+      "Export"
+    ],
+    "assetsNeeded": [
+      "Demo account with several projects"
+    ],
+    "reuseExisting": [],
+    "effort": "low",
+    "priority": "P2",
+    "week": 7,
+    "tag": "live",
+    "whyItWorks": "Relatable POV with real UI; promotes the projects library, which is live.",
+    "goLinks": [
+      "makeborne.com/go/ig-v26",
+      "makeborne.com/go/tt-v26"
+    ],
+    "utm": {
+      "utm_campaign": "launch-2026-10",
+      "utm_content": "<surface>-v26-f7",
+      "utm_medium": "organic"
+    },
+    "hookCode": "F7",
+    "budgetLine": null,
+    "checks": []
+  },
+  {
+    "id": "V27",
+    "title": "Coaches: your lead magnet guide, written in one sitting",
+    "format": "speedrun",
+    "platforms": [
+      "Instagram Reels",
+      "TikTok",
+      "LinkedIn"
+    ],
+    "icp": "icp3",
+    "lane": "B",
+    "lengthSec": 35,
+    "hook": {
+      "line": "Coaches: your lead magnet, written before your coffee's cold.",
+      "visual": "Frame 0: a finished guide cover on a tablet next to a steaming coffee cup."
+    },
+    "script": [
+      {
+        "t": "0-2s",
+        "visual": "Guide cover + coffee",
+        "onScreenText": "Your lead magnet, before your coffee's cold.",
+        "voiceover": "Your lead magnet, before your coffee goes cold."
+      },
+      {
+        "t": "2-8s",
+        "visual": "Composer, Book mode: '7-day guide to sleeping better for new parents, by a sleep coach'",
+        "onScreenText": "One sentence.",
+        "voiceover": "One sentence about what you teach."
+      },
+      {
+        "t": "8-25s",
+        "visual": "Build (chip); page riffle",
+        "onScreenText": "Chapters. Checklists. Your voice.",
+        "voiceover": "Chapters, checklists, a 7-day plan."
+      },
+      {
+        "t": "25-35s",
+        "visual": "Export PDF; it lands in an email draft",
+        "onScreenText": "Export the PDF.",
+        "voiceover": "Export the PDF and give it away. Comment BOOK."
+      }
+    ],
+    "cta": "'Comment BOOK'.",
+    "caption": "How coaches can make a lead magnet guide from one sentence: chapters, checklists, exported as a PDF. Comment BOOK for the brief.",
+    "hashtags": [
+      "#coach",
+      "#leadmagnet",
+      "#onlinecoach",
+      "#ebook"
+    ],
+    "sound": "Brand TikTok: Commercial Music Library track only (business account) under original voice-over. Instagram/YouTube: original voice-over plus a library track cleared for business use [U: re-check each platform's business library]. No trending chart songs on brand accounts.",
+    "shotList": [
+      "Coffee hero shot",
+      "Book build capture",
+      "PDF export"
+    ],
+    "assetsNeeded": [
+      "Fictional coach topic",
+      "Real coffee"
+    ],
+    "reuseExisting": [],
+    "effort": "low",
+    "priority": "P1",
+    "week": 3,
+    "tag": "live",
+    "whyItWorks": "ICP 3 job ('package expertise as a book to give away'), with a cheap build (books cost about $0.27-0.42 of provider cost) [F, product-funnel-audit §8.1].",
+    "goLinks": [
+      "makeborne.com/go/ig-v27",
+      "makeborne.com/go/li-v27",
+      "makeborne.com/go/tt-v27"
+    ],
+    "utm": {
+      "utm_campaign": "launch-2026-10",
+      "utm_content": "<surface>-v27-b5",
+      "utm_medium": "organic"
+    },
+    "hookCode": "B5",
+    "budgetLine": null,
+    "checks": [
+      "Text-led; no generated cover images",
+      "Tell coaches to review content for accuracy (health topics especially)"
+    ]
+  },
+  {
+    "id": "V28",
+    "title": "My grandma never wrote a recipe down, so we made a book",
+    "format": "demo",
+    "platforms": [
+      "Instagram Reels",
+      "TikTok"
+    ],
+    "icp": "icp3",
+    "lane": "B",
+    "lengthSec": 40,
+    "hook": {
+      "line": "My grandma never wrote a recipe down. So we made a book.",
+      "visual": "Frame 0: real hands (with consent) holding a phone open on the finished text-led recipe book's contents page."
+    },
+    "script": [
+      {
+        "t": "0-2s",
+        "visual": "Hands holding the book on a phone",
+        "onScreenText": "Grandma never wrote a recipe down.",
+        "voiceover": "My grandma never wrote a recipe down."
+      },
+      {
+        "t": "2-12s",
+        "visual": "Voice notes transcribed into the brief",
+        "onScreenText": "So I typed what she told me.",
+        "voiceover": "So I typed up what she told me."
+      },
+      {
+        "t": "12-30s",
+        "visual": "Book build; pages: contents, a recipe page, her notes",
+        "onScreenText": "Her recipes. Her words.",
+        "voiceover": "Her recipes, in her words."
+      },
+      {
+        "t": "30-40s",
+        "visual": "PDF on the family group chat",
+        "onScreenText": "Now the whole family has it.",
+        "voiceover": "Now the whole family has it. Comment BOOK."
+      }
+    ],
+    "cta": "'Comment BOOK'.",
+    "caption": "Turned my family's recipes into a book from voice notes: text-led, shared as a PDF with the whole family. Comment BOOK.",
+    "hashtags": [
+      "#familyrecipes",
+      "#recipebook",
+      "#grandma",
+      "#cooking"
+    ],
+    "sound": "Warm acoustic track from the Commercial Music Library; founder voice-over.",
+    "shotList": [
+      "Hands and kitchen B-roll (real, not generated)",
+      "Build capture",
+      "Group-chat prop with no real names"
+    ],
+    "assetsNeeded": [
+      "Written consent from the family member shown or quoted",
+      "Own photos only"
+    ],
+    "reuseExisting": [],
+    "effort": "med",
+    "priority": "P2",
+    "week": 7,
+    "tag": "live",
+    "whyItWorks": "Emotional, highly sendable content; sends are Instagram's strongest non-follower signal [S]. The plan allows text-led family recipe books now.",
+    "goLinks": [
+      "makeborne.com/go/ig-v28",
+      "makeborne.com/go/tt-v28"
+    ],
+    "utm": {
+      "utm_campaign": "launch-2026-10",
+      "utm_content": "<surface>-v28-b1",
+      "utm_medium": "organic"
+    },
+    "hookCode": "B1",
+    "budgetLine": null,
+    "checks": [
+      "Text-led family recipe book only; no gift push until images pass the gate (strategy risk 19)",
+      "Must be a true story; if not, do not film it"
+    ]
+  },
+  {
+    "id": "V29",
+    "title": "Made from one sentence (daily 8-second series)",
+    "format": "slideshow",
+    "platforms": [
+      "TikTok",
+      "Instagram Reels",
+      "YouTube Shorts"
+    ],
+    "icp": "icp4",
+    "lane": "B",
+    "lengthSec": 8,
+    "hook": {
+      "line": "'A site for my bouldering gym.' Made from that.",
+      "visual": "Frame 0: the sentence chip alone on the canvas, then the finished site scroll starts."
+    },
+    "script": [
+      {
+        "t": "0-2s",
+        "visual": "Sentence chip on canvas",
+        "onScreenText": "'A site for my bouldering gym.'",
+        "voiceover": "None"
+      },
+      {
+        "t": "2-7s",
+        "visual": "390-wide full-page scroll of the real output",
+        "onScreenText": "Made from that sentence.",
+        "voiceover": "None"
+      },
+      {
+        "t": "7-8s",
+        "visual": "Brand mark, loops to frame 0",
+        "onScreenText": "makeborne.com",
+        "voiceover": "None"
+      }
+    ],
+    "cta": "Bio link; caption 'Comment SITE for the brief'.",
+    "caption": "Made from one sentence: a bouldering gym website, unedited. Comment SITE for the brief.",
+    "hashtags": [
+      "#madewithmakeborne",
+      "#websitedesign",
+      "#webdesigninspiration"
+    ],
+    "sound": "Commercial Music Library loop; same sonic signature every episode.",
+    "shotList": [
+      "One real output per day as a 390-wide scroll capture"
+    ],
+    "assetsNeeded": [
+      "A queue of 30 real outputs, names checked"
+    ],
+    "reuseExisting": [
+      "Product repo 390-wide real-output captures (Relay Operations, Crux Yard and similar) - read only"
+    ],
+    "effort": "low",
+    "priority": "P1",
+    "week": 2,
+    "tag": "live",
+    "whyItWorks": "Concept C6 in research/creative-assets.md: near-zero cost daily volume, and Buffer shows volume raises the 90th-percentile post (3,722 to 14,401 views) [F, Buffer 8 Oct 2025].",
+    "goLinks": [
+      "makeborne.com/go/ig-v29",
+      "makeborne.com/go/tt-v29",
+      "makeborne.com/go/yt-v29"
+    ],
+    "utm": {
+      "utm_campaign": "launch-2026-10",
+      "utm_content": "<surface>-v29-s4",
+      "utm_medium": "organic"
+    },
+    "hookCode": "S4",
+    "budgetLine": null,
+    "checks": [
+      "One per day at most; a new output each time (no duplicate uploads)"
+    ]
+  },
+  {
+    "id": "V30",
+    "title": "Change one thing. Only that thing changes. (site edit)",
+    "format": "demo",
+    "platforms": [
+      "TikTok",
+      "Instagram Reels",
+      "LinkedIn",
+      "X"
+    ],
+    "icp": "icp1",
+    "lane": "A",
+    "lengthSec": 15,
+    "hook": {
+      "line": "Change one thing. Only that thing changes.",
+      "visual": "Frame 0: a finished site with one element highlighted ('phone number') and the chat request typed."
+    },
+    "script": [
+      {
+        "t": "0-2s",
+        "visual": "Highlighted element + chat",
+        "onScreenText": "Change one thing.",
+        "voiceover": "None"
+      },
+      {
+        "t": "2-10s",
+        "visual": "Edit applies; onion-skin overlay shows nothing else moved",
+        "onScreenText": "Only that thing changes.",
+        "voiceover": "None"
+      },
+      {
+        "t": "10-15s",
+        "visual": "Before/after flicker",
+        "onScreenText": "No surprises in revision 9.",
+        "voiceover": "None"
+      }
+    ],
+    "cta": "'Comment CLIENT'.",
+    "caption": "Edit an AI-built website in chat: change one thing and only that thing changes. No surprises in revision nine.",
+    "hashtags": [
+      "#webdesign",
+      "#freelancer",
+      "#websiteedit"
+    ],
+    "sound": "Commercial Music Library minimal track.",
+    "shotList": [
+      "Before/after captures at identical scroll positions",
+      "Onion-skin overlay in HyperFrames"
+    ],
+    "assetsNeeded": [
+      "Two identical-position captures"
+    ],
+    "reuseExisting": [
+      "film library (private)/v12/assets/real/deck/slide-06.png and film library (private)/v12/assets/real/deck-edit/slide-06.png as the 4:5 static companion"
+    ],
+    "effort": "low",
+    "priority": "P1",
+    "week": 2,
+    "tag": "live",
+    "whyItWorks": "Concept C2 from the creative matrix: precision is the reason freelancers trust it with clients.",
+    "goLinks": [
+      "makeborne.com/go/ig-v30",
+      "makeborne.com/go/li-v30",
+      "makeborne.com/go/tt-v30",
+      "makeborne.com/go/x-v30"
+    ],
+    "utm": {
+      "utm_campaign": "launch-2026-10",
+      "utm_content": "<surface>-v30-c2",
+      "utm_medium": "organic"
+    },
+    "hookCode": "C2",
+    "budgetLine": "Paid-ready static companion (4:5) for any later Meta test",
+    "checks": [
+      "Only post if the edit genuinely changes nothing else; re-record if anything shifts"
+    ]
+  },
+  {
+    "id": "V31",
+    "title": "Founder Day 14: what broke this week",
+    "format": "founder",
+    "platforms": [
+      "LinkedIn",
+      "X",
+      "TikTok"
+    ],
+    "icp": "icp1",
+    "lane": "A",
+    "lengthSec": 60,
+    "hook": {
+      "line": "Day 14: three things broke. Here's what I did.",
+      "visual": "Frame 0: founder to camera, a whiteboard or notebook with three numbered items."
+    },
+    "script": [
+      {
+        "t": "0-2s",
+        "visual": "Founder + list",
+        "onScreenText": "Day 14: 3 things broke.",
+        "voiceover": "Day fourteen. Three things broke."
+      },
+      {
+        "t": "2-40s",
+        "visual": "Each item: what broke, screenshot, the fix",
+        "onScreenText": "1. [real issue] 2. [real issue] 3. [real issue]",
+        "voiceover": "[Real issues and fixes only]"
+      },
+      {
+        "t": "40-55s",
+        "visual": "Numbers: payers, refunds, best source",
+        "onScreenText": "[N] payers · [N] refunds",
+        "voiceover": "[Real numbers]"
+      },
+      {
+        "t": "55-60s",
+        "visual": "Founder",
+        "onScreenText": "Day 21 next.",
+        "voiceover": "See you on day twenty-one."
+      }
+    ],
+    "cta": "Follow; link in first comment.",
+    "caption": "Day 14 of building an AI studio for client work in public: what broke, what I fixed, and the real numbers.",
+    "hashtags": [
+      "#buildinpublic",
+      "#startup",
+      "#indiehackers"
+    ],
+    "sound": "Founder voice, no music or a very low bed; LinkedIn plays muted by default, so burned-in captions carry it.",
+    "shotList": [
+      "Face to camera",
+      "Cropped screenshots"
+    ],
+    "assetsNeeded": [
+      "Weekly numbers"
+    ],
+    "reuseExisting": [],
+    "effort": "low",
+    "priority": "P1",
+    "week": 2,
+    "tag": "live",
+    "whyItWorks": "Failures and lessons in public were Base44's LinkedIn engine [F, self-reported].",
+    "goLinks": [
+      "makeborne.com/go/li-v31",
+      "makeborne.com/go/tt-v31",
+      "makeborne.com/go/x-v31"
+    ],
+    "utm": {
+      "utm_campaign": "launch-2026-10",
+      "utm_content": "<surface>-v31-p6",
+      "utm_medium": "organic"
+    },
+    "hookCode": "P6",
+    "budgetLine": null,
+    "checks": [
+      "Never publish unreleased security issues or infrastructure details"
+    ]
+  },
+  {
+    "id": "V32",
+    "title": "UGC 1, Lane A web designer: I send clients a real site before the first call",
+    "format": "UGC",
+    "platforms": [
+      "TikTok",
+      "Instagram Reels"
+    ],
+    "icp": "icp1",
+    "lane": "A",
+    "lengthSec": 45,
+    "hook": {
+      "line": "Ad: I send clients a real website before we even talk.",
+      "visual": "Frame 0: the creator's phone showing a demo site they built, with a review comment bubble on it."
+    },
+    "script": [
+      {
+        "t": "0-3s",
+        "visual": "Creator to camera holding the phone with the demo site",
+        "onScreenText": "Ad · I send the site before the call",
+        "voiceover": "This is an ad for Makeborne. I send clients a real first version before the first call."
+      },
+      {
+        "t": "3-20s",
+        "visual": "Their screen: brief, build, one edit",
+        "onScreenText": "Built from their brief",
+        "voiceover": "I build it from what they told me in the enquiry."
+      },
+      {
+        "t": "20-35s",
+        "visual": "Review link; client-side comment; Approve",
+        "onScreenText": "They comment on the live page",
+        "voiceover": "Then I send one link. They comment right on the page."
+      },
+      {
+        "t": "35-45s",
+        "visual": "Creator to camera",
+        "onScreenText": "Link in bio · code [CODE]",
+        "voiceover": "Link's in my bio if you want my brief."
+      }
+    ],
+    "cta": "Creator's /go/c-<handle> link in bio; use-my-brief link in DM replies.",
+    "caption": "#ad I send clients a real first-version website before the first call, then get feedback on one link. Paid partnership with Makeborne. My brief is in my bio link.",
+    "hashtags": [
+      "#ad",
+      "#webdesigner",
+      "#freelancer",
+      "#clientwork"
+    ],
+    "sound": "Creator's own voice and a sound the creator's account may use commercially (on TikTok, branded content must use the Commercial Music Library).",
+    "shotList": [
+      "Creator's own screen recording of their real use during the comped Studio month",
+      "Face to camera in natural light, no filters",
+      "Phone capture of the output"
+    ],
+    "assetsNeeded": [
+      "Comped Studio account for the campaign month",
+      "/go/c-<handle> link + use-my-brief link + custom affiliate code",
+      "One-page brief (content/videos.md, UGC section)",
+      "Signed agreement with the 60-day Spark/partnership-ad clause"
+    ],
+    "reuseExisting": [],
+    "effort": "med",
+    "priority": "P1",
+    "week": 3,
+    "tag": "live",
+    "whyItWorks": "Lane A is where Studio buyers live; creator content that shows visible UI, the finished artifact and a next step converts (LightReel 24 Oct 2026 [V/U]).",
+    "goLinks": [
+      "makeborne.com/go/c-<handle>",
+      "makeborne.com/go/c-<handle>?brief=<id> (use-my-brief, once live)"
+    ],
+    "utm": {
+      "utm_campaign": "launch-2026-10",
+      "utm_content": "<surface>-v32-u1",
+      "utm_medium": "creator"
+    },
+    "hookCode": "U1",
+    "budgetLine": "b2 + b3 (wave 1)",
+    "checks": [
+      "Paid-partnership toggle on + 'Ad' said in the first seconds and shown on screen + '#ad' at the start of the caption (FTC: disclosure must be in the video itself; platform tools alone are not enough).",
+      "Only live features; no 'free'; no vendor names; no income claims",
+      "Founder reviews the draft before it posts; pay only after the attribution gate"
+    ],
+    "ugcBrief": {
+      "lane": "A",
+      "creatorProfile": "Freelance web designer, 2k-50k followers, posts about client work; at least 60% of audience in US, UK, EU, CA or AU (screenshot)",
+      "job": "Show how you use Makeborne to win a client before the first call: a demo site, then a review link",
+      "mustShow": [
+        "The finished site in the first 2 s",
+        "Your real brief and the real build (label any speed-up)",
+        "One client-side comment on the review page",
+        "Approve or Request changes"
+      ],
+      "talkingPoints": [
+        "Why a first version beats a call with nothing to show",
+        "Clients comment on the live page, no account",
+        "Studio is $49/month; full refund until you use credits"
+      ]
+    }
+  },
+  {
+    "id": "V33",
+    "title": "UGC 2, Lane A side-hustle: pitching a local business with a demo site",
+    "format": "UGC",
+    "platforms": [
+      "TikTok",
+      "YouTube Shorts"
+    ],
+    "icp": "icp1",
+    "lane": "A",
+    "lengthSec": 45,
+    "hook": {
+      "line": "Ad: here's how I'd pitch a local business this week.",
+      "visual": "Frame 0: a street of shopfronts (no readable names) then cut to a demo site on the creator's laptop."
+    },
+    "script": [
+      {
+        "t": "0-3s",
+        "visual": "Shopfront B-roll (names unreadable)",
+        "onScreenText": "Ad · how I'd pitch a local business",
+        "voiceover": "Ad for Makeborne. Here's how I'd pitch a local business this week."
+      },
+      {
+        "t": "3-15s",
+        "visual": "Lead finder: business type + city (results blurred)",
+        "onScreenText": "1. Find them",
+        "voiceover": "First I find businesses of one type in one city."
+      },
+      {
+        "t": "15-32s",
+        "visual": "Demo site for a fictional business of that type",
+        "onScreenText": "2. Build a first version",
+        "voiceover": "Then I build a first version to show them."
+      },
+      {
+        "t": "32-45s",
+        "visual": "Review link + CRM card 'Demo sent'",
+        "onScreenText": "3. Send one link, track it",
+        "voiceover": "Send one link and track the follow-up. Link in bio."
+      }
+    ],
+    "cta": "Creator /go/ link; use-my-brief link.",
+    "caption": "#ad How I'd pitch websites to local businesses: find them, build a first version, send one review link. Paid partnership with Makeborne.",
+    "hashtags": [
+      "#ad",
+      "#sidehustle",
+      "#webdesign",
+      "#smallbusiness"
+    ],
+    "sound": "Creator's own voice and a sound the creator's account may use commercially (on TikTok, branded content must use the Commercial Music Library).",
+    "shotList": [
+      "Creator's own screen recording of their real use during the comped Studio month",
+      "Face to camera in natural light, no filters",
+      "Phone capture of the output"
+    ],
+    "assetsNeeded": [
+      "Comped Studio account for the campaign month",
+      "/go/c-<handle> link + use-my-brief link + custom affiliate code",
+      "One-page brief (content/videos.md, UGC section)",
+      "Signed agreement with the 60-day Spark/partnership-ad clause"
+    ],
+    "reuseExisting": [],
+    "effort": "med",
+    "priority": "P1",
+    "week": 3,
+    "tag": "live",
+    "whyItWorks": "Side-hustle creators reach the 'sell websites to local businesses' crowd inside ICP 1; the plan books 3 Lane A creators.",
+    "goLinks": [
+      "makeborne.com/go/c-<handle>",
+      "makeborne.com/go/c-<handle>?brief=<id> (use-my-brief, once live)"
+    ],
+    "utm": {
+      "utm_campaign": "launch-2026-10",
+      "utm_content": "<surface>-v33-u2",
+      "utm_medium": "creator"
+    },
+    "hookCode": "U2",
+    "budgetLine": "b2 + b3 (wave 1)",
+    "checks": [
+      "Paid-partnership toggle on + 'Ad' said in the first seconds and shown on screen + '#ad' at the start of the caption (FTC: disclosure must be in the video itself; platform tools alone are not enough).",
+      "Only live features; no 'free'; no vendor names; no income claims",
+      "Founder reviews the draft before it posts; pay only after the attribution gate",
+      "No income or 'make $X a month' claims of any kind",
+      "No automated cold email or 'email outreach' framing"
+    ],
+    "ugcBrief": {
+      "lane": "A",
+      "creatorProfile": "'Sell websites to local businesses' / side-hustle educator, 2k-50k followers, audience mostly US/UK/EU/CA/AU",
+      "job": "Walk through a realistic pitch workflow with the live lead finder, a demo site and a review link",
+      "mustShow": [
+        "Lead finder with real results blurred",
+        "A demo for a fictional business of the same type",
+        "The review link"
+      ],
+      "talkingPoints": [
+        "Process, not earnings",
+        "One-to-one outreach only; no mass cold email",
+        "Sites publish on a Makeborne address today"
+      ]
+    }
+  },
+  {
+    "id": "V34",
+    "title": "UGC 3, Lane A agency owner on LinkedIn: approvals in one link",
+    "format": "UGC",
+    "platforms": [
+      "LinkedIn",
+      "Instagram Reels"
+    ],
+    "icp": "icp1",
+    "lane": "A",
+    "lengthSec": 45,
+    "hook": {
+      "line": "Ad: our studio stopped doing feedback by email. Here's what we do now.",
+      "visual": "Frame 0: agency owner at their desk, a client review page open on the second screen."
+    },
+    "script": [
+      {
+        "t": "0-3s",
+        "visual": "Owner to camera",
+        "onScreenText": "Ad · feedback without the email chaos",
+        "voiceover": "Paid partnership with Makeborne. We stopped doing feedback by email."
+      },
+      {
+        "t": "3-25s",
+        "visual": "Their real review-link workflow on a client-safe demo project",
+        "onScreenText": "One link. Comments on the page.",
+        "voiceover": "Here's how a review works now."
+      },
+      {
+        "t": "25-38s",
+        "visual": "Same brief to a short proposal deck",
+        "onScreenText": "Same brief, proposal deck",
+        "voiceover": "And the proposal deck comes from the same brief."
+      },
+      {
+        "t": "38-45s",
+        "visual": "Owner to camera",
+        "onScreenText": "Link in comments",
+        "voiceover": "Link's in the comments."
+      }
+    ],
+    "cta": "Link in the first comment (/go/c-<handle>).",
+    "caption": "#ad Paid partnership: how our studio handles client feedback with one review link instead of email threads, plus a proposal deck from the same brief.",
+    "hashtags": [
+      "#ad",
+      "#agencyowner",
+      "#webdesignagency",
+      "#clientexperience"
+    ],
+    "sound": "Creator's own voice and a sound the creator's account may use commercially (on TikTok, branded content must use the Commercial Music Library).",
+    "shotList": [
+      "Creator's own screen recording of their real use during the comped Studio month",
+      "Face to camera in natural light, no filters",
+      "Phone capture of the output"
+    ],
+    "assetsNeeded": [
+      "Comped Studio account for the campaign month",
+      "/go/c-<handle> link + use-my-brief link + custom affiliate code",
+      "One-page brief (content/videos.md, UGC section)",
+      "Signed agreement with the 60-day Spark/partnership-ad clause"
+    ],
+    "reuseExisting": [],
+    "effort": "med",
+    "priority": "P1",
+    "week": 3,
+    "tag": "live",
+    "whyItWorks": "The plan wants at least 1 LinkedIn creator in wave 1: LinkedIn reaches the agency buyer, and document/video content leads engagement there [V, Buffer 2026].",
+    "goLinks": [
+      "makeborne.com/go/c-<handle>",
+      "makeborne.com/go/c-<handle>?brief=<id> (use-my-brief, once live)"
+    ],
+    "utm": {
+      "utm_campaign": "launch-2026-10",
+      "utm_content": "<surface>-v34-u3",
+      "utm_medium": "creator"
+    },
+    "hookCode": "U3",
+    "budgetLine": "b2 + b3 (wave 1)",
+    "checks": [
+      "Paid-partnership toggle on + 'Ad' said in the first seconds and shown on screen + '#ad' at the start of the caption (FTC: disclosure must be in the video itself; platform tools alone are not enough).",
+      "Only live features; no 'free'; no vendor names; no income claims",
+      "Founder reviews the draft before it posts; pay only after the attribution gate",
+      "Testimonial must reflect the creator's real experience (FTC rule on reviews, 14 Aug 2024)",
+      "Lane rule: nothing about replacing designers or agencies"
+    ],
+    "ugcBrief": {
+      "lane": "A (LinkedIn)",
+      "creatorProfile": "Owner of a 1-10 person studio with an active LinkedIn audience of agency owners",
+      "job": "Show your real client-review workflow from the comped month",
+      "mustShow": [
+        "The review page from the client's side",
+        "One fix and the approval",
+        "A deck from the same brief"
+      ],
+      "talkingPoints": [
+        "Only say what you actually experienced in the month",
+        "Studio $49, best for client work",
+        "No 'we replaced our designers' framing"
+      ]
+    }
+  },
+  {
+    "id": "V35",
+    "title": "UGC 4, Lane B productivity: notes to a client-ready deck with a real chart",
+    "format": "UGC",
+    "platforms": [
+      "TikTok",
+      "Instagram Reels",
+      "YouTube Shorts"
+    ],
+    "icp": "icp2",
+    "lane": "B",
+    "lengthSec": 45,
+    "hook": {
+      "line": "Ad: I turned my meeting notes into this deck. The chart is real.",
+      "visual": "Frame 0: the creator clicking a chart in PowerPoint; selection handles appear."
+    },
+    "script": [
+      {
+        "t": "0-3s",
+        "visual": "PowerPoint chart click",
+        "onScreenText": "Ad · notes → deck → real chart",
+        "voiceover": "Ad for Makeborne. These were my meeting notes."
+      },
+      {
+        "t": "3-25s",
+        "visual": "Paste notes, build (label speed), slides",
+        "onScreenText": "My notes, pasted",
+        "voiceover": "I pasted them in, messy."
+      },
+      {
+        "t": "25-38s",
+        "visual": "Export, open in PowerPoint, edit a chart value",
+        "onScreenText": "Opens in PowerPoint",
+        "voiceover": "And it opens in PowerPoint with a real chart."
+      },
+      {
+        "t": "38-45s",
+        "visual": "Creator to camera",
+        "onScreenText": "Link in bio",
+        "voiceover": "Link in bio for my exact prompt."
+      }
+    ],
+    "cta": "Creator link + use-my-brief link.",
+    "caption": "#ad Meeting notes to a client-ready deck you can edit in PowerPoint (yes, the chart is real). Paid partnership with Makeborne.",
+    "hashtags": [
+      "#ad",
+      "#productivity",
+      "#powerpoint",
+      "#worktok"
+    ],
+    "sound": "Creator's own voice and a sound the creator's account may use commercially (on TikTok, branded content must use the Commercial Music Library).",
+    "shotList": [
+      "Creator's own screen recording of their real use during the comped Studio month",
+      "Face to camera in natural light, no filters",
+      "Phone capture of the output"
+    ],
+    "assetsNeeded": [
+      "Comped Studio account for the campaign month",
+      "/go/c-<handle> link + use-my-brief link + custom affiliate code",
+      "One-page brief (content/videos.md, UGC section)",
+      "Signed agreement with the 60-day Spark/partnership-ad clause"
+    ],
+    "reuseExisting": [],
+    "effort": "med",
+    "priority": "P1",
+    "week": 3,
+    "tag": "live",
+    "whyItWorks": "Lane B reach with ICP 2 proof; the plan's 2 Lane B creators cover decks and productivity.",
+    "goLinks": [
+      "makeborne.com/go/c-<handle>",
+      "makeborne.com/go/c-<handle>?brief=<id> (use-my-brief, once live)"
+    ],
+    "utm": {
+      "utm_campaign": "launch-2026-10",
+      "utm_content": "<surface>-v35-u4",
+      "utm_medium": "creator"
+    },
+    "hookCode": "U4",
+    "budgetLine": "b2 + b3 (wave 1)",
+    "checks": [
+      "Paid-partnership toggle on + 'Ad' said in the first seconds and shown on screen + '#ad' at the start of the caption (FTC: disclosure must be in the video itself; platform tools alone are not enough).",
+      "Only live features; no 'free'; no vendor names; no income claims",
+      "Founder reviews the draft before it posts; pay only after the attribution gate",
+      "No generated images on slides (not live)"
+    ],
+    "ugcBrief": {
+      "lane": "B",
+      "creatorProfile": "Productivity / consulting / career creator, 2k-50k followers",
+      "job": "Show notes becoming an editable deck",
+      "mustShow": [
+        "Finished deck first",
+        "Real paste and build",
+        "PPTX in PowerPoint with the chart selected"
+      ],
+      "talkingPoints": [
+        "Editable, not a picture",
+        "Create is $20/month; full refund until you use credits"
+      ]
+    }
+  },
+  {
+    "id": "V36",
+    "title": "UGC 5, Lane B creator/coach: my notes became a guide I give away",
+    "format": "UGC",
+    "platforms": [
+      "Instagram Reels",
+      "TikTok"
+    ],
+    "icp": "icp3",
+    "lane": "B",
+    "lengthSec": 45,
+    "hook": {
+      "line": "Ad: the guide I give my audience used to be a mess of notes. Now it's this.",
+      "visual": "Frame 0: the creator flicking through the finished guide on a tablet."
+    },
+    "script": [
+      {
+        "t": "0-3s",
+        "visual": "Guide on a tablet",
+        "onScreenText": "Ad · notes → finished guide",
+        "voiceover": "Ad for Makeborne. My guide used to be a mess of notes."
+      },
+      {
+        "t": "3-25s",
+        "visual": "Book mode, their notes, build, page riffle",
+        "onScreenText": "Chapters, checklists",
+        "voiceover": "Now it has chapters and checklists."
+      },
+      {
+        "t": "25-38s",
+        "visual": "PDF export, shared in their newsletter or link page",
+        "onScreenText": "Exported as a PDF",
+        "voiceover": "I export the PDF and give it away."
+      },
+      {
+        "t": "38-45s",
+        "visual": "Creator to camera",
+        "onScreenText": "Link in bio",
+        "voiceover": "Link's in my bio."
+      }
+    ],
+    "cta": "Creator link + use-my-brief link.",
+    "caption": "#ad I turned my notes into the guide I give my audience: chapters, checklists, PDF. Paid partnership with Makeborne.",
+    "hashtags": [
+      "#ad",
+      "#contentcreator",
+      "#leadmagnet",
+      "#coaching"
+    ],
+    "sound": "Creator's own voice and a sound the creator's account may use commercially (on TikTok, branded content must use the Commercial Music Library).",
+    "shotList": [
+      "Creator's own screen recording of their real use during the comped Studio month",
+      "Face to camera in natural light, no filters",
+      "Phone capture of the output"
+    ],
+    "assetsNeeded": [
+      "Comped Studio account for the campaign month",
+      "/go/c-<handle> link + use-my-brief link + custom affiliate code",
+      "One-page brief (content/videos.md, UGC section)",
+      "Signed agreement with the 60-day Spark/partnership-ad clause"
+    ],
+    "reuseExisting": [],
+    "effort": "med",
+    "priority": "P1",
+    "week": 3,
+    "tag": "live",
+    "whyItWorks": "ICP 3 on Instagram, where carousels and Reels reach creators; books cost little to build, so the comped month is cheap [E].",
+    "goLinks": [
+      "makeborne.com/go/c-<handle>",
+      "makeborne.com/go/c-<handle>?brief=<id> (use-my-brief, once live)"
+    ],
+    "utm": {
+      "utm_campaign": "launch-2026-10",
+      "utm_content": "<surface>-v36-u5",
+      "utm_medium": "creator"
+    },
+    "hookCode": "U5",
+    "budgetLine": "b2 + b3 (wave 1)",
+    "checks": [
+      "Paid-partnership toggle on + 'Ad' said in the first seconds and shown on screen + '#ad' at the start of the caption (FTC: disclosure must be in the video itself; platform tools alone are not enough).",
+      "Only live features; no 'free'; no vendor names; no income claims",
+      "Founder reviews the draft before it posts; pay only after the attribution gate",
+      "No picture-book, generated-cover or 'print on KDP' claims"
+    ],
+    "ugcBrief": {
+      "lane": "B",
+      "creatorProfile": "Coach, educator or creator who uses a lead magnet, 2k-50k followers",
+      "job": "Show your own notes becoming a text-led guide",
+      "mustShow": [
+        "The finished guide first",
+        "Real notes and build",
+        "PDF export"
+      ],
+      "talkingPoints": [
+        "Books are made for screen and PDF",
+        "Text-led today"
+      ]
+    }
+  },
+  {
+    "id": "V37",
+    "title": "We built every site you asked for in the comments: what happened",
+    "format": "case-study",
+    "platforms": [
+      "TikTok",
+      "LinkedIn",
+      "Instagram Reels",
+      "X"
+    ],
+    "icp": "icp1",
+    "lane": "A+B",
+    "lengthSec": 60,
+    "hook": {
+      "line": "You asked for [N] websites in the comments. Here's what happened.",
+      "visual": "Frame 0: a grid of the real comment-reply builds (only those with consent), the count on top."
+    },
+    "script": [
+      {
+        "t": "0-2s",
+        "visual": "Grid of builds",
+        "onScreenText": "[N] sites from your comments.",
+        "voiceover": "You asked for [N] websites. I built them."
+      },
+      {
+        "t": "2-20s",
+        "visual": "Fast tour, sentence chip on each",
+        "onScreenText": "Bakery · gym · dentist...",
+        "voiceover": "Here are the ones we can show."
+      },
+      {
+        "t": "20-40s",
+        "visual": "Numbers: views, DMs, payers from the series (real)",
+        "onScreenText": "[views] → [DMs] → [payers]",
+        "voiceover": "Here's what the series actually did."
+      },
+      {
+        "t": "40-60s",
+        "visual": "Founder: what I learned",
+        "onScreenText": "What I'd change",
+        "voiceover": "What I'd do differently."
+      }
+    ],
+    "cta": "'Comment your business for round 2.'",
+    "caption": "Case study: every website I built from your comments, with the real views, DMs and payers the series produced.",
+    "hashtags": [
+      "#buildinpublic",
+      "#casestudy",
+      "#websitedesign"
+    ],
+    "sound": "Original founder voice-over and real UI sound (keys, click, publish chime); quiet Commercial Music Library bed on TikTok.",
+    "shotList": [
+      "Grid composite",
+      "Cropped analytics"
+    ],
+    "assetsNeeded": [
+      "Consent log",
+      "Series analytics from the weekly sheet"
+    ],
+    "reuseExisting": [],
+    "effort": "med",
+    "priority": "P2",
+    "week": 5,
+    "tag": "live",
+    "whyItWorks": "Our own data is the only case study available in month 1; it turns a series into proof.",
+    "goLinks": [
+      "makeborne.com/go/ig-v37",
+      "makeborne.com/go/li-v37",
+      "makeborne.com/go/tt-v37",
+      "makeborne.com/go/x-v37"
+    ],
+    "utm": {
+      "utm_campaign": "launch-2026-10",
+      "utm_content": "<surface>-v37-cs1",
+      "utm_medium": "organic"
+    },
+    "hookCode": "CS1",
+    "budgetLine": null,
+    "checks": [
+      "Only builds whose requesters gave written OK",
+      "Real numbers"
+    ]
+  },
+  {
+    "id": "V38",
+    "title": "First customer story: how [freelancer] used it on a real client (consented)",
+    "format": "case-study",
+    "platforms": [
+      "LinkedIn",
+      "YouTube Shorts",
+      "Instagram Reels"
+    ],
+    "icp": "icp1",
+    "lane": "A",
+    "lengthSec": 75,
+    "hook": {
+      "line": "[Name] sent [N] demo sites in a month. [N] became clients.",
+      "visual": "Frame 0: the customer on a video call (with consent), their real approved project beside them."
+    },
+    "script": [
+      {
+        "t": "0-2s",
+        "visual": "Customer on call + project",
+        "onScreenText": "[N] demos sent · [N] won",
+        "voiceover": "[Customer's own words, from the call]"
+      },
+      {
+        "t": "2-30s",
+        "visual": "Their workflow, in their screen recording",
+        "onScreenText": "Their workflow",
+        "voiceover": "[Their words]"
+      },
+      {
+        "t": "30-60s",
+        "visual": "Before/after of their revision rounds (their numbers)",
+        "onScreenText": "Revision rounds: [before] → [after]",
+        "voiceover": "[Their words]"
+      },
+      {
+        "t": "60-75s",
+        "visual": "Founder outro",
+        "onScreenText": "Comment CLIENT.",
+        "voiceover": "If that sounds like your week, comment CLIENT."
+      }
+    ],
+    "cta": "'Comment CLIENT'.",
+    "caption": "Customer story: how a freelance designer uses Makeborne demo sites and review links with real clients. Their numbers, shared with permission.",
+    "hashtags": [
+      "#customerstory",
+      "#freelancer",
+      "#webdesign"
+    ],
+    "sound": "Founder voice, no music or a very low bed; LinkedIn plays muted by default, so burned-in captions carry it.",
+    "shotList": [
+      "Recorded call",
+      "Customer's screen recording"
+    ],
+    "assetsNeeded": [
+      "Written case-study consent",
+      "Customer approval of the final cut"
+    ],
+    "reuseExisting": [],
+    "effort": "high",
+    "priority": "P1",
+    "week": 7,
+    "tag": "live",
+    "whyItWorks": "Agency draft's first-3-case-studies plan; real testimonials are the only allowed kind (FTC fake-review rule, 14 Aug 2024).",
+    "goLinks": [
+      "makeborne.com/go/ig-v38",
+      "makeborne.com/go/li-v38",
+      "makeborne.com/go/yt-v38"
+    ],
+    "utm": {
+      "utm_campaign": "launch-2026-10",
+      "utm_content": "<surface>-v38-cs2",
+      "utm_medium": "organic"
+    },
+    "hookCode": "CS2",
+    "budgetLine": null,
+    "checks": [
+      "Do not film until a real customer agrees in writing; never invent or paraphrase numbers",
+      "If incentivised (credits), disclose it in the video"
+    ]
+  },
+  {
+    "id": "V39",
+    "title": "Founder Day 30: every number in public",
+    "format": "founder",
+    "platforms": [
+      "LinkedIn",
+      "X",
+      "TikTok",
+      "YouTube Shorts"
+    ],
+    "icp": "icp1",
+    "lane": "A",
+    "lengthSec": 90,
+    "hook": {
+      "line": "30 days, $1,000, every number. Here's the whole thing.",
+      "visual": "Frame 0: founder with a single slide made in Makeborne showing MRR, payers, refunds and AI cost per build."
+    },
+    "script": [
+      {
+        "t": "0-2s",
+        "visual": "Founder + numbers slide",
+        "onScreenText": "Day 30: every number.",
+        "voiceover": "Thirty days. Every number."
+      },
+      {
+        "t": "2-30s",
+        "visual": "Slides (built in Makeborne): MRR, payers, refunds, CAC by source",
+        "onScreenText": "MRR $[x] · payers [n] · refunds [n]",
+        "voiceover": "[Real numbers]"
+      },
+      {
+        "t": "30-60s",
+        "visual": "What worked / what didn't (formats, creators, boosts)",
+        "onScreenText": "Worked / didn't",
+        "voiceover": "[Real lessons]"
+      },
+      {
+        "t": "60-85s",
+        "visual": "What's next",
+        "onScreenText": "Next 30 days",
+        "voiceover": "[Plan]"
+      },
+      {
+        "t": "85-90s",
+        "visual": "Made with Makeborne end slide",
+        "onScreenText": "This deck was made in Makeborne.",
+        "voiceover": "And yes, this deck was made in Makeborne."
+      }
+    ],
+    "cta": "Link to the public numbers post / Indie Hackers.",
+    "caption": "Day 30 of an AI studio built in Sarajevo, with every number in public: MRR, payers, refunds, AI cost per build and what failed.",
+    "hashtags": [
+      "#buildinpublic",
+      "#indiehackers",
+      "#startup",
+      "#saas"
+    ],
+    "sound": "Founder voice, no music or a very low bed; LinkedIn plays muted by default, so burned-in captions carry it.",
+    "shotList": [
+      "Face to camera",
+      "Deck built in Makeborne"
+    ],
+    "assetsNeeded": [
+      "Redacted Whop screenshots",
+      "Funnel numbers"
+    ],
+    "reuseExisting": [],
+    "effort": "med",
+    "priority": "P1",
+    "week": 5,
+    "tag": "live",
+    "whyItWorks": "A beat that needs no feature (strategy §9); also the press follow-up asset.",
+    "goLinks": [
+      "makeborne.com/go/li-v39",
+      "makeborne.com/go/tt-v39",
+      "makeborne.com/go/x-v39",
+      "makeborne.com/go/yt-v39"
+    ],
+    "utm": {
+      "utm_campaign": "day30",
+      "utm_content": "<surface>-v39-p7",
+      "utm_medium": "organic"
+    },
+    "hookCode": "P7",
+    "beatId": "beat-day30",
+    "budgetLine": null,
+    "checks": [
+      "Wed 25 Nov 2026; numbers verified the same day",
+      "No buyer data"
+    ]
+  },
+  {
+    "id": "V40",
+    "title": "Black Friday: yearly is 20% off. That's the whole deal.",
+    "format": "meme",
+    "platforms": [
+      "TikTok",
+      "Instagram Reels",
+      "X",
+      "LinkedIn"
+    ],
+    "icp": "all",
+    "lane": "A+B",
+    "lengthSec": 12,
+    "hook": {
+      "line": "Our Black Friday deal is the same as every day. Here's why.",
+      "visual": "Frame 0: a fake flashing 'MEGA SALE 90% OFF' banner that gets calmly crossed out by a cursor."
+    },
+    "script": [
+      {
+        "t": "0-2s",
+        "visual": "Flashing fake banner crossed out",
+        "onScreenText": "No countdown. No fake sale.",
+        "voiceover": "None"
+      },
+      {
+        "t": "2-8s",
+        "visual": "Pricing page, yearly toggle",
+        "onScreenText": "Yearly is 20% off. Every day.",
+        "voiceover": "Yearly is twenty percent off. Every day, including today."
+      },
+      {
+        "t": "8-12s",
+        "visual": "End card",
+        "onScreenText": "makeborne.com · from $20/mo + tax · full refund until you use credits",
+        "voiceover": "None"
+      }
+    ],
+    "cta": "Bio link to pricing.",
+    "caption": "Our Black Friday deal: yearly plans are 20% off, the same as every other day. No countdowns. Full refund until you use credits.",
+    "hashtags": [
+      "#blackfriday",
+      "#saas",
+      "#honestmarketing"
+    ],
+    "sound": "Commercial Music Library track.",
+    "shotList": [
+      "Banner prop",
+      "Pricing page capture"
+    ],
+    "assetsNeeded": [],
+    "reuseExisting": [],
+    "effort": "low",
+    "priority": "P2",
+    "week": 5,
+    "tag": "live",
+    "whyItWorks": "Honest-pricing pillar; stands out in a week of fake urgency.",
+    "goLinks": [
+      "makeborne.com/go/ig-v40",
+      "makeborne.com/go/li-v40",
+      "makeborne.com/go/tt-v40",
+      "makeborne.com/go/x-v40"
+    ],
+    "utm": {
+      "utm_campaign": "bf-2026",
+      "utm_content": "<surface>-v40-bf1",
+      "utm_medium": "organic"
+    },
+    "hookCode": "BF1",
+    "budgetLine": "No boosts 20 Nov-2 Dec",
+    "checks": [
+      "Owner decision D5: no extra discount, no countdown"
+    ]
+  },
+  {
+    "id": "V41",
+    "title": "Your 2027 pitch deck, from your 2026 notes",
+    "format": "speedrun",
+    "platforms": [
+      "LinkedIn",
+      "TikTok",
+      "Instagram Reels"
+    ],
+    "icp": "icp2",
+    "lane": "B",
+    "lengthSec": 30,
+    "hook": {
+      "line": "Your 2027 pitch deck, from your 2026 notes.",
+      "visual": "Frame 0: a title slide reading '2027 plan' flipping up out of a pile of notes."
+    },
+    "script": [
+      {
+        "t": "0-2s",
+        "visual": "Title slide out of notes",
+        "onScreenText": "Your 2027 deck, from your 2026 notes.",
+        "voiceover": "Your 2027 deck, from your 2026 notes."
+      },
+      {
+        "t": "2-20s",
+        "visual": "Paste notes, build (chip), slides",
+        "onScreenText": "Paste. Build.",
+        "voiceover": "Paste last year's notes."
+      },
+      {
+        "t": "20-30s",
+        "visual": "Export PPTX; chart click",
+        "onScreenText": "Opens in PowerPoint.",
+        "voiceover": "Edit it in PowerPoint. Comment DECK."
+      }
+    ],
+    "cta": "'Comment DECK'.",
+    "caption": "New year planning deck: paste your 2026 notes, get an editable 2027 pitch deck. Comment DECK.",
+    "hashtags": [
+      "#newyear",
+      "#pitchdeck",
+      "#planning",
+      "#consultant"
+    ],
+    "sound": "Brand TikTok: Commercial Music Library track only (business account) under original voice-over. Instagram/YouTube: original voice-over plus a library track cleared for business use [U: re-check each platform's business library]. No trending chart songs on brand accounts.",
+    "shotList": [
+      "Notes prop",
+      "Build",
+      "PowerPoint"
+    ],
+    "assetsNeeded": [
+      "Bank in week 9 (half cadence)"
+    ],
+    "reuseExisting": [],
+    "effort": "low",
+    "priority": "P1",
+    "week": 11,
+    "tag": "live",
+    "whyItWorks": "'New year, new clients' window in phase 3 (from 4 Jan).",
+    "goLinks": [
+      "makeborne.com/go/ig-v41",
+      "makeborne.com/go/li-v41",
+      "makeborne.com/go/tt-v41"
+    ],
+    "utm": {
+      "utm_campaign": "launch-2026-10",
+      "utm_content": "<surface>-v41-d4",
+      "utm_medium": "organic"
+    },
+    "hookCode": "D4",
+    "budgetLine": null,
+    "checks": []
+  },
+  {
+    "id": "V42",
+    "title": "New year, new clients: lead finder → demo → review link",
+    "format": "demo",
+    "platforms": [
+      "LinkedIn",
+      "TikTok",
+      "Instagram Reels",
+      "YouTube Shorts"
+    ],
+    "icp": "icp1",
+    "lane": "A",
+    "lengthSec": 45,
+    "hook": {
+      "line": "January is when businesses fix their websites. Be the first to show them a better one.",
+      "visual": "Frame 0: a January calendar page turning into the lead finder results (blurred)."
+    },
+    "script": [
+      {
+        "t": "0-2s",
+        "visual": "Calendar → results",
+        "onScreenText": "Be first in January.",
+        "voiceover": "January is when businesses fix their websites."
+      },
+      {
+        "t": "2-15s",
+        "visual": "Lead finder (live steps only)",
+        "onScreenText": "Find",
+        "voiceover": "Find them."
+      },
+      {
+        "t": "15-32s",
+        "visual": "Demo site (fictional)",
+        "onScreenText": "Build",
+        "voiceover": "Build a first version."
+      },
+      {
+        "t": "32-45s",
+        "visual": "Review link, CRM 'Demo sent'",
+        "onScreenText": "Send",
+        "voiceover": "Send one link. Comment CLIENT."
+      }
+    ],
+    "cta": "'Comment CLIENT'.",
+    "caption": "New year, new clients: find local businesses, build a first-version site and send one review link. Studio plan, best for client work. One-to-one, and only where the law allows.",
+    "hashtags": [
+      "#freelancer",
+      "#newyear",
+      "#webdesign",
+      "#clientwork"
+    ],
+    "sound": "Original founder voice-over and real UI sound (keys, click, publish chime); quiet Commercial Music Library bed on TikTok.",
+    "shotList": [
+      "Re-use V07 workflow with a fresh recording"
+    ],
+    "assetsNeeded": [
+      "Blur masks"
+    ],
+    "reuseExisting": [],
+    "effort": "low",
+    "priority": "P1",
+    "week": 11,
+    "tag": "live",
+    "whyItWorks": "Phase 3 'new year, new clients' push (strategy §8).",
+    "goLinks": [
+      "makeborne.com/go/ig-v42",
+      "makeborne.com/go/li-v42",
+      "makeborne.com/go/tt-v42",
+      "makeborne.com/go/yt-v42"
+    ],
+    "utm": {
+      "utm_campaign": "launch-2026-10",
+      "utm_content": "<surface>-v42-f8",
+      "utm_medium": "organic"
+    },
+    "hookCode": "F8",
+    "budgetLine": null,
+    "checks": [
+      "If AI lead research has passed the gate by then, use V59 instead; otherwise show only the live finder",
+      "January 'businesses fix their websites' is our framing, not a statistic: do not present it as data"
+    ]
+  },
+  {
+    "id": "V43",
+    "title": "Founder Day 90: every number, including what failed",
+    "format": "founder",
+    "platforms": [
+      "LinkedIn",
+      "X",
+      "YouTube",
+      "TikTok"
+    ],
+    "icp": "icp1",
+    "lane": "A",
+    "lengthSec": 120,
+    "hook": {
+      "line": "90 days. Here's every number, including what failed.",
+      "visual": "Frame 0: founder with the day-90 deck (made in Makeborne), MRR and churn visible."
+    },
+    "script": [
+      {
+        "t": "0-2s",
+        "visual": "Founder + deck",
+        "onScreenText": "Day 90: every number.",
+        "voiceover": "Ninety days. Every number."
+      },
+      {
+        "t": "2-50s",
+        "visual": "Net payers, MRR, CAC by source, refunds, month-2 renewal, loop share",
+        "onScreenText": "[real numbers]",
+        "voiceover": "[Real numbers vs the base case]"
+      },
+      {
+        "t": "50-95s",
+        "visual": "What failed, what we stopped",
+        "onScreenText": "What failed",
+        "voiceover": "[Real failures]"
+      },
+      {
+        "t": "95-120s",
+        "visual": "Next quarter (incl. the free-tier decision, if made)",
+        "onScreenText": "Next 90 days",
+        "voiceover": "[Plan]"
+      }
+    ],
+    "cta": "Link to the public report.",
+    "caption": "Day 90 of Makeborne: net payers, MRR, CAC by source, refunds, renewals and what failed. Every number in public.",
+    "hashtags": [
+      "#buildinpublic",
+      "#startup",
+      "#indiehackers"
+    ],
+    "sound": "Founder voice, no music or a very low bed; LinkedIn plays muted by default, so burned-in captions carry it.",
+    "shotList": [
+      "Face to camera",
+      "Deck"
+    ],
+    "assetsNeeded": [
+      "Day-90 report"
+    ],
+    "reuseExisting": [],
+    "effort": "med",
+    "priority": "P1",
+    "week": 13,
+    "tag": "live",
+    "whyItWorks": "Day-90 report beat (strategy §9); press angle.",
+    "goLinks": [
+      "makeborne.com/go/li-v43",
+      "makeborne.com/go/tt-v43",
+      "makeborne.com/go/x-v43",
+      "makeborne.com/go/yt-v43"
+    ],
+    "utm": {
+      "utm_campaign": "day90",
+      "utm_content": "<surface>-v43-p8",
+      "utm_medium": "organic"
+    },
+    "hookCode": "P8",
+    "beatId": "beat-day90",
+    "budgetLine": null,
+    "checks": [
+      "Sun 24 Jan 2027",
+      "Compare honestly to the base case (~$14.5k MRR at day 91, calculator; $14.2k in the weekly table) and to $1M ARR"
+    ]
+  },
+  {
+    "id": "V44",
+    "title": "Who's behind this? A small studio in Sarajevo",
+    "format": "founder",
+    "platforms": [
+      "TikTok",
+      "Instagram Reels",
+      "LinkedIn"
+    ],
+    "icp": "icp1",
+    "lane": "A",
+    "lengthSec": 40,
+    "hook": {
+      "line": "You're paying a company in Sarajevo. Here's who we are.",
+      "visual": "Frame 0: founder walking out of the office building onto a Sarajevo street, phone camera, morning light."
+    },
+    "script": [
+      {
+        "t": "0-2s",
+        "visual": "Walk-and-talk on the street",
+        "onScreenText": "Who's behind Makeborne?",
+        "voiceover": "You're paying a company in Sarajevo. Fair to ask who we are."
+      },
+      {
+        "t": "2-20s",
+        "visual": "Desk, team (only those who agree), the support inbox",
+        "onScreenText": "Small studio. Sells worldwide.",
+        "voiceover": "We're a small studio. We sell worldwide."
+      },
+      {
+        "t": "20-32s",
+        "visual": "Founder answering a support ticket (customer details blurred)",
+        "onScreenText": "I answer support myself.",
+        "voiceover": "I answer support myself."
+      },
+      {
+        "t": "32-40s",
+        "visual": "Founder to camera",
+        "onScreenText": "Full refund until you use credits.",
+        "voiceover": "And if you don't use a credit, you get every cent back."
+      }
+    ],
+    "cta": "Follow; bio link.",
+    "caption": "Who's behind Makeborne: a small studio in Sarajevo, selling worldwide. The founder answers support and our numbers are public.",
+    "hashtags": [
+      "#sarajevo",
+      "#startup",
+      "#buildinpublic"
+    ],
+    "sound": "Original founder voice-over and real UI sound (keys, click, publish chime); quiet Commercial Music Library bed on TikTok.",
+    "shotList": [
+      "Walk-and-talk",
+      "Office B-roll",
+      "Support inbox (blurred)"
+    ],
+    "assetsNeeded": [
+      "Consent from anyone on camera"
+    ],
+    "reuseExisting": [],
+    "effort": "low",
+    "priority": "P1",
+    "week": 2,
+    "tag": "live",
+    "whyItWorks": "Answers the 'Who are you?' objection (strategy §4.4) for a paid-only product from an unfamiliar country.",
+    "goLinks": [
+      "makeborne.com/go/ig-v44",
+      "makeborne.com/go/li-v44",
+      "makeborne.com/go/tt-v44"
+    ],
+    "utm": {
+      "utm_campaign": "launch-2026-10",
+      "utm_content": "<surface>-v44-p9",
+      "utm_medium": "organic"
+    },
+    "hookCode": "P9",
+    "budgetLine": null,
+    "checks": [
+      "No customer data on screen"
+    ]
+  },
+  {
+    "id": "V45",
+    "title": "I answered the first 100 support tickets myself. The top 3 questions.",
+    "format": "founder",
+    "platforms": [
+      "LinkedIn",
+      "TikTok",
+      "X"
+    ],
+    "icp": "icp1",
+    "lane": "A",
+    "lengthSec": 50,
+    "hook": {
+      "line": "I answered the first 100 support tickets myself. Top 3 questions.",
+      "visual": "Frame 0: founder with the support inbox count visible (subjects blurred)."
+    },
+    "script": [
+      {
+        "t": "0-2s",
+        "visual": "Founder + inbox",
+        "onScreenText": "100 tickets. Top 3 questions.",
+        "voiceover": "A hundred support tickets. Here are the top three."
+      },
+      {
+        "t": "2-40s",
+        "visual": "Three questions and the honest answers",
+        "onScreenText": "1. [real] 2. [real] 3. [real]",
+        "voiceover": "[Real answers]"
+      },
+      {
+        "t": "40-50s",
+        "visual": "What we changed because of them",
+        "onScreenText": "What we changed",
+        "voiceover": "[Real change]"
+      }
+    ],
+    "cta": "Link in first comment.",
+    "caption": "The top 3 questions from Makeborne's first 100 support tickets, and what we changed because of them.",
+    "hashtags": [
+      "#buildinpublic",
+      "#customersupport",
+      "#saas"
+    ],
+    "sound": "Founder voice, no music or a very low bed; LinkedIn plays muted by default, so burned-in captions carry it.",
+    "shotList": [
+      "Face to camera"
+    ],
+    "assetsNeeded": [
+      "Ticket tally (no personal data)"
+    ],
+    "reuseExisting": [],
+    "effort": "low",
+    "priority": "P2",
+    "week": 4,
+    "tag": "live",
+    "whyItWorks": "Trust and objection content from real data.",
+    "goLinks": [
+      "makeborne.com/go/li-v45",
+      "makeborne.com/go/tt-v45",
+      "makeborne.com/go/x-v45"
+    ],
+    "utm": {
+      "utm_campaign": "launch-2026-10",
+      "utm_content": "<surface>-v45-p10",
+      "utm_medium": "organic"
+    },
+    "hookCode": "P10",
+    "budgetLine": null,
+    "checks": [
+      "Use the real ticket count; change the number in the hook if it is not 100"
+    ]
+  },
+  {
+    "id": "V46",
+    "title": "'Can you make the logo bigger?' (pinned to the logo)",
+    "format": "meme",
+    "platforms": [
+      "TikTok",
+      "Instagram Reels"
+    ],
+    "icp": "icp1",
+    "lane": "A",
+    "lengthSec": 10,
+    "hook": {
+      "line": "'Can you make the logo bigger?'",
+      "visual": "Frame 0: a review comment pin sitting exactly on the logo of a live demo site."
+    },
+    "script": [
+      {
+        "t": "0-2s",
+        "visual": "Comment pin on the logo",
+        "onScreenText": "'Can you make the logo bigger?'",
+        "voiceover": "None"
+      },
+      {
+        "t": "2-7s",
+        "visual": "Chat: 'bigger logo'; logo grows; second pin: 'bigger'",
+        "onScreenText": "Bigger. / Bigger.",
+        "voiceover": "None"
+      },
+      {
+        "t": "7-10s",
+        "visual": "Approve tapped",
+        "onScreenText": "At least it's on one link.",
+        "voiceover": "None"
+      }
+    ],
+    "cta": "'Comment CLIENT'.",
+    "caption": "Every designer has heard it. At least now the comment is pinned to the logo and the approval is one tap.",
+    "hashtags": [
+      "#designermemes",
+      "#clientsfromhell",
+      "#webdesigner"
+    ],
+    "sound": "Commercial Music Library comedic sting.",
+    "shotList": [
+      "Review page capture",
+      "Chat edit"
+    ],
+    "assetsNeeded": [],
+    "reuseExisting": [],
+    "effort": "low",
+    "priority": "P2",
+    "week": 5,
+    "tag": "live",
+    "whyItWorks": "Shareable in-group joke for designers that still shows the real review flow.",
+    "goLinks": [
+      "makeborne.com/go/ig-v46",
+      "makeborne.com/go/tt-v46"
+    ],
+    "utm": {
+      "utm_campaign": "launch-2026-10",
+      "utm_content": "<surface>-v46-m1",
+      "utm_medium": "organic"
+    },
+    "hookCode": "M1",
+    "budgetLine": null,
+    "checks": []
+  },
+  {
+    "id": "V47",
+    "title": "5 questions to ask before paying for any AI website builder (including us)",
+    "format": "listicle",
+    "platforms": [
+      "TikTok",
+      "YouTube Shorts",
+      "LinkedIn",
+      "Instagram Reels"
+    ],
+    "icp": "icp1",
+    "lane": "A+B",
+    "lengthSec": 55,
+    "hook": {
+      "line": "5 questions before you pay for any AI website builder. Including us.",
+      "visual": "Frame 0: founder holding up a hand, the five questions listed on a card beside them."
+    },
+    "script": [
+      {
+        "t": "0-2s",
+        "visual": "Founder + card",
+        "onScreenText": "5 questions. Including us.",
+        "voiceover": "Five questions to ask any AI website builder, including us."
+      },
+      {
+        "t": "2-14s",
+        "visual": "Q1: Can I see an uncut build?",
+        "onScreenText": "1. Uncut build?",
+        "voiceover": "Can you watch a real, uncut build? Ours is on the site."
+      },
+      {
+        "t": "14-24s",
+        "visual": "Q2: What's the most a request can cost?",
+        "onScreenText": "2. Max cost shown first?",
+        "voiceover": "Do you see the cost before it runs? We show the maximum first."
+      },
+      {
+        "t": "24-34s",
+        "visual": "Q3: Can I leave with my code?",
+        "onScreenText": "3. Can I export?",
+        "voiceover": "Can you take your code? Yes: download or export to GitHub."
+      },
+      {
+        "t": "34-46s",
+        "visual": "Q4: Own domain? Q5: Images?",
+        "onScreenText": "4. Domain? 5. Images?",
+        "voiceover": "Own domain and generated images? Not yet for us. Coming soon."
+      },
+      {
+        "t": "46-55s",
+        "visual": "Founder",
+        "onScreenText": "Full refund until you use credits.",
+        "voiceover": "And full refund until you use credits."
+      }
+    ],
+    "cta": "Bio link.",
+    "caption": "What to check before paying for an AI website builder: uncut builds, cost limits, code export, domains and images. Honest answers for Makeborne included.",
+    "hashtags": [
+      "#aiwebsitebuilder",
+      "#webdesign",
+      "#smallbusiness"
+    ],
+    "sound": "Original founder voice-over and real UI sound (keys, click, publish chime); quiet Commercial Music Library bed on TikTok.",
+    "shotList": [
+      "Face to camera",
+      "Screen inserts for each answer"
+    ],
+    "assetsNeeded": [
+      "Question card"
+    ],
+    "reuseExisting": [],
+    "effort": "low",
+    "priority": "P1",
+    "week": 3,
+    "tag": "live",
+    "whyItWorks": "Honesty as a differentiator; handles the domain and image objections up front so refunds stay low.",
+    "goLinks": [
+      "makeborne.com/go/ig-v47",
+      "makeborne.com/go/li-v47",
+      "makeborne.com/go/tt-v47",
+      "makeborne.com/go/yt-v47"
+    ],
+    "utm": {
+      "utm_campaign": "launch-2026-10",
+      "utm_content": "<surface>-v47-l2",
+      "utm_medium": "organic"
+    },
+    "hookCode": "L2",
+    "budgetLine": null,
+    "checks": [
+      "Never name or score competitors; no 'better than' claims",
+      "Coming features: 'coming soon', no date"
+    ]
+  },
+  {
+    "id": "V48",
+    "title": "A dated website vs a first version from one sentence",
+    "format": "before-after",
+    "platforms": [
+      "TikTok",
+      "Instagram Reels"
+    ],
+    "icp": "icp4",
+    "lane": "B",
+    "lengthSec": 25,
+    "hook": {
+      "line": "Your 2014 website vs. a first version from one sentence.",
+      "visual": "Frame 0: split screen; left a deliberately dated fictional site we built, right the new one."
+    },
+    "script": [
+      {
+        "t": "0-2s",
+        "visual": "Split",
+        "onScreenText": "2014 vs one sentence.",
+        "voiceover": "Left: 2014. Right: one sentence."
+      },
+      {
+        "t": "2-15s",
+        "visual": "Scroll both; brief chip on the right",
+        "onScreenText": "Same business. One sentence.",
+        "voiceover": "Same business, one sentence."
+      },
+      {
+        "t": "15-25s",
+        "visual": "Phone view of the new one; publish",
+        "onScreenText": "A first version, before you hire anyone.",
+        "voiceover": "A first version before you hire a designer. Comment SITE."
+      }
+    ],
+    "cta": "'DM me SITE'.",
+    "caption": "Before and after: a dated small business website vs a first version built from one sentence. Fictional business.",
+    "hashtags": [
+      "#beforeandafter",
+      "#websitedesign",
+      "#smallbusiness"
+    ],
+    "sound": "Brand TikTok: Commercial Music Library track only (business account) under original voice-over. Instagram/YouTube: original voice-over plus a library track cleared for business use [U: re-check each platform's business library]. No trending chart songs on brand accounts.",
+    "shotList": [
+      "Build the dated 'before' ourselves",
+      "New build"
+    ],
+    "assetsNeeded": [
+      "Fictional dated site"
+    ],
+    "reuseExisting": [],
+    "effort": "med",
+    "priority": "P2",
+    "week": 8,
+    "tag": "live",
+    "whyItWorks": "Before/after is a high-conversion format (research/short-form-video.md §3, format 3), kept to Lane B per the lane rule.",
+    "goLinks": [
+      "makeborne.com/go/ig-v48",
+      "makeborne.com/go/tt-v48"
+    ],
+    "utm": {
+      "utm_campaign": "launch-2026-10",
+      "utm_content": "<surface>-v48-r5",
+      "utm_medium": "organic"
+    },
+    "hookCode": "R5",
+    "budgetLine": null,
+    "checks": [
+      "Never a real business's site without written OK",
+      "Brand TikTok only: softened lane wording ('a first version before you hire a designer'), never on Lane A surfaces"
+    ]
+  },
+  {
+    "id": "V49",
+    "title": "Same brief, now with its own images (before/after)",
+    "format": "before-after",
+    "platforms": [
+      "TikTok",
+      "Instagram Reels",
+      "YouTube Shorts",
+      "LinkedIn",
+      "X"
+    ],
+    "icp": "all",
+    "lane": "A+B",
+    "lengthSec": 30,
+    "hook": {
+      "line": "Same sentence. Yesterday vs today.",
+      "visual": "Frame 0: split screen of the same site, left typography-only, right with generated images in the hero."
+    },
+    "script": [
+      {
+        "t": "0-2s",
+        "visual": "Split screen",
+        "onScreenText": "Same sentence. Now with images.",
+        "voiceover": "Same sentence. Now it makes the images too."
+      },
+      {
+        "t": "2-12s",
+        "visual": "Site before/after",
+        "onScreenText": "Sites",
+        "voiceover": "Sites."
+      },
+      {
+        "t": "12-20s",
+        "visual": "Deck: full-image slide before/after",
+        "onScreenText": "Decks",
+        "voiceover": "Decks, with full-image slides."
+      },
+      {
+        "t": "20-27s",
+        "visual": "Book cover/spread before/after",
+        "onScreenText": "Books",
+        "voiceover": "And books."
+      },
+      {
+        "t": "27-30s",
+        "visual": "End card",
+        "onScreenText": "makeborne.com · from $20/mo + tax · full refund until you use credits",
+        "voiceover": "Comment SITE."
+      }
+    ],
+    "cta": "Comment SITE / DECK / BOOK; launch page /launch/images.",
+    "caption": "New: Makeborne now makes the images for your websites, decks and books. Same brief, before and after. From $20/month.",
+    "hashtags": [
+      "#newfeature",
+      "#websitedesign",
+      "#pitchdeck",
+      "#ebook"
+    ],
+    "sound": "Brand TikTok: Commercial Music Library track only (business account) under original voice-over. Instagram/YouTube: original voice-over plus a library track cleared for business use [U: re-check each platform's business library]. No trending chart songs on brand accounts.",
+    "shotList": [
+      "Same 3 briefs run before and after on the shipped version"
+    ],
+    "assetsNeeded": [
+      "Real image-pipeline outputs from the shipped version only (not pre-release quality runs)",
+      "AI-image marking per EU AI Act Art. 50(2) check [U]",
+      "PH100 code on screen if live"
+    ],
+    "reuseExisting": [
+      "film library (private)/v14/gen/sheet_v14.jpg as the quality target only (concept art, never shown as product output)"
+    ],
+    "effort": "med",
+    "priority": "P1",
+    "week": 4,
+    "tag": "beat:images",
+    "whyItWorks": "Newness is among the highest hit-rate hook types [V, Motion 2026]; the before/after proves the upgrade on our own briefs.",
+    "goLinks": [
+      "makeborne.com/go/ig-v49",
+      "makeborne.com/go/li-v49",
+      "makeborne.com/go/tt-v49",
+      "makeborne.com/go/x-v49",
+      "makeborne.com/go/yt-v49"
+    ],
+    "utm": {
+      "utm_campaign": "images-beat",
+      "utm_content": "<surface>-v49-i1",
+      "utm_medium": "organic"
+    },
+    "hookCode": "I1",
+    "beatId": "beat-images",
+    "budgetLine": "Uneed b6 runs the same day",
+    "checks": [
+      "Post only after the six-box beat gate passes (strategy §9): 48 h live, 10 golden briefs, AI limit raised, founder free for support, copy reviewed, /go/ links.",
+      "No photoreal people unless labelled",
+      "Check generated business names and any visible text in images"
+    ]
+  },
+  {
+    "id": "V50",
+    "title": "'Anything': the fixed v14 launch film (15 s vertical + 43 s 16:9)",
+    "format": "demo",
+    "platforms": [
+      "X",
+      "LinkedIn",
+      "YouTube",
+      "TikTok",
+      "Instagram Reels"
+    ],
+    "icp": "all",
+    "lane": "A+B",
+    "lengthSec": 43,
+    "hook": {
+      "line": "Anything you can imagine.",
+      "visual": "Frame 0: the lit glossy m on the dawn ring, then the real composer typing 'A website for my bakery.'"
+    },
+    "script": [
+      {
+        "t": "0-2s",
+        "visual": "Lit m on the dawn ring",
+        "onScreenText": "None",
+        "voiceover": "None (music)"
+      },
+      {
+        "t": "2-12s",
+        "visual": "Real composer typing (real UI frames only)",
+        "onScreenText": "A website for my bakery.",
+        "voiceover": "None"
+      },
+      {
+        "t": "12-14s",
+        "visual": "Burst of outputs: real image-pipeline outputs swapped in for concept worlds",
+        "onScreenText": "Anything you can imagine.",
+        "voiceover": "None"
+      },
+      {
+        "t": "14-38s",
+        "visual": "Edit, publish (correct production address), book, deck, client review with Approve",
+        "onScreenText": "Projects shown: real Makeborne outputs (or the AI-concept line where any concept frame remains)",
+        "voiceover": "None"
+      },
+      {
+        "t": "38-43s",
+        "visual": "New end card",
+        "onScreenText": "Make yours at makeborne.com · from $20/mo",
+        "voiceover": "None"
+      }
+    ],
+    "cta": "Product Hunt gallery video and /launch/images.",
+    "caption": "Makeborne, now with images: websites, books and presentations from one brief. From $20/month + tax, full refund until you use credits.",
+    "hashtags": [
+      "#launch",
+      "#producthunt",
+      "#design"
+    ],
+    "sound": "Mixkit 'Opalescent' per the film notes [U: re-read licence before paid YouTube]; TikTok version on a Commercial Music Library track.",
+    "shotList": [
+      "No new shoot; re-render on a local disk (draft 2 failed on a network-drive rename)",
+      "15 s 9:16 recomposition (never crop the 16:9 master)"
+    ],
+    "assetsNeeded": [
+      "Fix 'Start free' end card",
+      "Restore a readable AI-concept line (cap height ≥2.5% of frame, ≥3 s) wherever concept frames remain",
+      "Replace the publish URL with the production address",
+      "Drop risky names (Northface Labs, Tidal, Tern; check Galerie Nord, Kazu, Round Nine, Salt & Swell, Petal & Stem)",
+      "Swap concept outputs for real shipped outputs where possible",
+      "Drop or relabel the 'Paris at 2 a.m.' image-edit beat unless image editing ships"
+    ],
+    "reuseExisting": [
+      "film library (private)/v14/renders/v14_draft_1080p60.mp4 (draft 1, 16:9 1080p60, 43.4 s)",
+      "film library (private)/v14/gen/sheet_v14.jpg (quality target)"
+    ],
+    "effort": "high",
+    "priority": "P1",
+    "week": 4,
+    "tag": "beat:images",
+    "whyItWorks": "The owner's quality bar becomes honest only once images are live; it serves the Product Hunt launch and X, where 16:9 launch video outperformed 9:16 [V, Infinite via internal v14 research].",
+    "goLinks": [
+      "makeborne.com/go/ig-v50",
+      "makeborne.com/go/li-v50",
+      "makeborne.com/go/tt-v50",
+      "makeborne.com/go/x-v50",
+      "makeborne.com/go/yt-v50"
+    ],
+    "utm": {
+      "utm_campaign": "images-beat",
+      "utm_content": "<surface>-v50-i2",
+      "utm_medium": "organic"
+    },
+    "hookCode": "I2",
+    "beatId": "beat-images",
+    "budgetLine": null,
+    "checks": [
+      "Post only after the six-box beat gate passes (strategy §9): 48 h live, 10 golden briefs, AI limit raised, founder free for support, copy reviewed, /go/ links.",
+      "Brand film, not product proof (strategy §4.2)"
+    ]
+  },
+  {
+    "id": "V51",
+    "title": "Full-image slides from one sentence (deck images demo)",
+    "format": "demo",
+    "platforms": [
+      "LinkedIn",
+      "TikTok",
+      "Instagram Reels",
+      "X"
+    ],
+    "icp": "icp2",
+    "lane": "B",
+    "lengthSec": 25,
+    "hook": {
+      "line": "Full-image slides. From one sentence.",
+      "visual": "Frame 0: a full-bleed image slide with a single line of type."
+    },
+    "script": [
+      {
+        "t": "0-2s",
+        "visual": "Full-bleed slide",
+        "onScreenText": "Full-image slides. One sentence.",
+        "voiceover": "Full-image slides, from one sentence."
+      },
+      {
+        "t": "2-14s",
+        "visual": "Quality and aspect controls set; build (chip)",
+        "onScreenText": "Pick quality. Pick aspect.",
+        "voiceover": "Pick the quality and aspect."
+      },
+      {
+        "t": "14-22s",
+        "visual": "Deck deals in",
+        "onScreenText": "Your deck, your images.",
+        "voiceover": "Every slide gets its own image."
+      },
+      {
+        "t": "22-25s",
+        "visual": "End",
+        "onScreenText": "Comment DECK.",
+        "voiceover": "Comment DECK."
+      }
+    ],
+    "cta": "'Comment DECK'.",
+    "caption": "New in Makeborne: full-image slides with quality and aspect controls, from one sentence. Comment DECK.",
+    "hashtags": [
+      "#pitchdeck",
+      "#presentationdesign",
+      "#newfeature"
+    ],
+    "sound": "Brand TikTok: Commercial Music Library track only (business account) under original voice-over. Instagram/YouTube: original voice-over plus a library track cleared for business use [U: re-check each platform's business library]. No trending chart songs on brand accounts.",
+    "shotList": [
+      "Shipped-version capture of the controls and output"
+    ],
+    "assetsNeeded": [
+      "Real outputs; credit cost per image shown honestly"
+    ],
+    "reuseExisting": [],
+    "effort": "low",
+    "priority": "P1",
+    "week": 4,
+    "tag": "beat:images",
+    "whyItWorks": "Day 2 of the images Launch Week (strategy §8); decks are where Gamma trained buyers to expect images.",
+    "goLinks": [
+      "makeborne.com/go/ig-v51",
+      "makeborne.com/go/li-v51",
+      "makeborne.com/go/tt-v51",
+      "makeborne.com/go/x-v51"
+    ],
+    "utm": {
+      "utm_campaign": "images-beat",
+      "utm_content": "<surface>-v51-i3",
+      "utm_medium": "organic"
+    },
+    "hookCode": "I3",
+    "beatId": "beat-images",
+    "budgetLine": null,
+    "checks": [
+      "Post only after the six-box beat gate passes (strategy §9): 48 h live, 10 golden briefs, AI limit raised, founder free for support, copy reviewed, /go/ links.",
+      "Show the real credit cost of image slides"
+    ]
+  },
+  {
+    "id": "V52",
+    "title": "A bedtime book where my son is the hero (picture book)",
+    "format": "demo",
+    "platforms": [
+      "Instagram Reels",
+      "TikTok"
+    ],
+    "icp": "icp3",
+    "lane": "B",
+    "lengthSec": 35,
+    "hook": {
+      "line": "I made my son a bedtime book where he's the hero.",
+      "visual": "Frame 0: a parent's hands turning the illustrated cover on a tablet in a dim bedroom."
+    },
+    "script": [
+      {
+        "t": "0-2s",
+        "visual": "Tablet in bedroom light",
+        "onScreenText": "A bedtime book where he's the hero.",
+        "voiceover": "I made my son a bedtime book where he's the hero."
+      },
+      {
+        "t": "2-10s",
+        "visual": "Brief: name, favourite animal, one fear to beat (no photo of the child uploaded)",
+        "onScreenText": "His name. His dinosaur.",
+        "voiceover": "His name, his favourite dinosaur, the thing he's scared of."
+      },
+      {
+        "t": "10-28s",
+        "visual": "Illustrated spreads",
+        "onScreenText": "Illustrated, page by page.",
+        "voiceover": "Illustrated, page by page."
+      },
+      {
+        "t": "28-35s",
+        "visual": "End",
+        "onScreenText": "Comment BOOK.",
+        "voiceover": "Comment BOOK."
+      }
+    ],
+    "cta": "'Comment BOOK'.",
+    "caption": "New: illustrated picture books in Makeborne. I made a bedtime story starring my son. Comment BOOK for the brief.",
+    "hashtags": [
+      "#bedtimestory",
+      "#picturebook",
+      "#parenting",
+      "#giftidea"
+    ],
+    "sound": "Soft Commercial Music Library lullaby; parent voice-over.",
+    "shotList": [
+      "Real bedroom B-roll (no child's face)",
+      "Book capture"
+    ],
+    "assetsNeeded": [
+      "A real parent's consent; no child images or personal data",
+      "AI-image marking check"
+    ],
+    "reuseExisting": [
+      "v14 concept 'Ollie the whale' spread in film library (private)/v14/gen/sheet_v14.jpg as style reference only"
+    ],
+    "effort": "med",
+    "priority": "P1",
+    "week": 4,
+    "tag": "beat:images",
+    "whyItWorks": "Gift books are the most sendable book idea; held until images make them good (strategy risk 19).",
+    "goLinks": [
+      "makeborne.com/go/ig-v52",
+      "makeborne.com/go/tt-v52"
+    ],
+    "utm": {
+      "utm_campaign": "images-beat",
+      "utm_content": "<surface>-v52-b2",
+      "utm_medium": "organic"
+    },
+    "hookCode": "B2",
+    "beatId": "beat-images",
+    "budgetLine": null,
+    "checks": [
+      "Post only after the six-box beat gate passes (strategy §9): 48 h live, 10 golden briefs, AI limit raised, founder free for support, copy reviewed, /go/ links.",
+      "Gift framing only if images are live before about 10 Dec (strategy: picture/gift pushes wait for images)",
+      "Never upload or show a real child's face"
+    ]
+  },
+  {
+    "id": "V53",
+    "title": "Wave-2 UGC (visual creator): an image-led site, deck or book",
+    "format": "UGC",
+    "platforms": [
+      "TikTok",
+      "Instagram Reels"
+    ],
+    "icp": "icp3",
+    "lane": "B",
+    "lengthSec": 45,
+    "hook": {
+      "line": "Ad: one sentence, and it made the images too.",
+      "visual": "Frame 0: the creator's finished image-led output on a phone, held to camera."
+    },
+    "script": [
+      {
+        "t": "0-3s",
+        "visual": "Output to camera",
+        "onScreenText": "Ad · it made the images too",
+        "voiceover": "Ad for Makeborne. One sentence, and it made the images too."
+      },
+      {
+        "t": "3-30s",
+        "visual": "Their real build on the shipped version",
+        "onScreenText": "My brief, my build",
+        "voiceover": "Here's my brief and the build."
+      },
+      {
+        "t": "30-45s",
+        "visual": "Creator to camera",
+        "onScreenText": "Link in bio",
+        "voiceover": "Link in bio."
+      }
+    ],
+    "cta": "Creator /go/ link; PH100 code if live.",
+    "caption": "#ad One sentence in, images included: my site/deck/book made in Makeborne. Paid partnership.",
+    "hashtags": [
+      "#ad",
+      "#design",
+      "#contentcreator"
+    ],
+    "sound": "Creator's own voice and a sound the creator's account may use commercially (on TikTok, branded content must use the Commercial Music Library).",
+    "shotList": [
+      "Creator's own screen recording of their real use during the comped Studio month",
+      "Face to camera in natural light, no filters",
+      "Phone capture of the output"
+    ],
+    "assetsNeeded": [
+      "Comped Studio account for the campaign month",
+      "/go/c-<handle> link + use-my-brief link + custom affiliate code",
+      "One-page brief (content/videos.md, UGC section)",
+      "Signed agreement with the 60-day Spark/partnership-ad clause"
+    ],
+    "reuseExisting": [],
+    "effort": "med",
+    "priority": "P1",
+    "week": 4,
+    "tag": "beat:images",
+    "whyItWorks": "The plan reserves $140 for 2 visual creators only after the images gate.",
+    "goLinks": [
+      "makeborne.com/go/c-<handle>",
+      "makeborne.com/go/c-<handle>?brief=<id> (use-my-brief, once live)"
+    ],
+    "utm": {
+      "utm_campaign": "images-beat",
+      "utm_content": "<surface>-v53-u6",
+      "utm_medium": "creator"
+    },
+    "hookCode": "U6",
+    "beatId": "beat-images",
+    "budgetLine": "b4 (wave 2)",
+    "checks": [
+      "Paid-partnership toggle on + 'Ad' said in the first seconds and shown on screen + '#ad' at the start of the caption (FTC: disclosure must be in the video itself; platform tools alone are not enough).",
+      "Only live features; no 'free'; no vendor names; no income claims",
+      "Founder reviews the draft before it posts; pay only after the attribution gate",
+      "Post only after the six-box beat gate passes (strategy §9): 48 h live, 10 golden briefs, AI limit raised, founder free for support, copy reviewed, /go/ links.",
+      "If images are not live by 30 Nov, cancel and rehire the best wave-1 creator (budget line b4)"
+    ],
+    "ugcBrief": {
+      "lane": "B (visual)",
+      "creatorProfile": "Design, illustration or aesthetic creator, 2k-50k followers",
+      "job": "Show an image-led output from your own brief",
+      "mustShow": [
+        "Finished output first",
+        "Real build on the shipped version"
+      ],
+      "talkingPoints": [
+        "Generated images in sites, decks and books"
+      ]
+    }
+  },
+  {
+    "id": "V54",
+    "title": "We're on Product Hunt today: the real thing, no upvote ask",
+    "format": "founder",
+    "platforms": [
+      "X",
+      "LinkedIn"
+    ],
+    "icp": "all",
+    "lane": "A+B",
+    "lengthSec": 45,
+    "hook": {
+      "line": "Today Makeborne makes the images too. Here's an uncut build.",
+      "visual": "Frame 0: founder at the desk, the images build already running on screen."
+    },
+    "script": [
+      {
+        "t": "0-2s",
+        "visual": "Founder + running build",
+        "onScreenText": "Images are live.",
+        "voiceover": "Today Makeborne makes the images too."
+      },
+      {
+        "t": "2-35s",
+        "visual": "Uncut (or clearly sped-up) image-led build",
+        "onScreenText": "Clock chip: '[real time]' filled from the recording, or 'sped up ×N' if compressed. Never show compressed time as real time.",
+        "voiceover": "Here's a build, start to finish."
+      },
+      {
+        "t": "35-45s",
+        "visual": "Founder",
+        "onScreenText": "We're on Product Hunt today.",
+        "voiceover": "We're on Product Hunt today if you want to tell us what you think."
+      }
+    ],
+    "cta": "Link to the Product Hunt page in the first reply; never 'upvote'.",
+    "caption": "Makeborne now makes images for your websites, decks and books. We're on Product Hunt today: comments and honest feedback welcome.",
+    "hashtags": [
+      "#producthunt",
+      "#buildinpublic",
+      "#launch"
+    ],
+    "sound": "Founder voice, no music or a very low bed; LinkedIn plays muted by default, so burned-in captions carry it.",
+    "shotList": [
+      "Face to camera",
+      "Uncut build"
+    ],
+    "assetsNeeded": [
+      "PH page live at 09:01 Sarajevo (after 1 Nov)"
+    ],
+    "reuseExisting": [],
+    "effort": "low",
+    "priority": "P1",
+    "week": 4,
+    "tag": "beat:images",
+    "whyItWorks": "The main Product Hunt launch is reserved for images (strategy §1.6); a real build video belongs in the maker comment.",
+    "goLinks": [
+      "makeborne.com/go/li-v54",
+      "makeborne.com/go/x-v54"
+    ],
+    "utm": {
+      "utm_campaign": "images-beat",
+      "utm_content": "<surface>-v54-i4",
+      "utm_medium": "organic"
+    },
+    "hookCode": "I4",
+    "beatId": "beat-images",
+    "budgetLine": "Uneed b6 same day",
+    "checks": [
+      "Post only after the six-box beat gate passes (strategy §9): 48 h live, 10 golden briefs, AI limit raised, founder free for support, copy reviewed, /go/ links.",
+      "No upvote asks, vote swaps or paid hunters, ever (Product Hunt rules)"
+    ]
+  },
+  {
+    "id": "V55",
+    "title": "Run out mid-project? Top up without changing plan",
+    "format": "demo",
+    "platforms": [
+      "TikTok",
+      "Instagram Reels",
+      "LinkedIn",
+      "X"
+    ],
+    "icp": "icp1",
+    "lane": "A",
+    "lengthSec": 20,
+    "hook": {
+      "line": "Out of credits at 11 p.m. before a client deadline?",
+      "visual": "Frame 0: the credits meter near zero next to a calendar showing a deadline tomorrow."
+    },
+    "script": [
+      {
+        "t": "0-2s",
+        "visual": "Meter + deadline",
+        "onScreenText": "Out of credits before a deadline?",
+        "voiceover": "Out of credits the night before a deadline?"
+      },
+      {
+        "t": "2-14s",
+        "visual": "Top-up flow (shipped version)",
+        "onScreenText": "Top up. Keep your plan.",
+        "voiceover": "Top up. Your plan stays the same."
+      },
+      {
+        "t": "14-20s",
+        "visual": "Build continues",
+        "onScreenText": "Back to work.",
+        "voiceover": "Back to work."
+      }
+    ],
+    "cta": "Link in first comment.",
+    "caption": "New: credit top-ups. Run out mid-project and top up without changing your plan.",
+    "hashtags": [
+      "#newfeature",
+      "#freelancer"
+    ],
+    "sound": "Original founder voice-over and real UI sound (keys, click, publish chime); quiet Commercial Music Library bed on TikTok.",
+    "shotList": [
+      "Top-up flow capture"
+    ],
+    "assetsNeeded": [
+      "Real top-up prices from the shipped pricing page"
+    ],
+    "reuseExisting": [],
+    "effort": "low",
+    "priority": "P2",
+    "week": 4,
+    "tag": "beat:topups",
+    "whyItWorks": "Tier-3 beat; a 20 s UI clip is all it needs (strategy §9).",
+    "goLinks": [
+      "makeborne.com/go/ig-v55",
+      "makeborne.com/go/li-v55",
+      "makeborne.com/go/tt-v55",
+      "makeborne.com/go/x-v55"
+    ],
+    "utm": {
+      "utm_campaign": "images-beat",
+      "utm_content": "<surface>-v55-tu1",
+      "utm_medium": "organic"
+    },
+    "hookCode": "TU1",
+    "beatId": "beat-topups",
+    "budgetLine": null,
+    "checks": [
+      "Post only after the six-box beat gate passes (strategy §9): 48 h live, 10 golden briefs, AI limit raised, founder free for support, copy reviewed, /go/ links.",
+      "Until top-ups ship, objection copy stays 'upgrade any time; unused credits carry over for two months'"
+    ]
+  },
+  {
+    "id": "V56",
+    "title": "Your client's site, on your client's domain",
+    "format": "demo",
+    "platforms": [
+      "LinkedIn",
+      "TikTok",
+      "Instagram Reels",
+      "YouTube Shorts"
+    ],
+    "icp": "icp1",
+    "lane": "A",
+    "lengthSec": 35,
+    "hook": {
+      "line": "Your client's site, now on your client's own domain.",
+      "visual": "Frame 0: a browser address bar changing from the Makeborne address to the client's own domain."
+    },
+    "script": [
+      {
+        "t": "0-2s",
+        "visual": "Address bar swap",
+        "onScreenText": "Now on your client's domain.",
+        "voiceover": "Client sites can now go live on the client's own domain."
+      },
+      {
+        "t": "2-25s",
+        "visual": "Connect-domain flow end to end on a real (consented) customer site or our own test domain",
+        "onScreenText": "Connect. Verify. Live.",
+        "voiceover": "Connect it, verify it, and it's live."
+      },
+      {
+        "t": "25-35s",
+        "visual": "Phone shows the site on the new domain",
+        "onScreenText": "Comment CLIENT.",
+        "voiceover": "Comment CLIENT."
+      }
+    ],
+    "cta": "'Comment CLIENT'.",
+    "caption": "New: custom domains. Your client's site, live on your client's own domain. Studio plan, best for client work.",
+    "hashtags": [
+      "#newfeature",
+      "#webdesign",
+      "#customdomain"
+    ],
+    "sound": "Original founder voice-over and real UI sound (keys, click, publish chime); quiet Commercial Music Library bed on TikTok.",
+    "shotList": [
+      "Full connect flow including DNS step (no registrar account details on screen)"
+    ],
+    "assetsNeeded": [
+      "A consented customer move, or our own test domain"
+    ],
+    "reuseExisting": [],
+    "effort": "med",
+    "priority": "P1",
+    "week": 6,
+    "tag": "beat:domains",
+    "whyItWorks": "Removes the biggest objection for small businesses and agencies (strategy §4.4); unlocks full-volume small-business speedruns.",
+    "goLinks": [
+      "makeborne.com/go/ig-v56",
+      "makeborne.com/go/li-v56",
+      "makeborne.com/go/tt-v56",
+      "makeborne.com/go/yt-v56"
+    ],
+    "utm": {
+      "utm_campaign": "domains-beat",
+      "utm_content": "<surface>-v56-cd1",
+      "utm_medium": "organic"
+    },
+    "hookCode": "CD1",
+    "beatId": "beat-domains",
+    "budgetLine": null,
+    "checks": [
+      "Post only after the six-box beat gate passes (strategy §9): 48 h live, 10 golden briefs, AI limit raised, founder free for support, copy reviewed, /go/ links.",
+      "Hide registrar logins, DNS tokens and account IDs"
+    ]
+  },
+  {
+    "id": "V57",
+    "title": "Comment your business: built and live on its own domain",
+    "format": "speedrun",
+    "platforms": [
+      "TikTok",
+      "Instagram Reels"
+    ],
+    "icp": "icp4",
+    "lane": "B",
+    "lengthSec": 35,
+    "hook": {
+      "line": "Replying to @___: built, and live on your own domain.",
+      "visual": "Frame 0: reply bubble over the finished site with the business's own domain in the address bar."
+    },
+    "script": [
+      {
+        "t": "0-2s",
+        "visual": "Reply bubble + domain",
+        "onScreenText": "Built. On your own domain.",
+        "voiceover": "Built, and live on your own domain."
+      },
+      {
+        "t": "2-22s",
+        "visual": "Brief, build (chip), one edit",
+        "onScreenText": "Clock chip: '[real time]' filled from the recording, or 'sped up ×N' if compressed. Never show compressed time as real time.",
+        "voiceover": "Your words, one build, one edit."
+      },
+      {
+        "t": "22-32s",
+        "visual": "Connect the domain they already own (only with their OK and their own DNS access)",
+        "onScreenText": "Your domain.",
+        "voiceover": "Then it goes on the domain you already own."
+      },
+      {
+        "t": "32-35s",
+        "visual": "Loop",
+        "onScreenText": "Comment your business.",
+        "voiceover": "Comment your business."
+      }
+    ],
+    "cta": "'Comment your business'.",
+    "caption": "Built a small business website from a comment and put it on the business's own domain. Comment yours.",
+    "hashtags": [
+      "#smallbusiness",
+      "#websitedesign",
+      "#replyingtocomments"
+    ],
+    "sound": "Brand TikTok: Commercial Music Library track only (business account) under original voice-over. Instagram/YouTube: original voice-over plus a library track cleared for business use [U: re-check each platform's business library]. No trending chart songs on brand accounts.",
+    "shotList": [
+      "As V04 plus the domain step"
+    ],
+    "assetsNeeded": [
+      "Written OK; the business connects its own DNS (we never handle their credentials)"
+    ],
+    "reuseExisting": [],
+    "effort": "med",
+    "priority": "P2",
+    "week": 7,
+    "tag": "beat:domains",
+    "whyItWorks": "ICP 4 moves from light to full push only after domains pass the gate (strategy §3.1).",
+    "goLinks": [
+      "makeborne.com/go/ig-v57",
+      "makeborne.com/go/tt-v57"
+    ],
+    "utm": {
+      "utm_campaign": "domains-beat",
+      "utm_content": "<surface>-v57-cd2",
+      "utm_medium": "organic"
+    },
+    "hookCode": "CD2",
+    "beatId": "beat-domains",
+    "budgetLine": null,
+    "checks": [
+      "Post only after the six-box beat gate passes (strategy §9): 48 h live, 10 golden briefs, AI limit raised, founder free for support, copy reviewed, /go/ links.",
+      "Same consent rules as V04",
+      "We never log in to a customer's registrar"
+    ]
+  },
+  {
+    "id": "V58",
+    "title": "Run client work in one place: build, review, approve, publish",
+    "format": "demo",
+    "platforms": [
+      "LinkedIn",
+      "YouTube Shorts",
+      "X",
+      "Instagram Reels"
+    ],
+    "icp": "icp1",
+    "lane": "A",
+    "lengthSec": 45,
+    "hook": {
+      "line": "Build, review, approve, publish. One place.",
+      "visual": "Frame 0: a four-step strip lighting up in order over the shipped agency view."
+    },
+    "script": [
+      {
+        "t": "0-2s",
+        "visual": "Four-step strip",
+        "onScreenText": "Build · Review · Approve · Publish",
+        "voiceover": "Client work, in one place."
+      },
+      {
+        "t": "2-38s",
+        "visual": "The shipped agency tools, step by step (only what shipped)",
+        "onScreenText": "[shipped features]",
+        "voiceover": "[Describe only shipped features]"
+      },
+      {
+        "t": "38-45s",
+        "visual": "End",
+        "onScreenText": "Comment CLIENT.",
+        "voiceover": "Comment CLIENT."
+      }
+    ],
+    "cta": "'Comment CLIENT'; PH 'Makeborne for agencies' only if a significant iteration.",
+    "caption": "New: agency tools in Makeborne. Build, review, approve and publish client work in one place.",
+    "hashtags": [
+      "#agencyowner",
+      "#newfeature",
+      "#webdesignagency"
+    ],
+    "sound": "Founder voice, no music or a very low bed; LinkedIn plays muted by default, so burned-in captions carry it.",
+    "shotList": [
+      "Shipped agency view capture"
+    ],
+    "assetsNeeded": [
+      "Final feature list from the release notes"
+    ],
+    "reuseExisting": [],
+    "effort": "med",
+    "priority": "P1",
+    "week": 7,
+    "tag": "beat:agency",
+    "whyItWorks": "Tier-1 beat for the paying ICP (strategy §9); LinkedIn series plus community workshop.",
+    "goLinks": [
+      "makeborne.com/go/ig-v58",
+      "makeborne.com/go/li-v58",
+      "makeborne.com/go/x-v58",
+      "makeborne.com/go/yt-v58"
+    ],
+    "utm": {
+      "utm_campaign": "agency-beat",
+      "utm_content": "<surface>-v58-ag1",
+      "utm_medium": "organic"
+    },
+    "hookCode": "AG1",
+    "beatId": "beat-agency",
+    "budgetLine": null,
+    "checks": [
+      "Post only after the six-box beat gate passes (strategy §9): 48 h live, 10 golden briefs, AI limit raised, founder free for support, copy reviewed, /go/ links.",
+      "Write the script from the shipped release notes, not the roadmap",
+      "PH relaunch only if at least 4 weeks after the images launch"
+    ]
+  },
+  {
+    "id": "V59",
+    "title": "Find the business, research it, build its site, send the link",
+    "format": "demo",
+    "platforms": [
+      "LinkedIn",
+      "TikTok",
+      "YouTube Shorts",
+      "Instagram Reels"
+    ],
+    "icp": "icp1",
+    "lane": "A",
+    "lengthSec": 50,
+    "hook": {
+      "line": "It found the business, read its site and told me what to pitch.",
+      "visual": "Frame 0: the AI research panel for a lead (business identity blurred or fictional), 'what's holding their site back' visible."
+    },
+    "script": [
+      {
+        "t": "0-2s",
+        "visual": "Research panel",
+        "onScreenText": "Found it. Read it. Told me what to pitch.",
+        "voiceover": "It found the business and told me what to pitch."
+      },
+      {
+        "t": "2-20s",
+        "visual": "Lead finder + AI research on a fictional or consented business",
+        "onScreenText": "Research",
+        "voiceover": "Here's what it read."
+      },
+      {
+        "t": "20-40s",
+        "visual": "Pitch site from the research brief (fictional/consented only)",
+        "onScreenText": "Build the better version",
+        "voiceover": "Then it builds the better version."
+      },
+      {
+        "t": "40-50s",
+        "visual": "Review link, CRM 'Demo sent'",
+        "onScreenText": "Send the link.",
+        "voiceover": "Send the link. Comment CLIENT."
+      }
+    ],
+    "cta": "'Comment CLIENT'.",
+    "caption": "New: AI lead research. Find the clients whose websites need you, and show up with a better one.",
+    "hashtags": [
+      "#leadgeneration",
+      "#freelancer",
+      "#newfeature"
+    ],
+    "sound": "Original founder voice-over and real UI sound (keys, click, publish chime); quiet Commercial Music Library bed on TikTok.",
+    "shotList": [
+      "Shipped research flow on a consented or fictional business"
+    ],
+    "assetsNeeded": [
+      "A business that agreed to be shown, or a fictional one"
+    ],
+    "reuseExisting": [],
+    "effort": "med",
+    "priority": "P1",
+    "week": 12,
+    "tag": "beat:leads",
+    "whyItWorks": "Tier-2 beat in January, aligned with 'new year, new clients' (strategy §8-9).",
+    "goLinks": [
+      "makeborne.com/go/ig-v59",
+      "makeborne.com/go/li-v59",
+      "makeborne.com/go/tt-v59",
+      "makeborne.com/go/yt-v59"
+    ],
+    "utm": {
+      "utm_campaign": "leads-beat",
+      "utm_content": "<surface>-v59-lr1",
+      "utm_medium": "organic"
+    },
+    "hookCode": "LR1",
+    "beatId": "beat-leads",
+    "budgetLine": null,
+    "checks": [
+      "Post only after the six-box beat gate passes (strategy §9): 48 h live, 10 golden briefs, AI limit raised, founder free for support, copy reviewed, /go/ links.",
+      "Never show a real business's weaknesses without its consent",
+      "No automated cold email"
+    ]
+  },
+  {
+    "id": "V60",
+    "title": "Edit in Makeborne or in your code. Both stay in sync.",
+    "format": "demo",
+    "platforms": [
+      "X",
+      "YouTube"
+    ],
+    "icp": "icp1",
+    "lane": "A",
+    "lengthSec": 60,
+    "hook": {
+      "line": "Edit here or in your code. Both stay in sync.",
+      "visual": "Frame 0: split screen, the studio on the left, a code editor on the right; a change on one side appears on the other."
+    },
+    "script": [
+      {
+        "t": "0-2s",
+        "visual": "Split screen, change propagates",
+        "onScreenText": "Edit either side.",
+        "voiceover": "Edit in Makeborne or in your code."
+      },
+      {
+        "t": "2-30s",
+        "visual": "Studio edit → commit appears in the repo",
+        "onScreenText": "Makeborne → GitHub",
+        "voiceover": "A change in the studio lands in the repo."
+      },
+      {
+        "t": "30-55s",
+        "visual": "Code edit pushed → studio updates",
+        "onScreenText": "GitHub → Makeborne",
+        "voiceover": "And a code change comes back."
+      },
+      {
+        "t": "55-60s",
+        "visual": "End",
+        "onScreenText": "Both stay in sync.",
+        "voiceover": "Both stay in sync."
+      }
+    ],
+    "cta": "Link in first reply.",
+    "caption": "New: two-way GitHub sync. Edit in Makeborne or in your code; both stay in sync.",
+    "hashtags": [
+      "#github",
+      "#webdev",
+      "#newfeature"
+    ],
+    "sound": "Voice-over only.",
+    "shotList": [
+      "Split-screen capture on a test repo"
+    ],
+    "assetsNeeded": [
+      "Test repo with nothing private"
+    ],
+    "reuseExisting": [],
+    "effort": "med",
+    "priority": "P2",
+    "week": 8,
+    "tag": "beat:github",
+    "whyItWorks": "Tier-3 developer beat; X and YouTube are where that audience is.",
+    "goLinks": [
+      "makeborne.com/go/x-v60",
+      "makeborne.com/go/yt-v60"
+    ],
+    "utm": {
+      "utm_campaign": "github-beat",
+      "utm_content": "<surface>-v60-gh1",
+      "utm_medium": "organic"
+    },
+    "hookCode": "GH1",
+    "beatId": "beat-github",
+    "budgetLine": null,
+    "checks": [
+      "Post only after the six-box beat gate passes (strategy §9): 48 h live, 10 golden briefs, AI limit raised, founder free for support, copy reviewed, /go/ links.",
+      "One X thread and one YouTube demo only, not a wave (strategy §8)",
+      "No tokens or org names on screen"
+    ]
+  }
+]

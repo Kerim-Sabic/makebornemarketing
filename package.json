@@ -1,0 +1,33 @@
+{
+  "name": "makeborne-war-room",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Makeborne 90-day growth plan war room: a static site that reads the plan's JSON and Markdown.",
+  "type": "module",
+  "license": "UNLICENSED",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -p tsconfig.json --noEmit && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "check": "node scripts/check-routes.mjs",
+    "check:model": "node scripts/check-routes.mjs --model-only"
+  },
+  "dependencies": {
+    "@fontsource-variable/inter": "5.3.0",
+    "@fontsource/newsreader": "5.3.0",
+    "marked": "18.0.14",
+    "react": "19.2.9",
+    "react-dom": "19.2.9"
+  },
+  "devDependencies": {
+    "@types/react": "19.2.18",
+    "@types/react-dom": "19.2.7",
+    "@vitejs/plugin-react": "5.2.0",
+    "typescript": "5.9.3",
+    "vite": "7.3.7"
+  },
+  "engines": {
+    "node": ">=20.19.0"
+  }
+}

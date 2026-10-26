@@ -1,0 +1,1994 @@
+{
+  "headline": "Makeborne 90-day growth plan: sell Studio to freelancers and agencies with real-build short-form, a review-page loop and feature beats gated on quality. Plan on ~$174k ARR by 24 Jan 2027; $1M is a breakout scenario, not the plan.",
+  "summary": "Spine: the creator-led engine (show the product working, Instagram keyword DMs to format-matched pages, small paid creator waves, boosts only for posts with a tracked sale, then revenue-funded Content Rewards at ~$1.60 per 1,000 views). Aimed at ICP 1 (freelancers and small agencies on Studio $49) with the agency loops (review-page referral link, 'play the client' sample review link, activation = review link sent). Calendar from the launch-events plan (six-box feature gate, Launch Week bundling, Product Hunt at the images beat, day-30 and day-90 public numbers). Four core surfaces at 25-30 posts a week; founder time is the binding constraint and support comes first. The $1,000 is one concentrated test behind a spend gate: no dollar before /go/ links, first touch and mb_src/mb_campaign/mb_aff on Makeborne-created Whop checkouts are live. Whop store or tracking links are never used: only Makeborne-created checkout links are used. Base case ~$14.5k MRR / ~$174k ARR at the day-90 review (24 Jan; calculator); if creator traffic converts like average traffic, ~$11.2k MRR / ~$134k ARR and paid CAC ~$103. Low ~$16k; high ~$565k; breakout ~$1.00M needs ~117k visits including loops at 1.6% visit-to-paid with no free tier, 3-5 product posts above 1M views and ~$5k revenue-funded Content Rewards over 90 days under D4.",
+  "northStar": {
+    "name": "Weekly activated payers",
+    "definition": "Net new paying accounts (after refunds) that sent at least one client review link, or published or exported a deck or book, within 7 days of paying",
+    "baseTarget": "~13-27 a week in November (13, 18, 20, 27 in weeks 2-5) rising to ~27-33 a week in January (60% of weekly net payers in weeks 1-4, 70% after)",
+    "guardrails": [
+      "Refunds within 14 days <=15% (brake at 20% per source)",
+      "Blended paid CAC <=$50",
+      "First build started within 10 minutes for >=90% of payers",
+      "Support first reply <=4 h"
+    ]
+  },
+  "icps": [
+    {
+      "id": "icp1",
+      "name": "Freelance web designers and small studios (1-10 people), incl. 'sell websites to local businesses' side-hustlers",
+      "jtbd": "Win the client before the first call, then get approval without email chaos",
+      "channels": [
+        "founder LinkedIn",
+        "Lane A creators and partners",
+        "review-page loop",
+        "agency community workshops",
+        "brand TikTok client-work POVs"
+      ],
+      "message": "Build it. Send the link. Get the yes. Send your client a real website before the first call."
+    },
+    {
+      "id": "icp2",
+      "name": "Consultants, founders and agency owners who need decks",
+      "jtbd": "Turn messy notes into an editable deck they can open in PowerPoint",
+      "channels": [
+        "founder X",
+        "founder LinkedIn",
+        "brand TikTok",
+        "Reels",
+        "YouTube Shorts"
+      ],
+      "message": "Notes in. An editable deck out. Click the chart: it's real."
+    },
+    {
+      "id": "icp3",
+      "name": "Coaches, creators and authors (guides, lead magnets, client welcome books)",
+      "jtbd": "Package expertise as a book to give away or sell on screen",
+      "channels": [
+        "Instagram Reels and carousels",
+        "brand TikTok"
+      ],
+      "message": "Your notes app is full of book ideas. Here's one, finished. (Picture and gift books only after images pass the gate.)"
+    },
+    {
+      "id": "icp4",
+      "name": "Small business owners (DIY)",
+      "jtbd": "A credible website today without hiring anyone",
+      "channels": [
+        "brand TikTok comment-reply speedruns",
+        "badge and partner directory via agencies"
+      ],
+      "message": "Comment your business. Watch its site get built. (Full push only after custom domains pass the gate.)"
+    },
+    {
+      "id": "icp5",
+      "name": "Educators and students",
+      "jtbd": "Decks and study books",
+      "channels": [],
+      "message": "Not targeted in this 90 days; needs an education price decision [O]"
+    }
+  ],
+  "positioning": {
+    "oneLiner": "The AI studio for client work. Build it. Send the link. Get the yes.",
+    "shortFormLine": "One sentence in. A finished website, deck or book out.",
+    "proofLine": "From $20/month + tax where applicable. Full refund until you use credits.",
+    "pillars": [
+      "Win before the call: lead finder, demo site, review link",
+      "Approval without email chaos: clients comment and approve with no account",
+      "One brief, three deliverables: site, deck and book in one brand",
+      "You own it: download the source, manual GitHub export",
+      "Honest billing: maximum cost shown first, full refund until credits are used",
+      "Made, not generated: real UI and real output, timed builds"
+    ],
+    "proof": [
+      "45 s real-timer recording: lead finder -> demo site -> review link",
+      "Public 'play the client' sample review link",
+      "PPTX opened in PowerPoint with a real, clickable chart (v12 one-value chart edit)",
+      "v12 real book page riffle",
+      "v9 Fly-over film of the real home page (after end-card and home-page match check)",
+      "/examples gallery of unedited outputs with brief, time and credits used",
+      "Founder 'Day N' posts with real Whop numbers, refunds included"
+    ],
+    "objections": [
+      {
+        "objection": "No free plan?",
+        "answer": "Watch the full uncut build, play the client on our sample review link (once live, ga5), browse real unedited outputs (once /examples is live, ga7). If you don't use a credit, you get every cent back."
+      },
+      {
+        "objection": "Is it just templates?",
+        "answer": "Show the brief and the result side by side, plus one live edit."
+      },
+      {
+        "objection": "Can I use my own domain?",
+        "answer": "Not yet. Sites publish on a Makeborne address today. Demos and approvals don't need a domain, and you can download the source."
+      },
+      {
+        "objection": "Does it make images?",
+        "answer": "Not yet; that's coming soon. Today outputs are typography-led or use your own photos."
+      },
+      {
+        "objection": "Will my client see your brand?",
+        "answer": "Your client sees your work and a simple review page with no account needed."
+      },
+      {
+        "objection": "What happens to client sites if I cancel?",
+        "answer": "Sites stay live while your plan is active, and you can download the source any time."
+      },
+      {
+        "objection": "Why not Lovable?",
+        "answer": "Lovable is great for apps with logins. Makeborne is for client deliverables: the site, the deck, the book and the client's approval."
+      },
+      {
+        "objection": "Can I print the book on KDP?",
+        "answer": "Not yet. Books are made for screen and PDF, and KDP requires disclosure of AI-generated text and images."
+      },
+      {
+        "objection": "What if I run out of credits?",
+        "answer": "Upgrade any time; unused credits carry over for two months. (Top-ups only once live.)"
+      },
+      {
+        "objection": "Who are you?",
+        "answer": "A small studio in Sarajevo selling worldwide. The founder answers support and our numbers are public."
+      }
+    ]
+  },
+  "channels": [
+    {
+      "id": "ch-tiktok",
+      "name": "Brand TikTok (business account)",
+      "role": "Reach and lottery tickets: comment-reply speedruns, client-work POVs, deck proofs; founder on camera",
+      "cadence": "8-10 posts/week at ~13:00 and ~21:00 Sarajevo (20:00-00:00 from 1 Nov)",
+      "owner": "Founder (editor from ~$2k MRR)",
+      "kpi": "Profile visits per 1,000 views >=5; /go/tt-* clicks"
+    },
+    {
+      "id": "ch-instagram",
+      "name": "Brand Instagram (professional)",
+      "role": "DM conversion engine: comment SITE/DECK/BOOK/CLIENT -> /go/ link, 3 briefs, uncut build, refund line",
+      "cadence": "5 Reels (native re-edits) + 2 carousels/week",
+      "owner": "Founder",
+      "kpi": "DM keyword replies per 1,000 views >=3; DM-to-paid"
+    },
+    {
+      "id": "ch-linkedin",
+      "name": "Founder LinkedIn",
+      "role": "ICP 1 buyer: carousels built in Makeborne, client-workflow stories, weekly numbers",
+      "cadence": "5 posts/week + 15 comments/day",
+      "owner": "Founder",
+      "kpi": "/go/li-* clicks; Studio share of buyers"
+    },
+    {
+      "id": "ch-x",
+      "name": "Founder X",
+      "role": "Build in public, AI-builder circles, Product Hunt and developer beats",
+      "cadence": "1 original/day + 20 replies/day, link in first reply",
+      "owner": "Founder",
+      "kpi": "/go/x-* clicks; Product Hunt supporters"
+    },
+    {
+      "id": "ch-youtube",
+      "name": "YouTube Shorts + long tutorials",
+      "role": "Re-edits of TikTok winners; search via tutorials",
+      "cadence": "5 Shorts/week (re-edits); 1 long tutorial every 2 weeks from week 3",
+      "owner": "Founder",
+      "kpi": "Shorts-to-tutorial clicks; tutorial-attributed payers"
+    },
+    {
+      "id": "ch-creators",
+      "name": "Paid creators and custom affiliates",
+      "role": "Find which creators sell at <=$50 CAC, then pay from revenue via 30%/20% recurring commission",
+      "cadence": "Wave 1 posts 9-22 Nov; wave 2 at the images beat; rehires on the scale rule",
+      "owner": "Owner (contacts, payments); founder (briefs, review)",
+      "kpi": "Net payers per $40 spent; CAC <=$50"
+    },
+    {
+      "id": "ch-boosts",
+      "name": "Gated boosts (TikTok Spark, Meta partnership)",
+      "role": "Amplify posts that already produced a tracked sale",
+      "cadence": "At most 2 slots; none 20 Nov-2 Dec",
+      "owner": "Founder",
+      "kpi": "Link CTR >=0.5%; CPC <=$2; CAC <=$50"
+    },
+    {
+      "id": "ch-contentrewards",
+      "name": "Whop Content Rewards (from revenue)",
+      "role": "Scale reach at ~$1.60 per 1,000 approved views once unit economics are proven",
+      "cadence": "Opens after a source shows CAC <=$50 on 3+ payers and MRR > ~$1.5k",
+      "owner": "Founder",
+      "kpi": "Cost per 1,000 approved views; CAC <=$50"
+    },
+    {
+      "id": "ch-producthunt",
+      "name": "Product Hunt",
+      "role": "Spike and proof at the images beat; agency relaunch only if significant",
+      "cadence": "Coming-soon page after TAAFT is live; main launch at images; optional relaunch at agency tools",
+      "owner": "Founder (self-hunt)",
+      "kpi": "Top-5 of the day; PH-attributed net payers"
+    },
+    {
+      "id": "ch-directories",
+      "name": "AI directories",
+      "role": "Trickle traffic and backlinks",
+      "cadence": "TAAFT day 1; free directories day 2+; Uneed on images day",
+      "owner": "Owner",
+      "kpi": "Tracked net payers per listing"
+    },
+    {
+      "id": "ch-community",
+      "name": "Indie Hackers, r/SideProject, one agency community",
+      "role": "Transparency and trust; workshops for agencies",
+      "cadence": "IH weekly; Reddit at launch and beats (rules read by hand); community daily, workshop every 2 weeks from week 3",
+      "owner": "Founder",
+      "kpi": "Tracked visits and payers per post"
+    },
+    {
+      "id": "ch-press",
+      "name": "Regional and European press (owner sends)",
+      "role": "Free beats that need no feature",
+      "cadence": "Week 1 local-language release; 25 Nov 30-day numbers; 24 Jan day-90 report; images beat follow-up",
+      "owner": "Owner",
+      "kpi": "Mentions; press-attributed visits"
+    },
+    {
+      "id": "ch-loops",
+      "name": "Product loops",
+      "role": "Review-page referral link, badge, share links, customer referral credits",
+      "cadence": "Always on",
+      "owner": "Engineering + founder",
+      "kpi": "Share of new payers from loops (base 20% by week 13)"
+    },
+    {
+      "id": "ch-email",
+      "name": "Customer email",
+      "role": "Activation, referrals, beats",
+      "cadence": "1 changelog/week + 1 per beat; lifecycle emails from phase 2",
+      "owner": "Founder",
+      "kpi": "Review links sent; referral conversions"
+    }
+  ],
+  "budget": {
+    "total": 1000,
+    "currency": "USD",
+    "gate": "No creator payment or boost until /go/ links, first-touch storage and mb_src/mb_campaign/mb_aff on Makeborne-created Whop checkouts are live (target Thu 29 Oct). TAAFT is exempt. Never use Whop store or tracking links.",
+    "lines": [
+      {
+        "id": "b1",
+        "item": "TAAFT listing, submitted before any other listing (launch-first bonus; check it applies to the $49 tier)",
+        "usd": 49,
+        "when": "Mon 26 Oct 2026 (day 1)",
+        "channel": "directories",
+        "killRule": "Sunk cost; no TAAFT upgrades unless 3+ tracked net payers in 30 days",
+        "scaleRule": "$437 bundle only from revenue, only if the listing converts [O]"
+      },
+      {
+        "id": "b2",
+        "item": "Wave-1 creator flat fees: 5 creators x $60 for 2 videos (3 Lane A freelance web design/agency incl. 1+ LinkedIn, 2 Lane B decks/side-hustle); 60-day Spark/partnership rights; comped Studio month; /go/ link, use-my-brief link, custom affiliate code",
+        "usd": 300,
+        "when": "Recruit 27 Oct-6 Nov; posts 9-22 Nov; paid only after the attribution gate",
+        "channel": "creators",
+        "killRule": "Per creator (each costs at most $140: $60 flat, half on signing and half on delivery, plus up to $80 of view bonus): no rehire if 0 net payers 14 days after video 2; rehire only at 1 net payer per $40; pause if >20% of their buyers refund in 14 days. The $100/$150 kill rule applies to boosts, rehires and reserve spend",
+        "scaleRule": "Rehire from reserve then revenue; move to the 30% founding-partner rate"
+      },
+      {
+        "id": "b3",
+        "item": "Wave-1 per-view bonus pool: $1.50 per 1,000 views in each video's first 7 days, capped at $40 per video",
+        "usd": 90,
+        "when": "Paid weekly from 16 Nov",
+        "channel": "creators",
+        "killRule": "Pay on verified views only; investigate views clustering at the cap",
+        "scaleRule": "Overflow beyond $90 paid from the reserve (overflow means a winner)"
+      },
+      {
+        "id": "b4",
+        "item": "Wave-2 visual creators: 2 x $60 for 2 videos + $20 bonus pool, image-led builds",
+        "usd": 140,
+        "when": "Only after generated images pass the gate; if images are not live by 30 Nov, rehire the best wave-1 creator",
+        "channel": "creators",
+        "killRule": "Same as wave 1",
+        "scaleRule": "Same as wave 1"
+      },
+      {
+        "id": "b5",
+        "item": "Boosts of gated winners: TikTok Spark ($52/day x 2) and Meta partnership ad (~$24/day x 4), US/UK/CA/AU/IE/NZ/DACH/Nordics/Benelux. Qualify: 3x account median views in 48 h, 65%+ 3-second hold, and 1+ tracked sale or 5+ clicks per 1,000 views. Precondition: ad accounts registrable and billable from Bosnia and Herzegovina (check by 9 Nov), otherwise move this line to creator rehires",
+        "usd": 200,
+        "when": "Slot A no earlier than 9 Nov; slot B from 3 Dec; none 20 Nov-2 Dec",
+        "channel": "paid-social",
+        "killRule": "Stop after $30-50 if link CTR <0.5% or CPC >$2; stop a source at $100 with 0 net payers",
+        "scaleRule": "+20-30% at most every 48-72 h, only at CAC <=$50 over 3+ net payers"
+      },
+      {
+        "id": "b6",
+        "item": "Uneed pick-your-date launch slot",
+        "usd": 30,
+        "when": "Book after the 1 Nov images go/no-go (or first confirm Uneed allows rescheduling [U]); runs on the images Product Hunt day",
+        "channel": "directories",
+        "killRule": "None (one-off)",
+        "scaleRule": "Fallback if images slip: move the slot to the next beat that passes the gate"
+      },
+      {
+        "id": "b7",
+        "item": "Instagram comment-to-DM automation upgrade (start on free tier)",
+        "usd": 30,
+        "when": "Only when the free tier is outgrown",
+        "channel": "instagram",
+        "killRule": "Unspent by 1 Dec rolls into the reserve",
+        "scaleRule": "None"
+      },
+      {
+        "id": "b8",
+        "item": "Creator payout transfer fees and FX (low-fee transfer service or batching; never $30 SWIFT wires)",
+        "usd": 25,
+        "when": "With each creator payout",
+        "channel": "creators",
+        "killRule": "Unspent rolls into the reserve",
+        "scaleRule": "None"
+      },
+      {
+        "id": "b9",
+        "item": "Reserve: (a) breakout bonus overflow, (b) rehire lowest-CAC creator, (c) extend a winning Spark/partnership ad, (d) small Whop Content Rewards pilot",
+        "usd": 136,
+        "when": "Weeks 3-8, released only by the scale rule",
+        "channel": "reserve",
+        "killRule": "Unspent at day 60 moves to the best source",
+        "scaleRule": "Released when a source shows CAC <=$50 over 3+ net payers"
+      }
+    ],
+    "sharedRules": {
+      "cacTargets": {
+        "createHeavy": 37,
+        "blendedStudio35plus": 50,
+        "hardCeiling": 120
+      },
+      "killSource": "$100 spent with 0 net payers, or $150 with 1 (boosts, rehires and reserve spend; signed wave-1 creators use the per-creator rule in b2)",
+      "refundBrake": "Pause any source where more than 20% of buyers refund within 14 days",
+      "scale": "CAC <=$50 over 3+ net payers, then +20-30% at most every 48-72 h",
+      "offerCheck": "Mon 16 Nov: judge organic /go/ visit-to-paid (D2 trigger under 0.7%) plus boost slot A; the creator test cannot be read yet. Mon 30 Nov: if no source has net payers at <=$50, change the offer (D1/D2) before buying more views",
+      "reinvestment": "From week 3, once a source has 3+ net payers at <=$50 (earliest ~23 Nov): 30% of previous week's net new cash into sources at or under target CAC; 10% when up to 25% above; 0% beyond [O]",
+      "contentRewards": "From revenue only after a source shows CAC <=$50 on 3+ payers and MRR > ~$1.5k; plan at $1.60 per 1,000 views"
+    },
+    "outsideBudget": [
+      {
+        "item": "Brand demo builds (AI provider cost)",
+        "usdEstimate": 180
+      },
+      {
+        "item": "Comped creator Studio credits (7 creators at full use)",
+        "usdEstimate": 160
+      },
+      {
+        "item": "Per-wave bonus credits",
+        "usdEstimate": "<=3 per redeemer"
+      }
+    ]
+  },
+  "phases": [
+    {
+      "id": "p0",
+      "name": "Launch week",
+      "days": "1-7 (26 Oct-1 Nov 2026)",
+      "goals": [
+        "Paid beta live with true copy",
+        "Attribution live by 29 Oct",
+        "~35 gross payers, refunds <=15%",
+        "Real-speed capture library recorded",
+        "Creator shortlist and wave-1 agreements"
+      ],
+      "actions": [
+        "TAAFT first, then free directories and PH coming-soon page",
+        "4 core surfaces live at 25-30 posts",
+        "Regional press pitch (owner sends) 30 Oct",
+        "Sunday review 1 Nov and images go/no-go"
+      ]
+    },
+    {
+      "id": "p1",
+      "name": "Find the format and land the first spike",
+      "days": "8-30 (2-24 Nov)",
+      "goals": [
+        "2-3 house formats at >=1 net payer per 10,000 views",
+        "Creator unit proven at <=$50 CAC or offer changed",
+        "Images beat if it passes the gate"
+      ],
+      "actions": [
+        "Wave-1 creators post 9-22 Nov",
+        "Sample review link, review-page loop, format pages and use-my-brief links ship",
+        "Confirm ad-account billing from BiH by 9 Nov; boost slot A on a post with a tracked sale",
+        "Live Whop custom-affiliate purchase-and-refund test",
+        "Offer check Mon 16 Nov on organic /go/ conversion (D2); paid-CAC offer check Mon 30 Nov (D1/D2)",
+        "Images Launch Week + main Product Hunt + PH100 code + Uneed + wave-2 creators, only after the gate",
+        "No boosts from 20 Nov"
+      ]
+    },
+    {
+      "id": "p2",
+      "name": "Proof, Black Friday, loops on",
+      "days": "31-60 (25 Nov-24 Dec)",
+      "goals": [
+        "15%+ of new payers from loops",
+        "Studio 35%+ of mix",
+        "Consent banner live",
+        "Content Rewards funded from revenue if gated"
+      ],
+      "actions": [
+        "30-day public numbers 25 Nov",
+        "Black Friday: 'yearly is 20% off' only",
+        "Consent banner + server-side purchase events by ~6 Dec",
+        "Referral credits, deck/book share links, lifecycle emails",
+        "Custom-domains beat if gated: badge + partner directory, small-business speedruns at full volume",
+        "Agency-tools beat if gated (PH relaunch only if significant)",
+        "Boost slot B from 3 Dec"
+      ]
+    },
+    {
+      "id": "p3",
+      "name": "Holiday bank, January pipeline, scale what pays",
+      "days": "61-90 (25 Dec-23 Jan; review Sun 24 Jan)",
+      "goals": [
+        "Base-case MRR ~$14k or better",
+        "Scale only sources at or under target CAC",
+        "Plan days 91-180"
+      ],
+      "actions": [
+        "Half cadence 21 Dec-3 Jan; bank January content",
+        "From 4 Jan: 'new year, new clients' and '2027 pitch deck' pushes",
+        "AI lead research beat if gated (Launch Week 2)",
+        "GitHub sync: one X thread and one YouTube demo",
+        "Purchase-optimised Spark/partnership ads and consented retargeting from revenue",
+        "Add faceless/niche accounts only with an editor and proven formats",
+        "Day-90 public report and review 24 Jan"
+      ]
+    }
+  ],
+  "launchWeek": [
+    {
+      "day": 1,
+      "date": "2026-10-26",
+      "weekday": "Mon",
+      "actions": [
+        "Confirm copy fixes and 'coming soon' labels live; raise AI daily limit; confirm support cover",
+        "Submit TAAFT ($49) before any other listing",
+        "Ask engineering for asks 1-4",
+        "Set up TikTok business, Instagram professional, YouTube, LinkedIn page; bios with price and refund line; IG DM keywords on free tier",
+        "Check v9 Fly-over end card and home-page match, then pin",
+        "Founder LinkedIn 'Day 1' and X launch thread",
+        "2 brand TikToks (site and deck speedruns)",
+        "30-50 one-to-one messages to the founder's network",
+        "Reply to every comment; log consent for 'build mine' requests privately; start the market-access checklist (owner's private notes)"
+      ]
+    },
+    {
+      "day": 2,
+      "date": "2026-10-27",
+      "weekday": "Tue",
+      "actions": [
+        "When TAAFT is live: AlternativeTo, SaaSHub, Microlaunch, Future Tools, Product Hunt coming-soon page",
+        "Record 4-6 real-speed captures (lead finder->site->review link; comment->fix->Approve on phone; one brief->site/deck/book; PPTX chart edit; GitHub export)",
+        "First comment-reply speedruns with consent",
+        "Creator shortlist of 30",
+        "Verify no bio or post links to a Whop store page"
+      ]
+    },
+    {
+      "day": 3,
+      "date": "2026-10-28",
+      "weekday": "Wed",
+      "actions": [
+        "Freelancer POV: review link and Approve on phone (TikTok, Reels, LinkedIn)",
+        "Indie Hackers launch post",
+        "r/SideProject story after reading the sidebar",
+        "Draft /press and local-language release",
+        "Join one agency community (contribute only)",
+        "Owner contacts top 10 creators"
+      ]
+    },
+    {
+      "day": 4,
+      "date": "2026-10-29",
+      "weekday": "Thu",
+      "actions": [
+        "Attribution target day; if it slips, ship the 'How did you hear about us?' field and hold creator spend",
+        "Sample review link if ready (C07, C12 and V11 wait for it)",
+        "First Instagram carousel from real outputs",
+        "2-3 customer calls; fix breakages within 24 h",
+        "Do not book Uneed before the 1 Nov images go/no-go (unless rescheduling is allowed)"
+      ]
+    },
+    {
+      "day": 5,
+      "date": "2026-10-30",
+      "weekday": "Fri",
+      "actions": [
+        "Regional press pitch (owner sends): Netokracija, Bloomberg Adria, Startit, BiH portals",
+        "48-hour read; re-cut posts above 3x median with 2 new hooks",
+        "'Day 5' numbers post on LinkedIn and X",
+        "Deck chart proof and live lead-finder video"
+      ]
+    },
+    {
+      "day": 6,
+      "date": "2026-10-31",
+      "weekday": "Sat",
+      "actions": [
+        "Batch-film 10 videos",
+        "Sign first creator agreements (payment on the gate)",
+        "Draft images-beat Product Hunt copy, first comment and gallery list"
+      ]
+    },
+    {
+      "day": 7,
+      "date": "2026-11-01",
+      "weekday": "Sun",
+      "actions": [
+        "'Day 7: exactly how many people paid' with real numbers, refunds included",
+        "First Sunday review: scorecard, keep top 2 formats, move evening slot for US clock change",
+        "Images go/no-go and Product Hunt day rule (400+ supporters -> Tue-Thu, else weekend)",
+        "Confirm wave-1 lineup"
+      ]
+    }
+  ],
+  "beats": [
+    {
+      "id": "beat-images",
+      "feature": "Generated images in sites, decks and books (full-image slides, quality and aspect controls)",
+      "when": "First weekday after passing the gate; planning guess 3-20 Nov; run as Launch Week 1 if top-ups land the same week",
+      "angle": "Your site, deck and book now come with their own images. Main Product Hunt launch, PH100 code, Uneed slot, wave-2 creators, fixed v14 re-cut"
+    },
+    {
+      "id": "beat-topups",
+      "feature": "Credit top-ups",
+      "when": "Day 4 of the images Launch Week, or alone after the gate",
+      "angle": "Run out mid-project? Top up without changing plan."
+    },
+    {
+      "id": "beat-domains",
+      "feature": "Custom domains",
+      "when": "After the gate; planning guess mid Nov-Dec",
+      "angle": "Your client's site, on your client's domain. Launch badge + partner directory; small-business speedruns at full volume"
+    },
+    {
+      "id": "beat-agency",
+      "feature": "Agency tools",
+      "when": "After the gate; planning guess Dec",
+      "angle": "Run client work in one place: build, review, approve, publish. PH 'Makeborne for agencies' relaunch only if a significant iteration and 4+ weeks after the images launch"
+    },
+    {
+      "id": "beat-leads",
+      "feature": "AI lead research",
+      "when": "After the gate; planning guess Jan (can be Launch Week 2)",
+      "angle": "Find the clients whose websites need you, and show up with a better one."
+    },
+    {
+      "id": "beat-github",
+      "feature": "Automatic two-way GitHub sync",
+      "when": "Any time after the gate",
+      "angle": "Edit in Makeborne or in your code; both stay in sync. One X thread and one YouTube demo only"
+    },
+    {
+      "id": "beat-day30",
+      "feature": "30-day public numbers (no feature)",
+      "when": "Wed 25 Nov 2026",
+      "angle": "30 days of an AI studio from Sarajevo, every number in public"
+    },
+    {
+      "id": "beat-day90",
+      "feature": "Day-90 public report (no feature)",
+      "when": "Sun 24 Jan 2027",
+      "angle": "90 days, every number, including what failed"
+    }
+  ],
+  "beatGate": [
+    "48 h+ live in production and 10 golden briefs passed",
+    "AI daily limit raised for the spike",
+    "Founder free for support on the day and the day after",
+    "Copy reviewed: no vendor names, nothing unreleased",
+    "Every link on /go/ with UTM and the per-wave code working",
+    "Legal check of any new compliance duty (e.g. EU AI Act Art. 50(2) for images)"
+  ],
+  "growthAsks": [
+    {
+      "id": "ga1",
+      "ask": "Attribution plumbing: /go/ redirect, aggregate UTMs, first and last touch on the account, mb_src/mb_campaign/mb_aff and affiliate_code on the Makeborne-created Whop checkout, weekly reconciliation with Whop payment webhook",
+      "impact": "very high",
+      "effort": "S",
+      "why": "Gates every dollar of spend; only Makeborne-created checkout links are used"
+    },
+    {
+      "id": "ga2",
+      "ask": "AI daily limit that scales with paid sign-ups, plus an honest queue message",
+      "impact": "very high",
+      "effort": "XS",
+      "why": "The AI daily limit must scale with paid sign-ups; a stalled first build becomes a refund or $15 dispute"
+    },
+    {
+      "id": "ga3",
+      "ask": "Copy accuracy: live product copy matches what ships at launch (list in the owner's private notes), plus 'coming soon' labels",
+      "impact": "high",
+      "effort": "XS",
+      "why": "Creators screen-record the product; overclaims become public"
+    },
+    {
+      "id": "ga4",
+      "ask": "'How did you hear about us?' onboarding field with creator handle",
+      "impact": "medium",
+      "effort": "XS",
+      "why": "Fallback if attribution slips; recovers view-through sales"
+    },
+    {
+      "id": "ga5",
+      "ask": "Public 'play the client' sample review link",
+      "impact": "high",
+      "effort": "S",
+      "why": "Best trial substitute for agency buyers at zero AI cost"
+    },
+    {
+      "id": "ga6",
+      "ask": "Review-page 'Review powered by Makeborne' link with utm_source=review_page and the agency's referral code; UTM and code on the badge and portal footer",
+      "impact": "high",
+      "effort": "S",
+      "why": "Product-native viral loop at the moment of approval; badge has no tag today"
+    },
+    {
+      "id": "ga7",
+      "ask": "Format-matched landing pages (/sites, /decks, /books, /client-work) and /examples proof gallery",
+      "impact": "high",
+      "effort": "S-M",
+      "why": "Message match from video to page; the proof library replaces a trial"
+    },
+    {
+      "id": "ga8",
+      "ask": "Use-my-brief deep links (/go/<code>?brief=<id>) that survive sign-up and checkout",
+      "impact": "high",
+      "effort": "S-M",
+      "why": "Every video ends with 'try my exact brief'"
+    },
+    {
+      "id": "ga9",
+      "ask": "Whop custom affiliates on makeborne.com links, code passed into checkout; sandbox test plus one live purchase-and-refund",
+      "impact": "high",
+      "effort": "S-M",
+      "why": "Pays creators from revenue; proves payout and clawback; only Makeborne-created checkout links are used"
+    },
+    {
+      "id": "ga10",
+      "ask": "Per-wave bonus-credit codes (e.g. PH100)",
+      "impact": "medium",
+      "effort": "S",
+      "why": "Rewards launch-day buyers at <=$3 each; measurable per beat"
+    },
+    {
+      "id": "ga11",
+      "ask": "/changelog, /launch/<wave> template and /press kit with verified-numbers box",
+      "impact": "medium",
+      "effort": "S",
+      "why": "Every beat needs a permalink"
+    },
+    {
+      "id": "ga12",
+      "ask": "Customer referral credits (+100 each side on a non-refunded first payment)",
+      "impact": "medium-high",
+      "effort": "M",
+      "why": "~$6 provider cost per converted referral, ~10x cheaper than commission"
+    },
+    {
+      "id": "ga13",
+      "ask": "Public share and present links for decks and books with removable 'Made with Makeborne' end card",
+      "impact": "medium-high",
+      "effort": "M",
+      "why": "Gamma's main loop; decks and books have no share surface today"
+    },
+    {
+      "id": "ga14",
+      "ask": "Lifecycle emails: 'send your first review link', weekly 'your client sites had N visitors'",
+      "impact": "medium",
+      "effort": "M",
+      "why": "Activation and Studio retention"
+    },
+    {
+      "id": "ga15",
+      "ask": "Consent banner + Google Consent Mode v2, then server-side purchase events from the Whop webhook with consent",
+      "impact": "medium (high in January)",
+      "effort": "S-M + legal",
+      "why": "Prerequisite for any pixel, purchase-optimised boost or retargeting"
+    },
+    {
+      "id": "ga16",
+      "ask": "Keep lapsed client sites online with the badge forced on (owner decision D7)",
+      "impact": "medium",
+      "effort": "S",
+      "why": "Agencies ask first; avoids 'my site disappeared' posts"
+    },
+    {
+      "id": "ga17",
+      "ask": "'Made by [Agency] with Makeborne' badge and partner directory",
+      "impact": "medium",
+      "effort": "M",
+      "why": "Gives agencies a reason to keep the badge on"
+    },
+    {
+      "id": "ga18",
+      "ask": "'Client approved. Share the win?' prompt and case-study opt-in",
+      "impact": "medium",
+      "effort": "S",
+      "why": "Turns the happiest moment into distribution"
+    },
+    {
+      "id": "ga19",
+      "ask": "Template packs as brief seeds (10 local trades, proposal deck, client welcome guide)",
+      "impact": "medium",
+      "effort": "S",
+      "why": "Shareable content; reduces blank-page friction"
+    },
+    {
+      "id": "ga20",
+      "ask": "Share-for-credits (100 credits for a disclosed share; rewards sharing, never praise)",
+      "impact": "medium",
+      "effort": "M",
+      "why": "The Base44 loop; FTC-safe if it rewards sharing only"
+    },
+    {
+      "id": "ga21",
+      "ask": "Machine-readable marking of generated images (EU AI Act Art. 50(2): metadata / C2PA) from day 1 of images",
+      "impact": "compliance",
+      "effort": "S-M",
+      "why": "The 2 Dec 2026 date is only the transitional deadline for systems on the market before 2 Aug 2026 (artificialintelligenceact.eu timeline, updated 31 Aug 2026, read 26 Oct 2026); a new image feature most likely needs marking at launch [U, confirm on EUR-Lex]. Hard box in the images gate",
+      "when": "Before the images beat"
+    },
+    {
+      "id": "ga22",
+      "ask": "Capped first-build preview (~30 credits, no publish/export, one per verified email), only if D2 = yes",
+      "impact": "high if conversion is weak",
+      "effort": "M",
+      "why": "~$0.90 per preview; the lever if visit-to-paid is under 0.7%"
+    }
+  ],
+  "kpis": [
+    {
+      "id": "k-visits",
+      "name": "Qualified visits per week",
+      "stage": "reach",
+      "target": "50,000 over 90 days (base)",
+      "weeklyTargets": [
+        {
+          "week": 1,
+          "dates": "26 Oct-1 Nov",
+          "target": 3500
+        },
+        {
+          "week": 2,
+          "dates": "2-8 Nov",
+          "target": 2500
+        },
+        {
+          "week": 3,
+          "dates": "9-15 Nov",
+          "target": 3500
+        },
+        {
+          "week": 4,
+          "dates": "16-22 Nov",
+          "target": 4000
+        },
+        {
+          "week": 5,
+          "dates": "23-29 Nov",
+          "target": 4500
+        },
+        {
+          "week": 6,
+          "dates": "30 Nov-6 Dec",
+          "target": 3500
+        },
+        {
+          "week": 7,
+          "dates": "7-13 Dec",
+          "target": 4000
+        },
+        {
+          "week": 8,
+          "dates": "14-20 Dec",
+          "target": 4000
+        },
+        {
+          "week": 9,
+          "dates": "21-27 Dec",
+          "target": 3000
+        },
+        {
+          "week": 10,
+          "dates": "28 Dec-3 Jan",
+          "target": 2500
+        },
+        {
+          "week": 11,
+          "dates": "4-10 Jan",
+          "target": 4500
+        },
+        {
+          "week": 12,
+          "dates": "11-17 Jan",
+          "target": 5000
+        },
+        {
+          "week": 13,
+          "dates": "18-24 Jan",
+          "target": 5500
+        }
+      ]
+    },
+    {
+      "id": "k-gross",
+      "name": "Gross new paid per week",
+      "stage": "conversion",
+      "target": "500 gross over 90 days at 1.0% visit-to-paid",
+      "weeklyTargets": [
+        {
+          "week": 1,
+          "dates": "26 Oct-1 Nov",
+          "target": 35
+        },
+        {
+          "week": 2,
+          "dates": "2-8 Nov",
+          "target": 25
+        },
+        {
+          "week": 3,
+          "dates": "9-15 Nov",
+          "target": 35
+        },
+        {
+          "week": 4,
+          "dates": "16-22 Nov",
+          "target": 40
+        },
+        {
+          "week": 5,
+          "dates": "23-29 Nov",
+          "target": 45
+        },
+        {
+          "week": 6,
+          "dates": "30 Nov-6 Dec",
+          "target": 35
+        },
+        {
+          "week": 7,
+          "dates": "7-13 Dec",
+          "target": 40
+        },
+        {
+          "week": 8,
+          "dates": "14-20 Dec",
+          "target": 40
+        },
+        {
+          "week": 9,
+          "dates": "21-27 Dec",
+          "target": 30
+        },
+        {
+          "week": 10,
+          "dates": "28 Dec-3 Jan",
+          "target": 25
+        },
+        {
+          "week": 11,
+          "dates": "4-10 Jan",
+          "target": 45
+        },
+        {
+          "week": 12,
+          "dates": "11-17 Jan",
+          "target": 50
+        },
+        {
+          "week": 13,
+          "dates": "18-24 Jan",
+          "target": 55
+        }
+      ]
+    },
+    {
+      "id": "k-cumgross",
+      "name": "Cumulative gross paid",
+      "stage": "conversion",
+      "target": "500 by 24 Jan; re-forecast gate on 22 Nov (<100 low band; 100-300 base; >=300 high/breakout)",
+      "weeklyTargets": [
+        {
+          "week": 1,
+          "dates": "26 Oct-1 Nov",
+          "target": 35
+        },
+        {
+          "week": 2,
+          "dates": "2-8 Nov",
+          "target": 60
+        },
+        {
+          "week": 3,
+          "dates": "9-15 Nov",
+          "target": 95
+        },
+        {
+          "week": 4,
+          "dates": "16-22 Nov",
+          "target": 135
+        },
+        {
+          "week": 5,
+          "dates": "23-29 Nov",
+          "target": 180
+        },
+        {
+          "week": 6,
+          "dates": "30 Nov-6 Dec",
+          "target": 215
+        },
+        {
+          "week": 7,
+          "dates": "7-13 Dec",
+          "target": 255
+        },
+        {
+          "week": 8,
+          "dates": "14-20 Dec",
+          "target": 295
+        },
+        {
+          "week": 9,
+          "dates": "21-27 Dec",
+          "target": 325
+        },
+        {
+          "week": 10,
+          "dates": "28 Dec-3 Jan",
+          "target": 350
+        },
+        {
+          "week": 11,
+          "dates": "4-10 Jan",
+          "target": 395
+        },
+        {
+          "week": 12,
+          "dates": "11-17 Jan",
+          "target": 445
+        },
+        {
+          "week": 13,
+          "dates": "18-24 Jan",
+          "target": 500
+        }
+      ]
+    },
+    {
+      "id": "k-active",
+      "name": "Active subscribers (end of week)",
+      "stage": "retention",
+      "target": "~385 on 24 Jan",
+      "weeklyTargets": [
+        {
+          "week": 1,
+          "dates": "26 Oct-1 Nov",
+          "target": 30
+        },
+        {
+          "week": 2,
+          "dates": "2-8 Nov",
+          "target": 51
+        },
+        {
+          "week": 3,
+          "dates": "9-15 Nov",
+          "target": 81
+        },
+        {
+          "week": 4,
+          "dates": "16-22 Nov",
+          "target": 115
+        },
+        {
+          "week": 5,
+          "dates": "23-29 Nov",
+          "target": 150
+        },
+        {
+          "week": 6,
+          "dates": "30 Nov-6 Dec",
+          "target": 178
+        },
+        {
+          "week": 7,
+          "dates": "7-13 Dec",
+          "target": 209
+        },
+        {
+          "week": 8,
+          "dates": "14-20 Dec",
+          "target": 240
+        },
+        {
+          "week": 9,
+          "dates": "21-27 Dec",
+          "target": 260
+        },
+        {
+          "week": 10,
+          "dates": "28 Dec-3 Jan",
+          "target": 276
+        },
+        {
+          "week": 11,
+          "dates": "4-10 Jan",
+          "target": 308
+        },
+        {
+          "week": 12,
+          "dates": "11-17 Jan",
+          "target": 345
+        },
+        {
+          "week": 13,
+          "dates": "18-24 Jan",
+          "target": 385
+        }
+      ]
+    },
+    {
+      "id": "k-mrr",
+      "name": "MRR (USD, end of week)",
+      "stage": "revenue",
+      "target": "~$14.2k plan-of-record weekly table on 24 Jan (calculator base ~$14.5k MRR, ~$174k ARR at day 91)",
+      "weeklyTargets": [
+        {
+          "week": 1,
+          "dates": "26 Oct-1 Nov",
+          "target": 1098
+        },
+        {
+          "week": 2,
+          "dates": "2-8 Nov",
+          "target": 1882
+        },
+        {
+          "week": 3,
+          "dates": "9-15 Nov",
+          "target": 2980
+        },
+        {
+          "week": 4,
+          "dates": "16-22 Nov",
+          "target": 4234
+        },
+        {
+          "week": 5,
+          "dates": "23-29 Nov",
+          "target": 5552
+        },
+        {
+          "week": 6,
+          "dates": "30 Nov-6 Dec",
+          "target": 6566
+        },
+        {
+          "week": 7,
+          "dates": "7-13 Dec",
+          "target": 7716
+        },
+        {
+          "week": 8,
+          "dates": "14-20 Dec",
+          "target": 8847
+        },
+        {
+          "week": 9,
+          "dates": "21-27 Dec",
+          "target": 9593
+        },
+        {
+          "week": 10,
+          "dates": "28 Dec-3 Jan",
+          "target": 10180
+        },
+        {
+          "week": 11,
+          "dates": "4-10 Jan",
+          "target": 11381
+        },
+        {
+          "week": 12,
+          "dates": "11-17 Jan",
+          "target": 12717
+        },
+        {
+          "week": 13,
+          "dates": "18-24 Jan",
+          "target": 14198
+        }
+      ]
+    },
+    {
+      "id": "k-activated",
+      "name": "Activated payers per week (north star)",
+      "stage": "activation",
+      "target": "60% of net payers in weeks 1-4, 70% after",
+      "weeklyTargets": [
+        {
+          "week": 1,
+          "dates": "26 Oct-1 Nov",
+          "target": 18
+        },
+        {
+          "week": 2,
+          "dates": "2-8 Nov",
+          "target": 13
+        },
+        {
+          "week": 3,
+          "dates": "9-15 Nov",
+          "target": 18
+        },
+        {
+          "week": 4,
+          "dates": "16-22 Nov",
+          "target": 20
+        },
+        {
+          "week": 5,
+          "dates": "23-29 Nov",
+          "target": 27
+        },
+        {
+          "week": 6,
+          "dates": "30 Nov-6 Dec",
+          "target": 21
+        },
+        {
+          "week": 7,
+          "dates": "7-13 Dec",
+          "target": 24
+        },
+        {
+          "week": 8,
+          "dates": "14-20 Dec",
+          "target": 24
+        },
+        {
+          "week": 9,
+          "dates": "21-27 Dec",
+          "target": 18
+        },
+        {
+          "week": 10,
+          "dates": "28 Dec-3 Jan",
+          "target": 15
+        },
+        {
+          "week": 11,
+          "dates": "4-10 Jan",
+          "target": 27
+        },
+        {
+          "week": 12,
+          "dates": "11-17 Jan",
+          "target": 30
+        },
+        {
+          "week": 13,
+          "dates": "18-24 Jan",
+          "target": 33
+        }
+      ]
+    },
+    {
+      "id": "k-loop",
+      "name": "Share of new payers from loops (%)",
+      "stage": "loops",
+      "target": "20% by week 13 (base); 25% needed for breakout",
+      "weeklyTargets": [
+        {
+          "week": 1,
+          "dates": "26 Oct-1 Nov",
+          "target": 0
+        },
+        {
+          "week": 2,
+          "dates": "2-8 Nov",
+          "target": 2
+        },
+        {
+          "week": 3,
+          "dates": "9-15 Nov",
+          "target": 4
+        },
+        {
+          "week": 4,
+          "dates": "16-22 Nov",
+          "target": 6
+        },
+        {
+          "week": 5,
+          "dates": "23-29 Nov",
+          "target": 8
+        },
+        {
+          "week": 6,
+          "dates": "30 Nov-6 Dec",
+          "target": 10
+        },
+        {
+          "week": 7,
+          "dates": "7-13 Dec",
+          "target": 12
+        },
+        {
+          "week": 8,
+          "dates": "14-20 Dec",
+          "target": 15
+        },
+        {
+          "week": 9,
+          "dates": "21-27 Dec",
+          "target": 15
+        },
+        {
+          "week": 10,
+          "dates": "28 Dec-3 Jan",
+          "target": 16
+        },
+        {
+          "week": 11,
+          "dates": "4-10 Jan",
+          "target": 18
+        },
+        {
+          "week": 12,
+          "dates": "11-17 Jan",
+          "target": 19
+        },
+        {
+          "week": 13,
+          "dates": "18-24 Jan",
+          "target": 20
+        }
+      ]
+    },
+    {
+      "id": "k-refund",
+      "name": "Refunds within 14 days (max %)",
+      "stage": "retention",
+      "target": "<=15% overall; pause any source above 20%",
+      "weeklyTargets": [
+        {
+          "week": 1,
+          "dates": "26 Oct-1 Nov",
+          "target": 15
+        },
+        {
+          "week": 2,
+          "dates": "2-8 Nov",
+          "target": 15
+        },
+        {
+          "week": 3,
+          "dates": "9-15 Nov",
+          "target": 15
+        },
+        {
+          "week": 4,
+          "dates": "16-22 Nov",
+          "target": 15
+        },
+        {
+          "week": 5,
+          "dates": "23-29 Nov",
+          "target": 15
+        },
+        {
+          "week": 6,
+          "dates": "30 Nov-6 Dec",
+          "target": 15
+        },
+        {
+          "week": 7,
+          "dates": "7-13 Dec",
+          "target": 15
+        },
+        {
+          "week": 8,
+          "dates": "14-20 Dec",
+          "target": 15
+        },
+        {
+          "week": 9,
+          "dates": "21-27 Dec",
+          "target": 15
+        },
+        {
+          "week": 10,
+          "dates": "28 Dec-3 Jan",
+          "target": 15
+        },
+        {
+          "week": 11,
+          "dates": "4-10 Jan",
+          "target": 15
+        },
+        {
+          "week": 12,
+          "dates": "11-17 Jan",
+          "target": 15
+        },
+        {
+          "week": 13,
+          "dates": "18-24 Jan",
+          "target": 15
+        }
+      ]
+    },
+    {
+      "id": "k-firstbuild",
+      "name": "First build started within 10 minutes of paying (min %)",
+      "stage": "activation",
+      "target": ">=90%",
+      "weeklyTargets": [
+        {
+          "week": 1,
+          "dates": "26 Oct-1 Nov",
+          "target": 90
+        },
+        {
+          "week": 2,
+          "dates": "2-8 Nov",
+          "target": 90
+        },
+        {
+          "week": 3,
+          "dates": "9-15 Nov",
+          "target": 90
+        },
+        {
+          "week": 4,
+          "dates": "16-22 Nov",
+          "target": 90
+        },
+        {
+          "week": 5,
+          "dates": "23-29 Nov",
+          "target": 90
+        },
+        {
+          "week": 6,
+          "dates": "30 Nov-6 Dec",
+          "target": 90
+        },
+        {
+          "week": 7,
+          "dates": "7-13 Dec",
+          "target": 90
+        },
+        {
+          "week": 8,
+          "dates": "14-20 Dec",
+          "target": 90
+        },
+        {
+          "week": 9,
+          "dates": "21-27 Dec",
+          "target": 90
+        },
+        {
+          "week": 10,
+          "dates": "28 Dec-3 Jan",
+          "target": 90
+        },
+        {
+          "week": 11,
+          "dates": "4-10 Jan",
+          "target": 90
+        },
+        {
+          "week": 12,
+          "dates": "11-17 Jan",
+          "target": 90
+        },
+        {
+          "week": 13,
+          "dates": "18-24 Jan",
+          "target": 90
+        }
+      ]
+    },
+    {
+      "id": "k-attribution",
+      "name": "Purchases with a known source (min %)",
+      "stage": "tracking",
+      "target": ">=90% from week 2",
+      "weeklyTargets": [
+        {
+          "week": 1,
+          "dates": "26 Oct-1 Nov",
+          "target": 70
+        },
+        {
+          "week": 2,
+          "dates": "2-8 Nov",
+          "target": 90
+        },
+        {
+          "week": 3,
+          "dates": "9-15 Nov",
+          "target": 90
+        },
+        {
+          "week": 4,
+          "dates": "16-22 Nov",
+          "target": 90
+        },
+        {
+          "week": 5,
+          "dates": "23-29 Nov",
+          "target": 90
+        },
+        {
+          "week": 6,
+          "dates": "30 Nov-6 Dec",
+          "target": 90
+        },
+        {
+          "week": 7,
+          "dates": "7-13 Dec",
+          "target": 90
+        },
+        {
+          "week": 8,
+          "dates": "14-20 Dec",
+          "target": 90
+        },
+        {
+          "week": 9,
+          "dates": "21-27 Dec",
+          "target": 90
+        },
+        {
+          "week": 10,
+          "dates": "28 Dec-3 Jan",
+          "target": 90
+        },
+        {
+          "week": 11,
+          "dates": "4-10 Jan",
+          "target": 90
+        },
+        {
+          "week": 12,
+          "dates": "11-17 Jan",
+          "target": 90
+        },
+        {
+          "week": 13,
+          "dates": "18-24 Jan",
+          "target": 90
+        }
+      ]
+    },
+    {
+      "id": "k-cac",
+      "name": "Blended paid CAC (max USD)",
+      "stage": "economics",
+      "target": "<=$50 blended (<=$37 Create-heavy sources); ceiling $120",
+      "weeklyTargets": [
+        {
+          "week": 1,
+          "dates": "26 Oct-1 Nov",
+          "target": "n/a"
+        },
+        {
+          "week": 2,
+          "dates": "2-8 Nov",
+          "target": "n/a"
+        },
+        {
+          "week": 3,
+          "dates": "9-15 Nov",
+          "target": "measure"
+        },
+        {
+          "week": 4,
+          "dates": "16-22 Nov",
+          "target": 50
+        },
+        {
+          "week": 5,
+          "dates": "23-29 Nov",
+          "target": 50
+        },
+        {
+          "week": 6,
+          "dates": "30 Nov-6 Dec",
+          "target": 50
+        },
+        {
+          "week": 7,
+          "dates": "7-13 Dec",
+          "target": 50
+        },
+        {
+          "week": 8,
+          "dates": "14-20 Dec",
+          "target": 50
+        },
+        {
+          "week": 9,
+          "dates": "21-27 Dec",
+          "target": 50
+        },
+        {
+          "week": 10,
+          "dates": "28 Dec-3 Jan",
+          "target": 50
+        },
+        {
+          "week": 11,
+          "dates": "4-10 Jan",
+          "target": 50
+        },
+        {
+          "week": 12,
+          "dates": "11-17 Jan",
+          "target": 50
+        },
+        {
+          "week": 13,
+          "dates": "18-24 Jan",
+          "target": 50
+        }
+      ]
+    },
+    {
+      "id": "k-posts",
+      "name": "Owned posts per week",
+      "stage": "reach",
+      "target": "25-30 (half cadence weeks 9-10)",
+      "weeklyTargets": [
+        {
+          "week": 1,
+          "dates": "26 Oct-1 Nov",
+          "target": "25-30"
+        },
+        {
+          "week": 2,
+          "dates": "2-8 Nov",
+          "target": "25-30"
+        },
+        {
+          "week": 3,
+          "dates": "9-15 Nov",
+          "target": "25-30"
+        },
+        {
+          "week": 4,
+          "dates": "16-22 Nov",
+          "target": "25-30"
+        },
+        {
+          "week": 5,
+          "dates": "23-29 Nov",
+          "target": "25-30"
+        },
+        {
+          "week": 6,
+          "dates": "30 Nov-6 Dec",
+          "target": "25-30"
+        },
+        {
+          "week": 7,
+          "dates": "7-13 Dec",
+          "target": "25-30"
+        },
+        {
+          "week": 8,
+          "dates": "14-20 Dec",
+          "target": "25-30"
+        },
+        {
+          "week": 9,
+          "dates": "21-27 Dec",
+          "target": "12-15"
+        },
+        {
+          "week": 10,
+          "dates": "28 Dec-3 Jan",
+          "target": "12-15"
+        },
+        {
+          "week": 11,
+          "dates": "4-10 Jan",
+          "target": "25-30"
+        },
+        {
+          "week": 12,
+          "dates": "11-17 Jan",
+          "target": "25-30"
+        },
+        {
+          "week": 13,
+          "dates": "18-24 Jan",
+          "target": "25-30"
+        }
+      ]
+    }
+  ],
+  "scenarios": [
+    {
+      "name": "Low",
+      "assumptions": {
+        "qualifiedVisits90d": 14000,
+        "qualifiedVisitsDirect": 13593,
+        "loopVisitsImplied": 445,
+        "visitToPaid": 0.004,
+        "refundRate": 0.2,
+        "monthlyChurn": 0.12,
+        "planMix": "65/27/8 Create/Studio/Scale",
+        "netArpuUsd": 33.13,
+        "yearlyShare": 0.15,
+        "paidCacUsd": 1271.2,
+        "reinvestedFromRevenueUsd": 0,
+        "trafficShape": "base weekly shape",
+        "source": "data/funnel.json scenario low (calculator, regenerated 26 Oct 2026); MRR read at day 91 = Sun 24 Jan",
+        "note": "No format works; paywall before the 'wow' holds conversion down"
+      },
+      "mrrDay30": 437,
+      "mrrDay60": 881,
+      "mrrDay90": 1345,
+      "arrDay90": 16146,
+      "grossPaid": 56,
+      "activeDay90": 41,
+      "funnelScenarioId": "low"
+    },
+    {
+      "name": "Base (plan of record)",
+      "assumptions": {
+        "qualifiedVisits90d": 46100,
+        "qualifiedVisitsDirect": 40927,
+        "loopVisitsImplied": 5216,
+        "visitToPaid": 0.01,
+        "refundRate": 0.15,
+        "monthlyChurn": 0.1,
+        "planMix": "55/35/10 Create/Studio/Scale",
+        "netArpuUsd": 36.91,
+        "yearlyShare": 0.15,
+        "paidCacUsd": 47.6,
+        "reinvestedFromRevenueUsd": 3596,
+        "trafficShape": "weekly shares 7,5,7,8,9,7,8,8,6,5,9,10,11%",
+        "source": "data/funnel.json scenario base (calculator, regenerated 26 Oct 2026); MRR read at day 91 = Sun 24 Jan",
+        "note": "A few 100k+ posts, working IG DM funnel, creators at <=$50 CAC (assumes creator traffic converts 1.5x the blended rate [A]), ~$1.8k revenue-funded Content Rewards over 90 days under D4"
+      },
+      "mrrDay30": 3763,
+      "mrrDay60": 8600,
+      "mrrDay90": 14492,
+      "arrDay90": 173907,
+      "grossPaid": 497,
+      "activeDay90": 394,
+      "funnelScenarioId": "base"
+    },
+    {
+      "name": "Base, strict research inputs",
+      "assumptions": {
+        "qualifiedVisits90d": 38600,
+        "qualifiedVisitsDirect": 34351,
+        "loopVisitsImplied": 4297,
+        "visitToPaid": 0.01,
+        "refundRate": 0.15,
+        "monthlyChurn": 0.1,
+        "planMix": "55/35/10 Create/Studio/Scale",
+        "netArpuUsd": 36.91,
+        "yearlyShare": 0.15,
+        "paidCacUsd": 102.7,
+        "reinvestedFromRevenueUsd": 0,
+        "trafficShape": "base weekly shape",
+        "source": "data/funnel.json scenario baseStrict (calculator, regenerated 26 Oct 2026); MRR read at day 91 = Sun 24 Jan",
+        "note": "Creator traffic converts like average traffic (0.6% creator click rate, no 1.5x uplift): paid CAC ~$103, so the $50 gate and D4 never release money. The downside the 16 Nov / 30 Nov checks test"
+      },
+      "mrrDay30": 3424,
+      "mrrDay60": 7102,
+      "mrrDay90": 11177,
+      "arrDay90": 134129,
+      "grossPaid": 386,
+      "activeDay90": 304,
+      "funnelScenarioId": "baseStrict"
+    },
+    {
+      "name": "High",
+      "assumptions": {
+        "qualifiedVisits90d": 93700,
+        "qualifiedVisitsDirect": 80973,
+        "loopVisitsImplied": 12682,
+        "visitToPaid": 0.013,
+        "refundRate": 0.12,
+        "monthlyChurn": 0.08,
+        "planMix": "50/38/12 Create/Studio/Scale",
+        "netArpuUsd": 39.28,
+        "yearlyShare": 0.15,
+        "paidCacUsd": 20.0,
+        "reinvestedFromRevenueUsd": 9117,
+        "trafficShape": "base weekly shape",
+        "source": "data/funnel.json scenario high (calculator, regenerated 26 Oct 2026); MRR read at day 91 = Sun 24 Jan",
+        "note": "One or two 1M-view product posts and ~$4.6k revenue-funded Content Rewards over 90 days under D4"
+      },
+      "mrrDay30": 8910,
+      "mrrDay60": 23190,
+      "mrrDay90": 47069,
+      "arrDay90": 564822,
+      "grossPaid": 1429,
+      "activeDay90": 1200,
+      "funnelScenarioId": "high"
+    },
+    {
+      "name": "Breakout ($1M)",
+      "assumptions": {
+        "qualifiedVisits90d": 116600,
+        "qualifiedVisitsDirect": 98970,
+        "loopVisitsImplied": 17580,
+        "visitToPaid": 0.016,
+        "refundRate": 0.1,
+        "monthlyChurn": 0.07,
+        "planMix": "45/42/13 Create/Studio/Scale",
+        "netArpuUsd": 41.18,
+        "yearlyShare": 0.15,
+        "paidCacUsd": 10.7,
+        "reinvestedFromRevenueUsd": 10826,
+        "trafficShape": "back-loaded: weekly shares 3,3,4,5,8,7,9,9,7,6,11,13,15%",
+        "source": "data/funnel.json scenario breakout (calculator, regenerated 26 Oct 2026); MRR read at day 91 = Sun 24 Jan",
+        "note": "3-5 product posts above 1M views, ~$5k revenue-funded Content Rewards over 90 days (~$1k by mid-December) under D4, loops ~12-16% of payers by week 8; no cold-start, no-free-tier precedent. Organic visits raised 2% on 26 Oct so the calculator clears $1M"
+      },
+      "mrrDay30": 8586,
+      "mrrDay60": 31690,
+      "mrrDay90": 83377,
+      "arrDay90": 1000527,
+      "grossPaid": 2319,
+      "activeDay90": 2027,
+      "funnelScenarioId": "breakout"
+    }
+  ],
+  "whatMustBeTrueFor1M": [
+    "~2,320 gross new subscribers (~2,030 active) at a Studio-heavy $41.18 net ARPU; ~2,600 gross at the $36.91 base mix",
+    "~117k qualified visits including loop-implied visits (~99k direct), mostly in weeks 5-13 (~2,000-2,250/day in January)",
+    "Visit-to-paid >=1.6% with no free tier (no benchmark exists); below 0.7% makes the capped preview the deciding lever",
+    "3-5 product-on-screen posts above 1M views, each linked to a format-matched page",
+    "~$5k revenue-funded Content Rewards over 90 days (~$1k by mid-December) under D4; $10k by mid-December needs the owner to lift D4's 1.5x weekly growth cap and maxWeeklyUsd [O]",
+    "Loops carry ~12-16% of new payers by week 8 (calculator breakout: ~11% in week 8, 16% at most)",
+    "Refunds <=10-12%, churn <=7%/month, low dispute ratio",
+    "Images pass the gate by ~week 5 at v14 reference quality, with machine-readable AI marking from day 1",
+    "AI capacity scales automatically to 100+ new payers/day",
+    "Editing and support help in place by week 4-6",
+    "Checkpoints: ~200+ cumulative gross payers by Sun 22 Nov and ~750 by Sun 20 Dec (calculator breakout); if week 4 is under 200, drop the $1M expectation in writing"
+  ],
+  "risks": [
+    {
+      "risk": "A Whop store, affiliate or tracking link is handed out instead of a Makeborne-created checkout link",
+      "mitigation": "/go/ links only; Makeborne-created checkout; no open affiliate network; live purchase-and-refund test before partner links"
+    },
+    {
+      "risk": "Views without buyers (Cluely trap)",
+      "mitigation": "Every post shows the product working with its own link; judge on net sales"
+    },
+    {
+      "risk": "Paywall before the 'wow' caps conversion",
+      "mitigation": "Sample review link, /examples, uncut builds, use-my-brief links, 16 Nov offer check, D1 and D2"
+    },
+    {
+      "risk": "Attribution not live",
+      "mitigation": "Spend gate; onboarding survey fallback; per-creator codes"
+    },
+    {
+      "risk": "AI capacity stalls a spike",
+      "mitigation": "Auto-scaling daily limit before any push; honest queue messages; gate box"
+    },
+    {
+      "risk": "Promoting what isn't live",
+      "mitigation": "Six-box beat gate; 'coming soon' with no dates; v14 held and fixed; copy review on every brief"
+    },
+    {
+      "risk": "Founder overload",
+      "mitigation": "4 surfaces only; batch filming; support first; help from revenue (owner's private notes); cut X replies first, never support"
+    },
+    {
+      "risk": "Ad accounts, Spark or partnership ads unavailable or unbillable from BiH (unverified)",
+      "mitigation": "Check by 9 Nov; move boost line to creator rehires if not"
+    },
+    {
+      "risk": "ManyChat/TikTok DM and bio-link eligibility for a BiH business unknown",
+      "mitigation": "Instagram carries DMs; TikTok 'DM me SITE' answered by hand; business account from day 1"
+    },
+    {
+      "risk": "Creator rates above $60",
+      "mitigation": "Hire 4 at $75; commission-first offers; 30% founding-partner rate"
+    },
+    {
+      "risk": "Payments, tax and consumer-law checks",
+      "mitigation": "Tracked in the owner's private notes"
+    },
+    {
+      "risk": "EU AI Act Art. 50(2) image marking applies at launch for new systems",
+      "mitigation": "Marking (metadata / C2PA) built with images and a hard box in the images gate; confirm on EUR-Lex [U]"
+    },
+    {
+      "risk": "Undisclosed paid posts",
+      "mitigation": "'#ad' at the start of the caption and 'ad' in the first 3 s plus the paid-partnership toggle (a platform label alone is not enough under UK ASA/CAP and CMA guidance [U]); #ad on any post with an affiliate code; review before pay; read FTC, EU UCPD, UK ASA and TikTok branded-content rules at source"
+    },
+    {
+      "risk": "Black Friday and Q4 CPM inflation",
+      "mitigation": "No boosts 20 Nov-2 Dec"
+    },
+    {
+      "risk": "Consumer speedruns repel agency buyers",
+      "mitigation": "Lane rule: no 'replaced my agency' on Lane A surfaces"
+    },
+    {
+      "risk": "Weak text-only gift books before images",
+      "mitigation": "No holiday gift push until images pass the gate"
+    },
+    {
+      "risk": "Real businesses shown in speedruns",
+      "mitigation": "Requests only, public information, written OK, unpublished by default"
+    },
+    {
+      "risk": "Lead-finder outreach read as spam",
+      "mitigation": "No automated cold email; one-to-one only; no 'email outreach' headline"
+    },
+    {
+      "risk": "Client sites go dark when an agency churns",
+      "mitigation": "D7: keep lapsed sites online with badge forced on"
+    },
+    {
+      "risk": "Product Hunt penalties",
+      "mitigation": "Self-hunt from a week-old account; no upvote asks, swaps or paid hunters"
+    },
+    {
+      "risk": "Press frames Makeborne as a Lovable clone",
+      "mitigation": "Lead with outputs and client approval; generous comparisons; no 'better than' claims"
+    },
+    {
+      "risk": "Platform policy drift (music, originality, DM automation)",
+      "mitigation": "Commercial Music Library only; native re-edits; monthly re-check"
+    },
+    {
+      "risk": "Public-repo leak",
+      "mitigation": "No secrets, IDs, buyer or creator data or infrastructure details; cropped screenshots"
+    },
+    {
+      "risk": "Prices shown before tax in ads to EU and UK consumers (Price Indication Directive; UCPD Art. 7(4)(c)) [U]",
+      "mitigation": "Say 'From $20/month + tax where applicable' or show VAT-inclusive EU prices; legal check before paid EU/UK traffic"
+    }
+  ],
+  "decisions": [
+    {
+      "id": "D1",
+      "question": "Keep 'full refund until you use credits' or switch to 'full refund within 7 days if under 100 credits used'?",
+      "recommendation": "Switch after a legal check on EU digital-content withdrawal; adopt by the 16 Nov offer check at the latest (~$3 AI cost per refund)"
+    },
+    {
+      "id": "D2",
+      "question": "Offer a capped first-build preview for /go/ traffic?",
+      "recommendation": "Decide 16 Nov; turn on if /go/ visit-to-paid is under 0.7% or no source is at <=$50 CAC (~$0.90 per preview)"
+    },
+    {
+      "id": "D3",
+      "question": "Affiliate and partner terms?",
+      "recommendation": "30% recurring 12 months for founding 20; 20% public; yearly first payment only; 30-day hold; clawback; Whop custom affiliates only"
+    },
+    {
+      "id": "D4",
+      "question": "Revenue reinvestment rule?",
+      "recommendation": "30% of weekly net new cash into sources at or under target CAC; 10% when up to 25% above; 0% beyond"
+    },
+    {
+      "id": "D5",
+      "question": "Black Friday offer?",
+      "recommendation": "'Yearly is 20% off' only; no extra discount"
+    },
+    {
+      "id": "D6",
+      "question": "AI daily limit rule?",
+      "recommendation": "Automatic rise tied to new paid accounts plus manual raise before every beat or creator post"
+    },
+    {
+      "id": "D7",
+      "question": "What happens to client sites when a plan lapses?",
+      "recommendation": "Keep them online with the badge forced on and a win-back offer"
+    },
+    {
+      "id": "D8",
+      "question": "Review-page 'Review powered by Makeborne' link?",
+      "recommendation": "On by default; removable on Studio and Scale when white label ships"
+    },
+    {
+      "id": "D9",
+      "question": "Staffing: support cover and editing help?",
+      "recommendation": "In the owner's private notes"
+    },
+    {
+      "id": "D11",
+      "question": "Publish real numbers at day 30 and day 90?",
+      "recommendation": "Yes"
+    },
+    {
+      "id": "D12",
+      "question": "Per-wave bonus codes?",
+      "recommendation": "+100 credits on the first paid month per beat"
+    },
+    {
+      "id": "D13",
+      "question": "Share-for-credits and customer referral amounts?",
+      "recommendation": "100 credits per disclosed share; +100 each side on a non-refunded first payment"
+    },
+    {
+      "id": "D14",
+      "question": "Approve operating costs outside the $1,000?",
+      "recommendation": "Yes: ~$180 demo builds, ~$160 comped creator credits"
+    },
+    {
+      "id": "D15",
+      "question": "Allow comment-reply builds for real businesses?",
+      "recommendation": "Yes with written consent, public information only, unpublished by default"
+    },
+    {
+      "id": "D16",
+      "question": "Extra accounts (faceless, niche, language clone)?",
+      "recommendation": "None before day 60; then only with an editor and a format with 3+ wins"
+    },
+    {
+      "id": "D17",
+      "question": "Add a free tier?",
+      "recommendation": "Keep none for now; revisit at the day-90 review with real data"
+    },
+    {
+      "id": "D18",
+      "question": "Run a blind evaluation vs competitors?",
+      "recommendation": "Not in this 90 days"
+    },
+    {
+      "id": "D19",
+      "question": "Founder on camera and face of the press story?",
+      "recommendation": "Yes"
+    }
+  ],
+  "routine": [
+    "08:00-08:30 Numbers: Whop sales, refunds, /go/ clicks by source, AI limit hits, first-build times; flag sources above the 20% refund brake",
+    "08:30-09:30 Support with the support owner; breakages to engineering with a 24 h fix target",
+    "09:30-10:30 Founder LinkedIn post (Mon-Fri) and 15 comments on agency-owner posts",
+    "10:30-12:30 Make: Mon and Thu batch-film 8-10 videos; other days edit, carousels built in Makeborne, one real-speed capture",
+    "13:00 Publish first brand TikTok plus Reel and Short re-edits",
+    "13:00-14:00 Comments and DMs: reply within 2 hours, run keyword DMs, turn best comments into next videos",
+    "14:00-15:00 Creators and partners: briefs, draft review, Friday payouts on verified views",
+    "15:00-16:00 One customer call; ask happy customers to share a build (disclosed if incentivised)",
+    "16:00-17:00 Beats and press: gate checks, Product Hunt prep, /launch pages, press list (owner sends)",
+    "20:00-21:00 Second TikTok for US East; X post and 20 replies; 48 h boost-gate check",
+    "Friday: boost decision, creator payouts, support sweep",
+    "Sunday (90 min): scorecard, keep/kill/scale every source, re-cut top 10% with 2 new hooks, retire bottom 50% of formats, schedule the week, one-page growth note to the owner",
+    "Time is the binding constraint: cut X replies first, then long YouTube, never support"
+  ],
+  "meta": {
+    "window": "2026-10-26 to 2027-01-24",
+    "dayNumbering": "day 1 = Mon 26 Oct 2026",
+    "builtFrom": [
+      "plan/draft-creator-led.md",
+      "plan/draft-launch-events.md",
+      "plan/draft-agency-community.md"
+    ],
+    "masterPlan": "plan/strategy.md",
+    "modelNote": "Scenario figures come from the daily cohort calculator in data/funnel.json (python data/funnel_model.py; visits x visit-to-paid, less refunds, churn at each 30-day renewal), regenerated 26 Oct 2026 and checked by npm run check; MRR is read at day 91 (Sun 24 Jan, the day-90 review); visits include loop-implied visits; all inputs are assumptions to be replaced with week-2 data",
+    "unverified": [
+      "Ad-account availability and billing from BiH",
+      "ManyChat eligibility for BiH",
+      "TikTok bio-link country rules",
+      "Whop Content Rewards dashboard minimum (docs list none, read 26 Oct 2026)",
+      "Whop refund clawback (needs live test)",
+      "Micro-creator market rates",
+      "EU AI Act Art. 50(2) timing for a new image feature (EUR-Lex)",
+      "FTC, EU UCPD and TikTok branded-content rules at source",
+      "TAAFT bonus on the $49 tier",
+      "UK ASA/CAP influencer guidance (PDF) and EU/UK price-indication wording"
+    ]
+  }
+}

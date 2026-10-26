@@ -1,0 +1,775 @@
+{
+  "meta": {
+    "version": "2026-10-26",
+    "window": "2026-10-26 to 2027-01-24 (13 weeks)",
+    "basis": "Base case, plan of record (plan/strategy.md sections 2, 6, 13; data/plan.json kpis)",
+    "labels": "[A] assumption, [E] estimate, [U] unverified; targets without a label come from the master plan",
+    "weeklyTargetsNote": "visits, paid (gross new paying accounts), activated payers, active subs, MRR, loop share and CAC come from data/plan.json. signups = visits x 5% (base signupRate in data/funnel.json). creatorsActive = creators who posted at least one tracked video that week (paid, affiliate or Content Rewards) [E].",
+    "sources": "Each funnel stage names one source of truth: cookieless counter, UTM (/go/ redirect log), app DB, Whop, or platform analytics."
+  },
+  "northStar": {
+    "name": "Weekly activated payers",
+    "definition": "Net new paying accounts (after refunds) that sent at least one client review link, or published or exported a deck or book, within 7 days of paying",
+    "baseTarget": "~13-27 a week in November (13, 18, 20, 27 in weeks 2-5) rising to ~27-33 a week in January (60% of weekly net payers in weeks 1-4, 70% after)",
+    "guardrails": [
+      "Refunds within 14 days <=15% (brake at 20% per source)",
+      "Blended paid CAC <=$50",
+      "First build started within 10 minutes for >=80% of payers in week 1, >=90% from week 2",
+      "Support first reply <=4 h"
+    ],
+    "event": "activated_payer (derived)",
+    "source": "app DB joined to Whop"
+  },
+  "funnelStages": [
+    {
+      "id": "reach",
+      "name": "Reach",
+      "event": "platform views (no app event)",
+      "definition": "Views of owned posts, creator posts, boosts and Content Rewards videos in the week.",
+      "source": "platform analytics",
+      "target": "Owned: 25-30 posts a week (12-15 in weeks 9-10); house formats >= 3x the account median views. Paid creators base ~6,000 views per post [A]"
+    },
+    {
+      "id": "intent",
+      "name": "Intent",
+      "event": "go_redirected; dm_keyword_received",
+      "definition": "/go/ short-link clicks plus Instagram keyword DMs (SITE, DECK, BOOK, CLIENT) per 1,000 views.",
+      "source": "UTM",
+      "target": "3-8 per 1,000 views (strategy.md 13); DM replies >= 3 per 1,000 Instagram views"
+    },
+    {
+      "id": "visit",
+      "name": "Qualified visit",
+      "event": "landing_viewed",
+      "definition": "A makeborne.com page view that is not a bot, not internal and lands on a public page; counted as a daily aggregate with utm_* and an allow-listed referrer host.",
+      "source": "cookieless counter",
+      "target": "50,000 over 13 weeks (base); weekly targets below"
+    },
+    {
+      "id": "brief",
+      "name": "Brief typed",
+      "event": "brief_started",
+      "definition": "Visitor presses Create with a brief on a public page (anonymous aggregate, no brief text stored in analytics).",
+      "source": "cookieless counter",
+      "target": ">= 15% of qualified visits [A]"
+    },
+    {
+      "id": "signup",
+      "name": "Account created",
+      "event": "account_created",
+      "definition": "A new Makeborne account, with first touch (source, medium, campaign, content, aff/ref code flags) stored on the account.",
+      "source": "app DB",
+      "target": "5% of qualified visits (base) [A]"
+    },
+    {
+      "id": "confirm",
+      "name": "Email confirmed",
+      "event": "email_confirmed",
+      "definition": "6-digit code or link verified.",
+      "source": "app DB",
+      "target": ">= 85% of accounts within 24 h [A]"
+    },
+    {
+      "id": "checkout",
+      "name": "Checkout opened",
+      "event": "checkout_opened",
+      "definition": "Makeborne creates a Whop checkout for a signed-in account, with mb_src, mb_campaign, mb_aff in metadata.",
+      "source": "app DB",
+      "target": "60% of new accounts (base) [A], i.e. 3% of qualified visits open a checkout [A]; stretch: >= 8% of /go/ format-page landings, format pages only, once they ship"
+    },
+    {
+      "id": "paid",
+      "name": "Paid",
+      "event": "subscription_started (Whop payment.succeeded, first payment)",
+      "definition": "First successful payment on a Makeborne-created checkout; gross until 14 days pass.",
+      "source": "Whop",
+      "target": "1.0% of qualified visits within 30 days (base); 33% of opened checkouts [A]; 500 gross over 13 weeks"
+    },
+    {
+      "id": "firstBuild",
+      "name": "First build",
+      "event": "build_started (first_build=true)",
+      "definition": "First AI build started after payment; minutes from payment recorded.",
+      "source": "app DB",
+      "target": ">= 80% within 10 minutes of paying in week 1; >= 90% within 10 minutes from week 2"
+    },
+    {
+      "id": "activated",
+      "name": "Activated payer (north star)",
+      "event": "review_link_created / site_published (format deck or book) / export_downloaded (deck or book) within 7 days of paying",
+      "definition": "Net (not refunded) payer who sent a client review link, or published or exported a deck or book, within 7 days of paying.",
+      "source": "app DB",
+      "target": "60% of net payers in weeks 1-4, 70% after"
+    },
+    {
+      "id": "refund",
+      "name": "Refund",
+      "event": "refund_issued (Whop refund.created)",
+      "definition": "Refund of a first payment within 14 days.",
+      "source": "Whop",
+      "target": "<= 15% overall; pause any source above 20%"
+    },
+    {
+      "id": "renewal",
+      "name": "Renewal",
+      "event": "subscription_renewed (second successful payment on the same membership)",
+      "definition": "Month-2 renewal of a monthly subscriber.",
+      "source": "Whop",
+      "target": ">= 90% month-2 renewal (base; the model uses 10% monthly churn) [A]; alert below 85%; 70% is a kill-review floor only, not a target"
+    },
+    {
+      "id": "loop",
+      "name": "Loop-sourced payer",
+      "event": "subscription_started with first touch utm_medium=product_loop or referral",
+      "definition": "New payer whose first touch is the review page, badge, deck/book share link or a customer referral.",
+      "source": "app DB",
+      "target": "0% week 1 rising to 20% of new payers by week 13 (base)"
+    }
+  ],
+  "weeklyTargets": [
+    {
+      "week": 1,
+      "dates": "26 Oct-1 Nov",
+      "visits": 3500,
+      "signups": 175,
+      "paid": 35,
+      "netPaid": 30,
+      "activatedPayers": 18,
+      "cumulativeGrossPaid": 35,
+      "activeSubs": 30,
+      "mrr": 1098,
+      "loopSharePct": 0,
+      "contentPosts": 25,
+      "contentPostsRange": "25-30",
+      "creatorsActive": 0,
+      "cac": null,
+      "cacNote": "n/a"
+    },
+    {
+      "week": 2,
+      "dates": "2-8 Nov",
+      "visits": 2500,
+      "signups": 125,
+      "paid": 25,
+      "netPaid": 21,
+      "activatedPayers": 13,
+      "cumulativeGrossPaid": 60,
+      "activeSubs": 51,
+      "mrr": 1882,
+      "loopSharePct": 2,
+      "contentPosts": 25,
+      "contentPostsRange": "25-30",
+      "creatorsActive": 0,
+      "cac": null,
+      "cacNote": "n/a"
+    },
+    {
+      "week": 3,
+      "dates": "9-15 Nov",
+      "visits": 3500,
+      "signups": 175,
+      "paid": 35,
+      "netPaid": 30,
+      "activatedPayers": 18,
+      "cumulativeGrossPaid": 95,
+      "activeSubs": 81,
+      "mrr": 2980,
+      "loopSharePct": 4,
+      "contentPosts": 25,
+      "contentPostsRange": "25-30",
+      "creatorsActive": 5,
+      "cac": null,
+      "cacNote": "measure"
+    },
+    {
+      "week": 4,
+      "dates": "16-22 Nov",
+      "visits": 4000,
+      "signups": 200,
+      "paid": 40,
+      "netPaid": 34,
+      "activatedPayers": 20,
+      "cumulativeGrossPaid": 135,
+      "activeSubs": 115,
+      "mrr": 4234,
+      "loopSharePct": 6,
+      "contentPosts": 25,
+      "contentPostsRange": "25-30",
+      "creatorsActive": 5,
+      "cac": 50,
+      "cacNote": null
+    },
+    {
+      "week": 5,
+      "dates": "23-29 Nov",
+      "visits": 4500,
+      "signups": 225,
+      "paid": 45,
+      "netPaid": 38,
+      "activatedPayers": 27,
+      "cumulativeGrossPaid": 180,
+      "activeSubs": 150,
+      "mrr": 5552,
+      "loopSharePct": 8,
+      "contentPosts": 25,
+      "contentPostsRange": "25-30",
+      "creatorsActive": 7,
+      "cac": 50,
+      "cacNote": null
+    },
+    {
+      "week": 6,
+      "dates": "30 Nov-6 Dec",
+      "visits": 3500,
+      "signups": 175,
+      "paid": 35,
+      "netPaid": 30,
+      "activatedPayers": 21,
+      "cumulativeGrossPaid": 215,
+      "activeSubs": 178,
+      "mrr": 6566,
+      "loopSharePct": 10,
+      "contentPosts": 25,
+      "contentPostsRange": "25-30",
+      "creatorsActive": 7,
+      "cac": 50,
+      "cacNote": null
+    },
+    {
+      "week": 7,
+      "dates": "7-13 Dec",
+      "visits": 4000,
+      "signups": 200,
+      "paid": 40,
+      "netPaid": 34,
+      "activatedPayers": 24,
+      "cumulativeGrossPaid": 255,
+      "activeSubs": 209,
+      "mrr": 7716,
+      "loopSharePct": 12,
+      "contentPosts": 25,
+      "contentPostsRange": "25-30",
+      "creatorsActive": 9,
+      "cac": 50,
+      "cacNote": null
+    },
+    {
+      "week": 8,
+      "dates": "14-20 Dec",
+      "visits": 4000,
+      "signups": 200,
+      "paid": 40,
+      "netPaid": 34,
+      "activatedPayers": 24,
+      "cumulativeGrossPaid": 295,
+      "activeSubs": 240,
+      "mrr": 8847,
+      "loopSharePct": 15,
+      "contentPosts": 25,
+      "contentPostsRange": "25-30",
+      "creatorsActive": 10,
+      "cac": 50,
+      "cacNote": null
+    },
+    {
+      "week": 9,
+      "dates": "21-27 Dec",
+      "visits": 3000,
+      "signups": 150,
+      "paid": 30,
+      "netPaid": 26,
+      "activatedPayers": 18,
+      "cumulativeGrossPaid": 325,
+      "activeSubs": 260,
+      "mrr": 9593,
+      "loopSharePct": 15,
+      "contentPosts": 12,
+      "contentPostsRange": "12-15",
+      "creatorsActive": 8,
+      "cac": 50,
+      "cacNote": null
+    },
+    {
+      "week": 10,
+      "dates": "28 Dec-3 Jan",
+      "visits": 2500,
+      "signups": 125,
+      "paid": 25,
+      "netPaid": 21,
+      "activatedPayers": 15,
+      "cumulativeGrossPaid": 350,
+      "activeSubs": 276,
+      "mrr": 10180,
+      "loopSharePct": 16,
+      "contentPosts": 12,
+      "contentPostsRange": "12-15",
+      "creatorsActive": 8,
+      "cac": 50,
+      "cacNote": null
+    },
+    {
+      "week": 11,
+      "dates": "4-10 Jan",
+      "visits": 4500,
+      "signups": 225,
+      "paid": 45,
+      "netPaid": 38,
+      "activatedPayers": 27,
+      "cumulativeGrossPaid": 395,
+      "activeSubs": 308,
+      "mrr": 11381,
+      "loopSharePct": 18,
+      "contentPosts": 25,
+      "contentPostsRange": "25-30",
+      "creatorsActive": 14,
+      "cac": 50,
+      "cacNote": null
+    },
+    {
+      "week": 12,
+      "dates": "11-17 Jan",
+      "visits": 5000,
+      "signups": 250,
+      "paid": 50,
+      "netPaid": 42,
+      "activatedPayers": 30,
+      "cumulativeGrossPaid": 445,
+      "activeSubs": 345,
+      "mrr": 12717,
+      "loopSharePct": 19,
+      "contentPosts": 25,
+      "contentPostsRange": "25-30",
+      "creatorsActive": 18,
+      "cac": 50,
+      "cacNote": null
+    },
+    {
+      "week": 13,
+      "dates": "18-24 Jan",
+      "visits": 5500,
+      "signups": 275,
+      "paid": 55,
+      "netPaid": 47,
+      "activatedPayers": 33,
+      "cumulativeGrossPaid": 500,
+      "activeSubs": 385,
+      "mrr": 14198,
+      "loopSharePct": 20,
+      "contentPosts": 25,
+      "contentPostsRange": "25-30",
+      "creatorsActive": 22,
+      "cac": 50,
+      "cacNote": null
+    }
+  ],
+  "channelKpis": [
+    {
+      "channel": "ch-tiktok",
+      "kpis": [
+        {
+          "name": "Posts per week",
+          "target": "8-10"
+        },
+        {
+          "name": "Profile visits per 1,000 views",
+          "target": ">= 5"
+        },
+        {
+          "name": "/go/tt-* clicks per 1,000 views",
+          "target": ">= 3"
+        },
+        {
+          "name": "3-second hold",
+          "target": ">= 70%"
+        },
+        {
+          "name": "Average watch % (under-35 s cut)",
+          "target": ">= 50%"
+        },
+        {
+          "name": "Net payers per 10,000 views (house format test, 3+ posts)",
+          "target": ">= 1"
+        }
+      ]
+    },
+    {
+      "channel": "ch-instagram",
+      "kpis": [
+        {
+          "name": "Reels and carousels per week",
+          "target": "5 Reels + 2 carousels"
+        },
+        {
+          "name": "DM keyword replies per 1,000 views",
+          "target": ">= 3"
+        },
+        {
+          "name": "DM to /go/ click",
+          "target": ">= 40% [A]"
+        },
+        {
+          "name": "DM conversations to paid (30 days)",
+          "target": ">= 3% [A]"
+        },
+        {
+          "name": "Sends per reach",
+          "target": "rising week on week"
+        }
+      ]
+    },
+    {
+      "channel": "ch-youtube",
+      "kpis": [
+        {
+          "name": "Shorts per week",
+          "target": "5 (re-edits)"
+        },
+        {
+          "name": "Long tutorials",
+          "target": "1 every 2 weeks from week 3"
+        },
+        {
+          "name": "Tracked net payers per tutorial within 30 days",
+          "target": ">= 1 [A]"
+        }
+      ]
+    },
+    {
+      "channel": "ch-linkedin",
+      "kpis": [
+        {
+          "name": "Posts per week",
+          "target": "5, plus 15 comments a day on agency-owner posts"
+        },
+        {
+          "name": "/go/li-* clicks per post",
+          "target": ">= 20 [A]"
+        },
+        {
+          "name": "Studio or Scale share of LinkedIn-sourced buyers",
+          "target": ">= 50% [A]"
+        },
+        {
+          "name": "Activated payers (review link sent) share",
+          "target": ">= 70% [A]"
+        }
+      ]
+    },
+    {
+      "channel": "ch-x",
+      "kpis": [
+        {
+          "name": "Original posts",
+          "target": "1 a day, plus 20 replies, link in first reply"
+        },
+        {
+          "name": "/go/x-* clicks per week",
+          "target": "measure week 1, then +10% a week [A]"
+        },
+        {
+          "name": "Product Hunt coming-soon followers",
+          "target": ">= 100 by 1 Nov; 400+ committed supporters before a Tue-Thu launch (beat:images)"
+        }
+      ]
+    },
+    {
+      "channel": "ch-creators",
+      "kpis": [
+        {
+          "name": "Net payers per $40 spent (14 days after video 2)",
+          "target": ">= 1 (keep rule)"
+        },
+        {
+          "name": "Creator CAC",
+          "target": "<= $50; kill at $100 spent with 0 net payers or $150 with 1"
+        },
+        {
+          "name": "Views per video (first 7 days)",
+          "target": "~6,000 base [A]"
+        },
+        {
+          "name": "/go/c-<handle> clicks per 1,000 views",
+          "target": ">= 6 [A]"
+        },
+        {
+          "name": "Refunds among the creator's buyers (14 days)",
+          "target": "<= 20% (refund brake)"
+        },
+        {
+          "name": "Paid-partnership disclosure on every paid post",
+          "target": "100%"
+        }
+      ]
+    },
+    {
+      "channel": "ch-boosts",
+      "kpis": [
+        {
+          "name": "Qualify to boost",
+          "target": "3x median views in 48 h, 65%+ 3-second hold, and 1 tracked sale or 5+ link clicks per 1,000 views"
+        },
+        {
+          "name": "Link CTR",
+          "target": ">= 0.8% Meta, >= 0.6% TikTok; stop below 0.5% after $30-50"
+        },
+        {
+          "name": "CPC",
+          "target": "<= $1.00; stop above $2.00"
+        },
+        {
+          "name": "CAC",
+          "target": "<= $50; stop the source at $100 with 0 net payers"
+        },
+        {
+          "name": "Blackout",
+          "target": "no boosts 20 Nov - 2 Dec"
+        }
+      ]
+    },
+    {
+      "channel": "ch-contentrewards",
+      "kpis": [
+        {
+          "name": "Start gate",
+          "target": "a source at <= $50 CAC on 3+ payers and MRR >= $1.5k"
+        },
+        {
+          "name": "Cost per 1,000 approved views",
+          "target": "<= $1.60 + ~3% processing"
+        },
+        {
+          "name": "Link clicks per 1,000 approved views",
+          "target": ">= 3 [A]"
+        },
+        {
+          "name": "CAC",
+          "target": "<= $50"
+        },
+        {
+          "name": "Cap per video",
+          "target": "$150"
+        }
+      ]
+    },
+    {
+      "channel": "ch-producthunt",
+      "kpis": [
+        {
+          "name": "Launch timing",
+          "target": "only at beat:images, after the six-box gate"
+        },
+        {
+          "name": "Daily rank",
+          "target": "top 5 of the day"
+        },
+        {
+          "name": "PH-attributed net payers in 7 days",
+          "target": ">= 25 [A] (3,000 base visits x 1%, less refunds)"
+        },
+        {
+          "name": "Upvote asks",
+          "target": "0, ever"
+        }
+      ]
+    },
+    {
+      "channel": "ch-directories",
+      "kpis": [
+        {
+          "name": "TAAFT tracked net payers in 30 days",
+          "target": ">= 3, or no TAAFT upgrades"
+        },
+        {
+          "name": "Tracked visits per free listing (first 30 days)",
+          "target": "20-300 [E]"
+        },
+        {
+          "name": "Uneed day (beat:images) tracked net payers",
+          "target": ">= 1 per $30 [A]"
+        }
+      ]
+    },
+    {
+      "channel": "ch-community",
+      "kpis": [
+        {
+          "name": "Indie Hackers numbers update",
+          "target": "1 a week"
+        },
+        {
+          "name": "Tracked visits per strong post",
+          "target": "100-2,000 [E]"
+        },
+        {
+          "name": "Agency community workshop",
+          "target": "every 2 weeks from week 3; >= 15 attendees [A]"
+        },
+        {
+          "name": "Cold DMs",
+          "target": "0"
+        }
+      ]
+    },
+    {
+      "channel": "ch-press",
+      "kpis": [
+        {
+          "name": "Regional mentions in week 1",
+          "target": ">= 1"
+        },
+        {
+          "name": "Pickups of the day-30 and day-90 numbers posts",
+          "target": ">= 1 each [A]"
+        },
+        {
+          "name": "Press-attributed visits per mention",
+          "target": "measure (utm_source=press-<outlet>)"
+        }
+      ]
+    },
+    {
+      "channel": "ch-loops",
+      "kpis": [
+        {
+          "name": "Share of new payers from loops",
+          "target": "2% in week 2 rising to 20% by week 13"
+        },
+        {
+          "name": "Review links sent within 7 days by Studio/Scale payers",
+          "target": ">= 70%"
+        },
+        {
+          "name": "Published sites with the badge on",
+          "target": ">= 60% [A]"
+        },
+        {
+          "name": "Badge click-throughs per 1,000 badge impressions",
+          "target": ">= 2 [A], measurable once ask 6 adds the UTM"
+        },
+        {
+          "name": "Review-page link click-throughs per 100 client decisions",
+          "target": ">= 5 [A], once ask 6 ships"
+        }
+      ]
+    },
+    {
+      "channel": "ch-email",
+      "kpis": [
+        {
+          "name": "Changelog sends",
+          "target": "1 a week + 1 per beat (owner sign-off before the first send)"
+        },
+        {
+          "name": "Review links sent within 48 h of the 'send your first review link' email",
+          "target": ">= 25% of recipients [A]"
+        },
+        {
+          "name": "Referral conversions per 100 active subscribers per month",
+          "target": ">= 3 [A], once referral credits ship"
+        }
+      ]
+    }
+  ],
+  "alerts": [
+    {
+      "metric": "Whop payment with no matching Makeborne checkout (store-page or tracking-link purchase)",
+      "threshold": ">= 1",
+      "action": "Same day: grant credits manually, find the link that leaked, replace it with a /go/ link. Never hand out Whop store or tracking links."
+    },
+    {
+      "metric": "Purchases with a known source (attribution coverage)",
+      "threshold": "< 90% in a week from week 2",
+      "action": "Freeze new creator payments and boosts until fixed; push the 'How did you hear about us?' answers into the report; report 'unknown' honestly."
+    },
+    {
+      "metric": "Attribution plumbing (/go/, first touch, checkout metadata) live",
+      "threshold": "not live by Thu 29 Oct",
+      "action": "Ship the onboarding survey fallback; hold every paid line except TAAFT."
+    },
+    {
+      "metric": "Refunds within 14 days, overall",
+      "threshold": "> 15% over the last 7 days",
+      "action": "Read every refund reason; check copy for overclaims; review first-build failures; consider D1 earlier."
+    },
+    {
+      "metric": "Refunds within 14 days, per source",
+      "threshold": "> 20% of that source's buyers",
+      "action": "Pause the source (refund brake); re-brief or drop the creator."
+    },
+    {
+      "metric": "Disputes (chargebacks)",
+      "threshold": ">= 1 in a day, or >= 3 in a week [A]",
+      "action": "Answer each the same day; pause paid pushes at 3 a week; refund proactively when a buyer is unhappy. Card-network dispute thresholds are unverified [U]."
+    },
+    {
+      "metric": "First build started within 10 minutes of paying",
+      "threshold": "< 90% of payers in a day",
+      "action": "Raise the AI daily limit now (D6); show the honest queue message; contact stalled payers personally."
+    },
+    {
+      "metric": "AI daily limit reached",
+      "threshold": "any hit on a day with new payers",
+      "action": "Raise the limit to at least new payers x 2 builds x $1.35; check before every creator post and beat."
+    },
+    {
+      "metric": "Support first reply",
+      "threshold": "> 4 h in CET working hours",
+      "action": "Founder joins support; cut X replies first, then long YouTube."
+    },
+    {
+      "metric": "Paid source spend with no net payers",
+      "threshold": "$100 with 0, or $150 with 1",
+      "action": "Kill the source."
+    },
+    {
+      "metric": "Boost link CTR / CPC after $30-50",
+      "threshold": "CTR < 0.5% or CPC > $2",
+      "action": "Stop the boost."
+    },
+    {
+      "metric": "Blended paid CAC",
+      "threshold": "> $50 over 3+ net payers",
+      "action": "Apply D4: reinvest 30% at <= $50, 10% at $50-62.50, 0% above $62.50; never exceed the $120 hard ceiling on any source."
+    },
+    {
+      "metric": "Offer check (Mon 16 Nov)",
+      "threshold": "no source with net payers at <= $50 CAC, or /go/ visit-to-paid < 0.7%",
+      "action": "Change the offer before buying more views: owner decisions D1 (usage-capped refund) and D2 (capped preview)."
+    },
+    {
+      "metric": "Cumulative gross paid on Sun 22 Nov",
+      "threshold": "< 100 / 100-200 / >= 200",
+      "action": "Low band: protect margin, no reinvestment growth. Base: plan as written. >= 300: breakout path live, raise reinvestment, prepare AI capacity."
+    },
+    {
+      "metric": "MRR vs weekly target",
+      "threshold": "< 80% of target two Sundays in a row",
+      "action": "Re-forecast low/base/high from real rates in data/funnel.json; cut the bottom-half formats."
+    },
+    {
+      "metric": "Owned post at 48 h",
+      "threshold": ">= 3x account median views",
+      "action": "Re-cut with 2 new hooks; check the boost qualification; re-post natively on the other surfaces."
+    },
+    {
+      "metric": "Instagram DM keyword replies per 1,000 views",
+      "threshold": "< 3 for a week",
+      "action": "Fix the CTA wording and the DM content; test a different keyword."
+    },
+    {
+      "metric": "Checkout opened to paid",
+      "threshold": "< 25% for a week [A]",
+      "action": "Inspect Whop checkout for card/FX failures and tax display; check that price and refund line match the plan page."
+    },
+    {
+      "metric": "Promotion of a feature that is not live",
+      "threshold": "any post, brief, DM or page",
+      "action": "Take it down or relabel 'coming soon' with no date; features are only promoted after their beat:<feature> passes the gate."
+    },
+    {
+      "metric": "Ad pixel, retargeting tag or device-stored referral cookie on makeborne.com",
+      "threshold": "present before the consent banner is live",
+      "action": "Remove it the same day; consent banner (CMP) first."
+    }
+  ]
+}

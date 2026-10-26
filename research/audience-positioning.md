@@ -419,7 +419,7 @@ Recommendation: run **A** to agency traffic and **B** to general and deck traffi
 | Consultants / founders | Memo to meeting | Notes pasted in, then the deck flips through. | "From messy notes to a board-ready deck." | "Make your deck" |
 | Coaches / creators | Expertise, designed | "I turned 12 of my posts into a 20-page guide." | "The lead magnet people actually open." | "See three sample guides" |
 | Coaches / creators | One launch kit | Guide, slides and page shown side by side. | "The guide, the webinar slides and the page to sell them, from one brief." | "Build your launch kit" |
-| Small business (later) | Yours, on your domain | A shop owner types three sentences; the site appears. | "Describe your business. Get a site you can edit, today." | "Build my site" |
+| Small business (later) | Yours, on your domain | A shop owner types a brief about the shop; the site appears. | "Describe your business. Get a site you can edit, today." | "Build my site" |
 | Educators / students (later) | Outline to slides | An outline turns into slides on a timer. | "Lesson slides and a handout from your outline." | "Try the edu plan" |
 
 **Tone.** Plain, specific and checkable. Numbers on screen must come from real runs. No "revolutionary", no "10×", no fake scarcity or countdowns. The internal teardown lists Base44's 47-hour timer and Wix's "50% OFF" chips as things not to copy.

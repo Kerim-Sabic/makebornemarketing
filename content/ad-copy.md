@@ -42,7 +42,7 @@ Written 26 Oct 2026 (paid beta launch day). Companion to `data/creatives.json` (
 | A4 | icp1 | One brief, three deliverables | C29 | one brief, three outputs, 30 s |
 | A5 | icp1 | Honest billing and refund | C30, C12 (organic) | P3 'here's why I didn't add a free plan' (organic only) |
 | D1 | icp2 | A real chart, not a picture (.pptx) | C17 | D3 PPTX chart click |
-| D2 | icp2 | Notes in, editable deck out | C18, C19 | D1 pitch deck from one sentence |
+| D2 | icp2 | Notes in, editable deck out | C18, C19 | D1 pitch deck from one brief |
 | D3 | icp2 | Change one thing, only that changes | C16 | one-value chart edit |
 | B1 | icp3 | Notes to a finished book | C23 | B4 notes app to book |
 | B2 | icp3 | The lead magnet people open | C26 | 12 posts to a guide |
@@ -115,7 +115,7 @@ CTA button: **Learn more** for cold traffic (it fits a paid-only product better 
 
 | # | Primary text (≤125) | Headline (≤27) | Description (≤27) | CTA |
 |---|---|---|---|---|
-| B1-M1 | Two lines in your notes app can become a finished guide, designed for screen and PDF. (85) | Your notes, as a book (21) | From $20/month (14) | Learn more |
+| B1-M1 | A brief in your notes app can become a finished guide, designed for screen and PDF. (83) | Your notes, as a book (21) | From $20/month (14) | Learn more |
 | B1-M2 | Turn what you know into a designed book from one brief. Edit it in chat, export to PDF. (87) | Write the book you planned (26) | For screen and PDF (18) | Learn more |
 
 ### B2 · The lead magnet people open (icp3; creatives C26)
@@ -136,7 +136,7 @@ CTA button: **Learn more** for cold traffic (it fits a paid-only product better 
 
 | # | Primary text (≤125) | Headline (≤27) | Description (≤27) | CTA |
 |---|---|---|---|---|
-| S1-M1 | Describe your business in one sentence and get a website you can edit, on a Makeborne address. (94) | Your site, today (16) | From $20/month (14) | Learn more |
+| S1-M1 | Describe your business once and get a website you can edit, on a Makeborne address. (83) | Your site, today (16) | From $20/month (14) | Learn more |
 | S1-M2 | A credible website today without hiring anyone yet. Edit it in plain words. From $20/month. (91) | A site you can edit (19) | Full refund until used (22) | Learn more |
 
 ## 5. TikTok (Spark captions and ad text)
@@ -157,18 +157,18 @@ Display name: **Makeborne**. CTA button: **Learn more**. Captions double as orga
 | A5 (icp1) | A5-T2 | The most a request can cost is shown before it starts. Plans from $20/month. (76) |
 | D1 (icp2) | D1-T1 | It's a real chart, not a picture. Open the .pptx and click it. (62) |
 | D1 (icp2) | D1-T2 | Notes in, PowerPoint out. Click the chart: it's real. (53) |
-| D2 (icp2) | D2-T1 | Pitch deck from one sentence. The timer is real. (48) |
+| D2 (icp2) | D2-T1 | Pitch deck from one brief. The timer is real. (45) |
 | D2 (icp2) | D2-T2 | Messy notes in. Editable deck out. Watch the uncut build. (57) |
 | D3 (icp2) | D3-T1 | Change one number. Only that number changes. (44) |
 | D3 (icp2) | D3-T2 | Asked for one edit. Got exactly one edit. (41) |
 | B1 (icp3) | B1-T1 | Your notes app is full of book ideas. Here's one, finished. (59) |
-| B1 (icp3) | B1-T2 | Two lines in my notes app became a finished guide. Real pages. (62) |
+| B1 (icp3) | B1-T2 | My notes-app brief became a finished guide. Real pages. (55) |
 | B2 (icp3) | B2-T1 | I turned 12 of my posts into a guide people actually open. (58) |
 | B2 (icp3) | B2-T2 | Your lead magnet, designed from your own posts. For screen and PDF. (67) |
 | B3 (icp3) | B3-T1 | New client? Send them a welcome guide that looks like your brand. (65) |
 | B3 (icp3) | B3-T2 | Your process, as a designed guide for every new client. (55) |
 | S1 (icp4) | S1-T1 | Comment your business. I'll build the next one live. (52) |
-| S1 (icp4) | S1-T2 | Your bakery's website, from one sentence. On a Makeborne address. (65) |
+| S1 (icp4) | S1-T2 | Your bakery's website, from one brief. On a Makeborne address. (62) |
 
 ## 6. Google Search (responsive search ads)
 
@@ -213,7 +213,7 @@ ICP: icp2. Keywords: `ai presentation maker`, `ai powerpoint generator`, `ai pit
 | Editable PowerPoint Decks | 25 |
 | Real Charts, Not Pictures | 25 |
 | Speaker Notes on Every Slide | 28 |
-| Pitch Deck From One Sentence | 28 |
+| Pitch Deck From One Brief | 25 |
 | Open It in PowerPoint | 21 |
 | Change One Thing in Chat | 24 |
 | Decks From $20/Month | 20 |
@@ -339,12 +339,12 @@ Organic Reddit (r/SideProject at launch and at beats) uses a fresh founder story
 | A4 (icp1) | One brief in. A website, a pitch deck and a client guide out, all in one brand. Then one link for the client to approve. (120) | One brief: site, deck and guide (31) |
 | A5 (icp1) | Paid-only on purpose. Instead: watch the uncut build, play the client on our sample review link, and if you don't use a credit you get every cent back. (151) | From $20/month. Refund until you build. (39) |
 | D1 (icp2) | Open the .pptx in PowerPoint. Click the chart. It's a real chart with real numbers, and every slide has speaker notes. (118) | Editable decks with real charts (31) |
-| D2 (icp2) | A pitch deck from one sentence. The clock in the video is the real build time. (78) | Notes in. An editable deck out. (31) |
+| D2 (icp2) | A pitch deck from one brief. The clock in the video is the real build time. (75) | Notes in. An editable deck out. (31) |
 | D3 (icp2) | Asked for one change: Q2 from 18 to 21. That bar moved. Nothing else did. (73) | Change one thing. Only that changes. (36) |
-| B1 (icp3) | Two lines from my notes app became a finished, designed guide. Real pages below, unedited. (90) | Your notes, as a finished book (30) |
+| B1 (icp3) | A brief from my notes app became a finished, designed guide. Real pages below, unedited. (88) | Your notes, as a finished book (30) |
 | B2 (icp3) | 12 of your posts can become a guide people actually open. Designed pages and a clean PDF, from one brief. (105) | Turn your posts into a guide (28) |
 | B3 (icp3) | Every new client gets a welcome guide: how we work, the timeline, what we need from them. Built from one brief. (111) | A client welcome guide from one brief (37) |
-| S1 (icp4) | Reply with your business (public info only) and I'll build its site from one sentence. It lives on a Makeborne address until you decide. (136) | Your business site from one sentence (36) |
+| S1 (icp4) | Reply with your business (public info only) and I'll build its site from one brief. It lives on a Makeborne address until you decide. (133) | Your business site from one brief (33) |
 
 A5 is the plan's contrarian line. It is fine on founder X and Indie Hackers; it never runs as a paid ad or a search ad.
 

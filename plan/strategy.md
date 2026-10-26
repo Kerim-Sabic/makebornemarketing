@@ -24,7 +24,7 @@
 
 1. **The honest target.** $1M ARR is about $83.3k MRR, or about 2,050 active subscribers at a Studio-heavy $41 blend (about 2,260 at $36.90). No company in our research reached $1M ARR within 3 months from a cold start with no free tier [F/S, `research/case-studies-ai-builders.md`]. Lovable's "$1M ARR in a week" (Nov 2024) came with a free tier and a 50k-star open-source audience [F]. Base44's "$1M in 3 weeks" is from Lenny's show notes; the founder self-reports a $1.5M ARR goal hit in four weeks (CEO Insider, 4 Aug 2025) [V]. No audited data. Never in public copy. **The plan of record is the base case: about $174k ARR (about $14.5k MRR) at the day-90 review on 24 January** (calculator, `data/funnel.json`). If creator traffic converts like average traffic, base falls to about $134k ARR and paid CAC to about $100 (the "strict research inputs" column in 14.2); the 16 Nov and 30 Nov checks decide which applies. $1M is a breakout scenario with named conditions (section 15). It is not the plan.
 2. **Who we sell to first.** Freelancers and small agencies who build sites for clients, sold on **Studio $49**. Everything they need is live today: AI sites published on a Makeborne address, client review links with anonymous comments and Approve, a basic CRM with a lead finder, manual GitHub export and a projects library. Studio earns about $33 a month of contribution against about $13 for Create [E, `research/product-funnel-audit.md` §8.2], so every Studio buyer is worth about 2.5 Create buyers.
-3. **What we say.** *"The AI studio for client work. Build it. Send the link. Get the yes."* Short-form line: *"One sentence in. A finished website, deck or book out."* Proof line: *"From $20/month + tax. Full refund until you use credits."*
+3. **What we say.** *"The AI studio for client work. Build it. Send the link. Get the yes."* Short-form line: *"One brief in. A finished website, deck or book out."* Proof line: *"From $20/month + tax. Full refund until you use credits."*
 4. **The engine.** It comes from the creator-led draft. Every post shows the product working: the finished output in frame 0, a visible timer, one live edit, publish, and a loop back to frame 0. That traffic goes through Instagram comment-keyword DMs (SITE, DECK, BOOK, CLIENT) to landing pages that match the format, with "use my brief" deep links. Small paid creator waves follow, then boosts only for posts that already sold, then revenue-funded Content Rewards at about $1.60 per 1,000 views (a Lovable clipping campaign run by Virality, now paused: $26,119 for 16.7M approved views [F]).
 5. **The loop.** It comes from the agency draft. After a client decides, the review page shows "Review powered by Makeborne" with the agency's referral code. A public "play the client" sample review link (ask 5, shipping in weeks 1-2, not live at launch) will stand in for a trial at zero AI cost. Activation means **a review link sent**, not a sign-up.
 6. **The calendar.** It comes from the launch-events draft. Each feature that is coming soon becomes a news beat only after it passes the **gate**: 48 hours live in production, 10 golden briefs passed, the AI limit raised, the founder free for support, copy reviewed and links tracked. Features that land close together are announced as one five-day Launch Week. The main Product Hunt launch is kept for generated images. Day-30 and day-90 public-numbers posts and free regional press are beats that need no feature.
@@ -93,7 +93,7 @@ For freelancers and small agencies who make things for clients, Makeborne turns 
 | Category (site header, bios, LinkedIn) | **The AI studio for client work.** |
 | Agency hero (UTM-matched, `utm_medium` creator, affiliate, linkedin, community) | **Send your client a real website before the first call.** |
 | Tagline | **Build it. Send the link. Get the yes.** |
-| Short-form, on screen | **One sentence in. A finished website, deck or book out.** |
+| Short-form, on screen | **One brief in. A finished website, deck or book out.** |
 | Proof line (end cards, DMs, landing pages) | **From $20/month + tax where applicable. Full refund until you use credits.** (Launch checkout shows prices before tax, so EU and UK consumer-facing ads must say tax is added or show VAT-inclusive prices [U], section 16 risk 27. Update everywhere if the owner changes the refund rule, D1 in section 17.) |
 | Founder series | "Day N: building an AI studio for client work from Sarajevo, with $1,000 and every number in public." |
 | Contrarian (press, Indie Hackers) | "No free tier, on purpose. Watch the uncut build. If you don't use a credit, you get every cent back." |
@@ -124,7 +124,7 @@ v13 and v14 are built on concept imagery. The v14 end card says "Start free", wh
 - F2 "POV: the client says 'make it pop' for the 9th time."
 - F4 "I found 20 local businesses to pitch in [real time]." (the live lead finder, shown live; never claim "no website", which the launch finder does not read)
 - A3 "40-email feedback thread vs one link."
-- D1 "Pitch deck from one sentence. 40 seconds."
+- D1 "Pitch deck from one brief. 40 seconds."
 - D3 "It's a real chart, not a picture." (PPTX)
 - B4 "Your notes app is full of book ideas. Here's one, finished."
 - P2 "Day 7: here's exactly how many people paid."
@@ -212,7 +212,7 @@ Comment-reply speedruns for local businesses are framed for **both** lanes ("her
 
 | Time | Picture | On-screen text |
 |---|---|---|
-| 0-1.5 s | Finished site scrolling on a phone, with the reply bubble | "Your bakery's website. Built from 1 sentence." |
+| 0-1.5 s | Finished site scrolling on a phone, with the reply bubble | "Your bakery's website. Built from one brief." |
 | 1.5-4 s | Composer with the brief typed; stopwatch starts | "Timer's on." |
 | 4-20 s | Real-speed build, or labelled "sped up 4x" | 3-5 word labels |
 | 20-28 s | One live edit, then Publish to a Makeborne address | "Live. 52 s." (the real time) |
@@ -353,7 +353,7 @@ Times are Sarajevo (CET, UTC+1). The EU changed clocks on 25 Oct and the US chan
 ### Day 4 - Thursday 29 Oct
 - **Attribution target day.** Asks 1 and 4 should be live. If they are not, the "How did you hear" field ships today and creator spend waits.
 - The sample review link ("play the client"), if it is ready. Posts that point to it (C07, C12, V11) wait until it is live (ask 5).
-- The first Instagram carousel ("5 sites from one sentence", real outputs only).
+- The first Instagram carousel ("5 sites from one brief", real outputs only).
 - 2-3 customer video calls with the first payers. Fix whatever broke within 24 h.
 - Do not book Uneed yet: book after the 1 Nov images go/no-go, unless Uneed confirms the slot can be rescheduled [U] (line 6).
 

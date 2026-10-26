@@ -233,7 +233,7 @@ HOOKS YOU CAN USE (pick or rewrite)
 - "POV: the client says 'make it pop' for the 9th time."
 - "I found 20 local businesses to pitch in [real time]." (the lead finder, shown live)
 - "40-email feedback thread vs one link."
-- "Pitch deck from one sentence." / "It's a real chart, not a picture."
+- "Pitch deck from one brief." / "It's a real chart, not a picture."
 
 PLEASE DON'T
 - say free, trial or 'start free' (there is no free plan)

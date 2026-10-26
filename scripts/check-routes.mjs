@@ -19,6 +19,8 @@
 //    to day 90 = Mon 25 Jan 2027; V01 posts at 19:00 on launch day (calendar and posting.json); no post before 28 Oct 18:00 UTC
 //    says the product is live (only the countdown teasers T1-T7 and S1-S3, none of them before 19:00 claiming it); the
 //    launch day has its run of show; the _justlaunched files apply from Thu 29 Oct.
+// 11. Fails when copy outside research/ claims a finished output came from "one sentence" (or a one-line brief): every
+//    real output came from a 500-1,000-character brief, so the copy says "one brief".
 import { createServer } from 'vite';
 import { readFileSync, existsSync, readdirSync, mkdirSync, mkdtempSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
@@ -426,6 +428,41 @@ try {
     });
   }
   if (!markerHits) console.log(`  ok   ${files.length} files clean`);
+
+  // ---------- unsubstantiated input claims ("one sentence") ----------
+  // Every real Makeborne output used in marketing came from a 500-1,000-character brief, so copy may not say a site, deck
+  // or book came from one sentence (advertising claims must be substantiated); it says "one brief". research/ keeps
+  // third-party quotes as they are, so it is not scanned. CLAIM_OK lists the only non-claim uses allowed elsewhere.
+  console.log('\nInput claims outside research/ (no "one sentence" or "one-line brief"; say "one brief")');
+  {
+    const CLAIM = /\b(?:one|1|single)[- ]sentences?\b|\bone[- ]line (?:brief|idea)s?\b/i;
+    const CLAIM_OK = [
+      /\[one sentence from the brief below\]/, // content/videos.md creator brief: a writing instruction, not a product claim
+      /v13 "One Sentence"/, // content/videos.md: title of the rejected v13 film, listed under "Never"
+    ];
+    const SKIP = new Set(['node_modules', 'dist', '.git', 'private', 'research']);
+    const claimFiles = [];
+    const walkClaims = (dir) => {
+      for (const e of readdirSync(join(root, dir), { withFileTypes: true })) {
+        if (SKIP.has(e.name)) continue;
+        const rel = dir === '.' ? e.name : `${dir}/${e.name}`;
+        if (e.isDirectory()) walkClaims(rel);
+        else if (/\.(md|json|html|ts|tsx|mjs|js|css|py|txt|toml|svg|ya?ml)$/i.test(e.name) && rel !== 'scripts/check-routes.mjs') claimFiles.push(rel);
+      }
+    };
+    walkClaims('.');
+    let claimHits = 0;
+    for (const f of claimFiles) {
+      readFileSync(join(root, f), 'utf8').split(/\r?\n/).forEach((line, i) => {
+        const rest = CLAIM_OK.reduce((l, re) => l.replace(new RegExp(re.source, 'g'), ''), line);
+        const hit = rest.match(CLAIM);
+        if (!hit) return;
+        claimHits++;
+        fail(`${f}:${i + 1}: "${hit[0]}" is not substantiated (real outputs came from 500-1,000-character briefs); say "one brief"`);
+      });
+    }
+    if (!claimHits) console.log(`  ok   ${claimFiles.length} files outside research/ say "one brief", not "one sentence"`);
+  }
 
   if (!modelOnly) {
     // ---------- routes ----------

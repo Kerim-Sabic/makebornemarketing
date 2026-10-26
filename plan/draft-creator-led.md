@@ -68,7 +68,7 @@ The ICP order follows `research/audience-positioning.md`. Short-form reaches con
 
 ### 3.1 Statements
 - **Category line (site, LinkedIn, bios):** "The AI studio for client work: websites, decks and books from one brief."
-- **Short-form line (on screen, in captions):** "One sentence in. A finished website, book or deck out."
+- **Short-form line (on screen, in captions):** "One brief in. A finished website, book or deck out."
 - **Proof line (end cards, DMs, landing pages):** "From $20/month + tax. Full refund until you use credits."
 
 ### 3.2 Message house
@@ -87,14 +87,14 @@ Taken from `research/short-form-video.md` §4. Hook codes go in `utm_content`.
 - **Speedrun:**
   - R1 "This website took 52 seconds. Watch." (use the real time)
   - R2 "Replying to @___: here's your bakery's website."
-  - R3 "One sentence in. A whole website out."
+  - R3 "One brief in. A whole website out."
 - **Before/after:** R5 "Your 2014 website vs the one I made in a minute." (fixture businesses, or real ones with written OK)
 - **Books:**
   - B1 "My grandma never wrote down a recipe. So I made her a book."
   - B4 "Your notes app is full of book ideas. Here's one, finished."
   - B2, the bedtime book where your child is the hero, waits for images.
 - **Decks:**
-  - D1 "Pitch deck from one sentence. 40 seconds."
+  - D1 "Pitch deck from one brief. 40 seconds."
   - D2 "My slides vs the deck I generated. Be honest."
 - **Freelancer:**
   - F1 "Freelancers: steal this client-approval trick."
@@ -105,7 +105,7 @@ Taken from `research/short-form-video.md` §4. Hook codes go in `utm_content`.
   - P2 "Day 7: here's exactly how many people paid."
   - P3 "Everyone said 'add a free plan'. Here's why I didn't."
 - **Slideshow:**
-  - S1 "5 websites made from one sentence this week (swipe)."
+  - S1 "5 websites, one brief each, this week (swipe)."
   - S3 "Which deck would you present? A, B or C."
 
 ### 3.4 Objections to answer in DMs, pinned comments and landing pages
@@ -264,12 +264,12 @@ Times are Sarajevo (CET, UTC+1). Until US clocks change on 1 Nov, the US East af
 ### Day 2: Wednesday 28 Oct
 - Freelancer POV (F2) showing the review link and Approve on a phone.
 - Before/after on a fixture business (R5).
-- First Instagram carousel ("5 sites from one sentence", S1).
+- First Instagram carousel ("5 sites from one brief", S1).
 - Start owner outreach to the top 12 creators. The owner does this from their own accounts; this plan does not contact anyone.
 - Founder LinkedIn post: a short clip of the client-approval flow.
 
 ### Day 3: Thursday 29 Oct
-- Faceless **"Made with Makeborne"** accounts start after warm-up: scroll captures of real outputs with the one-line brief as a chip.
+- Faceless **"Made with Makeborne"** accounts start after warm-up: scroll captures of real outputs with the brief as a chip.
 - First long YouTube tutorial: "How to turn a messy brief into a pitch deck" (T2, 6–8 min).
 - 20-minute onboarding calls with interested creators. The owner onboards each one personally; Gamma's founder did this for every early creator [S].
 
@@ -384,7 +384,7 @@ Carousels and slideshows are built from real outputs only, with 5–6 slides: a 
 
 | Time | Picture | On-screen text |
 |---|---|---|
-| 0–1.5 s | The finished site scrolling on a phone, with the reply bubble | "Your bakery's website. Built from 1 sentence." |
+| 0–1.5 s | The finished site scrolling on a phone, with the reply bubble | "Your bakery's website. Built from one brief." |
 | 1.5–4 s | The composer with the brief typed and a stopwatch starting | "Timer's on." |
 | 4–20 s | The build streams at real speed or labelled "sped up 4x" | 3–5 word labels |
 | 20–28 s | One live edit, then Publish to a Makeborne address | "Live. 52 s." (the real time) |

@@ -8,9 +8,9 @@ Written 2026-10-26 by the head of creative production, for the owner and whoever
 
 Every video shows the real product. Higgsfield adds short cinematic scenes around it: an opening shot, a moment in the middle, the scene behind the end card, or a slow camera move over a real result. HyperFrames puts every word, timer and the brand on top. Nothing generated is ever shown as Makeborne itself.
 
-**1. Record the screen, add the words** (42% of what we make). Speedruns, demos, tutorials, before and after, 'made from one sentence'. About 2 hours the first time, 1.5 hours after that.
+**1. Record the screen, add the words** (42% of what we make). Speedruns, demos, tutorials, before and after, 'made from one brief'. About 2 hours the first time, 1.5 hours after that.
 
-1. Type one sentence into Makeborne and record the screen while it builds. Never stop the recording.
+1. Type a brief into Makeborne and record the screen while it builds. Never stop the recording.
 2. Record one change in chat, then publish or export.
 3. Open the matching template, drop the recording in, type the words that appear on screen.
 4. If you sped the build up, the little clock says so ('Sped up ×8').
@@ -509,7 +509,7 @@ Each template is a HyperFrames project skeleton that follows the composition con
 | T01-endcard | True end card: mark, 'Make yours at makeborne.com', price, refund line, keyword CTA. In a Higgsfield cut the same words sit over the clip in T07 endplate.html | headLead, headAccent, priceLine, refundLine, ctaText | 2.5 s | 9:16, 4:5, 1:1, 16:9 | logo-brand-close (reference for the cascade; restyled to the flat mark); grain-overlay (optional, 2% grain) |
 | T02-speedrun | Frame-0 output on a phone, composer, sped or real-time build with clock chip, 3 labels, one chat edit, publish, loop. Higgsfield cut: mount the T07 hook before frame 0 and the bridge/endplate slots at the times in the sheet | hookLine, briefText, timerLine, clockText, label1-3, editRequest, liveText, ctaText, phoneScrollSrc, composerSrc, buildSrc (+ data-playback-rate), editSrc, publishSrc, musicSrc, voSrc | 32 s | 9:16 master, 4:5, 16:9 | cursor-zoom-follow (auto punch-in to clicks); ui-focus-zoom (zoom to the edited section); number-wheel (clock digits, optional); kinetic-center-build (label build, optional); device-frame-stage (alternative phone stage) |
 | T03-split | Before/after: stacked on 9:16, side by side on 16:9/1:1, onion skin to prove nothing else moved | headline, beforeLabel, afterLabel, pollText, mode (stack\|wipe\|onion), beforeSrc, afterSrc, musicSrc, voSrc | 27 s | 9:16, 4:5, 1:1, 16:9 | before-after-wipe; comparison-split |
-| T04-showcase | Real outputs with their sentence: 8 s scroll episode, 15 s slides (and photo-mode stills), 6 s triptych; i2v: an AI camera move over a real output (Higgsfield image-to-video take, letter-checked) with its sentence and run-log footnote | sentence, series, footnote (run log), pageSrc, s1-s5 / f1-f5, brief, line, i2v: clipSrc, sentence, footnote, aiLabelText ('AI camera move on a real Makeborne output') | 8 / 14.6 / 6 s | 9:16, 4:5, 1:1, 16:9 (triptych) | parallax-zoom; pan-stations; swipe-rail; screen-flow-carousel |
+| T04-showcase | Real outputs with their brief: 8 s scroll episode, 15 s slides (and photo-mode stills), 6 s triptych; i2v: an AI camera move over a real output (Higgsfield image-to-video take, letter-checked) with its brief and run-log footnote | sentence, series, footnote (run log), pageSrc, s1-s5 / f1-f5, brief, line, i2v: clipSrc, sentence, footnote, aiLabelText ('AI camera move on a real Makeborne output') | 8 / 14.6 / 6 s | 9:16, 4:5, 1:1, 16:9 (triptych) | parallax-zoom; pan-stations; swipe-rail; screen-flow-carousel |
 | T05-founder | Founder A-roll with Day-N pill, real-number ledger count-up, b-roll inserts in the lower half, captions | dayLabel, hookLine, n1-n3 + labels, arollSrc, broll1Src, broll2Src | 45 s | 9:16, 4:5 (LinkedIn), 16:9 (X, YouTube) | count-up; lt-soft-pill (pill styling reference); caption-editorial-emphasis (caption restyle option) |
 | T06-tutorial | Step chips over trimmed windows of one continuous capture, sped build step with clock chip, punch-ins, optional face-cam | title, step1-4, ctaText, clockText, captureSrc, faceSrc | 90 (V24: 540 at 16:9) s | 9:16, 16:9 | ui-focus-zoom; cursor-zoom-follow; marker-checklist-card (V20 checklist) |
 | T07-cinematic-hook | Higgsfield clip slots: clip in, 'AI-generated scene' label, HyperFrames type over the clip, hard cut to the real UI. index.html = hook (1-3 s); compositions/bridge.html = scene or transition (0.5-3 s); compositions/match-to-ui.html = the shop becomes its website (1.5 s, the real site grows out of the window); compositions/endplate.html = the end card over a darkened clip (2-4 s) | hook: hookLead, hookAccent, aiLabelText, plateSrc, nextSrc, bridge: plateSrc, lineText, aiLabelText, match: plateSrc, siteSrc (real capture), sentence, aiLabelText, endplate: plateSrc, headLead, headAccent, priceLine, refundLine, ctaText, aiLabelText, every slot: data-media-start on the clip = the section's clip start | hook 1-3 / bridge 0.5-3 / match 1.5 / endplate 2-4 s | 9:16 (Higgsfield cuts are TikTok, Reels and Shorts), 4:5 recomposed only for Reels feed tests | focus-blur-resolve; beat-freeze-cut |
@@ -875,7 +875,7 @@ Each template is a HyperFrames project skeleton that follows the composition con
 
 #### HF22
 
-**A tired family hardware store front** · Hook and end plate for V48 (the 2014 website vs one sentence) · make on Tue 8 Dec (2026-12-08)
+**A tired family hardware store front** · Hook and end plate for V48 (the 2014 website vs one brief) · make on Tue 8 Dec (2026-12-08)
 
 - **Model / mode / preset:** Kling 3.0 (in Higgsfield), 1080p · text-to-video · Dolly In · 5 s · 9:16 · 1080p · 2 takes × 12.5 = **25 credits**
 - **Prompt:** "Vertical 9:16 shot, slow push in on the front of an old family-run hardware store on an ordinary high street in flat overcast afternoon light: faded green paint, a sun-bleached blank awning, a window display of tools and paint tins arranged long ago, a little dust on the glass. Dignified, not shabby. No people. Blank fascia board, no shop name, no letters on tins or in the window. Realistic, natural colour, 35 mm lens, gentle film grain."
@@ -1009,7 +1009,7 @@ Each template is a HyperFrames project skeleton that follows the composition con
 
 #### V02
 
-**One sentence in, a whole website out (bakery speedrun)** · P0 · week 1 · 32 s · first post 2026-10-26 13:00 TikTok · **readiness: now**
+**One brief in, a whole website out (bakery speedrun)** · P0 · week 1 · 32 s · first post 2026-10-26 13:00 TikTok · **readiness: now**
 
 - **Make with:** Higgsfield hook + real. **Pipeline / template:** P1-speedrun / T02-speedrun. **Tools:** Makeborne (real run), OBS screen capture, HyperFrames, Higgsfield (Kling 3.0), platform music library.
 - **Capture in the app:**
@@ -1019,22 +1019,22 @@ Each template is a HyperFrames project skeleton that follows the composition con
   - Publish dialog, then the live Makeborne address open in a fresh browser tab
   - Phone: the published site at 390 px, a slow full-page scroll (frame 0 and the loop)
   - Check the bakery name the build invents against trademarks and real Leeds bakeries
-- **Template variables:** `hookLine` = One sentence in. A whole website out.; `briefText` = "A website for a family bakery in Leeds that opens at 7."; `timerLine` = Timer's on.; `clockText` = Real time · m:ss if the cut plays at 1x; otherwise 'Sped up ×N' (expect ×8 for a 2 min build in 15 s); `label1` = Headline.; `label2` = Menu.; `label3` = Opening hours.; `editRequest` = make it warmer and put the opening hours at the top; `liveText` = Live. Real time [m:ss from the run log].; `ctaText` = What should I build next? Comment it.
+- **Template variables:** `hookLine` = One brief in. A whole website out.; `briefText` = "A website for a family bakery in Leeds that opens at 7."; `timerLine` = Timer's on.; `clockText` = Real time · m:ss if the cut plays at 1x; otherwise 'Sped up ×N' (expect ×8 for a 2 min build in 15 s); `label1` = Headline.; `label2` = Menu.; `label3` = Opening hours.; `editRequest` = make it warmer and put the opening hours at the top; `liveText` = Live. Real time [m:ss from the run log].; `ctaText` = What should I build next? Comment it.
 - **On-screen text, exactly:**
-  - 0-2s: "One sentence in. A whole website out." (VO: One sentence. Watch.)
-  - 2-5s: "Timer's on." (VO: I type one sentence about a bakery.)
+  - 0-2s: "One brief in. A whole website out." (VO: One brief. Watch.)
+  - 2-5s: "Timer's on." (VO: I type a brief about a bakery.)
   - 5-20s: "Headline. / Menu. / Opening hours." (VO: It writes the page, picks the type, lays out the menu.)
   - 20-28s: "Live. [real time]" (VO: One edit, publish, and it's live on a Makeborne address.)
   - 28-32s: "What should I build next? Comment it." (VO: Tell me what to build next.)
-- **Audio:** music: Brand TikTok: Commercial Music Library track, warm, upbeat acoustic-pop, about 118-124 BPM. Instagram/YouTube: a Meta Sound Collection / YouTube Audio Library track of the same mood. LinkedIn and X cuts: no music. VO: Founder's own voice, recorded to picture (voice memo, quiet room, 30 cm from the phone). Lines from the script: 'One sentence. Watch.' / 'I type one sentence about a bakery.' / 'It writes the page, picks the type, lays out the menu.' / 'One edit, publish, and it's live on a Makeborne address.' / 'Tell me what to build next.' SFX: Real UI sound only where it helps: one click on Create, a soft pop as each chip lands, the publish/export moment. No whooshes on every cut.
+- **Audio:** music: Brand TikTok: Commercial Music Library track, warm, upbeat acoustic-pop, about 118-124 BPM. Instagram/YouTube: a Meta Sound Collection / YouTube Audio Library track of the same mood. LinkedIn and X cuts: no music. VO: Founder's own voice, recorded to picture (voice memo, quiet room, 30 cm from the phone). Lines from the script: 'One brief. Watch.' / 'I type a brief about a bakery.' / 'It writes the page, picks the type, lays out the menu.' / 'One edit, publish, and it's live on a Makeborne address.' / 'Tell me what to build next.' SFX: Real UI sound only where it helps: one click on Create, a soft pop as each chip lands, the publish/export moment. No whooshes on every cut.
 - **Captions:** Burned-in, from `hyperframes transcribe` -> captions-to-html.mjs, 3-4 words per group, white pill at y 1060 (9:16); SRT uploaded on YouTube
 - **Disclosure:** Higgsfield version: On-screen 'AI-generated scene' chip on every frame of the clip (HyperFrames); TikTok 'AI-generated content' on; YouTube altered or synthetic content = Yes; Meta: add the AI label on organic posts (it may also add 'AI info' itself); the chip is also the EU AI Act first-exposure disclosure. Real version (A/B pair) and LinkedIn/X cuts: no AI label needed (real screen capture / real footage / typeset HTML). Keep the 'Sped up ×N' chip honest.
 - **Render:** 9:16 1080x1920 (TikTok, Reels, Shorts: native re-edit each); 16:9 1920x1080 (X); 4:5 1080x1350 (Instagram feed / Meta partnership-ad candidate, recomposed).
 - **Time and cost:** capture 45 min, edit 120 min, about 180 min the first time (106 min once routine). Tool cost 75 Higgsfield credits (about $3.68 at Plus, production budget). Makeborne AI provider cost of the builds about $0.60 (outside the $1,000; plan.json outsideBudget). Higgsfield credits come from the production budget, never the $1,000.
 - **Mix:** 23 s real, 9 s Higgsfield, 0 s HyperFrames-only.
 - **Higgsfield version (V02-HF):** A/B pair AB4: the real version is posted too (TikTok, real 2026-10-26, Higgsfield 2026-11-25). Posts: 2026-11-25 TikTok. Readiness: ready once the owner signs up (Tue 27 Oct); shots generated Tue 17 Nov (2026-11-17).
-  - Sections: 0-2.5 s hook from [HF11](#hf11) (clip 0.5-3 s) "One sentence in. / A whole website out." → `T07-cinematic-hook/index.html (hook slot)`; 2.5-4 s match from [HF11](#hf11) (clip 3-4.5 s) "the bakery window becomes the real published site" → `T07-cinematic-hook/compositions/match-to-ui.html`; 18-20 s scene from [HF11](#hf11) (clip 6-8 s) "Opening hours." → `T07-cinematic-hook/compositions/bridge.html`; 20-20.5 s transition from [HF11](#hf11) (clip 8-8.5 s) → `T07-cinematic-hook/compositions/bridge.html (lineText empty)`; 29.5-32 s endplate from [HF11](#hf11) (clip 7.5-10 s) "What should I build next? Comment it." → `T07-cinematic-hook/compositions/endplate.html`. Every second of a section shows generated pixels only; the real capture starts on the hard cut.
-  - HyperFrames slot variables: hook 0-2.5 s: `hookLead` = One sentence in., `hookAccent` = A whole website out., `aiLabelText` = AI-generated scene, `plateSrc` = assets/gen/HF11.mp4, `nextSrc` = assets/capture/first-real-shot.mp4 | match 2.5-4 s: `plateSrc` = assets/gen/HF11.mp4, `siteSrc` = assets/capture/phone-scroll.mp4 (REAL capture of the published site), `sentence` = "A website for a family bakery in Leeds that opens at 7.", `aiLabelText` = AI-generated scene | scene 18-20 s: `plateSrc` = assets/gen/HF11.mp4, `lineText` = Opening hours., `aiLabelText` = AI-generated scene | transition 20-20.5 s: `plateSrc` = assets/gen/HF11.mp4, `lineText` = , `aiLabelText` = AI-generated scene | endplate 29.5-32 s: `plateSrc` = assets/gen/HF11.mp4, `headLead` = Make yours at, `headAccent` = makeborne.com, `priceLine` = From $20/mo + tax, `refundLine` = Full refund until you use credits, `ctaText` = What should I build next? Comment it., `aiLabelText` = AI-generated scene
+  - Sections: 0-2.5 s hook from [HF11](#hf11) (clip 0.5-3 s) "One brief in. / A whole website out." → `T07-cinematic-hook/index.html (hook slot)`; 2.5-4 s match from [HF11](#hf11) (clip 3-4.5 s) "the bakery window becomes the real published site" → `T07-cinematic-hook/compositions/match-to-ui.html`; 18-20 s scene from [HF11](#hf11) (clip 6-8 s) "Opening hours." → `T07-cinematic-hook/compositions/bridge.html`; 20-20.5 s transition from [HF11](#hf11) (clip 8-8.5 s) → `T07-cinematic-hook/compositions/bridge.html (lineText empty)`; 29.5-32 s endplate from [HF11](#hf11) (clip 7.5-10 s) "What should I build next? Comment it." → `T07-cinematic-hook/compositions/endplate.html`. Every second of a section shows generated pixels only; the real capture starts on the hard cut.
+  - HyperFrames slot variables: hook 0-2.5 s: `hookLead` = One brief in., `hookAccent` = A whole website out., `aiLabelText` = AI-generated scene, `plateSrc` = assets/gen/HF11.mp4, `nextSrc` = assets/capture/first-real-shot.mp4 | match 2.5-4 s: `plateSrc` = assets/gen/HF11.mp4, `siteSrc` = assets/capture/phone-scroll.mp4 (REAL capture of the published site), `sentence` = "A website for a family bakery in Leeds that opens at 7.", `aiLabelText` = AI-generated scene | scene 18-20 s: `plateSrc` = assets/gen/HF11.mp4, `lineText` = Opening hours., `aiLabelText` = AI-generated scene | transition 20-20.5 s: `plateSrc` = assets/gen/HF11.mp4, `lineText` = , `aiLabelText` = AI-generated scene | endplate 29.5-32 s: `plateSrc` = assets/gen/HF11.mp4, `headLead` = Make yours at, `headAccent` = makeborne.com, `priceLine` = From $20/mo + tax, `refundLine` = Full refund until you use credits, `ctaText` = What should I build next? Comment it., `aiLabelText` = AI-generated scene
   - **HF11** (Kling 3.0 (in Higgsfield), 1080p, text-to-video, Dolly In, 10 s, 9:16, 3 takes, 75 credits)
     - Prompt: "Vertical 9:16 shot, slow gentle push in. The front window of a small family bakery on a quiet brick street in northern England just before opening, 6:58 a.m., blue-hour street light outside, warm tungsten lights flicking on inside one row at a time, wooden shelves of fresh sourdough loaves and buns behind the glass, light rain beading on the window, steam on the inside of the glass. By the end the shop is fully lit and the window rectangle is centred in frame. No people, no hands, no faces, no signage, no letters, no logos, no readable text anywhere. Shallow depth of field, soft film grain, natural colour, realistic."
     - Negative and keep rule: see [HF11](#hf11).
@@ -1043,7 +1043,7 @@ Each template is a HyperFrames project skeleton that follows the composition con
 
 #### V03
 
-**Pitch deck from one sentence** · P0 · week 1 · 30 s · first post 2026-10-26 21:00 TikTok · **readiness: now**
+**Pitch deck from one brief** · P0 · week 1 · 30 s · first post 2026-10-26 21:00 TikTok · **readiness: now**
 
 - **Make with:** Higgsfield hook + real. **Pipeline / template:** P1-speedrun / T02-speedrun. **Tools:** Makeborne (real run), OBS screen capture, HyperFrames, PowerPoint, Higgsfield (Higgsfield Cinema Studio), platform music library.
 - **Capture in the app:**
@@ -1052,22 +1052,22 @@ Each template is a HyperFrames project skeleton that follows the composition con
   - Export PPTX; open in desktop PowerPoint (light theme); click the chart: selection handles; right-click Edit Data so the grid shows
   - Frame 0: finished title slide and chart slide as stills for the fan (T04 slides at 0.6 s per slide); fallback v12 deck_sheet.jpg with no brand name legible
   - Check the shop name the deck invents; crop if it collides
-- **Template variables:** `hookLine` = Pitch deck from one sentence. Timer's on.; `briefText` = "A 10-slide pitch for a bike repair shop raising money for a second workshop."; `timerLine` = One sentence.; `clockText` = Real time · m:ss (use the measured time; the D1 hook says '40 seconds' only if that is the real time) or 'Sped up ×N'; `label1` = Story.; `label2` = Numbers.; `label3` = The ask.; `editRequest` = (no chat edit: replace this scene with the PPTX opening in PowerPoint and the chart click); `liveText` = Opens in PowerPoint. Real chart.; `ctaText` = Comment DECK.
+- **Template variables:** `hookLine` = Pitch deck from one brief. Timer's on.; `briefText` = "A 10-slide pitch for a bike repair shop raising money for a second workshop."; `timerLine` = One brief.; `clockText` = Real time · m:ss (use the measured time; the D1 hook says '40 seconds' only if that is the real time) or 'Sped up ×N'; `label1` = Story.; `label2` = Numbers.; `label3` = The ask.; `editRequest` = (no chat edit: replace this scene with the PPTX opening in PowerPoint and the chart click); `liveText` = Opens in PowerPoint. Real chart.; `ctaText` = Comment DECK.
 - **On-screen text, exactly:**
-  - 0-2s: "Pitch deck from one sentence. Timer's on." (VO: One sentence. A whole pitch deck.)
-  - 2-5s: "One sentence." (VO: Presentation, one sentence, create.)
+  - 0-2s: "Pitch deck from one brief. Timer's on." (VO: One brief. A whole pitch deck.)
+  - 2-5s: "One brief." (VO: Presentation, one brief, create.)
   - 5-20s: "Story. / Numbers. / The ask." (VO: It builds the story, the numbers slide and the ask.)
   - 20-27s: "Opens in PowerPoint. Real chart." (VO: And it opens in PowerPoint. That chart is real, not a picture.)
   - 27-30s: "Comment DECK." (VO: Comment DECK and I'll send the brief.)
-- **Audio:** music: Brand TikTok: Commercial Music Library track, confident minimal electronic pulse, 120 BPM. Instagram/YouTube: a Meta Sound Collection / YouTube Audio Library track of the same mood. LinkedIn and X cuts: no music. VO: Founder's own voice, recorded to picture (voice memo, quiet room, 30 cm from the phone). 'One sentence. A whole pitch deck.' / 'Presentation, one sentence, create.' / 'It builds the story, the numbers slide and the ask.' / 'And it opens in PowerPoint. That chart is real, not a picture.' / 'Comment DECK and I'll send the brief.' SFX: Real UI sound only where it helps: one click on Create, a soft pop as each chip lands, the publish/export moment. No whooshes on every cut. Slides dealt on the beat (soft paper tick).
+- **Audio:** music: Brand TikTok: Commercial Music Library track, confident minimal electronic pulse, 120 BPM. Instagram/YouTube: a Meta Sound Collection / YouTube Audio Library track of the same mood. LinkedIn and X cuts: no music. VO: Founder's own voice, recorded to picture (voice memo, quiet room, 30 cm from the phone). 'One brief. A whole pitch deck.' / 'Presentation, one brief, create.' / 'It builds the story, the numbers slide and the ask.' / 'And it opens in PowerPoint. That chart is real, not a picture.' / 'Comment DECK and I'll send the brief.' SFX: Real UI sound only where it helps: one click on Create, a soft pop as each chip lands, the publish/export moment. No whooshes on every cut. Slides dealt on the beat (soft paper tick).
 - **Captions:** Burned-in, from `hyperframes transcribe` -> captions-to-html.mjs, 3-4 words per group, white pill at y 1060 (9:16); SRT uploaded on YouTube
 - **Disclosure:** Higgsfield version: On-screen 'AI-generated scene' chip on every frame of the clip (HyperFrames); TikTok 'AI-generated content' on; YouTube altered or synthetic content = Yes; Meta: add the AI label on organic posts (it may also add 'AI info' itself); the chip is also the EU AI Act first-exposure disclosure. Real version (A/B pair) and LinkedIn/X cuts: no AI label needed (real screen capture / real footage / typeset HTML). Keep the 'Sped up ×N' chip honest.
 - **Render:** 9:16 1080x1920 (TikTok, Reels, Shorts: native re-edit each); 4:5 1080x1350 (LinkedIn, captions, no music); 16:9 1920x1080 (X); 4:5 1080x1350 (Instagram feed / Meta partnership-ad candidate, recomposed).
 - **Time and cost:** capture 40 min, edit 110 min, about 165 min the first time (97 min once routine). Tool cost 0 Higgsfield credits (about $0 at Plus, production budget). Makeborne AI provider cost of the builds about $0.30 (outside the $1,000; plan.json outsideBudget). Higgsfield credits come from the production budget, never the $1,000.
 - **Mix:** 22 s real, 8 s Higgsfield, 0 s HyperFrames-only.
 - **Higgsfield version (V03-HF):** A/B pair AB3: the real version is posted too (TikTok, real 2026-10-26, Higgsfield 2026-11-24). Posts: 2026-11-24 TikTok; 2026-11-24 Instagram Reels. Readiness: ready once the owner signs up (Tue 27 Oct); shots generated Wed 28 Oct (2026-10-28).
-  - Sections: 0-2.5 s hook from [HF03](#hf03) (clip 0.3-2.8 s) "Pitch deck from one sentence. / Timer's on." → `T07-cinematic-hook/index.html (hook slot)`; 2.5-3 s transition from [HF03](#hf03) (clip 2.8-3.3 s) → `T07-cinematic-hook/compositions/bridge.html (lineText empty)`; 19.5-21 s bridge from [HF03](#hf03) (clip 1-2.5 s) "Then the real test." → `T07-cinematic-hook/compositions/bridge.html`; 26.5-30 s endplate from [HF03](#hf03) (clip 1.5-5 s) "Comment DECK." → `T07-cinematic-hook/compositions/endplate.html`. Every second of a section shows generated pixels only; the real capture starts on the hard cut.
-  - HyperFrames slot variables: hook 0-2.5 s: `hookLead` = Pitch deck from one sentence., `hookAccent` = Timer's on., `aiLabelText` = AI-generated scene, `plateSrc` = assets/gen/HF03.mp4, `nextSrc` = assets/capture/first-real-shot.mp4 | transition 2.5-3 s: `plateSrc` = assets/gen/HF03.mp4, `lineText` = , `aiLabelText` = AI-generated scene | bridge 19.5-21 s: `plateSrc` = assets/gen/HF03.mp4, `lineText` = Then the real test., `aiLabelText` = AI-generated scene | endplate 26.5-30 s: `plateSrc` = assets/gen/HF03.mp4, `headLead` = Make yours at, `headAccent` = makeborne.com, `priceLine` = From $20/mo + tax, `refundLine` = Full refund until you use credits, `ctaText` = Comment DECK., `aiLabelText` = AI-generated scene
+  - Sections: 0-2.5 s hook from [HF03](#hf03) (clip 0.3-2.8 s) "Pitch deck from one brief. / Timer's on." → `T07-cinematic-hook/index.html (hook slot)`; 2.5-3 s transition from [HF03](#hf03) (clip 2.8-3.3 s) → `T07-cinematic-hook/compositions/bridge.html (lineText empty)`; 19.5-21 s bridge from [HF03](#hf03) (clip 1-2.5 s) "Then the real test." → `T07-cinematic-hook/compositions/bridge.html`; 26.5-30 s endplate from [HF03](#hf03) (clip 1.5-5 s) "Comment DECK." → `T07-cinematic-hook/compositions/endplate.html`. Every second of a section shows generated pixels only; the real capture starts on the hard cut.
+  - HyperFrames slot variables: hook 0-2.5 s: `hookLead` = Pitch deck from one brief., `hookAccent` = Timer's on., `aiLabelText` = AI-generated scene, `plateSrc` = assets/gen/HF03.mp4, `nextSrc` = assets/capture/first-real-shot.mp4 | transition 2.5-3 s: `plateSrc` = assets/gen/HF03.mp4, `lineText` = , `aiLabelText` = AI-generated scene | bridge 19.5-21 s: `plateSrc` = assets/gen/HF03.mp4, `lineText` = Then the real test., `aiLabelText` = AI-generated scene | endplate 26.5-30 s: `plateSrc` = assets/gen/HF03.mp4, `headLead` = Make yours at, `headAccent` = makeborne.com, `priceLine` = From $20/mo + tax, `refundLine` = Full refund until you use credits, `ctaText` = Comment DECK., `aiLabelText` = AI-generated scene
   - **HF03** (Higgsfield Cinema Studio, 1080p, text-to-video, Super Dolly In, 5 s, 9:16, 2 takes, 100 credits)
     - Prompt: "Vertical 9:16 cinematic shot, slow dolly in along a long oak meeting table toward a large wall screen that glows a plain soft white with nothing on it. An empty modern meeting room at dawn, eight empty chairs, a glass of water and a closed notebook at the head of the table, floor-to-ceiling windows with a city skyline in soft morning haze, warm sunrise light raking across the table. No people. Realistic, anamorphic 40 mm lens look, shallow depth of field, gentle film grain, quiet anticipation before a pitch."
     - Negative and keep rule: see [HF03](#hf03).
@@ -1353,8 +1353,8 @@ Each template is a HyperFrames project skeleton that follows the composition con
 - **Time and cost:** capture 150 min, edit 90 min, about 255 min the first time (175 min once routine). Tool cost 100 Higgsfield credits (about $4.9 at Plus, production budget). Makeborne AI provider cost of the builds about $0.30 (outside the $1,000; plan.json outsideBudget). Higgsfield credits come from the production budget, never the $1,000.
 - **Mix:** 20 s real, 7 s Higgsfield, 0 s HyperFrames-only.
 - **Higgsfield version (V14-HF):** Main TikTok/Reels/Shorts cut; LinkedIn and X keep the real-only cut. Posts: 2026-11-03 TikTok. Readiness: ready once the owner signs up (Tue 27 Oct); shots generated Wed 28 Oct (2026-10-28).
-  - Sections: 0-2 s hook from [HF03](#hf03) (clip 0.3-2.3 s) "My slides vs. the deck I made / from the same notes." → `T07-cinematic-hook/index.html (hook slot)`; 2-2.5 s transition from [HF03](#hf03) (clip 4-4.5 s) → `T07-cinematic-hook/compositions/bridge.html (lineText empty)`; 9.5-11 s bridge from [HF03](#hf03) (clip 2.3-3.8 s) "Same notes. One sentence." → `T07-cinematic-hook/compositions/bridge.html`; 24-27 s endplate from [HF03](#hf03) (clip 2-5 s) "Left or right?" → `T07-cinematic-hook/compositions/endplate.html`. Every second of a section shows generated pixels only; the real capture starts on the hard cut.
-  - HyperFrames slot variables: hook 0-2 s: `hookLead` = My slides vs. the deck I made, `hookAccent` = from the same notes., `aiLabelText` = AI-generated scene, `plateSrc` = assets/gen/HF03.mp4, `nextSrc` = assets/capture/first-real-shot.mp4 | transition 2-2.5 s: `plateSrc` = assets/gen/HF03.mp4, `lineText` = , `aiLabelText` = AI-generated scene | bridge 9.5-11 s: `plateSrc` = assets/gen/HF03.mp4, `lineText` = Same notes. One sentence., `aiLabelText` = AI-generated scene | endplate 24-27 s: `plateSrc` = assets/gen/HF03.mp4, `headLead` = Make yours at, `headAccent` = makeborne.com, `priceLine` = From $20/mo + tax, `refundLine` = Full refund until you use credits, `ctaText` = Left or right?, `aiLabelText` = AI-generated scene
+  - Sections: 0-2 s hook from [HF03](#hf03) (clip 0.3-2.3 s) "My slides vs. the deck I made / from the same notes." → `T07-cinematic-hook/index.html (hook slot)`; 2-2.5 s transition from [HF03](#hf03) (clip 4-4.5 s) → `T07-cinematic-hook/compositions/bridge.html (lineText empty)`; 9.5-11 s bridge from [HF03](#hf03) (clip 2.3-3.8 s) "Same notes. One brief." → `T07-cinematic-hook/compositions/bridge.html`; 24-27 s endplate from [HF03](#hf03) (clip 2-5 s) "Left or right?" → `T07-cinematic-hook/compositions/endplate.html`. Every second of a section shows generated pixels only; the real capture starts on the hard cut.
+  - HyperFrames slot variables: hook 0-2 s: `hookLead` = My slides vs. the deck I made, `hookAccent` = from the same notes., `aiLabelText` = AI-generated scene, `plateSrc` = assets/gen/HF03.mp4, `nextSrc` = assets/capture/first-real-shot.mp4 | transition 2-2.5 s: `plateSrc` = assets/gen/HF03.mp4, `lineText` = , `aiLabelText` = AI-generated scene | bridge 9.5-11 s: `plateSrc` = assets/gen/HF03.mp4, `lineText` = Same notes. One brief., `aiLabelText` = AI-generated scene | endplate 24-27 s: `plateSrc` = assets/gen/HF03.mp4, `headLead` = Make yours at, `headAccent` = makeborne.com, `priceLine` = From $20/mo + tax, `refundLine` = Full refund until you use credits, `ctaText` = Left or right?, `aiLabelText` = AI-generated scene
   - **HF03** (Higgsfield Cinema Studio, 1080p, text-to-video, Super Dolly In, 5 s, 9:16, 2 takes, 100 credits)
     - Prompt: "Vertical 9:16 cinematic shot, slow dolly in along a long oak meeting table toward a large wall screen that glows a plain soft white with nothing on it. An empty modern meeting room at dawn, eight empty chairs, a glass of water and a closed notebook at the head of the table, floor-to-ceiling windows with a city skyline in soft morning haze, warm sunrise light raking across the table. No people. Realistic, anamorphic 40 mm lens look, shallow depth of field, gentle film grain, quiet anticipation before a pitch."
     - Negative and keep rule: see [HF03](#hf03).
@@ -1368,7 +1368,7 @@ Each template is a HyperFrames project skeleton that follows the composition con
 - **Capture in the app:**
   - Phone: a notes-app list prop with invented ideas (founder's own phone, nothing private): 'book about fixing old furniture'
   - Real book pages: The Repair Table (v12 real run, pages 1-17; crop bracketed placeholders) or a fresh run of the same idea
-  - Composer in Book mode with the one-line idea typed
+  - Composer in Book mode with the brief typed
 - **Template variables:** `cover` = Your notes app is full of book ideas.; `s1` = Here's one, finished.; `cta` = Comment BOOK.
 - **On-screen text, exactly:**
   - 0-2s: "Your notes app is full of book ideas." (VO: Your notes app is full of book ideas.)
@@ -1397,16 +1397,16 @@ Each template is a HyperFrames project skeleton that follows the composition con
 
 #### V16
 
-**5 websites, each from one sentence (swipe)** · P1 · week 2 · 15 s · first post 2026-11-04 21:30 TikTok · **readiness: now**
+**5 websites, each from one brief (swipe)** · P1 · week 2 · 15 s · first post 2026-11-04 21:30 TikTok · **readiness: now**
 
 - **Make with:** Higgsfield hook + real. **Pipeline / template:** P7-showcase / T04-showcase slides (+ photo-mode stills via snapshot). **Tools:** Makeborne (real run), OBS screen capture, HyperFrames, Higgsfield (Higgsfield Cinema Studio + Kling 3.0), platform music library.
 - **Capture in the app:**
   - Five fresh production runs of the C06 briefs (first output kept; time and credits logged)
   - Each site's first screen at 390 px (phone) and 1440x900
   - Trademark-check every invented name; never the synthetic 'Tide Tables' fixtures or real-business redesigns
-- **Template variables:** `cover` = 5 websites, each from one sentence.; `s1` = "A small coffee roastery in Sarajevo."; `s2` = "A bouldering gym in an old tram depot."; `s3` = "A 28-seat osteria in Ljubljana."; `s4` = "A handoff tracker for small logistics teams."; `s5` = "A seafood smokehouse by the harbour."; `cta` = Comment SITE for all 5 briefs.
+- **Template variables:** `cover` = 5 websites, each from one brief.; `s1` = "A small coffee roastery in Sarajevo."; `s2` = "A bouldering gym in an old tram depot."; `s3` = "A 28-seat osteria in Ljubljana."; `s4` = "A handoff tracker for small logistics teams."; `s5` = "A seafood smokehouse by the harbour."; `cta` = Comment SITE for all 5 briefs.
 - **On-screen text, exactly:**
-  - slide 1 (0-2s): "5 websites, each from one sentence."
+  - slide 1 (0-2s): "5 websites, each from one brief."
   - slides 2-5: "'A site for a bouldering gym.' · [N] credits"
   - slide 6: "Comment SITE for all 5 briefs."
 - **Audio:** music: TikTok photo mode: CML track; Instagram carousel: none or a cleared library track. VO: None SFX: None
@@ -1416,7 +1416,7 @@ Each template is a HyperFrames project skeleton that follows the composition con
 - **Time and cost:** capture 60 min, edit 45 min, about 120 min the first time (81 min once routine). Tool cost 125 Higgsfield credits (about $6.13 at Plus, production budget). Makeborne AI provider cost of the builds about $2.50 (outside the $1,000; plan.json outsideBudget). Higgsfield credits come from the production budget, never the $1,000.
 - **Mix:** 9 s real, 4 s Higgsfield, 2 s HyperFrames-only.
 - **Higgsfield version (V16-HF):** Main TikTok/Reels/Shorts cut; LinkedIn and X keep the real-only cut. Posts: 2026-11-04 TikTok; 2026-11-04 Instagram Reels. Readiness: ready once the owner signs up (Tue 27 Oct); shots generated Tue 3 Nov (2026-11-03).
-  - Sections: 0-2 s match from [HF07](#hf07) (clip 2.5-4.5 s) "5 websites, each from one sentence. (the roastery window becomes the real roastery site)" → `T07-cinematic-hook/compositions/match-to-ui.html`; 4-6 s i2v from [HF08](#hf08) (clip 0.5-2.5 s) ""A bouldering gym in an old tram depot."" → `T04-showcase/compositions/i2v.html`. Slide 6 (13-15 s) stays the flat HyperFrames CTA card.
+  - Sections: 0-2 s match from [HF07](#hf07) (clip 2.5-4.5 s) "5 websites, each from one brief. (the roastery window becomes the real roastery site)" → `T07-cinematic-hook/compositions/match-to-ui.html`; 4-6 s i2v from [HF08](#hf08) (clip 0.5-2.5 s) ""A bouldering gym in an old tram depot."" → `T04-showcase/compositions/i2v.html`. Slide 6 (13-15 s) stays the flat HyperFrames CTA card.
   - HyperFrames slot variables: match 0-2 s: `plateSrc` = assets/gen/HF07.mp4, `siteSrc` = assets/capture/phone-scroll.mp4 (REAL capture of the published site), `sentence` = "A small coffee roastery in Sarajevo.", `aiLabelText` = AI-generated scene | i2v 4-6 s: `clipSrc` = assets/gen/HF08.mp4, `sentence` = "A bouldering gym in an old tram depot.", `footnote` = Built in m:ss · N credits · unedited (from the run log), `aiLabelText` = AI camera move on a real Makeborne output
   - **HF07** (Higgsfield Cinema Studio, 1080p, text-to-video, Dolly In, 5 s, 9:16, 2 takes, 100 credits)
     - Prompt: "Vertical 9:16 cinematic shot, slow dolly in toward the front window of a small specialty coffee roastery on a quiet old-town street at dawn. Behind the glass: a small copper drum roaster, burlap sacks of green beans, glass jars of roasted beans, a wooden counter, warm pendant lights switching on, a thin curl of steam. Blue-hour light outside, warm light inside, light rain on the cobblestones. The move ends with the lit window rectangle centred and filling the middle third of the frame. No people. No lettering on the window, sacks or jars. Realistic, 35 mm lens, shallow depth of field, soft film grain, quiet and hopeful."
@@ -1509,7 +1509,7 @@ Each template is a HyperFrames project skeleton that follows the composition con
 - **Template variables:** `briefText` = "A website for a neighbourhood hair salon with opening hours, phone, map, services and a booking button."; `label1` = Their 5 rules, one brief; `ctaText` = 5/5. Credit: @creator
 - **On-screen text, exactly:**
   - 0-4s: "Let's test this." (VO: You said every small business site needs these five things.)
-  - 4-15s: "Their 5 rules, one brief" (VO: I put all five in one sentence.)
+  - 4-15s: "Their 5 rules, one brief" (VO: I put all five in one brief.)
   - 15-45s: "✔ Hours ✔ Phone ✔ Map..." (VO: Hours, phone, location, services, booking button.)
   - 45-60s: "5/5. Credit: @creator" (VO: Five out of five. Thanks for the checklist.)
 - **Audio:** music: Stitched clip's original audio, then founder VO. VO: Founder's own voice, recorded to picture (voice memo, quiet room, 30 cm from the phone). SFX: A tick per rule
@@ -1551,10 +1551,10 @@ Each template is a HyperFrames project skeleton that follows the composition con
   - Build (clock chip); own photos only if photo upload works on production (check first)
   - Chat edits: house rules; check-in times
   - Publish to a Makeborne address (no custom-domain claim)
-- **Template variables:** `title` = How to make a website for your rental.; `step1` = Step 1: one detailed sentence; `step2` = Step 2: build; `step3` = Step 3: edit in chat; `step4` = Step 4: publish; `ctaText` = Comment SITE.
+- **Template variables:** `title` = How to make a website for your rental.; `step1` = Step 1: one detailed brief; `step2` = Step 2: build; `step3` = Step 3: edit in chat; `step4` = Step 4: publish; `ctaText` = Comment SITE.
 - **On-screen text, exactly:**
   - 0-2s: "How to make a website for your rental." (VO: Here's how to make a website for your holiday rental.)
-  - 2-20s: "Step 1: one detailed sentence" (VO: Step one: describe the place in one or two sentences.)
+  - 2-20s: "Step 1: one detailed brief" (VO: Step one: describe the place in one detailed paragraph.)
   - 20-50s: "Step 2: build" (VO: Step two: build it. Use your own photos if you have them.)
   - 50-75s: "Step 3: edit in chat" (VO: Step three: tell it what to change.)
   - 75-90s: "Step 4: publish" (VO: Step four: publish. It's live on a Makeborne address. Comment SITE.)
@@ -1680,10 +1680,10 @@ Each template is a HyperFrames project skeleton that follows the composition con
   - Real coffee hero shot: a steaming cup next to a tablet showing the finished guide cover (phone camera, morning light)
   - Composer in Book mode, the brief typed; build; page riffle
   - Export PDF; it lands in an e-mail draft (invented recipient)
-- **Template variables:** `hookLine` = Your lead magnet, before your coffee's cold.; `briefText` = "A 7-day guide to sleeping better for new parents, by a sleep coach."; `label1` = One sentence.; `label2` = Chapters. Checklists. Your voice.; `label3` = Export the PDF.; `ctaText` = Comment BOOK.
+- **Template variables:** `hookLine` = Your lead magnet, before your coffee's cold.; `briefText` = "A 7-day guide to sleeping better for new parents, by a sleep coach."; `label1` = One brief.; `label2` = Chapters. Checklists. Your voice.; `label3` = Export the PDF.; `ctaText` = Comment BOOK.
 - **On-screen text, exactly:**
   - 0-2s: "Your lead magnet, before your coffee's cold." (VO: Your lead magnet, before your coffee goes cold.)
-  - 2-8s: "One sentence." (VO: One sentence about what you teach.)
+  - 2-8s: "One brief." (VO: One brief about what you teach.)
   - 8-25s: "Chapters. Checklists. Your voice." (VO: Chapters, checklists, a 7-day plan.)
   - 25-35s: "Export the PDF." (VO: Export the PDF and give it away. Comment BOOK.)
 - **Audio:** music: Brand TikTok: Commercial Music Library track, calm morning acoustic, 92 BPM. Instagram/YouTube: a Meta Sound Collection / YouTube Audio Library track of the same mood. LinkedIn and X cuts: no music. VO: Founder's own voice, recorded to picture (voice memo, quiet room, 30 cm from the phone). Add: coaches must review content for accuracy (health topic). SFX: Page turns
@@ -1727,17 +1727,17 @@ Each template is a HyperFrames project skeleton that follows the composition con
 
 #### V29
 
-**Made from one sentence (daily 8-second series)** · P1 · week 2 · 8 s · first post 2026-11-04 13:30 YouTube Shorts · **readiness: now**
+**Made from one brief (daily 8-second series)** · P1 · week 2 · 8 s · first post 2026-11-04 13:30 YouTube Shorts · **readiness: now**
 
 - **Make with:** Higgsfield hook + real. **Pipeline / template:** P7-showcase / T04-showcase scroll (8 s) via render --batch. **Tools:** Makeborne (real run), OBS screen capture, HyperFrames, Higgsfield (Kling 3.0), platform music library.
 - **Capture in the app:**
   - One fresh production run per episode (first output kept), 390-wide full-page PNG at 2x
   - Run-log row: brief, time, credits
   - Never a duplicate upload; one per day at most
-- **Template variables:** `sentence` = "A site for my bouldering gym."; `series` = Made from one sentence #N; `footnote` = Built in m:ss · N credits · unedited; `queue` = ["A site for my bouldering gym.","A website for a mobile dog groomer in Leeds.","A site for a two-chair barber in Mostar.","A website for a piano teacher who teaches online.","A site for a small vineyard that sells by the case.","A website for a weekend farmers' market.","A site for a family-run bike rental on the coast.","A website for a ceramics studio that runs classes.","A site for a translator who works in four languages.","A website for a community choir looking for tenors."]
+- **Template variables:** `sentence` = "A site for my bouldering gym."; `series` = Made from one brief #N; `footnote` = Built in m:ss · N credits · unedited; `queue` = ["A site for my bouldering gym.","A website for a mobile dog groomer in Leeds.","A site for a two-chair barber in Mostar.","A website for a piano teacher who teaches online.","A site for a small vineyard that sells by the case.","A website for a weekend farmers' market.","A site for a family-run bike rental on the coast.","A website for a ceramics studio that runs classes.","A site for a translator who works in four languages.","A website for a community choir looking for tenors."]
 - **On-screen text, exactly:**
   - 0-2s: "'A site for my bouldering gym.'"
-  - 2-7s: "Made from that sentence."
+  - 2-7s: "Made from that brief."
   - 7-8s: "makeborne.com"
 - **Audio:** music: One consistent CML loop as the series signature. VO: None SFX: None
 - **Captions:** No speech: on-screen text carries it; no caption track
@@ -2174,16 +2174,16 @@ Each template is a HyperFrames project skeleton that follows the composition con
 
 #### V48
 
-**A dated website vs a first version from one sentence** · P2 · week 8 · 25 s · first post 2026-12-18 13:00 TikTok · **readiness: now**
+**A dated website vs a first version from one brief** · P2 · week 8 · 25 s · first post 2026-12-18 13:00 TikTok · **readiness: now**
 
 - **Make with:** Higgsfield hook + real. **Pipeline / template:** P2-before-after / T03-split. **Tools:** Makeborne (real run), OBS screen capture, HyperFrames, Higgsfield (Kling 3.0), platform music library.
 - **Capture in the app:**
   - BEFORE: a deliberately dated fictional site we hand-build ourselves (2014 look) and host locally; scroll capture
   - AFTER: the brief above on production; scroll capture; phone view; publish
-- **Template variables:** `headline` = 2014 vs one sentence.; `beforeLabel` = 2014 (we built this one ourselves); `afterLabel` = One sentence; `pollText` = A first version, before you hire anyone.; `briefText` = "A website for a family-run hardware store in Leeds, open since 1978."
+- **Template variables:** `headline` = 2014 vs one brief.; `beforeLabel` = 2014 (we built this one ourselves); `afterLabel` = One brief; `pollText` = A first version, before you hire anyone.; `briefText` = "A website for a family-run hardware store in Leeds, open since 1978."
 - **On-screen text, exactly:**
-  - 0-2s: "2014 vs one sentence." (VO: Left: 2014. Right: one sentence.)
-  - 2-15s: "Same business. One sentence." (VO: Same business, one sentence.)
+  - 0-2s: "2014 vs one brief." (VO: Left: 2014. Right: one brief.)
+  - 2-15s: "Same business. One brief." (VO: Same business, one brief.)
   - 15-25s: "A first version, before you hire anyone." (VO: A first version before you hire a designer. Comment SITE.)
 - **Audio:** music: Brand TikTok: Commercial Music Library track, retro-to-modern switch, 120 BPM. Instagram/YouTube: a Meta Sound Collection / YouTube Audio Library track of the same mood. LinkedIn and X cuts: no music. VO: Founder's own voice, recorded to picture (voice memo, quiet room, 30 cm from the phone). Brand TikTok only; never on Lane A surfaces. SFX: None
 - **Captions:** Burned-in, from `hyperframes transcribe` -> captions-to-html.mjs, 3-4 words per group, white pill at y 1060 (9:16); SRT uploaded on YouTube
@@ -2192,8 +2192,8 @@ Each template is a HyperFrames project skeleton that follows the composition con
 - **Time and cost:** capture 90 min, edit 90 min, about 195 min the first time (127 min once routine). Tool cost 25 Higgsfield credits (about $1.23 at Plus, production budget). Makeborne AI provider cost of the builds about $0.60 (outside the $1,000; plan.json outsideBudget). Higgsfield credits come from the production budget, never the $1,000.
 - **Mix:** 18 s real, 7 s Higgsfield, 0 s HyperFrames-only.
 - **Higgsfield version (V48-HF):** Main TikTok/Reels/Shorts cut; LinkedIn and X keep the real-only cut. Posts: 2026-12-18 TikTok. Readiness: ready once the owner signs up (Tue 27 Oct); shots generated Tue 8 Dec (2026-12-08).
-  - Sections: 0-3 s hook from [HF22](#hf22) (clip 0.5-3.5 s) "Your 2014 website / vs. one sentence." → `T07-cinematic-hook/index.html (hook slot)`; 14-15 s bridge from [HF22](#hf22) (clip 3.5-4.5 s) "The one from one sentence:" → `T07-cinematic-hook/compositions/bridge.html`; 22-25 s endplate from [HF22](#hf22) (clip 2-5 s) "A first version, before you hire anyone." → `T07-cinematic-hook/compositions/endplate.html`. Every second of a section shows generated pixels only; the real capture starts on the hard cut.
-  - HyperFrames slot variables: hook 0-3 s: `hookLead` = Your 2014 website, `hookAccent` = vs. one sentence., `aiLabelText` = AI-generated scene, `plateSrc` = assets/gen/HF22.mp4, `nextSrc` = assets/capture/first-real-shot.mp4 | bridge 14-15 s: `plateSrc` = assets/gen/HF22.mp4, `lineText` = The one from one sentence:, `aiLabelText` = AI-generated scene | endplate 22-25 s: `plateSrc` = assets/gen/HF22.mp4, `headLead` = Make yours at, `headAccent` = makeborne.com, `priceLine` = From $20/mo + tax, `refundLine` = Full refund until you use credits, `ctaText` = A first version, before you hire anyone., `aiLabelText` = AI-generated scene
+  - Sections: 0-3 s hook from [HF22](#hf22) (clip 0.5-3.5 s) "Your 2014 website / vs. one brief." → `T07-cinematic-hook/index.html (hook slot)`; 14-15 s bridge from [HF22](#hf22) (clip 3.5-4.5 s) "The one from one brief:" → `T07-cinematic-hook/compositions/bridge.html`; 22-25 s endplate from [HF22](#hf22) (clip 2-5 s) "A first version, before you hire anyone." → `T07-cinematic-hook/compositions/endplate.html`. Every second of a section shows generated pixels only; the real capture starts on the hard cut.
+  - HyperFrames slot variables: hook 0-3 s: `hookLead` = Your 2014 website, `hookAccent` = vs. one brief., `aiLabelText` = AI-generated scene, `plateSrc` = assets/gen/HF22.mp4, `nextSrc` = assets/capture/first-real-shot.mp4 | bridge 14-15 s: `plateSrc` = assets/gen/HF22.mp4, `lineText` = The one from one brief:, `aiLabelText` = AI-generated scene | endplate 22-25 s: `plateSrc` = assets/gen/HF22.mp4, `headLead` = Make yours at, `headAccent` = makeborne.com, `priceLine` = From $20/mo + tax, `refundLine` = Full refund until you use credits, `ctaText` = A first version, before you hire anyone., `aiLabelText` = AI-generated scene
   - **HF22** (Kling 3.0 (in Higgsfield), 1080p, text-to-video, Dolly In, 5 s, 9:16, 2 takes, 25 credits)
     - Prompt: "Vertical 9:16 shot, slow push in on the front of an old family-run hardware store on an ordinary high street in flat overcast afternoon light: faded green paint, a sun-bleached blank awning, a window display of tools and paint tins arranged long ago, a little dust on the glass. Dignified, not shabby. No people. Blank fascia board, no shop name, no letters on tins or in the window. Realistic, natural colour, 35 mm lens, gentle film grain."
     - Negative and keep rule: see [HF22](#hf22).
@@ -2207,9 +2207,9 @@ Each template is a HyperFrames project skeleton that follows the composition con
 - **Capture in the app:**
   - The same 3 briefs (C01 coffee roastery, a deck, a book) run before (launch-week typographic captures) and after on the SHIPPED images version
   - Outputs from the shipped version only; never pre-release quality runs or the v14 concept sheet
-- **Template variables:** `headline` = Same sentence. Now with images.; `beforeLabel` = Launch week; `afterLabel` = Today; `pollText` = Comment SITE.
+- **Template variables:** `headline` = Same brief. Now with images.; `beforeLabel` = Launch week; `afterLabel` = Today; `pollText` = Comment SITE.
 - **On-screen text, exactly:**
-  - 0-2s: "Same sentence. Now with images." (VO: Same sentence. Now it makes the images too.)
+  - 0-2s: "Same brief. Now with images." (VO: Same brief. Now it makes the images too.)
   - 2-12s: "Sites" (VO: Sites.)
   - 12-20s: "Decks" (VO: Decks, with full-image slides.)
   - 20-27s: "Books" (VO: And books.)
@@ -2245,14 +2245,14 @@ Each template is a HyperFrames project skeleton that follows the composition con
 
 #### V51
 
-**Full-image slides from one sentence (deck images demo)** · P1 · week 4 · 25 s · first post 2026-11-18 13:00 TikTok · **readiness: needs images live (six-box gate)**
+**Full-image slides from one brief (deck images demo)** · P1 · week 4 · 25 s · first post 2026-11-18 13:00 TikTok · **readiness: needs images live (six-box gate)**
 
 - **Make with:** Higgsfield hook + real. **Pipeline / template:** P1-speedrun / T02-speedrun. **Tools:** Makeborne (real run), OBS screen capture, HyperFrames, Higgsfield (Kling 3.0), platform music library.
 - **Capture in the app:**
   - Shipped quality and aspect controls; build; deck deals in; show the real credit cost per image
-- **Template variables:** `hookLine` = Full-image slides. One sentence.; `label1` = Pick quality. Pick aspect.; `label2` = Your deck, your images.; `ctaText` = Comment DECK.
+- **Template variables:** `hookLine` = Full-image slides. One brief.; `label1` = Pick quality. Pick aspect.; `label2` = Your deck, your images.; `ctaText` = Comment DECK.
 - **On-screen text, exactly:**
-  - 0-2s: "Full-image slides. One sentence." (VO: Full-image slides, from one sentence.)
+  - 0-2s: "Full-image slides. One brief." (VO: Full-image slides, from one brief.)
   - 2-14s: "Pick quality. Pick aspect." (VO: Pick the quality and aspect.)
   - 14-22s: "Your deck, your images." (VO: Every slide gets its own image.)
   - 22-25s: "Comment DECK." (VO: Comment DECK.)
@@ -2263,8 +2263,8 @@ Each template is a HyperFrames project skeleton that follows the composition con
 - **Time and cost:** capture 35 min, edit 90 min, about 140 min the first time (83 min once routine). Tool cost 25 Higgsfield credits (about $1.23 at Plus, production budget). Makeborne AI provider cost of the builds about $2.00 (outside the $1,000; plan.json outsideBudget). Higgsfield credits come from the production budget, never the $1,000.
 - **Mix:** 19.5 s real, 5.5 s Higgsfield, 0 s HyperFrames-only.
 - **Higgsfield version (V51-HF):** Only once the feature is live; then the Higgsfield version is the main TikTok/Reels/Shorts cut. Posts: when the feature is live. Readiness: waits: needs images live (six-box gate).
-  - Sections: 0-2.5 s i2v from [HF15](#hf15) (clip 0.5-3 s) "Full-image slides. / From one sentence." → `T04-showcase/compositions/i2v.html`; 22-25 s endplate from [HF15](#hf15) (clip 2-5 s) "Comment DECK." → `T07-cinematic-hook/compositions/endplate.html`. Every second of a section shows generated pixels only; the real capture starts on the hard cut.
-  - HyperFrames slot variables: i2v 0-2.5 s: `clipSrc` = assets/gen/HF15.mp4, `sentence` = Full-image slides. / From one sentence., `footnote` = Built in m:ss · N credits · unedited (from the run log), `aiLabelText` = AI camera move on a real Makeborne output | endplate 22-25 s: `plateSrc` = assets/gen/HF15.mp4, `headLead` = Make yours at, `headAccent` = makeborne.com, `priceLine` = From $20/mo + tax, `refundLine` = Full refund until you use credits, `ctaText` = Comment DECK., `aiLabelText` = AI-generated scene
+  - Sections: 0-2.5 s i2v from [HF15](#hf15) (clip 0.5-3 s) "Full-image slides. / From one brief." → `T04-showcase/compositions/i2v.html`; 22-25 s endplate from [HF15](#hf15) (clip 2-5 s) "Comment DECK." → `T07-cinematic-hook/compositions/endplate.html`. Every second of a section shows generated pixels only; the real capture starts on the hard cut.
+  - HyperFrames slot variables: i2v 0-2.5 s: `clipSrc` = assets/gen/HF15.mp4, `sentence` = Full-image slides. / From one brief., `footnote` = Built in m:ss · N credits · unedited (from the run log), `aiLabelText` = AI camera move on a real Makeborne output | endplate 22-25 s: `plateSrc` = assets/gen/HF15.mp4, `headLead` = Make yours at, `headAccent` = makeborne.com, `priceLine` = From $20/mo + tax, `refundLine` = Full refund until you use credits, `ctaText` = Comment DECK., `aiLabelText` = AI-generated scene
   - **HF15** (Kling 3.0 (in Higgsfield), 1080p, image-to-video, Dolly In, 5 s, 9:16, 2 takes, 25 credits) · start frame: A real full-image slide exported from the shipped images feature on the marketing account (1920x1080 slide centred on the brand canvas at 1080x1920). Never before the images feature passes the gate.
     - Prompt: "Use the start frame exactly as it is: a presentation slide with one full-bleed picture and one line of type, centred on a warm off-white background. The camera only moves: a slow straight-on push in, smooth and steady, about 8% closer by the end. Nothing in the image changes: every letter, line, colour, photo and margin stays exactly as in the start frame. Soft even light, no new objects, no reflections."
     - Negative and keep rule: see [HF15](#hf15).
@@ -2301,7 +2301,7 @@ Each template is a HyperFrames project skeleton that follows the composition con
   - Face to camera; phone capture of the output
 - **Template variables:** `adText` = Ad · Paid partnership with Makeborne
 - **On-screen text, exactly:**
-  - 0-3s: "Ad · it made the images too" (VO: Ad for Makeborne. One sentence, and it made the images too.)
+  - 0-3s: "Ad · it made the images too" (VO: Ad for Makeborne. One brief, and it made the images too.)
   - 3-30s: "My brief, my build" (VO: Here's my brief and the build.)
   - 30-45s: "Link in bio" (VO: Link in bio.)
 - **Audio:** music: Creator's own; CML for TikTok branded content. VO: Creator's own voice SFX: -
@@ -2586,11 +2586,11 @@ Each template is a HyperFrames project skeleton that follows the composition con
 
 #### C06
 
-**5 sites from one sentence each (real outputs only; the day-4 carousel in the plan)** · carousel · Instagram (organic carousel) · 1080x1350; 7 pages
+**5 sites from one brief each (real outputs only; the day-4 carousel in the plan)** · carousel · Instagram (organic carousel) · 1080x1350; 7 pages
 
 - **Capture:** Run each brief once on production on launch week, keep the first output (no cherry-picked re-rolls; if one fails, say so on the card or drop it), and note build time and credits from the run.
-- **Compose:** Use the creative's COMPOSE text in data/creatives.json verbatim (headline, subcopy, strip, positions, sizes). Headline: "5 websites. 5 sentences."
-- **Template variables:** `headline` = 5 websites. 5 sentences.; `subcopy` = Each one built from the sentence on its card. Unedited.; `cta` = Comment SITE and I'll send the briefs; `pages` = 7
+- **Compose:** Use the creative's COMPOSE text in data/creatives.json verbatim (headline, subcopy, strip, positions, sizes). Headline: "5 websites. 5 briefs."
+- **Template variables:** `headline` = 5 websites. 5 briefs.; `subcopy` = Each one built from the brief on its card. Unedited.; `cta` = Comment SITE and I'll send the briefs; `pages` = 7
 - **Disclosure:** None (real capture or typeset). **Readiness:** now. About 114 min.
 
 #### C07
@@ -2703,11 +2703,11 @@ Each template is a HyperFrames project skeleton that follows the composition con
 
 #### C19
 
-**Pitch deck from one sentence, with the real stopwatch on screen** · x-image · X + LinkedIn · 1600x900
+**Pitch deck from one brief, with the real stopwatch on screen** · x-image · X + LinkedIn · 1600x900
 
-- **Capture:** Record one deck build from a single sentence at real speed with an on-screen clock; note the measured time to the finished first slide set.
-- **Compose:** Use the creative's COMPOSE text in data/creatives.json verbatim (headline, subcopy, strip, positions, sizes). Headline: "A pitch deck from one sentence."
-- **Template variables:** `headline` = A pitch deck from one sentence.; `subcopy` = The clock on the right is the real build time from the recording.; `cta` = Make yours
+- **Capture:** Record one deck build from a single brief at real speed with an on-screen clock; note the measured time to the finished first slide set.
+- **Compose:** Use the creative's COMPOSE text in data/creatives.json verbatim (headline, subcopy, strip, positions, sizes). Headline: "A pitch deck from one brief."
+- **Template variables:** `headline` = A pitch deck from one brief.; `subcopy` = The clock on the right is the real build time from the recording.; `cta` = Make yours
 - **Disclosure:** None (real capture or typeset). **Readiness:** now. About 45 min.
 
 #### C20
@@ -2778,17 +2778,17 @@ Each template is a HyperFrames project skeleton that follows the composition con
 **Comment-reply speedrun cover: 'Replying to @___: here's your bakery's website' (frame 0 is the finished site)** · thumbnail · TikTok + Reels cover frame (comment-reply speedrun series) · 1080x1920
 
 - **Capture:** Only for a business that asked in the comments, with written OK and public information only, unpublished by default; otherwise a fictional bakery. Capture the published site at 390 px, first screen.
-- **Compose:** Use the creative's COMPOSE text in data/creatives.json verbatim (headline, subcopy, strip, positions, sizes). Headline: "Your bakery's website. Built from 1 sentence."
-- **Template variables:** `headline` = Your bakery's website. Built from 1 sentence.; `subcopy` = Lives on a Makeborne address today.; `cta` = Comment your business
+- **Compose:** Use the creative's COMPOSE text in data/creatives.json verbatim (headline, subcopy, strip, positions, sizes). Headline: "Your bakery's website. Built from one brief."
+- **Template variables:** `headline` = Your bakery's website. Built from one brief.; `subcopy` = Lives on a Makeborne address today.; `cta` = Comment your business
 - **Disclosure:** None (real capture or typeset). **Readiness:** now. About 45 min.
 
 #### C28
 
-**'Made from one sentence #N' series cover template (daily output scroll)** · thumbnail · TikTok + Reels + Shorts cover frames · 1080x1920
+**'Made from one brief #N' series cover template (daily output scroll)** · thumbnail · TikTok + Reels + Shorts cover frames · 1080x1920
 
 - **Capture:** 390 px full-page scroll capture of the day's real output (site, deck or book).
-- **Compose:** Use the creative's COMPOSE text in data/creatives.json verbatim (headline, subcopy, strip, positions, sizes). Headline: "Made from one sentence. #[N]"
-- **Template variables:** `headline` = Made from one sentence. #[N]; `subcopy` = The sentence is always on screen.; `cta` = Follow for #[N+1]
+- **Compose:** Use the creative's COMPOSE text in data/creatives.json verbatim (headline, subcopy, strip, positions, sizes). Headline: "Made from one brief. #[N]"
+- **Template variables:** `headline` = Made from one brief. #[N]; `subcopy` = The brief is always on screen.; `cta` = Follow for #[N+1]
 - **Higgsfield version (C28-HF (holiday cover)):** frame grab of [HF23](#hf23) (a frame from the last second of the kept take, behind the series tag, for the 25 Dec and 1 Jan episode covers), layout T09 lay-proof with the frame grab in place of the canvas behind the phone (the phone still shows the REAL output). 0 extra credits: a frame grab of HF23, which is paid for by V29. Posts: 2026-12-25 and 2027-01-01 episode covers. Label: On-screen 'AI-generated scene' chip on the cover; the platform AI label is already on for those episodes. Readiness: after HF23 is generated (Tue 15 Dec).
 - **Disclosure:** None (real capture or typeset). **Readiness:** now. About 45 min.
 
@@ -2852,8 +2852,8 @@ Each template is a HyperFrames project skeleton that follows the composition con
 **OG link-preview image for the format-matched landing page /sites (growth ask ga7)** · og · Link preview (all platforms) · 1200x630
 
 - **Capture:** The top example on the /sites landing page, captured at its native ratio.
-- **Compose:** Use the creative's COMPOSE text in data/creatives.json verbatim (headline, subcopy, strip, positions, sizes). Headline: "One sentence in. A finished website."
-- **Template variables:** `headline` = One sentence in. A finished website.; `subcopy` = Published on a Makeborne address. Download the source any time.; `cta` = makeborne.com/sites
+- **Compose:** Use the creative's COMPOSE text in data/creatives.json verbatim (headline, subcopy, strip, positions, sizes). Headline: "One brief in. A finished website."
+- **Template variables:** `headline` = One brief in. A finished website.; `subcopy` = Published on a Makeborne address. Download the source any time.; `cta` = makeborne.com/sites
 - **Disclosure:** None (real capture or typeset). **Readiness:** needs ga7 landing page live. About 25 min.
 
 #### C36
@@ -2915,8 +2915,8 @@ Each template is a HyperFrames project skeleton that follows the composition con
 **Full-image slides with quality and aspect controls (images beat, deck day)** · x-image · X + LinkedIn · 1600x900
 
 - **Capture:** Shipped version only: capture the image quality and aspect controls and the resulting full-image slide.
-- **Compose:** Use the creative's COMPOSE text in data/creatives.json verbatim (headline, subcopy, strip, positions, sizes). Headline: "Full-image slides. From the same sentence."
-- **Template variables:** `headline` = Full-image slides. From the same sentence.; `subcopy` = Pick the quality and the aspect. The slide stays editable.; `cta` = Make a deck
+- **Compose:** Use the creative's COMPOSE text in data/creatives.json verbatim (headline, subcopy, strip, positions, sizes). Headline: "Full-image slides. From the same brief."
+- **Template variables:** `headline` = Full-image slides. From the same brief.; `subcopy` = Pick the quality and the aspect. The slide stays editable.; `cta` = Make a deck
 - **Disclosure:** Outputs contain AI images: small on-image note 'Images made by Makeborne's AI'; platform toggle if photorealistic. **Readiness:** needs images live (six-box gate). About 45 min.
 
 #### C43
@@ -3133,7 +3133,7 @@ Every capture session is planned for six cuts before recording, so one uncut bui
 | 3 | YouTube Shorts loop cut, 9:16, 20-30 s | same project: last frame matches frame 0 so replays count | Shorts count replays as views |
 | 4 | 60-150 s full build, 9:16 and 4:5 | same capture at 1x-2x: TikTok long and LinkedIn with captions, no music on LinkedIn | 120-180 s TikToks got about 10x the views (Socialinsider H1 2026) |
 | 5 | 16:9 X cut, 20-45 s, first-line hook in the post | make-formats 16x9 | 16:9 outperformed 9:16 on X launch videos (Infinite, 2026) |
-| 6 | Stills: 4:5 proof static, carousel page, story, OG/landing loop, 8 s 'Made from one sentence' episode, cover | T09 and T04 from the same output | Text-plus-product statics lead Meta hit rate (Motion 2026) |
+| 6 | Stills: 4:5 proof static, carousel page, story, OG/landing loop, 8 s 'Made from one brief' episode, cover | T09 and T04 from the same output | Text-plus-product statics lead Meta hit rate (Motion 2026) |
 
 ## 11. Rights and disclosure rules
 

@@ -163,13 +163,13 @@ The methodology is inconsistent about follower range: it says 1K-1M followers, b
 | # | Format | Conversion strength | Effort per video | Live today? | Makeborne version | Evidence |
 |---|---|---|---|---|---|---|
 | 1 | **Comment-reply speedrun** ("Replying to @x: building your bakery's site") | **High** | 30-45 min | Yes | The commenter names a business type and city. Screen-record the brief, the build, the finished site on a phone frame and publish to a Makeborne address. Show a visible timer, or label "sped up 4x" | Comment-for-X CTAs and "comment X and we make yours" mechanics [F, X ranker weights 2023 via v14 research]. Lovable's ~20K-comment build video [V] |
-| 2 | **Built-in-60-seconds speedrun** (result first, then rewind) | **High** | 20-30 min | Yes, at honest timing | "41 seconds, one sentence: a finished dentist website." Open on the result, then rewind to the brief | Bolt one-take launch [F]. Riley Brown quick builds [V] |
+| 2 | **Built-in-60-seconds speedrun** (result first, then rewind) | **High** | 20-30 min | Yes, at honest timing | "41 seconds, one brief: a finished dentist website." Open on the result, then rewind to the brief | Bolt one-take launch [F]. Riley Brown quick builds [V] |
 | 3 | **Before/after** | **High** | 30 min | Yes | Use our own fixture businesses, or real ones only with the owner's written OK: "The 2014 site vs the 2026 site." The same works for decks ("Slides vs Makeborne") and books (notes app becomes a real book) | Gamma's before/after carousels drew its highest engagement [V] |
 | 4 | **Book gift / emotional** | Medium-High (sends) | 45 min | Yes (text books; images are a later beat) | "My grandma never wrote a recipe down. So I made her a book." Also "A bedtime book starring my son, in 2 minutes" | Sends drive non-follower reach on Instagram [F/S]. The v10 film tested this insight in-house |
 | 5 | **Freelancer and agency POV** | **High** for Studio and Scale | 30 min | Yes (review links, CRM) | "POV: the client says 'make it pop' for the 9th time." Then show the client review link with anonymous comments, Approve and Request changes. Also "How I send clients a site to approve in 5 minutes" | LinkedIn: real people +14%, face to camera +34% engagement [F, LinkedIn Creative Labs ads study, Jul 2025] |
 | 6 | **Founder face-to-camera, build in public** ("Day N") | Medium (trust), high on LinkedIn | 15-20 min | Yes | "Day 3: 14 people paid for an AI builder made in Sarajevo. Here's what broke." Show real Whop numbers | Base44's LinkedIn growth [F]. Cluely's numbered series, median 552K [F] |
 | 7 | **Tutorials** ("How to…") | Medium-High (search intent) | 30-60 min | Yes | "How to make a website for your Airbnb", "How to turn a brief into a pitch deck", "How to export your site to GitHub" (manual export is live) | Long TikToks get more views [F, Socialinsider]. Search insights [S] |
-| 8 | **Faceless slideshow / photo carousel** | Medium (saves) | 15-20 min | Yes, using real outputs | "5 websites AI made for local businesses this week (swipe)", "3 decks made from one sentence". Use 5-6 slides with a hook on slide 1 | Carousels get comparable reach and more saves and comments [V, ttcalculator Q3 2025-Q1 2026; Stack Influence 2025] |
+| 8 | **Faceless slideshow / photo carousel** | Medium (saves) | 15-20 min | Yes, using real outputs | "5 websites AI made for local businesses this week (swipe)", "3 decks, one brief each". Use 5-6 slides with a hook on slide 1 | Carousels get comparable reach and more saves and comments [V, ttcalculator Q3 2025-Q1 2026; Stack Influence 2025] |
 | 9 | **Reactions, stitches and duets** | Medium | 20 min | Yes | Stitch a "how much should a website cost?" or "rate my website" video, then build an alternative live. Respect the original creator, and add value | TikTok: one in three top-VTR ads address the viewer directly [F, 2020] |
 | 10 | **"I replaced my agency"** | Medium for SMBs, **negative for agency buyers** | 20 min | Yes | Use only on SMB-facing accounts, and frame it as a first version, not "never hire a designer". Agencies are Makeborne's Studio and Scale buyers | [I] Positioning conflict |
 | 11 | **Polished launch film** (v9 fly-over, v14 hero) | Low-Medium organic. Useful as a pinned post and paid test | Done | v9 yes. v14 at the images beat | Pin it, use it on the landing page, run it as a paid test | Kinetic-type brand films from Lovable, Notion and Framer had large **paid** YouTube views but low organic likes per view [F, v14 research] |
@@ -184,7 +184,7 @@ The methodology is inconsistent about follower range: it says 1K-1M followers, b
 
 | Time | Picture | On-screen text | Audio |
 |---|---|---|---|
-| 0.0-1.5 s | **The finished site** on a phone, scrolling. The reply bubble with the commenter's question at the top | "Your bakery's website. Built from 1 sentence." | Hit on frame 0. Upbeat track above 120 BPM |
+| 0.0-1.5 s | **The finished site** on a phone, scrolling. The reply bubble with the commenter's question at the top | "Your bakery's website. Built from one brief." | Hit on frame 0. Upbeat track above 120 BPM |
 | 1.5-4 s | Hard cut to the composer: the brief typed, with a visible stopwatch starting | "Timer's on." | Keystrokes |
 | 4-20 s | The build streams, at real speed or labelled "sped up 4x". Cut-ins on headline, menu and contact section | 3-5 word labels, one at a time | Voice-over or captions: what's happening |
 | 20-28 s | One live edit, such as "make it warmer, add opening hours". Then **Publish** to a Makeborne address. Show the timer result | "Live. 52 s." | Click and chime |
@@ -213,15 +213,15 @@ The methodology is inconsistent about follower range: it says 1K-1M followers, b
 |---|---|---|
 | R1 | "This website took 52 seconds. Watch." | Speedrun |
 | R2 | "Replying to @___: here's your bakery's website." | Comment reply |
-| R3 | "One sentence in. A whole website out." | Speedrun |
-| R4 | "I gave AI one sentence about my dad's garage." | Speedrun |
+| R3 | "One brief in. A whole website out." | Speedrun |
+| R4 | "I gave AI one brief about my dad's garage." | Speedrun |
 | R5 | "Your 2014 website vs. the one I made in a minute." | Before/after |
 | R6 | "Stop paying for templates you still have to fill in." | Speedrun |
 | B1 | "My grandma never wrote down a recipe. So I made her a book." | Book gift |
 | B2 | "I made my son a bedtime book where he's the hero." | Book gift |
 | B3 | "Christmas gift idea that takes 2 minutes and makes people cry." | Book gift |
 | B4 | "Your notes app is full of book ideas. Here's one, finished." | Book |
-| D1 | "Pitch deck from one sentence. 40 seconds." | Deck speedrun |
+| D1 | "Pitch deck from one brief. 40 seconds." | Deck speedrun |
 | D2 | "My slides vs. the deck I generated. Be honest." | Before/after |
 | D3 | "Students: stop formatting slides at 2 a.m." | Deck |
 | F1 | "Freelancers: steal this client-approval trick." | Freelancer POV |

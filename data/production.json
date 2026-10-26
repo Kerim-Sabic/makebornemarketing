@@ -26,9 +26,9 @@
         {
           "name": "1. Record the screen, add the words",
           "share": "42% of what we make",
-          "covers": "Speedruns, demos, tutorials, before and after, 'made from one sentence'",
+          "covers": "Speedruns, demos, tutorials, before and after, 'made from one brief'",
           "steps": [
-            "Type one sentence into Makeborne and record the screen while it builds. Never stop the recording.",
+            "Type a brief into Makeborne and record the screen while it builds. Never stop the recording.",
             "Record one change in chat, then publish or export.",
             "Open the matching template, drop the recording in, type the words that appear on screen.",
             "If you sped the build up, the little clock says so ('Sped up ×8').",
@@ -3905,7 +3905,7 @@
     },
     {
       "id": "T04-showcase",
-      "purpose": "Real outputs with their sentence: 8 s scroll episode, 15 s slides (and photo-mode stills), 6 s triptych; i2v: an AI camera move over a real output (Higgsfield image-to-video take, letter-checked) with its sentence and run-log footnote",
+      "purpose": "Real outputs with their brief: 8 s scroll episode, 15 s slides (and photo-mode stills), 6 s triptych; i2v: an AI camera move over a real output (Higgsfield image-to-video take, letter-checked) with its brief and run-log footnote",
       "inputs": [
         "sentence",
         "series",
@@ -4259,7 +4259,7 @@
     },
     {
       "id": "V02",
-      "title": "One sentence in, a whole website out (bakery speedrun)",
+      "title": "One brief in, a whole website out (bakery speedrun)",
       "priority": "P0",
       "week": 1,
       "firstPost": "2026-10-26 13:00 TikTok",
@@ -4298,7 +4298,7 @@
             "at": "0-2.5 s",
             "clip": "0.5-3 s",
             "seconds": 2.5,
-            "line": "One sentence in. / A whole website out.",
+            "line": "One brief in. / A whole website out.",
             "composition": "T07-cinematic-hook/index.html (hook slot)"
           },
           {
@@ -4368,7 +4368,7 @@
       "template": {
         "id": "T02-speedrun",
         "variables": {
-          "hookLine": "One sentence in. A whole website out.",
+          "hookLine": "One brief in. A whole website out.",
           "briefText": "\"A website for a family bakery in Leeds that opens at 7.\"",
           "timerLine": "Timer's on.",
           "clockText": "Real time · m:ss if the cut plays at 1x; otherwise 'Sped up ×N' (expect ×8 for a 2 min build in 15 s)",
@@ -4385,7 +4385,7 @@
             "at": "0-2.5 s",
             "composition": "T07-cinematic-hook/index.html (hook slot)",
             "variables": {
-              "hookLead": "One sentence in.",
+              "hookLead": "One brief in.",
               "hookAccent": "A whole website out.",
               "aiLabelText": "AI-generated scene",
               "plateSrc": "assets/gen/HF11.mp4",
@@ -4442,7 +4442,7 @@
       "onScreenText": [
         {
           "t": "0-2s",
-          "text": "One sentence in. A whole website out."
+          "text": "One brief in. A whole website out."
         },
         {
           "t": "2-5s",
@@ -4461,10 +4461,10 @@
           "text": "What should I build next? Comment it."
         }
       ],
-      "hook": "One sentence in. A whole website out.",
+      "hook": "One brief in. A whole website out.",
       "audio": {
         "music": "Brand TikTok: Commercial Music Library track, warm, upbeat acoustic-pop, about 118-124 BPM. Instagram/YouTube: a Meta Sound Collection / YouTube Audio Library track of the same mood. LinkedIn and X cuts: no music.",
-        "vo": "Founder's own voice, recorded to picture (voice memo, quiet room, 30 cm from the phone). Lines from the script: 'One sentence. Watch.' / 'I type one sentence about a bakery.' / 'It writes the page, picks the type, lays out the menu.' / 'One edit, publish, and it's live on a Makeborne address.' / 'Tell me what to build next.'",
+        "vo": "Founder's own voice, recorded to picture (voice memo, quiet room, 30 cm from the phone). Lines from the script: 'One brief. Watch.' / 'I type a brief about a bakery.' / 'It writes the page, picks the type, lays out the menu.' / 'One edit, publish, and it's live on a Makeborne address.' / 'Tell me what to build next.'",
         "sfx": "Real UI sound only where it helps: one click on Create, a soft pop as each chip lands, the publish/export moment. No whooshes on every cut."
       },
       "captions": "Burned-in, from `hyperframes transcribe` -> captions-to-html.mjs, 3-4 words per group, white pill at y 1060 (9:16); SRT uploaded on YouTube",
@@ -4501,7 +4501,7 @@
     },
     {
       "id": "V03",
-      "title": "Pitch deck from one sentence",
+      "title": "Pitch deck from one brief",
       "priority": "P0",
       "week": 1,
       "firstPost": "2026-10-26 21:00 TikTok",
@@ -4541,7 +4541,7 @@
             "at": "0-2.5 s",
             "clip": "0.3-2.8 s",
             "seconds": 2.5,
-            "line": "Pitch deck from one sentence. / Timer's on.",
+            "line": "Pitch deck from one brief. / Timer's on.",
             "composition": "T07-cinematic-hook/index.html (hook slot)"
           },
           {
@@ -4602,9 +4602,9 @@
       "template": {
         "id": "T02-speedrun",
         "variables": {
-          "hookLine": "Pitch deck from one sentence. Timer's on.",
+          "hookLine": "Pitch deck from one brief. Timer's on.",
           "briefText": "\"A 10-slide pitch for a bike repair shop raising money for a second workshop.\"",
-          "timerLine": "One sentence.",
+          "timerLine": "One brief.",
           "clockText": "Real time · m:ss (use the measured time; the D1 hook says '40 seconds' only if that is the real time) or 'Sped up ×N'",
           "label1": "Story.",
           "label2": "Numbers.",
@@ -4619,7 +4619,7 @@
             "at": "0-2.5 s",
             "composition": "T07-cinematic-hook/index.html (hook slot)",
             "variables": {
-              "hookLead": "Pitch deck from one sentence.",
+              "hookLead": "Pitch deck from one brief.",
               "hookAccent": "Timer's on.",
               "aiLabelText": "AI-generated scene",
               "plateSrc": "assets/gen/HF03.mp4",
@@ -4665,11 +4665,11 @@
       "onScreenText": [
         {
           "t": "0-2s",
-          "text": "Pitch deck from one sentence. Timer's on."
+          "text": "Pitch deck from one brief. Timer's on."
         },
         {
           "t": "2-5s",
-          "text": "One sentence."
+          "text": "One brief."
         },
         {
           "t": "5-20s",
@@ -4684,10 +4684,10 @@
           "text": "Comment DECK."
         }
       ],
-      "hook": "Pitch deck from one sentence. Timer's on.",
+      "hook": "Pitch deck from one brief. Timer's on.",
       "audio": {
         "music": "Brand TikTok: Commercial Music Library track, confident minimal electronic pulse, 120 BPM. Instagram/YouTube: a Meta Sound Collection / YouTube Audio Library track of the same mood. LinkedIn and X cuts: no music.",
-        "vo": "Founder's own voice, recorded to picture (voice memo, quiet room, 30 cm from the phone). 'One sentence. A whole pitch deck.' / 'Presentation, one sentence, create.' / 'It builds the story, the numbers slide and the ask.' / 'And it opens in PowerPoint. That chart is real, not a picture.' / 'Comment DECK and I'll send the brief.'",
+        "vo": "Founder's own voice, recorded to picture (voice memo, quiet room, 30 cm from the phone). 'One brief. A whole pitch deck.' / 'Presentation, one brief, create.' / 'It builds the story, the numbers slide and the ask.' / 'And it opens in PowerPoint. That chart is real, not a picture.' / 'Comment DECK and I'll send the brief.'",
         "sfx": "Real UI sound only where it helps: one click on Create, a soft pop as each chip lands, the publish/export moment. No whooshes on every cut. Slides dealt on the beat (soft paper tick)."
       },
       "captions": "Burned-in, from `hyperframes transcribe` -> captions-to-html.mjs, 3-4 words per group, white pill at y 1060 (9:16); SRT uploaded on YouTube",
@@ -5850,7 +5850,7 @@
             "at": "9.5-11 s",
             "clip": "2.3-3.8 s",
             "seconds": 1.5,
-            "line": "Same notes. One sentence.",
+            "line": "Same notes. One brief.",
             "composition": "T07-cinematic-hook/compositions/bridge.html"
           },
           {
@@ -5928,7 +5928,7 @@
             "composition": "T07-cinematic-hook/compositions/bridge.html",
             "variables": {
               "plateSrc": "assets/gen/HF03.mp4",
-              "lineText": "Same notes. One sentence.",
+              "lineText": "Same notes. One brief.",
               "aiLabelText": "AI-generated scene"
             }
           },
@@ -6023,7 +6023,7 @@
       "capture": [
         "Phone: a notes-app list prop with invented ideas (founder's own phone, nothing private): 'book about fixing old furniture'",
         "Real book pages: The Repair Table (v12 real run, pages 1-17; crop bracketed placeholders) or a fresh run of the same idea",
-        "Composer in Book mode with the one-line idea typed"
+        "Composer in Book mode with the brief typed"
       ],
       "higgsfield": {
         "version": "V15-HF",
@@ -6230,7 +6230,7 @@
     },
     {
       "id": "V16",
-      "title": "5 websites, each from one sentence (swipe)",
+      "title": "5 websites, each from one brief (swipe)",
       "priority": "P1",
       "week": 2,
       "firstPost": "2026-11-04 21:30 TikTok",
@@ -6268,7 +6268,7 @@
             "at": "0-2 s",
             "clip": "2.5-4.5 s",
             "seconds": 2,
-            "line": "5 websites, each from one sentence. (the roastery window becomes the real roastery site)",
+            "line": "5 websites, each from one brief. (the roastery window becomes the real roastery site)",
             "composition": "T07-cinematic-hook/compositions/match-to-ui.html"
           },
           {
@@ -6327,7 +6327,7 @@
       "template": {
         "id": "T04-showcase slides (+ photo-mode stills via snapshot)",
         "variables": {
-          "cover": "5 websites, each from one sentence.",
+          "cover": "5 websites, each from one brief.",
           "s1": "\"A small coffee roastery in Sarajevo.\"",
           "s2": "\"A bouldering gym in an old tram depot.\"",
           "s3": "\"A 28-seat osteria in Ljubljana.\"",
@@ -6363,7 +6363,7 @@
       "onScreenText": [
         {
           "t": "slide 1 (0-2s)",
-          "text": "5 websites, each from one sentence."
+          "text": "5 websites, each from one brief."
         },
         {
           "t": "slides 2-5",
@@ -6374,7 +6374,7 @@
           "text": "Comment SITE for all 5 briefs."
         }
       ],
-      "hook": "5 websites, each from one sentence. Swipe.",
+      "hook": "5 websites, each from one brief. Swipe.",
       "audio": {
         "music": "TikTok photo mode: CML track; Instagram carousel: none or a cleared library track.",
         "vo": "None",
@@ -6931,7 +6931,7 @@
         "id": "T06-tutorial",
         "variables": {
           "title": "How to make a website for your rental.",
-          "step1": "Step 1: one detailed sentence",
+          "step1": "Step 1: one detailed brief",
           "step2": "Step 2: build",
           "step3": "Step 3: edit in chat",
           "step4": "Step 4: publish",
@@ -6945,7 +6945,7 @@
         },
         {
           "t": "2-20s",
-          "text": "Step 1: one detailed sentence"
+          "text": "Step 1: one detailed brief"
         },
         {
           "t": "20-50s",
@@ -7669,7 +7669,7 @@
         "variables": {
           "hookLine": "Your lead magnet, before your coffee's cold.",
           "briefText": "\"A 7-day guide to sleeping better for new parents, by a sleep coach.\"",
-          "label1": "One sentence.",
+          "label1": "One brief.",
           "label2": "Chapters. Checklists. Your voice.",
           "label3": "Export the PDF.",
           "ctaText": "Comment BOOK."
@@ -7731,7 +7731,7 @@
         },
         {
           "t": "2-8s",
-          "text": "One sentence."
+          "text": "One brief."
         },
         {
           "t": "8-25s",
@@ -7864,7 +7864,7 @@
     },
     {
       "id": "V29",
-      "title": "Made from one sentence (daily 8-second series)",
+      "title": "Made from one brief (daily 8-second series)",
       "priority": "P1",
       "week": 2,
       "firstPost": "2026-11-04 13:30 YouTube Shorts",
@@ -7992,7 +7992,7 @@
         "id": "T04-showcase scroll (8 s) via render --batch",
         "variables": {
           "sentence": "\"A site for my bouldering gym.\"",
-          "series": "Made from one sentence #N",
+          "series": "Made from one brief #N",
           "footnote": "Built in m:ss · N credits · unedited",
           "queue": [
             "A site for my bouldering gym.",
@@ -8051,7 +8051,7 @@
         },
         {
           "t": "2-7s",
-          "text": "Made from that sentence."
+          "text": "Made from that brief."
         },
         {
           "t": "7-8s",
@@ -9942,7 +9942,7 @@
     },
     {
       "id": "V48",
-      "title": "A dated website vs a first version from one sentence",
+      "title": "A dated website vs a first version from one brief",
       "priority": "P2",
       "week": 8,
       "firstPost": "2026-12-18 13:00 TikTok",
@@ -9977,7 +9977,7 @@
             "at": "0-3 s",
             "clip": "0.5-3.5 s",
             "seconds": 3,
-            "line": "Your 2014 website / vs. one sentence.",
+            "line": "Your 2014 website / vs. one brief.",
             "composition": "T07-cinematic-hook/index.html (hook slot)"
           },
           {
@@ -9986,7 +9986,7 @@
             "at": "14-15 s",
             "clip": "3.5-4.5 s",
             "seconds": 1,
-            "line": "The one from one sentence:",
+            "line": "The one from one brief:",
             "composition": "T07-cinematic-hook/compositions/bridge.html"
           },
           {
@@ -10029,9 +10029,9 @@
       "template": {
         "id": "T03-split",
         "variables": {
-          "headline": "2014 vs one sentence.",
+          "headline": "2014 vs one brief.",
           "beforeLabel": "2014 (we built this one ourselves)",
-          "afterLabel": "One sentence",
+          "afterLabel": "One brief",
           "pollText": "A first version, before you hire anyone.",
           "briefText": "\"A website for a family-run hardware store in Leeds, open since 1978.\""
         },
@@ -10042,7 +10042,7 @@
             "composition": "T07-cinematic-hook/index.html (hook slot)",
             "variables": {
               "hookLead": "Your 2014 website",
-              "hookAccent": "vs. one sentence.",
+              "hookAccent": "vs. one brief.",
               "aiLabelText": "AI-generated scene",
               "plateSrc": "assets/gen/HF22.mp4",
               "nextSrc": "assets/capture/first-real-shot.mp4"
@@ -10054,7 +10054,7 @@
             "composition": "T07-cinematic-hook/compositions/bridge.html",
             "variables": {
               "plateSrc": "assets/gen/HF22.mp4",
-              "lineText": "The one from one sentence:",
+              "lineText": "The one from one brief:",
               "aiLabelText": "AI-generated scene"
             }
           },
@@ -10077,18 +10077,18 @@
       "onScreenText": [
         {
           "t": "0-2s",
-          "text": "2014 vs one sentence."
+          "text": "2014 vs one brief."
         },
         {
           "t": "2-15s",
-          "text": "Same business. One sentence."
+          "text": "Same business. One brief."
         },
         {
           "t": "15-25s",
           "text": "A first version, before you hire anyone."
         }
       ],
-      "hook": "Your 2014 website vs. a first version from one sentence.",
+      "hook": "Your 2014 website vs. a first version from one brief.",
       "audio": {
         "music": "Brand TikTok: Commercial Music Library track, retro-to-modern switch, 120 BPM. Instagram/YouTube: a Meta Sound Collection / YouTube Audio Library track of the same mood. LinkedIn and X cuts: no music.",
         "vo": "Founder's own voice, recorded to picture (voice memo, quiet room, 30 cm from the phone). Brand TikTok only; never on Lane A surfaces.",
@@ -10147,7 +10147,7 @@
       "template": {
         "id": "T03-split + T01-endcard",
         "variables": {
-          "headline": "Same sentence. Now with images.",
+          "headline": "Same brief. Now with images.",
           "beforeLabel": "Launch week",
           "afterLabel": "Today",
           "pollText": "Comment SITE."
@@ -10156,7 +10156,7 @@
       "onScreenText": [
         {
           "t": "0-2s",
-          "text": "Same sentence. Now with images."
+          "text": "Same brief. Now with images."
         },
         {
           "t": "2-12s",
@@ -10175,7 +10175,7 @@
           "text": "makeborne.com · from $20/mo + tax · full refund until you use credits"
         }
       ],
-      "hook": "Same sentence. Yesterday vs today.",
+      "hook": "Same brief. Yesterday vs today.",
       "audio": {
         "music": "Brand TikTok: Commercial Music Library track, bright reveal, 124 BPM. Instagram/YouTube: a Meta Sound Collection / YouTube Audio Library track of the same mood. LinkedIn and X cuts: no music.",
         "vo": "Founder's own voice, recorded to picture (voice memo, quiet room, 30 cm from the phone).",
@@ -10299,7 +10299,7 @@
     },
     {
       "id": "V51",
-      "title": "Full-image slides from one sentence (deck images demo)",
+      "title": "Full-image slides from one brief (deck images demo)",
       "priority": "P1",
       "week": 4,
       "firstPost": "2026-11-18 13:00 TikTok",
@@ -10331,7 +10331,7 @@
             "at": "0-2.5 s",
             "clip": "0.5-3 s",
             "seconds": 2.5,
-            "line": "Full-image slides. / From one sentence.",
+            "line": "Full-image slides. / From one brief.",
             "composition": "T04-showcase/compositions/i2v.html"
           },
           {
@@ -10374,7 +10374,7 @@
       "template": {
         "id": "T02-speedrun",
         "variables": {
-          "hookLine": "Full-image slides. One sentence.",
+          "hookLine": "Full-image slides. One brief.",
           "label1": "Pick quality. Pick aspect.",
           "label2": "Your deck, your images.",
           "ctaText": "Comment DECK."
@@ -10386,7 +10386,7 @@
             "composition": "T04-showcase/compositions/i2v.html",
             "variables": {
               "clipSrc": "assets/gen/HF15.mp4",
-              "sentence": "Full-image slides. / From one sentence.",
+              "sentence": "Full-image slides. / From one brief.",
               "footnote": "Built in m:ss · N credits · unedited (from the run log)",
               "aiLabelText": "AI camera move on a real Makeborne output"
             }
@@ -10410,7 +10410,7 @@
       "onScreenText": [
         {
           "t": "0-2s",
-          "text": "Full-image slides. One sentence."
+          "text": "Full-image slides. One brief."
         },
         {
           "t": "2-14s",
@@ -10425,7 +10425,7 @@
           "text": "Comment DECK."
         }
       ],
-      "hook": "Full-image slides. From one sentence.",
+      "hook": "Full-image slides. From one brief.",
       "audio": {
         "music": "Brand TikTok: Commercial Music Library track, cinematic-light, 120 BPM. Instagram/YouTube: a Meta Sound Collection / YouTube Audio Library track of the same mood. LinkedIn and X cuts: no music.",
         "vo": "Founder's own voice, recorded to picture (voice memo, quiet room, 30 cm from the phone).",
@@ -10584,7 +10584,7 @@
           "text": "Link in bio"
         }
       ],
-      "hook": "Ad: one sentence, and it made the images too.",
+      "hook": "Ad: one brief, and it made the images too.",
       "audio": {
         "music": "Creator's own; CML for TikTok branded content.",
         "vo": "Creator's own voice",
@@ -11732,7 +11732,7 @@
     },
     {
       "id": "C06",
-      "concept": "5 sites from one sentence each (real outputs only; the day-4 carousel in the plan)",
+      "concept": "5 sites from one brief each (real outputs only; the day-4 carousel in the plan)",
       "type": "carousel",
       "platform": "Instagram (organic carousel)",
       "priority": 1,
@@ -11745,8 +11745,8 @@
         "id": "T09-stills",
         "layout": "T09 lay-step pages",
         "variables": {
-          "headline": "5 websites. 5 sentences.",
-          "subcopy": "Each one built from the sentence on its card. Unedited.",
+          "headline": "5 websites. 5 briefs.",
+          "subcopy": "Each one built from the brief on its card. Unedited.",
           "cta": "Comment SITE and I'll send the briefs",
           "pages": 7
         }
@@ -12171,7 +12171,7 @@
     },
     {
       "id": "C19",
-      "concept": "Pitch deck from one sentence, with the real stopwatch on screen",
+      "concept": "Pitch deck from one brief, with the real stopwatch on screen",
       "type": "x-image",
       "platform": "X + LinkedIn",
       "priority": 2,
@@ -12184,12 +12184,12 @@
         "id": "T09-stills",
         "layout": "T09 lay-proof",
         "variables": {
-          "headline": "A pitch deck from one sentence.",
+          "headline": "A pitch deck from one brief.",
           "subcopy": "The clock on the right is the real build time from the recording.",
           "cta": "Make yours"
         }
       },
-      "capture": "Record one deck build from a single sentence at real speed with an on-screen clock; note the measured time to the finished first slide set.",
+      "capture": "Record one deck build from a single brief at real speed with an on-screen clock; note the measured time to the finished first slide set.",
       "compose": "Use the creative's COMPOSE text in data/creatives.json verbatim (headline, subcopy, strip, positions, sizes).",
       "sizes": [
         "1600x900"
@@ -12455,7 +12455,7 @@
         "id": "T09-stills",
         "layout": "T09 lay-proof",
         "variables": {
-          "headline": "Your bakery's website. Built from 1 sentence.",
+          "headline": "Your bakery's website. Built from one brief.",
           "subcopy": "Lives on a Makeborne address today.",
           "cta": "Comment your business"
         }
@@ -12475,7 +12475,7 @@
     },
     {
       "id": "C28",
-      "concept": "'Made from one sentence #N' series cover template (daily output scroll)",
+      "concept": "'Made from one brief #N' series cover template (daily output scroll)",
       "type": "thumbnail",
       "platform": "TikTok + Reels + Shorts cover frames",
       "priority": 2,
@@ -12488,8 +12488,8 @@
         "id": "T09-stills",
         "layout": "T09 lay-proof",
         "variables": {
-          "headline": "Made from one sentence. #[N]",
-          "subcopy": "The sentence is always on screen.",
+          "headline": "Made from one brief. #[N]",
+          "subcopy": "The brief is always on screen.",
           "cta": "Follow for #[N+1]"
         }
       },
@@ -12745,7 +12745,7 @@
         "id": "T09-stills",
         "layout": "T09 lay-proof",
         "variables": {
-          "headline": "One sentence in. A finished website.",
+          "headline": "One brief in. A finished website.",
           "subcopy": "Published on a Makeborne address. Download the source any time.",
           "cta": "makeborne.com/sites"
         }
@@ -12983,7 +12983,7 @@
         "id": "T09-stills",
         "layout": "T09 lay-proof",
         "variables": {
-          "headline": "Full-image slides. From the same sentence.",
+          "headline": "Full-image slides. From the same brief.",
           "subcopy": "Pick the quality and the aspect. The slide stays editable.",
           "cta": "Make a deck"
         }
@@ -13863,7 +13863,7 @@
       },
       {
         "n": 6,
-        "cut": "Stills: 4:5 proof static, carousel page, story, OG/landing loop, 8 s 'Made from one sentence' episode, cover",
+        "cut": "Stills: 4:5 proof static, carousel page, story, OG/landing loop, 8 s 'Made from one brief' episode, cover",
         "from": "T09 and T04 from the same output",
         "note": "Text-plus-product statics lead Meta hit rate (Motion 2026)"
       }
@@ -15758,7 +15758,7 @@
         "id": "HF22",
         "title": "A tired family hardware store front",
         "role": "hook",
-        "job": "Hook and end plate for V48 (the 2014 website vs one sentence)",
+        "job": "Hook and end plate for V48 (the 2014 website vs one brief)",
         "for": [
           "V48"
         ],

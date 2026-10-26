@@ -5,7 +5,7 @@ Copy the markup into a scene, keep the ids prefixed with the scene id, and anima
 | Snippet | File | What it is | Rules |
 |---|---|---|---|
 | Flat mark | `mark.svg` | The flat vector m (`#18181B`) | Never stretched, rotated, shadowed or gradient-filled. Clear space 1/5 of its width. Glossy m only in the v9/v14 film projects |
-| Sentence chip | `sentence-chip.html` | White pill with a pencil glyph and the one-line brief | The brand device: the sentence that made the output is always on screen while the output is. Exact brief text, in quotes, max 2 lines |
+| Sentence chip | `sentence-chip.html` | White pill with a pencil glyph and the brief | The brand device: the brief that made the output is always on screen while the output is. Exact brief text, in quotes, max 2 lines |
 | Clock chip | `clock-chip.html` | Dark pill: `Real time · 0:52` or `Sped up ×8` | Mandatory on any build footage. Real time only when the footage plays at 1×; otherwise the factor. Never round down |
 | Keyword CTA | `keyword-cta.html` | `Comment SITE` / `DECK` / `BOOK` / `CLIENT` card | Matches the Instagram keyword DM. TikTok version says `Link in bio, or DM me SITE` |
 | AI label | `ai-label.html` | Small chip `AI-generated scene` (image-to-video over a real output: `AI camera move on a real Makeborne output`) | On every frame of a generated shot (Higgsfield or any model), bottom-left of the safe band, 28 px on 9:16, held for the whole shot. In addition to the platform toggle when the shot is realistic |

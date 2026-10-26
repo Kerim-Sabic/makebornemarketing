@@ -95,7 +95,7 @@
   },
   {
     "id": "V02",
-    "title": "One sentence in, a whole website out (bakery speedrun)",
+    "title": "One brief in, a whole website out (bakery speedrun)",
     "format": "speedrun",
     "platforms": [
       "TikTok",
@@ -107,21 +107,21 @@
     "lane": "A+B",
     "lengthSec": 32,
     "hook": {
-      "line": "One sentence in. A whole website out.",
-      "visual": "Frame 0: the finished bakery site scrolling on a phone (390-wide capture), the one-line brief pinned on top as a sentence chip."
+      "line": "One brief in. A whole website out.",
+      "visual": "Frame 0: the finished bakery site scrolling on a phone (390-wide capture), the brief pinned on top as a sentence chip."
     },
     "script": [
       {
         "t": "0-2s",
         "visual": "Finished site scrolling on a phone; sentence chip 'A website for a family bakery in Leeds that opens at 7.'",
-        "onScreenText": "One sentence in. A whole website out.",
-        "voiceover": "One sentence. Watch."
+        "onScreenText": "One brief in. A whole website out.",
+        "voiceover": "One brief. Watch."
       },
       {
         "t": "2-5s",
         "visual": "Hard cut to the real composer at 2x UI scale; the brief is typed by hand; Plan, then Create",
         "onScreenText": "Timer's on.",
-        "voiceover": "I type one sentence about a bakery."
+        "voiceover": "I type a brief about a bakery."
       },
       {
         "t": "5-20s",
@@ -143,7 +143,7 @@
       }
     ],
     "cta": "'DM me SITE' (TikTok, bio link) / 'Comment SITE' (Instagram DM with link, 3 briefs and the uncut build).",
-    "caption": "AI website for a bakery from one sentence, real build, one edit, published. From $20/month + tax, full refund until you use credits. Comment SITE for the brief I used.",
+    "caption": "AI website for a bakery from one brief, real build, one edit, published. From $20/month + tax, full refund until you use credits. Comment SITE for the brief I used.",
     "hashtags": [
       "#websitedesign",
       "#smallbusiness",
@@ -191,7 +191,7 @@
   },
   {
     "id": "V03",
-    "title": "Pitch deck from one sentence",
+    "title": "Pitch deck from one brief",
     "format": "speedrun",
     "platforms": [
       "TikTok",
@@ -204,21 +204,21 @@
     "lane": "B",
     "lengthSec": 30,
     "hook": {
-      "line": "Pitch deck from one sentence. Timer's on.",
+      "line": "Pitch deck from one brief. Timer's on.",
       "visual": "Frame 0: the finished title slide and a chart slide fanned on the canvas, the brief as a sentence chip above."
     },
     "script": [
       {
         "t": "0-2s",
         "visual": "Finished deck: title slide, then the chart slide slides in",
-        "onScreenText": "Pitch deck from one sentence. Timer's on.",
-        "voiceover": "One sentence. A whole pitch deck."
+        "onScreenText": "Pitch deck from one brief. Timer's on.",
+        "voiceover": "One brief. A whole pitch deck."
       },
       {
         "t": "2-5s",
         "visual": "Composer set to Presentation; brief typed: 'A 10-slide pitch for a bike repair shop raising money for a second workshop.'",
-        "onScreenText": "One sentence.",
-        "voiceover": "Presentation, one sentence, create."
+        "onScreenText": "One brief.",
+        "voiceover": "Presentation, one brief, create."
       },
       {
         "t": "5-20s",
@@ -240,7 +240,7 @@
       }
     ],
     "cta": "'Comment DECK' (Instagram) / 'DM me DECK' (TikTok) / link in first comment (LinkedIn, X).",
-    "caption": "How to make a pitch deck from one sentence, then open it in PowerPoint with a real, editable chart. From $20/month. Comment DECK for the brief.",
+    "caption": "How to make a pitch deck from one brief, then open it in PowerPoint with a real, editable chart. From $20/month. Comment DECK for the brief.",
     "hashtags": [
       "#pitchdeck",
       "#presentation",
@@ -334,7 +334,7 @@
       }
     ],
     "cta": "'Comment your business, I'll build the next one.' Pinned comment: makeborne.com/go/tt-v04 (text).",
-    "caption": "Built a bakery website for a commenter from one sentence. Comment your business type and city and I'll build the next one. From $20/month + tax, full refund until you use credits.",
+    "caption": "Built a bakery website for a commenter from one brief. Comment your business type and city and I'll build the next one. From $20/month + tax, full refund until you use credits.",
     "hashtags": [
       "#websitedesign",
       "#smallbusiness",
@@ -1326,13 +1326,13 @@
       },
       {
         "t": "18-24s",
-        "visual": "Composer in Book mode with the one-line idea",
+        "visual": "Composer in Book mode with the brief",
         "onScreenText": "Comment BOOK.",
         "voiceover": "Comment BOOK and I'll send the prompt."
       }
     ],
     "cta": "'Comment BOOK'.",
-    "caption": "How to turn a note into a finished guide: one line in, a full book out, for screen and PDF. Comment BOOK for the brief.",
+    "caption": "How to turn a note into a finished guide: one brief in, a full book out, for screen and PDF. Comment BOOK for the brief.",
     "hashtags": [
       "#writing",
       "#ebook",
@@ -1376,7 +1376,7 @@
   },
   {
     "id": "V16",
-    "title": "5 websites, each from one sentence (swipe)",
+    "title": "5 websites, each from one brief (swipe)",
     "format": "slideshow",
     "platforms": [
       "TikTok",
@@ -1386,14 +1386,14 @@
     "lane": "B",
     "lengthSec": 15,
     "hook": {
-      "line": "5 websites, each from one sentence. Swipe.",
+      "line": "5 websites, each from one brief. Swipe.",
       "visual": "Slide 1: the best output on a phone mockup, sentence chip under it, '1/5' marker."
     },
     "script": [
       {
         "t": "slide 1 (0-2s)",
         "visual": "Best site on a phone, sentence chip",
-        "onScreenText": "5 websites, each from one sentence.",
+        "onScreenText": "5 websites, each from one brief.",
         "voiceover": "None (music)"
       },
       {
@@ -1410,7 +1410,7 @@
       }
     ],
     "cta": "'Comment SITE for all 5 briefs'.",
-    "caption": "5 AI websites made from one sentence each, real outputs, unedited, with the credits each one used. Which one wins? Comment SITE for the briefs.",
+    "caption": "5 AI websites made from one brief each, real outputs, unedited, with the credits each one used. Which one wins? Comment SITE for the briefs.",
     "hashtags": [
       "#websitedesign",
       "#webdesigninspiration",
@@ -1714,7 +1714,7 @@
         "t": "4-15s",
         "visual": "Composer: a fictional business brief that names the five things",
         "onScreenText": "Their 5 rules, one brief",
-        "voiceover": "I put all five in one sentence."
+        "voiceover": "I put all five in one brief."
       },
       {
         "t": "15-45s",
@@ -1873,8 +1873,8 @@
       {
         "t": "2-20s",
         "visual": "Brief written live: location, rooms, house rules, contact",
-        "onScreenText": "Step 1: one detailed sentence",
-        "voiceover": "Step one: describe the place in one or two sentences."
+        "onScreenText": "Step 1: one detailed brief",
+        "voiceover": "Step one: describe the place in one detailed paragraph."
       },
       {
         "t": "20-50s",
@@ -2290,8 +2290,8 @@
       {
         "t": "2-8s",
         "visual": "Composer, Book mode: '7-day guide to sleeping better for new parents, by a sleep coach'",
-        "onScreenText": "One sentence.",
-        "voiceover": "One sentence about what you teach."
+        "onScreenText": "One brief.",
+        "voiceover": "One brief about what you teach."
       },
       {
         "t": "8-25s",
@@ -2307,7 +2307,7 @@
       }
     ],
     "cta": "'Comment BOOK'.",
-    "caption": "How coaches can make a lead magnet guide from one sentence: chapters, checklists, exported as a PDF. Comment BOOK for the brief.",
+    "caption": "How coaches can make a lead magnet guide from one brief: chapters, checklists, exported as a PDF. Comment BOOK for the brief.",
     "hashtags": [
       "#coach",
       "#leadmagnet",
@@ -2430,7 +2430,7 @@
   },
   {
     "id": "V29",
-    "title": "Made from one sentence (daily 8-second series)",
+    "title": "Made from one brief (daily 8-second series)",
     "format": "slideshow",
     "platforms": [
       "TikTok",
@@ -2454,7 +2454,7 @@
       {
         "t": "2-7s",
         "visual": "390-wide full-page scroll of the real output",
-        "onScreenText": "Made from that sentence.",
+        "onScreenText": "Made from that brief.",
         "voiceover": "None"
       },
       {
@@ -2465,7 +2465,7 @@
       }
     ],
     "cta": "Bio link; caption 'Comment SITE for the brief'.",
-    "caption": "Made from one sentence: a bouldering gym website, unedited. Comment SITE for the brief.",
+    "caption": "Made from one brief: a bouldering gym website, unedited. Comment SITE for the brief.",
     "hashtags": [
       "#madewithmakeborne",
       "#websitedesign",
@@ -4040,7 +4040,7 @@
   },
   {
     "id": "V48",
-    "title": "A dated website vs a first version from one sentence",
+    "title": "A dated website vs a first version from one brief",
     "format": "before-after",
     "platforms": [
       "TikTok",
@@ -4050,21 +4050,21 @@
     "lane": "B",
     "lengthSec": 25,
     "hook": {
-      "line": "Your 2014 website vs. a first version from one sentence.",
+      "line": "Your 2014 website vs. a first version from one brief.",
       "visual": "Frame 0: split screen; left a deliberately dated fictional site we built, right the new one."
     },
     "script": [
       {
         "t": "0-2s",
         "visual": "Split",
-        "onScreenText": "2014 vs one sentence.",
-        "voiceover": "Left: 2014. Right: one sentence."
+        "onScreenText": "2014 vs one brief.",
+        "voiceover": "Left: 2014. Right: one brief."
       },
       {
         "t": "2-15s",
         "visual": "Scroll both; brief chip on the right",
-        "onScreenText": "Same business. One sentence.",
-        "voiceover": "Same business, one sentence."
+        "onScreenText": "Same business. One brief.",
+        "voiceover": "Same business, one brief."
       },
       {
         "t": "15-25s",
@@ -4074,7 +4074,7 @@
       }
     ],
     "cta": "'DM me SITE'.",
-    "caption": "Before and after: a dated small business website vs a first version built from one sentence. Fictional business.",
+    "caption": "Before and after: a dated small business website vs a first version built from one brief. Fictional business.",
     "hashtags": [
       "#beforeandafter",
       "#websitedesign",
@@ -4125,15 +4125,15 @@
     "lane": "A+B",
     "lengthSec": 30,
     "hook": {
-      "line": "Same sentence. Yesterday vs today.",
+      "line": "Same brief. Yesterday vs today.",
       "visual": "Frame 0: split screen of the same site, left typography-only, right with generated images in the hero."
     },
     "script": [
       {
         "t": "0-2s",
         "visual": "Split screen",
-        "onScreenText": "Same sentence. Now with images.",
-        "voiceover": "Same sentence. Now it makes the images too."
+        "onScreenText": "Same brief. Now with images.",
+        "voiceover": "Same brief. Now it makes the images too."
       },
       {
         "t": "2-12s",
@@ -4307,7 +4307,7 @@
   },
   {
     "id": "V51",
-    "title": "Full-image slides from one sentence (deck images demo)",
+    "title": "Full-image slides from one brief (deck images demo)",
     "format": "demo",
     "platforms": [
       "LinkedIn",
@@ -4319,15 +4319,15 @@
     "lane": "B",
     "lengthSec": 25,
     "hook": {
-      "line": "Full-image slides. From one sentence.",
+      "line": "Full-image slides. From one brief.",
       "visual": "Frame 0: a full-bleed image slide with a single line of type."
     },
     "script": [
       {
         "t": "0-2s",
         "visual": "Full-bleed slide",
-        "onScreenText": "Full-image slides. One sentence.",
-        "voiceover": "Full-image slides, from one sentence."
+        "onScreenText": "Full-image slides. One brief.",
+        "voiceover": "Full-image slides, from one brief."
       },
       {
         "t": "2-14s",
@@ -4349,7 +4349,7 @@
       }
     ],
     "cta": "'Comment DECK'.",
-    "caption": "New in Makeborne: full-image slides with quality and aspect controls, from one sentence. Comment DECK.",
+    "caption": "New in Makeborne: full-image slides with quality and aspect controls, from one brief. Comment DECK.",
     "hashtags": [
       "#pitchdeck",
       "#presentationdesign",
@@ -4483,7 +4483,7 @@
     "lane": "B",
     "lengthSec": 45,
     "hook": {
-      "line": "Ad: one sentence, and it made the images too.",
+      "line": "Ad: one brief, and it made the images too.",
       "visual": "Frame 0: the creator's finished image-led output on a phone, held to camera."
     },
     "script": [
@@ -4491,7 +4491,7 @@
         "t": "0-3s",
         "visual": "Output to camera",
         "onScreenText": "Ad · it made the images too",
-        "voiceover": "Ad for Makeborne. One sentence, and it made the images too."
+        "voiceover": "Ad for Makeborne. One brief, and it made the images too."
       },
       {
         "t": "3-30s",
@@ -4507,7 +4507,7 @@
       }
     ],
     "cta": "Creator /go/ link; PH100 code if live.",
-    "caption": "#ad One sentence in, images included: my site/deck/book made in Makeborne. Paid partnership.",
+    "caption": "#ad One brief in, images included: my site/deck/book made in Makeborne. Paid partnership.",
     "hashtags": [
       "#ad",
       "#design",

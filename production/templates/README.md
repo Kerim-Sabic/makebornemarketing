@@ -53,7 +53,7 @@ Render on a local disk with at least 20 GB free. Never render on the network dri
 
 ### T04-showcase
 
-- **Purpose:** Real outputs with their sentence: 8 s scroll episode, 15 s slides (and photo-mode stills), 6 s triptych; i2v: an AI camera move over a real output (Higgsfield image-to-video take, letter-checked) with its sentence and run-log footnote
+- **Purpose:** Real outputs with their brief: 8 s scroll episode, 15 s slides (and photo-mode stills), 6 s triptych; i2v: an AI camera move over a real output (Higgsfield image-to-video take, letter-checked) with its brief and run-log footnote
 - **Inputs:** sentence, series, footnote (run log), pageSrc, s1-s5 / f1-f5, brief, line, i2v: clipSrc, sentence, footnote, aiLabelText ('AI camera move on a real Makeborne output')
 - **Length:** 8 / 14.6 / 6 s
 - **Sizes:** 9:16, 4:5, 1:1, 16:9 (triptych)

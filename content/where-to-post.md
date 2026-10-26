@@ -63,7 +63,7 @@ Launch week (26 Oct-1 Nov) follows `data/calendar.json` day by day (extra Linked
 - **Role:** lottery tickets for reach. Comment-reply speedruns, client-work POVs, deck proofs; the founder on camera.
 - **Frequency:** 8-10 a week; never the same file twice (episodes get a new brief, a new output and a new hook).
 - **Times:** 13:00 and 21:30 (the evening slot moved to 20:00-00:00 from 1 Nov; 21:30 = 15:30 US Eastern). TikTok's own data from Sprout points to weekday afternoons in the viewer's time [F, Sprout Social, 31 Mar 2026]; trust the account's analytics from week 3.
-- **Content:** V02/V04 speedruns, V05/V18 POVs, V03/V06 decks, V07 lead finder, V29 daily 8-second outputs; Commercial Music Library only [F]; photo-mode slideshows only for V16-type "5 sites, 5 sentences" (third-party data conflicts on their reach in 2026 [S, metricool.com vs ttcalculator.net], so treat them as a test, at most 1 a week).
+- **Content:** V02/V04 speedruns, V05/V18 POVs, V03/V06 decks, V07 lead finder, V29 daily 8-second outputs; Commercial Music Library only [F]; photo-mode slideshows only for V16-type "5 sites, 5 briefs" (third-party data conflicts on their reach in 2026 [S, metricool.com vs ttcalculator.net], so treat them as a test, at most 1 a week).
 - **Links:** bio `/go/tt-bio`; per-post codes `/go/tt-<post>` shown as text in the pinned comment; CTA "DM me SITE", answered by hand (ManyChat's TikTok channel excluded EU, UK and US businesses as of Sep 2025; BiH eligibility unknown [F/U]).
 - **Who:** founder (editor from about $2k MRR).
 

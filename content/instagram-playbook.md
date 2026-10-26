@@ -65,7 +65,7 @@ Counted by script, line breaks included.
 |---|---|---|---|
 | **1 (recommended, Studio-first)** | The AI studio for client work.<br>Websites, decks and books from one brief + client review links.<br>From $20/mo + tax. Full refund until you use credits. | 148 | Now. Category line, what it makes, the proof line |
 | 2 (DM-first) | Build it. Send the link. Get the yes.<br>AI websites, pitch decks and books for freelancers and small agencies.<br>Comment SITE on any Reel for the link. | 147 | A/B in week 3 if profile-visit-to-link-tap is under 10% [A] |
-| 3 (founder trust) | One sentence in. A finished site, deck or book out.<br>Client review links built in. Made in Sarajevo.<br>From $20/mo + tax. Refund until you use credits. | 148 | When press or the Day-N series drives visits |
+| 3 (founder trust) | One brief in. A finished site, deck or book out.<br>Client review links built in. Made in Sarajevo.<br>From $20/mo + tax. Refund until you use credits. | 145 | When press or the Day-N series drives visits |
 
 Rules: no "free", no "unlimited", no feature that is not live, no emoji walls. Change the bio at most once a week, and only on a Monday so the weekly read stays clean.
 
@@ -156,15 +156,15 @@ Until C05 posts on Sat 31 Oct, pin slot 2 holds C06 (Thu 29 Oct).
 | # | Publish (CET) | Id | Format | Cover frame (from `data/production.json` by id) | Cover text | Keyword | Link in DM |
 |---|---|---|---|---|---|---|---|
 | 1 | Mon 26 Oct 12:05 | **V01** | Reel 17 s | Frame 0 of the v9 Fly-over: the real home page already lifting | We launched *today*. | SITE | `/go/ig-v01-site` |
-| 2 | Tue 27 Oct 13:15 | **V02** | Reel 32 s | The finished bakery site on a phone (frame 0 = the result) | One sentence. Whole *website*. | SITE | `/go/ig-v02-site` |
+| 2 | Tue 27 Oct 13:15 | **V02** | Reel 32 s | The finished bakery site on a phone (frame 0 = the result) | One brief. Whole *website*. | SITE | `/go/ig-v02-site` |
 | 3 | Wed 28 Oct 13:15 | **V05** | Reel 28 s | Phone at 390 px with "Approve this version" visible | "Make it *pop*." (9th time) | CLIENT | `/go/ig-v05-client` |
-| 4 | Thu 29 Oct 18:00 | **C06** | Carousel, 7 slides | Slide 1 type card | 5 websites. 5 *sentences*. | SITE | `/go/ig-c06-site` |
+| 4 | Thu 29 Oct 18:00 | **C06** | Carousel, 7 slides | Slide 1 type card | 5 websites. 5 *briefs*. | SITE | `/go/ig-c06-site` |
 | 5 | Fri 30 Oct 13:15 | **V07** | Reel 40 s | Lead finder results list, names blurred, timer chip | 20 businesses. Before *lunch*. (real time) | CLIENT | `/go/ig-v07-client` |
 | 6 | Sat 31 Oct 12:00 | **C05** | Carousel, 8 slides | Slide 1 type card | A client's yes. No *e-mail*. | CLIENT | `/go/ig-c05-client` |
 | 7 | Sun 1 Nov 19:00 | **V09** | Reel 60 s | Founder face + the Day 7 numbers card (C37 style) | Day 7. Every *number*. | CLIENT | `/go/ig-v09-client` |
 | 8 | Mon 2 Nov 13:15 | **V44** | Reel 40 s | Founder at the desk in Sarajevo | Who's *behind* this? | CLIENT | `/go/ig-v44-client` |
 | 9 | Tue 3 Nov 20:15 (time test) | **V12** if ask 5 is live, else **V18** | Reel 25 s / 15 s | V12: the sample review page with a comment pin. V18: the 40-email thread split screen | V12: Be my *client*. V18: 40 e-mails vs *one* link. | CLIENT | `/go/ig-v12-client` or `/go/ig-v18-client` |
-| 10 | Wed 4 Nov 20:15 (time test) | **V16** | Reel 15 s | First of the five sites, full bleed | 5 sites. 5 *sentences*. | SITE | `/go/ig-v16-site` |
+| 10 | Wed 4 Nov 20:15 (time test) | **V16** | Reel 15 s | First of the five sites, full bleed | 5 sites. 5 *briefs*. | SITE | `/go/ig-v16-site` |
 | 11 | Thu 5 Nov 18:00 | **C18** | Carousel, 8 slides | Slide 1 type card | Notes in. Deck *out*. | DECK | `/go/ig-c18-deck` |
 | 12 | Fri 6 Nov 13:15 | **V15** | Reel 24 s | The finished book cover (typographic) | Notes app to *book*. | BOOK | `/go/ig-v15-book` |
 
@@ -295,7 +295,7 @@ Collabs replace a planned slot in that week; they do not add to the cadence.
 
 ```
 Line 1 (the search line, ≤ 125 characters): the plain-words keyword phrase + the payoff.
-          e.g. "AI website builder test: one sentence in, a whole bakery website out."
+          e.g. "AI website builder test: one brief in, a whole bakery website out."
 Lines 2-3: what happens on screen, in order, with the honest detail
           (real time or "sped up", "publishes on a Makeborne address").
 Line 4: who it's for + the plan (Studio $49 for client work, Create from $20).
@@ -523,7 +523,7 @@ All times CET (Sarajevo). Post ids and default times are from `data/calendar.jso
 ### Day 1 · Mon 26 Oct (launch)
 **Before posting (45 min):** section 1 in full (name, bio 1, 5 links with slot 5 empty, photo, category, contact, settings, highlights "Start here", "Pricing", "FAQ" with their first stories), the DM automations for SITE and CLIENT tested (section 5.2 step 9). Confirm the copy fixes and "coming soon" labels are live (strategy §7 day 1).
 - **12:05 · Reel V01** (17 s), cover: home-page frame 0, "We launched *today*." **Pin 1.**
-  Caption: "AI studio for client work: websites, decks and books from one brief. We launched Makeborne today. Type one sentence and get a finished website, pitch deck or book. Then send your client a review link: they comment on the live page and tap Approve, no account needed. From $20/month + tax. Full refund until you use credits. Comment SITE and I'll DM you the link and 3 briefs to copy. #makeborne #websitedesign #pitchdeck #buildinpublic"
+  Caption: "AI studio for client work: websites, decks and books from one brief. We launched Makeborne today. Describe it once and get a finished website, pitch deck or book. Then send your client a review link: they comment on the live page and tap Approve, no account needed. From $20/month + tax. Full refund until you use credits. Comment SITE and I'll DM you the link and 3 briefs to copy. #makeborne #websitedesign #pitchdeck #buildinpublic"
   Pinned comment: the CTA comment from section 3.6. Keyword SITE → `/go/ig-v01-site`.
 - **12:30 · Story C15** "Reply CLIENT" (`/go/ig-c15-client`).
 - **20:30 · Story, behind the scenes:** founder at the desk, "Day 1. We launched. Ask me anything" + question box.
@@ -531,8 +531,8 @@ All times CET (Sarajevo). Post ids and default times are from `data/calendar.jso
 
 ### Day 2 · Tue 27 Oct
 - **09:00 · Story poll:** "What do you make most for clients? Sites / Decks".
-- **13:15 · Reel V02** (32 s), cover: finished bakery site on a phone, "One sentence. Whole *website*."
-  Caption: "AI website builder test: one sentence in, a whole bakery website out. Real build, one live edit, then published on a Makeborne address. The time on screen is the real build time. From $20/month + tax. Full refund until you use credits. Comment SITE for the exact brief I used. #aiwebsitebuilder #websitedesign #smallbusiness #webdesign"
+- **13:15 · Reel V02** (32 s), cover: finished bakery site on a phone, "One brief. Whole *website*."
+  Caption: "AI website builder test: one brief in, a whole bakery website out. Real build, one live edit, then published on a Makeborne address. The time on screen is the real build time. From $20/month + tax. Full refund until you use credits. Comment SITE for the exact brief I used. #aiwebsitebuilder #websitedesign #smallbusiness #webdesign"
   SITE → `/go/ig-v02-site`.
 - **13:45 · Story:** share V02 with "New" sticker, "Comment SITE on the Reel".
 - **20:30 · Story, BTS:** "Recording the real-speed capture bank today" (one 8 s screen clip).
@@ -548,8 +548,8 @@ All times CET (Sarajevo). Post ids and default times are from `data/calendar.jso
 ### Day 4 · Thu 29 Oct (attribution target day)
 - **09:00 · Story, build of the day** (site) with link sticker `/go/ig-s1029-site`.
 - **13:20 · Story C09** only if ask 5 (sample review link) is live; otherwise skip (calendar HOLD).
-- **18:00 · Carousel C06** "5 websites. 5 sentences." (7 slides, music on, alt text on every slide). **Pin 2 until Sat.**
-  Caption: "5 AI websites, each from one sentence. Unedited, with the time and credits each one used. Swipe and tell me which one wins. Every site publishes on a Makeborne address. From $20/month + tax. Full refund until you use credits. Comment SITE and I'll send all 5 briefs. #aiwebsitebuilder #webdesigninspiration #websitedesign #smallbusiness"
+- **18:00 · Carousel C06** "5 websites. 5 briefs." (7 slides, music on, alt text on every slide). **Pin 2 until Sat.**
+  Caption: "5 AI websites, each from one brief. Unedited, with the time and credits each one used. Swipe and tell me which one wins. Every site publishes on a Makeborne address. From $20/month + tax. Full refund until you use credits. Comment SITE and I'll send all 5 briefs. #aiwebsitebuilder #webdesigninspiration #websitedesign #smallbusiness"
   SITE → `/go/ig-c06-site`.
 - **20:30 · Story:** answers to yesterday's question box (2-3 frames). From today, switch every DM link from long URLs to `/go/` if ask 1 shipped.
 
@@ -593,8 +593,8 @@ All times CET (Sarajevo). Post ids and default times are from `data/calendar.jso
 ### Day 10 · Wed 4 Nov (time test: 20:15)
 - **09:00 · Story poll:** "Which would you send a client? A / B" (two outputs).
 - **13:20 · Story C22** "Reply DECK".
-- **20:15 · Reel V16** (15 s), cover "5 sites. 5 *sentences*."
-  Caption: "AI websites from one sentence each: 5 real outputs, unedited, with the credits each one used. Which one would you send a client? Comment SITE for all 5 briefs. #aiwebsitebuilder #websitedesign #webdesigninspiration"
+- **20:15 · Reel V16** (15 s), cover "5 sites. 5 *briefs*."
+  Caption: "AI websites from one brief each: 5 real outputs, unedited, with the credits each one used. Which one would you send a client? Comment SITE for all 5 briefs. #aiwebsitebuilder #websitedesign #webdesigninspiration"
   SITE → `/go/ig-v16-site`.
 - **21:00 · Trial reel #2:** V05 with hook F1 "Freelancers: steal this client-approval trick."
 
@@ -608,7 +608,7 @@ All times CET (Sarajevo). Post ids and default times are from `data/calendar.jso
 ### Day 12 · Fri 6 Nov
 - **09:00 · Story question box:** "Ask me anything about pricing and refunds."
 - **13:15 · Reel V15** (24 s), cover: the finished typographic book cover, "Notes app to *book*."
-  Caption: "How to turn a note into a finished guide: two lines in my notes app, a full book out, for screen and PDF. Text-led and edited in plain words. From $20/month + tax. Full refund until you use credits. Comment BOOK for the brief. #leadmagnet #ebook #writing #notesapp"
+  Caption: "How to turn a note into a finished guide: one brief from my notes app, a full book out, for screen and PDF. Text-led and edited in plain words. From $20/month + tax. Full refund until you use credits. Comment BOOK for the brief. #leadmagnet #ebook #writing #notesapp"
   BOOK → `/go/ig-v15-book`. Never "print-ready", no picture-book framing.
 - **13:20 · Story C25** "Reply BOOK" (`/go/ig-c25-book`).
 - **21:00 · Trial reel #3:** V07 with hook F4 "I found 20 local businesses to pitch in [real time]."

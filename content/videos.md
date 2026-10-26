@@ -109,25 +109,25 @@ Times are Sarajevo (CET). Brand TikTok posts at about 13:00 and 21:00 (move the 
 - **Tracking:** `makeborne.com/go/ig-v01`, `makeborne.com/go/li-v01`, `makeborne.com/go/tt-v01`, `makeborne.com/go/x-v01`, `makeborne.com/go/yt-v01`; `utm_campaign=launch-2026-10`, `utm_content=<surface>-v01-l1`
 - **Why it works:** The only finished, honest brand film in the bank: it shows the real home page (research/creative-assets.md §2.1, §3). Polished films earn mostly paid reach, so it is a pinned trust asset and a paid-test candidate, not the volume engine (research/short-form-video.md §14).
 
-#### V02 · One sentence in, a whole website out (bakery speedrun)
+#### V02 · One brief in, a whole website out (bakery speedrun)
 
 `speedrun` · **P0** · week 1 (26 Oct-1 Nov) · `live` · icp4 · lane A+B · 32 s · effort low
 
 **Platforms:** TikTok, Instagram Reels, YouTube Shorts, X
 
-**Hook (first 2 s):** "One sentence in. A whole website out."  
-*Visual:* Frame 0: the finished bakery site scrolling on a phone (390-wide capture), the one-line brief pinned on top as a sentence chip.
+**Hook (first 2 s):** "One brief in. A whole website out."  
+*Visual:* Frame 0: the finished bakery site scrolling on a phone (390-wide capture), the brief pinned on top as a sentence chip.
 
 | Time | Picture | On screen | Voice-over |
 |---|---|---|---|
-| 0-2s | Finished site scrolling on a phone; sentence chip 'A website for a family bakery in Leeds that opens at 7.' | One sentence in. A whole website out. | One sentence. Watch. |
-| 2-5s | Hard cut to the real composer at 2x UI scale; the brief is typed by hand; Plan, then Create | Timer's on. | I type one sentence about a bakery. |
+| 0-2s | Finished site scrolling on a phone; sentence chip 'A website for a family bakery in Leeds that opens at 7.' | One brief in. A whole website out. | One brief. Watch. |
+| 2-5s | Hard cut to the real composer at 2x UI scale; the brief is typed by hand; Plan, then Create | Timer's on. | I type a brief about a bakery. |
 | 5-20s | The build streams in the studio; cut-ins on headline, menu and opening hours. Clock chip: '[real time]' filled from the recording, or 'sped up ×N' if compressed. Never show compressed time as real time. | Headline. / Menu. / Opening hours. | It writes the page, picks the type, lays out the menu. |
 | 20-28s | One chat edit ('make it warmer and put the opening hours at the top'); only that section changes; Publish; the real Makeborne address appears | Live. [real time] | One edit, publish, and it's live on a Makeborne address. |
 | 28-32s | Back to the frame-0 phone shot so it loops | What should I build next? Comment it. | Tell me what to build next. |
 
 - **CTA:** 'DM me SITE' (TikTok, bio link) / 'Comment SITE' (Instagram DM with link, 3 briefs and the uncut build).
-- **Caption:** AI website for a bakery from one sentence, real build, one edit, published. From $20/month + tax, full refund until you use credits. Comment SITE for the brief I used.
+- **Caption:** AI website for a bakery from one brief, real build, one edit, published. From $20/month + tax, full refund until you use credits. Comment SITE for the brief I used.
 - **Hashtags:** #websitedesign #smallbusiness #aiwebsitebuilder #bakery
 - **Sound:** Brand TikTok: Commercial Music Library track only (business account) under original voice-over. Instagram/YouTube: original voice-over plus a library track cleared for business use [U: re-check each platform's business library]. No trending chart songs on brand accounts.
 - **Shot list:** Composer, typed live at 2x UI scale; Studio build, full uncut recording (keep it for the 90-150 s full cut and the landing page); One chat edit; Publish dialog and the live address in a browser; 390-wide phone scroll of the published site for frame 0 and the loop
@@ -138,25 +138,25 @@ Times are Sarajevo (CET). Brand TikTok posts at about 13:00 and 21:00 (move the 
 - **Budget line:** b5 (boost candidate only if it passes the qualify rule)
 - **Why it works:** Result-first speedruns are the highest-converting format for a paid-only tool: the viewer sees the exact job they would pay for (research/short-form-video.md §3, formats 1-2). TikTok wants the proposition inside 3 s [F, TikTok Ads Help, Jun 2025].
 
-#### V03 · Pitch deck from one sentence
+#### V03 · Pitch deck from one brief
 
 `speedrun` · **P0** · week 1 (26 Oct-1 Nov) · `live` · icp2 · lane B · 30 s · effort low
 
 **Platforms:** TikTok, Instagram Reels, YouTube Shorts, LinkedIn, X
 
-**Hook (first 2 s):** "Pitch deck from one sentence. Timer's on."  
+**Hook (first 2 s):** "Pitch deck from one brief. Timer's on."  
 *Visual:* Frame 0: the finished title slide and a chart slide fanned on the canvas, the brief as a sentence chip above.
 
 | Time | Picture | On screen | Voice-over |
 |---|---|---|---|
-| 0-2s | Finished deck: title slide, then the chart slide slides in | Pitch deck from one sentence. Timer's on. | One sentence. A whole pitch deck. |
-| 2-5s | Composer set to Presentation; brief typed: 'A 10-slide pitch for a bike repair shop raising money for a second workshop.' | One sentence. | Presentation, one sentence, create. |
+| 0-2s | Finished deck: title slide, then the chart slide slides in | Pitch deck from one brief. Timer's on. | One brief. A whole pitch deck. |
+| 2-5s | Composer set to Presentation; brief typed: 'A 10-slide pitch for a bike repair shop raising money for a second workshop.' | One brief. | Presentation, one brief, create. |
 | 5-20s | Slides arrive one by one, dealt on the beat. Clock chip: '[real time]' filled from the recording, or 'sped up ×N' if compressed. Never show compressed time as real time. | Story. / Numbers. / The ask. | It builds the story, the numbers slide and the ask. |
 | 20-27s | Export PPTX; the file opens in PowerPoint; click the chart: it's a real chart object | Opens in PowerPoint. Real chart. | And it opens in PowerPoint. That chart is real, not a picture. |
 | 27-30s | Back to the frame-0 fan | Comment DECK. | Comment DECK and I'll send the brief. |
 
 - **CTA:** 'Comment DECK' (Instagram) / 'DM me DECK' (TikTok) / link in first comment (LinkedIn, X).
-- **Caption:** How to make a pitch deck from one sentence, then open it in PowerPoint with a real, editable chart. From $20/month. Comment DECK for the brief.
+- **Caption:** How to make a pitch deck from one brief, then open it in PowerPoint with a real, editable chart. From $20/month. Comment DECK for the brief.
 - **Hashtags:** #pitchdeck #presentation #powerpoint #startup
 - **Sound:** Brand TikTok: Commercial Music Library track only (business account) under original voice-over. Instagram/YouTube: original voice-over plus a library track cleared for business use [U: re-check each platform's business library]. No trending chart songs on brand accounts.
 - **Shot list:** Composer in Presentation mode; Uncut deck build; PPTX export and open in PowerPoint; Click-to-select the chart, data sheet open
@@ -185,7 +185,7 @@ Times are Sarajevo (CET). Brand TikTok posts at about 13:00 and 21:00 (move the 
 | 28-32s | Loop to frame 0 | Comment your business. I'll build the next one. | Comment your business and I'll build the next one. |
 
 - **CTA:** 'Comment your business, I'll build the next one.' Pinned comment: makeborne.com/go/tt-v04 (text).
-- **Caption:** Built a bakery website for a commenter from one sentence. Comment your business type and city and I'll build the next one. From $20/month + tax, full refund until you use credits.
+- **Caption:** Built a bakery website for a commenter from one brief. Comment your business type and city and I'll build the next one. From $20/month + tax, full refund until you use credits.
 - **Hashtags:** #websitedesign #smallbusiness #replyingtocomments #aiwebsitebuilder
 - **Sound:** Brand TikTok: Commercial Music Library track only (business account) under original voice-over. Instagram/YouTube: original voice-over plus a library track cleared for business use [U: re-check each platform's business library]. No trending chart songs on brand accounts.
 - **Shot list:** Screenshot of the comment (handle blurred unless they agree to be shown); Composer and build; Phone scroll of the result; Loop frame
@@ -391,12 +391,12 @@ Within each format, live videos come first (by week), then beat videos, which mu
 | Time | Picture | On screen | Voice-over |
 |---|---|---|---|
 | 0-2s | Guide cover + coffee | Your lead magnet, before your coffee's cold. | Your lead magnet, before your coffee goes cold. |
-| 2-8s | Composer, Book mode: '7-day guide to sleeping better for new parents, by a sleep coach' | One sentence. | One sentence about what you teach. |
+| 2-8s | Composer, Book mode: '7-day guide to sleeping better for new parents, by a sleep coach' | One brief. | One brief about what you teach. |
 | 8-25s | Build (chip); page riffle | Chapters. Checklists. Your voice. | Chapters, checklists, a 7-day plan. |
 | 25-35s | Export PDF; it lands in an email draft | Export the PDF. | Export the PDF and give it away. Comment BOOK. |
 
 - **CTA:** 'Comment BOOK'.
-- **Caption:** How coaches can make a lead magnet guide from one sentence: chapters, checklists, exported as a PDF. Comment BOOK for the brief.
+- **Caption:** How coaches can make a lead magnet guide from one brief: chapters, checklists, exported as a PDF. Comment BOOK for the brief.
 - **Hashtags:** #coach #leadmagnet #onlinecoach #ebook
 - **Sound:** Brand TikTok: Commercial Music Library track only (business account) under original voice-over. Instagram/YouTube: original voice-over plus a library track cleared for business use [U: re-check each platform's business library]. No trending chart songs on brand accounts.
 - **Shot list:** Coffee hero shot; Book build capture; PDF export
@@ -464,7 +464,7 @@ Within each format, live videos come first (by week), then beat videos, which mu
 | ID | Title | Pri | Week | Tag |
 |---|---|---|---|---|
 | V14 | My slides vs the deck I made from the same notes | P1 | 2 | `live` |
-| V48 | A dated website vs a first version from one sentence | P2 | 4 | `live` |
+| V48 | A dated website vs a first version from one brief | P2 | 4 | `live` |
 | V49 | Same brief, now with its own images (before/after) | P1 | 3 | `beat:images` |
 
 #### V14 · My slides vs the deck I made from the same notes
@@ -494,23 +494,23 @@ Within each format, live videos come first (by week), then beat videos, which mu
 - **Tracking:** `makeborne.com/go/ig-v14`, `makeborne.com/go/li-v14`, `makeborne.com/go/tt-v14`, `makeborne.com/go/x-v14`; `utm_campaign=launch-2026-10`, `utm_content=<surface>-v14-d2`
 - **Why it works:** Before/after was Gamma's highest-engagement creator angle [V, Passionfroot Q2 2025; LightReel 24 Oct 2026].
 
-#### V48 · A dated website vs a first version from one sentence
+#### V48 · A dated website vs a first version from one brief
 
 `before-after` · **P2** · week 4 (16-22 Nov) · `live` · icp4 · lane B · 25 s · effort med
 
 **Platforms:** TikTok, Instagram Reels
 
-**Hook (first 2 s):** "Your 2014 website vs. a first version from one sentence."  
+**Hook (first 2 s):** "Your 2014 website vs. a first version from one brief."  
 *Visual:* Frame 0: split screen; left a deliberately dated fictional site we built, right the new one.
 
 | Time | Picture | On screen | Voice-over |
 |---|---|---|---|
-| 0-2s | Split | 2014 vs one sentence. | Left: 2014. Right: one sentence. |
-| 2-15s | Scroll both; brief chip on the right | Same business. One sentence. | Same business, one sentence. |
+| 0-2s | Split | 2014 vs one brief. | Left: 2014. Right: one brief. |
+| 2-15s | Scroll both; brief chip on the right | Same business. One brief. | Same business, one brief. |
 | 15-25s | Phone view of the new one; publish | A first version, before you hire anyone. | A first version before you hire a designer. Comment SITE. |
 
 - **CTA:** 'DM me SITE'.
-- **Caption:** Before and after: a dated small business website vs a first version built from one sentence. Fictional business.
+- **Caption:** Before and after: a dated small business website vs a first version built from one brief. Fictional business.
 - **Hashtags:** #beforeandafter #websitedesign #smallbusiness
 - **Sound:** Brand TikTok: Commercial Music Library track only (business account) under original voice-over. Instagram/YouTube: original voice-over plus a library track cleared for business use [U: re-check each platform's business library]. No trending chart songs on brand accounts.
 - **Shot list:** Build the dated 'before' ourselves; New build
@@ -526,12 +526,12 @@ Within each format, live videos come first (by week), then beat videos, which mu
 
 **Platforms:** TikTok, Instagram Reels, YouTube Shorts, LinkedIn, X
 
-**Hook (first 2 s):** "Same sentence. Yesterday vs today."  
+**Hook (first 2 s):** "Same brief. Yesterday vs today."  
 *Visual:* Frame 0: split screen of the same site, left typography-only, right with generated images in the hero.
 
 | Time | Picture | On screen | Voice-over |
 |---|---|---|---|
-| 0-2s | Split screen | Same sentence. Now with images. | Same sentence. Now it makes the images too. |
+| 0-2s | Split screen | Same brief. Now with images. | Same brief. Now it makes the images too. |
 | 2-12s | Site before/after | Sites | Sites. |
 | 12-20s | Deck: full-image slide before/after | Decks | Decks, with full-image slides. |
 | 20-27s | Book cover/spread before/after | Books | And books. |
@@ -660,7 +660,7 @@ Within each format, live videos come first (by week), then beat videos, which mu
 | Time | Picture | On screen | Voice-over |
 |---|---|---|---|
 | 0-2s | Finished site on phone | How to make a website for your rental. | Here's how to make a website for your holiday rental. |
-| 2-20s | Brief written live: location, rooms, house rules, contact | Step 1: one detailed sentence | Step one: describe the place in one or two sentences. |
+| 2-20s | Brief written live: location, rooms, house rules, contact | Step 1: one detailed brief | Step one: describe the place in one detailed paragraph. |
 | 20-50s | Build (chip); use your own photos if you have them | Step 2: build | Step two: build it. Use your own photos if you have them. |
 | 50-75s | Edits in chat: house rules, check-in times | Step 3: edit in chat | Step three: tell it what to change. |
 | 75-90s | Publish to a Makeborne address | Step 4: publish | Step four: publish. It's live on a Makeborne address. Comment SITE. |
@@ -737,26 +737,26 @@ Within each format, live videos come first (by week), then beat videos, which mu
 
 | ID | Title | Pri | Week | Tag |
 |---|---|---|---|---|
-| V16 | 5 websites, each from one sentence (swipe) | P1 | 2 | `live` |
-| V29 | Made from one sentence (daily 8-second series) | P1 | 2 | `live` |
+| V16 | 5 websites, each from one brief (swipe) | P1 | 2 | `live` |
+| V29 | Made from one brief (daily 8-second series) | P1 | 2 | `live` |
 
-#### V16 · 5 websites, each from one sentence (swipe)
+#### V16 · 5 websites, each from one brief (swipe)
 
 `slideshow` · **P1** · week 2 (2-8 Nov) · `live` · icp4 · lane B · 15 s · effort low
 
 **Platforms:** TikTok, Instagram Reels
 
-**Hook (first 2 s):** "5 websites, each from one sentence. Swipe."  
+**Hook (first 2 s):** "5 websites, each from one brief. Swipe."  
 *Visual:* Slide 1: the best output on a phone mockup, sentence chip under it, '1/5' marker.
 
 | Time | Picture | On screen | Voice-over |
 |---|---|---|---|
-| slide 1 (0-2s) | Best site on a phone, sentence chip | 5 websites, each from one sentence. | None (music) |
+| slide 1 (0-2s) | Best site on a phone, sentence chip | 5 websites, each from one brief. | None (music) |
 | slides 2-5 | One real output per slide with its sentence chip and credits used | 'A site for a bouldering gym.' · [N] credits | None |
 | slide 6 | CTA card | Comment SITE for all 5 briefs. | None |
 
 - **CTA:** 'Comment SITE for all 5 briefs'.
-- **Caption:** 5 AI websites made from one sentence each, real outputs, unedited, with the credits each one used. Which one wins? Comment SITE for the briefs.
+- **Caption:** 5 AI websites made from one brief each, real outputs, unedited, with the credits each one used. Which one wins? Comment SITE for the briefs.
 - **Hashtags:** #websitedesign #webdesigninspiration #smallbusiness #aiwebsitebuilder
 - **Sound:** TikTok photo mode: Commercial Music Library track. Instagram carousel: no audio or a cleared library track.
 - **Shot list:** Phone-mockup frames of 5 real fixture outputs; Sentence chip on every frame
@@ -766,7 +766,7 @@ Within each format, live videos come first (by week), then beat videos, which mu
 - **Tracking:** `makeborne.com/go/ig-v16`, `makeborne.com/go/tt-v16`; `utm_campaign=launch-2026-10`, `utm_content=<surface>-v16-s1`
 - **Why it works:** Carousels earn saves and comments at low effort [V, ttcalculator Q3 2025-Q1 2026]; Instagram carousels out-engage Reels in Buffer's 2026 data (6.9% vs 3.3%) [V, Buffer 19 Mar 2026].
 
-#### V29 · Made from one sentence (daily 8-second series)
+#### V29 · Made from one brief (daily 8-second series)
 
 `slideshow` · **P1** · week 2 (2-8 Nov) · `live` · icp4 · lane B · 8 s · effort low
 
@@ -778,11 +778,11 @@ Within each format, live videos come first (by week), then beat videos, which mu
 | Time | Picture | On screen | Voice-over |
 |---|---|---|---|
 | 0-2s | Sentence chip on canvas | 'A site for my bouldering gym.' | None |
-| 2-7s | 390-wide full-page scroll of the real output | Made from that sentence. | None |
+| 2-7s | 390-wide full-page scroll of the real output | Made from that brief. | None |
 | 7-8s | Brand mark, loops to frame 0 | makeborne.com | None |
 
 - **CTA:** Bio link; caption 'Comment SITE for the brief'.
-- **Caption:** Made from one sentence: a bouldering gym website, unedited. Comment SITE for the brief.
+- **Caption:** Made from one brief: a bouldering gym website, unedited. Comment SITE for the brief.
 - **Hashtags:** #madewithmakeborne #websitedesign #webdesigninspiration
 - **Sound:** Commercial Music Library loop; same sonic signature every episode.
 - **Shot list:** One real output per day as a 390-wide scroll capture
@@ -1042,7 +1042,7 @@ Within each format, live videos come first (by week), then beat videos, which mu
 | Time | Picture | On screen | Voice-over |
 |---|---|---|---|
 | 0-4s | Stitched clip (only from creators who enable Stitch; credit them) | Let's test this. | You said every small business site needs these five things. |
-| 4-15s | Composer: a fictional business brief that names the five things | Their 5 rules, one brief | I put all five in one sentence. |
+| 4-15s | Composer: a fictional business brief that names the five things | Their 5 rules, one brief | I put all five in one brief. |
 | 15-45s | Build (chip); tick each rule off on screen | ✔ Hours ✔ Phone ✔ Map... | Hours, phone, location, services, booking button. |
 | 45-60s | Finished site, all five ticked | 5/5. Credit: @creator | Five out of five. Thanks for the checklist. |
 
@@ -1215,17 +1215,17 @@ Within each format, live videos come first (by week), then beat videos, which mu
 
 **Platforms:** TikTok, Instagram Reels
 
-**Hook (first 2 s):** "Ad: one sentence, and it made the images too."  
+**Hook (first 2 s):** "Ad: one brief, and it made the images too."  
 *Visual:* Frame 0: the creator's finished image-led output on a phone, held to camera.
 
 | Time | Picture | On screen | Voice-over |
 |---|---|---|---|
-| 0-3s | Output to camera | Ad · it made the images too | Ad for Makeborne. One sentence, and it made the images too. |
+| 0-3s | Output to camera | Ad · it made the images too | Ad for Makeborne. One brief, and it made the images too. |
 | 3-30s | Their real build on the shipped version | My brief, my build | Here's my brief and the build. |
 | 30-45s | Creator to camera | Link in bio | Link in bio. |
 
 - **CTA:** Creator /go/ link; PH100 code if live.
-- **Caption:** #ad One sentence in, images included: my site/deck/book made in Makeborne. Paid partnership.
+- **Caption:** #ad One brief in, images included: my site/deck/book made in Makeborne. Paid partnership.
 - **Hashtags:** #ad #design #contentcreator
 - **Sound:** Creator's own voice and a sound the creator's account may use commercially (on TikTok, branded content must use the Commercial Music Library).
 - **Shot list:** Creator's own screen recording of their real use during the comped Studio month; Face to camera in natural light, no filters; Phone capture of the output
@@ -1248,7 +1248,7 @@ Within each format, live videos come first (by week), then beat videos, which mu
 | V28 | My grandma never wrote a recipe down, so we made a book | P2 | 4 | `live` |
 | V42 | New year, new clients: lead finder → demo → review link | P1 | 11 | `live` |
 | V50 | 'Anything': the fixed v14 launch film (15 s vertical + 43 s 16:9) | P1 | 3 | `beat:images` |
-| V51 | Full-image slides from one sentence (deck images demo) | P1 | 3 | `beat:images` |
+| V51 | Full-image slides from one brief (deck images demo) | P1 | 3 | `beat:images` |
 | V55 | Run out mid-project? Top up without changing plan | P2 | 3 | `beat:topups` |
 | V52 | A bedtime book where my son is the hero (picture book) | P1 | 5 | `beat:images` |
 | V56 | Your client's site, on your client's domain | P1 | 6 | `beat:custom-domains` |
@@ -1297,10 +1297,10 @@ Within each format, live videos come first (by week), then beat videos, which mu
 | 0-2s | Notes app list on phone | Your notes app is full of book ideas. | Your notes app is full of book ideas. |
 | 2-6s | Cover of the finished text-led book | Here's one, finished. | Here's one, finished. |
 | 6-18s | Page riffle: contents, chapter opener, a checklist page | Contents. Chapters. Checklists. | Contents, chapters, checklists. Ready to read on screen or as a PDF. |
-| 18-24s | Composer in Book mode with the one-line idea | Comment BOOK. | Comment BOOK and I'll send the prompt. |
+| 18-24s | Composer in Book mode with the brief | Comment BOOK. | Comment BOOK and I'll send the prompt. |
 
 - **CTA:** 'Comment BOOK'.
-- **Caption:** How to turn a note into a finished guide: one line in, a full book out, for screen and PDF. Comment BOOK for the brief.
+- **Caption:** How to turn a note into a finished guide: one brief in, a full book out, for screen and PDF. Comment BOOK for the brief.
 - **Hashtags:** #writing #ebook #leadmagnet #notesapp
 - **Sound:** Brand TikTok: Commercial Music Library track only (business account) under original voice-over. Instagram/YouTube: original voice-over plus a library track cleared for business use [U: re-check each platform's business library]. No trending chart songs on brand accounts.
 - **Shot list:** Notes-app prop; Book riffle from real output; Composer in Book mode
@@ -1446,24 +1446,24 @@ Within each format, live videos come first (by week), then beat videos, which mu
 - **Tracking:** `makeborne.com/go/ig-v50`, `makeborne.com/go/li-v50`, `makeborne.com/go/tt-v50`, `makeborne.com/go/x-v50`, `makeborne.com/go/yt-v50`; `utm_campaign=images-beat`, `utm_content=<surface>-v50-i2`
 - **Why it works:** The owner's quality bar becomes honest only once images are live; it serves the Product Hunt launch and X, where 16:9 launch video outperformed 9:16 [V, Infinite via internal v14 research].
 
-#### V51 · Full-image slides from one sentence (deck images demo)
+#### V51 · Full-image slides from one brief (deck images demo)
 
 `demo` · **P1** · week 3 (9-15 Nov) · `beat:images` · icp2 · lane B · 25 s · effort low
 
 **Platforms:** LinkedIn, TikTok, Instagram Reels, X
 
-**Hook (first 2 s):** "Full-image slides. From one sentence."  
+**Hook (first 2 s):** "Full-image slides. From one brief."  
 *Visual:* Frame 0: a full-bleed image slide with a single line of type.
 
 | Time | Picture | On screen | Voice-over |
 |---|---|---|---|
-| 0-2s | Full-bleed slide | Full-image slides. One sentence. | Full-image slides, from one sentence. |
+| 0-2s | Full-bleed slide | Full-image slides. One brief. | Full-image slides, from one brief. |
 | 2-14s | Quality and aspect controls set; build (chip) | Pick quality. Pick aspect. | Pick the quality and aspect. |
 | 14-22s | Deck deals in | Your deck, your images. | Every slide gets its own image. |
 | 22-25s | End | Comment DECK. | Comment DECK. |
 
 - **CTA:** 'Comment DECK'.
-- **Caption:** New in Makeborne: full-image slides with quality and aspect controls, from one sentence. Comment DECK.
+- **Caption:** New in Makeborne: full-image slides with quality and aspect controls, from one brief. Comment DECK.
 - **Hashtags:** #pitchdeck #presentationdesign #newfeature
 - **Sound:** Brand TikTok: Commercial Music Library track only (business account) under original voice-over. Instagram/YouTube: original voice-over plus a library track cleared for business use [U: re-check each platform's business library]. No trending chart songs on brand accounts.
 - **Shot list:** Shipped-version capture of the controls and output
@@ -2007,7 +2007,7 @@ All paths are in the film library (private; read only; nothing is written there)
 | v12 real book `v12\assets\real\book-repair\page-01..17.png`, `book_sheet.jpg` | **V15** riffle | — | Show bracketed placeholders (crop them) |
 | v14 "Anything" `v14\renders\v14_draft_1080p60.mp4` (draft 1, 43.4 s, 16:9) | Client-approval segment (25.7-29.1 s) as a motion reference for V05 only | **V50** after the fixes listed there | Post as-is: "Start free" end card, concept outputs, missing AI-concept line, wrong publish address |
 | v14 stills `v14\gen\sheet_v14.jpg`, `v14\gen\out\*.png`, `v14\gen\write_prompts.py` | Internal quality target for the images pipeline | Style reference for V49-V52 | Show as Makeborne product output |
-| v13 "One Sentence" `v13\renders\drafts\v13_draft2_1080p60.mp4` | — | — | Public use (rejected by the owner; concept imagery; "Tidal" is a real brand) |
+| v13 "One Sentence" `v13\renders\drafts\v13_draft2_1080p60.mp4` | — | — | Public use (rejected by the owner; concept imagery; "Tidal" is a real brand; its premise is not substantiated: real outputs came from 500-1,000-character briefs) |
 | v10 "The List" | The notes-app-to-book insight behind V15 | — | Its spent devices (notes list visuals, paper planes, Grandma Rosa, Lumen); it has no muxed final |
 | v12 labs (doodle, rigs) | Texture only, if ever | — | Campaign use |
 | Product repo real outputs (Relay Operations, Crux Yard, Osteria Brina and similar; 390-wide captures) | **V16**, **V29** | — | The synthetic "Tide Tables" fixtures, derived book openings or real-business redesigns |

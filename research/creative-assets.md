@@ -57,7 +57,7 @@ Paths are relative to the films folder (`makeborne-films/`), or to the product r
 | **v9 "Fly-over"** `v9-flyover/renders/` | 16:9 3840×2160/60 · **9:16 1080×1920/60** · 5:4 1440×1152/60 master | 14.5 s | One continuous camera over the real makeborne.com home page (captured 14 Oct), lifting the real UI pieces. Ends on "One idea. *Every possibility.*" | **Final, all three formats** | The page shows style previews labelled as AI concepts. The home page may have changed since 14 Oct, so check it matches the live site. The owner later rejected fly-overs as a film style (v13 notes), but as an ad it is honest and clean. Music: Mixkit "Opalescent" (licence covers web, social and online ads; not broadcast) |
 | **v10 "The List"** `v10-the-list/` | 9:16 1080×1920/60 video-only segment; audio mixes for 42.6 s, 15 s and 6 s as separate WAVs | 42.6 s | A notes-app list of unmade ideas, each made in Makeborne. "Make the thing you keep describing." | **No muxed final.** The 15 s and 6 s cuts have audio only | Uses the real mobile studio UI. The "made" items are hand-built concepts, labelled. Its premise devices (notes list, paper planes, Grandma Rosa, Lumen) were marked "spent" on 18 Oct |
 | **v12 labs** `v12/lab/doodle/renders/doodle-reel-v1/v2.mp4`, `v12/lab/rigs/renders/rigs-lab.mp4` | 16:9 | short | Motion experiments (doodle strokes, rigs) | Lab only | Not campaign-ready. Useful only as texture or reference |
-| **v13 "One Sentence"** `v13/renders/drafts/v13_draft2_1080p60.mp4` | 16:9 1920×1080/60 | 41.6 s | A sentence on slot reels becomes a site, a book and a deck. End card "What will you make *next?*" | Draft 2 | **Rejected by the owner** ("boring"). Built on image-model concept designs (Alba Bakehouse, The Fox Who Baked the Moon, the Tidal deck). "Tidal" is a well-known brand name |
+| **v13 "One Sentence"** `v13/renders/drafts/v13_draft2_1080p60.mp4` | 16:9 1920×1080/60 | 41.6 s | A sentence on slot reels becomes a site, a book and a deck. End card "What will you make *next?*" | Draft 2 | **Rejected by the owner** ("boring"). Built on image-model concept designs (Alba Bakehouse, The Fox Who Baked the Moon, the Tidal deck). "Tidal" is a well-known brand name. Its premise is not substantiated: real Makeborne outputs came from 500-1,000-character briefs |
 | **v14 "Anything"** `v14/renders/v14_draft_1080p60.mp4` | 16:9 1920×1080/60 (draft 1 only) | 43.4 s | Glossy m and dawn ring; the real composer types "A website for my bakery."; a reel of about 30 worlds; "Anything you can *imagine.*"; the click is the drop; a burst of outputs; a chat edit ("Paris at 2 a.m."); publish; book; deck; **client review with comment, fix and Approve**; the m prints the work; end card | **Draft 1 only.** The draft 2 render failed on 26 Oct with a file-rename error | **Blockers:** (1) end card "Start free" with no free tier; (2) the AI-concept line was removed in fix round 1 and was tiny in draft 1; (3) every output is an image-model concept, not product output, and generated images are not live; (4) the "Paris at 2 a.m." beat changes the hero photo, which implies image editing; (5) the publish URL shown in the film does not match the launch code's default publish address (`sites.makeborne.com/<slug>`); (6) some concept brand names may collide with real brands (§2.4) |
 
 ### 2.2 Stills
@@ -104,7 +104,7 @@ Paths are relative to the films folder (`makeborne-films/`), or to the product r
 | v14 | Burst only (12.0-13.8 s) | 9:16, 1:1 | 2 s loop | GIF-style organic, Stories sticker, PH gallery | Images beat |
 | v12 real deck edit | Before/after split of slide 6 (12, 18, 25, 30 → 12, 21, 25, 30; nothing else changes) | 4:5 static, 1:1 carousel, 9:16 6 s | 6 s | Meta static test; X proof post | **Now.** The strongest truthful precision demo ("Change one thing. Only that thing changes.") |
 | v12 real book | Page riffle: cover → contents → chapter opener → intake checklist | 9:16, 4:5 carousel | 8-10 s, 5 cards | Instagram carousel, LinkedIn document | Now |
-| Product real outputs (Relay, Crux Yard, Kafa Tamo, Osteria Brina) | 390-wide full-page scroll capture with a sentence-chip overlay ("A site for my bouldering gym.") | 9:16 | 6-10 s each | TikTok and Reels series "Made from one sentence" | Now |
+| Product real outputs (Relay, Crux Yard, Kafa Tamo, Osteria Brina) | 390-wide full-page scroll capture with a sentence-chip overlay ("A site for my bouldering gym.") | 9:16 | 6-10 s each | TikTok and Reels series "Made from one brief" | Now |
 | v13/v14 concept stills | Mood board, internal quality target, "coming soon" teaser with a label | 1:1, 4:5 | n/a | Owner's X/LinkedIn "what's coming" teaser | Only with a clear "concept / coming soon" label. Better: wait for real outputs |
 
 **Rules for every cut [I, from the film research]**
@@ -160,7 +160,7 @@ The evidence for why this matters:
    - Split frames make great statics.
 3. **The outputs themselves (the desire).**
    - Full-page scroll captures (390 wide = native 9:16), book page riffles and slide decks dealt on the beat.
-   - Each carries a small sentence chip with the one-line brief that made it. That chip is the brand device: the sentence is always visible.
+   - Each carries a small sentence chip with the brief that made it. That chip is the brand device: the brief is always visible.
 4. **Brand films (the stance).** v9 now, v14 once fixed. They are used sparingly, for launch posts, the website and YouTube, not as the main paid workhorse.
 
 ### 4.5 Anti-slop checklist (score every creative before it ships)
@@ -212,7 +212,7 @@ The evidence for why this matters:
    - Paid creators are a test for later, not a launch dependency. Base44's early influencer spend failed; Gamma's program worked at scale and over time.
 3. **Carousels on LinkedIn and Instagram organic, not as Meta ads.**
    - Carousel is last on Meta hit rate, but first for LinkedIn and Instagram organic engagement.
-   - A five-slide "one sentence → finished site / book / deck" carousel and a book page-through belong there.
+   - A five-slide "one brief → finished site / book / deck" carousel and a book page-through belong there.
 4. **The proposition must be visible muted by 3 s,** and conversion creatives must show the UI and the finished artifact. This is LightReel's discovery vs conversion split, plus TikTok's guidance.
 5. **On X, use 16:9 video plus a strong first line,** or a single proof image. Text and image posts out-engage video on X in Buffer's data [V].
 6. **Use newness as the main hook.** The roadmap gives Makeborne a natural run of "new" announcements over the next weeks: images, custom domains, two-way GitHub sync, credit top-ups, agency tools, AI lead research. Each one is a fresh creative concept. Each must be announced only when live.
@@ -225,12 +225,12 @@ The launch set is **12 paid-ready creatives across 5 concepts**, plus organic. E
 
 | # | Concept (angle) | Proof device | Executions (size) | Audience | Live today? |
 |---|---|---|---|---|---|
-| C1 | **One sentence → a published site** | Real screen recording at real speed (or with a clock chip): type the brief → Plan → Create → publish → live address | 15 s 9:16; 6 s 9:16; 4:5 static (sentence chip over the finished hero) | Small businesses, creators | Yes |
+| C1 | **One brief → a published site** | Real screen recording at real speed (or with a clock chip): type the brief → Plan → Create → publish → live address | 15 s 9:16; 6 s 9:16; 4:5 static (sentence chip over the finished hero) | Small businesses, creators | Yes |
 | C2 | **Change one thing. Only that thing changes.** | Tern slide 6 chart edit, before/after split | 4:5 static; 1:1 static; 6 s 9:16 | Freelancers, founders | Yes |
 | C3 | **Your client approves** (paying segment) | Client review link: anonymous comment → fix → Approve → "Approved by …". Recorded on a real deck | 15 s 4:5 and 9:16; 4:5 static (comment bubble next to the Approve button) | Freelancers, agencies (Studio plan, $49, "best for client work") | Yes |
 | C4 | **Text-only stance** (Motion's top hit-rate type) | Big Inter type on canvas, one italic accent word, a small real output in a corner. E.g. "Your client wants a site, a deck and a brochure *by Friday.*" / "Websites. Books. Decks. *One studio.*" | 3 × 4:5 statics; 1 × 9:16 static | All | Yes |
 | C5 | **Brand film** | v9 now; v14 fixed later | 14.5 s 9:16 and 16:9; 43 s 16:9 (organic) | Awareness, retargeting once pixels and consent exist | v9 yes; v14 after fixes |
-| C6 (organic) | **Made from one sentence** series | Real output scroll captures with the sentence chip; one per day | 9:16 6-10 s; Instagram carousel | Organic TikTok, Reels, Shorts | Yes |
+| C6 (organic) | **Made from one brief** series | Real output scroll captures with the sentence chip; one per day | 9:16 6-10 s; Instagram carousel | Organic TikTok, Reels, Shorts | Yes |
 | C7 (organic) | **Build-in-public** | Owner posts: real numbers (sales, sites published, refunds) and failures, with screenshots | Text + image; LinkedIn document | Founders and builders (the Base44 route) | Yes |
 | C8 (organic, X) | **"Reply with your business, we make its site"** | Make 10-20 real sites for repliers and reply with the address. This uses X's reply weighting [F, but dated: in the open-sourced config of 5 Apr 2023, a reply weighs 13.5 and a reply the author engages with 75.0, against 0.5 for a like. The config notes weights can change at any time, so current weights are unknown] | Text + 16:9 video; reply screenshots | X and LinkedIn | Yes. Cost is credits only (see §8) |
 | Later | **Images are live** | v14 15 s vertical with real image-pipeline outputs; before/after of the same brief without and with images | 9:16, 4:5, 16:9 | All | **Not yet: launch beat** |

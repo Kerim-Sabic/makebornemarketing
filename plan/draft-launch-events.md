@@ -278,7 +278,7 @@ This is wave W0, a **soft wave**. The big Product Hunt launch is kept for images
 
 ### Day 4, Friday 30 Oct
 - **T1 regional press pitch** (owner sends): Netokracija, Bloomberg Adria, Startit and BiH business portals, with the local-language release, 3 outputs and the founder photo. Angle 1, the regional launch story.
-- First "Made from one sentence" carousel on LinkedIn, built in Makeborne.
+- First "Made from one brief" carousel on LinkedIn, built in Makeborne.
 - Weekly community workshop offer to one agency group (if its rules allow).
 
 ### Day 5, Saturday 31 Oct

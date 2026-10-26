@@ -1,6 +1,6 @@
 {
-  "headline": "Makeborne 90-day growth plan: sell Studio to freelancers and agencies with real-build short-form, a review-page loop and feature beats gated on quality. Plan on ~$174k ARR by 24 Jan 2027; $1M is a breakout scenario, not the plan.",
-  "summary": "Spine: the creator-led engine (show the product working, Instagram keyword DMs to format-matched pages, small paid creator waves, boosts only for posts with a tracked sale, then revenue-funded Content Rewards at ~$1.60 per 1,000 views). Aimed at ICP 1 (freelancers and small agencies on Studio $49) with the agency loops (review-page referral link, 'play the client' sample review link, activation = review link sent). Calendar from the launch-events plan (six-box feature gate, Launch Week bundling, Product Hunt at the images beat, day-30 and day-90 public numbers). Four core surfaces at 25-30 posts a week; founder time is the binding constraint and support comes first. The $1,000 is one concentrated test behind a spend gate: no dollar before /go/ links, first touch and mb_src/mb_campaign/mb_aff on Makeborne-created Whop checkouts are live. Whop store or tracking links are never used: only Makeborne-created checkout links are used. Base case ~$14.5k MRR / ~$174k ARR at the day-90 review (24 Jan; calculator); if creator traffic converts like average traffic, ~$11.2k MRR / ~$134k ARR and paid CAC ~$103. Low ~$16k; high ~$565k; breakout ~$1.00M needs ~117k visits including loops at 1.6% visit-to-paid with no free tier, 3-5 product posts above 1M views and ~$5k revenue-funded Content Rewards over 90 days under D4.",
+  "headline": "Makeborne 90-day growth plan: sell Studio to freelancers and agencies with real-build short-form, a review-page loop and feature beats gated on quality. Plan on ~$174k ARR by 25 Jan 2027; $1M is a breakout scenario, not the plan.",
+  "summary": "Spine: the creator-led engine (show the product working, Instagram keyword DMs to format-matched pages, small paid creator waves, boosts only for posts with a tracked sale, then revenue-funded Content Rewards at ~$1.60 per 1,000 views). Aimed at ICP 1 (freelancers and small agencies on Studio $49) with the agency loops (review-page referral link, 'play the client' sample review link, activation = review link sent). Calendar from the launch-events plan (six-box feature gate, Launch Week bundling, Product Hunt at the images beat, day-30 and day-90 public numbers). Four core surfaces at 25-30 posts a week; founder time is the binding constraint and support comes first. The $1,000 is one concentrated test behind a spend gate: no dollar before /go/ links, first touch and mb_src/mb_campaign/mb_aff on Makeborne-created Whop checkouts are live. Whop store or tracking links are never used: only Makeborne-created checkout links are used. Base case ~$14.5k MRR / ~$174k ARR at the day-90 review (25 Jan; calculator); if creator traffic converts like average traffic, ~$11.2k MRR / ~$134k ARR and paid CAC ~$103. Low ~$16k; high ~$565k; breakout ~$1.00M needs ~117k visits including loops at 1.6% visit-to-paid with no free tier, 3-5 product posts above 1M views and ~$5k revenue-funded Content Rewards over 90 days under D4.",
   "northStar": {
     "name": "Weekly activated payers",
     "definition": "Net new paying accounts (after refunds) that sent at least one client review link, or published or exported a deck or book, within 7 days of paying",
@@ -224,7 +224,7 @@
       "id": "ch-press",
       "name": "Regional and European press (owner sends)",
       "role": "Free beats that need no feature",
-      "cadence": "Week 1 local-language release; 25 Nov 30-day numbers; 24 Jan day-90 report; images beat follow-up",
+      "cadence": "Week 1 local-language release; 25 Nov 30-day numbers; 25 Jan day-90 report; images beat follow-up",
       "owner": "Owner",
       "kpi": "Mentions; press-attributed visits"
     },
@@ -254,7 +254,7 @@
         "id": "b1",
         "item": "TAAFT listing, submitted before any other listing (launch-first bonus; check it applies to the $49 tier)",
         "usd": 49,
-        "when": "Mon 26 Oct 2026 (day 1)",
+        "when": "Wed 28 Oct 2026 (day 1, 19:00 CET)",
         "channel": "directories",
         "killRule": "Sunk cost; no TAAFT upgrades unless 3+ tracked net payers in 30 days",
         "scaleRule": "$437 bundle only from revenue, only if the listing converts [O]"
@@ -299,7 +299,7 @@
         "id": "b6",
         "item": "Uneed pick-your-date launch slot",
         "usd": 30,
-        "when": "Book after the 1 Nov images go/no-go (or first confirm Uneed allows rescheduling [U]); runs on the images Product Hunt day",
+        "when": "Book after the 3 Nov images go/no-go (or first confirm Uneed allows rescheduling [U]); runs on the images Product Hunt day",
         "channel": "directories",
         "killRule": "None (one-off)",
         "scaleRule": "Fallback if images slip: move the slot to the next beat that passes the gate"
@@ -328,7 +328,7 @@
         "usd": 136,
         "when": "Weeks 3-8, released only by the scale rule",
         "channel": "reserve",
-        "killRule": "Unspent at day 60 moves to the best source",
+        "killRule": "Unspent on 24 Dec (day 58) moves to the best source",
         "scaleRule": "Released when a source shows CAC <=$50 over 3+ net payers"
       }
     ],
@@ -364,7 +364,7 @@
     {
       "id": "p0",
       "name": "Launch week",
-      "days": "1-7 (26 Oct-1 Nov 2026)",
+      "days": "1-7 (28 Oct-3 Nov 2026; pre-launch 26-27 Oct)",
       "goals": [
         "Paid beta live with true copy",
         "Attribution live by 29 Oct",
@@ -375,14 +375,14 @@
       "actions": [
         "TAAFT first, then free directories and PH coming-soon page",
         "4 core surfaces live at 25-30 posts",
-        "Regional press pitch (owner sends) 30 Oct",
-        "Sunday review 1 Nov and images go/no-go"
+        "Regional press pitch (owner sends) Mon 2 Nov",
+        "First weekly review Tue 3 Nov (day 7) and images go/no-go"
       ]
     },
     {
       "id": "p1",
       "name": "Find the format and land the first spike",
-      "days": "8-30 (2-24 Nov)",
+      "days": "6-28 (2-24 Nov; 2-3 Nov are shared with launch days 6-7)",
       "goals": [
         "2-3 house formats at >=1 net payer per 10,000 views",
         "Creator unit proven at <=$50 CAC or offer changed",
@@ -401,7 +401,7 @@
     {
       "id": "p2",
       "name": "Proof, Black Friday, loops on",
-      "days": "31-60 (25 Nov-24 Dec)",
+      "days": "29-58 (25 Nov-24 Dec)",
       "goals": [
         "15%+ of new payers from loops",
         "Studio 35%+ of mix",
@@ -421,7 +421,7 @@
     {
       "id": "p3",
       "name": "Holiday bank, January pipeline, scale what pays",
-      "days": "61-90 (25 Dec-23 Jan; review Sun 24 Jan)",
+      "days": "59-90 (25 Dec-25 Jan; review Mon 25 Jan)",
       "goals": [
         "Base-case MRR ~$14k or better",
         "Scale only sources at or under target CAC",
@@ -434,20 +434,20 @@
         "GitHub sync: one X thread and one YouTube demo",
         "Purchase-optimised Spark/partnership ads and consented retargeting from revenue",
         "Add faceless/niche accounts only with an editor and proven formats",
-        "Day-90 public report and review 24 Jan"
+        "Day-90 public report and review 25 Jan"
       ]
     }
   ],
   "launchWeek": [
     {
       "day": 1,
-      "date": "2026-10-26",
-      "weekday": "Mon",
+      "date": "2026-10-28",
+      "weekday": "Wed",
       "actions": [
+        "19:00 public launch: T7 sting, then V01 on Reels, TikTok and Shorts; 19:05 Story; 19:15 LinkedIn and X",
         "Confirm copy fixes and 'coming soon' labels live; raise AI daily limit; confirm support cover",
-        "Submit TAAFT ($49) before any other listing",
+        "Submit TAAFT ($49) before any other listing, right after the 19:00 posts",
         "Ask engineering for asks 1-4",
-        "Set up TikTok business, Instagram professional, YouTube, LinkedIn page; bios with price and refund line; IG DM keywords on free tier",
         "Check v9 Fly-over end card and home-page match, then pin",
         "Founder LinkedIn 'Day 1' and X launch thread",
         "2 brand TikToks (site and deck speedruns)",
@@ -457,20 +457,20 @@
     },
     {
       "day": 2,
-      "date": "2026-10-27",
-      "weekday": "Tue",
+      "date": "2026-10-29",
+      "weekday": "Thu",
       "actions": [
         "When TAAFT is live: AlternativeTo, SaaSHub, Microlaunch, Future Tools, Product Hunt coming-soon page",
-        "Record 4-6 real-speed captures (lead finder->site->review link; comment->fix->Approve on phone; one brief->site/deck/book; PPTX chart edit; GitHub export)",
         "First comment-reply speedruns with consent",
         "Creator shortlist of 30",
-        "Verify no bio or post links to a Whop store page"
+        "Attribution target day stays Thu 29 Oct (ga1 + ga4); if it slips, ship the \"How did you hear about us?\" field and hold creator spend",
+        "Sample review link if ready (C07, C12 and V11 wait for it)"
       ]
     },
     {
       "day": 3,
-      "date": "2026-10-28",
-      "weekday": "Wed",
+      "date": "2026-10-30",
+      "weekday": "Fri",
       "actions": [
         "Freelancer POV: review link and Approve on phone (TikTok, Reels, LinkedIn)",
         "Indie Hackers launch post",
@@ -482,22 +482,20 @@
     },
     {
       "day": 4,
-      "date": "2026-10-29",
-      "weekday": "Thu",
+      "date": "2026-10-31",
+      "weekday": "Sat",
       "actions": [
-        "Attribution target day; if it slips, ship the 'How did you hear about us?' field and hold creator spend",
-        "Sample review link if ready (C07, C12 and V11 wait for it)",
         "First Instagram carousel from real outputs",
         "2-3 customer calls; fix breakages within 24 h",
-        "Do not book Uneed before the 1 Nov images go/no-go (unless rescheduling is allowed)"
+        "Do not book Uneed before the 3 Nov images go/no-go (unless rescheduling is allowed)"
       ]
     },
     {
       "day": 5,
-      "date": "2026-10-30",
-      "weekday": "Fri",
+      "date": "2026-11-01",
+      "weekday": "Sun",
       "actions": [
-        "Regional press pitch (owner sends): Netokracija, Bloomberg Adria, Startit, BiH portals",
+        "Regional press pitch (owner sends) moves to Mon 2 Nov, day 6: Netokracija, Bloomberg Adria, Startit, BiH portals",
         "48-hour read; re-cut posts above 3x median with 2 new hooks",
         "'Day 5' numbers post on LinkedIn and X",
         "Deck chart proof and live lead-finder video"
@@ -505,8 +503,8 @@
     },
     {
       "day": 6,
-      "date": "2026-10-31",
-      "weekday": "Sat",
+      "date": "2026-11-02",
+      "weekday": "Mon",
       "actions": [
         "Batch-film 10 videos",
         "Sign first creator agreements (payment on the gate)",
@@ -515,11 +513,11 @@
     },
     {
       "day": 7,
-      "date": "2026-11-01",
-      "weekday": "Sun",
+      "date": "2026-11-03",
+      "weekday": "Tue",
       "actions": [
         "'Day 7: exactly how many people paid' with real numbers, refunds included",
-        "First Sunday review: scorecard, keep top 2 formats, move evening slot for US clock change",
+        "First weekly review (day 7): scorecard, keep top 2 formats, evening slot after the US clock change",
         "Images go/no-go and Product Hunt day rule (400+ supporters -> Tue-Thu, else weekend)",
         "Confirm wave-1 lineup"
       ]
@@ -571,7 +569,7 @@
     {
       "id": "beat-day90",
       "feature": "Day-90 public report (no feature)",
-      "when": "Sun 24 Jan 2027",
+      "when": "Mon 25 Jan 2027",
       "angle": "90 days, every number, including what failed"
     }
   ],
@@ -809,7 +807,7 @@
         },
         {
           "week": 13,
-          "dates": "18-24 Jan",
+          "dates": "18-25 Jan",
           "target": 5500
         }
       ]
@@ -882,7 +880,7 @@
         },
         {
           "week": 13,
-          "dates": "18-24 Jan",
+          "dates": "18-25 Jan",
           "target": 55
         }
       ]
@@ -891,7 +889,7 @@
       "id": "k-cumgross",
       "name": "Cumulative gross paid",
       "stage": "conversion",
-      "target": "500 by 24 Jan; re-forecast gate on 22 Nov (<100 low band; 100-300 base; >=300 high/breakout)",
+      "target": "500 by 25 Jan; re-forecast gate on 22 Nov (<100 low band; 100-300 base; >=300 high/breakout)",
       "weeklyTargets": [
         {
           "week": 1,
@@ -955,7 +953,7 @@
         },
         {
           "week": 13,
-          "dates": "18-24 Jan",
+          "dates": "18-25 Jan",
           "target": 500
         }
       ]
@@ -964,7 +962,7 @@
       "id": "k-active",
       "name": "Active subscribers (end of week)",
       "stage": "retention",
-      "target": "~385 on 24 Jan",
+      "target": "~385 on 25 Jan",
       "weeklyTargets": [
         {
           "week": 1,
@@ -1028,7 +1026,7 @@
         },
         {
           "week": 13,
-          "dates": "18-24 Jan",
+          "dates": "18-25 Jan",
           "target": 385
         }
       ]
@@ -1037,7 +1035,7 @@
       "id": "k-mrr",
       "name": "MRR (USD, end of week)",
       "stage": "revenue",
-      "target": "~$14.2k plan-of-record weekly table on 24 Jan (calculator base ~$14.5k MRR, ~$174k ARR at day 91)",
+      "target": "~$14.2k plan-of-record weekly table on 25 Jan (calculator base ~$14.5k MRR, ~$174k ARR at day 91)",
       "weeklyTargets": [
         {
           "week": 1,
@@ -1101,7 +1099,7 @@
         },
         {
           "week": 13,
-          "dates": "18-24 Jan",
+          "dates": "18-25 Jan",
           "target": 14198
         }
       ]
@@ -1174,7 +1172,7 @@
         },
         {
           "week": 13,
-          "dates": "18-24 Jan",
+          "dates": "18-25 Jan",
           "target": 33
         }
       ]
@@ -1247,7 +1245,7 @@
         },
         {
           "week": 13,
-          "dates": "18-24 Jan",
+          "dates": "18-25 Jan",
           "target": 20
         }
       ]
@@ -1320,7 +1318,7 @@
         },
         {
           "week": 13,
-          "dates": "18-24 Jan",
+          "dates": "18-25 Jan",
           "target": 15
         }
       ]
@@ -1393,7 +1391,7 @@
         },
         {
           "week": 13,
-          "dates": "18-24 Jan",
+          "dates": "18-25 Jan",
           "target": 90
         }
       ]
@@ -1466,7 +1464,7 @@
         },
         {
           "week": 13,
-          "dates": "18-24 Jan",
+          "dates": "18-25 Jan",
           "target": 90
         }
       ]
@@ -1539,7 +1537,7 @@
         },
         {
           "week": 13,
-          "dates": "18-24 Jan",
+          "dates": "18-25 Jan",
           "target": 50
         }
       ]
@@ -1612,7 +1610,7 @@
         },
         {
           "week": 13,
-          "dates": "18-24 Jan",
+          "dates": "18-25 Jan",
           "target": "25-30"
         }
       ]
@@ -1634,7 +1632,7 @@
         "paidCacUsd": 1271.2,
         "reinvestedFromRevenueUsd": 0,
         "trafficShape": "base weekly shape",
-        "source": "data/funnel.json scenario low (calculator, regenerated 26 Oct 2026); MRR read at day 91 = Sun 24 Jan",
+        "source": "data/funnel.json scenario low (calculator, regenerated 26 Oct 2026); MRR read at model day 91 (the day-90 review is Mon 25 Jan)",
         "note": "No format works; paywall before the 'wow' holds conversion down"
       },
       "mrrDay30": 437,
@@ -1660,7 +1658,7 @@
         "paidCacUsd": 47.6,
         "reinvestedFromRevenueUsd": 3596,
         "trafficShape": "weekly shares 7,5,7,8,9,7,8,8,6,5,9,10,11%",
-        "source": "data/funnel.json scenario base (calculator, regenerated 26 Oct 2026); MRR read at day 91 = Sun 24 Jan",
+        "source": "data/funnel.json scenario base (calculator, regenerated 26 Oct 2026); MRR read at model day 91 (the day-90 review is Mon 25 Jan)",
         "note": "A few 100k+ posts, working IG DM funnel, creators at <=$50 CAC (assumes creator traffic converts 1.5x the blended rate [A]), ~$1.8k revenue-funded Content Rewards over 90 days under D4"
       },
       "mrrDay30": 3763,
@@ -1686,7 +1684,7 @@
         "paidCacUsd": 102.7,
         "reinvestedFromRevenueUsd": 0,
         "trafficShape": "base weekly shape",
-        "source": "data/funnel.json scenario baseStrict (calculator, regenerated 26 Oct 2026); MRR read at day 91 = Sun 24 Jan",
+        "source": "data/funnel.json scenario baseStrict (calculator, regenerated 26 Oct 2026); MRR read at model day 91 (the day-90 review is Mon 25 Jan)",
         "note": "Creator traffic converts like average traffic (0.6% creator click rate, no 1.5x uplift): paid CAC ~$103, so the $50 gate and D4 never release money. The downside the 16 Nov / 30 Nov checks test"
       },
       "mrrDay30": 3424,
@@ -1709,10 +1707,10 @@
         "planMix": "50/38/12 Create/Studio/Scale",
         "netArpuUsd": 39.28,
         "yearlyShare": 0.15,
-        "paidCacUsd": 20.0,
+        "paidCacUsd": 20,
         "reinvestedFromRevenueUsd": 9117,
         "trafficShape": "base weekly shape",
-        "source": "data/funnel.json scenario high (calculator, regenerated 26 Oct 2026); MRR read at day 91 = Sun 24 Jan",
+        "source": "data/funnel.json scenario high (calculator, regenerated 26 Oct 2026); MRR read at model day 91 (the day-90 review is Mon 25 Jan)",
         "note": "One or two 1M-view product posts and ~$4.6k revenue-funded Content Rewards over 90 days under D4"
       },
       "mrrDay30": 8910,
@@ -1738,7 +1736,7 @@
         "paidCacUsd": 10.7,
         "reinvestedFromRevenueUsd": 10826,
         "trafficShape": "back-loaded: weekly shares 3,3,4,5,8,7,9,9,7,6,11,13,15%",
-        "source": "data/funnel.json scenario breakout (calculator, regenerated 26 Oct 2026); MRR read at day 91 = Sun 24 Jan",
+        "source": "data/funnel.json scenario breakout (calculator, regenerated 26 Oct 2026); MRR read at model day 91 (the day-90 review is Mon 25 Jan)",
         "note": "3-5 product posts above 1M views, ~$5k revenue-funded Content Rewards over 90 days (~$1k by mid-December) under D4, loops ~12-16% of payers by week 8; no cold-start, no-free-tier precedent. Organic visits raised 2% on 26 Oct so the calculator clears $1M"
       },
       "mrrDay30": 8586,
@@ -1969,15 +1967,15 @@
     "Time is the binding constraint: cut X replies first, then long YouTube, never support"
   ],
   "meta": {
-    "window": "2026-10-26 to 2027-01-24",
-    "dayNumbering": "day 1 = Mon 26 Oct 2026",
+    "window": "2026-10-28 to 2027-01-25 (pre-launch 26-27 Oct)",
+    "dayNumbering": "day 1 = Wed 28 Oct 2026 (public launch 19:00 CET); Mon 26 and Tue 27 Oct are pre-launch days -2 and -1; day 90 = Mon 25 Jan 2027",
     "builtFrom": [
       "plan/draft-creator-led.md",
       "plan/draft-launch-events.md",
       "plan/draft-agency-community.md"
     ],
     "masterPlan": "plan/strategy.md",
-    "modelNote": "Scenario figures come from the daily cohort calculator in data/funnel.json (python data/funnel_model.py; visits x visit-to-paid, less refunds, churn at each 30-day renewal), regenerated 26 Oct 2026 and checked by npm run check; MRR is read at day 91 (Sun 24 Jan, the day-90 review); visits include loop-implied visits; all inputs are assumptions to be replaced with week-2 data",
+    "modelNote": "Scenario figures come from the daily cohort calculator in data/funnel.json (python data/funnel_model.py; visits x visit-to-paid, less refunds, churn at each 30-day renewal), regenerated 26 Oct 2026 and checked by npm run check; MRR is read at the end of the calculator run (model day 91); the day-90 review is Mon 25 Jan; visits include loop-implied visits; all inputs are assumptions to be replaced with week-2 data",
     "unverified": [
       "Ad-account availability and billing from BiH",
       "ManyChat eligibility for BiH",
@@ -1989,6 +1987,132 @@
       "FTC, EU UCPD and TikTok branded-content rules at source",
       "TAAFT bonus on the $49 tier",
       "UK ASA/CAP influencer guidance (PDF) and EU/UK price-indication wording"
+    ]
+  },
+  "preLaunch": [
+    {
+      "day": -2,
+      "date": "2026-10-26",
+      "weekday": "Mon",
+      "actions": [
+        "Set up TikTok business, Instagram professional (name, bio, highlights), YouTube, LinkedIn page; bios with price and refund line; IG DM keywords on free tier",
+        "Prepare and schedule the launch posts as drafts (never earlier than Wed 19:00)",
+        "Check the countdown on makeborne.com",
+        "Before-posting checklist: music, DM keywords, DM text"
+      ]
+    },
+    {
+      "day": -1,
+      "date": "2026-10-27",
+      "weekday": "Tue",
+      "actions": [
+        "Countdown teasers T1 (09:00), T2 (12:00, optional), T3 (19:00) and the countdown-sticker Story S1; they never say it is live",
+        "Record the extra footage: real-speed captures, a 30-second uncut build, the deck in PowerPoint",
+        "Set up and test the DM keyword automation",
+        "Schedule Wednesday (T4-T7, S2, S3, V01 at 19:00)",
+        "Check the countdown again",
+        "Verify no bio or post links to a Whop store page"
+      ]
+    }
+  ],
+  "launch": {
+    "date": "2026-10-28",
+    "timeCet": "19:00",
+    "utc": "2026-10-28T18:00:00Z",
+    "label": "Public launch: Wednesday 28 October 2026, 19:00 Sarajevo time (CET, 18:00 UTC)",
+    "decided": "Owner decision, 26 Oct 2026 (evening): the public launch moves from Mon 26 Oct to Wed 28 Oct 19:00. makeborne.com shows an animated countdown to that moment.",
+    "runOfShow": [
+      {
+        "time": "18:30",
+        "text": "Final checks: makeborne.com live, the plans open at checkout, the countdown about to hit zero, DM keywords on",
+        "how": "Open makeborne.com on a phone and a laptop; open each plan as far as the Makeborne-created checkout (never a Whop store page); the countdown must reach zero at 19:00 and then show the live page; send SITE, DECK, CLIENT and BOOK from a second account and check each DM answers."
+      },
+      {
+        "time": "18:59",
+        "text": "Post T6 \"60 seconds\"",
+        "how": "TikTok, Reel and Shorts, if you scheduled them they go out by themselves: check they did."
+      },
+      {
+        "time": "19:00",
+        "text": "Post the T7 \"We're live\" sting, then V01 on Reels, TikTok and Shorts",
+        "how": "V01 files: V01_reel_9x16.mp4, V01_tiktok_9x16.mp4, V01_shorts_9x16.mp4 (not the _justlaunched files, those are for Thu 29 Oct onwards). Pin V01 on TikTok and Instagram (Pin 1)."
+      },
+      {
+        "time": "19:05",
+        "text": "Post the Story (C15 \"Reply CLIENT\")",
+        "how": "Link sticker /go/ig-c15-client, or the long makeborne.com link until /go/ is live."
+      },
+      {
+        "time": "19:15",
+        "text": "Post on LinkedIn (V08, \"Day 1\") and X (C08, the launch thread)",
+        "how": "Captions are under each post on this page. Link in the first comment on LinkedIn and the first reply on X."
+      },
+      {
+        "time": "19:15",
+        "text": "Reply to every comment for 60 minutes (until 20:15)",
+        "how": "Every comment, every platform. Log \"build mine\" requests and consent in the private sheet, never in this repo."
+      },
+      {
+        "time": "21:00",
+        "text": "Log the first numbers",
+        "how": "Whop: paid, refunds, money in. Each platform: views, link clicks, comments. Type them into the day sheet on Results for Wed 28 Oct."
+      }
+    ]
+  },
+  "launchMove": {
+    "summary": "Launch moved from Mon 26 Oct to Wed 28 Oct 2026, 19:00 CET. Launch day 1 = Wed 28 Oct; Mon 26 and Tue 27 Oct are pre-launch days −2 and −1. The launch week (days 1-7, 28 Oct - 3 Nov) moved 2 days later with its times; launch-day posts are re-timed around 19:00. Everything after the launch week keeps its date (ads, creator waves, the no-boost window, Black Friday, checkpoints); day numbers are recomputed. The 90-day window runs Wed 28 Oct 2026 - Mon 25 Jan 2027 (day 90, the day-90 review).",
+    "timeTest": "The 20:15 posting-time test moved from Tue 3 / Wed 4 Nov to Wed 4 / Fri 6 Nov (Tue 3 Nov is launch day 7; Thu 5 Nov is a carousel day).",
+    "pinned": [
+      "Attribution target and the sample review link stay Thu 29 Oct (engineering target, now launch day 2).",
+      "The regional press pitch goes on Mon 2 Nov (day 6) instead of day 5, which is a Sunday."
+    ],
+    "banked": [
+      {
+        "date": "2026-11-02",
+        "channel": "Instagram Reels",
+        "contentId": "V44",
+        "time": "13:15",
+        "why": "slot taken by launch day 6 (Instagram feed)"
+      },
+      {
+        "date": "2026-11-02",
+        "channel": "X",
+        "contentId": "C11",
+        "time": "20:00",
+        "why": "slot taken by launch day 6 (C17)"
+      },
+      {
+        "date": "2026-11-02",
+        "channel": "YouTube Shorts",
+        "contentId": "V13",
+        "time": "13:30",
+        "why": "slot taken by launch day 6 (V03)"
+      },
+      {
+        "date": "2026-11-03",
+        "channel": "Instagram Reels",
+        "contentId": "V12",
+        "time": "20:15",
+        "why": "slot taken by launch day 7 (V09)"
+      },
+      {
+        "date": "2026-11-03",
+        "channel": "LinkedIn",
+        "contentId": "C10",
+        "time": "09:30",
+        "why": "slot taken by launch day 7 (V09)"
+      },
+      {
+        "date": "2026-11-03",
+        "channel": "X",
+        "contentId": "C31",
+        "time": "20:00",
+        "why": "slot taken by launch day 7 (V09)"
+      }
+    ],
+    "instagramBanked": [
+      "V44: Who's behind this? Reel",
+      "V12 or V18: Play-the-client Reel (or the 40-email meme) at 20:15 (time test)"
     ]
   }
 }

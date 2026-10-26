@@ -57,17 +57,17 @@ export async function runForecastChecks(load, root, fail) {
   const asOf = '2026-11-30';
   check(F.analyse([], { asOf }).status === 'empty', 'no rows should give status "empty"');
   check(!F.isForecast(F.forecast([], { asOf })), 'no rows must not produce a forecast');
-  const synth = (days, scale = 1, start = '2026-10-26') =>
+  const synth = (days, scale = 1, start = '2026-10-28') =>
     Array.from({ length: days }, (_, i) => {
       const d = base.daily[i];
       const visits = Math.round(d.visits * scale);
       const paid = Math.round(visits * 0.01);
       return { date: util.addDays(start, i), channel: 'ch-tiktok', spend: null, impressions: null, views: null, clicks: visits, signups: Math.round(visits * 0.05), paid, revenue: paid * 38, notes: '', campaign: null, budgetLineId: null, refunds: Math.round(paid * 0.15), activated: null, studioOrScale: Math.round(paid * 0.45), checkouts: null };
     });
-  const short = F.analyse(synth(5), { asOf: '2026-10-30' });
+  const short = F.analyse(synth(5), { asOf: '2026-11-01' });
   check(short.status === 'insufficient' && short.obs.dataDays === 5, `5 days should be "insufficient" with 5 data days (got ${short.status}, ${short.obs.dataDays})`);
-  check(!F.isForecast(F.forecast(synth(6), { asOf: '2026-10-31' })), '6 days must not produce a forecast');
-  check(F.isForecast(F.forecast(synth(7), { asOf: '2026-11-01', runs: 200 })), '7 days should produce a forecast');
+  check(!F.isForecast(F.forecast(synth(6), { asOf: '2026-11-02' })), '6 days must not produce a forecast');
+  check(F.isForecast(F.forecast(synth(7), { asOf: '2026-11-03', runs: 200 })), '7 days should produce a forecast');
   const renewalsOnly = [{ ...synth(1)[0], channel: 'renewals' }];
   check(F.analyse(renewalsOnly, { asOf }).obs.dataDays === 0, 'renewal rows alone must not count as data days');
 
@@ -91,7 +91,7 @@ export async function runForecastChecks(load, root, fail) {
   check(ordered, 'P10 <= P50 <= P90 fails somewhere');
   const hz = [...f1.horizons].sort((x, y) => x.days - y.days);
   check(hz.every((h, i) => i === 0 || (h.visits.p50 >= hz[i - 1].visits.p50 && h.signups.p50 >= hz[i - 1].signups.p50 && h.cumGross.p50 >= hz[i - 1].cumGross.p50)), 'cumulative visits, sign-ups or gross payers fall with a longer horizon');
-  check(f1.horizons.some((h) => h.date === F.DAY90), 'the day-90 review date (24 Jan 2027) is missing from the horizons');
+  check(f1.horizons.some((h) => h.date === F.DAY90), 'the day-90 review date (25 Jan 2027) is missing from the horizons');
   const pr = Object.fromEntries(f1.probabilities.map((p) => [p.id, p]));
   check(pr.gate100.probability >= pr.gate200.probability, 'P(100 payers) < P(200 payers) on the same date');
   check(pr.base90.probability >= pr.arr1m.probability, 'P(plan base MRR) < P($1M ARR) on the same date');
@@ -135,7 +135,7 @@ export async function runForecastChecks(load, root, fail) {
   const again = S.sampleData().entries;
   check(again === entries, 'sample data is regenerated on every call (should be cached and fixed)');
   check(entries.every((e) => actuals.normaliseEntry(e).entry && actuals.normaliseEntry(e).warnings.length === 0), 'a sample row fails the actuals validation');
-  check(entries.every((e) => e.date >= '2026-10-26' && e.date <= S.SAMPLE_AS_OF), 'a sample row is outside 26 Oct - 22 Nov');
+  check(entries.every((e) => e.date >= '2026-10-28' && e.date <= S.SAMPLE_AS_OF), 'a sample row is outside 28 Oct - 24 Nov');
   check(S.sampleData().spend.every((x) => x.note.startsWith('SAMPLE')), 'a sample spend entry is not labelled SAMPLE');
 
   // 11. Analytics: paired funnel rates, RAG thresholds, verdicts.
@@ -161,8 +161,9 @@ export async function runForecastChecks(load, root, fail) {
   const blended = actuals.cac(actuals.aggregate(A.paidChannelRows([spendDay, payDay, organicDay])));
   check(blended === 20, `blended paid CAC should count paid channels' payers on no-spend days and skip organic ones (got ${blended})`);
   const mw = A.mrrByWeek(entries, [], a, S.SAMPLE_AS_OF);
-  check(mw[3].netMrr > 0 && mw[4].netMrr === null, 'MRR by week should stop at the as-of week');
-  check(Math.abs(mw[3].netMrr - f1.central.history[f1.central.history.length - 1].mrr) / mw[3].netMrr < 0.01, 'Analytics MRR and the forecast starting MRR disagree');
+  const wi = util.planWeek(S.SAMPLE_AS_OF) - 1; // the as-of week (the sample ends Tue 24 Nov, week 5)
+  check(mw[wi].netMrr > 0 && mw[wi + 1].netMrr === null, 'MRR by week should stop at the as-of week');
+  check(Math.abs(mw[wi].netMrr - f1.central.history[f1.central.history.length - 1].mrr) / mw[wi].netMrr < 0.01, 'Analytics MRR and the forecast starting MRR disagree');
 
   console.log(`  ok   ${ok} forecast and analytics checks (2,000 seeded runs in ${ms} ms)`);
 }

@@ -77,7 +77,7 @@ export default function Results({ params }: RouteProps) {
         <div className="notice sample-banner" role="note" style={{ marginBottom: 20 }}>
           <b>SAMPLE</b>
           <span>
-            28 invented days (26 Oct - 22 Nov 2026) so you can see every panel working. Your own rows are untouched and hidden while this is on. <a href={href('results')}>Back to your data</a>.
+            28 invented days (28 Oct - 24 Nov 2026) so you can see every panel working. Your own rows are untouched and hidden while this is on. <a href={href('results')}>Back to your data</a>.
           </span>
         </div>
       )}
@@ -115,7 +115,7 @@ export default function Results({ params }: RouteProps) {
             {plan.reinvest.amount > 0 && `Put ${fmtUsd(plan.reinvest.amount)} of revenue back into the best source on Monday.`}
           </li>
           <li>
-            <b>24 Jan forecast:</b>{' '}
+            <b>25 Jan (day 90) forecast:</b>{' '}
             {fc && d90 ? (
               <>
                 about {fmtCompactUsd(d90.mrr.p50)} <Term t="MRR">monthly revenue</Term> (likely {fmtCompactUsd(d90.mrr.p10)} to {fmtCompactUsd(d90.mrr.p90)}), against the plan's {fmtCompactUsd(base.mrrEnd)}.

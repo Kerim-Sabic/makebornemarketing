@@ -1,7 +1,7 @@
 import { useId, useMemo, useState } from 'react';
 import checkpointsJson from '../../data/checkpoints.json';
 import type { ActualEntry, Checkpoint } from '../lib/types';
-import { addDays, diffDays, fmtCompact, fmtCompactUsd, fmtDate, fmtInt, fmtPct, fmtUsd, WINDOW_START } from '../lib/util';
+import { addDays, diffDays, fmtCompact, fmtCompactUsd, fmtDate, fmtInt, fmtPct, fmtUsd, LAUNCH_DAY } from '../lib/util';
 import {
   DAMPING, DAY90, ELASTICITY, MAX_DAILY_GROWTH, MIN_DAYS, PLAN_LOG_SD, PRIOR_DAYS, RUNS, TRAIL_DAYS,
   centralParams, channelOutlook, feedNext, planMrr, simulate,
@@ -115,7 +115,7 @@ function ForecastSection({ fc }: { fc: Forecast }) {
   // Join the band to the last history point so the lines start where the data ends.
   const last = hist[nh - 1]?.mrr ?? null;
   const join = (xs: number[]) => pad([last, ...xs], nh - 1);
-  const planVals = dates.map((d) => planMrr(diffDays(d, WINDOW_START)));
+  const planVals = dates.map((d) => planMrr(diffDays(d, LAUNCH_DAY)));
   const maxShown = Math.max(...fc.band.p90, ...planVals.map((v) => v ?? 0));
   const d90 = fc.horizons.find((h) => h.date === DAY90);
   return (
@@ -162,7 +162,7 @@ function ForecastSection({ fc }: { fc: Forecast }) {
           </thead>
           <tbody>
             {fc.horizons.map((h) => {
-              const pm = planMrr(diffDays(h.date, WINDOW_START));
+              const pm = planMrr(diffDays(h.date, LAUNCH_DAY));
               return (
                 <tr key={h.id} className={h.date === DAY90 ? 'is-current' : undefined}>
                   <th scope="row">
@@ -337,7 +337,7 @@ function Sandbox({ a, fc }: { a: Analysis; fc: Forecast | null }) {
   const b90 = baseAt(DAY90);
   const touched = Object.values(o).some((x) => x != null);
   const labels = res.days.map((d) => short(d.date));
-  const planVals = res.days.map((d) => planMrr(diffDays(d.date, WINDOW_START)));
+  const planVals = res.days.map((d) => planMrr(diffDays(d.date, LAUNCH_DAY)));
   const p50 = fc ? res.days.map((d) => { const i = fc.band.dates.indexOf(d.date); return i >= 0 ? fc.band.p50[i] : null; }) : null;
   const set = (k: keyof Overrides) => (v: number) => setO((cur) => ({ ...cur, [k]: v }));
   const delta = b90.mrr > 0 ? d90.mrr / b90.mrr - 1 : null;

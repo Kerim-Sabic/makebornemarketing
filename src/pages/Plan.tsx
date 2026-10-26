@@ -46,7 +46,7 @@ export default function Plan({ params }: RouteProps) {
 
   return (
     <Page
-      eyebrow={`${short('2026-10-26')} – ${short('2027-01-24')} · 13 weeks · you are in week ${thisWeek}`}
+      eyebrow={`Launch ${short('2026-10-28')} 19:00 CET – day 90 ${short('2027-01-25')} · 13 weeks · you are in week ${thisWeek}`}
       title={
         <>
           The plan, <em>week by week</em>
@@ -90,7 +90,7 @@ export default function Plan({ params }: RouteProps) {
           <div>
             <dt>The target</dt>
             <dd>
-              About <b className="num">{fmtUsd(base.mrrDay90)}</b> monthly revenue by 24 Jan 2027 (about {fmtUsd(base.arrDay90)} a year, {fmtInt(base.activeDay90)} paying customers). $1M a year is the breakout case, not the plan.
+              About <b className="num">{fmtUsd(base.mrrDay90)}</b> monthly revenue by 25 Jan 2027 (about {fmtUsd(base.arrDay90)} a year, {fmtInt(base.activeDay90)} paying customers). $1M a year is the breakout case, not the plan.
             </dd>
           </div>
         </dl>
@@ -99,15 +99,15 @@ export default function Plan({ params }: RouteProps) {
       <section className="section" aria-labelledby="launch-h">
         <div className="section-head">
           <div>
-            <p className="kicker">Days 1-7</p>
-            <h2 id="launch-h">Launch week, day by day</h2>
+            <p className="kicker">Pre-launch −2, −1 · days 1-7</p>
+            <h2 id="launch-h">Launch week, day by day (launch Wed 28 Oct, 19:00 CET)</h2>
           </div>
         </div>
         <div className="cards">
           {LAUNCH_DAYS.map((d) => (
             <details key={d.date} className="wcard" open={d.date === today}>
               <summary>
-                <span className="wcard-n num">D{d.day}</span>
+                <span className="wcard-n num">{d.day < 1 ? `−${-d.day}` : `D${d.day}`}</span>
                 <span className="wcard-main">
                   <span className="wcard-title">
                     {d.weekday} {short(d.date)}
@@ -124,7 +124,7 @@ export default function Plan({ params }: RouteProps) {
                   ))}
                 </ul>
                 <a className="btn btn-sm" href={href('today', d.date)}>
-                  Open day {d.day} as a checklist
+                  Open {d.day < 1 ? `pre-launch day −${-d.day}` : `day ${d.day}`} as a checklist
                 </a>
               </div>
             </details>

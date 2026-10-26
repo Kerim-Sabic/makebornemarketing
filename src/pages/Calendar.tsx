@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import calendarJson from '../../data/calendar.json';
 import type { CalendarDay } from '../lib/types';
-import { addDays, fmtDate, isIsoDate, normTag, sarajevoToday, WINDOW_START } from '../lib/util';
+import { addDays, DAY90, fmtDate, isIsoDate, normTag, sarajevoToday, WINDOW_START } from '../lib/util';
 import { contentTitle } from '../lib/contentIndex';
 import { BeatTag, Card, Chip, CopyButton, Page, Section, Segmented } from '../components/ui';
 import { href, type RouteProps } from '../routes';
@@ -26,7 +26,7 @@ export default function Calendar({ params }: RouteProps) {
 
   return (
     <Page
-      eyebrow={`${CAL.length} days (day 91 = the day-90 review) · ${CAL.reduce((a, d) => a + d.posts.length, 0)} planned posts · ${CAL.reduce((a, d) => a + d.actions.length, 0)} actions`}
+      eyebrow={`${CAL.length} days (pre-launch −2 and −1, then day 1 = Wed 28 Oct launch to day 90 = Mon 25 Jan review) · ${CAL.reduce((a, d) => a + d.posts.length, 0)} planned posts · ${CAL.reduce((a, d) => a + d.actions.length, 0)} actions`}
       title={
         <>
           Ninety days, <em>one at a time</em>
@@ -108,7 +108,7 @@ export default function Calendar({ params }: RouteProps) {
             </>
           ) : (
             <>
-              Week {day.week} · <em>{fmtDate(addDays(WINDOW_START, (day.week - 1) * 7), { day: 'numeric', month: 'short' })} – {fmtDate(addDays(WINDOW_START, day.week * 7 - 1), { day: 'numeric', month: 'short' })}</em>
+              Week {day.week} · <em>{fmtDate(addDays(WINDOW_START, (day.week - 1) * 7), { day: 'numeric', month: 'short' })} – {fmtDate(day.week >= 13 ? DAY90 : addDays(WINDOW_START, day.week * 7 - 1), { day: 'numeric', month: 'short' })}</em>
             </>
           )
         }

@@ -120,7 +120,7 @@ export function App({ initialHash }: { initialHash?: string }) {
 
   const today = sarajevoToday();
   const day = planDay(today);
-  const dayLabel = day < 1 ? `Starts in ${1 - day} d` : day > WINDOW_DAYS + 1 ? 'Plan finished' : `Day ${Math.min(day, WINDOW_DAYS + 1)} of ${WINDOW_DAYS}`;
+  const dayLabel = day < 1 ? `Pre-launch day −${-day}` : day > WINDOW_DAYS ? 'Plan finished' : `Day ${day} of ${WINDOW_DAYS}`;
   const nextTheme = THEMES[(THEMES.indexOf(theme) + 1) % THEMES.length];
 
   const links = (cls: string) =>

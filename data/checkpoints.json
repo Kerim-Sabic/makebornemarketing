@@ -1,37 +1,51 @@
 {
   "meta": {
     "title": "Dated decision checkpoints",
-    "version": "2026-10-26",
+    "version": "2026-10-26 (launch moved to Wed 28 Oct 19:00 CET)",
     "source": "content/tracking.md section 6.5 (dated checkpoints) and 7.5, plan/strategy.md sections 6 and 17, data/calendar.json actions. Collected for the war-room 'next decision due' card; edit freely.",
     "note": "Dates marked approx are planning guesses from the plan, not commitments. Decisions are owner decisions [O] unless stated."
   },
   "checkpoints": [
     {
-      "date": "2026-10-26",
-      "title": "Launch-day owner calls",
+      "date": "2026-10-27",
+      "title": "Pre-launch: countdown, teasers and DM keywords",
+      "detail": "Countdown live on makeborne.com to Wed 28 Oct 19:00 CET; teasers never say it is live; DM keywords answer from a second account; Wednesday scheduled.",
+      "decisions": [],
+      "source": "Owner decision 26 Oct 2026: launch Wed 28 Oct 19:00 CET"
+    },
+    {
+      "date": "2026-10-28",
+      "title": "Launch-day owner calls (19:00 CET launch)",
       "detail": "Set the AI daily limit for launch day, confirm support cover with a 4 h reply target, approve operating costs outside the $1,000 (demo builds, comped creator credits).",
-      "decisions": ["D6", "D14"],
-      "source": "plan/strategy.md 7 (day 1), 17"
+      "decisions": [
+        "D6",
+        "D14"
+      ],
+      "source": "plan/strategy.md 7 (day 1, now Wed 28 Oct), 17"
     },
     {
       "date": "2026-10-29",
       "title": "Attribution live (spend gate)",
-      "detail": "/go/ links, first-touch storage and mb_src / mb_campaign / mb_aff on Makeborne-created checkouts. If not live: ship the 'How did you hear about us?' fallback; creator payments and boosts wait.",
+      "detail": "/go/ links, first-touch storage and mb_src / mb_campaign / mb_aff on Makeborne-created checkouts. If not live: ship the 'How did you hear about us?' fallback; creator payments and boosts wait. Stays Thu 29 Oct (launch day 2) after the launch moved.",
       "decisions": [],
       "source": "content/tracking.md 6.5; plan.json budget.gate"
     },
     {
-      "date": "2026-11-01",
-      "title": "First Sunday review + images go/no-go",
-      "detail": "First 90-minute Sunday review. Check generated images against the six-box gate before any beat is scheduled.",
-      "decisions": ["D3"],
+      "date": "2026-11-03",
+      "title": "First weekly review (day 7) + images go/no-go",
+      "detail": "First 90-minute weekly review, on day 7 (Tue 3 Nov). Check generated images against the six-box gate before any beat is scheduled.",
+      "decisions": [
+        "D3"
+      ],
       "source": "content/tracking.md 6.3, 6.5"
     },
     {
       "date": "2026-11-09",
       "title": "Boost precondition (D4 not yet)",
       "detail": "Week 3 starts. D4 may start once a source has 3+ net payers at <= $50 CAC (earliest about 23 Nov), so no reinvestment today. Confirm both ad accounts can be registered and billed before boost slot A.",
-      "decisions": ["D4"],
+      "decisions": [
+        "D4"
+      ],
       "source": "plan/strategy.md 6.2 line 5, 6.3; calendar 2026-11-09"
     },
     {
@@ -45,7 +59,10 @@
       "date": "2026-11-16",
       "title": "Offer check (organic conversion)",
       "detail": "The creator test cannot be read yet (wave-1 first videos 9-15 Nov; keep rule counts 14 days after video 2). Judge organic /go/ visit-to-paid only (D2 trigger: under 0.7%) plus boost slot A.",
-      "decisions": ["D1", "D2"],
+      "decisions": [
+        "D1",
+        "D2"
+      ],
       "source": "plan/strategy.md 6.3; content/tracking.md 7.5"
     },
     {
@@ -60,21 +77,29 @@
       "approx": true,
       "title": "Earliest D4 reinvestment Monday",
       "detail": "D4 starts only when a source has 3+ net payers at <= $50 CAC: 30% of last week's net new cash into sources at or under target CAC.",
-      "decisions": ["D4"],
+      "decisions": [
+        "D4"
+      ],
       "source": "plan/strategy.md 6.3"
     },
     {
       "date": "2026-11-25",
       "title": "Day-30 public numbers post",
       "detail": "Publish redacted real numbers (if the owner approves D11). Black Friday message is only 'yearly is 20% off' (D5) from 27 Nov.",
-      "decisions": ["D11", "D5"],
+      "decisions": [
+        "D11",
+        "D5"
+      ],
       "source": "content/tracking.md 6.5; calendar 2026-11-27"
     },
     {
       "date": "2026-11-30",
       "title": "Paid-CAC offer check + wave-2 creators",
       "detail": "Before any money beyond wave 1: if no source has net payers at <= $50 CAC, change the offer (D1/D2) before buying more views. If images are not live by 30 Nov, the $140 wave-2 line rehires the best wave-1 creator instead.",
-      "decisions": ["D1", "D2"],
+      "decisions": [
+        "D1",
+        "D2"
+      ],
       "source": "plan/strategy.md 6.3; plan.json budget.lines b4"
     },
     {
@@ -89,7 +114,9 @@
       "date": "2026-12-07",
       "title": "Content Rewards gate (revenue only)",
       "detail": "A source at <= $50 CAC on 3+ payers AND MRR above about $1.5k? If yes, open Content Rewards from revenue at a $1.60 per 1,000 views plan.",
-      "decisions": ["D4"],
+      "decisions": [
+        "D4"
+      ],
       "source": "calendar 2026-12-07; content/tracking.md 7.6"
     },
     {
@@ -101,7 +128,7 @@
     },
     {
       "date": "2026-12-24",
-      "title": "Day 60: reserve and loops check",
+      "title": "Day 58 (24 Dec): reserve and loops check",
       "detail": "Unspent reserve (b9) moves to the best source by CAC; loop share exit gate 15%.",
       "decisions": [],
       "source": "calendar 2026-12-24"
@@ -110,15 +137,20 @@
       "date": "2027-01-04",
       "title": "Extra accounts check",
       "detail": "Add a faceless outputs account or niche TikTok only with editing help in place and a format with 3+ wins.",
-      "decisions": ["D16"],
+      "decisions": [
+        "D16"
+      ],
       "source": "calendar 2027-01-04"
     },
     {
-      "date": "2027-01-24",
+      "date": "2027-01-25",
       "title": "Day-90 report and review",
       "detail": "Which surfaces to keep; free-tier and preview decision for next quarter.",
-      "decisions": ["D17", "D11"],
-      "source": "content/tracking.md 6.5; calendar 2027-01-24 (day 91)"
+      "decisions": [
+        "D17",
+        "D11"
+      ],
+      "source": "content/tracking.md 6.5; calendar 2027-01-25 (day 90)"
     }
   ]
 }

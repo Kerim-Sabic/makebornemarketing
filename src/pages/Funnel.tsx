@@ -3,7 +3,7 @@ import funnelJson from '../../data/funnel.json';
 import kpisJson from '../../data/kpis.json';
 import { compareWithReference, runFunnel, solveForArr, type FunnelInputs } from '../lib/funnelModel';
 import type { Kpis } from '../lib/types';
-import { addDays, fmtCompactUsd, fmtDate, fmtInt, fmtPct, fmtUsd, WINDOW_START } from '../lib/util';
+import { addDays, fmtCompactUsd, fmtDate, fmtInt, fmtPct, fmtUsd, LAUNCH_DAY } from '../lib/util';
 import { PLAN } from '../lib/budget';
 import { Card, Chip, Details, Labelled, Page, Section, Segmented, Stat } from '../components/ui';
 import { Chart } from '../components/Chart';
@@ -78,7 +78,7 @@ export default function Funnel() {
   const cumGross = (day: number) => result.daily.slice(0, day).reduce((a, d) => a + d.gross, 0);
   // Breakout checkpoints come from the breakout scenario itself, so they move with data/funnel.json.
   const breakoutCum = (day: number) => Math.round(refs.breakout.daily.slice(0, day).reduce((a, d) => a + d.gross, 0) / 10) * 10;
-  const labels = result.daily.map((d) => fmtDate(addDays(WINDOW_START, d.day - 1), { day: 'numeric', month: 'short' }));
+  const labels = result.daily.map((d) => fmtDate(addDays(LAUNCH_DAY, d.day - 1), { day: 'numeric', month: 'short' }));
   const key = chart === 'mrr' ? 'mrr' : chart === 'arr' ? 'arr' : 'active';
   const series = [
     { id: 'low', name: 'Low', values: refs.low.daily.map((d) => d[key]), color: 'var(--c5)', dashed: true, width: 1.5 },
@@ -237,7 +237,7 @@ export default function Funnel() {
             <Card className="card-ink">
               <div className="big-number num">{((s.arrEnd / TARGET_ARR) * 100).toFixed(0)}%</div>
               <p className="muted" style={{ marginTop: 6 }}>
-                of $1M ARR on 24 Jan with these inputs ({fmtCompactUsd(s.arrEnd)}). $1M ARR ≈ {fmtUsd(TARGET_ARR / 12)} MRR ≈ {fmtInt(TARGET_ARR / 12 / s.netArpu)} active subscribers at {fmtUsd(s.netArpu, true)} net ARPU.
+                of $1M ARR at the end of the model run (day-90 review Mon 25 Jan) with these inputs ({fmtCompactUsd(s.arrEnd)}). $1M ARR ≈ {fmtUsd(TARGET_ARR / 12)} MRR ≈ {fmtInt(TARGET_ARR / 12 / s.netArpu)} active subscribers at {fmtUsd(s.netArpu, true)} net ARPU.
               </p>
               <dl className="kv" style={{ marginTop: 14 }}>
                 <dt>Traffic needed</dt>
@@ -342,7 +342,7 @@ export default function Funnel() {
             </tbody>
           </table>
         </div>
-        <p className="footnote">Week 14 is the single day 91 (24 Jan). Plan-of-record weekly targets include paid and loop traffic in visits, so the model's launch weeks run lower (consistency note 4).</p>
+        <p className="footnote">Week 14 is the single model day 91 (Tue 26 Jan; model day 1 = the launch, Wed 28 Oct). Plan-of-record weekly targets include paid and loop traffic in visits, so the model's launch weeks run lower (consistency note 4).</p>
       </Section>
     </Page>
   );

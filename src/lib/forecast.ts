@@ -20,11 +20,11 @@
  */
 import type { ActualEntry } from './types';
 import { acquisition } from './actuals';
-import { addDays, diffDays, WINDOW_START } from './util';
+import { addDays, diffDays, DAY90 as PLAN_DAY90, LAUNCH_DAY } from './util';
 import { Book } from './cohorts';
 import { GUARD, PLAN_RATES, planBase, priceForStudioShare } from './planRates';
 
-export const DAY90 = '2027-01-24';
+export const DAY90 = PLAN_DAY90;
 export const MIN_DAYS = 7;
 export const PRIOR_DAYS = 7;
 export const TRAIL_DAYS = 14;
@@ -70,7 +70,8 @@ export function quantile(sorted: ArrayLike<number>, q: number) {
 
 /* ---------- observing the logged data ---------- */
 
-const dayIdx = (iso: string) => diffDays(iso, WINDOW_START);
+/** Model day index: 0 = the launch, Wed 28 Oct 2026 (the funnel model's day 1). */
+const dayIdx = (iso: string) => diffDays(iso, LAUNCH_DAY);
 
 export interface DayObs {
   date: string;
@@ -196,7 +197,7 @@ export function fitTrend(points: { x: number; v: number }[]): Trend {
 export const dampedSum = (h: number, phi = DAMPING) => (phi === 1 ? h : (phi * (1 - phi ** h)) / (1 - phi));
 
 let planPath: Float64Array | null = null;
-/** Plan base direct visits on a day index (0 = 26 Oct); after day 91 the last week's average holds. */
+/** Plan base direct visits on a day index (0 = Wed 28 Oct, the launch); after day 91 the last week's average holds. */
 export function planVisits(idx: number) {
   if (!planPath) {
     const d = planBase().daily;
@@ -258,8 +259,8 @@ export function analyse(entries: ActualEntry[], opts: ForecastOptions): Analysis
   const n = obs.dataDays;
   const w = priorWeight(n);
   const status = n === 0 ? 'empty' : n < MIN_DAYS ? 'insufficient' : 'ok';
-  const origin = obs.first && obs.first < WINDOW_START ? obs.first : WINDOW_START;
-  const startDate = obs.last ?? (asOf > WINDOW_START ? addDays(asOf, -1) : addDays(WINDOW_START, -1));
+  const origin = obs.first && obs.first < LAUNCH_DAY ? obs.first : LAUNCH_DAY;
+  const startDate = obs.last ?? (asOf > LAUNCH_DAY ? addDays(asOf, -1) : addDays(LAUNCH_DAY, -1));
   const t = obs.totals;
 
   // Visit trend on the trailing window.

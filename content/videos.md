@@ -1,5 +1,8 @@
 # Makeborne short-form video library
 
+> **Launch moved (owner decision, 26 Oct 2026 evening).** The public launch is **Wednesday 28 October 2026 at 19:00 Sarajevo time** (CET, 18:00 UTC); makeborne.com shows a countdown to that moment. Day 1 = Wed 28 Oct; Mon 26 and Tue 27 Oct are pre-launch days −2 and −1 (profiles, scheduling, extra footage, DM keywords, countdown teasers that never say it is live). The launch week moved 2 days later with its times (days 1-7 = 28 Oct - 3 Nov); everything after it keeps its date (ads A01 12-15 Nov and A02 3-4 Dec, creator waves, the no-boost window 20 Nov - 2 Dec, Black Friday, the 22 Nov and 20 Dec checkpoints) and day numbers are recomputed. The 90 days run Wed 28 Oct 2026 - Mon 25 Jan 2027 (day 90, the day-90 review). `data/calendar.json` and the war room are the source of truth; dates and day numbers in the text below that disagree are from before the move.
+
+
 **Written:** Monday 26 October 2026, day 1 of the paid beta. **Window:** weeks 1-13 (26 Oct 2026 - 24 Jan 2027), matching `plan/strategy.md`.
 **Machine-readable version:** `data/videos.json` (one object per video, same IDs). This file is generated from the same data, so the two always agree.
 **Status:** plan only. Nothing here has been filmed, posted, paid for or sent. Creator contacts, payments and every post are the owner's or founder's call.

@@ -3,7 +3,7 @@
 import type { ActualEntry, Checkpoint, Kpis } from './types';
 import type { SpendEntry } from './stores';
 import { acquisition, aggregate, cac, contentIdsIn, netPaid, sourceVerdict, type Agg } from './actuals';
-import { addDays, diffDays, planWeek, WINDOW_START } from './util';
+import { addDays, DAY90, diffDays, planWeek, WINDOW_START } from './util';
 import { Book } from './cohorts';
 import { GUARD, PLAN_RATES, contributionForStudioShare, priceForStudioShare } from './planRates';
 import type { Analysis } from './forecast';
@@ -118,7 +118,7 @@ export function mrrByWeek(entries: ActualEntry[], snaps: { date: string; mrr: nu
       nw += net * perNew;
     }
     const start = addDays(WINDOW_START, w * 7);
-    const end = addDays(WINDOW_START, w * 7 + 6);
+    const end = w >= 12 ? DAY90 : addDays(WINDOW_START, w * 7 + 6);
     const snap = snaps.filter((s) => s.date >= start && s.date <= end).sort((x, y) => x.date.localeCompare(y.date)).pop();
     out.push({ week: w + 1, newMrr: nw, churnedMrr: ch, netMrr: book.mrr(price, yd), snapshot: snap ? snap.mrr : null, active: book.active });
   }

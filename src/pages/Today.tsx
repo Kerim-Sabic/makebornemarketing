@@ -1,6 +1,6 @@
-import { use, useEffect, useMemo, type ReactNode } from 'react';
-import type { CalendarDay, CalendarPost, PostFile, TodayExtra } from '../lib/types';
-import { addDays, fmtDate, fmtUsd, isIsoDate, sarajevoToday, useStored, WINDOW_START } from '../lib/util';
+import { use, useEffect, useMemo, useState, type ReactNode } from 'react';
+import type { CalendarDay, CalendarPost, LaunchInfo, PostFile, TodayExtra } from '../lib/types';
+import { addDays, dayLabel, fmtDate, fmtUsd, isIsoDate, LAUNCH_AT_UTC, LAUNCH_DAY, sarajevoToday, useStored, WINDOW_START } from '../lib/util';
 import { LAST_DAY, hasDay, loadDay } from '../lib/calendarIndex';
 import { useActuals, useChecks } from '../lib/stores';
 import { weekPace } from '../lib/pace';
@@ -15,8 +15,6 @@ import { href, ROUTES, type RouteProps } from '../routes';
 const actionKey = (date: string, what: string) => `${date}:${what.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 48)}`;
 const slug = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 40);
 const GO_LIVE = '2026-10-29'; // /go/ short links target day (tracking.md §0)
-/** The public launch: Wed 28 Oct 2026 at 19:00 Sarajevo time (18:00 UTC). No launch post goes out before it. */
-const LAUNCH_DATE = '2026-10-28';
 
 function hm(t: string | undefined) {
   const m = String(t ?? '').match(/(\d{1,2}):(\d{2})/);
@@ -38,6 +36,8 @@ function clampDate(d: string) {
 
 interface Item { key: string; time: string; text: ReactNode; label: string; tag?: ReactNode; sub?: ReactNode; how?: ReactNode }
 type GroupId = 'post' | 'make' | 'ads' | 'reach' | 'log';
+/** Launch day's run of show has its own tick boxes, above the groups. */
+const RUN_KEY = (date: string, time: string, text: string) => `${date}:run:${time}:${text.toLowerCase().replace(/[^a-z0-9]+/g, '-').slice(0, 32)}`;
 const GROUPS: { id: GroupId; title: string; hint: string }[] = [
   { id: 'post', title: 'Post', hint: 'Times are Sarajevo time (CET)' },
   { id: 'make', title: 'Make', hint: 'Videos, images and set-up' },
@@ -118,16 +118,18 @@ export default function Today({ params }: RouteProps) {
           </button>
         </div>
         <p className="eyebrow">
-          Week {x.week} · {done} of {all.length} done
+          Week {x.week}
+          {date < LAUNCH_DAY ? ' · pre-launch' : ''} · {done} of {all.length} done
         </p>
         <h1 className="display today-title">
-          Day {day.day} <em>{fmtDate(date, { weekday: 'short', day: 'numeric', month: 'short' })}</em>
+          {dayLabel(date)} <em>{fmtDate(date, { weekday: 'short', day: 'numeric', month: 'short' })}</em>
         </h1>
         {outside && (
           <p className="small muted" role="note">
             {fmtDate(requested, { day: 'numeric', month: 'short', year: 'numeric' })} is outside the 90-day plan. Showing the nearest planned day.
           </p>
         )}
+        {date <= LAUNCH_DAY && <Countdown />}
         <div className="today-stats">
           <a className={`today-stat pace-${pace.status}`} href={href('results')}>
             <span className="today-stat-label">This week</span>
@@ -144,6 +146,8 @@ export default function Today({ params }: RouteProps) {
           </div>
         </div>
       </header>
+
+      {x.launch && <LaunchCard launch={x.launch} date={date} checks={checks} toggle={toggle} />}
 
       {GROUPS.map((g) =>
         groups[g.id].length ? (
@@ -256,8 +260,8 @@ function buildGroups(day: CalendarDay, x: TodayExtra, date: string): Record<Grou
   const g: Record<GroupId, Item[]> = { post: [], make: [], ads: [], reach: [], log: [] };
 
   /* ---------- Post ---------- */
-  // Before the public launch (Wed 28 Oct 19:00 CET) nothing is posted that says "we launched".
-  (date < LAUNCH_DATE ? [] : day.posts).forEach((p, i) => {
+  // Before the public launch (Wed 28 Oct 19:00 CET) the calendar holds only the countdown teasers.
+  day.posts.forEach((p, i) => {
     const e = x.posts[i];
     const t = hm(p.time);
     const what = CHANNEL_SHORT[p.channel] ?? p.channel;
@@ -275,7 +279,8 @@ function buildGroups(day: CalendarDay, x: TodayExtra, date: string): Record<Grou
       tag: (
         <>
           <FileTag f={e?.file ?? null} />
-          {p.tag && p.tag !== 'live' ? <span className="chip chip-beat">Only if the feature is live</span> : p.requires ? <span className="chip chip-warn">Has a condition</span> : null}
+          {e?.teaser && <span className="chip chip-accent">teaser</span>}
+          {p.tag && p.tag !== 'live' ? <span className="chip chip-beat">Only if the feature is live</span> : p.requires ? <span className="chip chip-warn">{/^you want|optional/i.test(p.requires) ? 'Optional' : 'Has a condition'}</span> : null}
         </>
       ),
       sub: <FileLine f={e?.file ?? null} />,
@@ -463,6 +468,7 @@ function buildGroups(day: CalendarDay, x: TodayExtra, date: string): Record<Grou
 
 function PostHow({ post, e, ig, date }: { post: CalendarPost; e: TodayExtra['posts'][number] | undefined; ig: TodayExtra['ig']; date: string }) {
   const url = post.link ? goUrl(post.link) : '';
+  const isGo = /\/go\//.test(post.link ?? '');
   const f = e?.file?.ready ? e.file : null;
   // The finished posting sheet's caption (per platform, from POSTING.md) wins over the plan's draft caption.
   const caption = f?.caption ? [f.caption, (f.hashtags ?? []).join(' ')].filter(Boolean).join('\n\n') : e?.caption;
@@ -472,6 +478,12 @@ function PostHow({ post, e, ig, date }: { post: CalendarPost; e: TodayExtra['pos
         <p className="notice small">
           <b>To make</b>
           <span>{e.file.reason ? plain(e.file.reason) : 'No finished file yet: make it from the full script (link below).'}</span>
+        </p>
+      )}
+      {e?.teaser && (
+        <p className="notice small">
+          <b>Teaser</b>
+          <span>It says when, never that it is live: no price, no "we launched". Link: makeborne.com (the countdown).</span>
         </p>
       )}
       {f && (
@@ -512,8 +524,9 @@ function PostHow({ post, e, ig, date }: { post: CalendarPost; e: TodayExtra['pos
       {!caption && e?.onImage && <CopyField label="Words on the image" text={e.onImage} />}
       {ig && !f?.cover && <p className="small"><b>Cover:</b> {ig.main.cover}</p>}
       {ig && <p className="small"><b>Comment keyword:</b> {ig.main.keyword} (the DM sends {ig.main.link})</p>}
-      {url && <CopyField label={date < GO_LIVE ? 'Link (from Thu 29 Oct)' : 'Link'} text={url} mono copyLabel={`Copy ${post.link.split('/go/')[1] ?? 'post'} link`} />}
-      {url && date < GO_LIVE && post.utm && <CopyField label="Link until /go/ is live" text={longUrl(post.utm)} mono copyLabel="Copy the long link" />}
+      {url && !isGo && <CopyField label="Link" text={post.utm ? longUrl(post.utm) : url} mono copyLabel="Copy the link" />}
+      {url && isGo && <CopyField label={date < GO_LIVE ? 'Link (from Thu 29 Oct)' : 'Link'} text={url} mono copyLabel={`Copy ${post.link.split('/go/')[1] ?? 'post'} link`} />}
+      {url && isGo && date < GO_LIVE && post.utm && <CopyField label="Link until /go/ is live" text={longUrl(post.utm)} mono copyLabel="Copy the long link" />}
       {ig ? <Steps items={ig.checklist.map((c) => plain(c))} /> : <Steps items={sentences(post.notes).map((n) => plain(n))} ordered={false} />}
       <p className="small muted">
         {e?.length && `${e.length} · `}
@@ -526,5 +539,68 @@ function PostHow({ post, e, ig, date }: { post: CalendarPost; e: TodayExtra['pos
         )}
       </p>
     </div>
+  );
+}
+
+/** Seconds until the public launch, ticking once a second (0 once it has passed). */
+function useLaunchCountdown() {
+  const target = Date.parse(LAUNCH_AT_UTC);
+  const [now, setNow] = useState(() => Date.now());
+  const live = now >= target;
+  useEffect(() => {
+    if (live) return;
+    const t = window.setInterval(() => setNow(Date.now()), 1000);
+    return () => window.clearInterval(t);
+  }, [live]);
+  return Math.max(0, Math.floor((target - now) / 1000));
+}
+
+/** The countdown to Wed 28 Oct 19:00 CET, in the war room's stat-card style; makeborne.com counts down to the same moment. */
+function Countdown() {
+  const s = useLaunchCountdown();
+  const parts: [number, string][] = [
+    [Math.floor(s / 86400), 'days'],
+    [Math.floor((s % 86400) / 3600), 'hours'],
+    [Math.floor((s % 3600) / 60), 'min'],
+    [s % 60, 'sec'],
+  ];
+  return (
+    <div className={`countdown${s === 0 ? ' is-live' : ''}`} role="timer" aria-label={s === 0 ? 'Makeborne is live' : `Launch in ${parts.map(([n, u]) => `${n} ${u}`).join(', ')}`}>
+      <span className="today-stat-label">{s === 0 ? 'Live since Wed 28 Oct, 19:00 CET' : 'Launch in'}</span>
+      {s > 0 ? (
+        <span className="countdown-digits num" aria-hidden="true">
+          {parts.map(([n, u]) => (
+            <span key={u} className="countdown-part">
+              <b>{String(n).padStart(2, '0')}</b>
+              <small>{u}</small>
+            </span>
+          ))}
+        </span>
+      ) : (
+        <span className="today-stat-value">We are live.</span>
+      )}
+      <span className="today-stat-sub">Public launch Wed 28 Oct 2026, 19:00 Sarajevo time (18:00 UTC). makeborne.com counts down to the same moment.</span>
+    </div>
+  );
+}
+
+/** Launch day: "LAUNCH — 19:00 CET" and the minute-by-minute run of show (data/plan.json launch), each step a tick box. */
+function LaunchCard({ launch, date, checks, toggle }: { launch: LaunchInfo; date: string; checks: Record<string, boolean>; toggle: (k: string) => void }) {
+  return (
+    <section className="tgroup launch-card" aria-labelledby="launch-h">
+      <div className="tgroup-head">
+        <h2 id="launch-h">LAUNCH — {launch.timeCet} CET</h2>
+        <span className="tiny muted">
+          Run of show <span className="num">{launch.runOfShow.filter((r) => checks[RUN_KEY(date, r.time, r.text)]).length}/{launch.runOfShow.length}</span>
+        </span>
+      </div>
+      <p className="small">{plain(launch.label)}. Nothing that says "we launched" goes out before 19:00.</p>
+      <ul className="ticklist">
+        {launch.runOfShow.map((r) => {
+          const k = RUN_KEY(date, r.time, r.text);
+          return <TickItem key={k} checked={!!checks[k]} onToggle={() => toggle(k)} time={r.time} text={<b>{r.text}</b>} label={`${r.time} ${r.text}`} how={<p className="small">{plain(r.how)}</p>} />;
+        })}
+      </ul>
+    </section>
   );
 }

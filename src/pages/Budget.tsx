@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { LINES, LINE_WEEKS, PLAN, TOTAL, defaultAllocation, plannedCumulative } from '../lib/budget';
 import { useAllocation, useSpendLog, type SpendEntry } from '../lib/stores';
-import { addDays, downloadText, fmtUsd, isIsoDate, planWeek, readFileText, sarajevoToday, uid, WINDOW_START } from '../lib/util';
+import { addDays, DAY90, downloadText, fmtUsd, isIsoDate, planWeek, readFileText, sarajevoToday, uid, WINDOW_START } from '../lib/util';
 import { Card, Details, Field, Page, Progress, Section, Stat } from '../components/ui';
 import { Chart } from '../components/Chart';
 import { href } from '../routes';
@@ -23,7 +23,7 @@ export default function Budget() {
   const planned = plannedCumulative(alloc);
   const plannedWithReserve = plannedCumulative(alloc, true);
   const actualByWeek: (number | null)[] = WEEK_LABELS.map((_, i) => {
-    const end = addDays(WINDOW_START, (i + 1) * 7 - 1);
+    const end = i >= 12 ? DAY90 : addDays(WINDOW_START, (i + 1) * 7 - 1); // week 13 also holds day 90 (Mon 25 Jan)
     const startOfWeek = addDays(WINDOW_START, i * 7);
     if (startOfWeek > sarajevoToday() && !log.some((e) => e.date >= startOfWeek)) return null;
     return log.filter((e) => e.date <= end).reduce((s, e) => s + e.usd, 0);

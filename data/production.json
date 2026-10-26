@@ -91,17 +91,23 @@
       {
         "week": 1,
         "dates": "2026-10-26 to 2026-11-01",
-        "note": "Launch week follows the hour-by-hour plan (content/production.md section 13)",
+        "note": "Launch week follows the hour-by-hour plan (content/production.md section 13) Launch moved to Wed 28 Oct 19:00 CET: the launch-week make-list moved 2 days later with its posts (Mon -> Wed ... Sun -> Tue 3 Nov). The Higgsfield sign-up stays Tue 27 Oct and the first shots stay Wed 28 Oct 09:00.",
         "items": [
           {
-            "day": "Mon",
-            "text": "Mon 07:00: free 20 GB of disk space, set up the clean account and the screen recorder (30 min)",
+            "day": "Tue",
+            "text": "Tue 07:00: free 20 GB of disk space, set up the clean account and the screen recorder (30 min)",
             "ids": [],
             "links": []
           },
           {
-            "day": "Mon",
-            "text": "Mon: finish the launch film V01 with its end card (60 min), post at 12:00",
+            "day": "Tue",
+            "text": "Tue: owner signs up for Higgsfield Plus, monthly, himself ($49 from the production budget, not the $1,000; 10 min). No credit packs, no auto-refill; write down the renewal date",
+            "ids": [],
+            "links": []
+          },
+          {
+            "day": "Wed",
+            "text": "Wed: finish the launch film V01 with its end card (60 min), post at 19:00",
             "ids": [
               "V01"
             ],
@@ -113,8 +119,8 @@
             ]
           },
           {
-            "day": "Mon",
-            "text": "Mon: record the screen for V02 + V03 + V05 and the C01 site (1 h 45 min)",
+            "day": "Wed",
+            "text": "Wed: record the screen for V02 + V03 + V05 and the C01 site (1 h 45 min)",
             "ids": [
               "V02",
               "V03",
@@ -141,8 +147,8 @@
             ]
           },
           {
-            "day": "Mon",
-            "text": "Mon: film V08 to camera (25 min); edit V02 (80 min, post 13:00), V08 (1 h 45 min, post LinkedIn 16:30), V03 (3 h 45 min, post 21:00)",
+            "day": "Wed",
+            "text": "Wed: film V08 to camera (25 min); edit V02 (80 min, post 20:00), V08 (1 h 45 min, post LinkedIn 19:15), V03 (3 h 45 min, post 21:00)",
             "ids": [
               "V08",
               "V02",
@@ -164,8 +170,8 @@
             ]
           },
           {
-            "day": "Mon",
-            "text": "Mon: picture posts C15 (20 min) and C08 (30 min)",
+            "day": "Wed",
+            "text": "Wed: picture posts C15 (20 min) and C08 (30 min)",
             "ids": [
               "C15",
               "C08"
@@ -178,96 +184,6 @@
               {
                 "sheet": "content/production.md#c08",
                 "warRoom": "#/content/C08"
-              }
-            ]
-          },
-          {
-            "day": "Tue",
-            "text": "Tue: C01 picture post (50 min); V04 only if a real request came in (2 h), else post the V02 long version",
-            "ids": [
-              "C01",
-              "V04"
-            ],
-            "links": [
-              {
-                "sheet": "content/production.md#c01",
-                "warRoom": "#/content/C01"
-              },
-              {
-                "sheet": "content/production.md#v04",
-                "warRoom": "#/content/V04"
-              }
-            ]
-          },
-          {
-            "day": "Tue",
-            "text": "Tue: record the screen for V06 + V07 + V10 (2 h); picture posts C03 + C02 (1 h); edit V05 (3 h)",
-            "ids": [
-              "V06",
-              "V07",
-              "V10",
-              "C03",
-              "C02",
-              "V05"
-            ],
-            "links": [
-              {
-                "sheet": "content/production.md#v06",
-                "warRoom": "#/content/V06"
-              },
-              {
-                "sheet": "content/production.md#v07",
-                "warRoom": "#/content/V07"
-              },
-              {
-                "sheet": "content/production.md#v10",
-                "warRoom": "#/content/V10"
-              },
-              {
-                "sheet": "content/production.md#c03",
-                "warRoom": "#/content/C03"
-              },
-              {
-                "sheet": "content/production.md#c02",
-                "warRoom": "#/content/C02"
-              },
-              {
-                "sheet": "content/production.md#v05",
-                "warRoom": "#/content/V05"
-              }
-            ]
-          },
-          {
-            "day": "Tue",
-            "text": "Tue: owner signs up for Higgsfield Plus, monthly, himself ($49 from the production budget, not the $1,000; 10 min). No credit packs, no auto-refill; write down the renewal date",
-            "ids": [],
-            "links": []
-          },
-          {
-            "day": "Wed",
-            "text": "Wed: edit V10 (2 h 30 min); C12 card (1 h); build the C07 LinkedIn document in Makeborne (60 min); start the five C06 sites",
-            "ids": [
-              "V10",
-              "C12",
-              "C07",
-              "C06"
-            ],
-            "links": [
-              {
-                "sheet": "content/production.md#v10",
-                "warRoom": "#/content/V10"
-              },
-              {
-                "sheet": "content/production.md#c12",
-                "warRoom": "#/content/C12"
-              },
-              {
-                "sheet": "content/production.md#c07",
-                "warRoom": "#/content/C07"
-              },
-              {
-                "sheet": "content/production.md#c06",
-                "warRoom": "#/content/C06"
               }
             ]
           },
@@ -304,7 +220,91 @@
           },
           {
             "day": "Thu",
-            "text": "Thu: C06 carousel + C16 (2 h); C17 + C22 (1 h); edit V06 (2 h)",
+            "text": "Thu: C01 picture post (50 min); V04 only if a real request came in (2 h), else post the V02 long version",
+            "ids": [
+              "C01",
+              "V04"
+            ],
+            "links": [
+              {
+                "sheet": "content/production.md#c01",
+                "warRoom": "#/content/C01"
+              },
+              {
+                "sheet": "content/production.md#v04",
+                "warRoom": "#/content/V04"
+              }
+            ]
+          },
+          {
+            "day": "Thu",
+            "text": "Thu: record the screen for V06 + V07 + V10 (2 h); picture posts C03 + C02 (1 h); edit V05 (3 h)",
+            "ids": [
+              "V06",
+              "V07",
+              "V10",
+              "C03",
+              "C02",
+              "V05"
+            ],
+            "links": [
+              {
+                "sheet": "content/production.md#v06",
+                "warRoom": "#/content/V06"
+              },
+              {
+                "sheet": "content/production.md#v07",
+                "warRoom": "#/content/V07"
+              },
+              {
+                "sheet": "content/production.md#v10",
+                "warRoom": "#/content/V10"
+              },
+              {
+                "sheet": "content/production.md#c03",
+                "warRoom": "#/content/C03"
+              },
+              {
+                "sheet": "content/production.md#c02",
+                "warRoom": "#/content/C02"
+              },
+              {
+                "sheet": "content/production.md#v05",
+                "warRoom": "#/content/V05"
+              }
+            ]
+          },
+          {
+            "day": "Fri",
+            "text": "Fri: edit V10 (2 h 30 min); C12 card (1 h); build the C07 LinkedIn document in Makeborne (60 min); start the five C06 sites",
+            "ids": [
+              "V10",
+              "C12",
+              "C07",
+              "C06"
+            ],
+            "links": [
+              {
+                "sheet": "content/production.md#v10",
+                "warRoom": "#/content/V10"
+              },
+              {
+                "sheet": "content/production.md#c12",
+                "warRoom": "#/content/C12"
+              },
+              {
+                "sheet": "content/production.md#c07",
+                "warRoom": "#/content/C07"
+              },
+              {
+                "sheet": "content/production.md#c06",
+                "warRoom": "#/content/C06"
+              }
+            ]
+          },
+          {
+            "day": "Sat",
+            "text": "Sat: C06 carousel + C16 (2 h); C17 + C22 (1 h); edit V06 (2 h)",
             "ids": [
               "C06",
               "C16",
@@ -336,8 +336,8 @@
             ]
           },
           {
-            "day": "Thu",
-            "text": "Thu: put the Higgsfield scenes into V07 in HyperFrames: opening, middle and end (40 min), for Friday's post",
+            "day": "Sat",
+            "text": "Sat: put the Higgsfield scenes into V07 in HyperFrames: opening, middle and end (40 min), for Sunday's post",
             "ids": [
               "V07"
             ],
@@ -353,8 +353,8 @@
             ]
           },
           {
-            "day": "Fri",
-            "text": "Fri: C37 with the real Day-5 numbers (30 min); edit V07 (2 h); first 48-hour read (1 h); C05 screenshots (1 h 30 min)",
+            "day": "Sun",
+            "text": "Sun: C37 with the real Day-5 numbers (30 min); edit V07 (2 h); first 48-hour read (1 h); C05 screenshots (1 h 30 min)",
             "ids": [
               "C37",
               "V07",
@@ -374,10 +374,16 @@
                 "warRoom": "#/content/C05"
               }
             ]
-          },
+          }
+        ]
+      },
+      {
+        "week": 2,
+        "dates": "2026-11-02 to 2026-11-08",
+        "items": [
           {
-            "day": "Sat",
-            "text": "Sat: C05 carousel (2 h); record next week's 10 videos (4 h)",
+            "day": "Mon",
+            "text": "Mon: C05 carousel (2 h); record next week's 10 videos (4 h)",
             "ids": [
               "C05"
             ],
@@ -388,31 +394,6 @@
               }
             ]
           },
-          {
-            "day": "Sun",
-            "text": "Sun: film and edit V09 with the real Day-7 numbers (1 h 30 min, post 09:30); weekly review (90 min)",
-            "ids": [
-              "V09"
-            ],
-            "links": [
-              {
-                "sheet": "content/production.md#v09",
-                "warRoom": "#/content/V09"
-              }
-            ]
-          },
-          {
-            "day": "Sun",
-            "text": "Sun: Higgsfield log: credits used against this week's plan; delete any take with a face, a letter or an app-like screen (10 min)",
-            "ids": [],
-            "links": []
-          }
-        ]
-      },
-      {
-        "week": 2,
-        "dates": "2026-11-02 to 2026-11-08",
-        "items": [
           {
             "day": "Mon",
             "text": "Mon: record the screen for V04 + V14 + V16 (2 h 45 min)",
@@ -495,6 +476,25 @@
               "HF06",
               "HF04"
             ]
+          },
+          {
+            "day": "Tue",
+            "text": "Tue: film and edit V09 with the real Day-7 numbers (1 h 30 min, post 09:30)",
+            "ids": [
+              "V09"
+            ],
+            "links": [
+              {
+                "sheet": "content/production.md#v09",
+                "warRoom": "#/content/V09"
+              }
+            ]
+          },
+          {
+            "day": "Tue",
+            "text": "Tue: Higgsfield log: credits used against this week's plan; delete any take with a face, a letter or an app-like screen (10 min)",
+            "ids": [],
+            "links": []
           },
           {
             "day": "Tue",
@@ -1294,7 +1294,7 @@
           },
           {
             "day": "Mon",
-            "text": "Mon: make V03's Higgsfield version (pitch-room opening and end, 30 min) for Tuesday's TikTok, the A/B pair with 26 Oct",
+            "text": "Mon: make V03's Higgsfield version (pitch-room opening and end, 30 min) for Tuesday's TikTok, the A/B pair with 28 Oct",
             "ids": [
               "V03"
             ],
@@ -1417,7 +1417,7 @@
           },
           {
             "day": "Tue",
-            "text": "Tue: make V02's Higgsfield version (bakery opening, shop-to-website, middle and end; 45 min) for Wednesday's TikTok, the A/B pair with 26 Oct",
+            "text": "Tue: make V02's Higgsfield version (bakery opening, shop-to-website, middle and end; 45 min) for Wednesday's TikTok, the A/B pair with 28 Oct",
             "ids": [
               "V02"
             ],
@@ -3153,7 +3153,7 @@
       },
       {
         "week": 13,
-        "dates": "2027-01-18 to 2027-01-24",
+        "dates": "2027-01-18 to 2027-01-25",
         "items": [
           {
             "day": "Mon",
@@ -5382,7 +5382,7 @@
           "n1Label": "paid",
           "n2Label": "refunded",
           "n3Label": "MRR ($)",
-          "note": "n1-n3 typed from Whop and the /go/ report on Sun 1 Nov"
+          "note": "n1-n3 typed from Whop and the /go/ report on Tue 3 Nov"
         }
       },
       "onScreenText": [
@@ -5434,7 +5434,7 @@
         "usd": 0,
         "note": "Makeborne AI provider cost of the builds about $0.00 (outside the $1,000; plan.json outsideBudget)"
       },
-      "readiness": "needs the day's real numbers (Sun 1 Nov)",
+      "readiness": "needs the day's real numbers (Tue 3 Nov, day 7)",
       "makeWith": "real only",
       "mix": {
         "lengthSec": 60,
@@ -9612,7 +9612,7 @@
         "usd": 0,
         "note": "Makeborne AI provider cost of the builds about $0.30 (outside the $1,000; plan.json outsideBudget)"
       },
-      "readiness": "needs the day's real numbers (Sun 24 Jan)",
+      "readiness": "needs the day's real numbers (Mon 25 Jan, day 90)",
       "makeWith": "real only",
       "mix": {
         "lengthSec": 120,
@@ -13698,7 +13698,7 @@
       },
       {
         "week": 13,
-        "dates": "2027-01-18 to 2027-01-24",
+        "dates": "2027-01-18 to 2027-01-25",
         "phase": "phase-3",
         "postsOnCalendar": 40,
         "output": {
@@ -14631,7 +14631,7 @@
         },
         {
           "week": 13,
-          "dates": "2027-01-18 to 2027-01-24",
+          "dates": "2027-01-18 to 2027-01-25",
           "month": 3,
           "generateOn": null,
           "shots": [],
@@ -14990,7 +14990,7 @@
           "video": "V07",
           "surface": "TikTok",
           "higgsfield": {
-            "date": "2026-10-30",
+            "date": "2026-11-01",
             "go": "tt-v07"
           },
           "real": {
@@ -15026,7 +15026,7 @@
           "video": "V03",
           "surface": "TikTok",
           "real": {
-            "date": "2026-10-26",
+            "date": "2026-10-28",
             "go": "tt-v03"
           },
           "higgsfield": {
@@ -15040,7 +15040,7 @@
           "video": "V02",
           "surface": "TikTok",
           "real": {
-            "date": "2026-10-26",
+            "date": "2026-10-28",
             "go": "tt-v02"
           },
           "higgsfield": {

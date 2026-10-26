@@ -11,9 +11,12 @@ const toUtc = (iso) => {
 };
 export const addDays = (iso, n) => new Date(toUtc(iso) + n * DAY_MS).toISOString().slice(0, 10);
 const diff = (a, b) => Math.round((toUtc(a) - toUtc(b)) / DAY_MS);
-const START = '2026-10-26';
+const START = '2026-10-26'; // Mon of week 1 (pre-launch day −2); weeks run Monday to Sunday
+export const LAUNCH = '2026-10-28'; // the public launch, Wed 28 Oct 2026 at 19:00 CET (day 1)
+export const DAY90 = '2027-01-25'; // day 90 and the day-90 review, inside week 13
 const WEEKDAYS = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
-const weekOf = (iso) => Math.floor(diff(iso, START) / 7) + 1;
+const weekOf = (iso) => Math.min(13, Math.floor(diff(iso, START) / 7) + 1);
+const weekdayOf = (iso) => WEEKDAYS[(new Date(toUtc(iso)).getUTCDay() + 6) % 7];
 const hm = (t) => {
   const m = String(t ?? '').match(/(\d{1,2}):(\d{2})/);
   return m ? `${m[1].padStart(2, '0')}:${m[2]}` : '';
@@ -91,7 +94,7 @@ export function postingFor(posting, post, date) {
     reason: it.ready ? null : posting.toMake?.[post.contentId] ?? 'Some files are missing from the renders folder.',
     files: it.files.map((f) => (after && f.later ? f.later : f.name)),
     laterFiles: !after ? it.files.map((f) => f.later).filter(Boolean) : [],
-    folder: posting.folder,
+    folder: it.folder ?? posting.folder,
     cover: it.cover,
     caption: it.caption,
     hashtags: it.hashtags,
@@ -108,7 +111,8 @@ export function todayExtras(files, date) {
   const week = Math.min(13, Math.max(1, weekOf(date)));
   const t = kpis.weeklyTargets[week - 1];
   const weekStart = addDays(START, (week - 1) * 7);
-  const weekday = WEEKDAYS[diff(date, weekStart)] ?? 'Sun';
+  const weekday = weekdayOf(date);
+  const inWeek = diff(date, weekStart) <= 6; // day 90 (Mon 25 Jan) sits after week 13's Sunday: no make-list that day
 
   // Instagram kick-off day (days 1-14): the main post's caption, cover and keyword, and its checklist.
   const ig = instagram.kickoffDays.find((k) => k.date === date) ?? null;
@@ -117,7 +121,7 @@ export function todayExtras(files, date) {
   const pw = production.simple.weeks.find((w) => w.week === week);
   const make = (pw?.items ?? [])
     // "Any" items (beat pieces, made only if the feature is live) go on the Monday of their week.
-    .filter((i) => i.day === weekday || (i.day === 'Any' && weekday === 'Mon'))
+    .filter((i) => inWeek && (i.day === weekday || (i.day === 'Any' && weekday === 'Mon')))
     .map((i) => ({ text: i.text.replace(new RegExp(`^${weekday}(\\s+\\d{1,2}:\\d{2})?:\\s*`), ''), time: hm(i.text.slice(0, 12)), ids: i.ids, sheets: i.links.map((l) => l.sheet), shots: (i.hf ?? []).map((id) => shotCard(production, id)) }));
 
   // Ad cards that are due: a day of their run window, the day before (get it ready) or a weekly check.
@@ -125,7 +129,7 @@ export function todayExtras(files, date) {
   for (const w of cardWindows(ads)) {
     const c = w.card;
     if (w.weeklyCheck) {
-      if (date >= c.earliestDate && weekday === 'Mon' && date <= '2027-01-24') dueAds.push({ ...cardLine(c), kind: 'check', note: 'Weekly check: search "makeborne" on Google. Run this card only if another advertiser shows up.' });
+      if (date >= c.earliestDate && weekday === 'Mon' && date <= DAY90) dueAds.push({ ...cardLine(c), kind: 'check', note: 'Weekly check: search "makeborne" on Google. Run this card only if another advertiser shows up.' });
       continue;
     }
     if (date === addDays(w.from, -1)) dueAds.push({ ...cardLine(c), kind: 'prep', note: `Starts tomorrow (${w.from}). Check the trigger tonight; if it is met, build the ad (it can be published in advance so review finishes) and set the start to 00:00.` });
@@ -147,7 +151,8 @@ export function todayExtras(files, date) {
     const c = cById.get(p.contentId);
     const isIgMain = ig && /^Instagram (Reels|carousel)/.test(p.channel) && String(ig.main.contentId).includes(p.contentId ?? '###');
     return {
-      title: v?.title ?? c?.concept ?? c?.headline ?? null,
+      title: v?.title ?? c?.concept ?? c?.headline ?? posting?.teasers?.[p.contentId] ?? null,
+      teaser: !!posting?.teasers?.[p.contentId],
       kind: v ? 'video' : c ? 'creative' : null,
       caption: isIgMain ? ig.main.caption : v ? `${v.caption}\n\n${v.hashtags.join(' ')}` : null,
       onImage: c ? [c.headline, c.subcopy, c.cta].filter(Boolean).join(' / ') : null,
@@ -170,8 +175,10 @@ export function todayExtras(files, date) {
     money,
     posts,
     reminders: (posting?.reminders ?? []).filter((r) => r.date === date),
-    // The one-time "Before posting" checklist rides along on every day that has a finished file.
-    beforePosting: anyReady ? posting.beforePosting ?? [] : [],
+    // The one-time "Before posting" checklist rides along on the pre-launch days and every day that has a finished file.
+    beforePosting: anyReady || date < LAUNCH ? posting?.beforePosting ?? [] : [],
+    // Launch day: the minute-by-minute run of show (data/plan.json launch).
+    launch: files.plan?.launch?.date === date ? { label: files.plan.launch.label, timeCet: files.plan.launch.timeCet, utc: files.plan.launch.utc, runOfShow: files.plan.launch.runOfShow } : null,
   };
 }
 
@@ -200,7 +207,7 @@ export function planWeeks(files) {
   const weeks = [];
   for (let n = 1; n <= 13; n++) {
     const from = addDays(START, (n - 1) * 7);
-    const to = addDays(from, 6);
+    const to = n === 13 ? DAY90 : addDays(from, 6);
     const days = calendar.filter((d) => d.date >= from && d.date <= to);
     const seen = new Set();
     const actions = [];
@@ -249,7 +256,7 @@ export function planWeeks(files) {
       checkpoints: checkpoints.checkpoints.filter((c) => c.date >= from && c.date <= to).map((c) => ({ date: c.date, title: c.title, approx: !!c.approx })),
     });
   }
-  const launchDays = plan.launchWeek.map((d) => {
+  const launchDays = [...(plan.preLaunch ?? []), ...plan.launchWeek].map((d) => {
     const cal = calendar.find((c) => c.date === d.date);
     return { day: d.day, date: d.date, weekday: d.weekday, focus: cal?.focus ?? '', actions: d.actions, posts: cal?.posts.length ?? 0 };
   });

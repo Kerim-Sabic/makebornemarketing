@@ -1,8 +1,11 @@
 # Makeborne 90-day content and action calendar
 
-**Window:** Mon 26 Oct 2026 (day 1, paid beta launch) to Sat 23 Jan 2027 (day 90), plus Sun 24 Jan (day 91), when the day-90 report posts and the review runs.
+**Window:** pre-launch Mon 26 and Tue 27 Oct 2026 (days −2 and −1), then Wed 28 Oct 2026 (day 1, public launch at 19:00 CET) to Mon 25 Jan 2027 (day 90), when the day-90 report posts and the review runs.
+
+> **Launch moved (owner decision, 26 Oct 2026 evening).** The public launch is **Wednesday 28 October 2026 at 19:00 Sarajevo time** (CET, 18:00 UTC); makeborne.com shows a countdown to that moment. Day 1 = Wed 28 Oct; Mon 26 and Tue 27 Oct are pre-launch days −2 and −1 (profiles, scheduling, extra footage, DM keywords, countdown teasers that never say it is live). The launch week moved 2 days later with its times (days 1-7 = 28 Oct - 3 Nov); everything after it keeps its date (ads A01 12-15 Nov and A02 3-4 Dec, creator waves, the no-boost window 20 Nov - 2 Dec, Black Friday, the 22 Nov and 20 Dec checkpoints) and day numbers are recomputed. The 90 days run Wed 28 Oct 2026 - Mon 25 Jan 2027 (day 90, the day-90 review). `data/calendar.json` and the war room are the source of truth; dates and day numbers in the text below that disagree are from before the move.
+
 **Built:** 26 Oct 2026 from `plan/strategy.md`, `data/plan.json`, `data/videos.json`, `data/creatives.json`, `data/outreach.json` and `data/kpis.json`.
-**Machine-readable version:** `data/calendar.json` (90 entries, one per day: date, week, phase, focus, posts, actions, kpiCheck).
+**Machine-readable version:** `data/calendar.json` (92 entries: 2 pre-launch days and days 1-90, one per day: date, week, phase, focus, posts, actions, kpiCheck).
 **Status:** a plan only. Nothing here has been posted, booked, bought, paid or sent. The owner sends every pitch and approves every payment.
 
 Labels are the plan's: [F] fact, [S] secondary, [V] vendor claim, [E] estimate, [A] assumption, [O] owner decision, [U] unverified.
@@ -89,7 +92,7 @@ No dollar moves until the spend gate is live (`/go/` links, first touch, and `mb
 - Real businesses appear only on request, using public information only, with a written OK (t20), and stay unpublished by default. Lead-finder results are always blurred.
 - No pixels, retargeting or device-stored referral cookies until the consent banner is live (target Sun 6 Dec). Judge every post on `/go/` clicks, DM keywords and Whop sales, never on views.
 
-## Week 1 (26 Oct-1 Nov): Launch week (days 1-7)
+## Week 1 (26 Oct-1 Nov): Pre-launch (days −2, −1) and launch week (days 1-5; days 6-7 are Mon 2 and Tue 3 Nov)
 
 **Goal:** Ship the paid beta without overclaiming, get the first ~35 gross payers, and have attribution live by Thu 29 Oct so every later dollar can be judged. All 10 P0 videos (V01-V10) go out this week; TAAFT is the only spend.
 
@@ -305,7 +308,7 @@ No dollar moves until the spend gate is live (`/go/` links, first touch, and `mb
 
 **Sunday check:** Week 12 scorecard vs base (kpis.json): qualified visits 5000, gross paid 50, net paid 42, activated payers 30, cumulative gross 445, active subs 345, MRR $12717, loop share 19%, owned posts 25-30, creators active 18, CAC <=$50. Guardrails: refunds <=15% (per-source brake 20%), attribution coverage >=90% from week 2, activated >=60% of net payers (weeks 1-4) / >=70% after, IG DM keyword replies >=3 per 1,000 views, MRR below 80% of target two Sundays running -> re-forecast.
 
-## Week 13 (18-24 Jan, day 91 on Sun 24 Jan): Phase 3: scale what pays, day-90 report
+## Week 13 (18-25 Jan, day 90 on Mon 25 Jan): Phase 3: scale what pays, day-90 report
 
 **Goal:** Reinvest only into sources at or under target CAC. Film V43 and build the day-90 numbers; post them and run the review on Sun 24 Jan (day 91).
 

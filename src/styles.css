@@ -3198,3 +3198,54 @@ input.tick {
 .adline-meta > .adline-aud::before {
   content: none;
 }
+
+/* ---------- launch countdown and run of show (launch Wed 28 Oct 2026, 19:00 CET) ---------- */
+.countdown {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 20px;
+  padding: 16px 18px;
+  border-radius: var(--radius);
+  background: var(--surface);
+  border: 1px solid color-mix(in srgb, var(--accent) 40%, var(--line));
+  box-shadow: var(--shadow);
+  min-width: 0;
+}
+.countdown-digits {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+}
+.countdown-part {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 4px;
+}
+.countdown-part b {
+  font-size: clamp(28px, 6vw, 40px);
+  font-weight: 650;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+}
+.countdown-part small {
+  font-size: 12px;
+  color: var(--muted);
+}
+.countdown.is-live {
+  border-color: color-mix(in srgb, var(--good) 40%, var(--line));
+}
+.countdown.is-live .today-stat-value {
+  color: var(--good);
+}
+.launch-card {
+  border: 1px solid color-mix(in srgb, var(--accent) 40%, var(--line));
+  border-radius: var(--radius);
+  padding: 14px 16px 6px;
+  background: var(--accent-soft);
+}
+.launch-card h2 {
+  color: var(--accent);
+}

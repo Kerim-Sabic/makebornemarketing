@@ -54,7 +54,7 @@ export default function Strategy({ params }: RouteProps) {
 
   return (
     <Page
-      eyebrow="Plan of record · 26 Oct 2026 – 24 Jan 2027"
+      eyebrow="Plan of record · launch Wed 28 Oct 2026, 19:00 CET – day 90 Mon 25 Jan 2027"
       title={
         <>
           Sell Studio to the people who <em>make things</em> for clients
@@ -84,7 +84,7 @@ export default function Strategy({ params }: RouteProps) {
           </Card>
           <Card className="card-accent">
             <p className="kicker">The honest target</p>
-            <p className="quote">Base case ~$174k ARR by 24 Jan (~$134k if creator traffic converts like average traffic). $1M is a breakout scenario, not the plan.</p>
+            <p className="quote">Base case ~$174k ARR by 25 Jan (~$134k if creator traffic converts like average traffic). $1M is a breakout scenario, not the plan.</p>
             <p className="small muted" style={{ marginTop: 12, marginBottom: 0 }}>
               $1M ARR is about $83.3k MRR, or about 2,050 active subscribers at a Studio-heavy $41 blend. No company in the research reached it in 3 months from a cold start with no free tier.
             </p>
@@ -305,7 +305,7 @@ export default function Strategy({ params }: RouteProps) {
         </div>
       </Section>
 
-      <Section id="scenarios" title="Scenarios at the day-90 review (24 Jan)" kicker="08" aside={<a href={href('funnel')}>Open the interactive model</a>}>
+      <Section id="scenarios" title="Scenarios at the day-90 review (25 Jan)" kicker="08" aside={<a href={href('funnel')}>Open the interactive model</a>}>
         <div className="table-wrap">
           <table>
             <thead>
@@ -316,8 +316,8 @@ export default function Strategy({ params }: RouteProps) {
                 <th className="n">Gross paid</th>
                 <th className="n">Active</th>
                 <th className="n">MRR d30</th>
-                <th className="n">MRR 24 Jan</th>
-                <th className="n">ARR 24 Jan</th>
+                <th className="n">MRR 25 Jan</th>
+                <th className="n">ARR 25 Jan</th>
               </tr>
             </thead>
             <tbody>

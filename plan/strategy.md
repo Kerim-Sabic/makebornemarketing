@@ -1,7 +1,10 @@
 # Makeborne 90-day growth plan (final)
 
-**Window:** Monday 26 October 2026 (paid beta launch) to Sunday 24 January 2027.
-**Day numbering:** day 1 = Mon 26 Oct. Launch week = days 1-7 (26 Oct - 1 Nov). Phase 1 = days 8-30 (2-24 Nov). Phase 2 = days 31-60 (25 Nov - 24 Dec). Phase 3 = days 61-90 (25 Dec - 23 Jan). The day-90 review is Sun 24 Jan.
+> **Launch moved (owner decision, 26 Oct 2026 evening).** The public launch is **Wednesday 28 October 2026 at 19:00 Sarajevo time** (CET, 18:00 UTC); makeborne.com shows a countdown to that moment. Day 1 = Wed 28 Oct; Mon 26 and Tue 27 Oct are pre-launch days −2 and −1 (profiles, scheduling, extra footage, DM keywords, countdown teasers that never say it is live). The launch week moved 2 days later with its times (days 1-7 = 28 Oct - 3 Nov); everything after it keeps its date (ads A01 12-15 Nov and A02 3-4 Dec, creator waves, the no-boost window 20 Nov - 2 Dec, Black Friday, the 22 Nov and 20 Dec checkpoints) and day numbers are recomputed. The 90 days run Wed 28 Oct 2026 - Mon 25 Jan 2027 (day 90, the day-90 review). `data/calendar.json` and the war room are the source of truth; dates and day numbers in the text below that disagree are from before the move.
+
+
+**Window:** pre-launch Mon 26 - Tue 27 October 2026, public launch Wednesday 28 October 2026 at 19:00 CET, to the day-90 review on Monday 25 January 2027.
+**Day numbering:** day 1 = Wed 28 Oct (launch 19:00 CET); Mon 26 and Tue 27 Oct are pre-launch days −2 and −1. Launch week = days 1-7 (28 Oct - 3 Nov). Phase 1 = days 6-28 (2-24 Nov, sharing 2-3 Nov with launch days 6-7). Phase 2 = days 29-58 (25 Nov - 24 Dec). Phase 3 = days 59-90 (25 Dec - 25 Jan). The day-90 review is Mon 25 Jan.
 **Cash budget:** $1,000, allocated exactly in section 6. Everything after it is paid from revenue under a reinvestment rule (an owner decision).
 **Status:** final plan for owner review. Nothing in it has been posted, bought, submitted or sent. Every pitch, listing, payment and creator contact is something the owner does or approves.
 **Built from:** `plan/draft-creator-led.md` (the judges' spine), `plan/draft-launch-events.md` (calendar and gates) and `plan/draft-agency-community.md` (buyer, loops and partner terms), with every flaw the three judges raised fixed. Evidence is in `research/*.md`, whose Verification sections override their bodies.

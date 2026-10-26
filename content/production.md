@@ -52,31 +52,31 @@ The rest is creators (they film themselves, we check the draft) and the two bran
 
 <details><summary><strong>Week 1</strong> (2026-10-26 to 2026-11-01)</summary>
 
-- [ ] Mon 07:00: free 20 GB of disk space, set up the clean account and the screen recorder (30 min)
-- [ ] Mon: finish the launch film V01 with its end card (60 min), post at 12:00 [V01](#v01)
-- [ ] Mon: record the screen for V02 + V03 + V05 and the C01 site (1 h 45 min) [V02](#v02) [V03](#v03) [V05](#v05) [C01](#c01)
-- [ ] Mon: film V08 to camera (25 min); edit V02 (80 min, post 13:00), V08 (1 h 45 min, post LinkedIn 16:30), V03 (3 h 45 min, post 21:00) [V08](#v08) [V02](#v02) [V03](#v03)
-- [ ] Mon: picture posts C15 (20 min) and C08 (30 min) [C15](#c15) [C08](#c08)
-- [ ] Tue: C01 picture post (50 min); V04 only if a real request came in (2 h), else post the V02 long version [C01](#c01) [V04](#v04)
-- [ ] Tue: record the screen for V06 + V07 + V10 (2 h); picture posts C03 + C02 (1 h); edit V05 (3 h) [V06](#v06) [V07](#v07) [V10](#v10) [C03](#c03) [C02](#c02) [V05](#v05)
+- [ ] Tue 07:00: free 20 GB of disk space, set up the clean account and the screen recorder (30 min)
 - [ ] Tue: owner signs up for Higgsfield Plus, monthly, himself ($49 from the production budget, not the $1,000; 10 min). No credit packs, no auto-refill; write down the renewal date
-- [ ] Wed: edit V10 (2 h 30 min); C12 card (1 h); build the C07 LinkedIn document in Makeborne (60 min); start the five C06 sites [V10](#v10) [C12](#c12) [C07](#c07) [C06](#c06)
+- [ ] Wed: finish the launch film V01 with its end card (60 min), post at 19:00 [V01](#v01)
+- [ ] Wed: record the screen for V02 + V03 + V05 and the C01 site (1 h 45 min) [V02](#v02) [V03](#v03) [V05](#v05) [C01](#c01)
+- [ ] Wed: film V08 to camera (25 min); edit V02 (80 min, post 20:00), V08 (1 h 45 min, post LinkedIn 19:15), V03 (3 h 45 min, post 21:00) [V08](#v08) [V02](#v02) [V03](#v03)
+- [ ] Wed: picture posts C15 (20 min) and C08 (30 min) [C15](#c15) [C08](#c08)
 - [ ] Wed 09:00: generate 6 Higgsfield shots for V07, V14, V15 (HF01, HF02, HF03, HF04, HF05, HF06; prompts in the sheet, ~313 credits) [V07](#v07) [V14](#v14) [V15](#v15) · shots [HF01](#hf01) [HF02](#hf02) [HF03](#hf03) [HF04](#hf04) [HF05](#hf05) [HF06](#hf06)
-- [ ] Thu: C06 carousel + C16 (2 h); C17 + C22 (1 h); edit V06 (2 h) [C06](#c06) [C16](#c16) [C17](#c17) [C22](#c22) [V06](#v06)
-- [ ] Thu: put the Higgsfield scenes into V07 in HyperFrames: opening, middle and end (40 min), for Friday's post [V07](#v07) · shots [HF01](#hf01) [HF02](#hf02)
-- [ ] Fri: C37 with the real Day-5 numbers (30 min); edit V07 (2 h); first 48-hour read (1 h); C05 screenshots (1 h 30 min) [C37](#c37) [V07](#v07) [C05](#c05)
-- [ ] Sat: C05 carousel (2 h); record next week's 10 videos (4 h) [C05](#c05)
-- [ ] Sun: film and edit V09 with the real Day-7 numbers (1 h 30 min, post 09:30); weekly review (90 min) [V09](#v09)
-- [ ] Sun: Higgsfield log: credits used against this week's plan; delete any take with a face, a letter or an app-like screen (10 min)
+- [ ] Thu: C01 picture post (50 min); V04 only if a real request came in (2 h), else post the V02 long version [C01](#c01) [V04](#v04)
+- [ ] Thu: record the screen for V06 + V07 + V10 (2 h); picture posts C03 + C02 (1 h); edit V05 (3 h) [V06](#v06) [V07](#v07) [V10](#v10) [C03](#c03) [C02](#c02) [V05](#v05)
+- [ ] Fri: edit V10 (2 h 30 min); C12 card (1 h); build the C07 LinkedIn document in Makeborne (60 min); start the five C06 sites [V10](#v10) [C12](#c12) [C07](#c07) [C06](#c06)
+- [ ] Sat: C06 carousel + C16 (2 h); C17 + C22 (1 h); edit V06 (2 h) [C06](#c06) [C16](#c16) [C17](#c17) [C22](#c22) [V06](#v06)
+- [ ] Sat: put the Higgsfield scenes into V07 in HyperFrames: opening, middle and end (40 min), for Sunday's post [V07](#v07) · shots [HF01](#hf01) [HF02](#hf02)
+- [ ] Sun: C37 with the real Day-5 numbers (30 min); edit V07 (2 h); first 48-hour read (1 h); C05 screenshots (1 h 30 min) [C37](#c37) [V07](#v07) [C05](#c05)
 
 </details>
 
 <details><summary><strong>Week 2</strong> (2026-11-02 to 2026-11-08)</summary>
 
+- [ ] Mon: C05 carousel (2 h); record next week's 10 videos (4 h) [C05](#c05)
 - [ ] Mon: record the screen for V04 + V14 + V16 (2 h 45 min) [V04](#v04) [V14](#v14) [V16](#v16)
 - [ ] Mon: record the screen for V13 + V15 + V18 (1 h 5 min) [V13](#v13) [V15](#v15) [V18](#v18)
 - [ ] Mon: record the screen for V30 (15 min) [V30](#v30)
 - [ ] Mon: add the pitch-room opening and end to V14 and the workshop, book-cover and bookshelf scenes to V15 (45 min) [V14](#v14) [V15](#v15) · shots [HF03](#hf03) [HF05](#hf05) [HF06](#hf06) [HF04](#hf04)
+- [ ] Tue: film and edit V09 with the real Day-7 numbers (1 h 30 min, post 09:30) [V09](#v09)
+- [ ] Tue: Higgsfield log: credits used against this week's plan; delete any take with a face, a letter or an app-like screen (10 min)
 - [ ] Tue: edit V04 + V14 (2 h) [V04](#v04) [V14](#v14)
 - [ ] Tue: edit V16 + V13 (1 h 55 min) [V16](#v16) [V13](#v13)
 - [ ] Tue: edit V15 + V18 (1 h 45 min) [V15](#v15) [V18](#v18)
@@ -139,14 +139,14 @@ The rest is creators (they film themselves, we check the draft) and the two bran
 - [ ] Mon: record the screen for V46 + V04 + V03 (1 h 10 min) [V46](#v46) [V04](#v04) [V03](#v03)
 - [ ] Mon: record the screen for V13 + V23 + V02 (1 h 35 min) [V13](#v13) [V23](#v23) [V02](#v02)
 - [ ] Mon: record the screen for V27 + V07 + V40 (1 h 15 min) [V27](#v27) [V07](#v07) [V40](#v40)
-- [ ] Mon: make V03's Higgsfield version (pitch-room opening and end, 30 min) for Tuesday's TikTok, the A/B pair with 26 Oct [V03](#v03) · shots [HF03](#hf03)
+- [ ] Mon: make V03's Higgsfield version (pitch-room opening and end, 30 min) for Tuesday's TikTok, the A/B pair with 28 Oct [V03](#v03) · shots [HF03](#hf03)
 - [ ] Tue: edit V46 + V04 (1 h 30 min) [V46](#v46) [V04](#v04)
 - [ ] Tue: edit V03 + V13 (2 h 35 min) [V03](#v03) [V13](#v13)
 - [ ] Tue: edit V23 + V02 (2 h 45 min) [V23](#v23) [V02](#v02)
 - [ ] Tue: edit V27 + V07 (2 h 35 min) [V27](#v27) [V07](#v07)
 - [ ] Tue: edit V40 (35 min) [V40](#v40)
 - [ ] Tue 09:00: generate 1 Higgsfield shot for V25 (HF17; prompts in the sheet, ~38 credits) (+HF18 only if custom domains live, ~38 credits) [V25](#v25) [V56](#v56) · shots [HF17](#hf17) [HF18](#hf18)
-- [ ] Tue: make V02's Higgsfield version (bakery opening, shop-to-website, middle and end; 45 min) for Wednesday's TikTok, the A/B pair with 26 Oct [V02](#v02) · shots [HF11](#hf11)
+- [ ] Tue: make V02's Higgsfield version (bakery opening, shop-to-website, middle and end; 45 min) for Wednesday's TikTok, the A/B pair with 28 Oct [V02](#v02) · shots [HF11](#hf11)
 - [ ] Wed: make the picture posts C03 + C17 + C38 (1 h 20 min) [C03](#c03) [C17](#c17) [C38](#c38)
 - [ ] Wed: make the picture posts C04 + C30 + C18 (1 h 45 min) [C04](#c04) [C30](#c30) [C18](#c18)
 - [ ] Wed: make the picture posts C37 (15 min) [C37](#c37)
@@ -293,7 +293,7 @@ The rest is creators (they film themselves, we check the draft) and the two bran
 
 </details>
 
-<details><summary><strong>Week 13</strong> (2027-01-18 to 2027-01-24)</summary>
+<details><summary><strong>Week 13</strong> (2027-01-18 to 2027-01-25)</summary>
 
 - [ ] Mon: record the screen for V05 + V06 + V02 (1 h 30 min) [V05](#v05) [V06](#v06) [V02](#v02)
 - [ ] Mon: record the screen for V27 + V13 + V07 (1 h 40 min) [V27](#v27) [V13](#v13) [V07](#v07)
@@ -595,10 +595,10 @@ Each template is a HyperFrames project skeleton that follows the composition con
 
 | Pair | Item | Surface | Real | Higgsfield | Note |
 |---|---|---|---|---|---|
-| AB1 | [V07](#v07) | TikTok | 2026-12-07 /go/tt-v07-e04 | 2026-10-30 /go/tt-v07 | Higgsfield first, real second (counterbalances the order of the other pairs). |
+| AB1 | [V07](#v07) | TikTok | 2026-12-07 /go/tt-v07-e04 | 2026-11-01 /go/tt-v07 | Higgsfield first, real second (counterbalances the order of the other pairs). |
 | AB2 | [V29](#v29) | YouTube Shorts | 2026-11-04 /go/yt-v29 + 2026-11-30 /go/yt-v29-e04 | 2026-11-19 /go/yt-v29-e02 + 2026-11-23 /go/yt-v29-e03 | Two episodes a side (image-to-video of the real output vs the plain sentence chip). |
-| AB3 | [V03](#v03) | TikTok | 2026-10-26 /go/tt-v03 | 2026-11-24 /go/tt-v03-e03 | Episode 3 has a new brief; the format and hook line stay the same. |
-| AB4 | [V02](#v02) | TikTok | 2026-10-26 /go/tt-v02 | 2026-11-25 /go/tt-v02-e04 | Episode 4 has a new brief; the bakery clip is the opening and end in the Higgsfield version. |
+| AB3 | [V03](#v03) | TikTok | 2026-10-28 /go/tt-v03 | 2026-11-24 /go/tt-v03-e03 | Episode 3 has a new brief; the format and hook line stay the same. |
+| AB4 | [V02](#v02) | TikTok | 2026-10-28 /go/tt-v02 | 2026-11-25 /go/tt-v02-e04 | Episode 4 has a new brief; the bakery clip is the opening and end in the Higgsfield version. |
 | AB5 | [V40](#v40) | TikTok | 2026-11-27 /go/tt-v40 | 2026-11-30 /go/tt-v40-e02 | Black Friday (real) vs Cyber Monday (Higgsfield). Same offer, same words. |
 | AB6 | [V18](#v18) | TikTok | 2026-11-06 /go/tt-v18 | 2026-12-11 /go/tt-v18-e02 | Episode 2 has a new brief; same hook line. |
 | AB7 | [C30](#c30) | Instagram Stories | 2026-11-27 /go/ig-c30 | 2026-11-30 /go/ig-c30-e02 | The typeset story vs the same words over the HF15 frame grab (T09 lay-plate). The 30 Nov story gets its own short link so the two can be told apart. |
@@ -929,7 +929,7 @@ Each template is a HyperFrames project skeleton that follows the composition con
 | [V06](#v06) | P0 | 2026-10-30 13:00 TikTok | real only | P2-before-after | T03-split (mode stack) + PowerPoint capture | 25s | - | 155 / 92 | now |
 | [V07](#v07) | P0 | 2026-10-30 21:00 TikTok | Higgsfield hook + real | P1-speedrun | T02-speedrun (workflow variant: scenes = finder, results, CRM, demo build, review link) | 40s | HF01 HF02 · 11.5 s · 112.5 cr | 215 / 128 | now |
 | [V08](#v08) | P0 | 2026-10-26 09:30 LinkedIn | real only | P4-founder | T05-founder | 45s | - | 100 / 60 | now |
-| [V09](#v09) | P0 | 2026-11-01 21:30 TikTok | real only | P4-founder | T05-founder | 60s | - | 105 / 64 | needs the day's real numbers (Sun 1 Nov) |
+| [V09](#v09) | P0 | 2026-11-01 21:30 TikTok | real only | P4-founder | T05-founder | 60s | - | 105 / 64 | needs the day's real numbers (Tue 3 Nov, day 7) |
 | [V10](#v10) | P0 | 2026-10-28 17:00 Reddit | real only | P1-speedrun | T04-showcase triptych (frame 0, loop) + T02-speedrun (three short build segments) | 30s | - | 215 / 131 | now |
 | [V11](#v11) | P1 | 2026-11-02 09:30 LinkedIn | real only | P4-founder | T05-founder | 50s | - | 100 / 60 | needs ga5 sample review link live |
 | [V12](#v12) | P1 | 2026-11-03 13:15 Instagram Reels | real only | P9-pov-props | T02-speedrun (phone POV variant) | 25s | - | 115 / 69 | needs ga5 sample review link live |
@@ -963,7 +963,7 @@ Each template is a HyperFrames project skeleton that follows the composition con
 | [V40](#v40) | P2 | 2026-11-27 13:00 TikTok | Higgsfield scene + HyperFrames type | P9-pov-props | T08-props (fake banner) + T01-endcard | 12s | HF14 · 3 s · 37.5 cr | 80 / 47 | now |
 | [V41](#v41) | P1 | 2027-01-05 13:00 TikTok | Higgsfield scene + HyperFrames type | P1-speedrun | T02-speedrun | 30s | HF24 · 9 s · 25 cr | 140 / 83 | now |
 | [V42](#v42) | P1 | 2027-01-04 13:00 TikTok | Higgsfield hook + real | P1-speedrun | T02-speedrun (workflow variant) | 45s | HF25 HF01 HF02 · 12.5 s · 25 cr | 160 / 96 | now |
-| [V43](#v43) | P1 | 2027-01-24 09:30 LinkedIn | real only | P4-founder | T05-founder + P11 deck | 120s | - | 225 / 133 | needs the day's real numbers (Sun 24 Jan) |
+| [V43](#v43) | P1 | 2027-01-24 09:30 LinkedIn | real only | P4-founder | T05-founder + P11 deck | 120s | - | 225 / 133 | needs the day's real numbers (Mon 25 Jan, day 90) |
 | [V44](#v44) | P1 | 2026-11-02 13:00 TikTok | real only | P4-founder | T05-founder | 40s | - | 130 / 81 | now |
 | [V45](#v45) | P2 | 2026-11-18 21:30 TikTok | real only | P4-founder | T05-founder | 50s | - | 100 / 60 | needs the real ticket tally |
 | [V46](#v46) | P2 | 2026-11-23 13:00 TikTok | real only | P9-pov-props | T02-speedrun (meme variant, 10 s) | 10s | - | 80 / 49 | now |
@@ -1215,14 +1215,14 @@ Each template is a HyperFrames project skeleton that follows the composition con
 
 #### V09
 
-**Founder Day 7: exactly how many people paid** · P0 · week 1 · 60 s · first post 2026-11-01 21:30 TikTok · **readiness: needs the day's real numbers (Sun 1 Nov)**
+**Founder Day 7: exactly how many people paid** · P0 · week 1 · 60 s · first post 2026-11-01 21:30 TikTok · **readiness: needs the day's real numbers (Tue 3 Nov, day 7)**
 
 - **Make with:** real only. **Pipeline / template:** P4-founder / T05-founder. **Tools:** Makeborne (real run), phone camera, HyperFrames, platform music library.
 - **Capture in the app:**
   - Founder to camera holding the phone with a cropped Whop payments screen (totals only, no buyer data)
   - Screen captures: payer count, refunds, MRR (cropped); the /go/ source report row of the best source
   - Cut-ins of what people built only with written consent
-- **Template variables:** `dayLabel` = Day 7; `hookLine` = Day 7: exactly how many people paid.; `n1Label` = paid; `n2Label` = refunded; `n3Label` = MRR ($); `note` = n1-n3 typed from Whop and the /go/ report on Sun 1 Nov
+- **Template variables:** `dayLabel` = Day 7; `hookLine` = Day 7: exactly how many people paid.; `n1Label` = paid; `n2Label` = refunded; `n3Label` = MRR ($); `note` = n1-n3 typed from Whop and the /go/ report on Tue 3 Nov
 - **On-screen text, exactly:**
   - 0-2s: "Day 7: exactly how many people paid." (VO: Seven days in. Here's exactly how many people paid.)
   - 2-15s: "[N] paid · [N] refunded · $[MRR]" (VO: [N] people paid, [N] asked for a refund, and that's [MRR] a month.)
@@ -2069,7 +2069,7 @@ Each template is a HyperFrames project skeleton that follows the composition con
 
 #### V43
 
-**Founder Day 90: every number, including what failed** · P1 · week 13 · 120 s · first post 2027-01-24 09:30 LinkedIn · **readiness: needs the day's real numbers (Sun 24 Jan)**
+**Founder Day 90: every number, including what failed** · P1 · week 13 · 120 s · first post 2027-01-24 09:30 LinkedIn · **readiness: needs the day's real numbers (Mon 25 Jan, day 90)**
 
 - **Make with:** real only. **Pipeline / template:** P4-founder / T05-founder + P11 deck. **Tools:** Makeborne (real run), phone camera, HyperFrames, platform music library.
 - **Capture in the app:**
@@ -3001,7 +3001,7 @@ Each template is a HyperFrames project skeleton that follows the composition con
 | 10 | 2026-12-28 to 2027-01-03 | 5 | 4 | 0 | 5 | 0 | 0 | 10 | Fits the routine's make blocks |
 | 11 | 2027-01-04 to 2027-01-10 | 7 | 5 | 1 | 8 | 3 | 0 | 17.9 | Above the ~12-16 h/week make budget: bank founder takes on Saturday, cut X-only extras and long YouTube first (strategy section 18) |
 | 12 | 2027-01-11 to 2027-01-17 | 7 | 5 | 4 | 5 | 3 | 0 | 20.5 | Above the ~12-16 h/week make budget: bank founder takes on Saturday, cut X-only extras and long YouTube first (strategy section 18) |
-| 13 | 2027-01-18 to 2027-01-24 | 9 | 7 | 2 | 7 | 3 | 0 | 25.7 | Above the ~12-16 h/week make budget: bank founder takes on Saturday, cut X-only extras and long YouTube first (strategy section 18) |
+| 13 | 2027-01-18 to 2027-01-25 | 9 | 7 | 2 | 7 | 3 | 0 | 25.7 | Above the ~12-16 h/week make budget: bank founder takes on Saturday, cut X-only extras and long YouTube first (strategy section 18) |
 
 **The honest finding:** at the calendar's volume, production needs about 20-25 hours a week after launch week, against the routine's 10-12 hours of make blocks plus evenings. Ways to close the gap, in order: (1) batch strictly (Mon screen, Thu face, Wed stills), (2) cut long YouTube and X-only extras first (strategy section 18), (3) lean on the six-cuts-per-capture rule in section 10, (4) bring the editor hire forward from revenue (P-D11). Do not close it by lowering the truth rules.
 

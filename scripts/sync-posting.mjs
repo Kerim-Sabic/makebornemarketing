@@ -1,22 +1,33 @@
 // Reads the render agent's POSTING.md (the finished launch-week videos and images) and writes data/posting.json,
 // which the Today page joins to its post items: "File: V01_reel_9x16.mp4 (in <folder>)" and a "ready to post" badge.
 //
-//   node scripts/sync-posting.mjs                       read Z:\makeborne-marketing\launch-week\renders\POSTING.md
-//   node scripts/sync-posting.mjs --dir <folder>        read <folder>/POSTING.md instead
+//   node scripts/sync-posting.mjs                       read Z:\makeborne-marketing\launch-week\renders\POSTING.md and, when it
+//                                                       exists, Z:\makeborne-marketing\launch-teasers\renders\POSTING.md
+//   node scripts/sync-posting.mjs --dir <folder>        read <folder>/POSTING.md instead of the launch-week folder
+//   node scripts/sync-posting.mjs --teasers <folder>    read <folder>/POSTING.md instead of the launch-teasers folder
 //   node scripts/sync-posting.mjs --out <file>          write somewhere other than data/posting.json (used by npm run check)
 //
 // It never copies media: only file names, platforms, times, captions, hashtags, keywords, links, covers and disclosures.
-// When the folder or POSTING.md is missing (a Netlify build, another computer) it prints a note, leaves the committed
-// data/posting.json as it is and exits 0. The build only ever reads the JSON.
+// When both folders (or their POSTING.md) are missing (a Netlify build, another computer) it prints a note, leaves the
+// committed data/posting.json as it is and exits 0. The build only ever reads the JSON. The teaser folder (the pre-launch
+// countdown videos T1-T7 and Stories S1-S3) is optional: without it the teasers stay "to make" and nothing fails.
+//
+// The launch moved from Mon 26 Oct to Wed 28 Oct 2026, 19:00 CET. The launch-week POSTING.md still names the old dates,
+// so `schedule` (hand-written, in data/posting.json) maps them: every launch-week slot from 26 Oct to 1 Nov moves 2 days
+// later, the launch-day slots get their new times (V01 at 19:00) and the old make-up slots are dropped. Teaser slots are
+// used as written.
 //
 // Hand-written parts of data/posting.json survive a re-sync: `toMake` (why a post has no file yet, in plain words),
-// `beforePosting` (the one-time checklist) and `reminders` (dated one-off Today items). Edit them in the JSON.
+// `beforePosting` (the one-time checklist), `reminders` (dated one-off Today items), `teasers` (teaser titles) and
+// `schedule` (the date mapping above). Edit them in the JSON.
 import { existsSync, readFileSync, readdirSync, writeFileSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 export const DEFAULT_DIR = 'Z:\\makeborne-marketing\\launch-week\\renders';
+export const TEASER_DIR = 'Z:\\makeborne-marketing\\launch-teasers\\renders';
+const addDays = (isoDate, n) => new Date(Date.parse(`${isoDate}T00:00:00Z`) + n * 86_400_000).toISOString().slice(0, 10);
 
 const MONTHS = { Oct: '10', Nov: '11', Dec: '12', Jan: '01' };
 const WHEN = /\b(Mon|Tue|Wed|Thu|Fri|Sat|Sun) (\d{1,2}) (Oct|Nov|Dec|Jan) (\d{1,2}:\d{2})/;
@@ -41,12 +52,37 @@ const DEFAULTS = {
     V04: 'Needs a real comment asking for a website, and that person\'s written OK, before it can be made. Until then post V02 in its TikTok slot.',
     V07: 'Needs the Higgsfield shots: you sign up on Tue 27 Oct and the shots are made on Wed 28 Oct.',
     V08: 'Needs a founder video: film yourself to camera (about 25 minutes).',
-    V09: 'Needs the Day-7 numbers (Sun 1 Nov): film it once you know how many people paid.',
+    V09: 'Needs the Day-7 numbers (Tue 3 Nov): film it once you know how many people paid.',
     V10: 'Needs one fictional brief built as a site, a deck and a client guide, then the three-up layout.',
     C02: 'Needs a phone screenshot of a client approving on the review page.',
     C05: 'Needs the Instagram comment-keyword DM switched on first, then the slides captured.',
     C15: 'Needs the Instagram keyword DM switched on, and the "30-second uncut build" it promises does not exist yet.',
     C17: 'Needs a screenshot of the deck opened in PowerPoint with the chart\'s data sheet open.',
+    ...Object.fromEntries(['T1', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7', 'S1', 'S2', 'S3'].map((id) => [id, 'Being rendered with HyperFrames (the countdown teasers). When the files land in the launch-teasers renders folder, run node scripts/sync-posting.mjs and this post shows "ready to post".'])),
+  },
+  teasers: {
+    T1: 'Countdown teaser "Wednesday. 19:00."',
+    T2: 'Countdown teaser "2 days"',
+    T3: 'Countdown teaser "Tomorrow, 19:00"',
+    T4: 'Countdown teaser "Today, 19:00"',
+    T5: 'Countdown teaser "1 hour"',
+    T6: 'Countdown teaser "60 seconds"',
+    T7: '"We\'re live" sting',
+    S1: 'Story with Instagram\'s countdown sticker (S1)',
+    S2: 'Story with the countdown sticker, launch morning (S2)',
+    S3: 'Story with the countdown sticker, one hour to go (S3)',
+  },
+  schedule: {
+    note: 'The launch moved from Mon 26 Oct to Wed 28 Oct 2026, 19:00 CET. The launch-week POSTING.md still has the old dates: every slot from 26 Oct to 1 Nov moves 2 days later, these launch-day slots get new times, and the old make-up slots are dropped. Teaser slots are used as written.',
+    shift: { from: '2026-10-26', to: '2026-11-01', days: 2 },
+    overrides: [
+      { id: 'V01', platform: 'TikTok', date: '2026-10-28', time: '19:00' },
+      { id: 'V01', platform: 'Instagram Reels', date: '2026-10-28', time: '19:00' },
+      { id: 'V01', platform: 'YouTube Shorts', date: '2026-10-28', time: '19:00' },
+      { id: 'V02', platform: 'TikTok', date: '2026-10-28', time: '20:00' },
+      { id: 'C08', platform: 'X', date: '2026-10-28', time: '19:15' },
+    ],
+    dropMakeUp: true,
   },
   beforePosting: [
     { key: 'music', text: 'Add the music inside each app', how: 'No music is baked into the videos. TikTok: pick a track from the Commercial Music Library. Instagram: the Meta music library. YouTube Shorts: the Shorts library. LinkedIn and X: no music. Keep it low so the sound effects still click.' },
@@ -74,7 +110,7 @@ export function parsePosting(md, { present } = {}) {
   const sections = [];
   let cur = null;
   for (let i = 0; i < lines.length; i++) {
-    const h = lines[i].match(/^### ([VC]\d{2}) · (.+)$/);
+    const h = lines[i].match(/^### ([VC]\d{2}|[TS]\d{1,2}) · (.+)$/);
     if (h) {
       cur = { id: h[1], head: h[2], start: i };
       sections.push(cur);
@@ -90,12 +126,16 @@ export function parsePosting(md, { present } = {}) {
       const m = l.match(/^\|\s*\*\*(.+?)\*\*\s*\|\s*(.+?)\s*\|\s*$/);
       if (m) rows.set(m[1].trim(), m[2].trim());
     }
+    // Videos (V, T) list one table row per platform; stills (C) name the file and platform in the heading. A Story (S)
+    // can be either: table rows when it has them, otherwise a still.
+    const mediaRows = [...rows].some(([label, val]) => !['Cover', 'Keyword', 'Links', 'Disclosure'].includes(label) && ticks(val).some(isMedia));
+    const isStill = /^C/.test(s.id) || (/^S/.test(s.id) && !mediaRows);
     // Captions: a header line ending in ":" followed by "> " lines.
     const captions = [];
     for (let i = 0; i < body.length; i++) {
       const l = body[i].trim();
       // Stills put their caption straight after the "Link in the first comment: … Disclosure: none." line.
-      const still = s.id.startsWith('C') && /^(Link in the first|Keyword:)/i.test(l);
+      const still = isStill && /^(Link in the first|Keyword:)/i.test(l);
       if ((!l.endsWith(':') && !still) || l.startsWith('|') || l.startsWith('>')) continue;
       const quote = [];
       let j = i + 1;
@@ -121,7 +161,7 @@ export function parsePosting(md, { present } = {}) {
     const keywordRow = rows.get('Keyword');
 
     const slots = [];
-    if (s.id.startsWith('V')) {
+    if (!isStill) {
       for (const [label, val] of rows) {
         if (['Cover', 'Keyword', 'Links', 'Disclosure'].includes(label)) continue;
         const files = ticks(val).filter(isMedia);
@@ -145,9 +185,9 @@ export function parsePosting(md, { present } = {}) {
       const when = slot.val.match(WHEN);
       const makeUp = slot.val.match(new RegExp(`make-up: ${WHEN.source}`));
       const bank = !when && /not on .*calendar/i.test(slot.val);
-      const cap = captions.find((c) => slot.platforms.some((p) => c.forPlatforms.includes(p))) ?? (s.id.startsWith('C') ? captions[0] : null);
+      const cap = captions.find((c) => slot.platforms.some((p) => c.forPlatforms.includes(p))) ?? (isStill ? captions[0] : null);
       const prefix = prefixOf(slot.platforms[0]);
-      const stillLine = s.id.startsWith('C') ? body.find((l) => /^Link in the first|^Keyword:/i.test(l.trim())) ?? '' : '';
+      const stillLine = isStill ? body.find((l) => /^Link in the first|^Keyword:/i.test(l.trim())) ?? '' : '';
       const keyword = keywordRow ? keywordFor(keywordRow, slot.platforms) : stillLine.match(/Keyword: (\w+)/)?.[1] ?? null;
       const disclosure = (disclosureRow ? clean(disclosureRow) : stillLine.match(/Disclosure: ([^.]+)/)?.[1] ?? null)?.replace(/\s*\(see [^)]*above\)/i, '').replace(/^none$/, 'None') ?? null;
       // "Description: the same text, ending with …" (V03 Shorts): reuse the first caption and keep the instruction.
@@ -178,35 +218,63 @@ export function parsePosting(md, { present } = {}) {
   return items;
 }
 
+/** Map the launch-week POSTING.md dates to the launch on Wed 28 Oct 19:00 CET (see `schedule` in data/posting.json). Pure. */
+export function applySchedule(items, schedule) {
+  if (!schedule) return items;
+  const { shift, overrides = [], dropMakeUp } = schedule;
+  const moved = (date) => (shift && date && date >= shift.from && date <= shift.to ? addDays(date, shift.days) : date);
+  return items.map((it) => {
+    const o = overrides.find((x) => x.id === it.id && it.platforms.includes(x.platform));
+    const makeUp = dropMakeUp || !it.makeUp ? null : { date: moved(it.makeUp.date), time: it.makeUp.time };
+    return { ...it, date: o ? o.date : moved(it.date), time: o ? o.time : it.time, makeUp };
+  });
+}
+
 function argv(name) {
   const i = process.argv.indexOf(name);
   return i > 0 ? process.argv[i + 1] : undefined;
 }
 
-export function syncPosting({ dir = DEFAULT_DIR, out = join(ROOT, 'data/posting.json'), log = console.log } = {}) {
+function readSource(dir) {
   const md = join(dir, 'POSTING.md');
-  if (!existsSync(dir) || !existsSync(md)) {
-    log(`sync-posting: ${existsSync(dir) ? 'no POSTING.md in' : 'folder not found:'} ${dir}. Kept ${existsSync(out) ? 'the committed' : 'no'} posting.json as it is.`);
+  if (!existsSync(dir) || !existsSync(md)) return { md, missing: existsSync(dir) ? 'no POSTING.md in' : 'folder not found:' };
+  return { md, items: parsePosting(readFileSync(md, 'utf8'), { present: new Set(readdirSync(dir)) }) };
+}
+
+export function syncPosting({ dir = DEFAULT_DIR, teaserDir = TEASER_DIR, out = join(ROOT, 'data/posting.json'), log = console.log } = {}) {
+  const lw = readSource(dir);
+  const tz = readSource(teaserDir);
+  if (lw.missing) log(`sync-posting: ${lw.missing} ${dir}.`);
+  if (tz.missing) log(`sync-posting: teasers: ${tz.missing} ${teaserDir} (the teasers stay "to make").`);
+  if (lw.missing && tz.missing) {
+    log(`sync-posting: kept ${existsSync(out) ? 'the committed' : 'no'} posting.json as it is.`);
     return { synced: false };
   }
-  const present = new Set(readdirSync(dir));
-  const items = parsePosting(readFileSync(md, 'utf8'), { present });
   const prev = existsSync(out) ? JSON.parse(readFileSync(out, 'utf8')) : {};
+  const schedule = prev.schedule ?? DEFAULTS.schedule;
+  const prevItems = prev.items ?? [];
+  // A folder that is missing this time keeps its items from the last sync.
+  const launchItems = lw.items ? applySchedule(lw.items, schedule) : prevItems.filter((i) => !i.folder);
+  const teaserItems = tz.items ? tz.items.map((i) => ({ ...i, folder: teaserDir })) : prevItems.filter((i) => i.folder);
+  const items = [...launchItems, ...teaserItems];
   const json = {
-    note: 'Generated by scripts/sync-posting.mjs from POSTING.md in the renders folder. items is rewritten on every sync; toMake, beforePosting and reminders are hand-written and kept. No media is copied into this repo.',
+    note: 'Generated by scripts/sync-posting.mjs from POSTING.md in the renders folders (launch week, plus the launch teasers when present). items is rewritten on every sync; toMake, beforePosting, reminders, teasers and schedule are hand-written and kept. No media is copied into this repo.',
     folder: dir,
+    teaserFolder: teaserDir,
     syncedAt: new Date().toISOString().slice(0, 10),
     items,
-    toMake: prev.toMake ?? DEFAULTS.toMake,
+    toMake: { ...DEFAULTS.toMake, ...prev.toMake },
     beforePosting: prev.beforePosting ?? DEFAULTS.beforePosting,
     reminders: prev.reminders ?? DEFAULTS.reminders,
+    teasers: { ...DEFAULTS.teasers, ...prev.teasers },
+    schedule,
   };
   writeFileSync(out, `${JSON.stringify(json, null, 2)}\n`);
   const ready = items.filter((i) => i.ready).length;
-  log(`sync-posting: ${items.length} posts (${ready} with every file present) from ${md} -> ${out}`);
+  log(`sync-posting: ${items.length} posts (${ready} with every file present; ${teaserItems.length} teaser posts) from ${[lw.items && lw.md, tz.items && tz.md].filter(Boolean).join(' and ')} -> ${out}`);
   return { synced: true, items: items.length, ready };
 }
 
 if (process.argv[1] && resolve(fileURLToPath(import.meta.url)).toLowerCase() === resolve(process.argv[1]).toLowerCase()) {
-  syncPosting({ dir: argv('--dir') ?? DEFAULT_DIR, out: argv('--out') ?? join(ROOT, 'data/posting.json') });
+  syncPosting({ dir: argv('--dir') ?? DEFAULT_DIR, teaserDir: argv('--teasers') ?? TEASER_DIR, out: argv('--out') ?? join(ROOT, 'data/posting.json') });
 }

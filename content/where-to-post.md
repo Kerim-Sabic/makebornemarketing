@@ -1,5 +1,8 @@
 # Where, when and what: the master posting sheet
 
+> **Launch moved (owner decision, 26 Oct 2026 evening).** The public launch is **Wednesday 28 October 2026 at 19:00 Sarajevo time** (CET, 18:00 UTC); makeborne.com shows a countdown to that moment. Day 1 = Wed 28 Oct; Mon 26 and Tue 27 Oct are pre-launch days −2 and −1 (profiles, scheduling, extra footage, DM keywords, countdown teasers that never say it is live). The launch week moved 2 days later with its times (days 1-7 = 28 Oct - 3 Nov); everything after it keeps its date (ads A01 12-15 Nov and A02 3-4 Dec, creator waves, the no-boost window 20 Nov - 2 Dec, Black Friday, the 22 Nov and 20 Dec checkpoints) and day numbers are recomputed. The 90 days run Wed 28 Oct 2026 - Mon 25 Jan 2027 (day 90, the day-90 review). `data/calendar.json` and the war room are the source of truth; dates and day numbers in the text below that disagree are from before the move.
+
+
 **Written:** Monday 26 October 2026. **Window:** 26 Oct 2026 to 24 Jan 2027.
 **What it is:** one sheet for every channel the plan uses: the exact account or community, the time, the frequency, the content type, the `/go/` link and who posts. Day-by-day posts and ids live in `data/calendar.json` (the authority for dates); this sheet is the standing pattern behind it. Detail: `content/instagram-playbook.md` (Instagram), `content/ads-playbook.md` (paid), `content/tracking.md` (links), `data/outreach.json` (launch copy and templates).
 

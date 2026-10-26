@@ -536,7 +536,7 @@
    "summary": "A04 · Mon 4 Jan 2027 · $30/day from revenue (D4) · Meta Advantage+ sales · 16 countries, 18+, Advantage+ audience",
    "statusTrigger": "All true: consent banner live; server-side Purchase events from the Whop webhook live, with event IDs and consent checks; 3+ posts each with tracked sales; D4 has released cash (a source at CAC $50 or less on 3+ payers).",
    "earliestDate": "2027-01-04",
-   "mustEndBy": "2027-01-24 (day-90 review)",
+   "mustEndBy": "2027-01-25 (day-90 review)",
    "platform": "Meta (Instagram and Facebook)",
    "toolPath": [
     "Meta Ads Manager -> Create -> objective Sales -> Advantage+ sales campaign",
@@ -1117,9 +1117,9 @@
    "otherPlanSpend": [
     {
      "line": "b1",
-     "item": "TAAFT listing, Mon 26 Oct (submit it first)",
+     "item": "TAAFT listing, Wed 28 Oct (submit it first, right after the 19:00 launch)",
      "usd": 49,
-     "date": "2026-10-26"
+     "date": "2026-10-28"
     },
     {
      "line": "b7",
@@ -1319,7 +1319,7 @@
    ],
    "weekTotalUsd": 84,
    "runningTotalUsd": 1000,
-   "note": "Anything still unspent on Thu 24 Dec (day 60) goes to the best source."
+   "note": "Anything still unspent on Thu 24 Dec (day 58) goes to the best source."
   },
   {
    "week": 9,
@@ -1384,7 +1384,7 @@
    "week": 13,
    "from": "2027-01-18",
    "to": "2027-01-24",
-   "summary": "Week 13 (2027-01-18 to 2027-01-24): live: A04 (revenue), A06 (revenue, optional), A07 (revenue, optional) · $0 this week ($0 on ads) · $1,000 of $1,000 so far",
+   "summary": "Week 13 (2027-01-18 to 2027-01-25): live: A04 (revenue), A06 (revenue, optional), A07 (revenue, optional) · $0 this week ($0 on ads) · $1,000 of $1,000 so far",
    "liveCards": [
     "A04 (revenue)",
     "A06 (revenue, optional)",
@@ -1395,7 +1395,7 @@
    "otherPlanSpend": [],
    "weekTotalUsd": 0,
    "runningTotalUsd": 1000,
-   "note": "Sun 24 Jan: day-90 review."
+   "note": "Mon 25 Jan: day-90 review (day 90)."
   }
  ],
  "sources": [

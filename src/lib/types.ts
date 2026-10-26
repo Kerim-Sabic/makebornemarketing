@@ -84,6 +84,8 @@ export interface CalendarPost {
   channel: string; account: string; contentId: string | null; time: string; notes: string; tag: string; slot: string;
   link: string; utm: Record<string, string>; episode?: number; requires?: string; fallbackContentId?: string;
 }
+/** Launch day: Wed 28 Oct 2026 at 19:00 CET (data/plan.json launch). */
+export interface LaunchInfo { label: string; timeCet: string; utc: string; runOfShow: { time: string; text: string; how: string }[] }
 export interface CalendarDay {
   date: string; day: number; weekday: string; week: number; phase: string; focus: string;
   posts: CalendarPost[]; actions: { type: string; what: string; owner: string; budgetLineId?: string }[]; kpiCheck: string;
@@ -109,9 +111,10 @@ export interface TodayExtra {
   make: { text: string; time: string; ids: string[]; sheets: string[]; shots: HfShotCard[] }[];
   ads: DueAd[];
   money: MoneyItem[];
-  posts: { title: string | null; kind: 'video' | 'creative' | null; caption: string | null; onImage: string | null; hook: string | null; cta: string | null; length: string | null; igMain: boolean; file: PostFile | null }[];
+  posts: { title: string | null; kind: 'video' | 'creative' | null; caption: string | null; onImage: string | null; hook: string | null; cta: string | null; length: string | null; igMain: boolean; teaser?: boolean; file: PostFile | null }[];
   reminders: { date: string; time: string; group: string; text: string; how: string }[];
   beforePosting: { key: string; text: string; how: string }[];
+  launch?: LaunchInfo | null;
 }
 /** A calendar post's finished file (data/posting.json, scripts/sync-posting.mjs); `ready: false` means "to make". */
 export interface PostFile {

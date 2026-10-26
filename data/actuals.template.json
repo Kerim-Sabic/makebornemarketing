@@ -12,6 +12,7 @@
       "views": "Platform analytics (TikTok, Instagram, YouTube, LinkedIn, X; creator screenshots for creator posts)",
       "clicks": "/go/ redirect log for that channel's codes (UTM)",
       "signups": "App DB account_created with that first-touch source",
+      "checkouts": "App DB checkout_opened (Makeborne-created checkouts) for accounts with that first-touch source",
       "paid": "Whop payment.succeeded (first payments) joined to the account's first touch; gross, before refunds",
       "refunds": "Whop refund.created for first payments, dated on the refund day",
       "revenue": "Whop usd_total of first payments that day, gross of fees; renewals go in channel 'renewals'"
@@ -53,7 +54,8 @@
       "budgetLineId": "b1-b9 or revenue",
       "refunds": "integer or null",
       "activated": "integer or null (north-star payers from this day's cohort, filled in 7 days later)",
-      "studioOrScale": "integer or null (paid on Studio or Scale)"
+      "studioOrScale": "integer or null (paid on Studio or Scale)",
+      "checkouts": "integer or null (checkouts opened that day by accounts from this channel)"
     }
   },
   "entries": []

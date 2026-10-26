@@ -30,3 +30,8 @@ declare module 'virtual:war-room/docs-index' {
   }
   export const DOC_INDEX: DocMeta[];
 }
+
+declare module 'virtual:war-room/funnel-scenarios' {
+  import type { FunnelInputs } from './lib/funnelModel';
+  export const SCENARIOS: { id: string; name: string; inputs: FunnelInputs; referenceOutputs: Record<string, unknown> }[];
+}

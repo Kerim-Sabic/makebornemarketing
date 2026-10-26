@@ -4,10 +4,12 @@
 // 3. Checks dist/: every asset the page references exists, the CSP is present, and no external origin is loaded.
 // 4. Fails when a data/plan.json scenario's mrrDay90 drifts more than 5% from the calculator (referenceOutputs.mrrEnd).
 // 5. Scans the files that would be pushed for known confidential markers (the repo may be public; owner-only notes go in private/).
+// 6. Tests the forecast and analytics maths with a fixed seed (scripts/check-forecast.mjs).
 import { createServer } from 'vite';
 import { readFileSync, existsSync, readdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { runForecastChecks } from './check-forecast.mjs';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const modelOnly = process.argv.includes('--model-only');
@@ -56,6 +58,14 @@ try {
   }
   const breakout = byId.breakout?.referenceOutputs;
   if (breakout && breakout.arrEnd < 1_000_000) fail(`breakout scenario reaches ARR ${breakout.arrEnd}, below the $1M its name promises`);
+
+  // ---------- forecast maths ----------
+  console.log('\nForecast and analytics maths (seeded)');
+  try {
+    await runForecastChecks((m) => server.ssrLoadModule(m), root, fail);
+  } catch (e) {
+    fail(`forecast checks threw: ${e?.stack ?? e}`);
+  }
 
   // ---------- confidential markers ----------
   console.log('\nConfidential-marker scan (README, data, plan, research, content, src)');
@@ -108,6 +118,10 @@ try {
       ['#/budget', 'Allocator'],
       ['#/funnel', 'What must be true'],
       ['#/analytics', 'Conversion by channel'],
+      ['#/analytics/sample', 'SAMPLE'],
+      ['#/analytics/sample/funnel', 'Weekly scorecard'],
+      ['#/predictions', 'How this is calculated'],
+      ['#/predictions/sample', 'In plain English'],
       ['#/content', 'The <em>library</em>'],
       ['#/content/V01', 'Script'],
       ['#/content/C05', 'Generation prompt'],

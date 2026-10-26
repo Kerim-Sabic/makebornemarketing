@@ -1841,3 +1841,240 @@ dialog.sheet[open] {
   overflow-x: auto;
   max-width: 100%;
 }
+
+/* ---------- analytics and predictions ---------- */
+.sample-banner {
+  background: var(--accent-soft);
+  border-color: color-mix(in srgb, var(--accent) 40%, transparent);
+}
+.sample-banner b:first-child {
+  color: var(--accent);
+  letter-spacing: 0.12em;
+  font-weight: 750;
+}
+label.btn.is-disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+.daysheet table {
+  font-size: 13px;
+}
+.daysheet th,
+.daysheet td {
+  padding: 4px 4px;
+  vertical-align: middle;
+}
+.daysheet th:first-child,
+.daysheet td:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  background: var(--surface-2);
+  padding-left: 10px;
+  white-space: nowrap;
+}
+.daysheet thead th:first-child {
+  z-index: 2;
+}
+.daysheet .ds-ch {
+  font-size: 12.5px;
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: 0;
+  color: var(--ink);
+}
+.daysheet tr.is-logged .ds-ch {
+  color: var(--good);
+}
+.daysheet input[type='text'],
+.daysheet select {
+  min-height: 30px;
+  padding: 4px 6px;
+  font-size: 13px;
+  border-radius: 6px;
+  width: 72px;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+.daysheet input.ds-notes {
+  width: 170px;
+  text-align: left;
+}
+.daysheet input.ds-camp {
+  width: 130px;
+  text-align: left;
+}
+.daysheet select {
+  width: 74px;
+  text-align: left;
+}
+.daysheet tfoot td {
+  font-size: 12.5px;
+  padding: 7px 8px;
+}
+.scoregrid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 210px), 1fr));
+}
+.score {
+  display: grid;
+  gap: 6px;
+  align-content: start;
+  border-left: 4px solid var(--line-strong);
+}
+.score .stat-value {
+  font-size: 26px;
+}
+.score-green {
+  border-left-color: var(--good);
+}
+.score-amber {
+  border-left-color: var(--warn);
+}
+.score-red {
+  border-left-color: var(--bad);
+}
+.score-north {
+  grid-column: span 2;
+  background: linear-gradient(180deg, var(--accent-soft), var(--surface) 75%);
+}
+.score-north .stat-value {
+  font-size: 40px;
+}
+@media (max-width: 520px) {
+  .score-north {
+    grid-column: auto;
+  }
+}
+ol.actions {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+  font-size: 14px;
+}
+ol.actions li {
+  display: flex;
+  gap: 8px;
+  align-items: baseline;
+}
+ol.actions .chip {
+  flex: none;
+}
+.rag-text {
+  font-weight: 620;
+}
+.rag-green {
+  color: var(--good);
+}
+.rag-amber {
+  color: var(--warn);
+}
+.rag-red {
+  color: var(--bad);
+}
+.rag-grey {
+  color: var(--muted);
+}
+.funnel-bar-col {
+  min-width: 160px;
+  width: 34%;
+}
+.funnel-bar {
+  position: relative;
+  height: 10px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--ink) 8%, transparent);
+  margin-top: 4px;
+}
+.funnel-bar span {
+  position: absolute;
+  inset: 0 auto 0 0;
+  border-radius: 999px;
+  background: var(--muted);
+}
+.funnel-bar.rag-green span {
+  background: var(--good);
+}
+.funnel-bar.rag-amber span {
+  background: var(--warn);
+}
+.funnel-bar.rag-red span {
+  background: var(--bad);
+}
+.funnel-bar i {
+  position: absolute;
+  top: -3px;
+  bottom: -3px;
+  width: 2px;
+  background: var(--ink);
+  border-radius: 1px;
+}
+.summary .summary-list {
+  margin: 0;
+  padding-left: 22px;
+  display: grid;
+  gap: 10px;
+  font-family: var(--serif);
+  font-size: clamp(18px, 2.1vw, 23px);
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+}
+.probs {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+}
+.prob-value {
+  font-size: 24px;
+  font-weight: 680;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+.prob-value.tone-good {
+  color: var(--good);
+}
+.prob-value.tone-warn {
+  color: var(--warn);
+}
+.prob-value.tone-bad {
+  color: var(--bad);
+}
+#sandbox .card-flat {
+  margin-top: 16px;
+}
+/* Row headers (scope="row") read like body cells, not like the uppercase column headers. */
+tbody th {
+  position: static;
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--ink);
+  background: transparent;
+  white-space: nowrap;
+}
+tbody th.wrap {
+  white-space: normal;
+  min-width: 200px;
+}
+td.src {
+  min-width: 220px;
+}
+tr.is-current th {
+  background: var(--accent-soft);
+}
+.funnel .chip,
+.score .chip,
+ol.actions .chip,
+.table-wrap td > .chip {
+  white-space: nowrap;
+}

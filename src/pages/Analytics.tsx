@@ -1,80 +1,85 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import kpisJson from '../../data/kpis.json';
-import type { ActualEntry, Kpis } from '../lib/types';
-import {
-  ACTUALS_TEMPLATE, BUDGET_LINE_IDS, CHANNELS, CSV_HEADER, acquisition, aggregate, byChannel, byWeek, cac, contentIdsIn,
-  entryKey, mergeEntries, netPaid, parseActualsText, sourceVerdict, toActualsCsv, toActualsJson,
-} from '../lib/actuals';
-import { useActuals, useMrrSnapshots } from '../lib/stores';
-import { addDays, downloadText, fmtCompactUsd, fmtInt, fmtPct, fmtUsd, isIsoDate, planWeek, readFileText, sarajevoToday, WINDOW_START } from '../lib/util';
+import checkpointsJson from '../../data/checkpoints.json';
+import type { ActualEntry, Checkpoint, Kpis } from '../lib/types';
+import { ACTUALS_TEMPLATE, CSV_HEADER, acquisition, aggregate, byChannel, byWeek, cac, entryKey, mergeEntries, netPaid, parseActualsText, toActualsCsv, toActualsJson } from '../lib/actuals';
+import { useActuals, useMrrSnapshots, useSpendLog } from '../lib/stores';
+import { addDays, downloadText, fmtCompactUsd, fmtDate, fmtInt, fmtPct, fmtUsd, isIsoDate, planWeek, readFileText, sarajevoToday, WINDOW_START } from '../lib/util';
 import { contentTitle } from '../lib/contentIndex';
-import { Card, Chip, Details, Empty, Field, Page, Section, Stat } from '../components/ui';
+import { LINES } from '../lib/budget';
+import { analyse } from '../lib/forecast';
+import { SAMPLE_AS_OF, sampleData } from '../lib/sample';
+import { RAG_LABEL, cacByChannel, cacByLine, contentLeaderboard, funnelSteps, mrrByWeek, paidChannelRows, ragTone, scorecard, weekActions, type FunnelStep, type Rag } from '../lib/analytics';
+import { GUARD } from '../lib/planRates';
+import { Card, Chip, Details, Empty, Page, Section, Segmented, Stat } from '../components/ui';
 import { Chart } from '../components/Chart';
-import { href } from '../routes';
+import { DaySheet } from '../components/DaySheet';
+import { href, type RouteProps } from '../routes';
 
 const KPIS = kpisJson as unknown as Kpis;
+const CHECKPOINTS = (checkpointsJson as unknown as { checkpoints: Checkpoint[] }).checkpoints;
 const WEEKS = KPIS.weeklyTargets.map((w) => `W${w.week}`);
-const BASE_NET_ARPU = 36.91; // data/funnel.json base scenario netArpu, used only for the MRR proxy
+const SECTIONS: [string, string][] = [
+  ['entry', 'Log a day'],
+  ['scorecard', 'Scorecard'],
+  ['actions', 'This week'],
+  ['funnel', 'Funnel'],
+  ['weekly', 'Weekly targets'],
+  ['mrr', 'MRR'],
+  ['cac', 'CAC & payback'],
+  ['best', 'Content'],
+  ['rows', 'Rows'],
+];
 
-const blank = (): ActualEntry => ({
-  date: sarajevoToday() < WINDOW_START ? WINDOW_START : sarajevoToday(),
-  channel: 'ch-tiktok', spend: null, impressions: null, views: null, clicks: null, signups: null, paid: null, revenue: null,
-  notes: '', campaign: 'launch-2026-10', budgetLineId: null, refunds: null, activated: null, studioOrScale: null,
-});
+const fmtCac = (c: number | null) => (c == null ? '–' : Number.isFinite(c) ? fmtUsd(c) : '∞');
+const fmtMonths = (m: number | null) => (m == null ? '–' : Number.isFinite(m) ? `${m.toFixed(1)} mo` : '∞');
+function RagChip({ rag, children }: { rag: Rag; children?: React.ReactNode }) {
+  return <Chip tone={ragTone(rag)}>{children ?? RAG_LABEL[rag]}</Chip>;
+}
 
-export default function Analytics() {
-  const [entries, setEntries] = useActuals();
-  const [snaps, setSnaps] = useMrrSnapshots();
-  const [draft, setDraft] = useState<ActualEntry>(blank);
-  const [msg, setMsg] = useState('');
-  const [editingKey, setEditingKey] = useState<string | null>(null);
-
-  const acq = acquisition(entries);
-  const tot = aggregate(acq);
-  const weekly = useMemo(() => byWeek(entries), [entries]);
-  const channels = useMemo(() => byChannel(entries).sort((a, b) => b.paid - a.paid || b.signups - a.signups), [entries]);
-  const unknownPaid = acq.filter((e) => e.channel === 'unknown').reduce((s, e) => s + (e.paid ?? 0), 0);
+export default function Analytics({ params }: RouteProps) {
+  const sample = params[0] === 'sample';
+  const section = sample ? params[1] : params[0];
+  const [realEntries, setEntries] = useActuals();
+  const [realSnaps, setSnaps] = useMrrSnapshots();
+  const [realLog] = useSpendLog();
+  const S = sample ? sampleData() : null;
+  const entries = S ? S.entries : realEntries;
+  const snaps = S ? S.snaps : realSnaps;
+  const log = S ? S.spend : realLog;
   const today = sarajevoToday();
-  const currentWeek = Math.max(1, Math.min(13, planWeek(today)));
+  const asOf = S ? SAMPLE_AS_OF : today;
+  const [msg, setMsg] = useState('');
+  const [sheetDate, setSheetDate] = useState(() => (today < WINDOW_START ? WINDOW_START : today));
+  const [scope, setScope] = useState<'all' | 'week'>('all');
+  const [rankBy, setRankBy] = useState<'signups' | 'paid'>('signups');
+
+  useEffect(() => {
+    if (!section) return;
+    const raf = requestAnimationFrame(() => document.getElementById(section)?.scrollIntoView({ block: 'start' }));
+    return () => cancelAnimationFrame(raf);
+  }, [section]);
+
+  const acq = useMemo(() => acquisition(entries), [entries]);
+  const tot = aggregate(acq);
+  const unknownPaid = acq.filter((e) => e.channel === 'unknown').reduce((s, e) => s + (e.paid ?? 0), 0);
+  const analysis = useMemo(() => analyse(entries, { asOf, snaps }), [entries, asOf, snaps]);
+  const weekly = useMemo(() => byWeek(entries), [entries]);
+  const currentWeek = Math.max(1, Math.min(13, planWeek(asOf)));
+  const lastComplete = Math.max(1, Math.min(13, planWeek(addDays(asOf, 1)) - 1));
+  const [weekSel, setWeekSel] = useState<number | null>(null);
+  const week = weekSel ?? lastComplete;
   const shown = (i: number) => i + 1 <= currentWeek || weekly[i].rows > 0;
 
-  // MRR: Whop snapshots when logged, otherwise a labelled proxy (cumulative net payers × base net ARPU, no churn).
-  const mrrSeries = WEEKS.map((_, i) => {
-    if (!shown(i)) return null;
-    const end = addDays(WINDOW_START, (i + 1) * 7 - 1);
-    const snap = [...snaps].filter((s) => s.date <= end).sort((a, b) => a.date.localeCompare(b.date)).pop();
-    if (snap && snap.date >= addDays(WINDOW_START, i * 7)) return snap.mrr;
-    const net = weekly.slice(0, i + 1).reduce((a, w) => a + w.paid - w.refunds, 0);
-    return net * BASE_NET_ARPU;
-  });
-
-  const contentRank = useMemo(() => {
-    const m = new Map<string, { signups: number; paid: number; clicks: number; rows: number }>();
-    for (const e of acq) {
-      for (const id of contentIdsIn(e.notes)) {
-        const r = m.get(id) ?? { signups: 0, paid: 0, clicks: 0, rows: 0 };
-        r.signups += e.signups ?? 0;
-        r.paid += e.paid ?? 0;
-        r.clicks += e.clicks ?? 0;
-        r.rows += 1;
-        m.set(id, r);
-      }
-    }
-    return [...m.entries()].sort((a, b) => b[1].signups - a[1].signups || b[1].paid - a[1].paid).slice(0, 12);
-  }, [acq]);
-
-  const save = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!isIsoDate(draft.date)) return setMsg('Pick a date.');
-    const key = entryKey(draft);
-    const exists = editingKey != null || entries.some((x) => entryKey(x) === key);
-    // Editing a row and changing its date, channel, campaign or budget line moves it instead of copying it.
-    const replaced = editingKey;
-    setEntries((cur) => mergeEntries(replaced && replaced !== key ? cur.filter((x) => entryKey(x) !== replaced) : cur, [{ ...draft }]));
-    setEditingKey(null);
-    setMsg(exists ? `Updated ${draft.date} · ${draft.channel}.` : `Saved ${draft.date} · ${draft.channel}.`);
-    setDraft({ ...blank(), date: draft.date, channel: draft.channel, campaign: draft.campaign });
-  };
+  const mrrWeeks = useMemo(() => mrrByWeek(entries, snaps, analysis, asOf), [entries, snaps, analysis, asOf]);
+  const score = useMemo(() => scorecard(entries, week, KPIS, mrrWeeks, asOf), [entries, week, mrrWeeks, asOf]);
+  const plan = useMemo(() => weekActions(entries, log, asOf, CHECKPOINTS, analysis), [entries, log, asOf, analysis]);
+  const funnelRows = scope === 'all' ? entries : entries.filter((e) => planWeek(e.date) === week);
+  const funnel = useMemo(() => funnelSteps(funnelRows), [funnelRows]);
+  const channels = useMemo(() => byChannel(acq).sort((a, b) => b.paid - a.paid || b.signups - a.signups), [acq]);
+  const cacCh = useMemo(() => cacByChannel(entries), [entries]);
+  const cacLines = useMemo(() => cacByLine(entries, log, LINES), [entries, log]);
+  const ranking = useMemo(() => contentLeaderboard(entries, rankBy), [entries, rankBy]);
 
   const onImport = async (file?: File) => {
     if (!file) return;
@@ -93,23 +98,6 @@ export default function Analytics() {
     }
   };
 
-  const num = (k: keyof ActualEntry, label: string, step = '1') => (
-    <Field label={label}>
-      {(id) => (
-        <input
-          id={id}
-          type="number"
-          min={0}
-          step={step}
-          inputMode="decimal"
-          value={(draft[k] as number | null) ?? ''}
-          placeholder="unknown"
-          onChange={(e) => setDraft({ ...draft, [k]: e.target.value === '' ? null : Number(e.target.value) })}
-        />
-      )}
-    </Field>
-  );
-
   const chartPair = (title: string, actual: (number | null)[], target: number[], fmt: (n: number) => string, note?: string) => (
     <Card>
       <h3>{title}</h3>
@@ -127,25 +115,37 @@ export default function Analytics() {
     </Card>
   );
 
+  const blendedCac = cac(aggregate(paidChannelRows(acq)));
+  const base = sample ? href('analytics', 'sample') : href('analytics');
+
   return (
     <Page
-      eyebrow="Daily actuals · localStorage · compatible with data/actuals.template.json"
+      eyebrow={sample ? 'SAMPLE data · invented numbers · nothing is saved' : 'Daily actuals · localStorage · compatible with data/actuals.template.json'}
       title={
         <>
           What <em>actually</em> happened
         </>
       }
-      lede="Log one row per channel per day. Leave a field empty when it is unknown, never type 0 for unknown. Aggregate numbers only: no buyer names, emails or Whop IDs."
+      lede="Log one row per channel per day, read the scorecard on Sunday, and act on the kill and scale rules. Leave a cell empty when it is unknown, never 0. Aggregate numbers only: no buyer names, emails or Whop IDs."
       actions={
         <div className="row">
-          <label className="btn btn-ghost btn-sm">
+          {sample ? (
+            <a className="btn btn-accent btn-sm" href={href('analytics')}>
+              Leave sample
+            </a>
+          ) : (
+            <a className="btn btn-ghost btn-sm" href={href('analytics', 'sample')}>
+              Show SAMPLE data
+            </a>
+          )}
+          <label className={`btn btn-ghost btn-sm ${sample ? 'is-disabled' : ''}`} aria-disabled={sample || undefined}>
             Import CSV / JSON
-            <input type="file" accept=".csv,.json,text/csv,application/json" onChange={(e) => { void onImport(e.target.files?.[0]); e.target.value = ''; }} />
+            <input type="file" disabled={sample} accept=".csv,.json,text/csv,application/json" onChange={(e) => { void onImport(e.target.files?.[0]); e.target.value = ''; }} />
           </label>
-          <button type="button" className="btn btn-ghost btn-sm" disabled={!entries.length} onClick={() => downloadText(`actuals-${today}.json`, toActualsJson(entries, snaps))}>
+          <button type="button" className="btn btn-ghost btn-sm" disabled={sample || !realEntries.length} onClick={() => downloadText(`actuals-${today}.json`, toActualsJson(realEntries, realSnaps))}>
             Export JSON
           </button>
-          <button type="button" className="btn btn-ghost btn-sm" disabled={!entries.length} onClick={() => downloadText(`actuals-${today}.csv`, toActualsCsv(entries), 'text/csv')}>
+          <button type="button" className="btn btn-ghost btn-sm" disabled={sample || !realEntries.length} onClick={() => downloadText(`actuals-${today}.csv`, toActualsCsv(realEntries), 'text/csv')}>
             Export CSV
           </button>
           <button type="button" className="btn btn-ghost btn-sm" onClick={() => downloadText('actuals-template.csv', CSV_HEADER.join(',') + '\r\n', 'text/csv')}>
@@ -154,82 +154,56 @@ export default function Analytics() {
         </div>
       }
     >
-      <p className="small muted" role="status" aria-live="polite" style={{ minHeight: 20, marginTop: -16 }}>
+      {sample && (
+        <div className="notice sample-banner" role="note" style={{ marginBottom: 20 }}>
+          <b>SAMPLE</b>
+          <span>
+            28 invented days (26 Oct - 22 Nov 2026) so you can see every view working. Your own rows are untouched and hidden while this is on; nothing here is saved or exported. <a href={href('predictions', 'sample')}>See the predictions for this sample</a> or <a href={href('analytics')}>go back to your data</a>.
+          </span>
+        </div>
+      )}
+      {!sample && realEntries.length === 0 && (
+        <div className="notice" style={{ marginBottom: 20 }}>
+          <b>No actuals yet.</b>
+          <span>
+            Log today below or import a CSV / JSON export. To see what the page does with a month of numbers, <a href={href('analytics', 'sample')}>open the SAMPLE data</a> (kept apart from your rows).
+          </span>
+        </div>
+      )}
+      <p className="small muted" role="status" aria-live="polite" style={{ minHeight: 20, marginTop: -8 }}>
         {msg}
       </p>
 
       <div className="statband">
         <Stat label="Visits (/go/ clicks)" value={fmtInt(tot.clicks)} sub={`${fmtInt(tot.views)} views logged`} />
         <Stat label="Sign-ups" value={fmtInt(tot.signups)} sub={tot.clicks ? `${fmtPct(tot.signups / tot.clicks)} of visits` : '–'} />
-        <Stat label="Gross / net paid" value={`${fmtInt(tot.paid)} / ${fmtInt(netPaid(tot))}`} sub={tot.signups ? `${fmtPct(tot.paid / tot.signups)} of sign-ups` : '–'} />
-        <Stat label="First-payment revenue" value={fmtUsd(tot.revenue)} sub="gross of fees" />
-        <Stat label="Blended paid CAC" value={(() => { const c = cac(aggregate(acq.filter((e) => (e.spend ?? 0) > 0))); return c == null ? '–' : Number.isFinite(c) ? fmtUsd(c) : '∞'; })()} sub={`${fmtUsd(tot.spend)} spend logged`} />
+        <Stat label="Gross / net paid" value={`${fmtInt(tot.paid)} / ${fmtInt(netPaid(tot))}`} sub={tot.clicks ? `${fmtPct(tot.paid / tot.clicks, 2)} of visits` : '–'} />
+        <Stat label="Activated payers" value={fmtInt(tot.activated)} sub="north star, filled 7 days later" />
+        <Stat label="Blended paid CAC" value={fmtCac(blendedCac)} tone={blendedCac != null && blendedCac > GUARD.cacTarget ? 'warn' : undefined} sub={`${fmtUsd(tot.spend)} spend ÷ net payers of paid channels`} />
         <Stat label="Attribution coverage" value={tot.paid ? fmtPct(1 - unknownPaid / tot.paid, 0) : '–'} tone={tot.paid && 1 - unknownPaid / tot.paid < 0.9 ? 'warn' : undefined} sub="target ≥ 90% from week 2" />
       </div>
 
-      <Section id="entry" title="Add a day" kicker="One row per channel per day">
-        <Card>
-          <form onSubmit={save} aria-label="Daily actuals entry">
-            <div className="form-grid">
-              <Field label="Date">{(id) => <input id={id} type="date" value={draft.date} onChange={(e) => setDraft({ ...draft, date: e.target.value })} required />}</Field>
-              <Field label="Channel">
-                {(id) => (
-                  <select id={id} value={draft.channel} onChange={(e) => setDraft({ ...draft, channel: e.target.value })}>
-                    {CHANNELS.map((c) => (
-                      <option key={c} value={c}>
-                        {c}
-                      </option>
-                    ))}
-                  </select>
-                )}
-              </Field>
-              {num('spend', 'Spend (USD)', '0.01')}
-              {num('impressions', 'Impressions')}
-              {num('views', 'Views')}
-              {num('clicks', '/go/ clicks')}
-              {num('signups', 'Sign-ups')}
-              {num('paid', 'Paid (gross)')}
-              {num('revenue', 'Revenue (USD)', '0.01')}
-              {num('refunds', 'Refunds')}
-              {num('activated', 'Activated (7 d later)')}
-              {num('studioOrScale', 'Studio or Scale')}
-              <Field label="Campaign">{(id) => <input id={id} type="text" value={draft.campaign ?? ''} onChange={(e) => setDraft({ ...draft, campaign: e.target.value || null })} />}</Field>
-              <Field label="Budget line">
-                {(id) => (
-                  <select id={id} value={draft.budgetLineId ?? ''} onChange={(e) => setDraft({ ...draft, budgetLineId: e.target.value || null })}>
-                    <option value="">none</option>
-                    {BUDGET_LINE_IDS.map((b) => (
-                      <option key={b} value={b}>
-                        {b}
-                      </option>
-                    ))}
-                  </select>
-                )}
-              </Field>
-              <Field label="Notes: post ids, hook codes, beat tags" className="wide" hint="Content ids (V01, C12) or /go/ codes (tt-v01-l1) here feed 'best content'.">
-                {(id) => <input id={id} type="text" value={draft.notes} maxLength={300} onChange={(e) => setDraft({ ...draft, notes: e.target.value })} placeholder="tt-v01-l1, ig-v01-l1; beat:images" />}
-              </Field>
-            </div>
-            <div className="row" style={{ marginTop: 14 }}>
-              <button className="btn btn-accent" type="submit">
-                {editingKey ? 'Save changes' : 'Save row'}
-              </button>
-              <button
-                type="button"
-                className="btn btn-ghost"
-                onClick={() => {
-                  setDraft(blank());
-                  setEditingKey(null);
-                }}
-              >
-                {editingKey ? 'Cancel edit' : 'Clear form'}
-              </button>
-              <span className="tiny muted">
-                {editingKey ? `Editing ${editingKey.split('|').filter(Boolean).join(' · ')}: saving replaces that row.` : 'Same date + channel + campaign + budget line replaces the earlier row.'}
-              </span>
-            </div>
-          </form>
-        </Card>
+      <nav className="pill-nav" aria-label="Jump to section" style={{ margin: '24px 0 0' }}>
+        {SECTIONS.map(([id, label]) => (
+          <a key={id} className="chip chip-muted" href={sample ? href('analytics', 'sample', id) : href('analytics', id)} style={{ textDecoration: 'none' }}>
+            {label}
+          </a>
+        ))}
+        <a className="chip chip-accent" href={sample ? href('predictions', 'sample') : href('predictions')} style={{ textDecoration: 'none' }}>
+          Predictions →
+        </a>
+      </nav>
+
+      <Section id="entry" title="Log a day" kicker="One row per channel per day">
+        {sample ? (
+          <Empty>
+            Entry is off while the SAMPLE is shown, so invented numbers can never reach your log. <a href={href('analytics', 'entry')}>Back to your data</a>.
+          </Empty>
+        ) : (
+          <Card>
+            <DaySheet date={sheetDate} setDate={setSheetDate} entries={realEntries} setEntries={setEntries} onMsg={setMsg} />
+          </Card>
+        )}
         <Details summary="Sources of truth for each field">
           <dl className="kv small">
             {Object.entries(ACTUALS_TEMPLATE.meta.sourcesOfTruth as Record<string, string>).map(([k, v]) => (
@@ -239,27 +213,84 @@ export default function Analytics() {
               </div>
             ))}
           </dl>
-          <p className="tiny muted">{String(ACTUALS_TEMPLATE.meta.privacy)}</p>
+          <p className="tiny muted">
+            {String(ACTUALS_TEMPLATE.meta.privacy)} "Activated" is the north-star count for that day's payers: fill it in 7 days later. "Checkouts" (checkout opened) is optional; without it the funnel reads sign-up to paid directly.
+          </p>
         </Details>
       </Section>
 
-      <Section id="weekly" title="Against the weekly targets" kicker="Plan of record, base case">
-        {entries.length === 0 && (
-          <div className="notice" style={{ marginBottom: 16 }}>
-            <b>No actuals yet.</b>
-            <span>The charts show the targets; bars appear as rows are logged or imported.</span>
-          </div>
-        )}
-        <div className="grid-2">
-          {chartPair('Visits', weekly.map((w, i) => (shown(i) ? w.clicks : null)), KPIS.weeklyTargets.map((t) => t.visits), (n) => fmtInt(n), 'Actual = /go/ clicks logged; the counter cannot attribute visits yet.')}
-          {chartPair('Sign-ups', weekly.map((w, i) => (shown(i) ? w.signups : null)), KPIS.weeklyTargets.map((t) => t.signups), (n) => fmtInt(n))}
-          {chartPair('Paid (gross new)', weekly.map((w, i) => (shown(i) ? w.paid : null)), KPIS.weeklyTargets.map((t) => t.paid), (n) => fmtInt(n))}
-          {chartPair('MRR', mrrSeries, KPIS.weeklyTargets.map((t) => t.mrr), fmtCompactUsd, `Uses your Whop MRR snapshot for the week when logged; otherwise a proxy of cumulative net payers × $${BASE_NET_ARPU} base net ARPU with no churn [E].`)}
-        </div>
-        <MrrSnapshots snaps={snaps} setSnaps={setSnaps} />
+      <Section
+        id="scorecard"
+        title={<>Weekly scorecard · week {week}</>}
+        kicker={`North star and guardrails · ${KPIS.weeklyTargets[week - 1].dates}${week === currentWeek && planWeek(asOf) === week && week !== lastComplete ? ' · week to date' : ''}`}
+        aside={
+          <label className="row small" style={{ gap: 6 }}>
+            Week
+            <select value={week} onChange={(e) => setWeekSel(Number(e.target.value))} style={{ width: 'auto' }} aria-label="Scorecard week">
+              {KPIS.weeklyTargets.filter((t) => t.week <= currentWeek).map((t) => (
+                <option key={t.week} value={t.week}>
+                  W{t.week} · {t.dates}
+                </option>
+              ))}
+            </select>
+          </label>
+        }
+      >
+        <ul className="scoregrid" aria-label={`Scorecard for week ${week}`}>
+          {score.map((s) => (
+            <li key={s.id} className={`card score score-${s.rag} ${s.northStar ? 'score-north' : ''}`}>
+              <div className="row-between">
+                <span className="stat-label">{s.label}</span>
+                <RagChip rag={s.rag} />
+              </div>
+              <div className="stat-value num">{s.value}</div>
+              <div className="stat-sub">
+                Target {s.target}
+                {s.note ? ` · ${s.note}` : ''}
+              </div>
+            </li>
+          ))}
+        </ul>
+        <p className="footnote">Green meets the plan; amber is within 20% (refunds 15-20%, CAC $50-62.50); red needs action. Grey means the number is not in this log or the cohort is not 7 days old yet.</p>
       </Section>
 
-      <Section id="channels" title="Conversion by channel" kicker="Kill / scale rules applied (strategy 6.3)">
+      <Section id="actions" title="This week, plainly" kicker={`Kill and scale rules applied to the data · as of ${fmtDate(asOf)}`}>
+        <div className="split">
+          <Card>
+            <ol className="actions">
+              {plan.actions.map((a, i) => (
+                <li key={i}>
+                  <Chip tone={a.tone}>{a.verb}</Chip> <span>{a.text}</span>
+                </li>
+              ))}
+            </ol>
+          </Card>
+          <Card className="card-accent">
+            <h3>D4 reinvestment on Monday</h3>
+            <div className="big-number num">{fmtUsd(plan.reinvest.amount)}</div>
+            <p className="small">{plan.reinvest.why}</p>
+            <p className="tiny muted">Net new cash, last 7 days ≈ {fmtUsd(plan.reinvest.base)} (first payments less refunds, Whop fees of 5% + $0.30) [E].</p>
+            <p className="small" style={{ marginTop: 12 }}>
+              <a href={sample ? href('predictions', 'sample') : href('predictions')}>Where this pace leads: Predictions →</a>
+            </p>
+          </Card>
+        </div>
+        <p className="footnote">Rules: kill a source at $100 with 0 net payers or $150 with 1; pause at refunds over 20%; scale at CAC ≤ $50 on 3+ net payers, +20-30% at most every 48-72 h; never above the $120 ceiling (plan/strategy.md 6.3).</p>
+      </Section>
+
+      <Section
+        id="funnel"
+        title="Funnel"
+        kicker="Visits → sign-ups → checkout → paid → activated, against data/kpis.json"
+        aside={<Segmented label="Funnel scope" value={scope} onChange={setScope} options={[{ value: 'all', label: 'All logged days' }, { value: 'week', label: `Week ${week}` }]} />}
+      >
+        <FunnelView steps={funnel.steps} />
+        <p className="small" style={{ marginTop: 12 }}>
+          Visit to paid: <b className="num">{fmtPct(funnel.visitToPaid, 2)}</b> against 1.0% base <RagChip rag={funnel.visitToPaidRag} /> <span className="muted">(D2 offer-check trigger under 0.7%)</span>
+        </p>
+        <p className="footnote">Each rate uses only the rows that logged both numbers, so an empty cell is never read as zero. Targets: sign-up 5% of visits, checkout 60% of sign-ups, paid 33% of checkouts, activated 60% of net payers in weeks 1-4 and 70% after (kpis.json funnel stages).</p>
+
+        <h3 id="channels" style={{ marginTop: 28 }}>Conversion by channel</h3>
         {channels.length === 0 ? (
           <Empty>Channel rows appear once actuals are logged.</Empty>
         ) : (
@@ -267,44 +298,36 @@ export default function Analytics() {
             <table>
               <thead>
                 <tr>
-                  <th>Channel</th>
-                  <th className="n">Spend</th>
-                  <th className="n">Views</th>
-                  <th className="n">Clicks</th>
-                  <th className="n">View→click</th>
-                  <th className="n">Sign-ups</th>
-                  <th className="n">Click→sign-up</th>
-                  <th className="n">Paid</th>
-                  <th className="n">Refunds</th>
-                  <th className="n">Sign-up→paid</th>
-                  <th className="n">CAC</th>
-                  <th className="n">Studio+</th>
-                  <th>Verdict</th>
+                  <th scope="col">Channel</th>
+                  <th scope="col" className="n">Visits</th>
+                  <th scope="col" className="n">Sign-up</th>
+                  <th scope="col" className="n">Checkout</th>
+                  <th scope="col" className="n">Paid</th>
+                  <th scope="col" className="n">Activated</th>
+                  <th scope="col" className="n">Visit→paid</th>
+                  <th scope="col" className="n">Net paid</th>
+                  <th scope="col" className="n">CAC</th>
                 </tr>
               </thead>
               <tbody>
                 {channels.map((c) => {
-                  const v = sourceVerdict(c);
-                  const k = cac(c);
+                  const f = funnelSteps(acq.filter((e) => e.channel === c.channel));
+                  const cell = (s: FunnelStep) => (
+                    <td className="n">
+                      {s.rate == null ? '–' : <span className={`rag-text rag-${s.rag}`}>{fmtPct(s.rate)}</span>}
+                    </td>
+                  );
                   return (
                     <tr key={c.channel}>
-                      <td>
-                        <b>{c.channel}</b>
-                      </td>
-                      <td className="n">{fmtUsd(c.spend)}</td>
-                      <td className="n">{fmtInt(c.views)}</td>
+                      <th scope="row">{c.channel}</th>
                       <td className="n">{fmtInt(c.clicks)}</td>
-                      <td className="n">{c.views ? fmtPct(c.clicks / c.views, 2) : '–'}</td>
-                      <td className="n">{fmtInt(c.signups)}</td>
-                      <td className="n">{c.clicks ? fmtPct(c.signups / c.clicks) : '–'}</td>
-                      <td className="n">{fmtInt(c.paid)}</td>
-                      <td className="n">{fmtInt(c.refunds)}</td>
-                      <td className="n">{c.signups ? fmtPct(c.paid / c.signups) : '–'}</td>
-                      <td className="n">{k == null ? '–' : Number.isFinite(k) ? fmtUsd(k) : '∞'}</td>
-                      <td className="n">{c.paid ? fmtPct(c.studioOrScale / c.paid, 0) : '–'}</td>
-                      <td>
-                        <Chip tone={v.tone}>{v.label}</Chip>
-                      </td>
+                      {cell(f.steps[1])}
+                      {cell(f.steps[2])}
+                      {cell(f.steps[3])}
+                      {cell(f.steps[4])}
+                      <td className="n">{f.visitToPaid == null ? '–' : <span className={`rag-text rag-${f.visitToPaidRag}`}>{fmtPct(f.visitToPaid, 2)}</span>}</td>
+                      <td className="n">{fmtInt(netPaid(c))}</td>
+                      <td className="n">{fmtCac(cac(c))}</td>
                     </tr>
                   );
                 })}
@@ -312,52 +335,161 @@ export default function Analytics() {
             </table>
           </div>
         )}
+        <p className="footnote">Colour: green at or above the stage target, amber within 20%, red below. The same targets apply to every channel; the plan expects creator traffic to convert about 1.5x the blend [A].</p>
+      </Section>
+
+      <Section id="weekly" title="Against the weekly targets" kicker="Plan of record, base case">
+        <div className="grid-2">
+          {chartPair('Visits', weekly.map((w, i) => (shown(i) ? w.clicks : null)), KPIS.weeklyTargets.map((t) => t.visits), (n) => fmtInt(n), 'Actual = /go/ clicks logged.')}
+          {chartPair('Sign-ups', weekly.map((w, i) => (shown(i) ? w.signups : null)), KPIS.weeklyTargets.map((t) => t.signups), (n) => fmtInt(n))}
+          {chartPair('Paid (gross new)', weekly.map((w, i) => (shown(i) ? w.paid : null)), KPIS.weeklyTargets.map((t) => t.paid), (n) => fmtInt(n))}
+          {chartPair('Activated payers (north star)', weekly.map((w, i) => (shown(i) ? w.activated : null)), KPIS.weeklyTargets.map((t) => t.activatedPayers), (n) => fmtInt(n), 'Filled in 7 days after each day, so the latest week lags.')}
+        </div>
+      </Section>
+
+      <Section id="mrr" title="MRR: new, churned and net" kicker="Cohorts rebuilt from logged payers">
+        <Card>
+          <Chart
+            ariaLabel="Weekly new MRR, churned MRR and end-of-week net MRR against the weekly MRR target"
+            labels={WEEKS}
+            height={260}
+            yFormat={fmtCompactUsd}
+            series={[
+              { id: 'new', name: 'New MRR', values: mrrWeeks.map((w) => w.newMrr), color: 'var(--c4)', kind: 'bar' },
+              { id: 'churn', name: 'Churned MRR', values: mrrWeeks.map((w) => w.churnedMrr), color: 'var(--bad)', kind: 'bar' },
+              { id: 'net', name: 'Net MRR (week end)', values: mrrWeeks.map((w) => w.netMrr), color: 'var(--c2)', width: 2.5 },
+              { id: 'snap', name: 'Whop MRR snapshot', values: mrrWeeks.map((w) => w.snapshot), color: 'var(--ink)' },
+              { id: 't', name: 'MRR target (kpis.json)', values: KPIS.weeklyTargets.map((t) => t.mrr), color: 'var(--c3)', dashed: true },
+            ]}
+          />
+          <p className="footnote">
+            New MRR = net new payers × net ARPU at the logged plan mix (Studio or Scale {fmtPct(analysis.est.studioShare.value, 0)}, yearly {fmtPct(analysis.est.yearlyShare.value, 0)}). Churned MRR = monthly subscribers lost at each 30-day renewal at{' '}
+            {fmtPct(analysis.est.churn.value, 1)} a month ({analysis.est.churn.source}). Log renewals as channel "renewals" (paid = renewal payments) to replace the assumption with your own churn. Whop snapshots, when logged, are the truth for that week.
+          </p>
+        </Card>
+        <MrrSnapshots snaps={snaps} setSnaps={setSnaps} readOnly={sample} />
+      </Section>
+
+      <Section id="cac" title="CAC and payback" kicker="Spend log and actuals · payback on contribution at 60% credit use">
+        <div className="grid-2">
+          <Card>
+            <h3>CAC by channel</h3>
+            {cacCh.length === 0 ? (
+              <Empty>Log spend on an actuals row (boosts, creators, listings) to read CAC by channel.</Empty>
+            ) : (
+              <Chart
+                ariaLabel="Paid CAC by channel against the $50 target and the $120 ceiling"
+                labels={cacCh.map((r) => r.label.replace(/^ch-/, ''))}
+                height={220}
+                yFormat={(n) => `$${Math.round(n)}`}
+                refLines={[{ y: GUARD.cacTarget, label: '$50 target', color: 'var(--good)' }, { y: GUARD.cacCeiling, label: '$120 ceiling', color: 'var(--bad)' }]}
+                series={[{ id: 'cac', name: 'CAC (spend ÷ net payers)', values: cacCh.map((r) => (r.cac != null && Number.isFinite(r.cac) ? r.cac : null)), color: 'var(--c2)', kind: 'bar' }]}
+              />
+            )}
+          </Card>
+          <Card>
+            <h3>Payback months by channel</h3>
+            {cacCh.length === 0 ? (
+              <Empty>Appears with the first paid row.</Empty>
+            ) : (
+              <Chart
+                ariaLabel="Months of contribution needed to pay back each channel's CAC"
+                labels={cacCh.map((r) => r.label.replace(/^ch-/, ''))}
+                height={220}
+                yFormat={(n) => `${n.toFixed(1)}`}
+                series={[{ id: 'pb', name: 'Payback (months)', values: cacCh.map((r) => (r.paybackMonths != null && Number.isFinite(r.paybackMonths) ? r.paybackMonths : null)), color: 'var(--c3)', kind: 'bar' }]}
+              />
+            )}
+          </Card>
+        </div>
+        <div className="table-wrap" style={{ marginTop: 16 }}>
+          <table>
+            <caption className="sr">CAC and payback by budget line</caption>
+            <thead>
+              <tr>
+                <th scope="col">Budget line</th>
+                <th scope="col" className="n">Planned</th>
+                <th scope="col" className="n">Spent</th>
+                <th scope="col" className="n">Net payers</th>
+                <th scope="col" className="n">CAC</th>
+                <th scope="col" className="n">Payback</th>
+                <th scope="col">Read</th>
+              </tr>
+            </thead>
+            <tbody>
+              {cacLines.map((r) => {
+                const rag: Rag = r.spend <= 0 ? 'grey' : r.cac == null ? 'grey' : !Number.isFinite(r.cac) ? (r.spend >= GUARD.killZeroUsd ? 'red' : 'amber') : r.cac <= GUARD.cacTarget ? 'green' : r.cac <= GUARD.cacSoft ? 'amber' : 'red';
+                return (
+                  <tr key={r.key}>
+                    <th scope="row" className="wrap">
+                      <b>{r.key}</b> <span className="small muted">{r.label.split(/[:(]/)[0].slice(0, 48)}</span>
+                    </th>
+                    <td className="n">{fmtUsd(r.planned)}</td>
+                    <td className="n">{r.spend ? fmtUsd(r.spend) : '–'}</td>
+                    <td className="n">
+                      {r.spend ? fmtInt(Math.round(r.netPaid * 10) / 10) : '–'}
+                      {r.via && <span className="tiny muted"> ({r.via})</span>}
+                    </td>
+                    <td className="n">{r.spend ? fmtCac(r.cac) : '–'}</td>
+                    <td className="n">{r.spend ? fmtMonths(r.paybackMonths) : '–'}</td>
+                    <td>{r.spend ? <RagChip rag={rag}>{rag === 'green' ? '≤ $50' : rag === 'amber' ? 'Watch' : rag === 'red' ? 'Over target' : '–'}</RagChip> : <span className="tiny muted">not spent</span>}</td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
+        <p className="footnote">
+          Spend comes from the <a href={href('budget')}>spend log</a> when a line has payments there, otherwise from actuals rows tagged with the line. Net payers come from rows tagged with the line; when none are tagged, the line gets its share of its channel. Payback = CAC ÷ monthly contribution (about $13 on Create, $33 on Studio, $66 on Scale) at the channel's logged Studio or Scale share [E].
+        </p>
       </Section>
 
       <div className="grid-2" style={{ marginTop: 48 }}>
-        <Section id="best" title="Best content by sign-ups" kicker="From ids and /go/ codes in notes">
-          {contentRank.length === 0 ? (
-            <Empty>Put content ids (V01, C12) or /go/ codes (tt-v01-l1) in the notes field to rank posts.</Empty>
+        <Section id="best" title="Content leaderboard" kicker="Ids and /go/ codes in the notes" aside={<Segmented label="Rank content by" value={rankBy} onChange={setRankBy} options={[{ value: 'signups', label: 'Sign-ups' }, { value: 'paid', label: 'Paid' }]} />}>
+          {ranking.length === 0 ? (
+            <Empty>Put content ids (V01, C12) or /go/ codes (tt-v01-l1) in the notes to rank posts.</Empty>
           ) : (
             <div className="table-wrap">
               <table>
                 <thead>
                   <tr>
-                    <th>Item</th>
-                    <th className="n">Clicks</th>
-                    <th className="n">Sign-ups</th>
-                    <th className="n">Paid</th>
+                    <th scope="col">#</th>
+                    <th scope="col">Item</th>
+                    <th scope="col" className="n">Clicks</th>
+                    <th scope="col" className="n">Sign-ups</th>
+                    <th scope="col" className="n">Paid</th>
+                    <th scope="col" className="n">Net</th>
                   </tr>
                 </thead>
                 <tbody>
-                  {contentRank.map(([id, r]) => (
-                    <tr key={id}>
-                      <td>
-                        <a href={href('content', id)}>
-                          <span className="item-id">{id}</span> <span className="small">{contentTitle(id)}</span>
+                  {ranking.map((r, i) => (
+                    <tr key={r.id}>
+                      <td className="n muted">{i + 1}</td>
+                      <td style={{ minWidth: 220 }}>
+                        <a href={href('content', r.id)}>
+                          <span className="item-id">{r.id}</span> <span className="small">{contentTitle(r.id)}</span>
                         </a>
                       </td>
                       <td className="n">{fmtInt(r.clicks)}</td>
-                      <td className="n">
-                        <b>{fmtInt(r.signups)}</b>
-                      </td>
-                      <td className="n">{fmtInt(r.paid)}</td>
+                      <td className="n">{rankBy === 'signups' ? <b>{fmtInt(r.signups)}</b> : fmtInt(r.signups)}</td>
+                      <td className="n">{rankBy === 'paid' ? <b>{fmtInt(r.paid)}</b> : fmtInt(r.paid)}</td>
+                      <td className="n">{fmtInt(r.netPaid)}</td>
                     </tr>
                   ))}
                 </tbody>
               </table>
             </div>
           )}
-          <p className="footnote">A row that names several posts credits each of them (first-touch attribution per post needs ask 1).</p>
+          <p className="footnote">A row that names several posts credits each of them, so totals can exceed the day's numbers. Re-cut the top 10% with two new hooks; retire the bottom half on Sunday.</p>
         </Section>
         <Section id="alerts" title="Alert rules" kicker="kpis.json">
           <div className="table-wrap" style={{ maxHeight: 460, overflowY: 'auto' }}>
             <table>
               <thead>
                 <tr>
-                  <th>Metric</th>
-                  <th>Threshold</th>
-                  <th>Action</th>
+                  <th scope="col">Metric</th>
+                  <th scope="col">Threshold</th>
+                  <th scope="col">Action</th>
                 </tr>
               </thead>
               <tbody>
@@ -376,91 +508,180 @@ export default function Analytics() {
         </Section>
       </div>
 
-      <Section id="rows" title={<>Logged rows <span className="muted">· {entries.length}</span></>} aside={entries.length > 0 && (
-        <button type="button" className="btn btn-sm btn-danger" onClick={() => { if (window.confirm('Delete every logged row in this browser? Export first if you need a copy.')) { setEntries([]); setMsg('All rows cleared.'); } }}>
-          Clear all
-        </button>
-      )}>
-        {entries.length === 0 ? (
-          <Empty>No rows yet.</Empty>
-        ) : (
-          <div className="table-wrap" style={{ maxHeight: 520, overflowY: 'auto' }}>
-            <table>
-              <thead>
-                <tr>
-                  <th>Date</th>
-                  <th>Channel</th>
-                  <th className="n">Spend</th>
-                  <th className="n">Views</th>
-                  <th className="n">Clicks</th>
-                  <th className="n">Sign-ups</th>
-                  <th className="n">Paid</th>
-                  <th className="n">Revenue</th>
-                  <th>Notes</th>
-                  <th>
-                    <span className="sr">Actions</span>
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {[...entries].reverse().map((e) => (
-                  <tr key={entryKey(e)}>
-                    <td className="num">{e.date}</td>
-                    <td>{e.channel}</td>
-                    <td className="n">{e.spend == null ? '–' : fmtUsd(e.spend, true)}</td>
-                    <td className="n">{fmtInt(e.views)}</td>
-                    <td className="n">{fmtInt(e.clicks)}</td>
-                    <td className="n">{fmtInt(e.signups)}</td>
-                    <td className="n">{fmtInt(e.paid)}</td>
-                    <td className="n">{e.revenue == null ? '–' : fmtUsd(e.revenue)}</td>
-                    <td className="small">{e.notes}</td>
-                    <td>
-                      <div className="row" style={{ flexWrap: 'nowrap' }}>
-                        <button type="button" className="btn btn-sm btn-ghost" onClick={() => {
-                            setDraft({ ...e });
-                            setEditingKey(entryKey(e));
-                            const form = document.getElementById('entry');
-                            form?.scrollIntoView();
-                            form?.querySelector<HTMLInputElement>('input[type="date"]')?.focus({ preventScroll: true });
-                          }}>
-                          Edit
-                        </button>
-                        <button type="button" className="btn btn-sm btn-danger" aria-label={`Delete ${e.date} ${e.channel}`} onClick={() => setEntries((cur) => cur.filter((x) => entryKey(x) !== entryKey(e)))}>
-                          Delete
-                        </button>
-                      </div>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        )}
-      </Section>
+      <LoggedRows
+        entries={entries}
+        sample={sample}
+        onEdit={(e) => {
+          setSheetDate(e.date);
+          const el = document.getElementById('entry');
+          el?.scrollIntoView();
+          window.setTimeout(() => el?.querySelector<HTMLInputElement>('.daysheet input')?.focus({ preventScroll: true }), 50);
+        }}
+        onDelete={(e) => setEntries((cur) => cur.filter((x) => entryKey(x) !== entryKey(e)))}
+        onClear={() => {
+          if (window.confirm('Delete every logged row in this browser? Export first if you need a copy.')) {
+            setEntries([]);
+            setMsg('All rows cleared.');
+          }
+        }}
+      />
+      <p className="tiny muted" style={{ marginTop: 24 }}>
+        <a href={base}>Top of page</a>
+      </p>
     </Page>
   );
 }
 
-function MrrSnapshots({ snaps, setSnaps }: { snaps: { date: string; mrr: number }[]; setSnaps: (f: (p: { date: string; mrr: number }[]) => { date: string; mrr: number }[]) => void }) {
+function FunnelView({ steps }: { steps: FunnelStep[] }) {
+  return (
+    <div className="table-wrap">
+      <table className="funnel">
+        <caption className="sr">Funnel stages with counts, step conversion and the plan target</caption>
+        <thead>
+          <tr>
+            <th scope="col">Stage</th>
+            <th scope="col" className="n">Count</th>
+            <th scope="col" className="n">Step rate</th>
+            <th scope="col" className="funnel-bar-col">Against target</th>
+            <th scope="col">Read</th>
+          </tr>
+        </thead>
+        <tbody>
+          {steps.map((s) => {
+            const scale = s.target ? Math.min(1, (s.rate ?? 0) / (s.target * 1.5)) : 0;
+            return (
+              <tr key={s.id}>
+                <th scope="row">{s.label}</th>
+                <td className="n">
+                  <b>{fmtInt(s.count)}</b>
+                </td>
+                <td className="n">
+                  {s.rate == null ? '–' : fmtPct(s.rate, s.id === 'paid' || s.id === 'signups' ? 1 : 0)}
+                  {s.rateLabel && <div className="tiny muted">{s.rateLabel}</div>}
+                </td>
+                <td className="funnel-bar-col">
+                  {s.target != null ? (
+                    <div className={`funnel-bar rag-${s.rag}`} aria-hidden="true">
+                      <span style={{ width: `${scale * 100}%` }} />
+                      <i style={{ left: `${(1 / 1.5) * 100}%` }} title="target" />
+                    </div>
+                  ) : (
+                    <span className="tiny muted">top of funnel</span>
+                  )}
+                  {s.target != null && <div className="tiny muted">target {fmtPct(s.target, s.id === 'signups' ? 0 : 0)}</div>}
+                </td>
+                <td>{s.target != null ? <RagChip rag={s.rate == null ? 'grey' : s.rag} /> : null}</td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
+function LoggedRows(props: { entries: ActualEntry[]; sample: boolean; onEdit: (e: ActualEntry) => void; onDelete: (e: ActualEntry) => void; onClear: () => void }) {
+  const { entries, sample } = props;
+  return (
+    <Section
+      id="rows"
+      title={
+        <>
+          {sample ? 'SAMPLE rows' : 'Logged rows'} <span className="muted">· {entries.length}</span>
+        </>
+      }
+      aside={
+        !sample &&
+        entries.length > 0 && (
+          <button type="button" className="btn btn-sm btn-danger" onClick={props.onClear}>
+            Clear all
+          </button>
+        )
+      }
+    >
+      {entries.length === 0 ? (
+        <Empty>No rows yet.</Empty>
+      ) : (
+        <div className="table-wrap" style={{ maxHeight: 520, overflowY: 'auto' }}>
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Date</th>
+                <th scope="col">Channel</th>
+                <th scope="col" className="n">Spend</th>
+                <th scope="col" className="n">Clicks</th>
+                <th scope="col" className="n">Sign-ups</th>
+                <th scope="col" className="n">Checkouts</th>
+                <th scope="col" className="n">Paid</th>
+                <th scope="col" className="n">Refunds</th>
+                <th scope="col" className="n">Revenue</th>
+                <th scope="col">Notes</th>
+                {!sample && (
+                  <th scope="col">
+                    <span className="sr">Actions</span>
+                  </th>
+                )}
+              </tr>
+            </thead>
+            <tbody>
+              {[...entries].reverse().map((e) => (
+                <tr key={entryKey(e)}>
+                  <td className="num">{e.date}</td>
+                  <td>{e.channel}</td>
+                  <td className="n">{e.spend == null ? '–' : fmtUsd(e.spend, true)}</td>
+                  <td className="n">{fmtInt(e.clicks)}</td>
+                  <td className="n">{fmtInt(e.signups)}</td>
+                  <td className="n">{fmtInt(e.checkouts)}</td>
+                  <td className="n">{fmtInt(e.paid)}</td>
+                  <td className="n">{fmtInt(e.refunds)}</td>
+                  <td className="n">{e.revenue == null ? '–' : fmtUsd(e.revenue)}</td>
+                  <td className="small">{e.notes}</td>
+                  {!sample && (
+                    <td>
+                      <div className="row" style={{ flexWrap: 'nowrap' }}>
+                        <button type="button" className="btn btn-sm btn-ghost" aria-label={`Edit ${e.date} in the day sheet`} onClick={() => props.onEdit(e)}>
+                          Edit
+                        </button>
+                        <button type="button" className="btn btn-sm btn-danger" aria-label={`Delete ${e.date} ${e.channel}`} onClick={() => props.onDelete(e)}>
+                          Delete
+                        </button>
+                      </div>
+                    </td>
+                  )}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
+    </Section>
+  );
+}
+
+function MrrSnapshots({ snaps, setSnaps, readOnly }: { snaps: { date: string; mrr: number }[]; setSnaps: (f: (p: { date: string; mrr: number }[]) => { date: string; mrr: number }[]) => void; readOnly: boolean }) {
   const [d, setD] = useState(sarajevoToday());
   const [v, setV] = useState('');
   return (
-    <Details summary={`Whop MRR snapshots (${snaps.length}) · replaces the proxy for that week`}>
-      <form
-        className="row"
-        onSubmit={(e) => {
-          e.preventDefault();
-          if (!isIsoDate(d) || v === '' || !Number.isFinite(Number(v))) return;
-          setSnaps((cur) => [...cur.filter((s) => s.date !== d), { date: d, mrr: Number(v) }].sort((a, b) => a.date.localeCompare(b.date)));
-          setV('');
-        }}
-      >
-        <input type="date" aria-label="Snapshot date" value={d} onChange={(e) => setD(e.target.value)} style={{ width: 170 }} />
-        <input type="number" aria-label="MRR in USD" min={0} step="0.01" placeholder="MRR (USD)" value={v} onChange={(e) => setV(e.target.value)} style={{ width: 160 }} />
-        <button type="submit" className="btn btn-sm">
-          Add snapshot
-        </button>
-      </form>
+    <Details summary={`Whop MRR snapshots (${snaps.length}) · the truth for that week, and the forecast's starting point`}>
+      {readOnly ? (
+        <p className="small muted">Snapshots are off while the SAMPLE is shown.</p>
+      ) : (
+        <form
+          className="row"
+          onSubmit={(e) => {
+            e.preventDefault();
+            if (!isIsoDate(d) || v === '' || !Number.isFinite(Number(v))) return;
+            setSnaps((cur) => [...cur.filter((s) => s.date !== d), { date: d, mrr: Number(v) }].sort((a, b) => a.date.localeCompare(b.date)));
+            setV('');
+          }}
+        >
+          <input type="date" aria-label="Snapshot date" value={d} onChange={(e) => setD(e.target.value)} style={{ width: 170 }} />
+          <input type="number" aria-label="MRR in USD" min={0} step="0.01" placeholder="MRR (USD)" value={v} onChange={(e) => setV(e.target.value)} style={{ width: 160 }} />
+          <button type="submit" className="btn btn-sm">
+            Add snapshot
+          </button>
+        </form>
+      )}
       {snaps.length > 0 && (
         <ul className="list small" style={{ marginTop: 8 }}>
           {snaps.map((s) => (
@@ -468,9 +689,11 @@ function MrrSnapshots({ snaps, setSnaps }: { snaps: { date: string; mrr: number 
               <span className="num">
                 {s.date} · W{planWeek(s.date)} · <b>{fmtUsd(s.mrr)}</b>
               </span>
-              <button type="button" className="btn btn-sm btn-danger" onClick={() => setSnaps((cur) => cur.filter((x) => x.date !== s.date))}>
-                Remove
-              </button>
+              {!readOnly && (
+                <button type="button" className="btn btn-sm btn-danger" onClick={() => setSnaps((cur) => cur.filter((x) => x.date !== s.date))}>
+                  Remove
+                </button>
+              )}
             </li>
           ))}
         </ul>
@@ -478,3 +701,4 @@ function MrrSnapshots({ snaps, setSnaps }: { snaps: { date: string; mrr: number 
     </Details>
   );
 }
+

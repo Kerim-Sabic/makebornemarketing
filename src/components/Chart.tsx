@@ -195,6 +195,16 @@ export function Chart({ labels, series, height = 260, yFormat = (n) => String(Ma
           })}
         {series
           .filter((s) => !s.kind || s.kind === 'line')
+          .map((s) =>
+            // A point with no neighbours (a single Whop snapshot in a week) gets a dot, since a path of one point is invisible.
+            s.values.map((v, i) =>
+              v != null && Number.isFinite(v) && (s.values[i - 1] == null || !Number.isFinite(s.values[i - 1]!)) && (s.values[i + 1] == null || !Number.isFinite(s.values[i + 1]!)) ? (
+                <circle key={`${s.id}-${i}`} cx={px(i)} cy={y(v)} r={3.5} style={{ fill: s.color }} />
+              ) : null,
+            ),
+          )}
+        {series
+          .filter((s) => !s.kind || s.kind === 'line')
           .map((s) => (
             <path
               key={s.id}
@@ -244,7 +254,9 @@ export function Chart({ labels, series, height = 260, yFormat = (n) => String(Ma
       <div className="sr" aria-live="polite">
         {liveText}
       </div>
-      <table className="sr">
+      {/* The wrapper hides the table: an absolutely positioned table ignores width: 1px and would widen the page. */}
+      <div className="sr">
+      <table>
         <caption>{ariaLabel}</caption>
         <thead>
           <tr>
@@ -267,6 +279,7 @@ export function Chart({ labels, series, height = 260, yFormat = (n) => String(Ma
           ))}
         </tbody>
       </table>
+      </div>
       <ul className="legend" aria-label="Legend">
         {series.map((s) => (
           <li key={s.id}>

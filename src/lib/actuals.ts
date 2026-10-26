@@ -6,9 +6,9 @@ export const ACTUALS_TEMPLATE = template as unknown as ActualsFile;
 export const CHANNELS = ACTUALS_TEMPLATE.channels;
 export const BUDGET_LINE_IDS = ACTUALS_TEMPLATE.budgetLineIds;
 
-export const NUMERIC_FIELDS = ['spend', 'impressions', 'views', 'clicks', 'signups', 'paid', 'revenue', 'refunds', 'activated', 'studioOrScale'] as const;
+export const NUMERIC_FIELDS = ['spend', 'impressions', 'views', 'clicks', 'signups', 'paid', 'revenue', 'refunds', 'activated', 'studioOrScale', 'checkouts'] as const;
 export type NumericField = (typeof NUMERIC_FIELDS)[number];
-export const CSV_HEADER = ['date', 'channel', 'spend', 'impressions', 'views', 'clicks', 'signups', 'paid', 'revenue', 'notes', 'campaign', 'budgetLineId', 'refunds', 'activated', 'studioOrScale'];
+export const CSV_HEADER = ['date', 'channel', 'spend', 'impressions', 'views', 'clicks', 'signups', 'paid', 'revenue', 'notes', 'campaign', 'budgetLineId', 'refunds', 'activated', 'studioOrScale', 'checkouts'];
 
 const parseNum = (v: unknown): number | null => {
   if (v === null || v === undefined || v === '') return null;
@@ -72,6 +72,7 @@ export function normaliseEntry(input: unknown): { entry: ActualEntry | null; err
     refunds: num('refunds', pick('refunds')),
     activated: num('activated', pick('activated')),
     studioOrScale: num('studioOrScale', pick('studioOrScale')),
+    checkouts: num('checkouts', pick('checkouts')),
   };
   return { entry, warnings };
 }
@@ -150,9 +151,9 @@ export function toActualsCsv(entries: ActualEntry[]) {
 
 export interface Agg {
   spend: number; impressions: number; views: number; clicks: number; signups: number; paid: number;
-  revenue: number; refunds: number; activated: number; studioOrScale: number; rows: number;
+  revenue: number; refunds: number; activated: number; studioOrScale: number; checkouts: number; rows: number;
 }
-export const emptyAgg = (): Agg => ({ spend: 0, impressions: 0, views: 0, clicks: 0, signups: 0, paid: 0, revenue: 0, refunds: 0, activated: 0, studioOrScale: 0, rows: 0 });
+export const emptyAgg = (): Agg => ({ spend: 0, impressions: 0, views: 0, clicks: 0, signups: 0, paid: 0, revenue: 0, refunds: 0, activated: 0, studioOrScale: 0, checkouts: 0, rows: 0 });
 
 export function aggregate(entries: ActualEntry[]): Agg {
   const a = emptyAgg();
@@ -167,6 +168,7 @@ export function aggregate(entries: ActualEntry[]): Agg {
     a.refunds += e.refunds ?? 0;
     a.activated += e.activated ?? 0;
     a.studioOrScale += e.studioOrScale ?? 0;
+    a.checkouts += e.checkouts ?? 0;
     a.rows += 1;
   }
   return a;

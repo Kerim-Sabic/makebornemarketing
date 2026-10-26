@@ -151,7 +151,7 @@ export interface ActualEntry {
   spend: number | null; impressions: number | null; views: number | null; clicks: number | null;
   signups: number | null; paid: number | null; revenue: number | null; notes: string;
   campaign?: string | null; budgetLineId?: string | null; refunds?: number | null;
-  activated?: number | null; studioOrScale?: number | null;
+  activated?: number | null; studioOrScale?: number | null; checkouts?: number | null;
 }
 
 export interface ActualsFile {

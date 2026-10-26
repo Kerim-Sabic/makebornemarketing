@@ -2,6 +2,7 @@
 //   virtual:war-room/calendar-index   date, day and phase of every day, plus one lazy loader per day
 //   virtual:war-room/calendar-day/<d> one calendar day (its own small chunk)
 //   virtual:war-room/content-index    id -> title, kind, format, length and hook code of every video and creative
+//   virtual:war-room/funnel-scenarios id, name, inputs and reference outputs of every data/funnel.json scenario
 //   virtual:war-room/docs-index       metadata of every Markdown document (the text itself loads per document)
 // The source files stay the single source of truth: nothing is generated into the repository.
 import { readFileSync, readdirSync } from 'node:fs';
@@ -52,6 +53,14 @@ export function warRoomData() {
         for (const v of json(this, 'data/videos.json')) out[v.id] = { kind: 'video', title: v.title, format: v.format, lengthSec: v.lengthSec, hookCode: v.hookCode };
         for (const c of json(this, 'data/creatives.json')) out[c.id] = { kind: 'creative', title: c.concept || c.headline, hookCode: c.hookCode };
         return `export const CONTENT_INDEX = ${JSON.stringify(out)};\n`;
+      }
+
+      if (what === 'funnel-scenarios') {
+        // Inputs and reference outputs only: the Analytics and Predictions pages need the plan's rates, not the notes.
+        const f = json(this, 'data/funnel.json');
+        const out = f.scenarios.map((s) => ({ id: s.id, name: s.name, inputs: s.inputs, referenceOutputs: s.referenceOutputs }));
+        return `export const SCENARIOS = ${JSON.stringify(out)};
+`;
       }
 
       if (what === 'docs-index') {

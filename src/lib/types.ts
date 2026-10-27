@@ -86,9 +86,14 @@ export interface CalendarPost {
 }
 /** Launch day: Thu 29 Oct 2026 at 21:00 CET (data/plan.json launch). */
 export interface LaunchInfo { label: string; timeCet: string; utc: string; runOfShow: { time: string; text: string; how: string }[] }
+/**
+ * One dated action. `copy` is the exact text to post or send, `link` the link that goes with it, and `doc` the Library
+ * playbook it comes from (hype-playbook, bosnia-guerrilla-press, ads-step-by-step); Today shows each with a copy button.
+ */
+export interface CalendarAction { type: string; what: string; owner: string; budgetLineId?: string; copy?: string; link?: string; doc?: string }
 export interface CalendarDay {
   date: string; day: number; weekday: string; week: number; phase: string; focus: string;
-  posts: CalendarPost[]; actions: { type: string; what: string; owner: string; budgetLineId?: string }[]; kpiCheck: string;
+  posts: CalendarPost[]; actions: CalendarAction[]; kpiCheck: string;
   /** Added at build time by scripts/plan-data.mjs (todayExtras). */
   extra?: TodayExtra;
 }

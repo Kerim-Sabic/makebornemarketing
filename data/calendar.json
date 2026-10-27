@@ -86,6 +86,80 @@
     "type": "launch",
     "owner": "Founder",
     "what": "Check the countdown on makeborne.com (phone and laptop): it ends at Thu 29 Oct 21:00 CET."
+   },
+   {
+    "type": "hype",
+    "what": "17:45 X: Profile: bio, location, header (still of the real makeborne.com countdown + 'Thu 29 Oct · 21:00 CET'), real photo, link field (playbook §3.1).",
+    "owner": "Founder",
+    "doc": "hype-playbook",
+    "link": "https://makeborne.com/?utm_source=x&utm_medium=bio&utm_campaign=launch-2026-10&utm_content=x-bio"
+   },
+   {
+    "type": "hype",
+    "what": "18:00 Reddit: Account check (age, karma, email verified), profile bio, then read the rules of all 11 target subs by hand (playbook §2.2) and note thread days. Write findings in your private sheet.",
+    "owner": "Founder",
+    "doc": "hype-playbook"
+   },
+   {
+    "type": "hype",
+    "what": "18:30 LinkedIn: Headline 'Founder, Makeborne: the AI studio for client work'; website field and Featured set to the long UTM link.",
+    "owner": "Founder",
+    "doc": "hype-playbook",
+    "link": "https://makeborne.com/?utm_source=linkedin&utm_medium=bio&utm_campaign=launch-2026-10&utm_content=li-bio"
+   },
+   {
+    "type": "hype",
+    "what": "19:15 X: Post the new date with the same 10 s countdown recording. Pin it. Put the link in the first reply. If you ever announced Wednesday in public, add the 'moved' line.",
+    "owner": "Founder",
+    "doc": "hype-playbook",
+    "copy": "Makeborne launches Thursday 29 October, 21:00 CET.\nThat's 20:00 in London, 16:00 in New York, 13:00 in Los Angeles.\n\nOne brief in. A finished website, deck or book out.\n\nSomething is hidden behind our countdown. Go look.\n\n[only if Wednesday was ever announced in public, add as the last line:]\nWe moved it one day to get it right.",
+    "link": "https://makeborne.com/?utm_source=x&utm_medium=organic&utm_campaign=launch-2026-10&utm_content=x-1027-date"
+   },
+   {
+    "type": "hype",
+    "what": "19:16 X: First reply under the new-date post.",
+    "owner": "Founder",
+    "doc": "hype-playbook",
+    "copy": "The countdown (and the waitlist until Thursday): https://makeborne.com/?utm_source=x&utm_medium=organic&utm_campaign=launch-2026-10&utm_content=x-1027-date",
+    "link": "https://makeborne.com/?utm_source=x&utm_medium=organic&utm_campaign=launch-2026-10&utm_content=x-1027-date"
+   },
+   {
+    "type": "hype",
+    "what": "19:20 Threads: Post the new date from @makeborne with the countdown recording.",
+    "owner": "Founder",
+    "doc": "hype-playbook",
+    "copy": "Makeborne launches Thursday 29 October at 21:00 CET (16:00 New York, 13:00 LA).\n\nOne brief in. A finished website, deck or book out.\n\nSomething is hidden behind our countdown on makeborne.com. Go find it.",
+    "link": "https://makeborne.com/?utm_source=threads&utm_medium=organic&utm_campaign=launch-2026-10&utm_content=th-1027-date"
+   },
+   {
+    "type": "outreach",
+    "what": "20:30 Engagement: Engagement block, no links anywhere: X 20 replies (10 at 14:00-15:00, 10 at 20:30-21:00), LinkedIn 15 comments on agency-owner and web-designer posts, Reddit 5 helpful comments in the subs you will post in, Product Hunt 3 thoughtful comments on today's launches, 1 useful answer in your agency community (no link).",
+    "owner": "Founder",
+    "doc": "hype-playbook"
+   },
+   {
+    "type": "outreach",
+    "what": "21:15 Communities: Join ONE agency community (Skool Agency World, RC Agency Owners & Freelancers or AI Freelancers). Read its rules and pinned posts. Introduce yourself with no link and no pitch.",
+    "owner": "Founder",
+    "doc": "hype-playbook"
+   },
+   {
+    "type": "hype",
+    "what": "21:30 Product Hunt: Check your personal Product Hunt account is at least 1 week old and has a real photo and bio. Do not create the coming-soon page yet (TAAFT first).",
+    "owner": "Founder",
+    "doc": "hype-playbook"
+   },
+   {
+    "type": "hype",
+    "what": "21:45 X: X Communities: join at most 3 (playbook §3.6). Open one from a founder's 'posted in' tag, check 5,000+ members, recent posts and rules that allow showing your work; then search the Communities tab for Build in Public, Indie Hackers, SaaS, Startups, Web Design.",
+    "owner": "Founder",
+    "doc": "hype-playbook"
+   },
+   {
+    "type": "ads",
+    "what": "16:00 Ads: Set up the ad accounts from Bosnia today, no money spent. Meta Business portfolio in the exact legal name ZORBY&CO D.O.O. with two-factor for everyone and a second admin. Ad account \"Makeborne USD\" in USD and Europe/Sarajevo time. Company card added with an account spending limit of $96. Beneficiary and payer set to ZORBY&CO D.O.O. Domain TXT record sent to engineering. Business verification submitted. Branded content approval on. A dataset created with no code on the site. One TikTok Ads sign-up attempt, result written down. Ask the accountant whether BiH VAT applies to ads bought abroad. Every screen and field is in Ads, click by click, section 1.",
+    "owner": "Owner",
+    "doc": "ads-step-by-step"
    }
   ],
   "kpiCheck": "Pre-launch: nothing public says Wed 28 Oct or 19:00 any more; the countdown shows Thu 29 Oct 21:00 CET; DM keywords answer from a second account; every bio and post link checked."
@@ -178,6 +252,119 @@
     "type": "launch",
     "owner": "Founder",
     "what": "After T8 goes out at 21:00: answer every GO with makeborne.com (the countdown and the waitlist) and reply to a few guesses for an hour."
+   },
+   {
+    "type": "hype",
+    "what": "09:00 Instagram Stories: 'Tomorrow' Story with a fresh countdown sticker (S4 expires at 19:00 today).",
+    "owner": "Founder",
+    "doc": "hype-playbook",
+    "copy": "Text: \"Tomorrow. 21:00 CET.\"\nCountdown sticker \"Makeborne launch\" (Thu 29 Oct 21:00).\nLink sticker: makeborne.com",
+    "link": "https://makeborne.com/?utm_source=instagram&utm_medium=organic&utm_campaign=launch-2026-10&utm_content=ig-s1028-tomorrow"
+   },
+   {
+    "type": "hype",
+    "what": "09:30 LinkedIn: Teaser post, text only plus the 10 s countdown recording. Link in the first comment.",
+    "owner": "Founder",
+    "doc": "hype-playbook",
+    "copy": "Tomorrow at 21:00 CET I launch Makeborne.\n\nClient projects rarely stall at the build. They stall at the approval: screenshots in email, \"make it pop\", version 9 of a PDF.\n\nMakeborne turns one brief into a finished website, deck or book. Then your client gets one link. They comment on the live page and tap Approve. No account for them.\n\nThursday, 21:00 Sarajevo, 16:00 New York.\n\nUntil then, something is hidden behind the countdown on makeborne.com. Move your cursor around.",
+    "link": "https://makeborne.com/?utm_source=linkedin&utm_medium=organic&utm_campaign=launch-2026-10&utm_content=li-1028-tomorrow"
+   },
+   {
+    "type": "hype",
+    "what": "09:31 LinkedIn: First comment under the teaser.",
+    "owner": "Founder",
+    "doc": "hype-playbook",
+    "copy": "The countdown: https://makeborne.com/?utm_source=linkedin&utm_medium=organic&utm_campaign=launch-2026-10&utm_content=li-1028-tomorrow",
+    "link": "https://makeborne.com/?utm_source=linkedin&utm_medium=organic&utm_campaign=launch-2026-10&utm_content=li-1028-tomorrow"
+   },
+   {
+    "type": "outreach",
+    "what": "10:00 Engagement: Engagement block, no links anywhere: X 20 replies (10 at 14:00-15:00, 10 at 20:30-21:00), LinkedIn 15 comments on agency-owner and web-designer posts, Reddit 5 helpful comments in the subs you will post in, Product Hunt 3 thoughtful comments on today's launches, 1 useful answer in your agency community (no link).",
+    "owner": "Founder",
+    "doc": "hype-playbook"
+   },
+   {
+    "type": "hype",
+    "what": "12:15 X: Hide-and-seek post with a 15 s screen recording of the cursor revealing one design. Link in the first reply. Repost good replies (quote with thanks).",
+    "owner": "Founder",
+    "doc": "hype-playbook",
+    "copy": "There are 9 website designs hidden behind the Makeborne countdown.\n\nMove your cursor over makeborne.com. On a phone: press, hold and drag.\n\nReply with a screenshot of your favourite.\n\n(They're easter-egg designs, not Makeborne builds. The real thing opens Thursday, 21:00 CET.)",
+    "link": "https://makeborne.com/?utm_source=x&utm_medium=organic&utm_campaign=launch-2026-10&utm_content=x-1028-hidden"
+   },
+   {
+    "type": "hype",
+    "what": "12:16 X: First reply under the hide-and-seek post.",
+    "owner": "Founder",
+    "doc": "hype-playbook",
+    "copy": "Start hunting: https://makeborne.com/?utm_source=x&utm_medium=organic&utm_campaign=launch-2026-10&utm_content=x-1028-hidden",
+    "link": "https://makeborne.com/?utm_source=x&utm_medium=organic&utm_campaign=launch-2026-10&utm_content=x-1028-hidden"
+   },
+   {
+    "type": "hype",
+    "what": "12:20 Threads: Same hide-and-seek post and recording.",
+    "owner": "Founder",
+    "doc": "hype-playbook",
+    "copy": "There are 9 website designs hidden behind the Makeborne countdown.\n\nMove your cursor over makeborne.com. On a phone: press, hold and drag.\n\nReply with a screenshot of your favourite.\n\n(They're easter-egg designs, not Makeborne builds. The real thing opens Thursday, 21:00 CET.)",
+    "link": "https://makeborne.com/?utm_source=threads&utm_medium=organic&utm_campaign=launch-2026-10&utm_content=th-1028-hidden"
+   },
+   {
+    "type": "hype",
+    "what": "18:00 Instagram Stories: Hint Story with a poll sticker.",
+    "owner": "Founder",
+    "doc": "hype-playbook",
+    "copy": "Text: \"9 are hidden. How many have you found?\"\nPoll sticker: \"1-3\" / \"4-9\"\nSmall text: \"Hint: try the edges.\"\nLink sticker: makeborne.com",
+    "link": "https://makeborne.com/?utm_source=instagram&utm_medium=organic&utm_campaign=launch-2026-10&utm_content=ig-s1028-hint"
+   },
+   {
+    "type": "hype",
+    "what": "18:15 X: Build-in-public 'what's left' post, text only, no link.",
+    "owner": "Founder",
+    "doc": "hype-playbook",
+    "copy": "27 hours to launch. What's left on my list, honestly:\n\n1. Test checkout one more time, on a phone\n2. Write answers to the questions I know are coming (why paid only, where's my own domain)\n3. Sleep\n\nNot ready on Thursday, and I won't pretend: custom domains, credit top-ups, automatic GitHub sync. Coming soon."
+   },
+   {
+    "type": "hype",
+    "what": "20:00 Facebook (personal): Optional: Bosnian post on your own Facebook profile with the countdown recording.",
+    "owner": "Founder",
+    "doc": "hype-playbook",
+    "copy": "Sutra u 21:00 lansiramo Makeborne. Od jednog kratkog opisa (brifa) napravi gotovu web stranicu, prezentaciju ili e-knjigu.\n\nDo tada: na makeborne.com se iza odbrojavanja nešto krije. Pomjerajte kursor (na mobitelu: pritisnite, držite i povucite).",
+    "link": "makeborne.com"
+   },
+   {
+    "type": "hype",
+    "what": "21:15 X: '24 hours' post with T8 uploaded natively. Link in the first reply.",
+    "owner": "Founder",
+    "doc": "hype-playbook",
+    "copy": "24 hours.\n\nGuess the build time. The answer is in the video.\n\nMakeborne opens tomorrow, Thu 29 Oct, 21:00 CET.",
+    "link": "https://makeborne.com/?utm_source=x&utm_medium=organic&utm_campaign=launch-2026-10&utm_content=x-1028-24h"
+   },
+   {
+    "type": "hype",
+    "what": "21:16 X: First reply under the 24-hour post.",
+    "owner": "Founder",
+    "doc": "hype-playbook",
+    "copy": "Waitlist until tomorrow: https://makeborne.com/?utm_source=x&utm_medium=organic&utm_campaign=launch-2026-10&utm_content=x-1028-24h",
+    "link": "https://makeborne.com/?utm_source=x&utm_medium=organic&utm_campaign=launch-2026-10&utm_content=x-1028-24h"
+   },
+   {
+    "type": "hype",
+    "what": "21:20 Threads: T8 on Threads.",
+    "owner": "Founder",
+    "doc": "hype-playbook",
+    "copy": "24 hours. Guess the build time (the answer is in the video).\nMakeborne opens tomorrow, Thu 29 Oct, 21:00 CET.",
+    "link": "https://makeborne.com/?utm_source=threads&utm_medium=organic&utm_campaign=launch-2026-10&utm_content=th-1028-24h"
+   },
+   {
+    "type": "hype",
+    "what": "22:00 X: 10 replies to US accounts (16:00-17:00 New York). No links.",
+    "owner": "Founder",
+    "doc": "hype-playbook"
+   },
+   {
+    "type": "ads",
+    "what": "16:00 Ads: Check the ad set-up from yesterday: the card's test hold passed, business verification is submitted, the TikTok result is written down, engineering added the domain TXT, and the accountant has the VAT question. Ads, click by click, section 8.",
+    "owner": "Owner",
+    "doc": "ads-step-by-step"
    }
   ],
   "kpiCheck": "Pre-launch: T8 and S5 never say it is live; the countdown ends Thu 29 Oct 21:00 CET; Thursday scheduled; every GO answered."
@@ -468,6 +655,117 @@
     "type": "analysis",
     "what": "Evening: keep replying to every comment; log 'build mine' requests and consent in a private sheet (never in this repo); start the market-access checklist (owner's private notes).",
     "owner": "Founder"
+   },
+   {
+    "type": "product",
+    "what": "08:00 Ops: Launch checklist (playbook §1, Thu 08:00): countdown, support inbox, copy fixes and 'coming soon' labels, /go/ test in a private window (if a /go/ link fails, use the long URLs in this file), drafts loaded for X, LinkedIn, Threads.",
+    "owner": "Founder",
+    "doc": "hype-playbook"
+   },
+   {
+    "type": "product",
+    "what": "08:30 Ops: Owner decisions for tonight: (1) say 'send invites' for the 21:00 waitlist email or not; (2) the daily AI limit for 29 Oct-1 Nov (owner decision, playbook §7 item 2; numbers in the owner's private notes).",
+    "owner": "Owner",
+    "doc": "hype-playbook"
+   },
+   {
+    "type": "outreach",
+    "what": "10:00 Engagement: Engagement block, no links anywhere: X 20 replies (10 at 14:00-15:00, 10 at 20:30-21:00), LinkedIn 15 comments on agency-owner and web-designer posts, Reddit 5 helpful comments in the subs you will post in, Product Hunt 3 thoughtful comments on today's launches, 1 useful answer in your agency community (no link). No LinkedIn post today until 21:15.",
+    "owner": "Founder",
+    "doc": "hype-playbook"
+   },
+   {
+    "type": "hype",
+    "what": "12:00 X: 'Today' post with a 10 s countdown recording. No link needed.",
+    "owner": "Founder",
+    "doc": "hype-playbook",
+    "copy": "Today.\n\n21:00 Sarajevo · 20:00 London · 16:00 New York · 13:00 Los Angeles.\n\nMakeborne: one brief in, a finished website, deck or book out."
+   },
+   {
+    "type": "hype",
+    "what": "12:05 Threads: Same 'Today' post.",
+    "owner": "Founder",
+    "doc": "hype-playbook",
+    "copy": "Today.\n\n21:00 Sarajevo · 20:00 London · 16:00 New York · 13:00 Los Angeles.\n\nMakeborne: one brief in, a finished website, deck or book out."
+   },
+   {
+    "type": "hype",
+    "what": "13:00 Instagram Stories: Repost finds from the hide-and-seek (with permission) + countdown sticker.",
+    "owner": "Founder",
+    "doc": "hype-playbook",
+    "copy": "Repost 2-4 screenshots people sent of the hidden designs (ask each sender first: \"Can we repost your screenshot?\").\nText: \"You found them. 8 hours.\"\nSmall text: \"Easter-egg designs, not Makeborne builds.\"\nCountdown sticker \"Makeborne launch\"."
+   },
+   {
+    "type": "hype",
+    "what": "17:00 Instagram Stories: '4 hours' Story.",
+    "owner": "Founder",
+    "doc": "hype-playbook",
+    "copy": "Text: \"4 hours.\"\nCountdown sticker \"Makeborne launch\".\nLink sticker: makeborne.com",
+    "link": "https://makeborne.com/?utm_source=instagram&utm_medium=organic&utm_campaign=launch-2026-10&utm_content=ig-s1029-4h"
+   },
+   {
+    "type": "product",
+    "what": "18:00 Ops: Final prep: X thread (9 posts) saved as drafts with media attached; LinkedIn V08 and Threads drafts; V01 uploaded and ready; phone charged; support inbox open.",
+    "owner": "Founder",
+    "doc": "hype-playbook"
+   },
+   {
+    "type": "hype",
+    "what": "20:00 X: '1 hour.' with a 10 s recording of the clock rolling.",
+    "owner": "Founder",
+    "doc": "hype-playbook",
+    "copy": "1 hour."
+   },
+   {
+    "type": "product",
+    "what": "20:59 Ops: At 20:59:45 start the phone screen recording of makeborne.com hitting zero (for S8).",
+    "owner": "Founder",
+    "doc": "hype-playbook"
+   },
+   {
+    "type": "outreach",
+    "what": "21:05 Email: Waitlist invite email, only if the owner said 'send invites'. Owner decision.",
+    "owner": "Owner",
+    "doc": "hype-playbook"
+   },
+   {
+    "type": "hype",
+    "what": "21:16 LinkedIn: First comment under the launch post.",
+    "owner": "Founder",
+    "doc": "hype-playbook",
+    "copy": "Here it is: makeborne.com/go/li-v08",
+    "link": "makeborne.com/go/li-v08 | fallback: https://makeborne.com/?utm_source=linkedin&utm_medium=organic&utm_campaign=launch-2026-10&utm_content=li-v08-p4"
+   },
+   {
+    "type": "hype",
+    "what": "21:20 Threads: Launch post with the website build clip; link in a reply.",
+    "owner": "Founder",
+    "doc": "hype-playbook",
+    "copy": "Makeborne is live.\n\nOne brief in. A finished website (2:07), deck (0:43) or designed book (1:23). Real timers from our test runs.\n\nThen your client comments on the live site and taps Approve, no account needed.\n\n$20 / $49 / $99 a month. Paid plans only, on purpose. Full refund if you haven't used your credits.",
+    "link": "makeborne.com/go/th-1029-launch | fallback: https://makeborne.com/?utm_source=threads&utm_medium=organic&utm_campaign=launch-2026-10&utm_content=th-1029-launch"
+   },
+   {
+    "type": "hype",
+    "what": "21:31 X: Reply to post 1 of your thread with V01 uploaded natively.",
+    "owner": "Founder",
+    "doc": "hype-playbook",
+    "copy": "The launch film:"
+   },
+   {
+    "type": "outreach",
+    "what": "21:45 Viber/WhatsApp: 30 personal one-to-one messages to people you know (Bosnian or English template; change the first line for each person). Never a group blast, never 'please share'.",
+    "owner": "Founder",
+    "doc": "hype-playbook",
+    "copy": "Ćao [ime], večeras u 21:00 sam lansirao Makeborne, projekat na kojem radim. Od jednog kratkog opisa napravi web stranicu, prezentaciju ili e-knjigu.\n\nNe tražim ništa osim iskrenog mišljenja: pogledaj kad stigneš i reci mi šta ti je prvo zasmetalo. makeborne.com\n\n[English version]\nHi [name], I launched Makeborne tonight at 21:00. One brief in, a finished website, deck or ebook out.\n\nI'm not asking for anything except an honest opinion: have a look when you can and tell me the first thing that bothered you. makeborne.com",
+    "link": "makeborne.com"
+   },
+   {
+    "type": "hype",
+    "what": "22:30 X: Post one short version of thread part 1 (text + T7 video) into the single most relevant X Community you joined (audience: that Community). Only if its rules allow showcase posts.",
+    "owner": "Founder",
+    "doc": "hype-playbook",
+    "copy": "Makeborne is live.\n\nOne brief in: a finished website, deck or designed book. Real timers from test runs: 2:07, 0:43, 1:23.\n\nI'm the maker. The full thread with every clip is pinned on my profile. Feedback welcome, especially the critical kind.",
+    "link": "makeborne.com/go/x-c08 | fallback: https://makeborne.com/?utm_source=x&utm_medium=organic&utm_campaign=launch-2026-10&utm_content=x-c08-p1"
    }
   ],
   "kpiCheck": "Day 1: TAAFT submitted before any other listing; AI limit raised; zero posts that promote non-live features; first payers start a build within 10 min. Daily: first build <=10 min for >=90% of payers; AI daily limit not hit on a day with new payers; support first reply <=4 h; any Whop payment without a Makeborne-created checkout = same-day alert; 48 h read on posts from 2 days ago (>=3x median -> re-cut)."
@@ -587,6 +885,41 @@
     "type": "analysis",
     "what": "08:00 numbers: yesterday's Whop sales and refunds, /go/ clicks by source, AI limit hits, first-build times; flag any source above the 20% refund brake.",
     "owner": "Founder"
+   },
+   {
+    "type": "hype",
+    "what": "09:31 LinkedIn: First comment under C01.",
+    "owner": "Founder",
+    "doc": "hype-playbook",
+    "copy": "The tool in the image is Makeborne, which I make: makeborne.com/go/li-c01",
+    "link": "makeborne.com/go/li-c01 | fallback: https://makeborne.com/?utm_source=linkedin&utm_medium=organic&utm_campaign=launch-2026-10&utm_content=li-c01-w1"
+   },
+   {
+    "type": "hype",
+    "what": "11:00 Reddit: Send the r/bih modmail (Bosnian) asking whether Sunday's post is OK.",
+    "owner": "Founder",
+    "doc": "hype-playbook",
+    "copy": "Subject: Pitanje prije objave\n\nPozdrav moderatori, ja sam osnivač Makeborne-a, alata koji pravimo u Sarajevu. Prije nego išta objavim, želim provjeriti: da li je u redu jedna objava o tome kako smo ga napravili i lansirali (jasno piše da sam osnivač, link samo u komentaru)? Ako nije, nema problema. Hvala!"
+   },
+   {
+    "type": "hype",
+    "what": "11:15 Facebook groups: Message the admins of the groups you are already in (English and Bosnian templates). Post nowhere until an admin says yes.",
+    "owner": "Founder",
+    "doc": "hype-playbook",
+    "copy": "Hi [admin name], I'm the founder of Makeborne (it turns one brief into a website, deck or ebook). Would one post about it be OK in [group]? I'd say clearly that I'm the maker. If it's against the rules, no problem at all. Thanks.\n\n[Bosnian version]\nPozdrav, ja sam osnivač Makeborne-a, alata koji pravimo u Sarajevu. Da li smijem u grupi objaviti jednu objavu o njemu (jasno piše da sam osnivač)? Ako nije u skladu s pravilima, nema problema, samo javite. Hvala!"
+   },
+   {
+    "type": "hype",
+    "what": "13:00 Threads: Repost yesterday's best X post natively (adapted, not a screenshot).",
+    "owner": "Founder",
+    "doc": "hype-playbook",
+    "link": "makeborne.com/go/th-1030 | fallback: https://makeborne.com/?utm_source=threads&utm_medium=organic&utm_campaign=launch-2026-10&utm_content=th-1030"
+   },
+   {
+    "type": "outreach",
+    "what": "14:00 Engagement: Engagement block: reply to every comment on your own posts first; then X 20 replies (10 at 14:00-15:00, 10 at 20:30-21:00), LinkedIn 15 comments, Reddit 5 helpful comments (no links), Product Hunt 3 comments, 1 useful answer in your agency community (no link).",
+    "owner": "Founder",
+    "doc": "hype-playbook"
    }
   ],
   "kpiCheck": "Spend gate: /go/ links + first touch + checkout metadata live? If not, every paid line except TAAFT stays frozen (alert). Daily: first build <=10 min for >=90% of payers; AI daily limit not hit on a day with new payers; support first reply <=4 h; any Whop payment without a Makeborne-created checkout = same-day alert; 48 h read on posts from 2 days ago (>=3x median -> re-cut)."
@@ -744,6 +1077,27 @@
     "type": "outreach",
     "what": "LinkedIn 15 comments on agency-owner posts (t07, comments first, no pitch); X 20 replies; 1 helpful contribution in the agency community (no links).",
     "owner": "Founder"
+   },
+   {
+    "type": "hype",
+    "what": "13:00 Threads: Native repost of the C03 idea.",
+    "owner": "Founder",
+    "doc": "hype-playbook",
+    "link": "makeborne.com/go/th-1031 | fallback: https://makeborne.com/?utm_source=threads&utm_medium=organic&utm_campaign=launch-2026-10&utm_content=th-1031"
+   },
+   {
+    "type": "outreach",
+    "what": "14:00 Engagement: Engagement block: reply to every comment on your own posts first; then X 20 replies (10 at 14:00-15:00, 10 at 20:30-21:00), LinkedIn 15 comments, Reddit 5 helpful comments (no links), Product Hunt 3 comments, 1 useful answer in your agency community (no link).",
+    "owner": "Founder",
+    "doc": "hype-playbook"
+   },
+   {
+    "type": "hype",
+    "what": "17:02 Reddit: First comment with the long link (never /go/ on Reddit). Then reply to every comment within 15 minutes until 19:00.",
+    "owner": "Founder",
+    "doc": "hype-playbook",
+    "copy": "Link: https://makeborne.com/?utm_source=reddit&utm_medium=organic&utm_campaign=launch-2026-10&utm_content=rd-v10-x2\nPricing is $20 / $49 / $99 a month. Ask me anything, including the critical stuff.",
+    "link": "https://makeborne.com/?utm_source=reddit&utm_medium=organic&utm_campaign=launch-2026-10&utm_content=rd-v10-x2"
    }
   ],
   "kpiCheck": "Daily: first build <=10 min for >=90% of payers; AI daily limit not hit on a day with new payers; support first reply <=4 h; any Whop payment without a Makeborne-created checkout = same-day alert; 48 h read on posts from 2 days ago (>=3x median -> re-cut)."
@@ -882,6 +1236,42 @@
     "type": "outreach",
     "what": "LinkedIn 15 comments on agency-owner posts (t07, comments first, no pitch); X 20 replies; 1 helpful contribution in the agency community (no links).",
     "owner": "Founder"
+   },
+   {
+    "type": "hype",
+    "what": "09:30 LinkedIn: Post C07 per war room (its CTA rule: 'Comment workflow' until the sample review link is live).",
+    "owner": "Founder",
+    "doc": "hype-playbook",
+    "link": "makeborne.com/go/li-c07 | fallback: https://makeborne.com/?utm_source=linkedin&utm_medium=organic&utm_campaign=launch-2026-10&utm_content=li-c07-f1"
+   },
+   {
+    "type": "hype",
+    "what": "11:00 Reddit: r/bih post in Bosnian, only if mods said yes, or gave no answer and the sidebar still has no promotion ban. Link in the first comment.",
+    "owner": "Founder",
+    "doc": "hype-playbook",
+    "copy": "Da odmah kažem: ja sam osnivač, ovo je moj projekat.\n\nZove se Makeborne. Napišete jedan kratak opis (brif), a on napravi gotovu web stranicu na Makeborne adresi, prezentaciju koja se otvara u PowerPointu (grafikoni se mogu uređivati) ili dizajniranu e-knjigu u PDF-u. Klijentu pošaljete link, on komentariše direktno na stranici bez pravljenja računa i klikne Odobri.\n\nPravimo ga u Sarajevu, a prodajemo svuda. Lansirali smo ga u četvrtak, 29. oktobra.\n\nIskreno o tome šta ima, a šta nema:\n- Samo plaćeni paketi: 20, 49 ili 99 dolara mjesečno. Ako ne iskoristite kredite, dobijete puni povrat novca.\n- Vlastite domene još ne podržavamo, to dolazi uskoro.\n- Stvarna vremena iz testiranja: web stranica 2:07, prezentacija 0:43, knjiga 1:23.\n\nPitanje za one koji ovdje rade web stranice ili prezentacije za klijente: da li bi vam ovo uštedjelo vrijeme, i šta bi vas prvo odbilo?\n\nLink stavljam u komentar.",
+    "link": "https://makeborne.com/?utm_source=reddit&utm_medium=organic&utm_campaign=launch-2026-10&utm_content=rd-bih"
+   },
+   {
+    "type": "hype",
+    "what": "11:02 Reddit: First comment on r/bih.",
+    "owner": "Founder",
+    "doc": "hype-playbook",
+    "copy": "Link: https://makeborne.com/?utm_source=reddit&utm_medium=organic&utm_campaign=launch-2026-10&utm_content=rd-bih\nOdgovaram na sve, i na kritike.",
+    "link": "https://makeborne.com/?utm_source=reddit&utm_medium=organic&utm_campaign=launch-2026-10&utm_content=rd-bih"
+   },
+   {
+    "type": "hype",
+    "what": "13:00 Threads: Native repost of the C12 idea.",
+    "owner": "Founder",
+    "doc": "hype-playbook",
+    "link": "makeborne.com/go/th-1101 | fallback: https://makeborne.com/?utm_source=threads&utm_medium=organic&utm_campaign=launch-2026-10&utm_content=th-1101"
+   },
+   {
+    "type": "outreach",
+    "what": "14:00 Engagement: Engagement block: reply to every comment on your own posts first; then X 20 replies (10 at 14:00-15:00, 10 at 20:30-21:00), LinkedIn 15 comments, Reddit 5 helpful comments (no links), Product Hunt 3 comments, 1 useful answer in your agency community (no link). US clocks changed today: New York is now CET-6, Los Angeles CET-9.",
+    "owner": "Founder",
+    "doc": "hype-playbook"
    }
   ],
   "kpiCheck": "Daily: first build <=10 min for >=90% of payers; AI daily limit not hit on a day with new payers; support first reply <=4 h; any Whop payment without a Makeborne-created checkout = same-day alert; 48 h read on posts from 2 days ago (>=3x median -> re-cut)."
@@ -1089,6 +1479,40 @@
     "type": "analysis",
     "what": "Week-end support sweep: every ticket answered; anything broken to engineering with a 24 h fix target.",
     "owner": "Support owner"
+   },
+   {
+    "type": "hype",
+    "what": "13:00 Threads: Native version of yesterday's X post (C16): rewrite for Threads, upload media natively, link in a reply.",
+    "owner": "Founder",
+    "doc": "hype-playbook",
+    "link": "makeborne.com/go/th-1102 | fallback: https://makeborne.com/?utm_source=threads&utm_medium=organic&utm_campaign=launch-2026-10&utm_content=th-1102"
+   },
+   {
+    "type": "outreach",
+    "what": "14:00 Engagement: Engagement block: reply to every comment on your own posts first; then X 20 replies (10 at 14:00-15:00, 10 at 20:30-21:00), LinkedIn 15 comments, Reddit 5 helpful comments (no links), Product Hunt 3 comments, 1 useful answer in your agency community (no link).",
+    "owner": "Founder",
+    "doc": "hype-playbook"
+   },
+   {
+    "type": "hype",
+    "what": "15:00 Reddit: r/roastmystartup roast post. Fill the [weakness] line yourself and rewrite any sentence that doesn't sound like you.",
+    "owner": "Founder",
+    "doc": "hype-playbook",
+    "copy": "I'm the founder. Launched last Thursday from Sarajevo. Please roast it.\n\nSite: https://makeborne.com/?utm_source=reddit&utm_medium=organic&utm_campaign=launch-2026-10&utm_content=rd-roast\n\nWhat it is: write one brief, get a finished website on a Makeborne address, a PowerPoint deck with real charts, or a designed ebook. Clients approve websites through a review link without making an account.\nWho it's for: freelancers and small studios doing client work.\nPrice: $20 / $49 / $99 a month, paid only. Full refund if you haven't used your credits.\n\nWhat I already think is weak, so you don't have to be polite:\n1. You can't try it before paying. I know that hurts.\n2. Sites live on a Makeborne address for now. Custom domains are coming soon.\n3. [one weakness you see yourself on the homepage]\n\nPlease roast these specifically:\n- Would the homepage get you to pay in the first 30 seconds? Why not?\n- Is $49 for the client-work plan too much?\n- Which of the three (site, deck, book) should I lead with?\n\nI'll reply to everything and post what I change.",
+    "link": "https://makeborne.com/?utm_source=reddit&utm_medium=organic&utm_campaign=launch-2026-10&utm_content=rd-roast"
+   },
+   {
+    "type": "hype",
+    "what": "15:30 Reddit: r/startups: comment in the stickied 'Share Your Startup' thread if this month's thread is up (if not, try daily until it is).",
+    "owner": "Founder",
+    "doc": "hype-playbook",
+    "copy": "**Makeborne** (makeborne.com)\nLocation: Sarajevo, Bosnia and Herzegovina\nElevator pitch: one brief in, a finished website, deck or ebook out. Clients approve websites through a review link, no account needed.\nStage: launched 29 Oct 2026, paid plans from $20/month, bootstrapped.\nLooking for: feedback from freelancers and agency owners on the review-and-approve flow.\nI'm the founder."
+   },
+   {
+    "type": "ads",
+    "what": "11:00 Ads: Every wave-1 creator contract this week carries the partnership-ad clauses, including the new Instagram music rule: Reels use original audio or Meta's royalty-free library only, because Reels with licensed music cannot run as partnership ads. Register each creator's /go/c-<handle>, -p and -s codes privately. Ads, click by click, section 5.",
+    "owner": "Owner",
+    "doc": "ads-step-by-step"
    }
   ],
   "kpiCheck": "Daily: first build <=10 min for >=90% of payers; AI daily limit not hit on a day with new payers; support first reply <=4 h; any Whop payment without a Makeborne-created checkout = same-day alert; 48 h read on posts from 2 days ago (>=3x median -> re-cut)."
@@ -1273,6 +1697,35 @@
     "type": "launch",
     "what": "Batch-film block 10:30-12:30 (8-10 videos): next slots in this calendar plus re-cuts of winners.",
     "owner": "Founder"
+   },
+   {
+    "type": "hype",
+    "what": "12:00 LinkedIn: Bosnian post for the local network (same day as the press pitch). Also paste it on your personal Facebook profile.",
+    "owner": "Founder",
+    "doc": "hype-playbook",
+    "copy": "Prošle sedmice smo iz Sarajeva lansirali Makeborne.\n\nNapišete jedan kratak opis (brif), a Makeborne napravi gotovu web stranicu, prezentaciju koja se otvara u PowerPointu ili dizajniranu e-knjigu. Klijentu pošaljete link: komentariše direktno na stranici, bez pravljenja računa, i klikne Odobri.\n\nPravimo ga ovdje, a prodajemo cijelom svijetu. Paketi su od 20 dolara mjesečno, samo plaćeni, namjerno. Ako ne iskoristite kredite, dobijete puni povrat novca.\n\nAko radite za klijente, napišite mi u komentaru šta vam najviše oduzima vrijeme. Iz toga najviše učimo.",
+    "link": "makeborne.com/go/li-1103-bs | fallback: https://makeborne.com/?utm_source=linkedin&utm_medium=organic&utm_campaign=launch-2026-10&utm_content=li-1103-bs"
+   },
+   {
+    "type": "hype",
+    "what": "13:00 Threads: Native version of yesterday's X post (C37): rewrite for Threads, upload media natively, link in a reply.",
+    "owner": "Founder",
+    "doc": "hype-playbook",
+    "link": "makeborne.com/go/th-1103 | fallback: https://makeborne.com/?utm_source=threads&utm_medium=organic&utm_campaign=launch-2026-10&utm_content=th-1103"
+   },
+   {
+    "type": "outreach",
+    "what": "14:00 Engagement: Engagement block: reply to every comment on your own posts first; then X 20 replies (10 at 14:00-15:00, 10 at 20:30-21:00), LinkedIn 15 comments, Reddit 5 helpful comments (no links), Product Hunt 3 comments, 1 useful answer in your agency community (no link).",
+    "owner": "Founder",
+    "doc": "hype-playbook"
+   },
+   {
+    "type": "hype",
+    "what": "15:00 Reddit: r/nocode: comment in the monthly product launch post (rule 3). Set your user flair to show you represent Makeborne (rule 2).",
+    "owner": "Founder",
+    "doc": "hype-playbook",
+    "copy": "Disclosure: I'm the maker.\n\nMakeborne turns one brief into a website (on a Makeborne address), a PowerPoint deck with real charts, or a designed ebook. Clients approve websites through a review link without an account. Paid plans from $20/month.\n\nIt's not an app builder: no logins or databases. If you need those, an app builder is the right tool.\n\nFeedback very welcome: https://makeborne.com/?utm_source=reddit&utm_medium=organic&utm_campaign=launch-2026-10&utm_content=rd-nocode",
+    "link": "https://makeborne.com/?utm_source=reddit&utm_medium=organic&utm_campaign=launch-2026-10&utm_content=rd-nocode"
    }
   ],
   "kpiCheck": "Daily: first build <=10 min for >=90% of payers; AI daily limit not hit on a day with new payers; support first reply <=4 h; any Whop payment without a Makeborne-created checkout = same-day alert; 48 h read on posts from 2 days ago (>=3x median -> re-cut)."
@@ -1477,6 +1930,34 @@
     "type": "outreach",
     "what": "Ask the agency community admin for a 20-minute no-pitch workshop every two weeks from week 3 (t10).",
     "owner": "Founder"
+   },
+   {
+    "type": "hype",
+    "what": "13:00 Threads: Native version of yesterday's X post (C17): rewrite for Threads, upload media natively, link in a reply.",
+    "owner": "Founder",
+    "doc": "hype-playbook",
+    "link": "makeborne.com/go/th-1104 | fallback: https://makeborne.com/?utm_source=threads&utm_medium=organic&utm_campaign=launch-2026-10&utm_content=th-1104"
+   },
+   {
+    "type": "outreach",
+    "what": "14:00 Engagement: Engagement block: reply to every comment on your own posts first; then X 20 replies (10 at 14:00-15:00, 10 at 20:30-21:00), LinkedIn 15 comments, Reddit 5 helpful comments (no links), Product Hunt 3 comments, 1 useful answer in your agency community (no link).",
+    "owner": "Founder",
+    "doc": "hype-playbook"
+   },
+   {
+    "type": "hype",
+    "what": "15:00 Reddit: r/indiehackers, Self Promotion flair, Day-7 numbers with a cropped proof screenshot (rule 2). This is your ONE self-promotion post there: if fewer than 5 people paid, skip today and use it for the day-30 report.",
+    "owner": "Founder",
+    "doc": "hype-playbook",
+    "copy": "Self Promotion flair, and I'm the founder of Makeborne (one brief in, a finished website, deck or ebook out, plus a review link where the client approves).\n\nI launched paid-only last Thursday with $1,000 of marketing money. There's no unpaid plan at all.\n\nDay 7, unedited (screenshot attached, buyer data cropped):\n- visits: [N]\n- paying customers: [N] (Create / Studio / Scale: [N] / [N] / [N])\n- refunds: [N]\n- first build within 10 minutes of paying: [N]%\n- what broke: [one thing]\n\nWhy paid-only: every build costs real money to run. I'd rather show the uncut build and refund in full if you haven't used your credits than fund an unpaid tier I can't afford.\n\nWhat I'm testing next: [one test].\n\nHonest question: would you have launched with a capped preview instead? What would make you pay on the first visit?\n\nhttps://makeborne.com/?utm_source=reddit&utm_medium=organic&utm_campaign=launch-2026-10&utm_content=rd-indiehackers",
+    "link": "https://makeborne.com/?utm_source=reddit&utm_medium=organic&utm_campaign=launch-2026-10&utm_content=rd-indiehackers"
+   },
+   {
+    "type": "hype",
+    "what": "20:30 X: Post the Day 7 numbers (part 1 + part 2 of the thread, rewritten as one post) into a second X Community, if its rules allow.",
+    "owner": "Founder",
+    "doc": "hype-playbook",
+    "link": "makeborne.com/go/x-v09 | fallback: https://makeborne.com/?utm_source=x&utm_medium=organic&utm_campaign=launch-2026-10&utm_content=x-v09-p2"
    }
   ],
   "kpiCheck": "Week-1 extras: 5 customer calls; 100+ PH coming-soon followers; 1 regional press mention; >=80% of payers start a first build within 10 minutes (>=90% from week 2). Week 1 scorecard vs base (kpis.json): qualified visits 3500, gross paid 35, net paid 30, activated payers 18, cumulative gross 35, active subs 30, MRR $1098, loop share 0%, owned posts 25-30, creators active 0, CAC n/a. Guardrails: refunds <=15% (per-source brake 20%), attribution coverage >=90% from week 2, activated >=60% of net payers (weeks 1-4) / >=70% after, IG DM keyword replies >=3 per 1,000 views, MRR below 80% of target two Sundays running -> re-forecast."
@@ -1620,6 +2101,49 @@
     "type": "outreach",
     "what": "Weekly customer changelog email (owner sign-off before the first send; opt-out in every email).",
     "owner": "Founder"
+   },
+   {
+    "type": "hype",
+    "what": "13:00 Threads: Native version of yesterday's X post (V09): rewrite for Threads, upload media natively, link in a reply.",
+    "owner": "Founder",
+    "doc": "hype-playbook",
+    "link": "makeborne.com/go/th-1105 | fallback: https://makeborne.com/?utm_source=threads&utm_medium=organic&utm_campaign=launch-2026-10&utm_content=th-1105"
+   },
+   {
+    "type": "outreach",
+    "what": "14:00 Engagement: Engagement block: reply to every comment on your own posts first; then X 20 replies (10 at 14:00-15:00, 10 at 20:30-21:00), LinkedIn 15 comments, Reddit 5 helpful comments (no links), Product Hunt 3 comments, 1 useful answer in your agency community (no link).",
+    "owner": "Founder",
+    "doc": "hype-playbook"
+   },
+   {
+    "type": "hype",
+    "what": "15:00 Reddit: r/microsaas lesson post. Fill every bracket with real data or cut the line.",
+    "owner": "Founder",
+    "doc": "hype-playbook",
+    "copy": "Disclosure: it's my product, Makeborne. It turns a brief into a website, deck or ebook. Every request costs me real compute, and that shaped all of the pricing. Three lessons from the first week:\n\n1. Show the worst case first. Each request shows the most it can cost before it runs. [what you saw in real usage after launch]\n\n2. Tie the refund to usage, not to a number of days. Full refund if you haven't used your credits. [how many refund requests you actually got, and why]\n\n3. [the plan most buyers picked, from your real data, and your best guess why]\n\nNumbers: [N] paid, [N] refunds, $[N] of a $1,000 budget spent.\n\nIf you've priced a product with real per-use costs: did credits confuse your buyers, or did they get it?",
+    "link": "https://makeborne.com/?utm_source=reddit&utm_medium=organic&utm_campaign=launch-2026-10&utm_content=rd-microsaas"
+   },
+   {
+    "type": "hype",
+    "what": "15:02 Reddit: First comment on r/microsaas with the link.",
+    "owner": "Founder",
+    "doc": "hype-playbook",
+    "copy": "Product link for context: https://makeborne.com/?utm_source=reddit&utm_medium=organic&utm_campaign=launch-2026-10&utm_content=rd-microsaas",
+    "link": "https://makeborne.com/?utm_source=reddit&utm_medium=organic&utm_campaign=launch-2026-10&utm_content=rd-microsaas"
+   },
+   {
+    "type": "hype",
+    "what": "18:00 Facebook groups: Post only in groups where an admin said yes (English or Bosnian copy). One group per hour, each text slightly different.",
+    "owner": "Founder",
+    "doc": "hype-playbook",
+    "copy": "Hi all, I'm the founder of Makeborne (the admin OK'd this post).\n\nIt turns one brief into a finished website, deck or ebook, and your client approves the site through a link, no account needed. Real build times from our test runs: website 2:07, deck 0:43, book 1:23.\n\nPlans start at $20 a month. If you do client work, I'd love your honest feedback, especially the critical kind: [link]\n\n[Bosnian version]\nPozdrav! Ja sam osnivač Makeborne-a i admin je odobrio ovu objavu.\n\nU Sarajevu smo napravili alat koji od jednog kratkog opisa (brifa) napravi gotovu web stranicu, prezentaciju ili e-knjigu. Web stranicu klijent odobri preko linka, bez pravljenja računa.\n\nPaketi su od 20 dolara mjesečno. Ako radite za klijente, rado bih čuo vaše mišljenje, posebno kritike: [link]",
+    "link": "makeborne.com/go/com-fb-1105 | fallback: https://makeborne.com/?utm_source=community-facebook&utm_medium=organic&utm_campaign=launch-2026-10&utm_content=com-fb-1105"
+   },
+   {
+    "type": "ads",
+    "what": "11:00 Ads: Check that every post that may be boosted is ad-safe: V05's caption reads like A2-M1, V04's like S1-T1, Instagram audio is original or royalty-free, TikTok audio is from the Commercial Music Library. Ads, click by click, section 8.",
+    "owner": "Founder",
+    "doc": "ads-step-by-step"
    }
   ],
   "kpiCheck": "Daily: first build <=10 min for >=90% of payers; AI daily limit not hit on a day with new payers; support first reply <=4 h; any Whop payment without a Makeborne-created checkout = same-day alert; 48 h read on posts from 2 days ago (>=3x median -> re-cut)."
@@ -1782,6 +2306,43 @@
     "type": "analysis",
     "what": "Week-end support sweep: every ticket answered; anything broken to engineering with a 24 h fix target.",
     "owner": "Support owner"
+   },
+   {
+    "type": "outreach",
+    "what": "11:00 Communities: Show-and-tell post in your one agency community, only in its show-and-tell channel and only if its rules allow.",
+    "owner": "Founder",
+    "doc": "hype-playbook",
+    "copy": "Show and tell: I launched Makeborne last week. One brief in, a finished website, deck or ebook out; clients approve the site through a review link without an account. I'm the founder.\n\nIf anyone here does client sites, I'd love 10 minutes of blunt feedback on the review flow. Link: [community link from the measurement table]",
+    "link": "makeborne.com/go/com-agency | fallback: https://makeborne.com/?utm_source=community-agency&utm_medium=organic&utm_campaign=launch-2026-10&utm_content=com-agency"
+   },
+   {
+    "type": "hype",
+    "what": "13:00 Threads: Native version of yesterday's X post (C13): rewrite for Threads, upload media natively, link in a reply.",
+    "owner": "Founder",
+    "doc": "hype-playbook",
+    "link": "makeborne.com/go/th-1106 | fallback: https://makeborne.com/?utm_source=threads&utm_medium=organic&utm_campaign=launch-2026-10&utm_content=th-1106"
+   },
+   {
+    "type": "outreach",
+    "what": "14:00 Engagement: Engagement block: reply to every comment on your own posts first; then X 20 replies (10 at 14:00-15:00, 10 at 20:30-21:00), LinkedIn 15 comments, Reddit 5 helpful comments (no links), Product Hunt 3 comments, 1 useful answer in your agency community (no link).",
+    "owner": "Founder",
+    "doc": "hype-playbook"
+   },
+   {
+    "type": "hype",
+    "what": "15:00 Reddit: r/buildinpublic week-1 post.",
+    "owner": "Founder",
+    "doc": "hype-playbook",
+    "copy": "Maker here. Makeborne turns one brief into a website, deck or ebook, and clients approve the site through a review link.\n\nWeek 1, real numbers:\n- paid: [N]\n- refunds: [N]\n- marketing spent: $[N] of $1,000\n- best channel: [channel]\n\nThree things that broke:\n1. [thing] → [fix]\n2. [thing] → [fix]\n3. [thing] → [fix]\n\nWhat I'm doing in week 2: [one thing].\n\nWhat would you want to see in a week-2 update?",
+    "link": "https://makeborne.com/?utm_source=reddit&utm_medium=organic&utm_campaign=launch-2026-10&utm_content=rd-buildinpublic"
+   },
+   {
+    "type": "hype",
+    "what": "15:02 Reddit: First comment on r/buildinpublic with the link.",
+    "owner": "Founder",
+    "doc": "hype-playbook",
+    "copy": "Link if you want to look: https://makeborne.com/?utm_source=reddit&utm_medium=organic&utm_campaign=launch-2026-10&utm_content=rd-buildinpublic",
+    "link": "https://makeborne.com/?utm_source=reddit&utm_medium=organic&utm_campaign=launch-2026-10&utm_content=rd-buildinpublic"
    }
   ],
   "kpiCheck": "Daily: first build <=10 min for >=90% of payers; AI daily limit not hit on a day with new payers; support first reply <=4 h; any Whop payment without a Makeborne-created checkout = same-day alert; 48 h read on posts from 2 days ago (>=3x median -> re-cut)."
@@ -1834,6 +2395,32 @@
     "type": "analysis",
     "what": "08:00 numbers: yesterday's Whop sales and refunds, /go/ clicks by source, AI limit hits, first-build times; flag any source above the 20% refund brake.",
     "owner": "Founder"
+   },
+   {
+    "type": "hype",
+    "what": "12:00 Reddit: r/smallbusiness: comment once in this week's stickied promote-your-business thread (rule 3). Nowhere else in that sub.",
+    "owner": "Founder",
+    "doc": "hype-playbook",
+    "copy": "Makeborne (makeborne.com): if you need a simple website, a pitch deck or a short guide for your business, you write one brief and it builds it. Sites publish on a Makeborne address (your own domain isn't supported yet). From $20/month, full refund if you haven't used your credits. I'm the founder, based in Sarajevo."
+   },
+   {
+    "type": "hype",
+    "what": "13:00 Threads: Native version of yesterday's X post (V30): rewrite for Threads, upload media natively, link in a reply.",
+    "owner": "Founder",
+    "doc": "hype-playbook",
+    "link": "makeborne.com/go/th-1107 | fallback: https://makeborne.com/?utm_source=threads&utm_medium=organic&utm_campaign=launch-2026-10&utm_content=th-1107"
+   },
+   {
+    "type": "outreach",
+    "what": "14:00 Engagement: Engagement block: reply to every comment on your own posts first; then X 20 replies (10 at 14:00-15:00, 10 at 20:30-21:00), LinkedIn 15 comments, Reddit 5 helpful comments (no links), Product Hunt 3 comments, 1 useful answer in your agency community (no link).",
+    "owner": "Founder",
+    "doc": "hype-playbook"
+   },
+   {
+    "type": "ads",
+    "what": "11:00 Ads: Build A01 as a draft in Ads Manager: steps 1-35 in Ads, click by click, section 2.3, with V05 as the placeholder creative and a $96 campaign spending limit (Meta's daily budget is an average, not a cap). Do not publish.",
+    "owner": "Founder",
+    "doc": "ads-step-by-step"
    }
   ],
   "kpiCheck": "Daily: first build <=10 min for >=90% of payers; AI daily limit not hit on a day with new payers; support first reply <=4 h; any Whop payment without a Makeborne-created checkout = same-day alert; 48 h read on posts from 2 days ago (>=3x median -> re-cut)."
@@ -1925,6 +2512,25 @@
     "type": "analysis",
     "what": "Sunday review (90 min cap): scorecard; keep/kill/scale each source; re-cut the top 10% with 2 new hooks (they fill this week's winner slots); retire the bottom 50% of formats; reconcile Whop payments with first touch; schedule the week; one-page growth note to the owner.",
     "owner": "Founder"
+   },
+   {
+    "type": "hype",
+    "what": "13:00 Threads: Native version of yesterday's X post (C04): rewrite for Threads, upload media natively, link in a reply.",
+    "owner": "Founder",
+    "doc": "hype-playbook",
+    "link": "makeborne.com/go/th-1108 | fallback: https://makeborne.com/?utm_source=threads&utm_medium=organic&utm_campaign=launch-2026-10&utm_content=th-1108"
+   },
+   {
+    "type": "outreach",
+    "what": "14:00 Engagement: Engagement block: reply to every comment on your own posts first; then X 20 replies (10 at 14:00-15:00, 10 at 20:30-21:00), LinkedIn 15 comments, Reddit 5 helpful comments (no links), Product Hunt 3 comments, 1 useful answer in your agency community (no link).",
+    "owner": "Founder",
+    "doc": "hype-playbook"
+   },
+   {
+    "type": "product",
+    "what": "20:30 Ops: Hype review (30 min): clicks per code from /go/ logs and platform analytics; which post drove sign-ups; keep the top 2 formats; note every removal and why.",
+    "owner": "Founder",
+    "doc": "hype-playbook"
    }
   ],
   "kpiCheck": "Week 2 scorecard vs base (kpis.json): qualified visits 2500, gross paid 25, net paid 21, activated payers 13, cumulative gross 60, active subs 51, MRR $1882, loop share 2%, owned posts 25-30, creators active 0, CAC n/a. Guardrails: refunds <=15% (per-source brake 20%), attribution coverage >=90% from week 2, activated >=60% of net payers (weeks 1-4) / >=70% after, IG DM keyword replies >=3 per 1,000 views, MRR below 80% of target two Sundays running -> re-forecast."

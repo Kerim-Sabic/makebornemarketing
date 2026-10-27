@@ -388,6 +388,17 @@ try {
     const t8 = cal.find((d) => d.date === '2026-10-28').posts.filter((p) => p.contentId === 'T8');
     if (t8.length !== 3 || t8.some((p) => !/^21:(00|05|10)/.test(p.time))) fail('T8 "Guess the build time" is not at Wed 28 Oct 21:00-21:10 on Reels, TikTok and Shorts');
     if (cal.some((d) => d.posts.some((p) => ['T1', 'T2', 'T3', 'T4', 'T5', 'T6', 'S1', 'S2', 'S3'].includes(p.contentId)))) fail('a teaser with the old Wednesday time burned in (T1-T6, S1-S3) is still on the calendar');
+    // The playbooks' dated actions (hype, Bosnia press, ads): each names its playbook, and no copy before 21:00 on
+    // Thu 29 Oct says the product is live or names the old Wednesday time.
+    const DOCS = ['hype-playbook', 'bosnia-guerrilla-press', 'ads-step-by-step'];
+    const playbook = cal.flatMap((d) => d.actions.filter((a) => a.doc).map((a) => ({ ...a, date: d.date })));
+    for (const a of playbook) {
+      if (!DOCS.includes(a.doc) || !existsSync(join(root, `content/${a.doc}.md`))) fail(`${a.date}: action names an unknown playbook ${a.doc}`);
+      const t = a.what.match(/^(\d{2}:\d{2})/)?.[1];
+      if (!t) fail(`${a.date}: playbook action without a time: ${a.what.slice(0, 60)}`);
+      else if (Date.parse(`${a.date}T${t}:00+01:00`) < LAUNCH_MS && (LIVE.test(a.copy ?? '') || /Wed(nesday)?,? 28 Oct(ober)?,? (at )?19:00|19:00 CET/.test(a.copy ?? ''))) fail(`${a.date} ${t}: playbook copy before the launch says it is live or names the old time`);
+    }
+    if (!playbook.some((a) => a.doc === 'hype-playbook')) fail('the hype playbook has no dated actions on the calendar');
     // Day 90 holds the day-90 review; the plan's launch block names the moment.
     const d90 = cal.find((d) => d.date === '2027-01-26');
     if (!d90?.actions.some((a) => /^Day-90 review/.test(a.what))) fail('Tue 26 Jan (day 90) has no day-90 review');
@@ -545,6 +556,10 @@ try {
       ['#/library/instagram', 'Instagram playbook'],
       ['#/library/ads-playbook', 'Ads playbook'],
       ['#/library/where-to-post', 'master posting sheet'],
+      ['#/library/hype-playbook', 'build-hype-online playbook'],
+      ['#/library/ads-step-by-step', 'Makeborne ads, step by step'],
+      ['#/today/2026-10-28', 'Hide-and-seek post'],
+      ['#/today/2026-10-27', 'Set up the ad accounts from Bosnia today'],
       ['#/library/outreach', 'Merge fields'],
       ['#/library/outreach/launch', 'Product Hunt'],
       ['#/library/outreach/targets', 'How to find'],

@@ -45,7 +45,9 @@ const GROUPS: { id: GroupId; title: string; hint: string }[] = [
   { id: 'reach', title: 'Reach out', hint: 'People, creators, listings' },
   { id: 'log', title: 'Log numbers', hint: 'Five minutes, every day' },
 ];
-const GROUP_OF: Record<string, GroupId> = { launch: 'make', product: 'make', ads: 'ads', outreach: 'reach', analysis: 'log' };
+const GROUP_OF: Record<string, GroupId> = { launch: 'make', product: 'make', ads: 'ads', outreach: 'reach', analysis: 'log', hype: 'post', press: 'reach', guerrilla: 'make' };
+/** The Library playbook each action's `doc` names. */
+const DOC_TITLE: Record<string, string> = { 'hype-playbook': 'Hype playbook', 'bosnia-guerrilla-press': 'Bosnia press and guerrilla', 'ads-step-by-step': 'Ads, click by click' };
 
 export default function Today({ params }: RouteProps) {
   const realToday = sarajevoToday();
@@ -397,14 +399,22 @@ function buildGroups(day: CalendarDay, x: TodayExtra, date: string): Record<Grou
       key: actionKey(date, a.what),
       time: lead ? hm(lead) : '',
       label: first,
-      text: numbers ? <><b>Yesterday's numbers:</b> {plain(first.replace(/^08:00 numbers:\s*/i, ''))}</> : plain(cap(first.replace(/^Evening:\s*/i, ''))),
+      // The time already shows in its own column, so the label drops a leading "21:15 " (and "Evening:").
+      text: numbers ? <><b>Yesterday's numbers:</b> {plain(first.replace(/^08:00 numbers:\s*/i, ''))}</> : plain(cap(first.replace(/^Evening:\s*/i, '').replace(/^\d{1,2}:\d{2}\s+/, ''))),
       tag: a.budgetLineId ? <span className="chip chip-accent">budget line {a.budgetLineId}</span> : undefined,
       how:
-        rest.length || a.owner || numbers ? (
+        rest.length || a.owner || numbers || a.copy ? (
           <div className="how">
             {numbers && logSteps}
             {numbers && day.kpiCheck && <p className="small muted">{plain(day.kpiCheck)}</p>}
             <Steps items={rest.map((r) => plain(r))} ordered={false} />
+            {a.copy && <CopyField label="Text to post" text={a.copy} />}
+            {a.link && <CopyField label="Link" text={a.link} mono />}
+            {a.doc && DOC_TITLE[a.doc] && (
+              <p className="small">
+                The why and the rules: <a href={href('library', a.doc)}>Library › {DOC_TITLE[a.doc]}</a>.
+              </p>
+            )}
             <p className="tiny muted">Who: {a.owner}</p>
           </div>
         ) : undefined,

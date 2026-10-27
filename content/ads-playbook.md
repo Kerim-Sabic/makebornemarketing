@@ -13,6 +13,8 @@
 
 ---
 
+> **Click by click (27 Oct):** `content/ads-step-by-step.md` (Library › Ads, click by click) walks through every screen: the accounts from Bosnia, A01, A02 and A03 from Create to Publish, the daily 10-minute check and the rejected-account runbook. It also lists seven findings that need an owner decision (Meta location fees, spending limits, the Instagram music rule for partnership ads, TikTok from BiH, BiH VAT). No card's money changes.
+
 ## 0. The simple version: the ads you will actually run
 
 One card per ad, in the order you run them. Full detail for each card (exact clicks, countries, audience, placements, copy, link, names, "good after 48 h", kill, scale, what to log, and the fallback if a platform doesn't work from Bosnia) is in `data/ads.json` → `adCards`.

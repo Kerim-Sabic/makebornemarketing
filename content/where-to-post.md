@@ -84,6 +84,7 @@ Launch week (26 Oct-1 Nov) follows `data/calendar.json` day by day (extra Linked
 - **Who:** founder. No automation, no connection-request pitches (LinkedIn's professional community policies [F]).
 
 ### X: founder's personal account
+- **Full playbook (27 Oct):** profile set-up, the launch thread written out, 10 ready posts, the reply strategy and what the algorithm punishes: `content/hype-playbook.md` §3 (Library › Hype playbook).
 - **Role:** build in public, AI-builder circles, Product Hunt and developer beats.
 - **Frequency:** 1 original a day + 20 replies a day (the first thing cut when time is short).
 - **Times:** 20:00 CET (14:00 US Eastern from 1 Nov).
@@ -96,6 +97,7 @@ Launch week (26 Oct-1 Nov) follows `data/calendar.json` day by day (extra Linked
 ## 3. Channel cards: launch platforms, communities, press
 
 ### Reddit (founder's personal account, maker disclosed)
+- **Full playbook (27 Oct):** every subreddit with its rules, the exact titles and bodies, the first comments and what to do if a post is removed: `content/hype-playbook.md` §2 (Library › Hype playbook). The dates there win over this card.
 - **Where and when:** **r/SideProject** on Wed 28 Oct 17:00 CET (outreach `launchCopy.reddit`, code `/go/rd-v10`) and once at the images beat; **r/indiehackers** one self-promotion post with the Self Promotion flair (week 2-3); **r/EntrepreneurRideAlong** weekly ride-along updates with real numbers (optional, from week 3); **r/SaaS** one "roast my pricing" feedback post in week 4 (one mention per 60 days, affiliation disclosed [S]). Member counts and rules are third-party audits [S, `research/platforms-community.md` §4.2]: **read every sidebar, rule and pinned post by hand before posting [U].**
 - **Never:** r/marketing, r/Entrepreneur promotion, r/smallbusiness links, competitor tool subs (r/lovable and similar), r/selfpublish or r/KDP at launch, the same text twice, alt accounts, vote asks.
 - **Links:** where the rules allow, `/go/rd-<post>`, often in a comment.

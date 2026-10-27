@@ -84,7 +84,7 @@ const DEFAULTS = {
   teaserStills: {},
   teasers: {
     T7: '"We\'re live": the iris opens onto a real site',
-    T8: '"Guess the build time" (the 24-hours-to-go post)',
+    T8: '"Guess the build time" (a build-time quiz with no date in it)',
     ...Object.fromEntries(Object.entries(STORIES).map(([id, s]) => [id, s.title])),
   },
   schedule: {

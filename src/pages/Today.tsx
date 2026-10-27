@@ -483,7 +483,14 @@ function PostHow({ post, e, ig, date }: { post: CalendarPost; e: TodayExtra['pos
       {e?.teaser && (
         <p className="notice small">
           <b>Teaser</b>
-          <span>It says when, never that it is live: no price, no "we launched". Link: makeborne.com (the countdown).</span>
+          <span>
+            {post.contentId === 'T7'
+              ? 'Post it only once makeborne.com is open: load it signed out first and check the countdown is gone.'
+              : date > '2026-10-28'
+                ? 'An after-launch extra: real builds and a question to comment on. Link: makeborne.com.'
+                : 'It says when, never that it is live: no price, no "we launched". Link: makeborne.com (the countdown and the waitlist).'}
+            {/^T\d/.test(post.contentId ?? '') && ' The music is in the video: keep the original sound and add no platform music.'}
+          </span>
         </p>
       )}
       {f && (

@@ -2,15 +2,17 @@
 // which the Today page joins to its post items: "File: V01_reel_9x16.mp4 (in <folder>)" and a "ready to post" badge.
 //
 //   node scripts/sync-posting.mjs                       read Z:\makeborne-marketing\launch-week\renders\POSTING.md and, when it
-//                                                       exists, Z:\makeborne-marketing\launch-teasers\renders\POSTING.md
+//                                                       exists, Z:\makeborne-marketing\launch-teasers-v2\renders\POSTING.md
 //   node scripts/sync-posting.mjs --dir <folder>        read <folder>/POSTING.md instead of the launch-week folder
 //   node scripts/sync-posting.mjs --teasers <folder>    read <folder>/POSTING.md instead of the launch-teasers folder
 //   node scripts/sync-posting.mjs --out <file>          write somewhere other than data/posting.json (used by npm run check)
 //
 // It never copies media: only file names, platforms, times, captions, hashtags, keywords, links, covers and disclosures.
 // When both folders (or their POSTING.md) are missing (a Netlify build, another computer) it prints a note, leaves the
-// committed data/posting.json as it is and exits 0. The build only ever reads the JSON. The teaser folder (the pre-launch
-// countdown videos T1-T7 and Stories S1-S3) is optional: without it the teasers stay "to make" and nothing fails.
+// committed data/posting.json as it is and exits 0. The build only ever reads the JSON. The teaser folder is optional:
+// without it the teasers stay "to make" and nothing fails. The v2 teasers (made 27 Oct; the first teasers were dropped and
+// are never read) name their slots by time ("## TUE-1900 · …"). `teaserSlots` in data/posting.json maps each slot to its
+// calendar id (TUE-1900 -> T3 and so on), and the schedule table at the top of that POSTING.md gives each platform's time.
 //
 // The launch moved from Mon 26 Oct to Wed 28 Oct 2026, 19:00 CET. The launch-week POSTING.md still names the old dates,
 // so `schedule` (hand-written, in data/posting.json) maps them: every launch-week slot from 26 Oct to 1 Nov moves 2 days
@@ -18,15 +20,15 @@
 // used as written.
 //
 // Hand-written parts of data/posting.json survive a re-sync: `toMake` (why a post has no file yet, in plain words),
-// `beforePosting` (the one-time checklist), `reminders` (dated one-off Today items), `teasers` (teaser titles) and
-// `schedule` (the date mapping above). Edit them in the JSON.
+// `beforePosting` (the one-time checklist), `reminders` (dated one-off Today items), `teasers` (teaser titles),
+// `teaserSlots` (the v2 slot -> calendar id map), `teaserStills` (the cover each Story S1-S3 uses) and `schedule` (the date mapping above). Edit them in the JSON.
 import { existsSync, readFileSync, readdirSync, writeFileSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 export const DEFAULT_DIR = 'Z:\\makeborne-marketing\\launch-week\\renders';
-export const TEASER_DIR = 'Z:\\makeborne-marketing\\launch-teasers\\renders';
+export const TEASER_DIR = 'Z:\\makeborne-marketing\\launch-teasers-v2\\renders';
 const addDays = (isoDate, n) => new Date(Date.parse(`${isoDate}T00:00:00Z`) + n * 86_400_000).toISOString().slice(0, 10);
 
 const MONTHS = { Oct: '10', Nov: '11', Dec: '12', Jan: '01' };
@@ -58,16 +60,20 @@ const DEFAULTS = {
     C05: 'Needs the Instagram comment-keyword DM switched on first, then the slides captured.',
     C15: 'Needs the Instagram keyword DM switched on, and the "30-second uncut build" it promises does not exist yet.',
     C17: 'Needs a screenshot of the deck opened in PowerPoint with the chart\'s data sheet open.',
-    ...Object.fromEntries(['T1', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7', 'S1', 'S2', 'S3'].map((id) => [id, 'Being rendered with HyperFrames (the countdown teasers). When the files land in the launch-teasers renders folder, run node scripts/sync-posting.mjs and this post shows "ready to post".'])),
+    S1: 'Post TUE-1900_tomorrow_cover.jpg as the Story and add Instagram\'s countdown sticker in the app.',
+    S2: 'Post WED-0900_today_cover.jpg as the Story and add Instagram\'s countdown sticker in the app.',
+    S3: 'Post WED-1800_1hour_cover.jpg as the Story and add Instagram\'s countdown sticker in the app.',
+    ...Object.fromEntries(['T3', 'T4', 'T5', 'T6', 'T7', 'T8'].map((id) => [id, 'Being rendered with HyperFrames (the launch teasers). When the files land in the launch-teasers-v2 renders folder, run node scripts/sync-posting.mjs and this post shows "ready to post".'])),
   },
+  teaserSlots: { 'TUE-1900': 'T3', 'WED-0900': 'T4', 'WED-1800': 'T5', 'WED-1859': 'T6', 'WED-1900': 'T7', EXTRA: 'T8' },
+  teaserStills: { S1: 'TUE-1900_tomorrow_cover.jpg', S2: 'WED-0900_today_cover.jpg', S3: 'WED-1800_1hour_cover.jpg' },
   teasers: {
-    T1: 'Countdown teaser "Wednesday. 19:00."',
-    T2: 'Countdown teaser "2 days"',
-    T3: 'Countdown teaser "Tomorrow, 19:00"',
-    T4: 'Countdown teaser "Today, 19:00"',
-    T5: 'Countdown teaser "1 hour"',
-    T6: 'Countdown teaser "60 seconds"',
-    T7: '"We\'re live" sting',
+    T3: 'Teaser "Tomorrow": the speedrun (deck + book + website under a 5:00 par)',
+    T4: 'Teaser "Today": one brief, then the site',
+    T5: 'Teaser "1 hour": what fits in an hour',
+    T6: 'Teaser "Final 10 seconds": ten counts, seven real builds',
+    T7: '"We\'re live": the iris opens onto a real site',
+    T8: '"Guess the build time" (optional, after launch)',
     S1: 'Story with Instagram\'s countdown sticker (S1)',
     S2: 'Story with the countdown sticker, launch morning (S2)',
     S3: 'Story with the countdown sticker, one hour to go (S3)',
@@ -218,6 +224,109 @@ export function parsePosting(md, { present } = {}) {
   return items;
 }
 
+const SHORT_PLATFORM = { Reels: 'Instagram Reels', TikTok: 'TikTok', Shorts: 'YouTube Shorts' };
+
+/**
+ * Parse the v2 teasers' POSTING.md into one item per calendar id and platform. Pure: no file system access.
+ * Sections are "## TUE-1900 · "Tomorrow" (the speedrun)" with a **File** row, one row per platform (its cover), **When**,
+ * **Comment keyword** and **Disclosure** rows, then the captions. The times come from the schedule table at the top:
+ * "| **Tue 27 Oct 19:00** | `TUE-1900_tomorrow_9x16.mp4` | Reels 19:00 · TikTok 19:05 · Shorts 19:10 |". A sheet in the
+ * older "### T1 · …" shape goes to parsePosting.
+ */
+export function parseTeasers(md, { present, slots = {}, stills = {} } = {}) {
+  if (!/^## (?:[A-Z]{3}-\d{4}|EXTRA) · /m.test(md)) return parsePosting(md, { present });
+  const has = (f) => (present ? present.has(f) : true);
+  const lines = md.split(/\r?\n/);
+  const times = new Map();
+  for (const l of lines) {
+    const m = l.match(/^\|\s*(.+?)\s*\|\s*`([^`]+\.mp4)`\s*\|\s*(.+?)\s*\|\s*$/);
+    if (!m) continue;
+    const when = clean(m[1]).match(WHEN);
+    const per = Object.fromEntries([...m[3].matchAll(/\b(Reels|TikTok|Shorts) (\d{1,2}:\d{2})\b/g)].map(([, p, t]) => [SHORT_PLATFORM[p], hhmm(t)]));
+    times.set(m[2], { date: when ? iso(when[2], when[3]) : null, time: when ? hhmm(when[4]) : null, per });
+  }
+  const sections = [];
+  let cur = null;
+  for (const l of lines) {
+    const h = l.match(/^## ([A-Z]{3}-\d{4}|EXTRA) · (.+)$/);
+    if (h) sections.push((cur = { slot: h[1], head: h[2], body: [] }));
+    else if (/^## /.test(l)) cur = null;
+    else if (cur) cur.body.push(l);
+  }
+  const items = [];
+  for (const s of sections) {
+    const id = slots[s.slot];
+    if (!id) continue;
+    const rows = new Map();
+    for (const l of s.body) {
+      const m = l.match(/^\|\s*\*\*(.+?)\*\*\s*\|\s*(.+?)\s*\|\s*$/);
+      if (m) rows.set(m[1].trim(), m[2].trim());
+    }
+    const file = ticks(rows.get('File') ?? '').find(isMedia);
+    if (!file) continue;
+    // Captions: "Instagram caption:", "TikTok caption:" or "YouTube Shorts. Title: `…` Description:", then "> " lines.
+    const captions = [];
+    for (let i = 0; i < s.body.length; i++) {
+      const l = s.body[i].trim();
+      if (!l.endsWith(':') || l.startsWith('|') || l.startsWith('>')) continue;
+      const quote = [];
+      let j = i + 1;
+      while (j < s.body.length && s.body[j].startsWith('>')) quote.push(s.body[j++].replace(/^>\s?/, '').trim());
+      if (!quote.length) continue;
+      const tags = quote.filter((q) => /^(#\w+\s*)+$/.test(q));
+      const hdr = l.toLowerCase();
+      captions.push({
+        platform: /tiktok/.test(hdr) ? 'TikTok' : /shorts|youtube/.test(hdr) ? 'YouTube Shorts' : /instagram/.test(hdr) ? 'Instagram Reels' : null,
+        caption: quote.filter((q) => !tags.includes(q)).join('\n'),
+        hashtags: tags.join(' ').split(/\s+/).filter(Boolean),
+        title: l.match(/Title: `([^`]+)`/)?.[1] ?? null,
+      });
+    }
+    const t = times.get(file) ?? { date: null, time: null, per: {} };
+    const whenNote = rows.get('When') ? clean(rows.get('When')) : null;
+    const keyword = rows.get('Comment keyword')?.match(/^([A-Z]{2,})\b/)?.[1] ?? null;
+    const disclosure = rows.get('Disclosure') ? clean(rows.get('Disclosure')) : null;
+    for (const platform of ['Instagram Reels', 'TikTok', 'YouTube Shorts']) {
+      const row = rows.get(platform);
+      if (!row) continue;
+      const cover = ticks(row).find(isMedia) ?? null;
+      // TikTok takes a frame of the video as its cover; the sheet says which one.
+      const coverNote = !cover && /\bcover:/i.test(row) ? `TikTok cover: pick ${clean(row).replace(/^.*?\bcover:\s*/i, '')}.` : null;
+      const cap = captions.find((c) => c.platform === platform) ?? null;
+      items.push({
+        id,
+        title: clean(s.head.replace(/["“”]/g, '')),
+        platforms: [platform],
+        date: t.date,
+        time: t.per[platform] ?? t.time,
+        makeUp: null,
+        bank: !t.date,
+        files: [{ name: file, exists: has(file), later: null }],
+        ready: has(file) && (!cover || has(cover)),
+        cover,
+        caption: cap?.caption ?? null,
+        hashtags: cap?.hashtags ?? [],
+        captionNote: [whenNote?.replace(/([^.!?])$/, '$1.'), coverNote].filter(Boolean).join(' ') || null,
+        ytTitle: cap?.title ?? null,
+        keyword,
+        link: null,
+        utmContent: null,
+        disclosure,
+      });
+    }
+  }
+  // The countdown-sticker Stories (S1-S3) reuse a teaser cover: the sticker itself is added in the Instagram app.
+  for (const [id, name] of Object.entries(stills)) {
+    items.push({
+      id, title: id, platforms: ['Instagram Stories'], date: null, time: null, makeUp: null, bank: false,
+      files: [{ name, exists: has(name), later: null }], ready: has(name), cover: null, caption: null, hashtags: [],
+      captionNote: 'Add Instagram\'s countdown sticker (Wed 28 Oct, 19:00, "Makeborne launch") and a link sticker to makeborne.com in the app.',
+      ytTitle: null, keyword: null, link: null, utmContent: null, disclosure: 'None needed',
+    });
+  }
+  return items;
+}
+
 /** Map the launch-week POSTING.md dates to the launch on Wed 28 Oct 19:00 CET (see `schedule` in data/posting.json). Pure. */
 export function applySchedule(items, schedule) {
   if (!schedule) return items;
@@ -235,22 +344,22 @@ function argv(name) {
   return i > 0 ? process.argv[i + 1] : undefined;
 }
 
-function readSource(dir) {
+function readSource(dir, parse = parsePosting, opts = {}) {
   const md = join(dir, 'POSTING.md');
   if (!existsSync(dir) || !existsSync(md)) return { md, missing: existsSync(dir) ? 'no POSTING.md in' : 'folder not found:' };
-  return { md, items: parsePosting(readFileSync(md, 'utf8'), { present: new Set(readdirSync(dir)) }) };
+  return { md, items: parse(readFileSync(md, 'utf8'), { ...opts, present: new Set(readdirSync(dir)) }) };
 }
 
 export function syncPosting({ dir = DEFAULT_DIR, teaserDir = TEASER_DIR, out = join(ROOT, 'data/posting.json'), log = console.log } = {}) {
+  const prev = existsSync(out) ? JSON.parse(readFileSync(out, 'utf8')) : {};
   const lw = readSource(dir);
-  const tz = readSource(teaserDir);
+  const tz = readSource(teaserDir, parseTeasers, { slots: prev.teaserSlots ?? DEFAULTS.teaserSlots, stills: prev.teaserStills ?? DEFAULTS.teaserStills });
   if (lw.missing) log(`sync-posting: ${lw.missing} ${dir}.`);
   if (tz.missing) log(`sync-posting: teasers: ${tz.missing} ${teaserDir} (the teasers stay "to make").`);
   if (lw.missing && tz.missing) {
     log(`sync-posting: kept ${existsSync(out) ? 'the committed' : 'no'} posting.json as it is.`);
     return { synced: false };
   }
-  const prev = existsSync(out) ? JSON.parse(readFileSync(out, 'utf8')) : {};
   const schedule = prev.schedule ?? DEFAULTS.schedule;
   const prevItems = prev.items ?? [];
   // A folder that is missing this time keeps its items from the last sync.
@@ -258,7 +367,7 @@ export function syncPosting({ dir = DEFAULT_DIR, teaserDir = TEASER_DIR, out = j
   const teaserItems = tz.items ? tz.items.map((i) => ({ ...i, folder: teaserDir })) : prevItems.filter((i) => i.folder);
   const items = [...launchItems, ...teaserItems];
   const json = {
-    note: 'Generated by scripts/sync-posting.mjs from POSTING.md in the renders folders (launch week, plus the launch teasers when present). items is rewritten on every sync; toMake, beforePosting, reminders, teasers and schedule are hand-written and kept. No media is copied into this repo.',
+    note: 'Generated by scripts/sync-posting.mjs from POSTING.md in the renders folders (launch week, plus the launch teasers when present). items is rewritten on every sync; toMake, beforePosting, reminders, teasers, teaserSlots, teaserStills and schedule are hand-written and kept. No media is copied into this repo.',
     folder: dir,
     teaserFolder: teaserDir,
     syncedAt: new Date().toISOString().slice(0, 10),
@@ -267,6 +376,8 @@ export function syncPosting({ dir = DEFAULT_DIR, teaserDir = TEASER_DIR, out = j
     beforePosting: prev.beforePosting ?? DEFAULTS.beforePosting,
     reminders: prev.reminders ?? DEFAULTS.reminders,
     teasers: { ...DEFAULTS.teasers, ...prev.teasers },
+    teaserSlots: prev.teaserSlots ?? DEFAULTS.teaserSlots,
+    teaserStills: prev.teaserStills ?? DEFAULTS.teaserStills,
     schedule,
   };
   writeFileSync(out, `${JSON.stringify(json, null, 2)}\n`);

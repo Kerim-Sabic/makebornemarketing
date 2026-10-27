@@ -16,9 +16,10 @@
 //    content id, a platform and files, no media sits in the repo, the Today join links the ready files to their posts, and
 //    the sync script exits cleanly and leaves the JSON alone when the renders folders are missing (as on Netlify).
 // 10. Checks the launch on Wed 28 Oct 2026 at 19:00 CET (18:00 UTC): the calendar runs pre-launch -2, -1, then day 1 = 28 Oct
-//    to day 90 = Mon 25 Jan 2027; V01 posts at 19:00 on launch day (calendar and posting.json); no post before 28 Oct 18:00 UTC
-//    says the product is live (only the countdown teasers T1-T7 and S1-S3, none of them before 19:00 claiming it); the
-//    launch day has its run of show; the _justlaunched files apply from Thu 29 Oct.
+//    to day 90 = Mon 25 Jan 2027; T7 "We're live" goes out from 19:00 and V01 at 19:30 on launch day (calendar and
+//    posting.json); no post before 28 Oct 18:00 UTC says the product is live (only the teasers T3-T6 and S1-S3, none of
+//    them claiming it); the dropped first teasers T1 and T2 are off the calendar; the launch day has its run of show; the
+//    _justlaunched files apply from Thu 29 Oct.
 // 11. Fails when copy outside research/ claims a finished output came from "one sentence" (or a one-line brief): every
 //    real output came from a 500-1,000-character brief, so the copy says "one brief".
 import { createServer } from 'vite';
@@ -254,7 +255,7 @@ try {
       if (it.date && !/^\d{4}-\d{2}-\d{2}$/.test(it.date)) fail(`posting.json: ${it.id} date ${it.date}`);
     }
     for (const k of ['toMake', 'beforePosting', 'reminders', 'teasers', 'schedule']) if (!P[k]) fail(`posting.json: hand-written ${k} is missing`);
-    for (const id of ['T1', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7', 'S1', 'S2', 'S3']) if (!P.teasers?.[id] || (!P.toMake?.[id] && !(P.items ?? []).some((i) => i.id === id))) fail(`posting.json: teaser ${id} has no title or no "to make" reason`);
+    for (const id of ['T3', 'T4', 'T5', 'T6', 'T7', 'T8', 'S1', 'S2', 'S3']) if (!P.teasers?.[id] || (!P.toMake?.[id] && !(P.items ?? []).some((i) => i.id === id))) fail(`posting.json: teaser ${id} has no title or no "to make" reason`);
     for (const id of ['V04', 'V07', 'V08', 'V09', 'V10', 'C02', 'C05', 'C15', 'C17']) if (!P.toMake?.[id]) fail(`posting.json: no "to make" reason for ${id}`);
     if ((P.beforePosting ?? []).length !== 3) fail('posting.json: the before-posting checklist should have its 3 steps');
     // No media in the repository: paths only.
@@ -295,19 +296,19 @@ try {
     if (!pre.reminders.some((r) => /Do not post V01/.test(r.text))) fail('26 Oct has no "Do not post V01" item (the launch is Wed 28 Oct 19:00 CET)');
     if ((P.reminders ?? []).some((r) => /before midnight/i.test(r.text))) fail('posting.json still says "Post V01 before midnight"');
     if (pre.beforePosting.length !== 3) fail('the pre-launch day does not show the before-posting checklist');
-    // V01 at Wed 28 Oct 19:00 on TikTok, Reels and Shorts, with the _justlaunched variant from Thu 29 Oct.
+    // V01 at Wed 28 Oct 19:30 (after T7 "We're live") on TikTok, Reels and Shorts, with the _justlaunched variant from Thu 29 Oct.
     const launchDay = files.calendar.find((d) => d.date === '2026-10-28');
     const lx = todayExtras(files, '2026-10-28');
     for (const ch of ['TikTok', 'Instagram Reels', 'YouTube Shorts']) {
       const i = launchDay.posts.findIndex((p) => p.contentId === 'V01' && p.channel === ch);
-      if (i < 0 || !launchDay.posts[i].time.startsWith('19:00')) fail(`calendar: V01 on ${ch} is not at Wed 28 Oct 19:00`);
+      if (i < 0 || !launchDay.posts[i].time.startsWith('19:30')) fail(`calendar: V01 on ${ch} is not at Wed 28 Oct 19:30`);
       const it = P.items.find((x) => x.id === 'V01' && x.platforms.includes(ch));
-      if (!it || it.date !== '2026-10-28' || it.time !== '19:00') fail(`posting.json: V01 on ${ch} is ${it?.date} ${it?.time}, not 2026-10-28 19:00`);
+      if (!it || it.date !== '2026-10-28' || it.time !== '19:30') fail(`posting.json: V01 on ${ch} is ${it?.date} ${it?.time}, not 2026-10-28 19:30`);
       if (i >= 0 && ch === 'TikTok' && (!lx.posts[i].file?.files?.includes('V01_tiktok_9x16.mp4') || !lx.posts[i].file.laterFiles?.includes('V01_tiktok_9x16_justlaunched.mp4'))) fail('28 Oct TikTok V01 does not show V01_tiktok_9x16.mp4 and its _justlaunched variant');
     }
     const later = files.calendar.filter((d) => d.date >= '2026-10-29').flatMap((d) => todayExtras(files, d.date).posts.filter((p) => p.file?.files?.some((f) => /^V01_(tiktok|reel|shorts)_9x16\.mp4$/.test(f))));
     if (later.length) fail('a V01 post after launch day shows the "We launched today" file instead of _justlaunched');
-    if (!lx.launch || lx.launch.runOfShow.length < 6 || !lx.launch.runOfShow.some((r) => r.time === '19:00' && /V01/.test(r.text))) fail('launch day has no run of show with V01 at 19:00');
+    if (!lx.launch || lx.launch.runOfShow.length < 6 || !lx.launch.runOfShow.some((r) => r.time === '19:00' && /T7/.test(r.text)) || !lx.launch.runOfShow.some((r) => r.time === '19:30' && /V01/.test(r.text))) fail('launch day has no run of show with T7 at 19:00 and V01 at 19:30');
     if (todayExtras(files, '2026-10-29').launch) fail('the run of show shows on a day other than launch day');
     // The sync script: a missing renders folder is a no-op that exits 0 and leaves the JSON untouched.
     const { syncPosting, parsePosting } = await import('./sync-posting.mjs');
@@ -328,7 +329,7 @@ try {
       if (sample.length !== 1 || sample[0].date !== '2026-10-26' || sample[0].time !== '12:00' || sample[0].caption !== 'Hello.' || sample[0].hashtags[0] !== '#makeborne' || sample[0].cover !== 'V01_cover.jpg') fail(`parsePosting sample: ${JSON.stringify(sample[0])}`);
       const { applySchedule } = await import('./sync-posting.mjs');
       const mapped = applySchedule([{ ...sample[0], platforms: ['TikTok'] }, { ...sample[0], id: 'V05', date: '2026-10-28', time: '13:00', makeUp: { date: '2026-10-29', time: '13:00' } }], P.schedule);
-      if (mapped[0].date !== '2026-10-28' || mapped[0].time !== '19:00' || mapped[1].date !== '2026-10-30' || mapped[1].time !== '13:00' || mapped[1].makeUp) fail(`schedule mapping: ${JSON.stringify(mapped.map((m) => [m.id, m.date, m.time, m.makeUp]))}`);
+      if (mapped[0].date !== '2026-10-28' || mapped[0].time !== '19:30' || mapped[1].date !== '2026-10-30' || mapped[1].time !== '13:00' || mapped[1].makeUp) fail(`schedule mapping: ${JSON.stringify(mapped.map((m) => [m.id, m.date, m.time, m.makeUp]))}`);
       const tsample = parsePosting('## Teasers\n\n### T1 · "Wednesday. 19:00."\n\n| | |\n|---|---|\n| **TikTok** | `T1_tiktok_9x16.mp4` · calendar Tue 27 Oct 09:00 |\n| **Instagram Reels** | `T1_reel_9x16.mp4` · calendar Tue 27 Oct 09:00 |\n\n### S1 · `S1_story_01.jpg` · Instagram Stories, Tue 27 Oct 09:15\nLink sticker: makeborne.com. Disclosure: none.\n> Wednesday, 19:00.\n');
       if (tsample.length !== 3 || tsample[0].id !== 'T1' || tsample[0].date !== '2026-10-27' || tsample[2].id !== 'S1' || tsample[2].files[0].name !== 'S1_story_01.jpg' || tsample[2].time !== '09:15') fail(`parsePosting teaser sample: ${JSON.stringify(tsample.map((t) => [t.id, t.platforms, t.date, t.time]))}`);
       // The teaser folder is optional: a present launch-week folder and a missing teaser folder still sync.
@@ -339,7 +340,12 @@ try {
       writeFileSync(out3, JSON.stringify({ schedule: P.schedule, items: [] }));
       const r3 = syncPosting({ dir: lwDir, teaserDir: join(tmp, 'no-such-teasers'), out: out3, log: () => {} });
       const p3 = JSON.parse(readFileSync(out3, 'utf8'));
-      if (!r3.synced || p3.items[0]?.date !== '2026-10-28' || p3.items[0]?.time !== '19:00' || !p3.toMake?.T1) fail('sync with a missing teaser folder did not map V01 to Wed 28 Oct 19:00 or lost the teaser "to make" reasons');
+      if (!r3.synced || p3.items[0]?.date !== '2026-10-28' || p3.items[0]?.time !== '19:30' || !p3.toMake?.T3 || !p3.teaserSlots?.['TUE-1900']) fail('sync with a missing teaser folder did not map V01 to Wed 28 Oct 19:30 or lost the teaser "to make" reasons and slots');
+      // The v2 teaser sheet: slot sections, the schedule table's per-platform times, the TikTok cover frame, the Story stills.
+      const { parseTeasers } = await import('./sync-posting.mjs');
+      const v2 = parseTeasers('| When | File | Where |\n|---|---|---|\n| **Tue 27 Oct 19:00** | `TUE-1900_tomorrow_9x16.mp4` | Reels 19:00 · TikTok 19:05 · Shorts 19:10 |\n\n## TUE-1900 · "Tomorrow" (the speedrun)\n\n| | |\n|---|---|\n| **File** | `TUE-1900_tomorrow_9x16.mp4` · 12.57 s |\n| **Instagram Reels** | Tue 27 Oct 19:00 · cover `TUE-1900_tomorrow_cover.jpg` |\n| **TikTok** | Tue 27 Oct 19:05 · cover: the frame at 7.25 s |\n| **Comment keyword** | GO |\n\nTikTok caption:\n> Your turn.\n> #makeborne\n', { slots: { 'TUE-1900': 'T3' }, stills: { S1: 'TUE-1900_tomorrow_cover.jpg' } });
+      const [ig, tt, s1] = v2;
+      if (v2.length !== 3 || ig.id !== 'T3' || ig.date !== '2026-10-27' || ig.time !== '19:00' || ig.cover !== 'TUE-1900_tomorrow_cover.jpg' || tt.time !== '19:05' || tt.caption !== 'Your turn.' || tt.keyword !== 'GO' || !/frame at 7\.25 s/.test(tt.captionNote ?? '') || s1.id !== 'S1' || s1.platforms[0] !== 'Instagram Stories') fail(`parseTeasers sample: ${JSON.stringify(v2.map((t) => [t.id, t.platforms, t.date, t.time, t.cover]))}`);
     } finally {
       rmSync(tmp, { recursive: true, force: true });
     }
@@ -372,7 +378,8 @@ try {
     }
     for (const it of P.items ?? []) if (it.date && it.time && Date.parse(`${it.date}T${it.time}:00+01:00`) < LAUNCH_MS && !teasers.has(it.id)) fail(`posting.json: ${it.id} on ${it.platforms.join('/')} is scheduled ${it.date} ${it.time}, before the launch`);
     const t7 = cal.find((d) => d.date === '2026-10-28').posts.filter((p) => p.contentId === 'T7');
-    if (!t7.length || t7.some((p) => !p.time.startsWith('19:00'))) fail('the T7 "We\'re live" sting is not at Wed 28 Oct 19:00');
+    if (t7.length !== 3 || t7.some((p) => !/^19:0[0-2]/.test(p.time))) fail('T7 "We\'re live" is not at Wed 28 Oct 19:00-19:02 on Reels, TikTok and Shorts');
+    if (cal.some((d) => d.posts.some((p) => ['T1', 'T2'].includes(p.contentId)))) fail('the dropped first teasers T1 or T2 are still on the calendar');
     // Day 90 holds the day-90 review; the plan's launch block names the moment.
     const d90 = cal.find((d) => d.date === '2027-01-25');
     if (!d90.actions.some((a) => /^Day-90 review/.test(a.what))) fail('Mon 25 Jan (day 90) has no day-90 review');
@@ -403,7 +410,7 @@ try {
     [/\$10 ?(?:a|\/|per) ?day (?:of (?:limit|cap) )?covers/i, 'daily AI spend figure'],
     [/45[-–]55 (?:h|hours)/i, 'staffing load'],
     [/BiH checklist|withholding tax|merchant[- ]of[- ]record|legal basis for product-update/i, 'open legal or tax question'],
-    [/Z:\\(?!\\?makeborne-marketing\\{1,2}launch-(?:week|teasers)\\{1,2}renders)|src\/lib\/hosting|client-review-page\.tsx|LEGACY_SITE_URL_TEMPLATE|docs\/release-review|release\/minimum-launch|release worktree|alba\.makeborne\.site/i, 'internal code or infrastructure path'],
+    [/Z:\\(?!\\?makeborne-marketing\\{1,2}launch-(?:week|teasers(?:-v2)?)\\{1,2}renders)|src\/lib\/hosting|client-review-page\.tsx|LEGACY_SITE_URL_TEMPLATE|docs\/release-review|release\/minimum-launch|release worktree|alba\.makeborne\.site/i, 'internal code or infrastructure path'],
   ];
   const scanDirs = ['data', 'plan', 'research', 'content', 'src'];
   const files = ['README.md'];
@@ -482,7 +489,9 @@ try {
       ['#/today/2026-10-26', 'Before you post anything'],
       ['#/today/2026-10-27', 'Pre-launch day −1'],
       ['#/today/2026-10-27', 'countdown sticker'],
-      ['#/today/2026-10-27', 'Optional'],
+      ['#/today/2026-10-27', 'TUE-1900_tomorrow_9x16.mp4'],
+      ['#/today/2026-10-28', 'WED-1859_final10_9x16.mp4'],
+      ['#/today/2026-11-01', 'Optional'],
       ['#/today/2026-10-28', 'Day 1'],
       ['#/today/2026-10-28', 'LAUNCH — 19:00 CET'],
       ['#/today/2026-10-28', 'Run of show'],

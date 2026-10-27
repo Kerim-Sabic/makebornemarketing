@@ -26,7 +26,7 @@ export default function Calendar({ params }: RouteProps) {
 
   return (
     <Page
-      eyebrow={`${CAL.length} days (pre-launch −2 and −1, then day 1 = Wed 28 Oct launch to day 90 = Mon 25 Jan review) · ${CAL.reduce((a, d) => a + d.posts.length, 0)} planned posts · ${CAL.reduce((a, d) => a + d.actions.length, 0)} actions`}
+      eyebrow={`${CAL.length} days (pre-launch −3 to −1, then day 1 = Thu 29 Oct launch to day 90 = Tue 26 Jan review) · ${CAL.reduce((a, d) => a + d.posts.length, 0)} planned posts · ${CAL.reduce((a, d) => a + d.actions.length, 0)} actions`}
       title={
         <>
           Ninety days, <em>one at a time</em>

@@ -91,7 +91,7 @@
       {
         "week": 1,
         "dates": "2026-10-26 to 2026-11-01",
-        "note": "Launch week follows the hour-by-hour plan (content/production.md section 13) Launch moved to Wed 28 Oct 19:00 CET: the launch-week make-list moved 2 days later with its posts (Mon -> Wed ... Sun -> Tue 3 Nov). The Higgsfield sign-up stays Tue 27 Oct and the first shots stay Wed 28 Oct 09:00.",
+        "note": "Launch week follows the hour-by-hour plan (content/production.md section 13). Launch moved to Thu 29 Oct 21:00 CET: the launch-week posts moved 1 day later, so each make-list item below is now done the day before its post. The Higgsfield sign-up stays Tue 27 Oct and the first shots stay Wed 28 Oct 09:00.",
         "items": [
           {
             "day": "Tue",
@@ -107,7 +107,7 @@
           },
           {
             "day": "Wed",
-            "text": "Wed: finish the launch film V01 with its end card (60 min), post at 19:00",
+            "text": "Wed: finish the launch film V01 with its end card (60 min), post Thu 21:30",
             "ids": [
               "V01"
             ],
@@ -148,7 +148,7 @@
           },
           {
             "day": "Wed",
-            "text": "Wed: film V08 to camera (25 min); edit V02 (80 min, post 20:00), V08 (1 h 45 min, post LinkedIn 19:15), V03 (3 h 45 min, post 21:00)",
+            "text": "Wed: film V08 to camera (25 min); edit V02 (80 min, post Thu 22:00), V08 (1 h 45 min, post LinkedIn Thu 21:15), V03 (3 h 45 min, post Thu 22:30)",
             "ids": [
               "V08",
               "V02",
@@ -1294,7 +1294,7 @@
           },
           {
             "day": "Mon",
-            "text": "Mon: make V03's Higgsfield version (pitch-room opening and end, 30 min) for Tuesday's TikTok, the A/B pair with 28 Oct",
+            "text": "Mon: make V03's Higgsfield version (pitch-room opening and end, 30 min) for Tuesday's TikTok, the A/B pair with 29 Oct",
             "ids": [
               "V03"
             ],
@@ -1417,7 +1417,7 @@
           },
           {
             "day": "Tue",
-            "text": "Tue: make V02's Higgsfield version (bakery opening, shop-to-website, middle and end; 45 min) for Wednesday's TikTok, the A/B pair with 28 Oct",
+            "text": "Tue: make V02's Higgsfield version (bakery opening, shop-to-website, middle and end; 45 min) for Wednesday's TikTok, the A/B pair with 29 Oct",
             "ids": [
               "V02"
             ],
@@ -9612,7 +9612,7 @@
         "usd": 0,
         "note": "Makeborne AI provider cost of the builds about $0.30 (outside the $1,000; plan.json outsideBudget)"
       },
-      "readiness": "needs the day's real numbers (Mon 25 Jan, day 90)",
+      "readiness": "needs the day's real numbers (Tue 26 Jan, day 90)",
       "makeWith": "real only",
       "mix": {
         "lengthSec": 120,
@@ -14990,7 +14990,7 @@
           "video": "V07",
           "surface": "TikTok",
           "higgsfield": {
-            "date": "2026-11-01",
+            "date": "2026-11-02",
             "go": "tt-v07"
           },
           "real": {
@@ -15026,7 +15026,7 @@
           "video": "V03",
           "surface": "TikTok",
           "real": {
-            "date": "2026-10-28",
+            "date": "2026-10-29",
             "go": "tt-v03"
           },
           "higgsfield": {
@@ -15040,7 +15040,7 @@
           "video": "V02",
           "surface": "TikTok",
           "real": {
-            "date": "2026-10-28",
+            "date": "2026-10-29",
             "go": "tt-v02"
           },
           "higgsfield": {

@@ -1,4 +1,4 @@
-// SAMPLE data for the empty state: 28 invented days (28 Oct - 24 Nov 2026), generated in memory from a fixed seed.
+// SAMPLE data for the empty state: 28 invented days (29 Oct - 25 Nov 2026), generated in memory from a fixed seed.
 // It is never written to localStorage, never exported and never merged with logged rows.
 import type { ActualEntry } from './types';
 import type { SpendEntry } from './stores';
@@ -7,7 +7,7 @@ import { mulberry32, gaussian } from './forecast';
 import { planBase } from './planRates';
 
 export const SAMPLE_DAYS = 28;
-export const SAMPLE_AS_OF = addDays(LAUNCH_DAY, SAMPLE_DAYS - 1); // Tue 24 Nov 2026
+export const SAMPLE_AS_OF = addDays(LAUNCH_DAY, SAMPLE_DAYS - 1); // Wed 25 Nov 2026
 
 const SHARES: [string, number, number][] = [
   // channel, share of organic visits, visit-to-paid
@@ -118,7 +118,7 @@ export function sampleData() {
   }
 
   const spend: SpendEntry[] = [
-    { id: 'sample-1', date: '2026-10-28', lineId: 'b1', usd: 49, note: 'SAMPLE: TAAFT listing' },
+    { id: 'sample-1', date: '2026-10-29', lineId: 'b1', usd: 49, note: 'SAMPLE: TAAFT listing' },
     { id: 'sample-2', date: '2026-11-09', lineId: 'b2', usd: 150, note: 'SAMPLE: wave-1 halves on signing' },
     { id: 'sample-3', date: '2026-11-09', lineId: 'b8', usd: 6, note: 'SAMPLE: transfer fees' },
     { id: 'sample-4', date: '2026-11-10', lineId: 'b5', usd: 52, note: 'SAMPLE: Spark day 1' },

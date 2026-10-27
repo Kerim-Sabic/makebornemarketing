@@ -896,7 +896,7 @@
     "linkedin": [
       {
         "id": "li-day1",
-        "when": "Day 1, Wed 28 Oct, 19:15 Sarajevo",
+        "when": "Day 1, Thu 29 Oct, 21:15 Sarajevo",
         "format": "Text post plus a 30-45 s real build clip; link in the first comment",
         "body": "Today I launched Makeborne.\n\nIt's an AI studio for client work. You write one brief. It builds the website, and your client gets a link where they comment on the live site and tap Approve. No account for them, and no screenshot threads for you.\n\nThe same brief can also become the pitch deck (it opens in PowerPoint, and the charts are real) or a client guide as a PDF.\n\nWho it's for: freelancers and small studios who make things for clients.\n\nPrice: from $20 a month. Studio, for client work, is $49. There's no free plan, on purpose. If you don't use a credit, you get every cent back.\n\nIt's built by a small team in Sarajevo, sold worldwide, and I'll post every number here, good or bad.\n\nWhat should I build first in public? Comment a client brief and I'll pick three.",
         "firstComment": "Here it is: makeborne.com/go/li-0101"
@@ -1098,7 +1098,7 @@
       },
       "factsBox": [
         "Company: ZORBY&CO D.O.O., Sarajevo, Bosnia and Herzegovina",
-        "Product: Makeborne (makeborne.com), paid beta since 28 Oct 2026",
+        "Product: Makeborne (makeborne.com), paid beta since 29 Oct 2026",
         "Makes: websites (published on a Makeborne address), decks (PPTX with editable charts), books (screen and PDF)",
         "Client side: review links with comments without an account, and Approve",
         "Also: basic CRM with a lead finder, manual GitHub export, projects library",

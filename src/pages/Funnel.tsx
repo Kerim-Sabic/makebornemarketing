@@ -342,7 +342,7 @@ export default function Funnel() {
             </tbody>
           </table>
         </div>
-        <p className="footnote">Week 14 is the single model day 91 (Tue 26 Jan; model day 1 = the launch, Wed 28 Oct). Plan-of-record weekly targets include paid and loop traffic in visits, so the model's launch weeks run lower (consistency note 4).</p>
+        <p className="footnote">Week 14 is the single model day 91 (Wed 27 Jan; model day 1 = the launch, Thu 29 Oct). Plan-of-record weekly targets include paid and loop traffic in visits, so the model's launch weeks run lower (consistency note 4).</p>
       </Section>
     </Page>
   );

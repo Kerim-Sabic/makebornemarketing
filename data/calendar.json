@@ -1,11 +1,11 @@
 [
  {
   "date": "2026-10-26",
-  "day": -2,
+  "day": -3,
   "weekday": "Mon",
   "week": 1,
   "phase": "pre-launch",
-  "focus": "Pre-launch day −2. The public launch is Wed 28 Oct at 19:00 CET (18:00 UTC). Set up the profiles, prepare and schedule the posts, check the countdown on makeborne.com. Nothing that says \"we launched\" goes out.",
+  "focus": "Pre-launch day −3. The public launch is Thu 29 Oct at 21:00 CET (20:00 UTC). Set up the profiles, prepare and schedule the posts, check the countdown on makeborne.com. Nothing that says \"we launched\" goes out.",
   "posts": [],
   "actions": [
    {
@@ -16,12 +16,12 @@
    {
     "type": "launch",
     "owner": "Founder",
-    "what": "Prepare and schedule the launch posts: load V01, V02, V03, V08, C08 and C15 with their captions (open Wed 28 Oct on Today, each post has the exact words under How) as drafts. Schedule only where the app allows it, and never earlier than Wed 28 Oct 19:00."
+    "what": "Prepare and schedule the launch posts: load V01, V02, V03, V08, C08 and C15 with their captions (open Thu 29 Oct on Today, each post has the exact words under How) as drafts. Schedule only where the app allows it, and never earlier than Thu 29 Oct 21:00."
    },
    {
     "type": "launch",
     "owner": "Founder",
-    "what": "Check the countdown on makeborne.com: it counts down to Wed 28 Oct 19:00 CET (18:00 UTC) on a phone and on a laptop, and it does not say \"live\" anywhere yet."
+    "what": "Check the countdown on makeborne.com: it counts down to Thu 29 Oct 21:00 CET (20:00 UTC) on a phone and on a laptop, and it does not say \"live\" anywhere yet."
    },
    {
     "type": "analysis",
@@ -33,66 +33,18 @@
  },
  {
   "date": "2026-10-27",
-  "day": -1,
+  "day": -2,
   "weekday": "Tue",
   "week": 1,
   "phase": "pre-launch",
-  "focus": "Pre-launch day −1. Story S1 at 09:15, then the \"Tomorrow\" teaser T3 at 19:00 (Reels, TikTok 19:05, Shorts 19:10). Set the bio link, switch on the GO keyword, schedule Wednesday. Launch tomorrow at 19:00 CET.",
+  "focus": "Pre-launch day −2. The launch moved to Thu 29 Oct at 21:00 CET. Tonight at 19:00 Story S4 announces the new time with the real makeborne.com countdown. No teaser video tonight: T3-T6 have the old Wednesday time in them and are never posted. Set the bio link, switch on GO, check the countdown.",
   "posts": [
-   {
-    "channel": "TikTok",
-    "account": "Makeborne brand TikTok (business account)",
-    "contentId": "T3",
-    "time": "19:05 CET (Europe/Sarajevo, UTC+1)",
-    "notes": "Teaser \"Tomorrow\": a speedrun of a deck, a book and a website against a 5:00 par, with the real build times. The music and sound effects are in the video: keep the original sound and add no platform music (skip TikTok's \"add sound\"). The video asks for a GO comment: answer every one with makeborne.com (on Instagram the GO keyword DM sends it). Says when, never that it is live: no price, no \"we launched\". Link in bio: makeborne.com (the countdown and the waitlist).",
-    "tag": "live",
-    "slot": "teaser",
-    "link": "makeborne.com",
-    "utm": {
-     "utm_source": "tiktok",
-     "utm_medium": "organic",
-     "utm_campaign": "teaser-2026-10",
-     "utm_content": "tt-t3"
-    }
-   },
-   {
-    "channel": "Instagram Reels",
-    "account": "Makeborne brand Instagram (professional)",
-    "contentId": "T3",
-    "time": "19:00 CET (Europe/Sarajevo, UTC+1)",
-    "notes": "Teaser \"Tomorrow\": a speedrun of a deck, a book and a website against a 5:00 par, with the real build times. The music and sound effects are in the video: keep the original sound and add no platform music (skip TikTok's \"add sound\"). The video asks for a GO comment: answer every one with makeborne.com (on Instagram the GO keyword DM sends it). Says when, never that it is live: no price, no \"we launched\". Link in bio: makeborne.com (the countdown and the waitlist).",
-    "tag": "live",
-    "slot": "teaser",
-    "link": "makeborne.com",
-    "utm": {
-     "utm_source": "instagram",
-     "utm_medium": "organic",
-     "utm_campaign": "teaser-2026-10",
-     "utm_content": "ig-t3"
-    }
-   },
-   {
-    "channel": "YouTube Shorts",
-    "account": "Makeborne YouTube channel",
-    "contentId": "T3",
-    "time": "19:10 CET (Europe/Sarajevo, UTC+1)",
-    "notes": "Teaser \"Tomorrow\": a speedrun of a deck, a book and a website against a 5:00 par, with the real build times. The music and sound effects are in the video: keep the original sound and add no platform music (skip TikTok's \"add sound\"). The video asks for a GO comment: answer every one with makeborne.com (on Instagram the GO keyword DM sends it). Says when, never that it is live: no price, no \"we launched\". Link in bio: makeborne.com (the countdown and the waitlist).",
-    "tag": "live",
-    "slot": "teaser",
-    "link": "makeborne.com",
-    "utm": {
-     "utm_source": "youtube",
-     "utm_medium": "organic",
-     "utm_campaign": "teaser-2026-10",
-     "utm_content": "yt-t3"
-    }
-   },
    {
     "channel": "Instagram Stories",
     "account": "Makeborne brand Instagram (professional)",
-    "contentId": "S1",
-    "time": "09:15 CET (Europe/Sarajevo, UTC+1)",
-    "notes": "Story with Instagram's countdown sticker (S1): post TUE-1900_tomorrow_cover.jpg as the Story, add the countdown sticker set to Wed 28 Oct, 19:00 (name it \"Makeborne launch\") and a link sticker to makeborne.com. Followers tap \"Remind me\". Nothing that says \"we launched\" or \"live now\" goes out before Wed 28 Oct 19:00 CET.",
+    "contentId": "S4",
+    "time": "19:00 CET (Europe/Sarajevo, UTC+1)",
+    "notes": "Story \"New time\": a 10-second screen recording of makeborne.com counting down to Thursday (on your phone), Instagram's countdown sticker set to Thu 29 Oct, 21:00 (\"Makeborne launch\"; followers tap Remind me) and a link sticker to makeborne.com. Text: \"Makeborne opens Thursday, 21:00 CET.\" Never says it is live.",
     "tag": "live",
     "slot": "teaser",
     "link": "makeborne.com",
@@ -100,7 +52,7 @@
      "utm_source": "instagram",
      "utm_medium": "organic",
      "utm_campaign": "teaser-2026-10",
-     "utm_content": "ig-s1"
+     "utm_content": "ig-s4"
     }
    }
   ],
@@ -108,7 +60,7 @@
    {
     "type": "launch",
     "owner": "Founder",
-    "what": "09:15 Post Story S1 (TUE-1900_tomorrow_cover.jpg) with Instagram's countdown sticker set to Wed 28 Oct, 19:00; followers tap 'Remind me'."
+    "what": "If Story S1 or anything else that says \"Wed 28 Oct\" or \"19:00 CET\" is already up, delete it now. Do not post T3 \"Tomorrow\" tonight (or T4-T6 ever): the old time is burned into those videos."
    },
    {
     "type": "launch",
@@ -121,181 +73,129 @@
     "what": "Before 19:00: set up and test the DM keyword automation. GO comes first (every teaser asks for it; the DM sends makeborne.com), then SITE, DECK, CLIENT and BOOK, each replying with its link (Instagram playbook, template t21). Test every word from a second account. Set makeborne.com as the bio link on Instagram, TikTok and YouTube: a link typed in a comment reply cannot be tapped."
    },
    {
-    "type": "launch",
-    "owner": "Founder",
-    "what": "Schedule Wednesday: T4 at 09:00 (Reels; TikTok 09:05, Shorts 09:10), S2 at 09:15, T5 and S3 at 18:00 (TikTok 18:02, Shorts 18:04). Post these by hand: T6 at 18:59:50, T7 \"We're live\" at 19:00 (TikTok 19:01, Shorts 19:02) once makeborne.com is open, and V01 at 19:30 (TikTok, Reel, Shorts). Keep the V01 captions as they are: they say \"We launched today\", which is true on Wednesday."
-   },
-   {
-    "type": "launch",
-    "owner": "Founder",
-    "what": "Check the countdown on makeborne.com again (phone and laptop): it ends at Wed 28 Oct 19:00 CET."
-   },
-   {
     "type": "analysis",
     "what": "Verify the checkout path: list every link in bios and posts; none may point to a Whop store page or Whop tracking link.",
     "owner": "Founder"
+   },
+   {
+    "type": "launch",
+    "owner": "Founder",
+    "what": "Schedule Wednesday: S5 \"find what's hidden\" Story at 12:00; T8 \"Guess the build time\" at 21:00 on Reels (TikTok 21:05, Shorts 21:10) with \"Makeborne opens tomorrow, Thu 29 Oct, 21:00 CET.\" added to each caption."
+   },
+   {
+    "type": "launch",
+    "owner": "Founder",
+    "what": "Check the countdown on makeborne.com (phone and laptop): it ends at Thu 29 Oct 21:00 CET."
    }
   ],
-  "kpiCheck": "Pre-launch: teasers say when, never that it is live; countdown live; DM keywords answer from a second account; every bio and post link checked."
+  "kpiCheck": "Pre-launch: nothing public says Wed 28 Oct or 19:00 any more; the countdown shows Thu 29 Oct 21:00 CET; DM keywords answer from a second account; every bio and post link checked."
  },
  {
   "date": "2026-10-28",
-  "day": 1,
+  "day": -1,
   "weekday": "Wed",
   "week": 1,
+  "phase": "pre-launch",
+  "focus": "Pre-launch day −1, 24 hours to go: the launch is tomorrow, Thu 29 Oct at 21:00 CET. 12:00 Story S5 \"something is hidden behind our countdown\"; 21:00 \"Guess the build time\" (T8) on Reels, TikTok 21:05 and Shorts 21:10, captioned \"opens tomorrow 21:00 CET\". Schedule Thursday. Nothing says it is live.",
+  "posts": [
+   {
+    "channel": "Instagram Stories",
+    "account": "Makeborne brand Instagram (professional)",
+    "contentId": "S5",
+    "time": "12:00 CET (Europe/Sarajevo, UTC+1)",
+    "notes": "Story \"Find what's hidden\": screen-record makeborne.com on your phone: press, hold and drag on the dark background until a website appears under your finger. Text: \"Something is hidden behind our countdown. Find it. Tomorrow 21:00 CET.\" Link sticker to makeborne.com. Never say the hidden sites were made with Makeborne.",
+    "tag": "live",
+    "slot": "teaser",
+    "link": "makeborne.com",
+    "utm": {
+     "utm_source": "instagram",
+     "utm_medium": "organic",
+     "utm_campaign": "teaser-2026-10",
+     "utm_content": "ig-s5"
+    }
+   },
+   {
+    "channel": "Instagram Reels",
+    "account": "Makeborne brand Instagram (professional)",
+    "contentId": "T8",
+    "time": "21:00 CET (Europe/Sarajevo, UTC+1)",
+    "notes": "\"Guess the build time\" (date-free; real Hollis site, real 4:36 build). Caption: the one in the posting sheet plus \"Makeborne opens tomorrow, Thu 29 Oct, 21:00 CET.\" The music is in the video: keep the original sound and add no platform music. Answer every GO with makeborne.com (the countdown and the waitlist) and reply to some of the guesses. It never says it is live.",
+    "tag": "live",
+    "slot": "teaser",
+    "link": "makeborne.com",
+    "utm": {
+     "utm_source": "instagram",
+     "utm_medium": "organic",
+     "utm_campaign": "teaser-2026-10",
+     "utm_content": "ig-t8"
+    }
+   },
+   {
+    "channel": "TikTok",
+    "account": "Makeborne brand TikTok (business account)",
+    "contentId": "T8",
+    "time": "21:05 CET (Europe/Sarajevo, UTC+1)",
+    "notes": "\"Guess the build time\" (date-free; real Hollis site, real 4:36 build). Caption: the one in the posting sheet plus \"Makeborne opens tomorrow, Thu 29 Oct, 21:00 CET.\" The music is in the video: keep the original sound and add no platform music. Answer every GO with makeborne.com (the countdown and the waitlist) and reply to some of the guesses. It never says it is live.",
+    "tag": "live",
+    "slot": "teaser",
+    "link": "makeborne.com",
+    "utm": {
+     "utm_source": "tiktok",
+     "utm_medium": "organic",
+     "utm_campaign": "teaser-2026-10",
+     "utm_content": "tt-t8"
+    }
+   },
+   {
+    "channel": "YouTube Shorts",
+    "account": "Makeborne YouTube channel",
+    "contentId": "T8",
+    "time": "21:10 CET (Europe/Sarajevo, UTC+1)",
+    "notes": "\"Guess the build time\" (date-free; real Hollis site, real 4:36 build). Caption: the one in the posting sheet plus \"Makeborne opens tomorrow, Thu 29 Oct, 21:00 CET.\" The music is in the video: keep the original sound and add no platform music. Answer every GO with makeborne.com (the countdown and the waitlist) and reply to some of the guesses. It never says it is live.",
+    "tag": "live",
+    "slot": "teaser",
+    "link": "makeborne.com",
+    "utm": {
+     "utm_source": "youtube",
+     "utm_medium": "organic",
+     "utm_campaign": "teaser-2026-10",
+     "utm_content": "yt-t8"
+    }
+   }
+  ],
+  "actions": [
+   {
+    "type": "launch",
+    "owner": "Founder",
+    "what": "Schedule Thursday: S6 \"Today\" Story at 09:15 and S7 \"1 hour\" at 20:00. Post these by hand on Thursday: T7 \"We're live\" at 21:00 (TikTok 21:01, Shorts 21:02) only once makeborne.com is open, the reveal Story S8 at 21:01, C15 at 21:05, LinkedIn V08 and X C08 at 21:15, V01 at 21:30 (TikTok, Reel, Shorts), V02 on TikTok at 22:00 and V03 at 22:30. Keep the V01 captions: they say \"We launched today\" and go out Thursday only."
+   },
+   {
+    "type": "launch",
+    "owner": "Founder",
+    "what": "Check the countdown on makeborne.com (phone and laptop): it ends at Thu 29 Oct 21:00 CET and nothing says \"live\"."
+   },
+   {
+    "type": "launch",
+    "owner": "Founder",
+    "what": "After T8 goes out at 21:00: answer every GO with makeborne.com (the countdown and the waitlist) and reply to a few guesses for an hour."
+   }
+  ],
+  "kpiCheck": "Pre-launch: T8 and S5 never say it is live; the countdown ends Thu 29 Oct 21:00 CET; Thursday scheduled; every GO answered."
+ },
+ {
+  "date": "2026-10-29",
+  "day": 1,
+  "weekday": "Thu",
+  "week": 1,
   "phase": "launch-week",
-  "focus": "Launch day, 19:00 CET: the public launch. Countdown ends, V01 goes out on TikTok, Reels and Shorts, then the Story, LinkedIn and X. TAAFT first among the listings, warm network, nothing promoted that is not live.",
+  "focus": "Launch day, 21:00 CET: the public launch. Stories at 09:15 (\"Today\") and 20:00 (\"1 hour\"); at 21:00 the countdown ends, T7 \"We're live\" goes out (Reels, TikTok 21:01, Shorts 21:02) with the real reveal Story at 21:01; then the C15 Story 21:05, LinkedIn and X 21:15, V01 at 21:30, the TikToks V02 22:00 and V03 22:30. TAAFT first among the listings, warm network, nothing promoted that is not live.",
   "posts": [
    {
     "channel": "TikTok",
     "account": "Makeborne brand TikTok (business account)",
-    "contentId": "T4",
-    "time": "09:05 CET (Europe/Sarajevo, UTC+1)",
-    "notes": "Teaser \"Today\": one real brief (\"I need the phone to ring\"), then the site it became. The music and sound effects are in the video: keep the original sound and add no platform music (skip TikTok's \"add sound\"). The video asks for a GO comment: answer every one with makeborne.com (on Instagram the GO keyword DM sends it). Says when, never that it is live: no price, no \"we launched\". Link in bio: makeborne.com (the countdown and the waitlist).",
-    "tag": "live",
-    "slot": "teaser",
-    "link": "makeborne.com",
-    "utm": {
-     "utm_source": "tiktok",
-     "utm_medium": "organic",
-     "utm_campaign": "teaser-2026-10",
-     "utm_content": "tt-t4"
-    }
-   },
-   {
-    "channel": "Instagram Reels",
-    "account": "Makeborne brand Instagram (professional)",
-    "contentId": "T4",
-    "time": "09:00 CET (Europe/Sarajevo, UTC+1)",
-    "notes": "Teaser \"Today\": one real brief (\"I need the phone to ring\"), then the site it became. The music and sound effects are in the video: keep the original sound and add no platform music (skip TikTok's \"add sound\"). The video asks for a GO comment: answer every one with makeborne.com (on Instagram the GO keyword DM sends it). Says when, never that it is live: no price, no \"we launched\". Link in bio: makeborne.com (the countdown and the waitlist).",
-    "tag": "live",
-    "slot": "teaser",
-    "link": "makeborne.com",
-    "utm": {
-     "utm_source": "instagram",
-     "utm_medium": "organic",
-     "utm_campaign": "teaser-2026-10",
-     "utm_content": "ig-t4"
-    }
-   },
-   {
-    "channel": "YouTube Shorts",
-    "account": "Makeborne YouTube channel",
-    "contentId": "T4",
-    "time": "09:10 CET (Europe/Sarajevo, UTC+1)",
-    "notes": "Teaser \"Today\": one real brief (\"I need the phone to ring\"), then the site it became. The music and sound effects are in the video: keep the original sound and add no platform music (skip TikTok's \"add sound\"). The video asks for a GO comment: answer every one with makeborne.com (on Instagram the GO keyword DM sends it). Says when, never that it is live: no price, no \"we launched\". Link in bio: makeborne.com (the countdown and the waitlist).",
-    "tag": "live",
-    "slot": "teaser",
-    "link": "makeborne.com",
-    "utm": {
-     "utm_source": "youtube",
-     "utm_medium": "organic",
-     "utm_campaign": "teaser-2026-10",
-     "utm_content": "yt-t4"
-    }
-   },
-   {
-    "channel": "TikTok",
-    "account": "Makeborne brand TikTok (business account)",
-    "contentId": "T5",
-    "time": "18:02 CET (Europe/Sarajevo, UTC+1)",
-    "notes": "Teaser \"1 hour\": a 60:00 clock that seven real builds count down. The music and sound effects are in the video: keep the original sound and add no platform music (skip TikTok's \"add sound\"). The video asks for a GO comment: answer every one with makeborne.com (on Instagram the GO keyword DM sends it). Says when, never that it is live: no price, no \"we launched\". Link in bio: makeborne.com (the countdown and the waitlist).",
-    "tag": "live",
-    "slot": "teaser",
-    "link": "makeborne.com",
-    "utm": {
-     "utm_source": "tiktok",
-     "utm_medium": "organic",
-     "utm_campaign": "teaser-2026-10",
-     "utm_content": "tt-t5"
-    }
-   },
-   {
-    "channel": "Instagram Reels",
-    "account": "Makeborne brand Instagram (professional)",
-    "contentId": "T5",
-    "time": "18:00 CET (Europe/Sarajevo, UTC+1)",
-    "notes": "Teaser \"1 hour\": a 60:00 clock that seven real builds count down. The music and sound effects are in the video: keep the original sound and add no platform music (skip TikTok's \"add sound\"). The video asks for a GO comment: answer every one with makeborne.com (on Instagram the GO keyword DM sends it). Says when, never that it is live: no price, no \"we launched\". Link in bio: makeborne.com (the countdown and the waitlist).",
-    "tag": "live",
-    "slot": "teaser",
-    "link": "makeborne.com",
-    "utm": {
-     "utm_source": "instagram",
-     "utm_medium": "organic",
-     "utm_campaign": "teaser-2026-10",
-     "utm_content": "ig-t5"
-    }
-   },
-   {
-    "channel": "YouTube Shorts",
-    "account": "Makeborne YouTube channel",
-    "contentId": "T5",
-    "time": "18:04 CET (Europe/Sarajevo, UTC+1)",
-    "notes": "Teaser \"1 hour\": a 60:00 clock that seven real builds count down. The music and sound effects are in the video: keep the original sound and add no platform music (skip TikTok's \"add sound\"). The video asks for a GO comment: answer every one with makeborne.com (on Instagram the GO keyword DM sends it). Says when, never that it is live: no price, no \"we launched\". Link in bio: makeborne.com (the countdown and the waitlist).",
-    "tag": "live",
-    "slot": "teaser",
-    "link": "makeborne.com",
-    "utm": {
-     "utm_source": "youtube",
-     "utm_medium": "organic",
-     "utm_campaign": "teaser-2026-10",
-     "utm_content": "yt-t5"
-    }
-   },
-   {
-    "channel": "TikTok",
-    "account": "Makeborne brand TikTok (business account)",
-    "contentId": "T6",
-    "time": "18:59 CET (Europe/Sarajevo, UTC+1)",
-    "notes": "Teaser \"Final 10 seconds\": post it by hand at 18:59:50 on all three, so its 0 and \"NOW OPEN\" (9.4 s in) land at 19:00. If you can only schedule to the minute, post it at 19:00 and move T7 to 19:03. The music and sound effects are in the video: keep the original sound and add no platform music (skip TikTok's \"add sound\"). The video asks for a GO comment: answer every one with makeborne.com (on Instagram the GO keyword DM sends it).",
-    "tag": "live",
-    "slot": "teaser",
-    "link": "makeborne.com",
-    "utm": {
-     "utm_source": "tiktok",
-     "utm_medium": "organic",
-     "utm_campaign": "teaser-2026-10",
-     "utm_content": "tt-t6"
-    }
-   },
-   {
-    "channel": "Instagram Reels",
-    "account": "Makeborne brand Instagram (professional)",
-    "contentId": "T6",
-    "time": "18:59 CET (Europe/Sarajevo, UTC+1)",
-    "notes": "Teaser \"Final 10 seconds\": post it by hand at 18:59:50 on all three, so its 0 and \"NOW OPEN\" (9.4 s in) land at 19:00. If you can only schedule to the minute, post it at 19:00 and move T7 to 19:03. The music and sound effects are in the video: keep the original sound and add no platform music (skip TikTok's \"add sound\"). The video asks for a GO comment: answer every one with makeborne.com (on Instagram the GO keyword DM sends it).",
-    "tag": "live",
-    "slot": "teaser",
-    "link": "makeborne.com",
-    "utm": {
-     "utm_source": "instagram",
-     "utm_medium": "organic",
-     "utm_campaign": "teaser-2026-10",
-     "utm_content": "ig-t6"
-    }
-   },
-   {
-    "channel": "YouTube Shorts",
-    "account": "Makeborne YouTube channel",
-    "contentId": "T6",
-    "time": "18:59 CET (Europe/Sarajevo, UTC+1)",
-    "notes": "Teaser \"Final 10 seconds\": post it by hand at 18:59:50 on all three, so its 0 and \"NOW OPEN\" (9.4 s in) land at 19:00. If you can only schedule to the minute, post it at 19:00 and move T7 to 19:03. The music and sound effects are in the video: keep the original sound and add no platform music (skip TikTok's \"add sound\"). The video asks for a GO comment: answer every one with makeborne.com (on Instagram the GO keyword DM sends it).",
-    "tag": "live",
-    "slot": "teaser",
-    "link": "makeborne.com",
-    "utm": {
-     "utm_source": "youtube",
-     "utm_medium": "organic",
-     "utm_campaign": "teaser-2026-10",
-     "utm_content": "yt-t6"
-    }
-   },
-   {
-    "channel": "TikTok",
-    "account": "Makeborne brand TikTok (business account)",
     "contentId": "T7",
-    "time": "19:01 CET (Europe/Sarajevo, UTC+1)",
-    "notes": "\"We're live\": post it only once makeborne.com is open (load it signed out first: the countdown must be gone). Reels at 19:00, TikTok 19:01, Shorts 19:02; V01 follows at 19:30. The music and sound effects are in the video: keep the original sound and add no platform music (skip TikTok's \"add sound\"). The video asks for a GO comment: answer every one with makeborne.com (on Instagram the GO keyword DM sends it). It is the only teaser that may say \"live\", because at 19:00 it is.",
+    "time": "21:01 CET (Europe/Sarajevo, UTC+1)",
+    "notes": "\"We're live\": post it only once makeborne.com is open (load it signed out first: the countdown must be gone). Reels at 21:00, TikTok 21:01, Shorts 21:02; V01 follows at 21:30. The music and sound effects are in the video: keep the original sound and add no platform music (skip TikTok's \"add sound\"). The video asks for a GO comment: answer every one with makeborne.com (on Instagram the GO keyword DM sends it). It is the only teaser that may say \"live\", because at 21:00 it is.",
     "tag": "live",
     "slot": "teaser",
     "link": "makeborne.com",
@@ -310,8 +210,8 @@
     "channel": "Instagram Reels",
     "account": "Makeborne brand Instagram (professional)",
     "contentId": "T7",
-    "time": "19:00 CET (Europe/Sarajevo, UTC+1)",
-    "notes": "\"We're live\": post it only once makeborne.com is open (load it signed out first: the countdown must be gone). Reels at 19:00, TikTok 19:01, Shorts 19:02; V01 follows at 19:30. The music and sound effects are in the video: keep the original sound and add no platform music (skip TikTok's \"add sound\"). The video asks for a GO comment: answer every one with makeborne.com (on Instagram the GO keyword DM sends it). It is the only teaser that may say \"live\", because at 19:00 it is.",
+    "time": "21:00 CET (Europe/Sarajevo, UTC+1)",
+    "notes": "\"We're live\": post it only once makeborne.com is open (load it signed out first: the countdown must be gone). Reels at 21:00, TikTok 21:01, Shorts 21:02; V01 follows at 21:30. The music and sound effects are in the video: keep the original sound and add no platform music (skip TikTok's \"add sound\"). The video asks for a GO comment: answer every one with makeborne.com (on Instagram the GO keyword DM sends it). It is the only teaser that may say \"live\", because at 21:00 it is.",
     "tag": "live",
     "slot": "teaser",
     "link": "makeborne.com",
@@ -326,8 +226,8 @@
     "channel": "YouTube Shorts",
     "account": "Makeborne YouTube channel",
     "contentId": "T7",
-    "time": "19:02 CET (Europe/Sarajevo, UTC+1)",
-    "notes": "\"We're live\": post it only once makeborne.com is open (load it signed out first: the countdown must be gone). Reels at 19:00, TikTok 19:01, Shorts 19:02; V01 follows at 19:30. The music and sound effects are in the video: keep the original sound and add no platform music (skip TikTok's \"add sound\"). The video asks for a GO comment: answer every one with makeborne.com (on Instagram the GO keyword DM sends it). It is the only teaser that may say \"live\", because at 19:00 it is.",
+    "time": "21:02 CET (Europe/Sarajevo, UTC+1)",
+    "notes": "\"We're live\": post it only once makeborne.com is open (load it signed out first: the countdown must be gone). Reels at 21:00, TikTok 21:01, Shorts 21:02; V01 follows at 21:30. The music and sound effects are in the video: keep the original sound and add no platform music (skip TikTok's \"add sound\"). The video asks for a GO comment: answer every one with makeborne.com (on Instagram the GO keyword DM sends it). It is the only teaser that may say \"live\", because at 21:00 it is.",
     "tag": "live",
     "slot": "teaser",
     "link": "makeborne.com",
@@ -339,42 +239,10 @@
     }
    },
    {
-    "channel": "Instagram Stories",
-    "account": "Makeborne brand Instagram (professional)",
-    "contentId": "S2",
-    "time": "09:15 CET (Europe/Sarajevo, UTC+1)",
-    "notes": "Story with the countdown sticker, launch morning (S2): post WED-0900_today_cover.jpg as the Story, add the same countdown sticker (Wed 28 Oct, 19:00, \"Makeborne launch\") and a link sticker to makeborne.com. Nothing that says \"we launched\" or \"live now\" goes out before Wed 28 Oct 19:00 CET.",
-    "tag": "live",
-    "slot": "teaser",
-    "link": "makeborne.com",
-    "utm": {
-     "utm_source": "instagram",
-     "utm_medium": "organic",
-     "utm_campaign": "teaser-2026-10",
-     "utm_content": "ig-s2"
-    }
-   },
-   {
-    "channel": "Instagram Stories",
-    "account": "Makeborne brand Instagram (professional)",
-    "contentId": "S3",
-    "time": "18:00 CET (Europe/Sarajevo, UTC+1)",
-    "notes": "Story with the countdown sticker, one hour to go (S3): post WED-1800_1hour_cover.jpg as the Story, add the countdown sticker and a link sticker to makeborne.com. Nothing that says \"we launched\" or \"live now\" goes out before Wed 28 Oct 19:00 CET.",
-    "tag": "live",
-    "slot": "teaser",
-    "link": "makeborne.com",
-    "utm": {
-     "utm_source": "instagram",
-     "utm_medium": "organic",
-     "utm_campaign": "teaser-2026-10",
-     "utm_content": "ig-s3"
-    }
-   },
-   {
     "channel": "TikTok",
     "account": "Makeborne brand TikTok (business account)",
     "contentId": "V01",
-    "time": "19:30 CET (Europe/Sarajevo, UTC+1)",
+    "time": "21:30 CET (Europe/Sarajevo, UTC+1)",
     "notes": "Pin to profile after the end-card check (true end card: 'makeborne.com · from $20/mo + tax · full refund until you use credits'). TikTok: Commercial Music Library track, not the Mixkit track. CTA 'Link in bio, or DM me SITE'. Until /go/ is live (target Thu 29 Oct) use the full makeborne.com URL with these UTMs; never a Whop store or tracking link.",
     "tag": "live",
     "slot": "original",
@@ -391,7 +259,7 @@
     "channel": "TikTok",
     "account": "Makeborne brand TikTok (business account)",
     "contentId": "V02",
-    "time": "20:00 CET (Europe/Sarajevo, UTC+1)",
+    "time": "22:00 CET (Europe/Sarajevo, UTC+1)",
     "notes": "REAL VERSION (A/B pair AB4 with the Higgsfield post of 2026-11-25): no generated scenes, no AI label needed. Fixture business (fictional, trademark-checked). Real measured time or 'sped up xN' chip. Say 'a Makeborne address', never 'your own domain'. Until /go/ is live (target Thu 29 Oct) use the full makeborne.com URL with these UTMs; never a Whop store or tracking link.",
     "tag": "live",
     "slot": "original",
@@ -410,7 +278,7 @@
     "channel": "TikTok",
     "account": "Makeborne brand TikTok (business account)",
     "contentId": "V03",
-    "time": "21:00 CET (Europe/Sarajevo, UTC+1)",
+    "time": "22:30 CET (Europe/Sarajevo, UTC+1)",
     "notes": "REAL VERSION (A/B pair AB3 with the Higgsfield post of 2026-11-24): no generated scenes, no AI label needed. Day-1 deck speedrun (D1) with the real stopwatch on screen. Until /go/ is live (target Thu 29 Oct) use the full makeborne.com URL with these UTMs; never a Whop store or tracking link.",
     "tag": "live",
     "slot": "original",
@@ -429,7 +297,7 @@
     "channel": "Instagram Reels",
     "account": "Makeborne brand Instagram (professional)",
     "contentId": "V01",
-    "time": "19:30 CET (Europe/Sarajevo, UTC+1)",
+    "time": "21:30 CET (Europe/Sarajevo, UTC+1)",
     "notes": "Native re-edit of the same-week piece (new cover/caption, no TikTok watermark). Pin. CTA: 'Comment SITE' (keyword DM t21 returns the /go/ link, 3 briefs, a 30 s uncut build and the refund line). Until /go/ is live (target Thu 29 Oct) use the full makeborne.com URL with these UTMs; never a Whop store or tracking link.",
     "tag": "live",
     "slot": "re-edit",
@@ -446,7 +314,7 @@
     "channel": "Instagram Stories",
     "account": "Makeborne brand Instagram (professional)",
     "contentId": "C15",
-    "time": "19:05 CET (Europe/Sarajevo, UTC+1)",
+    "time": "21:05 CET (Europe/Sarajevo, UTC+1)",
     "notes": "Keyword prompt CLIENT (free-tier automation). Stories are not counted in the cadence. Until /go/ is live (target Thu 29 Oct) use the full makeborne.com URL with these UTMs; never a Whop store or tracking link.",
     "tag": "live",
     "slot": "original",
@@ -463,7 +331,7 @@
     "channel": "LinkedIn",
     "account": "Founder LinkedIn (personal profile)",
     "contentId": "V08",
-    "time": "19:15 CET (Europe/Sarajevo, UTC+1)",
+    "time": "21:15 CET (Europe/Sarajevo, UTC+1)",
     "notes": "Copy: outreach.json launchCopy.linkedin li-day1 ('Day 1'). Attach the 30-45 s real build clip; Day 1 card C08 as the alternative image. Link in the first comment. Ask 'comment what you want built first'. Until /go/ is live (target Thu 29 Oct) use the full makeborne.com URL with these UTMs; never a Whop store or tracking link.",
     "tag": "live",
     "slot": "original",
@@ -480,7 +348,7 @@
     "channel": "X",
     "account": "Founder X (personal)",
     "contentId": "C08",
-    "time": "19:15 CET (Europe/Sarajevo, UTC+1)",
+    "time": "21:15 CET (Europe/Sarajevo, UTC+1)",
     "notes": "Thread outreach.json launchCopy.x x-launch; first tweet carries the V02 real-speed build; link in the first reply. Until /go/ is live (target Thu 29 Oct) use the full makeborne.com URL with these UTMs; never a Whop store or tracking link.",
     "tag": "live",
     "slot": "original",
@@ -497,7 +365,7 @@
     "channel": "YouTube Shorts",
     "account": "Makeborne YouTube channel",
     "contentId": "V01",
-    "time": "19:30 CET (Europe/Sarajevo, UTC+1)",
+    "time": "21:30 CET (Europe/Sarajevo, UTC+1)",
     "notes": "Native re-edit of the same-week piece (new cover/caption, no TikTok watermark). Shorts loop: last frame returns to frame 0. Until /go/ is live (target Thu 29 Oct) use the full makeborne.com URL with these UTMs; never a Whop store or tracking link.",
     "tag": "live",
     "slot": "re-edit",
@@ -509,17 +377,75 @@
      "utm_content": "yt-v01-l1"
     },
     "episode": 1
+   },
+   {
+    "channel": "Instagram Stories",
+    "account": "Makeborne brand Instagram (professional)",
+    "contentId": "S6",
+    "time": "09:15 CET (Europe/Sarajevo, UTC+1)",
+    "notes": "Story \"Today, 21:00\": a 10-second screen recording of makeborne.com counting down (on your phone), Instagram's countdown sticker set to Thu 29 Oct, 21:00 (\"Makeborne launch\"; followers tap Remind me) and a link sticker to makeborne.com. Text: \"Today. 21:00 CET.\" Says when, never that it is live.",
+    "tag": "live",
+    "slot": "teaser",
+    "link": "makeborne.com",
+    "utm": {
+     "utm_source": "instagram",
+     "utm_medium": "organic",
+     "utm_campaign": "teaser-2026-10",
+     "utm_content": "ig-s6"
+    }
+   },
+   {
+    "channel": "Instagram Stories",
+    "account": "Makeborne brand Instagram (professional)",
+    "contentId": "S7",
+    "time": "20:00 CET (Europe/Sarajevo, UTC+1)",
+    "notes": "Story \"1 hour\": screen-record makeborne.com at about 59:30 to go (the clock rolling), add the countdown sticker and a link sticker to makeborne.com. Text: \"1 hour.\" Never says it is live.",
+    "tag": "live",
+    "slot": "teaser",
+    "link": "makeborne.com",
+    "utm": {
+     "utm_source": "instagram",
+     "utm_medium": "organic",
+     "utm_campaign": "teaser-2026-10",
+     "utm_content": "ig-s7"
+    }
+   },
+   {
+    "channel": "Instagram Stories",
+    "account": "Makeborne brand Instagram (professional)",
+    "contentId": "S8",
+    "time": "21:01 CET (Europe/Sarajevo, UTC+1)",
+    "notes": "Story \"We're live\": the screen recording you start at 20:59:45 on your phone, showing makeborne.com hitting zero and the site opening (the real reveal). Trim to 15 s, add a link sticker to makeborne.com and the text \"We're live.\" Post it at once; the same clip goes to X and LinkedIn as a reply under the launch posts.",
+    "tag": "live",
+    "slot": "teaser",
+    "link": "makeborne.com",
+    "utm": {
+     "utm_source": "instagram",
+     "utm_medium": "organic",
+     "utm_campaign": "teaser-2026-10",
+     "utm_content": "ig-s8"
+    }
    }
   ],
   "actions": [
    {
     "type": "product",
-    "what": "18:00 Before any post: confirm the three copy fixes and 'coming soon' labels are live or hide the copy (ga3); raise the AI daily limit for the day (D6, ga2); confirm support cover with a 4 h reply target.",
+    "what": "Attribution target: ga1 (/go/ redirect, first touch on the account, mb_src/mb_campaign/mb_aff on Makeborne-created Whop checkout) and ga4 live. If not, ship the 'How did you hear about us?' field today and hold all creator spend.",
+    "owner": "Engineering"
+   },
+   {
+    "type": "product",
+    "what": "Ship the public sample review link ('play the client', ga5) if ready; otherwise week 2.",
+    "owner": "Engineering"
+   },
+   {
+    "type": "product",
+    "what": "20:00 Before any post: confirm the three copy fixes and 'coming soon' labels are live or hide the copy (ga3); raise the AI daily limit for the day (D6, ga2); confirm support cover with a 4 h reply target.",
     "owner": "Owner + Engineering"
    },
    {
     "type": "launch",
-    "what": "Submit the TAAFT listing FIRST, right after the 19:00 posts ($49, check the launch-first $300 PPC bonus applies to the $49 tier [U]); hold every other listing until it is live.",
+    "what": "Submit the TAAFT listing FIRST, right after the 21:00 posts ($49, check the launch-first $300 PPC bonus applies to the $49 tier [U]); hold every other listing until it is live.",
     "budgetLineId": "b1",
     "owner": "Owner"
    },
@@ -547,12 +473,12 @@
   "kpiCheck": "Day 1: TAAFT submitted before any other listing; AI limit raised; zero posts that promote non-live features; first payers start a build within 10 min. Daily: first build <=10 min for >=90% of payers; AI daily limit not hit on a day with new payers; support first reply <=4 h; any Whop payment without a Makeborne-created checkout = same-day alert; 48 h read on posts from 2 days ago (>=3x median -> re-cut)."
  },
  {
-  "date": "2026-10-29",
+  "date": "2026-10-30",
   "day": 2,
-  "weekday": "Thu",
+  "weekday": "Fri",
   "week": 1,
   "phase": "launch-week",
-  "focus": "Day 2: directories after TAAFT is live, PH coming-soon page, first comment-reply speedrun. Attribution target day stays Thu 29 Oct (ga1 + ga4, sample review link ga5 if ready).",
+  "focus": "Day 2: directories after TAAFT is live, PH coming-soon page, first comment-reply speedrun. Attribution target was launch day, Thu 29 Oct (ga1 + ga4, sample review link ga5 if ready).",
   "posts": [
    {
     "channel": "TikTok",
@@ -643,16 +569,6 @@
   ],
   "actions": [
    {
-    "type": "product",
-    "what": "Attribution target: ga1 (/go/ redirect, first touch on the account, mb_src/mb_campaign/mb_aff on Makeborne-created Whop checkout) and ga4 live. If not, ship the 'How did you hear about us?' field today and hold all creator spend.",
-    "owner": "Engineering"
-   },
-   {
-    "type": "product",
-    "what": "Ship the public sample review link ('play the client', ga5) if ready; otherwise week 2.",
-    "owner": "Engineering"
-   },
-   {
     "type": "launch",
     "what": "When the TAAFT listing is live: free directories AlternativeTo (as an alternative to Lovable, Gamma, Framer and Wix), SaaSHub, Microlaunch, Future Tools (t13; links /go/alt, /go/saashub, /go/microlaunch and /go/futuretools, the tracking.md short codes).",
     "owner": "Owner"
@@ -676,9 +592,9 @@
   "kpiCheck": "Spend gate: /go/ links + first touch + checkout metadata live? If not, every paid line except TAAFT stays frozen (alert). Daily: first build <=10 min for >=90% of payers; AI daily limit not hit on a day with new payers; support first reply <=4 h; any Whop payment without a Makeborne-created checkout = same-day alert; 48 h read on posts from 2 days ago (>=3x median -> re-cut)."
  },
  {
-  "date": "2026-10-30",
+  "date": "2026-10-31",
   "day": 3,
-  "weekday": "Fri",
+  "weekday": "Sat",
   "week": 1,
   "phase": "launch-week",
   "focus": "Client-approval POV (F2) on 3 surfaces, Indie Hackers launch post, r/SideProject story, press draft, join one agency community.",
@@ -806,7 +722,7 @@
   "actions": [
    {
     "type": "launch",
-    "what": "Draft /press and the local-language release (Bosnian/Croatian/Serbian) for Monday 2 Nov (day 6).",
+    "what": "Draft /press and the local-language release (Bosnian/Croatian/Serbian) for Tuesday 3 Nov (day 6).",
     "owner": "Founder"
    },
    {
@@ -833,9 +749,9 @@
   "kpiCheck": "Daily: first build <=10 min for >=90% of payers; AI daily limit not hit on a day with new payers; support first reply <=4 h; any Whop payment without a Makeborne-created checkout = same-day alert; 48 h read on posts from 2 days ago (>=3x median -> re-cut)."
  },
  {
-  "date": "2026-10-31",
+  "date": "2026-11-01",
   "day": 4,
-  "weekday": "Sat",
+  "weekday": "Sun",
   "week": 1,
   "phase": "launch-week",
   "focus": "First carousel. First customer calls. Book Uneed.",
@@ -953,7 +869,7 @@
    },
    {
     "type": "launch",
-    "what": "Do not book Uneed yet: ask Uneed whether a pick-your-date slot can be rescheduled [U]. Book only after the 3 Nov images go/no-go, unless rescheduling is confirmed; fallback: the slot moves to the next gated beat.",
+    "what": "Do not book Uneed yet: ask Uneed whether a pick-your-date slot can be rescheduled [U]. Book only after the 4 Nov images go/no-go, unless rescheduling is confirmed; fallback: the slot moves to the next gated beat.",
     "budgetLineId": "b6",
     "owner": "Owner"
    },
@@ -971,12 +887,12 @@
   "kpiCheck": "Daily: first build <=10 min for >=90% of payers; AI daily limit not hit on a day with new payers; support first reply <=4 h; any Whop payment without a Makeborne-created checkout = same-day alert; 48 h read on posts from 2 days ago (>=3x median -> re-cut)."
  },
  {
-  "date": "2026-11-01",
+  "date": "2026-11-02",
   "day": 5,
-  "weekday": "Sun",
-  "week": 1,
+  "weekday": "Mon",
+  "week": 2,
   "phase": "launch-week",
-  "focus": "First 48-hour read and re-cuts, Day 5 numbers (the regional press pitch waits for Mon 2 Nov), deck proof + lead finder.",
+  "focus": "First 48-hour read and re-cuts, Day 5 numbers (the regional press pitch goes on Tue 3 Nov, day 6), deck proof + lead finder.",
   "posts": [
    {
     "channel": "TikTok",
@@ -1178,9 +1094,9 @@
   "kpiCheck": "Daily: first build <=10 min for >=90% of payers; AI daily limit not hit on a day with new payers; support first reply <=4 h; any Whop payment without a Makeborne-created checkout = same-day alert; 48 h read on posts from 2 days ago (>=3x median -> re-cut)."
  },
  {
-  "date": "2026-11-02",
+  "date": "2026-11-03",
   "day": 6,
-  "weekday": "Mon",
+  "weekday": "Tue",
   "week": 2,
   "phase": "launch-week",
   "focus": "Launch day 6: Batch-film day (10 videos for week 2), first creator agreements, write the images-beat PH copy (held until the gate). Also week 2: Full cadence on the 4 core surfaces; onboard wave-1 creators; ship sample review link, review-page loop, landing pages and use-my-brief links. Batch-film day + client-work and comment-reply posts.",
@@ -1362,9 +1278,9 @@
   "kpiCheck": "Daily: first build <=10 min for >=90% of payers; AI daily limit not hit on a day with new payers; support first reply <=4 h; any Whop payment without a Makeborne-created checkout = same-day alert; 48 h read on posts from 2 days ago (>=3x median -> re-cut)."
  },
  {
-  "date": "2026-11-03",
+  "date": "2026-11-04",
   "day": 7,
-  "weekday": "Tue",
+  "weekday": "Wed",
   "week": 2,
   "phase": "launch-week",
   "focus": "Launch day 7: Day 7 numbers (P2) everywhere, first weekly review (US clocks changed on Sun 1 Nov), images go/no-go. Also week 2: Full cadence on the 4 core surfaces; onboard wave-1 creators; ship sample review link, review-page loop, landing pages and use-my-brief links. Deck day.",
@@ -1475,20 +1391,39 @@
    {
     "channel": "YouTube Shorts",
     "account": "Makeborne YouTube channel",
-    "contentId": "V15",
+    "contentId": "V29",
     "time": "13:30 CET (Europe/Sarajevo, UTC+1)",
-    "notes": "HIGGSFIELD VERSION: HF05, HF06, HF04 in the HyperFrames slots; 'AI-generated scene' label on screen; TikTok AI-generated content on / YouTube altered or synthetic = Yes / Meta AI label. Native re-edit of the same-week piece (new cover/caption, no TikTok watermark). Re-edit of a TikTok piece; loop the last frame into frame 0; link in description and pinned comment.",
+    "notes": "REAL VERSION (A/B pair AB2 with the Higgsfield post of 2026-11-19): no generated scenes, no AI label needed. Native re-edit of the same-week piece (new cover/caption, no TikTok watermark). Re-edit of a TikTok piece; loop the last frame into frame 0; link in description and pinned comment.",
     "tag": "live",
     "slot": "re-edit",
-    "link": "makeborne.com/go/yt-v15",
+    "coverId": "C28",
+    "link": "makeborne.com/go/yt-v29",
     "utm": {
      "utm_source": "youtube",
      "utm_medium": "organic",
      "utm_campaign": "launch-2026-10",
-     "utm_content": "yt-v15-b4"
+     "utm_content": "yt-v29-s4"
     },
     "episode": 1,
-    "version": "higgsfield"
+    "version": "real",
+    "abPair": "AB2"
+   },
+   {
+    "channel": "Instagram Stories",
+    "account": "Makeborne brand Instagram (professional)",
+    "contentId": "C22",
+    "time": "13:20 CET (Europe/Sarajevo, UTC+1)",
+    "notes": "Keyword DM prompt; not counted in the cadence.",
+    "tag": "live",
+    "slot": "original",
+    "link": "makeborne.com/go/ig-c22-deck",
+    "utm": {
+     "utm_source": "instagram",
+     "utm_medium": "organic",
+     "utm_campaign": "launch-2026-10",
+     "utm_content": "ig-c22-dm2"
+    },
+    "episode": 1
    }
   ],
   "actions": [
@@ -1532,144 +1467,7 @@
     "type": "outreach",
     "what": "LinkedIn 15 comments on agency-owner posts (t07, comments first, no pitch); X 20 replies; 1 helpful contribution in the agency community (no links); 1 customer call (t18, consent via t19 before any public use).",
     "owner": "Founder"
-   }
-  ],
-  "kpiCheck": "Week-1 extras: 5 customer calls; 100+ PH coming-soon followers; 1 regional press mention; >=80% of payers start a first build within 10 minutes (>=90% from week 2). Week 1 scorecard vs base (kpis.json): qualified visits 3500, gross paid 35, net paid 30, activated payers 18, cumulative gross 35, active subs 30, MRR $1098, loop share 0%, owned posts 25-30, creators active 0, CAC n/a. Guardrails: refunds <=15% (per-source brake 20%), attribution coverage >=90% from week 2, activated >=60% of net payers (weeks 1-4) / >=70% after, IG DM keyword replies >=3 per 1,000 views, MRR below 80% of target two Sundays running -> re-forecast."
- },
- {
-  "date": "2026-11-04",
-  "day": 8,
-  "weekday": "Wed",
-  "week": 2,
-  "phase": "phase-1",
-  "focus": "Week 2: Full cadence on the 4 core surfaces; onboard wave-1 creators; ship sample review link, review-page loop, landing pages and use-my-brief links. Founder 'Day N' + speedrun.",
-  "posts": [
-   {
-    "channel": "TikTok",
-    "account": "Makeborne brand TikTok (business account)",
-    "contentId": "V11",
-    "time": "13:00 CET (Europe/Sarajevo, UTC+1)",
-    "notes": "PREREQUISITE ga5 (sample review link) and ga7 (/examples). Until both are live, the CTA is 'Watch the uncut build'; do not mention the sample link or the gallery. ",
-    "tag": "live",
-    "slot": "original",
-    "link": "makeborne.com/go/tt-v11",
-    "utm": {
-     "utm_source": "tiktok",
-     "utm_medium": "organic",
-     "utm_campaign": "launch-2026-10",
-     "utm_content": "tt-v11-p3"
-    },
-    "episode": 1
    },
-   {
-    "channel": "TikTok",
-    "account": "Makeborne brand TikTok (business account)",
-    "contentId": "V16",
-    "time": "21:30 CET (Europe/Sarajevo, UTC+1)",
-    "notes": "HIGGSFIELD VERSION: HF07, HF08 in the HyperFrames slots; 'AI-generated scene' label on screen; TikTok AI-generated content on / YouTube altered or synthetic = Yes / Meta AI label.",
-    "tag": "live",
-    "slot": "original",
-    "link": "makeborne.com/go/tt-v16",
-    "utm": {
-     "utm_source": "tiktok",
-     "utm_medium": "organic",
-     "utm_campaign": "launch-2026-10",
-     "utm_content": "tt-v16-s1"
-    },
-    "episode": 1,
-    "version": "higgsfield"
-   },
-   {
-    "channel": "Instagram Reels",
-    "account": "Makeborne brand Instagram (professional)",
-    "contentId": "V16",
-    "time": "20:15 CET (Europe/Sarajevo, UTC+1)",
-    "notes": "HIGGSFIELD VERSION: HF07, HF08 in the HyperFrames slots; 'AI-generated scene' label on screen; TikTok AI-generated content on / YouTube altered or synthetic = Yes / Meta AI label. Posting-time test: this Reel goes out at 20:15 CET instead of the usual 13:15 (Wed 4 and Fri 6 Nov, moved from Tue 3 / Wed 4 Nov with the launch; compare reach with the 13:15 Reels at the Sunday review on 8 Nov: 96 h for Wed 4, 48 h for Fri 6). Native re-edit of the same-week piece (new cover/caption, no TikTok watermark). CTA: 'Comment SITE' (keyword DM t21 returns the /go/ link, 3 briefs, a 30 s uncut build and the refund line).",
-    "tag": "live",
-    "slot": "re-edit",
-    "link": "makeborne.com/go/ig-v16",
-    "utm": {
-     "utm_source": "instagram",
-     "utm_medium": "organic",
-     "utm_campaign": "launch-2026-10",
-     "utm_content": "ig-v16-s1"
-    },
-    "episode": 1,
-    "version": "higgsfield"
-   },
-   {
-    "channel": "Instagram Stories",
-    "account": "Makeborne brand Instagram (professional)",
-    "contentId": "C22",
-    "time": "13:20 CET (Europe/Sarajevo, UTC+1)",
-    "notes": "Keyword DM prompt; not counted in the cadence.",
-    "tag": "live",
-    "slot": "original",
-    "link": "makeborne.com/go/ig-c22-deck",
-    "utm": {
-     "utm_source": "instagram",
-     "utm_medium": "organic",
-     "utm_campaign": "launch-2026-10",
-     "utm_content": "ig-c22-dm2"
-    },
-    "episode": 1
-   },
-   {
-    "channel": "LinkedIn",
-    "account": "Founder LinkedIn (personal profile)",
-    "contentId": "V13",
-    "time": "09:30 CET (Europe/Sarajevo, UTC+1)",
-    "notes": "Link in the first comment; burned-in captions; then 15 comments on agency-owner posts.",
-    "tag": "live",
-    "slot": "original",
-    "link": "makeborne.com/go/li-v13",
-    "utm": {
-     "utm_source": "linkedin",
-     "utm_medium": "organic",
-     "utm_campaign": "launch-2026-10",
-     "utm_content": "li-v13-f3"
-    },
-    "episode": 1
-   },
-   {
-    "channel": "X",
-    "account": "Founder X (personal)",
-    "contentId": "V14",
-    "time": "20:00 CET (Europe/Sarajevo, UTC+1)",
-    "notes": "Link in the first reply; then 20 replies in AI-builder and freelancer circles.",
-    "tag": "live",
-    "slot": "original",
-    "link": "makeborne.com/go/x-v14",
-    "utm": {
-     "utm_source": "x",
-     "utm_medium": "organic",
-     "utm_campaign": "launch-2026-10",
-     "utm_content": "x-v14-d2"
-    },
-    "episode": 1
-   },
-   {
-    "channel": "YouTube Shorts",
-    "account": "Makeborne YouTube channel",
-    "contentId": "V29",
-    "time": "13:30 CET (Europe/Sarajevo, UTC+1)",
-    "notes": "REAL VERSION (A/B pair AB2 with the Higgsfield post of 2026-11-19): no generated scenes, no AI label needed. Native re-edit of the same-week piece (new cover/caption, no TikTok watermark). Re-edit of a TikTok piece; loop the last frame into frame 0; link in description and pinned comment.",
-    "tag": "live",
-    "slot": "re-edit",
-    "coverId": "C28",
-    "link": "makeborne.com/go/yt-v29",
-    "utm": {
-     "utm_source": "youtube",
-     "utm_medium": "organic",
-     "utm_campaign": "launch-2026-10",
-     "utm_content": "yt-v29-s4"
-    },
-    "episode": 1,
-    "version": "real",
-    "abPair": "AB2"
-   }
-  ],
-  "actions": [
    {
     "type": "outreach",
     "what": "Newsletter editorial pitches with live features only (t12, launchCopy.newsletterPitch), 8-10, owner sends.",
@@ -1679,23 +1477,13 @@
     "type": "outreach",
     "what": "Ask the agency community admin for a 20-minute no-pitch workshop every two weeks from week 3 (t10).",
     "owner": "Founder"
-   },
-   {
-    "type": "analysis",
-    "what": "08:00 numbers: yesterday's Whop sales and refunds, /go/ clicks by source, AI limit hits, first-build times; flag any source above the 20% refund brake.",
-    "owner": "Founder"
-   },
-   {
-    "type": "outreach",
-    "what": "LinkedIn 15 comments on agency-owner posts (t07, comments first, no pitch); X 20 replies; 1 helpful contribution in the agency community (no links); 1 customer call (t18, consent via t19 before any public use).",
-    "owner": "Founder"
    }
   ],
-  "kpiCheck": "Daily: first build <=10 min for >=90% of payers; AI daily limit not hit on a day with new payers; support first reply <=4 h; any Whop payment without a Makeborne-created checkout = same-day alert; 48 h read on posts from 2 days ago (>=3x median -> re-cut)."
+  "kpiCheck": "Week-1 extras: 5 customer calls; 100+ PH coming-soon followers; 1 regional press mention; >=80% of payers start a first build within 10 minutes (>=90% from week 2). Week 1 scorecard vs base (kpis.json): qualified visits 3500, gross paid 35, net paid 30, activated payers 18, cumulative gross 35, active subs 30, MRR $1098, loop share 0%, owned posts 25-30, creators active 0, CAC n/a. Guardrails: refunds <=15% (per-source brake 20%), attribution coverage >=90% from week 2, activated >=60% of net payers (weeks 1-4) / >=70% after, IG DM keyword replies >=3 per 1,000 views, MRR below 80% of target two Sundays running -> re-forecast."
  },
  {
   "date": "2026-11-05",
-  "day": 9,
+  "day": 8,
   "weekday": "Thu",
   "week": 2,
   "phase": "phase-1",
@@ -1838,7 +1626,7 @@
  },
  {
   "date": "2026-11-06",
-  "day": 10,
+  "day": 9,
   "weekday": "Fri",
   "week": 2,
   "phase": "phase-1",
@@ -2000,7 +1788,7 @@
  },
  {
   "date": "2026-11-07",
-  "day": 11,
+  "day": 10,
   "weekday": "Sat",
   "week": 2,
   "phase": "phase-1",
@@ -2052,7 +1840,7 @@
  },
  {
   "date": "2026-11-08",
-  "day": 12,
+  "day": 11,
   "weekday": "Sun",
   "week": 2,
   "phase": "phase-1",
@@ -2143,7 +1931,7 @@
  },
  {
   "date": "2026-11-09",
-  "day": 13,
+  "day": 12,
   "weekday": "Mon",
   "week": 3,
   "phase": "phase-1",
@@ -2188,8 +1976,8 @@
     "channel": "Instagram Reels",
     "account": "Makeborne brand Instagram (professional)",
     "contentId": "V19",
-    "time": "13:15 CET (Europe/Sarajevo, UTC+1)",
-    "notes": "Native re-edit of the same-week piece (new cover/caption, no TikTok watermark). CTA: 'Comment CLIENT' (keyword DM t21 returns the /go/ link, 3 briefs, a 30 s uncut build and the refund line).",
+    "time": "20:15 CET (Europe/Sarajevo, UTC+1)",
+    "notes": "Native re-edit of the same-week piece (new cover/caption, no TikTok watermark). CTA: 'Comment CLIENT' (keyword DM t21 returns the /go/ link, 3 briefs, a 30 s uncut build and the refund line). Posting-time test: 20:15 (the pair is Fri 6 and Mon 9 Nov).",
     "tag": "live",
     "slot": "re-edit",
     "link": "makeborne.com/go/ig-v19",
@@ -2317,7 +2105,7 @@
  },
  {
   "date": "2026-11-10",
-  "day": 14,
+  "day": 13,
   "weekday": "Tue",
   "week": 3,
   "phase": "phase-1",
@@ -2447,7 +2235,7 @@
  },
  {
   "date": "2026-11-11",
-  "day": 15,
+  "day": 14,
   "weekday": "Wed",
   "week": 3,
   "phase": "phase-1",
@@ -2606,7 +2394,7 @@
  },
  {
   "date": "2026-11-12",
-  "day": 16,
+  "day": 15,
   "weekday": "Thu",
   "week": 3,
   "phase": "phase-1",
@@ -2789,7 +2577,7 @@
  },
  {
   "date": "2026-11-13",
-  "day": 17,
+  "day": 16,
   "weekday": "Fri",
   "week": 3,
   "phase": "phase-1",
@@ -2966,7 +2754,7 @@
  },
  {
   "date": "2026-11-14",
-  "day": 18,
+  "day": 17,
   "weekday": "Sat",
   "week": 3,
   "phase": "phase-1",
@@ -3041,7 +2829,7 @@
  },
  {
   "date": "2026-11-15",
-  "day": 19,
+  "day": 18,
   "weekday": "Sun",
   "week": 3,
   "phase": "phase-1",
@@ -3117,7 +2905,7 @@
  },
  {
   "date": "2026-11-16",
-  "day": 20,
+  "day": 19,
   "weekday": "Mon",
   "week": 4,
   "phase": "phase-1",
@@ -3306,7 +3094,7 @@
  },
  {
   "date": "2026-11-17",
-  "day": 21,
+  "day": 20,
   "weekday": "Tue",
   "week": 4,
   "phase": "phase-1",
@@ -3476,7 +3264,7 @@
  },
  {
   "date": "2026-11-18",
-  "day": 22,
+  "day": 21,
   "weekday": "Wed",
   "week": 4,
   "phase": "phase-1",
@@ -3674,7 +3462,7 @@
  },
  {
   "date": "2026-11-19",
-  "day": 23,
+  "day": 22,
   "weekday": "Thu",
   "week": 4,
   "phase": "phase-1",
@@ -3867,7 +3655,7 @@
  },
  {
   "date": "2026-11-20",
-  "day": 24,
+  "day": 23,
   "weekday": "Fri",
   "week": 4,
   "phase": "phase-1",
@@ -4104,7 +3892,7 @@
  },
  {
   "date": "2026-11-21",
-  "day": 25,
+  "day": 24,
   "weekday": "Sat",
   "week": 4,
   "phase": "phase-1",
@@ -4179,7 +3967,7 @@
  },
  {
   "date": "2026-11-22",
-  "day": 26,
+  "day": 25,
   "weekday": "Sun",
   "week": 4,
   "phase": "phase-1",
@@ -4272,7 +4060,7 @@
  },
  {
   "date": "2026-11-23",
-  "day": 27,
+  "day": 26,
   "weekday": "Mon",
   "week": 5,
   "phase": "phase-1",
@@ -4446,7 +4234,7 @@
  },
  {
   "date": "2026-11-24",
-  "day": 28,
+  "day": 27,
   "weekday": "Tue",
   "week": 5,
   "phase": "phase-1",
@@ -4580,7 +4368,7 @@
  },
  {
   "date": "2026-11-25",
-  "day": 29,
+  "day": 28,
   "weekday": "Wed",
   "week": 5,
   "phase": "phase-2",
@@ -4758,7 +4546,7 @@
  },
  {
   "date": "2026-11-26",
-  "day": 30,
+  "day": 29,
   "weekday": "Thu",
   "week": 5,
   "phase": "phase-2",
@@ -4895,7 +4683,7 @@
  },
  {
   "date": "2026-11-27",
-  "day": 31,
+  "day": 30,
   "weekday": "Fri",
   "week": 5,
   "phase": "phase-2",
@@ -5080,7 +4868,7 @@
  },
  {
   "date": "2026-11-28",
-  "day": 32,
+  "day": 31,
   "weekday": "Sat",
   "week": 5,
   "phase": "phase-2",
@@ -5151,7 +4939,7 @@
  },
  {
   "date": "2026-11-29",
-  "day": 33,
+  "day": 32,
   "weekday": "Sun",
   "week": 5,
   "phase": "phase-2",
@@ -5220,7 +5008,7 @@
  },
  {
   "date": "2026-11-30",
-  "day": 34,
+  "day": 33,
   "weekday": "Mon",
   "week": 6,
   "phase": "phase-2",
@@ -5416,7 +5204,7 @@
  },
  {
   "date": "2026-12-01",
-  "day": 35,
+  "day": 34,
   "weekday": "Tue",
   "week": 6,
   "phase": "phase-2",
@@ -5547,7 +5335,7 @@
  },
  {
   "date": "2026-12-02",
-  "day": 36,
+  "day": 35,
   "weekday": "Wed",
   "week": 6,
   "phase": "phase-2",
@@ -5694,7 +5482,7 @@
  },
  {
   "date": "2026-12-03",
-  "day": 37,
+  "day": 36,
   "weekday": "Thu",
   "week": 6,
   "phase": "phase-2",
@@ -5840,7 +5628,7 @@
  },
  {
   "date": "2026-12-04",
-  "day": 38,
+  "day": 37,
   "weekday": "Fri",
   "week": 6,
   "phase": "phase-2",
@@ -6023,7 +5811,7 @@
  },
  {
   "date": "2026-12-05",
-  "day": 39,
+  "day": 38,
   "weekday": "Sat",
   "week": 6,
   "phase": "phase-2",
@@ -6075,7 +5863,7 @@
  },
  {
   "date": "2026-12-06",
-  "day": 40,
+  "day": 39,
   "weekday": "Sun",
   "week": 6,
   "phase": "phase-2",
@@ -6154,7 +5942,7 @@
  },
  {
   "date": "2026-12-07",
-  "day": 41,
+  "day": 40,
   "weekday": "Mon",
   "week": 7,
   "phase": "phase-2",
@@ -6314,7 +6102,7 @@
  },
  {
   "date": "2026-12-08",
-  "day": 42,
+  "day": 41,
   "weekday": "Tue",
   "week": 7,
   "phase": "phase-2",
@@ -6440,7 +6228,7 @@
  },
  {
   "date": "2026-12-09",
-  "day": 43,
+  "day": 42,
   "weekday": "Wed",
   "week": 7,
   "phase": "phase-2",
@@ -6611,7 +6399,7 @@
  },
  {
   "date": "2026-12-10",
-  "day": 44,
+  "day": 43,
   "weekday": "Thu",
   "week": 7,
   "phase": "phase-2",
@@ -6756,7 +6544,7 @@
  },
  {
   "date": "2026-12-11",
-  "day": 45,
+  "day": 44,
   "weekday": "Fri",
   "week": 7,
   "phase": "phase-2",
@@ -6933,7 +6721,7 @@
  },
  {
   "date": "2026-12-12",
-  "day": 46,
+  "day": 45,
   "weekday": "Sat",
   "week": 7,
   "phase": "phase-2",
@@ -6985,7 +6773,7 @@
  },
  {
   "date": "2026-12-13",
-  "day": 47,
+  "day": 46,
   "weekday": "Sun",
   "week": 7,
   "phase": "phase-2",
@@ -7054,7 +6842,7 @@
  },
  {
   "date": "2026-12-14",
-  "day": 48,
+  "day": 47,
   "weekday": "Mon",
   "week": 8,
   "phase": "phase-2",
@@ -7213,7 +7001,7 @@
  },
  {
   "date": "2026-12-15",
-  "day": 49,
+  "day": 48,
   "weekday": "Tue",
   "week": 8,
   "phase": "phase-2",
@@ -7352,7 +7140,7 @@
  },
  {
   "date": "2026-12-16",
-  "day": 50,
+  "day": 49,
   "weekday": "Wed",
   "week": 8,
   "phase": "phase-2",
@@ -7503,7 +7291,7 @@
  },
  {
   "date": "2026-12-17",
-  "day": 51,
+  "day": 50,
   "weekday": "Thu",
   "week": 8,
   "phase": "phase-2",
@@ -7674,7 +7462,7 @@
  },
  {
   "date": "2026-12-18",
-  "day": 52,
+  "day": 51,
   "weekday": "Fri",
   "week": 8,
   "phase": "phase-2",
@@ -7828,7 +7616,7 @@
  },
  {
   "date": "2026-12-19",
-  "day": 53,
+  "day": 52,
   "weekday": "Sat",
   "week": 8,
   "phase": "phase-2",
@@ -7880,7 +7668,7 @@
  },
  {
   "date": "2026-12-20",
-  "day": 54,
+  "day": 53,
   "weekday": "Sun",
   "week": 8,
   "phase": "phase-2",
@@ -7954,7 +7742,7 @@
  },
  {
   "date": "2026-12-21",
-  "day": 55,
+  "day": 54,
   "weekday": "Mon",
   "week": 9,
   "phase": "phase-2",
@@ -8055,7 +7843,7 @@
  },
  {
   "date": "2026-12-22",
-  "day": 56,
+  "day": 55,
   "weekday": "Tue",
   "week": 9,
   "phase": "phase-2",
@@ -8130,7 +7918,7 @@
  },
  {
   "date": "2026-12-23",
-  "day": 57,
+  "day": 56,
   "weekday": "Wed",
   "week": 9,
   "phase": "phase-2",
@@ -8210,7 +7998,7 @@
  },
  {
   "date": "2026-12-24",
-  "day": 58,
+  "day": 57,
   "weekday": "Thu",
   "week": 9,
   "phase": "phase-2",
@@ -8273,7 +8061,7 @@
  },
  {
   "date": "2026-12-25",
-  "day": 59,
+  "day": 58,
   "weekday": "Fri",
   "week": 9,
   "phase": "phase-3",
@@ -8334,7 +8122,7 @@
  },
  {
   "date": "2026-12-26",
-  "day": 60,
+  "day": 59,
   "weekday": "Sat",
   "week": 9,
   "phase": "phase-3",
@@ -8369,7 +8157,7 @@
  },
  {
   "date": "2026-12-27",
-  "day": 61,
+  "day": 60,
   "weekday": "Sun",
   "week": 9,
   "phase": "phase-3",
@@ -8421,7 +8209,7 @@
  },
  {
   "date": "2026-12-28",
-  "day": 62,
+  "day": 61,
   "weekday": "Mon",
   "week": 10,
   "phase": "phase-3",
@@ -8505,7 +8293,7 @@
  },
  {
   "date": "2026-12-29",
-  "day": 63,
+  "day": 62,
   "weekday": "Tue",
   "week": 10,
   "phase": "phase-3",
@@ -8562,7 +8350,7 @@
  },
  {
   "date": "2026-12-30",
-  "day": 64,
+  "day": 63,
   "weekday": "Wed",
   "week": 10,
   "phase": "phase-3",
@@ -8636,7 +8424,7 @@
  },
  {
   "date": "2026-12-31",
-  "day": 65,
+  "day": 64,
   "weekday": "Thu",
   "week": 10,
   "phase": "phase-3",
@@ -8693,7 +8481,7 @@
  },
  {
   "date": "2027-01-01",
-  "day": 66,
+  "day": 65,
   "weekday": "Fri",
   "week": 10,
   "phase": "phase-3",
@@ -8754,7 +8542,7 @@
  },
  {
   "date": "2027-01-02",
-  "day": 67,
+  "day": 66,
   "weekday": "Sat",
   "week": 10,
   "phase": "phase-3",
@@ -8789,7 +8577,7 @@
  },
  {
   "date": "2027-01-03",
-  "day": 68,
+  "day": 67,
   "weekday": "Sun",
   "week": 10,
   "phase": "phase-3",
@@ -8858,7 +8646,7 @@
  },
  {
   "date": "2027-01-04",
-  "day": 69,
+  "day": 68,
   "weekday": "Mon",
   "week": 11,
   "phase": "phase-3",
@@ -9026,7 +8814,7 @@
  },
  {
   "date": "2027-01-05",
-  "day": 70,
+  "day": 69,
   "weekday": "Tue",
   "week": 11,
   "phase": "phase-3",
@@ -9141,7 +8929,7 @@
  },
  {
   "date": "2027-01-06",
-  "day": 71,
+  "day": 70,
   "weekday": "Wed",
   "week": 11,
   "phase": "phase-3",
@@ -9283,7 +9071,7 @@
  },
  {
   "date": "2027-01-07",
-  "day": 72,
+  "day": 71,
   "weekday": "Thu",
   "week": 11,
   "phase": "phase-3",
@@ -9443,7 +9231,7 @@
  },
  {
   "date": "2027-01-08",
-  "day": 73,
+  "day": 72,
   "weekday": "Fri",
   "week": 11,
   "phase": "phase-3",
@@ -9599,7 +9387,7 @@
  },
  {
   "date": "2027-01-09",
-  "day": 74,
+  "day": 73,
   "weekday": "Sat",
   "week": 11,
   "phase": "phase-3",
@@ -9651,7 +9439,7 @@
  },
  {
   "date": "2027-01-10",
-  "day": 75,
+  "day": 74,
   "weekday": "Sun",
   "week": 11,
   "phase": "phase-3",
@@ -9721,7 +9509,7 @@
  },
  {
   "date": "2027-01-11",
-  "day": 76,
+  "day": 75,
   "weekday": "Mon",
   "week": 12,
   "phase": "phase-3",
@@ -9896,7 +9684,7 @@
  },
  {
   "date": "2027-01-12",
-  "day": 77,
+  "day": 76,
   "weekday": "Tue",
   "week": 12,
   "phase": "phase-3",
@@ -10010,7 +9798,7 @@
  },
  {
   "date": "2027-01-13",
-  "day": 78,
+  "day": 77,
   "weekday": "Wed",
   "week": 12,
   "phase": "phase-3",
@@ -10157,7 +9945,7 @@
  },
  {
   "date": "2027-01-14",
-  "day": 79,
+  "day": 78,
   "weekday": "Thu",
   "week": 12,
   "phase": "phase-3",
@@ -10322,7 +10110,7 @@
  },
  {
   "date": "2027-01-15",
-  "day": 80,
+  "day": 79,
   "weekday": "Fri",
   "week": 12,
   "phase": "phase-3",
@@ -10485,7 +10273,7 @@
  },
  {
   "date": "2027-01-16",
-  "day": 81,
+  "day": 80,
   "weekday": "Sat",
   "week": 12,
   "phase": "phase-3",
@@ -10537,7 +10325,7 @@
  },
  {
   "date": "2027-01-17",
-  "day": 82,
+  "day": 81,
   "weekday": "Sun",
   "week": 12,
   "phase": "phase-3",
@@ -10606,11 +10394,11 @@
  },
  {
   "date": "2027-01-18",
-  "day": 83,
+  "day": 82,
   "weekday": "Mon",
   "week": 13,
   "phase": "phase-3",
-  "focus": "Week 13: Scale only sources at or under target CAC; prepare the day-90 report (posts Mon 25 Jan). Batch-film day + client-work and comment-reply posts. Beat placeholder(s) today: beat:domains (each post has a live fallback).",
+  "focus": "Week 13: Scale only sources at or under target CAC; prepare the day-90 report (posts Tue 26 Jan). Batch-film day + client-work and comment-reply posts. Beat placeholder(s) today: beat:domains (each post has a live fallback).",
   "posts": [
    {
     "channel": "TikTok",
@@ -10766,11 +10554,11 @@
  },
  {
   "date": "2027-01-19",
-  "day": 84,
+  "day": 83,
   "weekday": "Tue",
   "week": 13,
   "phase": "phase-3",
-  "focus": "Week 13: Scale only sources at or under target CAC; prepare the day-90 report (posts Mon 25 Jan). Deck day.",
+  "focus": "Week 13: Scale only sources at or under target CAC; prepare the day-90 report (posts Tue 26 Jan). Deck day.",
   "posts": [
    {
     "channel": "TikTok",
@@ -10874,11 +10662,11 @@
  },
  {
   "date": "2027-01-20",
-  "day": 85,
+  "day": 84,
   "weekday": "Wed",
   "week": 13,
   "phase": "phase-3",
-  "focus": "Week 13: Scale only sources at or under target CAC; prepare the day-90 report (posts Mon 25 Jan). Founder 'Day N' + speedrun.",
+  "focus": "Week 13: Scale only sources at or under target CAC; prepare the day-90 report (posts Tue 26 Jan). Founder 'Day N' + speedrun.",
   "posts": [
    {
     "channel": "TikTok",
@@ -11016,11 +10804,11 @@
  },
  {
   "date": "2027-01-21",
-  "day": 86,
+  "day": 85,
   "weekday": "Thu",
   "week": 13,
   "phase": "phase-3",
-  "focus": "Week 13: Scale only sources at or under target CAC; prepare the day-90 report (posts Mon 25 Jan). Batch-film day + book post + carousel. Beat placeholder(s) today: beat:leads (each post has a live fallback).",
+  "focus": "Week 13: Scale only sources at or under target CAC; prepare the day-90 report (posts Tue 26 Jan). Batch-film day + book post + carousel. Beat placeholder(s) today: beat:leads (each post has a live fallback).",
   "posts": [
    {
     "channel": "TikTok",
@@ -11182,11 +10970,11 @@
  },
  {
   "date": "2027-01-22",
-  "day": 87,
+  "day": 86,
   "weekday": "Fri",
   "week": 13,
   "phase": "phase-3",
-  "focus": "Week 13: Scale only sources at or under target CAC; prepare the day-90 report (posts Mon 25 Jan). Client-work post, winner re-cut, boost/payout decisions.",
+  "focus": "Week 13: Scale only sources at or under target CAC; prepare the day-90 report (posts Tue 26 Jan). Client-work post, winner re-cut, boost/payout decisions.",
   "posts": [
    {
     "channel": "TikTok",
@@ -11313,7 +11101,7 @@
   "actions": [
    {
     "type": "launch",
-    "what": "Film the day-90 founder video V43 and build the numbers card C37 for Mon 25 Jan (day 90): net payers, MRR, CAC by source, refunds, month-2 renewal, loop share, what failed.",
+    "what": "Film the day-90 founder video V43 and build the numbers card C37 for Tue 26 Jan (day 90): net payers, MRR, CAC by source, refunds, month-2 renewal, loop share, what failed.",
     "owner": "Founder"
    },
    {
@@ -11342,11 +11130,11 @@
  },
  {
   "date": "2027-01-23",
-  "day": 88,
+  "day": 87,
   "weekday": "Sat",
   "week": 13,
   "phase": "phase-3",
-  "focus": "Week 13: Scale only sources at or under target CAC; prepare the day-90 report (posts Mon 25 Jan). Carousel + light X; no TikTok.",
+  "focus": "Week 13: Scale only sources at or under target CAC; prepare the day-90 report (posts Tue 26 Jan). Carousel + light X; no TikTok.",
   "posts": [
    {
     "channel": "Instagram Reels",
@@ -11403,7 +11191,7 @@
   "actions": [
    {
     "type": "analysis",
-    "what": "Day-90 report prep and review agenda for Mon 25 Jan: which surfaces to keep; free-tier and preview decision for next quarter (D17, owner decision); press list for the day-90 pitch (owner sends).",
+    "what": "Day-90 report prep and review agenda for Tue 26 Jan: which surfaces to keep; free-tier and preview decision for next quarter (D17, owner decision); press list for the day-90 pitch (owner sends).",
     "owner": "Owner + Founder"
    },
    {
@@ -11416,10 +11204,10 @@
  },
  {
   "date": "2027-01-24",
-  "day": 89,
+  "day": 88,
   "weekday": "Sun",
   "week": 13,
-  "focus": "Week 13: the last Sunday review and the final day-90 report prep (the report posts Mon 25 Jan). No new posts.",
+  "focus": "Week 13: the last Sunday review and the final day-90 report prep (the report posts Tue 26 Jan). No new posts.",
   "posts": [],
   "actions": [
    {
@@ -11437,8 +11225,25 @@
  },
  {
   "date": "2027-01-25",
-  "day": 90,
+  "day": 89,
   "weekday": "Mon",
+  "week": 13,
+  "phase": "phase-3",
+  "focus": "Week 13: final day-90 report prep (the report posts Tue 26 Jan). No new posts.",
+  "posts": [],
+  "actions": [
+   {
+    "type": "analysis",
+    "what": "08:00 numbers: yesterday's Whop sales and refunds, /go/ clicks by source, AI limit hits, first-build times; flag any source above the 20% refund brake.",
+    "owner": "Founder"
+   }
+  ],
+  "kpiCheck": "Week 13 closes today. Day-90 review against base (kpis.json week 13 and the calculator: ~$14.5k MRR, ~$174k ARR run-rate) and against the $1M breakout conditions (strategy.md section 15)."
+ },
+ {
+  "date": "2027-01-26",
+  "day": 90,
+  "weekday": "Tue",
   "week": 13,
   "phase": "phase-3",
   "focus": "Day 90: the day-90 report and review. Post V43 with every number, run the review, decide what the next quarter keeps.",

@@ -86,13 +86,13 @@ export function fmtCompact(n: number) {
 
 /* ---------- dates (the plan runs on the Sarajevo calendar day) ---------- */
 
-/** First day of the calendar and of week 1 (Mon 26 Oct 2026, pre-launch day −2). Weeks run Monday to Sunday from here. */
+/** First day of the calendar and of week 1 (Mon 26 Oct 2026, pre-launch day −3). Weeks run Monday to Sunday from here. */
 export const WINDOW_START = '2026-10-26';
-/** The public launch: Wed 28 Oct 2026 at 19:00 Sarajevo time (CET, 18:00 UTC). Day 1 of the 90 days. */
-export const LAUNCH_DAY = '2026-10-28';
-export const LAUNCH_AT_UTC = '2026-10-28T18:00:00Z';
-/** Day 90 and the day-90 review: Mon 25 Jan 2027 (the last calendar day, inside week 13). */
-export const DAY90 = '2027-01-25';
+/** The public launch: Thu 29 Oct 2026 at 21:00 Sarajevo time (CET, 20:00 UTC). Day 1 of the 90 days. */
+export const LAUNCH_DAY = '2026-10-29';
+export const LAUNCH_AT_UTC = '2026-10-29T20:00:00Z';
+/** Day 90 and the day-90 review: Tue 26 Jan 2027 (the last calendar day; Mon 25 and Tue 26 Jan sit inside week 13). */
+export const DAY90 = '2027-01-26';
 export const WINDOW_DAYS = 90;
 
 export function sarajevoToday(): string {
@@ -109,7 +109,7 @@ const toUtc = (iso: string) => {
 };
 export const addDays = (iso: string, n: number) => new Date(toUtc(iso) + n * 86_400_000).toISOString().slice(0, 10);
 export const diffDays = (a: string, b: string) => Math.round((toUtc(a) - toUtc(b)) / 86_400_000);
-/** Day number in the plan: day 1 = Wed 28 Oct 2026 (the launch); the pre-launch days are −2 (Mon 26) and −1 (Tue 27). */
+/** Day number in the plan: day 1 = Thu 29 Oct 2026 (the launch); the pre-launch days are −3 (Mon 26), −2 (Tue 27) and −1 (Wed 28). */
 export const planDay = (iso: string) => {
   const d = diffDays(iso, LAUNCH_DAY);
   return d >= 0 ? d + 1 : d;
@@ -119,8 +119,8 @@ export const dayLabel = (iso: string) => {
   const n = planDay(iso);
   return n < 1 ? `Pre-launch day −${-n}` : `Day ${n}`;
 };
-/** Plan week (Monday to Sunday from Mon 26 Oct); week 13 also holds day 90, Mon 25 Jan. */
-export const planWeek = (iso: string) => (iso === DAY90 ? 13 : Math.floor(diffDays(iso, WINDOW_START) / 7) + 1);
+/** Plan week (Monday to Sunday from Mon 26 Oct); week 13 also holds Mon 25 Jan and day 90, Tue 26 Jan. */
+export const planWeek = (iso: string) => (iso > '2027-01-24' && iso <= DAY90 ? 13 : Math.floor(diffDays(iso, WINDOW_START) / 7) + 1);
 export function fmtDate(iso: string, opts: Intl.DateTimeFormatOptions = { weekday: 'short', day: 'numeric', month: 'short' }) {
   return new Intl.DateTimeFormat('en-GB', { ...opts, timeZone: 'UTC' }).format(new Date(toUtc(iso)));
 }

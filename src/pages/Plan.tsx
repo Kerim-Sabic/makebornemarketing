@@ -46,7 +46,7 @@ export default function Plan({ params }: RouteProps) {
 
   return (
     <Page
-      eyebrow={`Launch ${short('2026-10-28')} 19:00 CET – day 90 ${short('2027-01-25')} · 13 weeks · you are in week ${thisWeek}`}
+      eyebrow={`Launch ${short('2026-10-29')} 21:00 CET – day 90 ${short('2027-01-26')} · 13 weeks · you are in week ${thisWeek}`}
       title={
         <>
           The plan, <em>week by week</em>
@@ -100,7 +100,7 @@ export default function Plan({ params }: RouteProps) {
         <div className="section-head">
           <div>
             <p className="kicker">Pre-launch −2, −1 · days 1-7</p>
-            <h2 id="launch-h">Launch week, day by day (launch Wed 28 Oct, 19:00 CET)</h2>
+            <h2 id="launch-h">Launch week, day by day (launch Thu 29 Oct, 21:00 CET)</h2>
           </div>
         </div>
         <div className="cards">

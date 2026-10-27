@@ -14,14 +14,16 @@
 // are never read) name their slots by time ("## TUE-1900 · …"). `teaserSlots` in data/posting.json maps each slot to its
 // calendar id (TUE-1900 -> T3 and so on), and the schedule table at the top of that POSTING.md gives each platform's time.
 //
-// The launch moved from Mon 26 Oct to Wed 28 Oct 2026, 19:00 CET. The launch-week POSTING.md still names the old dates,
-// so `schedule` (hand-written, in data/posting.json) maps them: every launch-week slot from 26 Oct to 1 Nov moves 2 days
-// later, the launch-day slots get their new times (V01 at 19:00) and the old make-up slots are dropped. Teaser slots are
-// used as written.
+// The launch moved from Mon 26 Oct to Thu 29 Oct 2026, 21:00 CET (via Wed 28 Oct 19:00). The launch-week POSTING.md still
+// names the old dates, so `schedule` (hand-written, in data/posting.json) maps them: every launch-week slot from 26 Oct to
+// 1 Nov moves 3 days later, the launch-day slots get their new times (V01 at 21:30) and the old make-up slots are dropped.
+// The teaser POSTING.md was written for Wed 28 Oct 19:00: only the date-free videos are mapped (T7 "We're live", T8 "Guess
+// the build time"), and `schedule.overrides` gives them their new dates, times, notes and caption lines.
 //
 // Hand-written parts of data/posting.json survive a re-sync: `toMake` (why a post has no file yet, in plain words),
 // `beforePosting` (the one-time checklist), `reminders` (dated one-off Today items), `teasers` (teaser titles),
-// `teaserSlots` (the v2 slot -> calendar id map), `teaserStills` (the cover each Story S1-S3 uses) and `schedule` (the date mapping above). Edit them in the JSON.
+// `teaserSlots` (the v2 slot -> calendar id map), `teaserStills` (a cover reused as a Story; empty since the S1-S3 covers
+// carry the old time) and `schedule` (the date mapping above). Edit them in the JSON.
 import { existsSync, readFileSync, readdirSync, writeFileSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -48,6 +50,20 @@ function keywordFor(row, platforms) {
   return (hit ?? parts[0])[2].replace(/^"(.*)"$/, '$1');
 }
 
+/**
+ * The countdown Stories S4-S8 are made on the phone from the real makeborne.com countdown (a screen recording plus
+ * Instagram's countdown and link stickers), so they have no file and always show "to make". They replace S1-S3, whose
+ * covers have the old Wednesday time burned in.
+ */
+const STORIES = {
+  S4: { title: 'Story "New time: Thursday, 21:00" (screen recording of the countdown)', make: 'Make it on your phone: screen-record makeborne.com counting down for 10 seconds, post it as a Story, add Instagram\'s countdown sticker (Thu 29 Oct, 21:00, "Makeborne launch") and a link sticker to makeborne.com. Text: "Makeborne opens Thursday, 21:00 CET."' },
+  S5: { title: 'Story "Find what\'s hidden behind our countdown"', make: 'Make it on your phone: on makeborne.com press, hold and drag on the dark background until a website appears; screen-record that, add a link sticker to makeborne.com and the text "Something is hidden behind our countdown. Find it. Tomorrow 21:00 CET." Never say the hidden sites were made with Makeborne.' },
+  S6: { title: 'Story "Today, 21:00" (launch morning)', make: 'Make it on your phone: a 10-second screen recording of the countdown, the countdown sticker (Thu 29 Oct, 21:00) and a link sticker. Text: "Today. 21:00 CET."' },
+  S7: { title: 'Story "1 hour" (20:00)', make: 'Make it on your phone at 20:00: screen-record the countdown at about 59:30 to go, add the countdown sticker and a link sticker. Text: "1 hour."' },
+  S8: { title: 'Story "We\'re live": the real reveal at 21:00', make: 'Start a screen recording of makeborne.com on your phone at 20:59:45 and stop at about 21:00:15: the countdown hits zero and the site opens. Trim to 15 s, add a link sticker and the text "We\'re live." Post at once; the same clip goes to X and LinkedIn as a reply under the launch posts.' },
+};
+const STORY_TO_MAKE = Object.fromEntries(Object.entries(STORIES).map(([id, s]) => [id, s.make]));
+
 /** Default hand-written parts (used only when data/posting.json does not have them yet). */
 const DEFAULTS = {
   toMake: {
@@ -60,33 +76,36 @@ const DEFAULTS = {
     C05: 'Needs the Instagram comment-keyword DM switched on first, then the slides captured.',
     C15: 'Needs the Instagram keyword DM switched on, and the "30-second uncut build" it promises does not exist yet.',
     C17: 'Needs a screenshot of the deck opened in PowerPoint with the chart\'s data sheet open.',
-    S1: 'Post TUE-1900_tomorrow_cover.jpg as the Story and add Instagram\'s countdown sticker in the app.',
-    S2: 'Post WED-0900_today_cover.jpg as the Story and add Instagram\'s countdown sticker in the app.',
-    S3: 'Post WED-1800_1hour_cover.jpg as the Story and add Instagram\'s countdown sticker in the app.',
-    ...Object.fromEntries(['T3', 'T4', 'T5', 'T6', 'T7', 'T8'].map((id) => [id, 'Being rendered with HyperFrames (the launch teasers). When the files land in the launch-teasers-v2 renders folder, run node scripts/sync-posting.mjs and this post shows "ready to post".'])),
+    ...STORY_TO_MAKE,
+    ...Object.fromEntries(['T7', 'T8'].map((id) => [id, 'The file is in the launch-teasers-v2 renders folder: run node scripts/sync-posting.mjs on the computer with the Z: drive and this post shows "ready to post".'])),
   },
-  teaserSlots: { 'TUE-1900': 'T3', 'WED-0900': 'T4', 'WED-1800': 'T5', 'WED-1859': 'T6', 'WED-1900': 'T7', EXTRA: 'T8' },
-  teaserStills: { S1: 'TUE-1900_tomorrow_cover.jpg', S2: 'WED-0900_today_cover.jpg', S3: 'WED-1800_1hour_cover.jpg' },
+  // Only the date-free v2 teasers: TUE-1900 to WED-1859 (T3-T6) have Wed 28 Oct 19:00 burned in and are never posted.
+  teaserSlots: { 'WED-1900': 'T7', EXTRA: 'T8' },
+  teaserStills: {},
   teasers: {
-    T3: 'Teaser "Tomorrow": the speedrun (deck + book + website under a 5:00 par)',
-    T4: 'Teaser "Today": one brief, then the site',
-    T5: 'Teaser "1 hour": what fits in an hour',
-    T6: 'Teaser "Final 10 seconds": ten counts, seven real builds',
     T7: '"We\'re live": the iris opens onto a real site',
-    T8: '"Guess the build time" (optional, after launch)',
-    S1: 'Story with Instagram\'s countdown sticker (S1)',
-    S2: 'Story with the countdown sticker, launch morning (S2)',
-    S3: 'Story with the countdown sticker, one hour to go (S3)',
+    T8: '"Guess the build time" (the 24-hours-to-go post)',
+    ...Object.fromEntries(Object.entries(STORIES).map(([id, s]) => [id, s.title])),
   },
   schedule: {
-    note: 'The launch moved from Mon 26 Oct to Wed 28 Oct 2026, 19:00 CET. The launch-week POSTING.md still has the old dates: every slot from 26 Oct to 1 Nov moves 2 days later, these launch-day slots get new times, and the old make-up slots are dropped. Teaser slots are used as written.',
-    shift: { from: '2026-10-26', to: '2026-11-01', days: 2 },
+    note: 'The launch moved from Mon 26 Oct to Thu 29 Oct 2026, 21:00 CET. The launch-week POSTING.md still has the Mon 26 Oct dates: every slot from 26 Oct to 1 Nov moves 3 days later, these launch-day slots get new times, and the old make-up slots are dropped. The teaser overrides give T7 and T8 their new days and times.',
+    shift: { from: '2026-10-26', to: '2026-11-01', days: 3 },
     overrides: [
-      { id: 'V01', platform: 'TikTok', date: '2026-10-28', time: '19:00' },
-      { id: 'V01', platform: 'Instagram Reels', date: '2026-10-28', time: '19:00' },
-      { id: 'V01', platform: 'YouTube Shorts', date: '2026-10-28', time: '19:00' },
-      { id: 'V02', platform: 'TikTok', date: '2026-10-28', time: '20:00' },
-      { id: 'C08', platform: 'X', date: '2026-10-28', time: '19:15' },
+      { id: 'V01', platform: 'TikTok', date: '2026-10-29', time: '21:30' },
+      { id: 'V01', platform: 'Instagram Reels', date: '2026-10-29', time: '21:30' },
+      { id: 'V01', platform: 'YouTube Shorts', date: '2026-10-29', time: '21:30' },
+      { id: 'V02', platform: 'TikTok', date: '2026-10-29', time: '22:00' },
+      { id: 'V03', platform: 'TikTok', date: '2026-10-29', time: '22:30' },
+      { id: 'C08', platform: 'X', date: '2026-10-29', time: '21:15' },
+      ...['Instagram Reels', 'TikTok', 'YouTube Shorts'].map((platform, i) => ({
+        id: 'T7', platform, date: '2026-10-29', time: `21:0${i}`,
+        captionNote: `Thu 29 Oct ${`21:0${i}`}, only once makeborne.com is confirmed open (load it signed out first). The file name says WED-1900; the video itself has no date or time in it.`,
+      })),
+      ...['Instagram Reels', 'TikTok', 'YouTube Shorts'].map((platform, i) => ({
+        id: 'T8', platform, date: '2026-10-28', time: ['21:00', '21:05', '21:10'][i],
+        captionNote: 'Wed 28 Oct, 24 hours before the launch. The video has no date in it, so the caption says when.',
+        captionAppend: 'Makeborne opens tomorrow, Thu 29 Oct, 21:00 CET (16:00 New York, 13:00 Los Angeles).',
+      })),
     ],
     dropMakeUp: true,
   },
@@ -96,8 +115,9 @@ const DEFAULTS = {
     { key: 'uncut', text: 'Remove the "30-second uncut build" line from the DM', how: 'The keyword DM promises a 30-second uncut build, and that recording does not exist yet. Take the line out of the DM until it is recorded.' },
   ],
   reminders: [
-    { date: '2026-10-26', time: '18:00', group: 'post', text: 'Do not post V01 tonight: the public launch is Wed 28 Oct at 19:00 CET', how: 'The owner moved the public launch to Wednesday 28 October 2026 at 19:00 Sarajevo time (18:00 UTC). The V01 files say "We launched today." They go out on Wed 28 Oct at 19:00, not before. From Thu 29 Oct use the _justlaunched files instead. Nothing that says "we launched" or "live now" goes out before Wed 19:00.' },
-    { date: '2026-10-27', time: '18:00', group: 'post', text: 'Do not post V01 yet: the public launch is Wed 28 Oct at 19:00 CET', how: 'The V01 files say "We launched today." They go out on Wed 28 Oct at 19:00 (TikTok, Instagram Reel, YouTube Shorts). Nothing that says "we launched" or "live now" goes out before then.' },
+    { date: '2026-10-26', time: '18:00', group: 'post', text: 'Do not post V01 tonight: the public launch is Thu 29 Oct at 21:00 CET', how: 'The owner moved the public launch to Thursday 29 October 2026 at 21:00 Sarajevo time (20:00 UTC). The V01 files say "We launched today." They go out on Thu 29 Oct at 21:30, after the "We\'re live" teaser, not before. From Fri 30 Oct use the _justlaunched files instead. Nothing that says "we launched" or "live now" goes out before Thu 21:00.' },
+    { date: '2026-10-27', time: '18:00', group: 'post', text: 'Do not post T3 tonight, and delete Story S1 if it is up', how: 'The launch moved to Thu 29 Oct 21:00 CET. T3-T6 and the S1-S3 covers have "Wed 28 Oct, 19:00" burned in: never post them. Tonight\'s post is Story S4 at 19:00 (the real countdown with Instagram\'s countdown sticker set to Thu 29 Oct, 21:00).' },
+    { date: '2026-10-27', time: '18:05', group: 'post', text: 'Do not post V01 yet: the public launch is Thu 29 Oct at 21:00 CET', how: 'The V01 files say "We launched today." They go out on Thu 29 Oct at 21:30, after the "We\'re live" teaser (TikTok, Instagram Reel, YouTube Shorts). Nothing that says "we launched" or "live now" goes out before then.' },
   ],
 };
 
@@ -320,14 +340,17 @@ export function parseTeasers(md, { present, slots = {}, stills = {} } = {}) {
     items.push({
       id, title: id, platforms: ['Instagram Stories'], date: null, time: null, makeUp: null, bank: false,
       files: [{ name, exists: has(name), later: null }], ready: has(name), cover: null, caption: null, hashtags: [],
-      captionNote: 'Add Instagram\'s countdown sticker (Wed 28 Oct, 19:00, "Makeborne launch") and a link sticker to makeborne.com in the app.',
+      captionNote: 'Add Instagram\'s countdown sticker (Thu 29 Oct, 21:00, "Makeborne launch") and a link sticker to makeborne.com in the app.',
       ytTitle: null, keyword: null, link: null, utmContent: null, disclosure: 'None needed',
     });
   }
   return items;
 }
 
-/** Map the launch-week POSTING.md dates to the launch on Wed 28 Oct 19:00 CET (see `schedule` in data/posting.json). Pure. */
+/**
+ * Map POSTING.md dates to the launch on Thu 29 Oct 21:00 CET (see `schedule` in data/posting.json). An override can also
+ * replace the post's note (`captionNote`) and add a closing line to its caption (`captionAppend`). Pure.
+ */
 export function applySchedule(items, schedule) {
   if (!schedule) return items;
   const { shift, overrides = [], dropMakeUp } = schedule;
@@ -335,7 +358,8 @@ export function applySchedule(items, schedule) {
   return items.map((it) => {
     const o = overrides.find((x) => x.id === it.id && it.platforms.includes(x.platform));
     const makeUp = dropMakeUp || !it.makeUp ? null : { date: moved(it.makeUp.date), time: it.makeUp.time };
-    return { ...it, date: o ? o.date : moved(it.date), time: o ? o.time : it.time, makeUp };
+    const caption = o?.captionAppend && it.caption ? `${it.caption}${/[.!?)]$/.test(it.caption) ? '' : '.'} ${o.captionAppend}` : it.caption;
+    return { ...it, date: o ? o.date : moved(it.date), time: o ? o.time : it.time, makeUp, caption, captionNote: o?.captionNote ?? it.captionNote };
   });
 }
 
@@ -364,7 +388,8 @@ export function syncPosting({ dir = DEFAULT_DIR, teaserDir = TEASER_DIR, out = j
   const prevItems = prev.items ?? [];
   // A folder that is missing this time keeps its items from the last sync.
   const launchItems = lw.items ? applySchedule(lw.items, schedule) : prevItems.filter((i) => !i.folder);
-  const teaserItems = tz.items ? tz.items.map((i) => ({ ...i, folder: teaserDir })) : prevItems.filter((i) => i.folder);
+  // Teasers keep their own dates; only the overrides (new days, times, notes and caption lines) apply, never the shift.
+  const teaserItems = tz.items ? applySchedule(tz.items, { overrides: schedule.overrides }).map((i) => ({ ...i, folder: teaserDir })) : prevItems.filter((i) => i.folder);
   const items = [...launchItems, ...teaserItems];
   const json = {
     note: 'Generated by scripts/sync-posting.mjs from POSTING.md in the renders folders (launch week, plus the launch teasers when present). items is rewritten on every sync; toMake, beforePosting, reminders, teasers, teaserSlots, teaserStills and schedule are hand-written and kept. No media is copied into this repo.',

@@ -731,11 +731,11 @@
  "kickoffDays": [
   {
    "day": 1,
-   "date": "2026-10-28",
-   "weekday": "Wed",
-   "title": "Launch at 19:00: post the Fly-over, pin it",
+   "date": "2026-10-29",
+   "weekday": "Thu",
+   "title": "Launch at 21:00: \"We're live\", then the Fly-over at 21:30, pin it",
    "main": {
-    "time": "19:30",
+    "time": "21:30",
     "contentId": "V01",
     "format": "Reel 17 s",
     "keyword": "SITE",
@@ -747,16 +747,16 @@
    "checklist": [
     "Profile, highlights and the SITE / CLIENT DM automations: done on Mon 26 / Tue 27 Oct (check them once from a phone)",
     "Confirm copy fixes and \"coming soon\" labels are live",
-    "19:00 post V01, then pin it (Pin 1)",
+    "21:00 post T7 \"We're live\" and the reveal Story S8 (21:01); 21:30 post V01, then pin it (Pin 1)",
     "Write the pinned CTA comment",
-    "19:05 Story C15 \"Reply CLIENT\" (link /go/ig-c15-client)",
-    "19:15-20:15 reply to every comment",
-    "20:15-20:45 engagement routine",
+    "21:05 Story C15 \"Reply CLIENT\" (link /go/ig-c15-client)",
+    "21:15-22:15 reply to every comment",
+    "22:15-20:45 engagement routine",
     "20:30 Story: founder BTS + question box \"Ask me anything\""
    ],
    "stories": [
     {
-     "time": "19:05",
+     "time": "21:05",
      "contentId": "C15",
      "link": "makeborne.com/go/ig-c15-client"
     },
@@ -765,12 +765,12 @@
      "template": "Behind the scenes + question box"
     }
    ],
-   "summary": "Day 1 · Wed 28 Oct · 19:00 · V01 (Reel 17 s) · keyword SITE"
+   "summary": "Day 1 · Thu 29 Oct · 21:30 · V01 (Reel 17 s) · keyword SITE"
   },
   {
    "day": 2,
-   "date": "2026-10-29",
-   "weekday": "Thu",
+   "date": "2026-10-30",
+   "weekday": "Fri",
    "title": "Bakery speedrun Reel",
    "main": {
     "time": "13:15",
@@ -803,12 +803,12 @@
      "template": "Behind the scenes"
     }
    ],
-   "summary": "Day 2 · Thu 29 Oct · 13:15 · V02 (Reel 32 s) · keyword SITE"
+   "summary": "Day 2 · Fri 30 Oct · 13:15 · V02 (Reel 32 s) · keyword SITE"
   },
   {
    "day": 3,
-   "date": "2026-10-30",
-   "weekday": "Fri",
+   "date": "2026-10-31",
+   "weekday": "Sat",
    "title": "Client-approval POV Reel, pin it",
    "main": {
     "time": "13:15",
@@ -843,12 +843,12 @@
      "template": "Question box"
     }
    ],
-   "summary": "Day 3 · Fri 30 Oct · 13:15 · V05 (Reel 28 s) · keyword CLIENT"
+   "summary": "Day 3 · Sat 31 Oct · 13:15 · V05 (Reel 28 s) · keyword CLIENT"
   },
   {
    "day": 4,
-   "date": "2026-10-31",
-   "weekday": "Sat",
+   "date": "2026-11-01",
+   "weekday": "Sun",
    "title": "First carousel: 5 sites from 5 briefs",
    "main": {
     "time": "18:00",
@@ -884,12 +884,12 @@
      "template": "Question box answers"
     }
    ],
-   "summary": "Day 4 · Sat 31 Oct · 18:00 · C06 (Carousel, 7 slides, music on) · keyword SITE"
+   "summary": "Day 4 · Sun 01 Nov · 18:00 · C06 (Carousel, 7 slides, music on) · keyword SITE"
   },
   {
    "day": 5,
-   "date": "2026-11-01",
-   "weekday": "Sun",
+   "date": "2026-11-02",
+   "weekday": "Mon",
    "title": "Lead-finder Reel",
    "main": {
     "time": "13:15",
@@ -922,12 +922,12 @@
      "template": "Day N numbers"
     }
    ],
-   "summary": "Day 5 · Sun 01 Nov · 13:15 · V07 (Reel 40 s) · keyword CLIENT"
+   "summary": "Day 5 · Mon 02 Nov · 13:15 · V07 (Reel 40 s) · keyword CLIENT"
   },
   {
    "day": 6,
-   "date": "2026-11-02",
-   "weekday": "Mon",
+   "date": "2026-11-03",
+   "weekday": "Tue",
    "title": "Client-workflow carousel, make it Pin 2",
    "main": {
     "time": "12:00",
@@ -951,12 +951,12 @@
      "template": "Behind the scenes"
     }
    ],
-   "summary": "Day 6 · Mon 02 Nov · 12:00 · C05 (Carousel, 8 slides, music on) · keyword CLIENT"
+   "summary": "Day 6 · Tue 03 Nov · 12:00 · C05 (Carousel, 8 slides, music on) · keyword CLIENT"
   },
   {
    "day": 7,
-   "date": "2026-11-03",
-   "weekday": "Tue",
+   "date": "2026-11-04",
+   "weekday": "Wed",
    "title": "Day 7 numbers Reel + first weekly review",
    "main": {
     "time": "19:00",
@@ -981,44 +981,10 @@
      "template": "Weekly recap"
     }
    ],
-   "summary": "Day 7 · Tue 03 Nov · 19:00 · V09 (Reel 60 s) · keyword CLIENT"
+   "summary": "Day 7 · Wed 04 Nov · 19:00 · V09 (Reel 60 s) · keyword CLIENT"
   },
   {
    "day": 8,
-   "date": "2026-11-04",
-   "weekday": "Wed",
-   "title": "5 sites slideshow Reel at 20:15 (time test)",
-   "main": {
-    "time": "20:15 (time test)",
-    "contentId": "V16",
-    "format": "Reel 15 s",
-    "keyword": "SITE",
-    "link": "makeborne.com/go/ig-v16-site",
-    "cover": "First of the five sites, full bleed; text \"5 sites. 5 briefs.\"",
-    "caption": "AI websites from one brief each: 5 real outputs, unedited, with the credits each one used. Which one would you send a client? Comment SITE for all 5 briefs. #aiwebsitebuilder #websitedesign #webdesigninspiration"
-   },
-   "checklist": [
-    "09:00 Story poll \"Which would you send a client? A / B\"",
-    "13:20 Story C22 \"Reply DECK\"",
-    "20:15 post V16 (time test)",
-    "Reply to comments 20:15-21:15",
-    "21:00 trial reel #2: V05 with hook F1"
-   ],
-   "stories": [
-    {
-     "time": "09:00",
-     "template": "Poll"
-    },
-    {
-     "time": "13:20",
-     "contentId": "C22",
-     "link": "makeborne.com/go/ig-c22-deck"
-    }
-   ],
-   "summary": "Day 8 · Wed 04 Nov · 20:15 (time test) · V16 (Reel 15 s) · keyword SITE"
-  },
-  {
-   "day": 9,
    "date": "2026-11-05",
    "weekday": "Thu",
    "title": "Notes-to-deck carousel",
@@ -1050,10 +1016,10 @@
      "link": "makeborne.com/go/ig-c09-play"
     }
    ],
-   "summary": "Day 9 · Thu 05 Nov · 18:00 · C18 (Carousel, 8 slides, music on) · keyword DECK"
+   "summary": "Day 8 · Thu 05 Nov · 18:00 · C18 (Carousel, 8 slides, music on) · keyword DECK"
   },
   {
-   "day": 10,
+   "day": 9,
    "date": "2026-11-06",
    "weekday": "Fri",
    "title": "Notes-app-to-book Reel + boost check at 20:15 (time test)",
@@ -1085,10 +1051,10 @@
      "link": "makeborne.com/go/ig-c25-book"
     }
    ],
-   "summary": "Day 10 · Fri 06 Nov · 20:15 (time test) · V15 (Reel 24 s) · keyword BOOK"
+   "summary": "Day 9 · Fri 06 Nov · 20:15 (time test) · V15 (Reel 24 s) · keyword BOOK"
   },
   {
-   "day": 11,
+   "day": 10,
    "date": "2026-11-07",
    "weekday": "Sat",
    "title": "Book carousel",
@@ -1113,10 +1079,10 @@
      "template": "Question box answers"
     }
    ],
-   "summary": "Day 11 · Sat 07 Nov · 12:00 · C23 (Carousel, 7 slides, music on) · keyword BOOK"
+   "summary": "Day 10 · Sat 07 Nov · 12:00 · C23 (Carousel, 7 slides, music on) · keyword BOOK"
   },
   {
-   "day": 12,
+   "day": 11,
    "date": "2026-11-08",
    "weekday": "Sun",
    "title": "Winner re-cut + second Sunday review",
@@ -1142,7 +1108,7 @@
      "template": "Weekly recap"
     }
    ],
-   "summary": "Day 12 · Sun 08 Nov · 19:00 · Winner (default V02 ep. 2) (Reel) · keyword as the winner"
+   "summary": "Day 11 · Sun 08 Nov · 19:00 · Winner (default V02 ep. 2) (Reel) · keyword as the winner"
   }
  ],
  "doDont": {
@@ -1304,9 +1270,44 @@
    ],
    "summary": "Day 9 · Tue 03 Nov · 20:15 (time test) · V12 or V18 (Reel 25 s or 15 s) · keyword CLIENT",
    "bankedBecause": "launch day 7 uses the Instagram slot on Tue 3 Nov"
+  },
+  {
+   "day": 8,
+   "date": null,
+   "weekday": "Wed",
+   "title": "5 sites slideshow Reel at 20:15 (time test)",
+   "main": {
+    "time": "20:15 (time test)",
+    "contentId": "V16",
+    "format": "Reel 15 s",
+    "keyword": "SITE",
+    "link": "makeborne.com/go/ig-v16-site",
+    "cover": "First of the five sites, full bleed; text \"5 sites. 5 briefs.\"",
+    "caption": "AI websites from one brief each: 5 real outputs, unedited, with the credits each one used. Which one would you send a client? Comment SITE for all 5 briefs. #aiwebsitebuilder #websitedesign #webdesigninspiration"
+   },
+   "checklist": [
+    "09:00 Story poll \"Which would you send a client? A / B\"",
+    "13:20 Story C22 \"Reply DECK\"",
+    "20:15 post V16 (time test)",
+    "Reply to comments 20:15-21:15",
+    "21:00 trial reel #2: V05 with hook F1"
+   ],
+   "stories": [
+    {
+     "time": "09:00",
+     "template": "Poll"
+    },
+    {
+     "time": "13:20",
+     "contentId": "C22",
+     "link": "makeborne.com/go/ig-c22-deck"
+    }
+   ],
+   "summary": "Day 8 · Wed 04 Nov · 20:15 (time test) · V16 (Reel 15 s) · keyword SITE",
+   "why": "Wed 4 Nov is launch day 7 (V09); the 20:15 time test is now Fri 6 and Mon 9 Nov"
   }
  ],
- "kickoffNote": "Launch moved to Wed 28 Oct 19:00 CET: kick-off days 1-7 moved 2 days later (28 Oct - 3 Nov); the old days 8 and 9 (V44 on Mon 2 Nov, V12 / V18 on Tue 3 Nov) are banked because launch days 6 and 7 use those Instagram slots; the rest keep their dates and are renumbered by launch day. The 20:15 time test is now Wed 4 and Fri 6 Nov.",
+ "kickoffNote": "Launch moved to Thu 29 Oct 21:00 CET: kick-off days 1-7 moved 1 day later (29 Oct - 4 Nov) with their content; day 1 posts T7 at 21:00 and V01 at 21:30. Launch moved to Thu 29 Oct 21:00 CET: kick-off days 1-7 moved 2 days later (28 Oct - 3 Nov); the old days 8 and 9 (V44 on Mon 2 Nov, V12 / V18 on Tue 3 Nov) are banked because launch days 6 and 7 use those Instagram slots; the rest keep their dates and are renumbered by launch day. The 20:15 time test is now Wed 4 and Fri 6 Nov.",
  "conversionGridBanked": [
   {
    "position": 8,

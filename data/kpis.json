@@ -1,7 +1,7 @@
 {
   "meta": {
     "version": "2026-10-26",
-    "window": "2026-10-26 to 2027-01-25 (13 weeks; launch Wed 28 Oct, day 90 = Mon 25 Jan)",
+    "window": "2026-10-26 to 2027-01-25 (13 weeks; launch Thu 29 Oct, day 90 = Tue 26 Jan)",
     "basis": "Base case, plan of record (plan/strategy.md sections 2, 6, 13; data/plan.json kpis)",
     "labels": "[A] assumption, [E] estimate, [U] unverified; targets without a label come from the master plan",
     "weeklyTargetsNote": "visits, paid (gross new paying accounts), activated payers, active subs, MRR, loop share and CAC come from data/plan.json. signups = visits x 5% (base signupRate in data/funnel.json). creatorsActive = creators who posted at least one tracked video that week (paid, affiliate or Content Rewards) [E].",
@@ -346,7 +346,7 @@
     },
     {
       "week": 13,
-      "dates": "18-25 Jan",
+      "dates": "18-26 Jan",
       "visits": 5500,
       "signups": 275,
       "paid": 55,

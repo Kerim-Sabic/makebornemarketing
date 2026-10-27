@@ -1,8 +1,8 @@
 # Makeborne 90-day content and action calendar
 
-**Window:** pre-launch Mon 26 and Tue 27 Oct 2026 (days −2 and −1), then Wed 28 Oct 2026 (day 1, public launch at 19:00 CET) to Mon 25 Jan 2027 (day 90), when the day-90 report posts and the review runs.
+**Window:** pre-launch Mon 26, Tue 27 and Wed 28 Oct 2026 (days −3, −2 and −1), then Thu 29 Oct 2026 (day 1, public launch at 21:00 CET) to Tue 26 Jan 2027 (day 90), when the day-90 report posts and the review runs.
 
-> **Launch moved (owner decision, 26 Oct 2026 evening).** The public launch is **Wednesday 28 October 2026 at 19:00 Sarajevo time** (CET, 18:00 UTC); makeborne.com shows a countdown to that moment. Day 1 = Wed 28 Oct; Mon 26 and Tue 27 Oct are pre-launch days −2 and −1 (profiles, scheduling, extra footage, DM keywords, countdown teasers that never say it is live). The launch week moved 2 days later with its times (days 1-7 = 28 Oct - 3 Nov); everything after it keeps its date (ads A01 12-15 Nov and A02 3-4 Dec, creator waves, the no-boost window 20 Nov - 2 Dec, Black Friday, the 22 Nov and 20 Dec checkpoints) and day numbers are recomputed. The 90 days run Wed 28 Oct 2026 - Mon 25 Jan 2027 (day 90, the day-90 review). `data/calendar.json` and the war room are the source of truth; dates and day numbers in the text below that disagree are from before the move.
+> **Launch moved again (owner decision, 27 Oct 2026).** The public launch is **Thursday 29 October 2026 at 21:00 Sarajevo time** (CET, 20:00 UTC); makeborne.com counts down to that moment. Day 1 = Thu 29 Oct; Mon 26, Tue 27 and Wed 28 Oct are pre-launch days −3, −2 and −1. The launch week moved 1 more day (days 1-7 = 29 Oct - 4 Nov); launch day runs around 21:00 (T7 "We're live" at 21:00, V01 at 21:30). The countdown teasers T3-T6 and Stories S1-S3 have the old Wednesday time burned in and are not posted; "Guess the build time" (T8) is the Wed 28 Oct 21:00 post, and screen-recording Stories S4-S8 use the real countdown. Everything after the launch week keeps its date (ads A01 12-15 Nov and A02 3-4 Dec, creator waves, the no-boost window 20 Nov - 2 Dec, Black Friday, the 22 Nov and 20 Dec checkpoints). The 90 days run Thu 29 Oct 2026 - Tue 26 Jan 2027 (day 90, the day-90 review). `data/calendar.json` and the war room are the source of truth; dates and day numbers in the text below that disagree are from before the move.
 
 **Built:** 26 Oct 2026 from `plan/strategy.md`, `data/plan.json`, `data/videos.json`, `data/creatives.json`, `data/outreach.json` and `data/kpis.json`.
 **Machine-readable version:** `data/calendar.json` (92 entries: 2 pre-launch days and days 1-90, one per day: date, week, phase, focus, posts, actions, kpiCheck).
@@ -308,7 +308,7 @@ No dollar moves until the spend gate is live (`/go/` links, first touch, and `mb
 
 **Sunday check:** Week 12 scorecard vs base (kpis.json): qualified visits 5000, gross paid 50, net paid 42, activated payers 30, cumulative gross 445, active subs 345, MRR $12717, loop share 19%, owned posts 25-30, creators active 18, CAC <=$50. Guardrails: refunds <=15% (per-source brake 20%), attribution coverage >=90% from week 2, activated >=60% of net payers (weeks 1-4) / >=70% after, IG DM keyword replies >=3 per 1,000 views, MRR below 80% of target two Sundays running -> re-forecast.
 
-## Week 13 (18-25 Jan, day 90 on Mon 25 Jan): Phase 3: scale what pays, day-90 report
+## Week 13 (18-26 Jan, day 90 on Tue 26 Jan): Phase 3: scale what pays, day-90 report
 
 **Goal:** Reinvest only into sources at or under target CAC. Film V43 and build the day-90 numbers; post them and run the review on Sun 24 Jan (day 91).
 

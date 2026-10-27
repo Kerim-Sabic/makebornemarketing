@@ -70,7 +70,7 @@ export function quantile(sorted: ArrayLike<number>, q: number) {
 
 /* ---------- observing the logged data ---------- */
 
-/** Model day index: 0 = the launch, Wed 28 Oct 2026 (the funnel model's day 1). */
+/** Model day index: 0 = the launch, Thu 29 Oct 2026 (the funnel model's day 1). */
 const dayIdx = (iso: string) => diffDays(iso, LAUNCH_DAY);
 
 export interface DayObs {
@@ -197,7 +197,7 @@ export function fitTrend(points: { x: number; v: number }[]): Trend {
 export const dampedSum = (h: number, phi = DAMPING) => (phi === 1 ? h : (phi * (1 - phi ** h)) / (1 - phi));
 
 let planPath: Float64Array | null = null;
-/** Plan base direct visits on a day index (0 = Wed 28 Oct, the launch); after day 91 the last week's average holds. */
+/** Plan base direct visits on a day index (0 = Thu 29 Oct, the launch); after day 91 the last week's average holds. */
 export function planVisits(idx: number) {
   if (!planPath) {
     const d = planBase().daily;

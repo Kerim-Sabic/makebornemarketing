@@ -1117,7 +1117,7 @@
    "otherPlanSpend": [
     {
      "line": "b1",
-     "item": "TAAFT listing, Wed 28 Oct (submit it first, right after the 19:00 launch)",
+     "item": "TAAFT listing, Thu 29 Oct (submit it first, right after the 21:00 launch)",
      "usd": 49,
      "date": "2026-10-28"
     },
@@ -1395,7 +1395,7 @@
    "otherPlanSpend": [],
    "weekTotalUsd": 0,
    "runningTotalUsd": 1000,
-   "note": "Mon 25 Jan: day-90 review (day 90)."
+   "note": "Tue 26 Jan: day-90 review (day 90)."
   }
  ],
  "sources": [

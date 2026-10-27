@@ -84,7 +84,7 @@ export interface CalendarPost {
   channel: string; account: string; contentId: string | null; time: string; notes: string; tag: string; slot: string;
   link: string; utm: Record<string, string>; episode?: number; requires?: string; fallbackContentId?: string;
 }
-/** Launch day: Wed 28 Oct 2026 at 19:00 CET (data/plan.json launch). */
+/** Launch day: Thu 29 Oct 2026 at 21:00 CET (data/plan.json launch). */
 export interface LaunchInfo { label: string; timeCet: string; utc: string; runOfShow: { time: string; text: string; how: string }[] }
 export interface CalendarDay {
   date: string; day: number; weekday: string; week: number; phase: string; focus: string;

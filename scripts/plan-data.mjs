@@ -12,8 +12,8 @@ const toUtc = (iso) => {
 export const addDays = (iso, n) => new Date(toUtc(iso) + n * DAY_MS).toISOString().slice(0, 10);
 const diff = (a, b) => Math.round((toUtc(a) - toUtc(b)) / DAY_MS);
 const START = '2026-10-26'; // Mon of week 1 (pre-launch day −2); weeks run Monday to Sunday
-export const LAUNCH = '2026-10-28'; // the public launch, Wed 28 Oct 2026 at 19:00 CET (day 1)
-export const DAY90 = '2027-01-25'; // day 90 and the day-90 review, inside week 13
+export const LAUNCH = '2026-10-29'; // the public launch, Thu 29 Oct 2026 at 21:00 CET (day 1)
+export const DAY90 = '2027-01-26'; // day 90 and the day-90 review, inside week 13
 const WEEKDAYS = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
 const weekOf = (iso) => Math.min(13, Math.floor(diff(iso, START) / 7) + 1);
 const weekdayOf = (iso) => WEEKDAYS[(new Date(toUtc(iso)).getUTCDay() + 6) % 7];
@@ -112,7 +112,7 @@ export function todayExtras(files, date) {
   const t = kpis.weeklyTargets[week - 1];
   const weekStart = addDays(START, (week - 1) * 7);
   const weekday = weekdayOf(date);
-  const inWeek = diff(date, weekStart) <= 6; // day 90 (Mon 25 Jan) sits after week 13's Sunday: no make-list that day
+  const inWeek = diff(date, weekStart) <= 6; // Mon 25 Jan and day 90 (Tue 26 Jan) sit after week 13's Sunday: no make-list that day
 
   // Instagram kick-off day (days 1-14): the main post's caption, cover and keyword, and its checklist.
   const ig = instagram.kickoffDays.find((k) => k.date === date) ?? null;

@@ -77,7 +77,7 @@ export default function Results({ params }: RouteProps) {
         <div className="notice sample-banner" role="note" style={{ marginBottom: 20 }}>
           <b>SAMPLE</b>
           <span>
-            28 invented days (28 Oct - 24 Nov 2026) so you can see every panel working. Your own rows are untouched and hidden while this is on. <a href={href('results')}>Back to your data</a>.
+            28 invented days (29 Oct - 25 Nov 2026) so you can see every panel working. Your own rows are untouched and hidden while this is on. <a href={href('results')}>Back to your data</a>.
           </span>
         </div>
       )}

@@ -260,7 +260,7 @@ function buildGroups(day: CalendarDay, x: TodayExtra, date: string): Record<Grou
   const g: Record<GroupId, Item[]> = { post: [], make: [], ads: [], reach: [], log: [] };
 
   /* ---------- Post ---------- */
-  // Before the public launch (Wed 28 Oct 19:00 CET) the calendar holds only the countdown teasers.
+  // Before the public launch (Thu 29 Oct 21:00 CET) the calendar holds only the countdown teasers and Stories.
   day.posts.forEach((p, i) => {
     const e = x.posts[i];
     const t = hm(p.time);
@@ -486,9 +486,11 @@ function PostHow({ post, e, ig, date }: { post: CalendarPost; e: TodayExtra['pos
           <span>
             {post.contentId === 'T7'
               ? 'Post it only once makeborne.com is open: load it signed out first and check the countdown is gone.'
-              : date > '2026-10-28'
-                ? 'An after-launch extra: real builds and a question to comment on. Link: makeborne.com.'
-                : 'It says when, never that it is live: no price, no "we launched". Link: makeborne.com (the countdown and the waitlist).'}
+              : post.contentId === 'S8'
+                ? 'The real reveal: record makeborne.com from 20:59:45 and post it the moment the site is open.'
+                : date > LAUNCH_DAY
+                  ? 'An after-launch extra: real builds and a question to comment on. Link: makeborne.com.'
+                  : 'It says when, never that it is live: no price, no "we launched". Link: makeborne.com (the countdown and the waitlist).'}
             {/^T\d/.test(post.contentId ?? '') && ' The music is in the video: keep the original sound and add no platform music.'}
           </span>
         </p>
@@ -562,7 +564,7 @@ function useLaunchCountdown() {
   return Math.max(0, Math.floor((target - now) / 1000));
 }
 
-/** The countdown to Wed 28 Oct 19:00 CET, in the war room's stat-card style; makeborne.com counts down to the same moment. */
+/** The countdown to Thu 29 Oct 21:00 CET, in the war room's stat-card style; makeborne.com counts down to the same moment. */
 function Countdown() {
   const s = useLaunchCountdown();
   const parts: [number, string][] = [
@@ -573,7 +575,7 @@ function Countdown() {
   ];
   return (
     <div className={`countdown${s === 0 ? ' is-live' : ''}`} role="timer" aria-label={s === 0 ? 'Makeborne is live' : `Launch in ${parts.map(([n, u]) => `${n} ${u}`).join(', ')}`}>
-      <span className="today-stat-label">{s === 0 ? 'Live since Wed 28 Oct, 19:00 CET' : 'Launch in'}</span>
+      <span className="today-stat-label">{s === 0 ? 'Live since Thu 29 Oct, 21:00 CET' : 'Launch in'}</span>
       {s > 0 ? (
         <span className="countdown-digits num" aria-hidden="true">
           {parts.map(([n, u]) => (
@@ -586,12 +588,12 @@ function Countdown() {
       ) : (
         <span className="today-stat-value">We are live.</span>
       )}
-      <span className="today-stat-sub">Public launch Wed 28 Oct 2026, 19:00 Sarajevo time (18:00 UTC). makeborne.com counts down to the same moment.</span>
+      <span className="today-stat-sub">Public launch Thu 29 Oct 2026, 21:00 Sarajevo time (20:00 UTC). makeborne.com counts down to the same moment.</span>
     </div>
   );
 }
 
-/** Launch day: "LAUNCH — 19:00 CET" and the minute-by-minute run of show (data/plan.json launch), each step a tick box. */
+/** Launch day: "LAUNCH — 21:00 CET" and the minute-by-minute run of show (data/plan.json launch), each step a tick box. */
 function LaunchCard({ launch, date, checks, toggle }: { launch: LaunchInfo; date: string; checks: Record<string, boolean>; toggle: (k: string) => void }) {
   return (
     <section className="tgroup launch-card" aria-labelledby="launch-h">
@@ -601,7 +603,7 @@ function LaunchCard({ launch, date, checks, toggle }: { launch: LaunchInfo; date
           Run of show <span className="num">{launch.runOfShow.filter((r) => checks[RUN_KEY(date, r.time, r.text)]).length}/{launch.runOfShow.length}</span>
         </span>
       </div>
-      <p className="small">{plain(launch.label)}. Nothing that says "we launched" goes out before 19:00.</p>
+      <p className="small">{plain(launch.label)}. Nothing that says "we launched" goes out before {launch.timeCet}.</p>
       <ul className="ticklist">
         {launch.runOfShow.map((r) => {
           const k = RUN_KEY(date, r.time, r.text);

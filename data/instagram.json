@@ -751,8 +751,8 @@
     "Write the pinned CTA comment",
     "21:05 Story C15 \"Reply CLIENT\" (link /go/ig-c15-client)",
     "21:15-22:15 reply to every comment",
-    "22:15-20:45 engagement routine",
-    "20:30 Story: founder BTS + question box \"Ask me anything\""
+    "22:15-22:45 engagement routine",
+    "22:45 Story: founder BTS + question box \"Ask me anything\""
    ],
    "stories": [
     {
@@ -761,7 +761,7 @@
      "link": "makeborne.com/go/ig-c15-client"
     },
     {
-     "time": "20:30",
+     "time": "22:45",
      "template": "Behind the scenes + question box"
     }
    ],

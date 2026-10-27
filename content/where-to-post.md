@@ -128,6 +128,7 @@ Launch week (26 Oct-1 Nov) follows `data/calendar.json` day by day (extra Linked
 - **Never:** promote in Lovable's Discord or any competitor's community.
 
 ### Press (owner sends)
+- **Full plan (27 Oct):** the Bosnian and regional media list, the embargoed and post-launch releases in Bosnian, Croatian, Serbian and English, the TV and radio pitches and the Sarajevo stunts: `content/bosnia-guerrilla-press.md` (Library › Bosnia press and guerrilla). BiH outlets get the release on launch day, Thu 29 Oct; the Tue 3 Nov pitch is for the regional tech outlets. The dates there win over this card.
 - **Week 1, Fri 30 Oct:** local-language release to **Netokracija, Bloomberg Adria, Startit** and BiH business portals (template t16), with 3 real outputs and a founder photo; links `/go/press-<outlet>`.
 - **Wed 25 Nov:** the 30-day numbers post as a follow-up (`utm_campaign=day30`); **Sun 24 Jan:** the day-90 report (`day90`); a European follow-up at the images beat (t17).
 

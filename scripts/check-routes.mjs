@@ -398,7 +398,7 @@ try {
       if (!t) fail(`${a.date}: playbook action without a time: ${a.what.slice(0, 60)}`);
       else if (Date.parse(`${a.date}T${t}:00+01:00`) < LAUNCH_MS && (LIVE.test(a.copy ?? '') || /Wed(nesday)?,? 28 Oct(ober)?,? (at )?19:00|19:00 CET/.test(a.copy ?? ''))) fail(`${a.date} ${t}: playbook copy before the launch says it is live or names the old time`);
     }
-    if (!playbook.some((a) => a.doc === 'hype-playbook')) fail('the hype playbook has no dated actions on the calendar');
+    for (const doc of DOCS) if (!playbook.some((a) => a.doc === doc)) fail(`the ${doc} playbook has no dated actions on the calendar`);
     // Day 90 holds the day-90 review; the plan's launch block names the moment.
     const d90 = cal.find((d) => d.date === '2027-01-26');
     if (!d90?.actions.some((a) => /^Day-90 review/.test(a.what))) fail('Tue 26 Jan (day 90) has no day-90 review');
@@ -558,6 +558,8 @@ try {
       ['#/library/where-to-post', 'master posting sheet'],
       ['#/library/hype-playbook', 'build-hype-online playbook'],
       ['#/library/ads-step-by-step', 'Makeborne ads, step by step'],
+      ['#/library/bosnia-guerrilla-press', 'guerrilla and press plan'],
+      ['#/today/2026-10-29', 'embargoed Bosnian release'],
       ['#/today/2026-10-28', 'Hide-and-seek post'],
       ['#/today/2026-10-27', 'Set up the ad accounts from Bosnia today'],
       ['#/library/outreach', 'Merge fields'],

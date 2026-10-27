@@ -32,7 +32,7 @@
    "platform": "Meta (Instagram and Facebook)",
    "toolPath": [
     "Meta Ads Manager -> Create -> objective Traffic -> Continue",
-    "Campaign: name mb-meta-traffic-slota-20261112; Special ad categories: none; Advantage campaign budget: off",
+    "Campaign: name mb-meta-traffic-slota-20261112; Special ad categories: none; Advantage campaign budget: off; campaign spending limit $96 (Meta's daily budget is an average, not a cap)",
     "Ad set: Conversion location Website; Performance goal Maximise number of landing page views (if it asks for a pixel or dataset, choose Maximise number of link clicks; do not create a pixel)",
     "Ad set: Daily budget $24.00; start Thu 12 Nov 00:00, end Sun 15 Nov 23:59",
     "Ad set: Advantage+ audience on; controls: the 16 countries, minimum age 18, language English (All) if offered",
@@ -153,7 +153,7 @@
     "contentId": "Best qualifying wave-1 Lane A creator Reel (default V32, else V34)",
     "fallbackContentId": "V05 (our own Instagram Reel: Ad setup -> Use existing post)",
     "file": "The Reel exactly as posted (9:16, 1080x1920 MP4). Nothing is uploaded: the ad runs the post itself, so its likes and comments stay.",
-    "mustShow": "#ad at the start of the creator caption, the Paid partnership label, live features only"
+    "mustShow": "#ad at the start of the creator caption, the Paid partnership label, live features only; original audio or Meta's royalty-free library only (Reels with licensed Instagram music cannot run as partnership ads)"
    },
    "copy": {
     "primaryText": "The creator's own caption (partnership ads run it). Fallback V05 Reel: \"Your client comments on the live site and taps Approve. No login, no screenshots, no 40-e-mail thread.\" (ad-copy A2-M1, 102 characters)",
@@ -193,7 +193,8 @@
     "Ads page (this card, \"Log spend\"): add one spend-log row per day (date, line b5, card A01, $ spent).",
     "Results page: one daily row for ch-boosts: spend, link clicks, /go/ visits, checkouts opened, gross paid.",
     "Library > Videos or Images: set the boosted post to \"winner\" if it produced 1+ net payer.",
-    "Private log (never this repo): CPM, link CTR, CPC, landing-page-view rate, checkouts opened, gross paid; re-check refunds 14 days after the last day and write the final CAC."
+    "Private log (never this repo): CPM, link CTR, CPC, landing-page-view rate, checkouts opened, gross paid; re-check refunds 14 days after the last day and write the final CAC.",
+    "Meta location fees (UK 2%, Austria 5%) are billed outside the budget: log them as their own spend-log row on line b9 (reserve)."
    ],
    "fallbackIfNotAvailableFromBiH": "If Meta cannot bill from Bosnia and Herzegovina by Mon 9 Nov: run this slot on TikTok with card A02's settings at $51/day x 2 days = $102 (the extra $6 comes from reserve b9). If neither platform bills by 9 Nov, the whole $200 of b5 moves to creator rehires (strategy 6.2). Never borrow someone else's account.",
    "checksBeforeLaunch": [
@@ -217,14 +218,14 @@
    "platform": "TikTok",
    "toolPath": [
     "TikTok Ads Manager -> Campaign -> Create -> manual campaign (not Smart+) -> objective Traffic",
-    "Campaign: name mb-tt-traffic-slotb-20261203; campaign budget Daily $52; budget optimisation off",
+    "Campaign: name mb-tt-traffic-slotb-20261203; Budget strategy -> Ad group budget (the daily $52 is set on the ad group in step 5; TikTok's manual flow since Oct 2026)",
     "Ad group: name t1en-broad-tiktokonly-52d; optimisation location Website",
     "Ad group: Placement -> Select placement -> TikTok only (untick Pangle and Global App Bundle); comments on; downloads off",
     "Ad group: Targeting -> the 16 countries, language English, ages 18-24, 25-34, 35-44, 45-54, gender all, no interests (broad)",
     "Ad group: Daily budget $52; start Thu 3 Dec 00:00, end Fri 4 Dec 23:59; dayparting off",
     "Ad group: Optimisation goal Click; bid strategy Maximum delivery; billing CPC",
     "Ad: Identity -> Spark Ads -> Use TikTok account to deliver Spark Ads -> + Add authorized post -> pick our post (or paste the creator's code)",
-    "Ad: Destination Website URL below; CTA Learn more; no pixel, no events -> Submit by Tue 1 Dec"
+    "Ad: Destination Website URL below; CTA Learn more; no pixel, no events -> Submit by Tue 1 Dec; payer information (EU DSA) shows ZORBY&CO D.O.O."
    ],
    "objective": "Traffic",
    "optimization": "Clicks (landing-page-view optimisation needs a TikTok pixel, which we do not have [U])",
@@ -368,7 +369,7 @@
     "Library > Videos or Images: set the boosted post to \"winner\" if it produced 1+ net payer.",
     "Private log (never this repo): CPM, link CTR, CPC, landing-page-view rate, checkouts opened, gross paid; re-check refunds 14 days after the last day and write the final CAC."
    ],
-   "fallbackIfNotAvailableFromBiH": "If no TikTok ad account can be opened or billed from Bosnia and Herzegovina: boost the Instagram re-edit of the same post on Meta with card A01 settings (own-Reel option), $26/day x 4 days = $104, link https://makeborne.com/go/ig-v04-b. If neither platform works, b5 goes to creator rehires. Never register under another country.",
+   "fallbackIfNotAvailableFromBiH": "If no TikTok ad account can be opened or billed from Bosnia and Herzegovina: boost the Instagram re-edit of the same post on Meta with card A01 settings (own-Reel option), $26/day x 4 days = $104, link https://makeborne.com/go/ig-v04-b. If neither platform works, b5 goes to creator rehires. Never register under another country. On Meta, set a campaign spending limit of $104.",
    "checksBeforeLaunch": [
     "Spend gate live",
     "Caption already 100 characters or less and compliant",
@@ -390,7 +391,8 @@
    "platform": "Same as the winning card (Meta or TikTok)",
    "toolPath": [
     "Ads Manager -> the winning campaign -> Duplicate -> new 2-day schedule (TikTok: 1 day) -> same audience, placements, creative and link -> name with today's date -> Publish",
-    "Do not edit the original ad (that resets learning and muddies the read)"
+    "Do not edit the original ad (that resets learning and muddies the read)",
+    "On Meta: set a campaign spending limit of $50 on the duplicate ($25/day x 2); on TikTok the 1-day ad group budget is $52"
    ],
    "objective": "Traffic (same as the winner)",
    "optimization": "Same as the winner",
@@ -1319,7 +1321,7 @@
    ],
    "weekTotalUsd": 84,
    "runningTotalUsd": 1000,
-   "note": "Anything still unspent on Thu 24 Dec (day 58) goes to the best source."
+   "note": "Anything still unspent on Thu 24 Dec (day 57) goes to the best source."
   },
   {
    "week": 9,

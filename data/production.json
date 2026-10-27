@@ -39,7 +39,7 @@
         {
           "name": "2. Talk to the phone",
           "share": "15% of what we make",
-          "covers": "Day 1, Day 7, Day 30, 'why no free plan', 'who's behind this'",
+          "covers": "Day 1, Day 7, Day 30, 'why paid plans only', 'who's behind this'",
           "steps": [
             "Phone at eye level, window light, say the five lines. Three takes.",
             "Keep the best take, cut the pauses.",
@@ -91,7 +91,7 @@
       {
         "week": 1,
         "dates": "2026-10-26 to 2026-11-01",
-        "note": "Launch week follows the hour-by-hour plan (content/production.md section 13). Launch moved to Thu 29 Oct 21:00 CET: the launch-week posts moved 1 day later, so each make-list item below is now done the day before its post. The Higgsfield sign-up stays Tue 27 Oct and the first shots stay Wed 28 Oct 09:00.",
+        "note": "Launch week follows the day-by-day plan (content/production.md section 13). The launch is Thu 29 Oct at 21:00 CET, so each make-list item below is done the day before its post. The Higgsfield sign-up is Tue 27 Oct and the first shots are Wed 28 Oct 09:00.",
         "items": [
           {
             "day": "Tue",
@@ -337,7 +337,7 @@
           },
           {
             "day": "Sat",
-            "text": "Sat: put the Higgsfield scenes into V07 in HyperFrames: opening, middle and end (40 min), for Sunday's post",
+            "text": "Sat: put the Higgsfield scenes into V07 in HyperFrames: opening, middle and end (40 min), for Monday's post",
             "ids": [
               "V07"
             ],
@@ -354,7 +354,7 @@
           },
           {
             "day": "Sun",
-            "text": "Sun: C37 with the real Day-5 numbers (30 min); edit V07 (2 h); first 48-hour read (1 h); C05 screenshots (1 h 30 min)",
+            "text": "Sun: C37 ledger template (30 min; the real Day-5 numbers go in on Mon at 08:00); edit V07 (2 h); first 48-hour read (1 h); C05 screenshots (1 h 30 min)",
             "ids": [
               "C37",
               "V07",
@@ -478,8 +478,8 @@
             ]
           },
           {
-            "day": "Tue",
-            "text": "Tue: film and edit V09 with the real Day-7 numbers (1 h 30 min, post 09:30)",
+            "day": "Wed",
+            "text": "Wed 07:45: pull the Day-7 numbers, then film and edit V09 (1 h 30 min, post LinkedIn 09:30)",
             "ids": [
               "V09"
             ],
@@ -582,7 +582,7 @@
           },
           {
             "day": "Tue",
-            "text": "Tue: put the roastery scene and the site camera move into V16 (30 min), for Wednesday's post",
+            "text": "Tue: put the roastery scene and the site camera move into V16 (30 min); V16 was banked when the launch moved and posts later (see Today)",
             "ids": [
               "V16"
             ],
@@ -685,8 +685,8 @@
             ]
           },
           {
-            "day": "Thu",
-            "text": "Thu: film V44 + V11 + V31 to camera (1 h 5 min), edit the same afternoon",
+            "day": "Mon",
+            "text": "Mon: film V44 + V11 + V31 to camera (1 h 5 min) and edit V44 and V11 the same day: both post Tue 3 Nov (V31 posts Sun 8 Nov)",
             "ids": [
               "V44",
               "V11",
@@ -4171,7 +4171,7 @@
       "title": "The Fly-over, pinned: 'We launched today'",
       "priority": "P0",
       "week": 1,
-      "firstPost": "2026-10-26 12:00 TikTok",
+      "firstPost": "2026-10-29 21:30 TikTok",
       "tag": "live",
       "lengthSec": 17,
       "pipeline": "P10-film-recut",
@@ -4262,7 +4262,7 @@
       "title": "One brief in, a whole website out (bakery speedrun)",
       "priority": "P0",
       "week": 1,
-      "firstPost": "2026-10-26 13:00 TikTok",
+      "firstPost": "2026-10-29 22:00 TikTok",
       "tag": "live",
       "lengthSec": 32,
       "pipeline": "P1-speedrun",
@@ -4504,7 +4504,7 @@
       "title": "Pitch deck from one brief",
       "priority": "P0",
       "week": 1,
-      "firstPost": "2026-10-26 21:00 TikTok",
+      "firstPost": "2026-10-29 22:30 TikTok",
       "tag": "live",
       "lengthSec": 30,
       "pipeline": "P1-speedrun",
@@ -4728,7 +4728,7 @@
       "title": "Replying to @___: here's your bakery's website (comment-reply series)",
       "priority": "P0",
       "week": 1,
-      "firstPost": "2026-10-27 13:00 TikTok",
+      "firstPost": "2026-10-30 13:00 TikTok",
       "tag": "live",
       "lengthSec": 32,
       "pipeline": "P1-speedrun",
@@ -4822,7 +4822,7 @@
       "title": "POV: the client says 'make it pop' for the 9th time",
       "priority": "P0",
       "week": 1,
-      "firstPost": "2026-10-28 13:00 TikTok",
+      "firstPost": "2026-10-31 13:00 TikTok",
       "tag": "live",
       "lengthSec": 28,
       "pipeline": "P9-pov-props",
@@ -4920,7 +4920,7 @@
       "title": "It's a real chart, not a picture",
       "priority": "P0",
       "week": 1,
-      "firstPost": "2026-10-30 13:00 TikTok",
+      "firstPost": "2026-11-02 13:00 TikTok",
       "tag": "live",
       "lengthSec": 25,
       "pipeline": "P2-before-after",
@@ -5013,7 +5013,7 @@
       "title": "I found 20 local businesses to pitch, before lunch",
       "priority": "P0",
       "week": 1,
-      "firstPost": "2026-10-30 21:00 TikTok",
+      "firstPost": "2026-11-02 21:00 TikTok",
       "tag": "live",
       "lengthSec": 40,
       "pipeline": "P1-speedrun",
@@ -5270,7 +5270,7 @@
       "title": "Founder Day 1: we launched, comment what to build first",
       "priority": "P0",
       "week": 1,
-      "firstPost": "2026-10-26 09:30 LinkedIn",
+      "firstPost": "2026-10-29 21:15 LinkedIn",
       "tag": "live",
       "lengthSec": 45,
       "pipeline": "P4-founder",
@@ -5358,7 +5358,7 @@
       "title": "Founder Day 7: exactly how many people paid",
       "priority": "P0",
       "week": 1,
-      "firstPost": "2026-11-01 21:30 TikTok",
+      "firstPost": "2026-11-04 21:30 TikTok",
       "tag": "live",
       "lengthSec": 60,
       "pipeline": "P4-founder",
@@ -5434,7 +5434,7 @@
         "usd": 0,
         "note": "Makeborne AI provider cost of the builds about $0.00 (outside the $1,000; plan.json outsideBudget)"
       },
-      "readiness": "needs the day's real numbers (Tue 3 Nov, day 7)",
+      "readiness": "needs the day's real numbers (Wed 4 Nov, day 7)",
       "makeWith": "real only",
       "mix": {
         "lengthSec": 60,
@@ -5448,7 +5448,7 @@
       "title": "One brief: the site, the pitch deck and the client guide",
       "priority": "P0",
       "week": 1,
-      "firstPost": "2026-10-28 17:00 Reddit",
+      "firstPost": "2026-10-31 17:00 Reddit",
       "tag": "live",
       "lengthSec": 30,
       "pipeline": "P1-speedrun",
@@ -5536,10 +5536,10 @@
     },
     {
       "id": "V11",
-      "title": "Founder: why there's no free plan",
+      "title": "Founder: why paid plans only",
       "priority": "P1",
       "week": 2,
-      "firstPost": "2026-11-02 09:30 LinkedIn",
+      "firstPost": "2026-11-03 09:30 LinkedIn",
       "tag": "live",
       "lengthSec": 50,
       "pipeline": "P4-founder",
@@ -5558,14 +5558,14 @@
       "template": {
         "id": "T05-founder",
         "variables": {
-          "dayLabel": "Why no free plan",
-          "hookLine": "Everyone said 'add a free plan'."
+          "dayLabel": "Why paid plans only",
+          "hookLine": "Everyone said 'give it away first'."
         }
       },
       "onScreenText": [
         {
           "t": "0-2s",
-          "text": "Everyone said 'add a free plan'."
+          "text": "Everyone said 'give it away first'."
         },
         {
           "t": "2-15s",
@@ -5584,7 +5584,7 @@
           "text": "Full refund until you use credits."
         }
       ],
-      "hook": "Everyone said 'add a free plan'. Here's why I didn't.",
+      "hook": "Everyone said 'give it away first'. Here's why I didn't.",
       "audio": {
         "music": "No music / very low bed.",
         "vo": "Founder on camera, script lines as written; CTA 'Watch the uncut build' until ga5 and ga7 are live.",
@@ -5625,7 +5625,7 @@
       "title": "Be the client for 30 seconds (sample review link)",
       "priority": "P1",
       "week": 2,
-      "firstPost": "2026-11-03 13:15 Instagram Reels",
+      "firstPost": "2026-11-30 09:30 LinkedIn",
       "tag": "live",
       "lengthSec": 25,
       "pipeline": "P9-pov-props",
@@ -5708,7 +5708,7 @@
       "title": "How I get a client to approve a site in one link (tutorial)",
       "priority": "P1",
       "week": 2,
-      "firstPost": "2026-11-02 13:30 YouTube Shorts",
+      "firstPost": "2026-11-24 09:30 LinkedIn",
       "tag": "live",
       "lengthSec": 75,
       "pipeline": "P8-tutorial",
@@ -5798,7 +5798,7 @@
       "title": "My slides vs the deck I made from the same notes",
       "priority": "P1",
       "week": 2,
-      "firstPost": "2026-11-03 13:00 TikTok",
+      "firstPost": "2026-11-04 13:00 TikTok",
       "tag": "live",
       "lengthSec": 27,
       "pipeline": "P2-before-after",
@@ -6009,7 +6009,7 @@
       "title": "Your notes app is full of book ideas: here's one, finished",
       "priority": "P1",
       "week": 2,
-      "firstPost": "2026-11-03 13:30 YouTube Shorts",
+      "firstPost": "2026-11-05 13:00 TikTok",
       "tag": "live",
       "lengthSec": 24,
       "pipeline": "P7-showcase",
@@ -6233,7 +6233,7 @@
       "title": "5 websites, each from one brief (swipe)",
       "priority": "P1",
       "week": 2,
-      "firstPost": "2026-11-04 21:30 TikTok",
+      "firstPost": "2026-12-21 13:00 TikTok",
       "tag": "live",
       "lengthSec": 15,
       "pipeline": "P7-showcase",
@@ -9544,7 +9544,7 @@
       "title": "Founder Day 90: every number, including what failed",
       "priority": "P1",
       "week": 13,
-      "firstPost": "2027-01-24 09:30 LinkedIn",
+      "firstPost": "2027-01-26 09:30 LinkedIn",
       "tag": "live",
       "lengthSec": 120,
       "pipeline": "P4-founder",
@@ -9626,7 +9626,7 @@
       "title": "Who's behind this? A small studio in Sarajevo",
       "priority": "P1",
       "week": 2,
-      "firstPost": "2026-11-02 13:00 TikTok",
+      "firstPost": "2026-11-03 13:00 TikTok",
       "tag": "live",
       "lengthSec": 40,
       "pipeline": "P4-founder",
@@ -11567,7 +11567,7 @@
       "platform": "Meta (Instagram + Facebook feed)",
       "priority": 1,
       "week": 1,
-      "firstPost": "2026-10-27 09:30 LinkedIn",
+      "firstPost": "2026-10-30 09:30 LinkedIn",
       "imageKind": "Real product screenshot composited in a HyperFrames still",
       "aiGeneratedArt": "none",
       "pipeline": "P5-stills",
@@ -11601,7 +11601,7 @@
       "platform": "Meta (Instagram + Facebook feed)",
       "priority": 1,
       "week": 1,
-      "firstPost": "2026-10-28 13:20 Instagram Stories",
+      "firstPost": "2026-10-31 13:20 Instagram Stories",
       "imageKind": "Real product screenshot composited in a HyperFrames still",
       "aiGeneratedArt": "none",
       "pipeline": "P5-stills",
@@ -11635,7 +11635,7 @@
       "platform": "Meta + LinkedIn",
       "priority": 1,
       "week": 1,
-      "firstPost": "2026-10-27 20:00 X",
+      "firstPost": "2026-10-30 20:00 X",
       "imageKind": "HyperFrames-rendered typographic still (no capture)",
       "aiGeneratedArt": "none",
       "pipeline": "P5-stills",
@@ -11702,7 +11702,7 @@
       "platform": "Instagram (organic carousel) + LinkedIn document re-export",
       "priority": 1,
       "week": 1,
-      "firstPost": "2026-10-31 12:00 Instagram carousel",
+      "firstPost": "2026-11-03 12:00 Instagram carousel",
       "imageKind": "Real product screenshot composited in a HyperFrames still",
       "aiGeneratedArt": "none",
       "pipeline": "P5-stills",
@@ -11737,7 +11737,7 @@
       "platform": "Instagram (organic carousel)",
       "priority": 1,
       "week": 1,
-      "firstPost": "2026-10-29 18:00 Instagram carousel",
+      "firstPost": "2026-11-01 18:00 Instagram carousel",
       "imageKind": "Real product screenshot composited in a HyperFrames still",
       "aiGeneratedArt": "none",
       "pipeline": "P5-stills",
@@ -11772,7 +11772,7 @@
       "platform": "LinkedIn (document post, PDF)",
       "priority": 1,
       "week": 1,
-      "firstPost": "2026-10-29 09:30 LinkedIn",
+      "firstPost": "2026-11-01 09:30 LinkedIn",
       "imageKind": "Built in Makeborne (the deliverable is the creative)",
       "aiGeneratedArt": "none",
       "pipeline": "P11-built-in-makeborne",
@@ -11807,7 +11807,7 @@
       "platform": "LinkedIn (founder post image) + X",
       "priority": 1,
       "week": 1,
-      "firstPost": "2026-10-26 20:00 X",
+      "firstPost": "2026-10-29 21:15 X",
       "imageKind": "HyperFrames-rendered typographic still (no capture)",
       "aiGeneratedArt": "none",
       "pipeline": "P5-stills",
@@ -11840,7 +11840,7 @@
       "platform": "Instagram + Facebook Stories / Reels cover",
       "priority": 1,
       "week": 1,
-      "firstPost": "2026-10-29 13:20 Instagram Stories",
+      "firstPost": "2026-11-01 13:20 Instagram Stories",
       "imageKind": "Real product screenshot composited in a HyperFrames still",
       "aiGeneratedArt": "none",
       "pipeline": "P5-stills",
@@ -11873,7 +11873,7 @@
       "platform": "Meta + LinkedIn",
       "priority": 2,
       "week": 2,
-      "firstPost": "2026-11-03 09:30 LinkedIn",
+      "firstPost": "2027-01-07 09:30 LinkedIn",
       "imageKind": "Real product screenshot composited in a HyperFrames still",
       "aiGeneratedArt": "none",
       "pipeline": "P5-stills",
@@ -11907,7 +11907,7 @@
       "platform": "X + LinkedIn",
       "priority": 2,
       "week": 2,
-      "firstPost": "2026-11-02 20:00 X",
+      "firstPost": "2027-01-07 20:00 X",
       "imageKind": "Real product screenshot composited in a HyperFrames still",
       "aiGeneratedArt": "none",
       "pipeline": "P5-stills",
@@ -11935,12 +11935,12 @@
     },
     {
       "id": "C12",
-      "concept": "Contrarian founder stance (P3): no free tier on purpose, with the three trial substitutes",
+      "concept": "Contrarian founder stance (P3): paid plans only, on purpose, with the three trial substitutes",
       "type": "x-image",
       "platform": "X + Indie Hackers + LinkedIn (organic only)",
       "priority": 2,
       "week": 1,
-      "firstPost": "2026-10-28 20:00 X",
+      "firstPost": "2026-10-31 20:00 X",
       "imageKind": "HyperFrames-rendered typographic still (no capture)",
       "aiGeneratedArt": "none",
       "pipeline": "P5-stills",
@@ -11948,7 +11948,7 @@
         "id": "T09-stills",
         "layout": "T09 lay-type",
         "variables": {
-          "headline": "No free tier, on purpose.",
+          "headline": "Paid plans only, on purpose.",
           "subcopy": "Watch the uncut build. Play the client. If you don't use a credit, you get every cent back.",
           "cta": "Read why"
         }
@@ -12040,7 +12040,7 @@
       "platform": "Instagram Stories",
       "priority": 2,
       "week": 1,
-      "firstPost": "2026-10-26 12:30 Instagram Stories",
+      "firstPost": "2026-10-29 21:05 Instagram Stories",
       "imageKind": "HyperFrames-rendered typographic still (no capture)",
       "aiGeneratedArt": "none",
       "pipeline": "P5-stills",
@@ -12073,7 +12073,7 @@
       "platform": "Meta + X",
       "priority": 1,
       "week": 1,
-      "firstPost": "2026-10-29 20:00 X",
+      "firstPost": "2026-11-01 20:00 X",
       "imageKind": "Real product screenshot composited in a HyperFrames still",
       "aiGeneratedArt": "none",
       "pipeline": "P5-stills",
@@ -12107,7 +12107,7 @@
       "platform": "Meta + LinkedIn + X",
       "priority": 1,
       "week": 1,
-      "firstPost": "2026-10-31 20:00 X",
+      "firstPost": "2026-11-03 20:00 X",
       "imageKind": "Real product screenshot composited in a HyperFrames still",
       "aiGeneratedArt": "none",
       "pipeline": "P5-stills",
@@ -12278,7 +12278,7 @@
       "platform": "Instagram Stories",
       "priority": 3,
       "week": 1,
-      "firstPost": "2026-10-30 13:20 Instagram Stories",
+      "firstPost": "2026-11-02 13:20 Instagram Stories",
       "imageKind": "Real product screenshot composited in a HyperFrames still",
       "aiGeneratedArt": "none",
       "pipeline": "P5-stills",
@@ -12605,7 +12605,7 @@
       "platform": "X + LinkedIn (organic only; no competitor names in paid copy)",
       "priority": 3,
       "week": 2,
-      "firstPost": "2026-11-03 20:00 X",
+      "firstPost": "2027-01-14 20:00 X",
       "imageKind": "HyperFrames-rendered typographic still (no capture)",
       "aiGeneratedArt": "none",
       "pipeline": "P5-stills",
@@ -12803,7 +12803,7 @@
       "platform": "X + LinkedIn + Indie Hackers + TikTok photo post",
       "priority": 1,
       "week": 1,
-      "firstPost": "2026-10-30 09:30 LinkedIn",
+      "firstPost": "2026-11-02 09:30 LinkedIn",
       "imageKind": "HyperFrames-rendered typographic still (no capture)",
       "aiGeneratedArt": "none",
       "pipeline": "P5-stills",
@@ -13739,91 +13739,100 @@
     ],
     "launchWeek": [
       {
-        "date": "Mon 26 Oct",
-        "posts": "LI V08 (moved to 16:30), TT V01 12:00, IG V01 12:05, IG story C15 12:30, TT V02 13:00, YT V01 13:30, X C08 20:00, TT V03 21:00",
+        "date": "Tue 27 Oct",
+        "posts": "IG story S4 19:00 (the new time, with the real countdown)",
         "blocks": [
           "07:00-07:30 Free disk space first: at least 20 GB on the render disk (on 26 Oct the editing machine's main drive had well under 1 GB free, which makes every render fail). Create the marketing account profile, OBS scenes (1440x900 and 860x1080 at 2x), run sheet with the three briefs, names checked.",
-          "07:30-08:30 V01: copy the v9 9:16 and 4K renders from the film library, compare frames with today's home page, build T11 + T01 end card, render 9:16 and 16:9. In parallel: C15 story (T09 type-only, 20 min).",
-          "08:30-10:15 Capture block A (one take each, uncut): V02 bakery site (composer, build, one edit, publish, phone scroll), V03 bike-shop deck (composer, build, PPTX in PowerPoint, chart click, Edit Data), V05 review flow ('Mlin & Kora': create link, client comment on the second phone, chat fix, Approve) and the C01 coffee-roastery hero (run the brief, capture 1440x900).",
-          "10:15-10:40 V08 founder takes (3), phone at eye level.",
-          "10:40-12:00 V02 edit in T02 (first use of the template) and render 9:16.",
-          "12:00 post V01 (TT, pin after the end-card check), 12:05 IG V01, 12:30 C15 story, 13:00 V02 TT, 13:30 V01 Shorts.",
-          "13:30-14:30 Replies and the private 'build mine' request log (source for V04).",
-          "14:30-16:15 V08 edit in T05 with the V02 and V05 inserts; post LinkedIn 16:30 instead of 09:30 (b-roll is not ready at 09:30; 16:00-17:00 is inside the LinkedIn window).",
-          "16:15-16:45 C08 Day-1 card (T09 type-only).",
-          "17:00-20:45 V03 edit (T02 + PowerPoint segment), render; 20:00 C08 on X; 21:00 V03 TikTok.",
-          "If anything slips: V03 moves to Tue 21:00 and V04 to Wed; never post a draft that fails the quality bar."
-        ]
-      },
-      {
-        "date": "Tue 27 Oct",
-        "posts": "LI C01 09:30, TT V04 13:00, IG V02 re-edit 13:15, YT V02 re-edit 13:30, X C03 20:00",
-        "blocks": [
-          "08:30-09:20 C01 proof static (T09 lay-proof with the Monday capture); post 09:30.",
-          "10:30-12:30 V04 if a real 'build mine' request arrived: capture (45 min) and edit (75 min). If none: post the V02 full build (60-150 s) at 13:00 and run V04 when the first request comes in. Never stage a comment.",
-          "12:30-13:10 V02 native re-edits for Reels and Shorts (new cover, 'Comment SITE', Meta/YouTube library music).",
-          "14:00-16:00 Capture block B: V06 fresh fictional deck + chat edit 'change Q2 to 21' + PowerPoint Edit Data; V07 lead finder (dentists, Austin; blur); V10 the garden-studio brief in Website, Presentation and Book mode (three uncut builds).",
-          "16:00-16:30 C03 text-only static for X 20:00.",
-          "16:30-17:00 C02 static from the Monday phone capture (for Wed 13:20).",
-          "17:00-20:00 V05 edit (T08 inbox prop + review part), renders 9:16 and LinkedIn 4:5 (captions, no music)."
+          "The owner signs up for Higgsfield Plus, monthly, himself (production budget, not the $1,000). No credit packs, no auto-refill; note the renewal date."
         ]
       },
       {
         "date": "Wed 28 Oct",
-        "posts": "LI V05 09:30, TT V05 13:00, IG V05 13:15, IG story C02 13:20, IH C12 16:00, Reddit V10 17:00, X C12 20:00",
+        "posts": "IG story S5 12:00, IG T8 21:00, TT T8 21:05, YT T8 21:10",
         "blocks": [
-          "08:30-09:20 Final check of V05 (LinkedIn cut muted on a phone); post 09:30.",
-          "10:30-12:30 V10 edit (T04 triptych frame 0 + three build segments).",
-          "14:00-15:00 C12 card: until ga5 ships, the three substitutes read 'Watch the uncut build' and the refund line only (no 'play the client').",
-          "15:00-16:45 V10 finish; 16:00 C12 on Indie Hackers; 17:00 V10 on r/SideProject (16:9 or 9:16 as the post allows).",
-          "Background: start the five C06 production runs while editing (keep the first output, log time and credits).",
-          "20:00-21:00 C07 LinkedIn document built in Makeborne (8 portrait slides, end page), CTA 'Comment workflow and I'll send the uncut build' until ga5 is live."
+          "09:00 Generate the 6 Higgsfield shots for V07, V14 and V15 (HF01-HF06; prompts in the sheet, about 313 credits).",
+          "V01: copy the v9 9:16 and 4K renders from the film library, compare frames with today's home page, build T11 + T01 end card, render 9:16 and 16:9 (60 min). In parallel: C15 story (T09 type-only, 20 min).",
+          "Capture block A (one take each, uncut, 1 h 45 min): V02 bakery site (composer, build, one edit, publish, phone scroll), V03 bike-shop deck (composer, build, PPTX in PowerPoint, chart click, Edit Data), V05 review flow ('Mlin & Kora': create link, client comment on the second phone, chat fix, Approve) and the C01 coffee-roastery hero (run the brief, capture 1440x900).",
+          "V08 founder takes (3, 25 min), phone at eye level.",
+          "Edits: V02 in T02 (first use of the template, 80 min), V08 in T05 with the V02 and V05 inserts (1 h 45 min), V03 (T02 + PowerPoint segment, 3 h 45 min).",
+          "C08 Day-1 card (T09 type-only, 30 min).",
+          "21:00 T8 goes out (it is already rendered); answer every GO for an hour. Nothing says it is live."
         ]
       },
       {
         "date": "Thu 29 Oct",
-        "posts": "LI C07 09:30, TT V10 13:00, IG story C09 13:20, YT V10 13:30, IG carousel C06 18:00, X C16 20:00",
+        "posts": "IG story S6 09:15, IG story S7 20:00, IG T7 21:00, TT T7 21:01, YT T7 21:02, IG story S8 21:01, IG story C15 21:05, LI V08 21:15, X C08 21:15, TT V01 21:30, IG V01 21:30, YT V01 21:30, TT V02 22:00, TT V03 22:30",
         "blocks": [
-          "Attribution target day: from today every post uses its /go/ link (ga1).",
-          "08:30 C07 final check; 09:30 post.",
-          "C09 needs the public sample review link (ga5): if it is not live, post C15 or C22 in that story slot instead.",
-          "10:30-12:30 C06 carousel (7 pages, T09) from the five runs; C16 static from the v12 slide-6 pair (crop the brand name).",
-          "13:00 V10 TikTok, 13:30 Shorts.",
-          "14:00-15:00 C17 static (PowerPoint capture from Tuesday), C22 story.",
-          "15:00-17:00 V06 edit (T03 stack + PowerPoint), render.",
-          "17:00-18:00 C37 ledger template prepared (numbers typed Friday morning)."
+          "Daytime: C01 proof static (T09 lay-proof with Wednesday's capture, 50 min); V04 only if a real 'build mine' request came in (capture 45 min, edit 75 min), otherwise the V02 full build (60-150 s) goes out on Friday. Never stage a comment.",
+          "Capture block B (2 h): V06 fresh fictional deck + chat edit 'change Q2 to 21' + PowerPoint Edit Data; V07 lead finder (dentists, Austin; blur); V10 the garden-studio brief in Website, Presentation and Book mode (three uncut builds). Then C03 text-only static and C02 static from the phone capture (1 h), and the V05 edit (T08 inbox prop + review part, renders 9:16 and LinkedIn 4:5, captions, no music; 3 h).",
+          "18:00 Final prep: V01, V02, V03 and V08 uploaded as drafts; the X thread saved with media; phone charged; support inbox open.",
+          "20:59:45 Start the phone screen recording of makeborne.com reaching zero (it becomes S8). 21:00 T7, only once makeborne.com is open; 21:01 S8; 21:05 C15; 21:15 V08 on LinkedIn and C08 on X; 21:30 V01 (TikTok, Reels, Shorts; pin it after the end-card check); 22:00 V02 and 22:30 V03 on TikTok.",
+          "21:15-22:30 Replies and the private 'build mine' request log (source for V04).",
+          "If anything slips: V03 moves to Fri 21:30 and V04 to Sat; never post a draft that fails the quality bar."
         ]
       },
       {
         "date": "Fri 30 Oct",
-        "posts": "LI C37 09:30, TT V06 13:00, IG V07 13:15, IG story C22 13:20, YT V07 13:30, X C37 20:00, TT V07 21:00",
+        "posts": "LI C01 09:30, TT V04 13:00, IG V02 re-edit 13:15, YT V02 re-edit 13:30, X C03 20:00",
         "blocks": [
-          "08:00-08:30 Day-5 numbers from Whop and /go/ into C37 (refunds included, nothing rounded up); post 09:30.",
-          "10:30-12:30 V07 edit (T02 workflow variant), renders 9:16 for TT/IG/Shorts.",
-          "13:00 V06; 13:15-13:30 V07 IG and Shorts.",
-          "14:00-15:00 First 48-hour read: 3-second hold, completion, /go/ clicks per 1,000 views; pick re-cut candidates.",
-          "15:00-16:30 C05 carousel captures (lead finder, composer, publish dialog, review link, comment, Approve on 'Mlin & Kora') for Saturday.",
-          "21:00 V07 TikTok."
+          "09:30 C01 on LinkedIn.",
+          "12:30-13:10 V02 native re-edits for Reels and Shorts (new cover, 'Comment SITE', Meta/YouTube library music).",
+          "V10 edit (T04 triptych frame 0 + three build segments, 2 h 30 min).",
+          "C12 card (1 h): until ga5 ships, the three lines read 'Watch the uncut build' and the refund line only (no 'play the client').",
+          "C07 LinkedIn document built in Makeborne (8 portrait slides, end page, 60 min), CTA 'Comment workflow and I'll send the uncut build' until ga5 is live.",
+          "Background: start the five C06 production runs while editing (keep the first output, log time and credits)."
         ]
       },
       {
         "date": "Sat 31 Oct",
-        "posts": "IG carousel C05 12:00, YT V03 re-edit 13:30, X C17 20:00",
+        "posts": "LI V05 09:30, TT V05 13:00, IG V05 13:15, IG story C02 13:20, IH C12 16:00, Reddit V10 17:00, X C12 20:00",
         "blocks": [
-          "09:00-11:00 C05 carousel (8 pages) and the V03 Shorts re-edit.",
-          "11:00-15:00 Batch-film day for week 2 (10 videos): V44 walk-and-talk, V11 and V31 takes, V13 review-link tutorial capture, V14 'before' deck made by hand (timed honestly), V15 book capture, V16 five outputs, V18 thread prop + review capture, V30 identical-position edit captures, V04 episode 2 if a request is waiting.",
-          "Write the images-beat copy (held until the gate passes)."
+          "08:30-09:20 Final check of V05 (LinkedIn cut muted on a phone); post 09:30.",
+          "C06 carousel (7 pages, T09) from the five runs and C16 static from the v12 slide-6 pair, crop the brand name (2 h); C17 static (PowerPoint capture) and C22 story (1 h); V06 edit (T03 stack + PowerPoint, 2 h).",
+          "Put the Higgsfield scenes into V07 in HyperFrames: opening, middle and end (40 min), for Monday's post.",
+          "16:00 C12 on Indie Hackers; 17:00 V10 on r/SideProject (16:9 or 9:16 as the post allows)."
         ]
       },
       {
         "date": "Sun 1 Nov",
-        "posts": "LI V09 09:30, IH C37 16:00, IG V09 19:00, X V09 20:00, TT V09 21:30",
+        "posts": "LI C07 09:30, TT V10 13:00, IG story C09 13:20, YT V10 13:30, IG carousel C06 18:00, X C16 20:00",
+        "blocks": [
+          "Attribution target was launch day: every post uses its /go/ link once ga1 is live.",
+          "C09 needs the public sample review link (ga5): if it is not live, post C15 or C22 in that story slot instead.",
+          "V07 edit (T02 workflow variant, renders 9:16 for TT/IG/Shorts, 2 h); C37 ledger template (30 min; the real Day-5 numbers go in on Monday at 08:00).",
+          "First 48-hour read (1 h): 3-second hold, completion, /go/ clicks per 1,000 views; pick re-cut candidates.",
+          "C05 carousel captures (lead finder, composer, publish dialog, review link, comment, Approve on 'Mlin & Kora', 1 h 30 min) for Tuesday.",
+          "US clocks change today: the evening US slot moves to 20:00-00:00 Sarajevo."
+        ]
+      },
+      {
+        "date": "Mon 2 Nov",
+        "posts": "LI C37 09:30, TT V06 13:00, IG V07 13:15, IG story C22 13:20, YT V07 13:30, X C37 20:00, TT V07 21:00 (Today also offers an optional T8 at 19:00)",
+        "blocks": [
+          "08:00-08:30 Day-5 numbers from Whop and /go/ into C37 (refunds included, nothing rounded up); post 09:30.",
+          "C05 carousel (8 pages, 2 h) for Tuesday 12:00.",
+          "Film V44 and V11 to camera and edit them today: both post on Tuesday (V11 on LinkedIn 09:30, V44 on TikTok 13:00).",
+          "Record next week's videos: V04 + V14 + V16, V13 + V15 + V18 and V30 (the make-list on Today has the times)."
+        ]
+      },
+      {
+        "date": "Tue 3 Nov",
+        "posts": "LI V11 09:30, IG carousel C05 12:00, TT V44 13:00, IG story C15 13:20, YT V03 re-edit 13:30, X C17 20:00, TT V04 episode 2 21:30",
+        "blocks": [
+          "Edits for week 2: V04 + V14, V16 + V13, V15 + V18, V30 (the make-list on Today has the times); 09:00 the 2 Higgsfield shots for V16 (HF07, HF08).",
+          "Higgsfield log: credits used against this week's plan; delete any take with a face, a letter or an app-like screen (10 min).",
+          "Write the images-beat copy (held until the gate passes)."
+        ]
+      },
+      {
+        "date": "Wed 4 Nov",
+        "posts": "LI V09 09:30, TT V14 13:00, IG story C22 13:20, YT V29 13:30, IH C37 16:00, IG V09 19:00, X V09 20:00, TT V09 21:30",
         "blocks": [
           "07:45 Pull the Day-7 numbers (payers, refunds, MRR, best source).",
           "08:00-08:20 V09 takes; 08:20-09:20 edit in T05 (ledger count-up with the real figures); post LinkedIn 09:30.",
-          "US clocks change today: the evening US slot moves to 20:00-00:00 Sarajevo.",
+          "Picture posts for the rest of week 2: C11 + C10 + C31, C18 + C20 + C13, C25 + C29 + C23, C04 + C37.",
           "16:00 C37 on Indie Hackers; 19:00-21:30 V09 on IG, X and TikTok.",
-          "90-minute Sunday review: keep / kill / scale; choose Friday's winner re-cuts; images go/no-go; decide P-D1 (Higgsfield test or not) only if there is a measured A-variant to test against."
+          "90-minute weekly review: keep / kill / scale; choose the winner re-cuts; images go/no-go; decide P-D1 (Higgsfield test or not) only if there is a measured A-variant to test against."
         ]
       }
     ]
@@ -14120,14 +14129,14 @@
     {
       "id": "P-D8",
       "question": "V08 LinkedIn slot on day 1",
-      "recommendation": "Move from 09:30 to 16:30 so it can include the real V02 and V05 b-roll.",
-      "deadline": "Mon 26 Oct, morning"
+      "recommendation": "Post it at 21:15 on launch night (Thu 29 Oct), edited on Wed 28 Oct with the real V02 and V05 b-roll.",
+      "deadline": "Wed 28 Oct"
     },
     {
       "id": "P-D9",
       "question": "Render disk",
       "recommendation": "Free at least 20 GB on a local SSD for renders and captures before the first render (the editing machine's main drive had well under 1 GB free on 26 Oct).",
-      "deadline": "Mon 26 Oct, before 08:00"
+      "deadline": "Tue 27 Oct, before 07:30"
     },
     {
       "id": "P-D10",

@@ -3,7 +3,7 @@
 > **Launch moved again (owner decision, 27 Oct 2026).** The public launch is **Thursday 29 October 2026 at 21:00 Sarajevo time** (CET, 20:00 UTC); makeborne.com counts down to that moment. Day 1 = Thu 29 Oct; Mon 26, Tue 27 and Wed 28 Oct are pre-launch days −3, −2 and −1. The launch week moved 1 more day (days 1-7 = 29 Oct - 4 Nov); launch day runs around 21:00 (T7 "We're live" at 21:00, V01 at 21:30). The countdown teasers T3-T6 and Stories S1-S3 have the old Wednesday time burned in and are not posted; "Guess the build time" (T8) is the Wed 28 Oct 21:00 post, and screen-recording Stories S4-S8 use the real countdown. Everything after the launch week keeps its date (ads A01 12-15 Nov and A02 3-4 Dec, creator waves, the no-boost window 20 Nov - 2 Dec, Black Friday, the 22 Nov and 20 Dec checkpoints). The 90 days run Thu 29 Oct 2026 - Tue 26 Jan 2027 (day 90, the day-90 review). `data/calendar.json` and the war room are the source of truth; dates and day numbers in the text below that disagree are from before the move.
 
 
-**Written:** Monday 26 October 2026 (launch day). **Window:** 26 Oct 2026 to 24 Jan 2027.
+**Written:** Monday 26 October 2026 (dates updated 27 Oct for the Thursday launch). **Window:** Thu 29 Oct 2026 (day 1) to Tue 26 Jan 2027 (day 90), after the pre-launch days Mon 26 - Wed 28 Oct.
 **Machine-readable twin:** `data/instagram.json` (same ids, times, captions and DM texts).
 **Plan of record:** `plan/strategy.md`. Where this file and the plan disagree, the plan wins and this file should be corrected. Post ids come from `data/videos.json` (V01-V60) and `data/creatives.json` (C01-C48); dates and default times come from `data/calendar.json`. Render and cover production for each id is in the production plan (`content/production.md` / `data/production.json`, written separately); this file refers to it by id only.
 
@@ -139,36 +139,36 @@ Up to three posts can be pinned to the top row. They are the first thing a visit
 
 | Pin slot | Post | Pin on | Why | Replace with |
 |---|---|---|---|---|
-| 1 (left) | **V01** Fly-over, "We launched today" | Mon 26 Oct, right after posting | What it is, the real home page, the price and the refund line on the end card (the plan pins it, strategy §7 day 1) | Keep through the 90 days unless the home page changes |
-| 2 (middle) | **C05** carousel "How I get a client's yes without one e-mail" | Sat 31 Oct | The whole Studio loop, every step live, ends on "Studio, $49/month" and "Comment CLIENT" | The first Instagram post with a tracked Studio sale |
-| 3 (right) | **V05** POV "the client says 'make it pop' for the 9th time" | Wed 28 Oct | The approval pain in 28 s, Comment CLIENT | **V12** "Be the client for 30 seconds" the day after ask 5 ships |
+| 1 (left) | **V01** Fly-over, "We launched today" | Thu 29 Oct, right after posting at 21:30 | What it is, the real home page, the price and the refund line on the end card (the plan pins it, strategy §7 day 1) | Keep through the 90 days unless the home page changes |
+| 2 (middle) | **C05** carousel "How I get a client's yes without one e-mail" | Tue 3 Nov | The whole Studio loop, every step live, ends on "Studio, $49/month" and "Comment CLIENT" | The first Instagram post with a tracked Studio sale |
+| 3 (right) | **V05** POV "the client says 'make it pop' for the 9th time" | Sat 31 Oct | The approval pain in 28 s, Comment CLIENT | **V12** "Be the client for 30 seconds" the day after ask 5 ships |
 
-Until C05 posts on Sat 31 Oct, pin slot 2 holds C06 (Thu 29 Oct).
+Until C05 posts on Tue 3 Nov, pin slot 2 holds C06 (Sun 1 Nov). The teasers T8 (Wed 28 Oct) and T7 (Thu 29 Oct) are never pinned.
 
 ---
 
 ## 2. The first 12 grid posts (the conversion grid)
 
-**When "pushing traffic" starts:** wave-1 creators post from Tue 10 Nov and boost slot A opens no earlier than Mon 9 Nov (strategy §6.2). The calendar's first 12 Instagram feed posts are all live by Fri 6 Nov, so the grid is complete before any paid or creator traffic arrives. Founder LinkedIn and X posts link to `/go/` pages, not to the Instagram profile, so they do not depend on the grid.
+**When "pushing traffic" starts:** wave-1 creators post from Tue 10 Nov and boost slot A opens no earlier than Mon 9 Nov (strategy §6.2). The calendar's first 12 Instagram feed posts (the two teasers included) are all live by Sat 7 Nov, so the grid is complete before any paid or creator traffic arrives. Founder LinkedIn and X posts link to `/go/` pages, not to the Instagram profile, so they do not depend on the grid.
 
 **How the grid reads:** pins occupy row 1; everything else is newest first. Instagram crops grid thumbnails to **3:4** (1080 × 1440 of a 1080 × 1920 cover) since January 2025 [S, hopperhq.com and oktopost.com 2026 guides]. Every cover is a house title card: warm canvas or a real output filling the frame, 3-5 words in Inter, one Newsreader Italic accent word, text inside the centred 1080 × 1350 block so it survives the 3:4 grid, the 4:5 feed and the 1:1 check.
 
 | # | Publish (CET) | Id | Format | Cover frame (from `data/production.json` by id) | Cover text | Keyword | Link in DM |
 |---|---|---|---|---|---|---|---|
-| 1 | Mon 26 Oct 12:05 | **V01** | Reel 17 s | Frame 0 of the v9 Fly-over: the real home page already lifting | We launched *today*. | SITE | `/go/ig-v01-site` |
-| 2 | Tue 27 Oct 13:15 | **V02** | Reel 32 s | The finished bakery site on a phone (frame 0 = the result) | One brief. Whole *website*. | SITE | `/go/ig-v02-site` |
-| 3 | Wed 28 Oct 13:15 | **V05** | Reel 28 s | Phone at 390 px with "Approve this version" visible | "Make it *pop*." (9th time) | CLIENT | `/go/ig-v05-client` |
-| 4 | Thu 29 Oct 18:00 | **C06** | Carousel, 7 slides | Slide 1 type card | 5 websites. 5 *briefs*. | SITE | `/go/ig-c06-site` |
-| 5 | Fri 30 Oct 13:15 | **V07** | Reel 40 s | Lead finder results list, names blurred, timer chip | 20 businesses. Before *lunch*. (real time) | CLIENT | `/go/ig-v07-client` |
-| 6 | Sat 31 Oct 12:00 | **C05** | Carousel, 8 slides | Slide 1 type card | A client's yes. No *e-mail*. | CLIENT | `/go/ig-c05-client` |
-| 7 | Sun 1 Nov 19:00 | **V09** | Reel 60 s | Founder face + the Day 7 numbers card (C37 style) | Day 7. Every *number*. | CLIENT | `/go/ig-v09-client` |
-| 8 | Mon 2 Nov 13:15 | **V44** | Reel 40 s | Founder at the desk in Sarajevo | Who's *behind* this? | CLIENT | `/go/ig-v44-client` |
-| 9 | Tue 3 Nov 20:15 (time test) | **V12** if ask 5 is live, else **V18** | Reel 25 s / 15 s | V12: the sample review page with a comment pin. V18: the 40-email thread split screen | V12: Be my *client*. V18: 40 e-mails vs *one* link. | CLIENT | `/go/ig-v12-client` or `/go/ig-v18-client` |
-| 10 | Wed 4 Nov 20:15 (time test) | **V16** | Reel 15 s | First of the five sites, full bleed | 5 sites. 5 *briefs*. | SITE | `/go/ig-v16-site` |
-| 11 | Thu 5 Nov 18:00 | **C18** | Carousel, 8 slides | Slide 1 type card | Notes in. Deck *out*. | DECK | `/go/ig-c18-deck` |
-| 12 | Fri 6 Nov 13:15 | **V15** | Reel 24 s | The finished book cover (typographic) | Notes app to *book*. | BOOK | `/go/ig-v15-book` |
+| 1 | Wed 28 Oct 21:00 | **T8** | Reel (teaser) | The real Hollis site and its build time (the teaser's own cover) | Guess the build *time*. | GO | makeborne.com |
+| 2 | Thu 29 Oct 21:00 | **T7** | Reel (teaser) | The countdown reaching zero (the teaser's own cover) | We're *live*. | GO | makeborne.com |
+| 3 | Thu 29 Oct 21:30 | **V01** | Reel 17 s | Frame 0 of the v9 Fly-over: the real home page already lifting | We launched *today*. | SITE | `/go/ig-v01-site` |
+| 4 | Fri 30 Oct 13:15 | **V02** | Reel 32 s | The finished bakery site on a phone (frame 0 = the result) | One brief. Whole *website*. | SITE | `/go/ig-v02-site` |
+| 5 | Sat 31 Oct 13:15 | **V05** | Reel 28 s | Phone at 390 px with "Approve this version" visible | "Make it *pop*." (9th time) | CLIENT | `/go/ig-v05-client` |
+| 6 | Sun 1 Nov 18:00 | **C06** | Carousel, 7 slides | Slide 1 type card | 5 websites. 5 *briefs*. | SITE | `/go/ig-c06-site` |
+| 7 | Mon 2 Nov 13:15 | **V07** | Reel 40 s | Lead finder results list, names blurred, timer chip | 20 businesses. Before *lunch*. (real time) | CLIENT | `/go/ig-v07-client` |
+| 8 | Tue 3 Nov 12:00 | **C05** | Carousel, 8 slides | Slide 1 type card | A client's yes. No *e-mail*. | CLIENT | `/go/ig-c05-client` |
+| 9 | Wed 4 Nov 19:00 | **V09** | Reel 60 s | Founder face + the Day 7 numbers card (C37 style) | Day 7. Every *number*. | CLIENT | `/go/ig-v09-client` |
+| 10 | Thu 5 Nov 18:00 | **C18** | Carousel, 8 slides | Slide 1 type card | Notes in. Deck *out*. | DECK | `/go/ig-c18-deck` |
+| 11 | Fri 6 Nov 20:15 (time test) | **V15** | Reel 24 s | The finished book cover (typographic) | Notes app to *book*. | BOOK | `/go/ig-v15-book` |
+| 12 | Sat 7 Nov 12:00 | **C23** | Carousel, 7 slides | Slide 1 type card | Your notes app is full of book ideas. Here's one, *finished*. | BOOK | `/go/ig-c23-book` |
 
-Posts 13 and 14 (C23 on Sat 7 Nov and the Sunday winner re-cut on 8 Nov) follow in section 8.
+Posts 13 and 14 (the Sunday winner re-cut on 8 Nov and V19 at 20:15 on Mon 9 Nov) follow in section 8 and on Today. When the launch moved, V44 ("Who's behind this?"), V12 / V18 and V16 were banked: Today shows them when they come back. The optional second T8 on Mon 2 Nov at 19:00 is Today's call, not part of this grid.
 
 **Why this order:** ICP 1 (client work, Studio) is 7 of 12 and all three pins; decks and books arrive once the DM flows have been tested on SITE and CLIENT. Each row of three (after the pins) has at least one client-work post, so any screenful of the grid answers "is this for my client work?".
 
@@ -210,7 +210,7 @@ This keeps Instagram inside the plan's four-surface budget: Reels are re-edits, 
 | Sunday | 19:00 | 18:00 | 13:00 | Sunday review ends | Winner re-cut or Day-N |
 | Trial reels | 21:00 | 20:00 | 15:00 | Evening block | Hook tests (cannot be scheduled [S]) |
 
-**The test:** week 1 posts at the calendar times (baseline). In week 2, the Tue 3 Nov and Wed 4 Nov Reels go out at **20:15** instead of 13:15; Mon 2 and Fri 6 Nov stay at 13:15. On Sun 8 Nov compare reach at 24 h, non-follower share and DM keyword replies per 1,000 views. Repeat in week 3 with the slots swapped (Mon/Fri at 20:15). Adopt the winner from week 4; if the gap is under 20%, keep 13:15 (it fits the founder's day better). Record the result in the Sunday note. Schedule feed posts in Meta Business Suite; post Stories and trial reels live.
+**The test:** the launch-week Reels post at the calendar times (baseline: 13:15 on Fri 30 Oct, Sat 31 Oct and Mon 2 Nov). The test pair, **Fri 6 Nov (V15) and Mon 9 Nov (V19)**, goes out at **20:15** instead of 13:15, against the 13:15 Reels of Tue 10 and Wed 11 Nov. Compare reach at 24 h, non-follower share and DM keyword replies per 1,000 views: a first read on Sun 8 Nov, the full result at the Sunday review on 15 Nov. Adopt the winner from week 4; if the gap is under 20%, keep 13:15 (it fits the founder's day better). Record the result in the Sunday note. Schedule feed posts in Meta Business Suite; post Stories and trial reels live.
 
 ### 3.3 Trial reels
 
@@ -516,28 +516,37 @@ Retire the bottom 50% of formats each Sunday (strategy §18). Never delete a pos
 
 ## 8. The 14-day kickoff schedule (26 Oct - 8 Nov 2026)
 
-**Simple version:** `data/instagram.json` → `kickoffDays` has one checklist card per day (a one-line summary: day, date, time, post id, keyword; then the tick-list, the caption, the cover and the link). The days below are the same cards written out.
+**Simple version:** `data/instagram.json` → `kickoffDays` has one checklist card per launch day (a one-line summary: day, date, time, post id, keyword; then the tick-list, the caption, the cover and the link). The days below are the same cards written out, after the three pre-launch days.
 
-All times CET (Sarajevo). Post ids and default times are from `data/calendar.json`; the two time-test slots are marked. Stories at 09:00 and 20:30 are this playbook's additions (not counted in the cadence). Every link below is the `/go/` code; until Thu 29 Oct use the long URL with the same UTMs.
+All times CET (Sarajevo). The launch is **Thu 29 Oct at 21:00**; day 1 is that Thursday and Mon 26, Tue 27 and Wed 28 Oct are pre-launch days −3, −2 and −1. Post ids and default times are from `data/calendar.json` (Today); the time-test slots are marked. Stories at 09:00 and 20:30 are this playbook's additions (not counted in the cadence). Every link below is the `/go/` code; until `/go/` is live (target Thu 29 Oct) use the long URL with the same UTMs.
 
-### Day 1 · Mon 26 Oct (launch)
-**Before posting (45 min):** section 1 in full (name, bio 1, 5 links with slot 5 empty, photo, category, contact, settings, highlights "Start here", "Pricing", "FAQ" with their first stories), the DM automations for SITE and CLIENT tested (section 5.2 step 9). Confirm the copy fixes and "coming soon" labels are live (strategy §7 day 1).
-- **12:05 · Reel V01** (17 s), cover: home-page frame 0, "We launched *today*." **Pin 1.**
+### Pre-launch · Mon 26 - Wed 28 Oct (nothing says "we launched")
+- **Mon 26 or Tue 27 (45 min):** section 1 in full (name, bio 1, 5 links with slot 5 empty, photo, category, contact, settings, highlights "Start here", "Pricing", "FAQ" with their first stories). Set up and test the DM automations: **GO** first (every teaser asks for it; the reply sends makeborne.com, the countdown and the waitlist), then SITE and CLIENT (section 5.2 step 9).
+- **Tue 27 Oct, 19:00 · Story S4** "New time": a 10-second screen recording of the real makeborne.com countdown with a countdown sticker set to Thu 29 Oct 21:00. If Story S1 or anything else that says "Wed 28 Oct" or "19:00" is up, delete it first. T3-T6 are never posted.
+- **Wed 28 Oct, 09:00 · Story** "Tomorrow" with a fresh countdown sticker. **12:00 · Story S5** "something is hidden behind our countdown" (a screen recording of the cursor finding one design; never say or imply Makeborne made the hidden designs). **18:00 · Story** hint with a poll sticker.
+- **Wed 28 Oct, 21:00 · Reel T8** "Guess the build time" (date-free), with "Makeborne opens tomorrow, Thu 29 Oct, 21:00 CET (16:00 New York, 13:00 Los Angeles)." added to its caption. For an hour, answer every GO and reply to a few guesses.
+
+### Day 1 · Thu 29 Oct (launch at 21:00)
+**Before posting:** confirm the copy fixes and "coming soon" labels are live (strategy §7 day 1); check the profile, highlights and DM automations once from a phone.
+- **09:15 · Story S6** "Today, 21:00" (a 10-second countdown recording with the sticker). **13:00 · Story:** repost finds from the hide-and-seek (with permission) + countdown sticker. **17:00 · Story** "4 hours". **20:00 · Story S7** "1 hour".
+- **20:59:45:** start the phone screen recording of makeborne.com reaching zero (it becomes S8).
+- **21:00 · Reel T7** "We're live", only once makeborne.com is open (load it signed out first). **21:01 · Story S8:** the reveal recording.
+- **21:05 · Story C15** "Reply CLIENT" (`/go/ig-c15-client`).
+- **21:30 · Reel V01** (17 s), cover: home-page frame 0, "We launched *today*." **Pin 1.**
   Caption: "AI studio for client work: websites, decks and books from one brief. We launched Makeborne today. Describe it once and get a finished website, pitch deck or book. Then send your client a review link: they comment on the live page and tap Approve, no account needed. From $20/month + tax. Full refund until you use credits. Comment SITE and I'll DM you the link and 3 briefs to copy. #makeborne #websitedesign #pitchdeck #buildinpublic"
   Pinned comment: the CTA comment from section 3.6. Keyword SITE → `/go/ig-v01-site`.
-- **12:30 · Story C15** "Reply CLIENT" (`/go/ig-c15-client`).
-- **20:30 · Story, behind the scenes:** founder at the desk, "Day 1. We launched. Ask me anything" + question box.
-- 13:30-14:00 engagement routine; first-hour replies after 12:05.
+- **21:15-22:15:** reply to every comment. **22:15-22:45:** engagement routine.
+- **22:45 · Story, behind the scenes:** founder at the desk, "Day 1. We launched. Ask me anything" + question box.
 
-### Day 2 · Tue 27 Oct
+### Day 2 · Fri 30 Oct
 - **09:00 · Story poll:** "What do you make most for clients? Sites / Decks".
 - **13:15 · Reel V02** (32 s), cover: finished bakery site on a phone, "One brief. Whole *website*."
   Caption: "AI website builder test: one brief in, a whole bakery website out. Real build, one live edit, then published on a Makeborne address. The time on screen is the real build time. From $20/month + tax. Full refund until you use credits. Comment SITE for the exact brief I used. #aiwebsitebuilder #websitedesign #smallbusiness #webdesign"
   SITE → `/go/ig-v02-site`.
-- **13:45 · Story:** share V02 with "New" sticker, "Comment SITE on the Reel".
-- **20:30 · Story, BTS:** "Recording the real-speed capture bank today" (one 8 s screen clip).
+- **13:45 · Story:** share V02 with "New" sticker, "Comment SITE on the Reel". 13:30-14:00 engagement routine.
+- **20:30 · Story, BTS:** one 8 s clip from the real-speed capture bank.
 
-### Day 3 · Wed 28 Oct
+### Day 3 · Sat 31 Oct
 - **09:00 · Story:** poll result + "Reply CLIENT for the client workflow".
 - **13:15 · Reel V05** (28 s), cover: phone with "Approve this version", "Make it *pop*. (9th time)". **Pin 3.**
   Caption: "Client approval for freelancers, in one link. POV: the client says 'make it pop' for the 9th time. Instead, send one review link: they comment on the live site, no account, then tap Approve this version. Studio is $49/month, the plan for client work. Full refund until you use credits. Comment CLIENT and I'll send the workflow and 3 demo briefs. #freelancewebdesigner #clientwork #webdesigner #agencylife"
@@ -545,85 +554,74 @@ All times CET (Sarajevo). Post ids and default times are from `data/calendar.jso
 - **13:20 · Story C02** "Your client approves from their phone" (`/go/ig-c02`, calendar code), keyword CLIENT.
 - **20:30 · Story question box:** "What's the worst client feedback you've ever had?" (feeds V18 and V21).
 
-### Day 4 · Thu 29 Oct (attribution target day)
-- **09:00 · Story, build of the day** (site) with link sticker `/go/ig-s1029-site`.
+### Day 4 · Sun 1 Nov (US clocks change)
+- **09:00 · Story, build of the day** (site) with link sticker `/go/ig-s1101-site`.
 - **13:20 · Story C09** only if ask 5 (sample review link) is live; otherwise skip (calendar HOLD).
-- **18:00 · Carousel C06** "5 websites. 5 briefs." (7 slides, music on, alt text on every slide). **Pin 2 until Sat.**
+- **18:00 · Carousel C06** "5 websites. 5 briefs." (7 slides, music on, alt text on every slide). **Pin 2 until Tue 3 Nov.**
   Caption: "5 AI websites, each from one brief. Unedited, with the time and credits each one used. Swipe and tell me which one wins. Every site publishes on a Makeborne address. From $20/month + tax. Full refund until you use credits. Comment SITE and I'll send all 5 briefs. #aiwebsitebuilder #webdesigninspiration #websitedesign #smallbusiness"
   SITE → `/go/ig-c06-site`.
-- **20:30 · Story:** answers to yesterday's question box (2-3 frames). From today, switch every DM link from long URLs to `/go/` if ask 1 shipped.
+- **20:30 · Story:** answers to yesterday's question box (2-3 frames). If ask 1 (`/go/`) shipped, switch every DM link from long URLs to `/go/` today.
 
-### Day 5 · Fri 30 Oct
+### Day 5 · Mon 2 Nov
+- Bio-link check (10 min). Highlights: add "Client work", "Sites", "Decks", "Books", "Day N" if not already up.
 - **09:00 · Story poll:** two hero sections from C06, "A or B?".
 - **13:15 · Reel V07** (40 s), cover: lead-finder list (names blurred), "20 businesses. Before *lunch*." (use the real time).
   Caption: "How freelancers find local businesses to pitch: the lead finder, a demo site and a review link, tracked in a basic CRM. Real time on screen, names blurred. Studio is $49/month for client work. Full refund until you use credits. Comment CLIENT for the 3 briefs I use for demo sites. #freelancewebdesigner #leadgeneration #webdesignbusiness #clientwork"
   Never "AI lead research", never "businesses with no website". CLIENT → `/go/ig-v07-client`.
 - **13:20 · Story C22** "Reply DECK" (`/go/ig-c22-deck`).
 - **20:30 · Story, Day 5:** one numbers frame (real, cropped) → "Day N" highlight.
+- **21:00 · Trial reel #1** (if available): V02 with hook R1 "This website took [real time]. Watch."
+- Today also offers an optional second T8 at 19:00; it is Today's call.
 
-### Day 6 · Sat 31 Oct (batch-film day)
+### Day 6 · Tue 3 Nov (batch-film day)
 - **12:00 · Carousel C05** "How I get a client's yes without one e-mail." (8 slides, music on). **Pin 2** (replaces C06).
   Caption: "How I get a client's yes without one e-mail: find the business, build the site, publish it, send one review link, they comment on the live site, they tap Approve. Every step is live today. Studio, $49/month. Full refund until you use credits. Comment CLIENT for the 3 briefs I use. #webdesignbusiness #freelancewebdesigner #clientwork #agencyowner"
   CLIENT → `/go/ig-c05-client`.
+- **13:20 · Story C15** "Reply CLIENT" (`/go/ig-c15-client`).
 - **16:00 · Story, BTS:** "Filming next week's 10 videos" (one frame).
-- Post the 4 uncut 30-second build Reels (site, deck, book, client review) as trial reels if the option exists, else as normal Reels on Sun-Mon outside the grid count; their links go into the UNCUT message.
+- Post the 4 uncut 30-second build Reels (site, deck, book, client review) as trial reels if the option exists, else as normal Reels outside the grid count; their links go into the UNCUT message.
 
-### Day 7 · Sun 1 Nov (US clocks change; first Sunday review)
+### Day 7 · Wed 4 Nov (Day 7 numbers; first weekly review)
 - **12:00 · Story:** "This week in 3 frames" (best build, best comment, one number).
+- **13:20 · Story C22** "Reply DECK".
 - **19:00 · Reel V09** (60 s) "Day 7: exactly how many people paid", real Whop numbers, refunds included, buyer data cropped. Cover: founder + numbers card, "Day 7. Every *number*."
   Caption: "Day 7 of launching an AI studio for client work from Sarajevo, every number in public: [N] people paid, [N] refunds, $[MRR] MRR. What worked, what broke, what I'm changing next week. Follow for Day 14. Comment CLIENT for the client-work flow. #buildinpublic #startup #saas #indiehackers"
   CLIENT → `/go/ig-v09-client`.
-- **Sunday review:** section 7 metrics; pick the week-2 winner; confirm the time test for Tue/Wed.
-
-### Day 8 · Mon 2 Nov
-- Bio-link check (10 min). Highlights: add "Client work", "Sites", "Decks", "Books", "Day N" if not already up.
-- **09:00 · Story:** "New week: what should I build first? Reply with your business type."
-- **13:15 · Reel V44** (40 s), cover: founder at the desk, "Who's *behind* this?"
-  Caption: "Who's behind Makeborne, the AI studio for client work? A small studio in Sarajevo, selling worldwide. I answer support myself and our numbers are public. Ask me anything below. Comment CLIENT if you build sites for clients. #sarajevo #startup #buildinpublic"
-  CLIENT → `/go/ig-v44-client`.
-- **13:20 · Story C15** "Reply CLIENT" (`/go/ig-c15-client`).
-- **21:00 · Trial reel #1** (if available): V02 with hook R1 "This website took [real time]. Watch."
-
-### Day 9 · Tue 3 Nov (time test: 20:15)
-- **09:00 · Story, build of the day** (deck) `/go/ig-s1103-deck`.
-- **20:15 · Reel V12** (25 s) **only if ask 5 is live**, cover "Be my *client*." Caption: "Be my client for 30 seconds: open our sample review link, tap anything, leave a comment, approve it. No account. This is exactly what your clients see. Comment CLIENT and I'll send the link. #clientwork #freelancewebdesigner #webdesigner" → `/go/ig-v12-client`. Re-pin: V12 replaces V05 in pin 3.
-  **Otherwise Reel V18** (15 s), cover "40 e-mails vs *one* link." Caption: "Client feedback: the 40-email thread vs one review link where your client comments on the live site and taps Approve. Send this to the person still doing feedback by email. Comment CLIENT for the workflow. #freelancerlife #webdesigner #agencylife #clientwork" → `/go/ig-v18-client`.
-- **20:45 · Story:** share the Reel, "New".
-
-### Day 10 · Wed 4 Nov (time test: 20:15)
-- **09:00 · Story poll:** "Which would you send a client? A / B" (two outputs).
-- **13:20 · Story C22** "Reply DECK".
-- **20:15 · Reel V16** (15 s), cover "5 sites. 5 *briefs*."
-  Caption: "AI websites from one brief each: 5 real outputs, unedited, with the credits each one used. Which one would you send a client? Comment SITE for all 5 briefs. #aiwebsitebuilder #websitedesign #webdesigninspiration"
-  SITE → `/go/ig-v16-site`.
 - **21:00 · Trial reel #2:** V05 with hook F1 "Freelancers: steal this client-approval trick."
+- **Weekly review (day 7):** section 7 metrics for every post; pick the week-2 winner for Sun 8 Nov; confirm the 20:15 time test on Fri 6 and Mon 9 Nov.
 
-### Day 11 · Thu 5 Nov
+### Day 8 · Thu 5 Nov
 - **09:00 · Story, BTS:** "Support count this week" (real number).
 - **13:25 · Story C09** only if ask 5 is live (`/go/ig-c09-play`).
-- **18:00 · Carousel C18** "Notes in. An editable deck out." (8 slides, music on).
+- **18:00 · Carousel C18** "Notes in. An editable deck out." (8 slides, music on). Test the DECK automation before 18:00.
   Caption: "AI pitch deck from messy notes: I pasted my notes and got an editable deck. It opens in PowerPoint with real charts and speaker notes on every slide. From $20/month + tax. Full refund until you use credits. Comment DECK for the brief and the .pptx. #pitchdeck #powerpoint #presentation #consulting"
   DECK → `/go/ig-c18-deck`.
 
-### Day 12 · Fri 6 Nov
+### Day 9 · Fri 6 Nov (time test: 20:15)
 - **09:00 · Story question box:** "Ask me anything about pricing and refunds."
-- **13:15 · Reel V15** (24 s), cover: the finished typographic book cover, "Notes app to *book*."
+- **13:20 · Story C25** "Reply BOOK" (`/go/ig-c25-book`). Test the BOOK automation.
+- **20:15 · Reel V15** (24 s, time test), cover: the finished typographic book cover, "Notes app to *book*."
   Caption: "How to turn a note into a finished guide: one brief from my notes app, a full book out, for screen and PDF. Text-led and edited in plain words. From $20/month + tax. Full refund until you use credits. Comment BOOK for the brief. #leadmagnet #ebook #writing #notesapp"
   BOOK → `/go/ig-v15-book`. Never "print-ready", no picture-book framing.
-- **13:20 · Story C25** "Reply BOOK" (`/go/ig-c25-book`).
 - **21:00 · Trial reel #3:** V07 with hook F4 "I found 20 local businesses to pitch in [real time]."
-- Friday: boost-candidate check (posts at 48 h) for slot A, see `content/ads-playbook.md`.
+- Friday: boost-candidate check (posts at 48 h) for slot A, see `content/ads-playbook.md` and ad card A01 in `data/ads.json`.
 
-### Day 13 · Sat 7 Nov
+### Day 10 · Sat 7 Nov
 - **12:00 · Carousel C23** "Your notes app is full of book ideas. Here's one, finished." (7 slides, music on).
   Caption: "Your notes app is full of book ideas. Here's one, finished: cover, contents, chapters and a checklist, from one brief. For screen and PDF. From $20/month + tax. Full refund until you use credits. Comment BOOK for the brief and the PDF. #leadmagnet #ebook #coach #digitalproducts"
   BOOK → `/go/ig-c23-book`.
-- **16:00 · Story:** answers to Friday's pricing questions.
+- **16:00 · Story:** answers to Friday's pricing questions. Build ad card A01 in draft in Ads Manager (not published).
 
-### Day 14 · Sun 8 Nov (second Sunday review)
+### Day 11 · Sun 8 Nov (second Sunday review)
 - **12:00 · Story:** "Week 2 in 3 frames".
 - **19:00 · Reel, winner slot** (default **V02 episode 2**, `/go/ig-v02-e02-site`): the top post of the last 7 days by `/go/` clicks plus tracked sales, re-cut with a new hook, a new brief and a new output (never a re-upload). Caption follows the formula in 4.1 with the winner's keyword. If a trial reel won (section 3.3), share it to the grid instead.
-- **Sunday review:** time-test result (13:15 vs 20:15), the week's thresholds (section 7), which posts qualify for boost slot A from Mon 9 Nov, and which creators' first videos (10 Nov onwards) get a collab accept.
+- **Sunday review:** a first read of the time test (13:15 vs 20:15; the full result comes on Sun 15 Nov, after Mon 9 Nov's 20:15 Reel V19), the week's thresholds (section 7), which posts qualify for boost slot A from Mon 9 Nov, and which creators' first videos (10 Nov onwards) get a collab accept.
+
+### Banked when the launch moved (Today brings them back)
+These three were days 8-10 of the earlier schedule. Their captions stay ready:
+- **Reel V44** (40 s), cover: founder at the desk, "Who's *behind* this?" Caption: "Who's behind Makeborne, the AI studio for client work? A small studio in Sarajevo, selling worldwide. I answer support myself and our numbers are public. Ask me anything below. Comment CLIENT if you build sites for clients. #sarajevo #startup #buildinpublic" → `/go/ig-v44-client`.
+- **Reel V12** (25 s) **only if ask 5 is live**, cover "Be my *client*." Caption: "Be my client for 30 seconds: open our sample review link, tap anything, leave a comment, approve it. No account. This is exactly what your clients see. Comment CLIENT and I'll send the link. #clientwork #freelancewebdesigner #webdesigner" → `/go/ig-v12-client`. Re-pin: V12 replaces V05 in pin 3. **Otherwise Reel V18** (15 s), cover "40 e-mails vs *one* link." Caption: "Client feedback: the 40-email thread vs one review link where your client comments on the live site and taps Approve. Send this to the person still doing feedback by email. Comment CLIENT for the workflow. #freelancerlife #webdesigner #agencylife #clientwork" → `/go/ig-v18-client`.
+- **Reel V16** (15 s), cover "5 sites. 5 *briefs*." Caption: "AI websites from one brief each: 5 real outputs, unedited, with the credits each one used. Which one would you send a client? Comment SITE for all 5 briefs. #aiwebsitebuilder #websitedesign #webdesigninspiration" → `/go/ig-v16-site`.
 
 ---
 

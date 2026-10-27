@@ -70,7 +70,7 @@ const DEFAULTS = {
     V04: 'Needs a real comment asking for a website, and that person\'s written OK, before it can be made. Until then post V02 in its TikTok slot.',
     V07: 'Needs the Higgsfield shots: you sign up on Tue 27 Oct and the shots are made on Wed 28 Oct.',
     V08: 'Needs a founder video: film yourself to camera (about 25 minutes).',
-    V09: 'Needs the Day-7 numbers (Tue 3 Nov): film it once you know how many people paid.',
+    V09: 'Needs the Day-7 numbers (Wed 4 Nov): film it once you know how many people paid.',
     V10: 'Needs one fictional brief built as a site, a deck and a client guide, then the three-up layout.',
     C02: 'Needs a phone screenshot of a client approving on the review page.',
     C05: 'Needs the Instagram comment-keyword DM switched on first, then the slides captured.',
@@ -349,7 +349,8 @@ export function parseTeasers(md, { present, slots = {}, stills = {} } = {}) {
 
 /**
  * Map POSTING.md dates to the launch on Thu 29 Oct 21:00 CET (see `schedule` in data/posting.json). An override can also
- * replace the post's note (`captionNote`) and add a closing line to its caption (`captionAppend`). Pure.
+ * replace the post's note (`captionNote`) and add a closing line to its caption (`captionAppend`; the caption without it is kept
+ * as `captionAfter` for reposts after that day). Pure.
  */
 export function applySchedule(items, schedule) {
   if (!schedule) return items;
@@ -359,7 +360,9 @@ export function applySchedule(items, schedule) {
     const o = overrides.find((x) => x.id === it.id && it.platforms.includes(x.platform));
     const makeUp = dropMakeUp || !it.makeUp ? null : { date: moved(it.makeUp.date), time: it.makeUp.time };
     const caption = o?.captionAppend && it.caption ? `${it.caption}${/[.!?)]$/.test(it.caption) ? '' : '.'} ${o.captionAppend}` : it.caption;
-    return { ...it, date: o ? o.date : moved(it.date), time: o ? o.time : it.time, makeUp, caption, captionNote: o?.captionNote ?? it.captionNote };
+    // A dated closing line ("opens tomorrow") is true only on the scheduled day: keep the plain caption for later reposts.
+    const dated = caption !== it.caption ? { captionAfter: it.caption } : {};
+    return { ...it, date: o ? o.date : moved(it.date), time: o ? o.time : it.time, makeUp, caption, ...dated, captionNote: o?.captionNote ?? it.captionNote };
   });
 }
 

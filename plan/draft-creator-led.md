@@ -1,5 +1,7 @@
 # Makeborne 90-day growth plan: short-form video and creator-led
 
+> **Superseded draft (kept for reference).** This was one of three competing drafts written on 26 Oct 2026 for a Mon 26 Oct launch. The plan of record is `plan/strategy.md`, and the dated plan is Today (`data/calendar.json`): the public launch is **Thu 29 Oct 2026 at 21:00 CET** (day 1) and day 90 is Tue 26 Jan 2027. Dates, day numbers and prices below are the draft's and are not updated.
+
 **Angle:** the outputs are the content. Makeborne builds websites, books and decks, so every post can end on a finished thing. The plan runs a small, honest network of founder, brand and disclosed faceless accounts. It pays micro-creators a flat fee plus a per-view bonus, turns posts that have already won into TikTok Spark and Meta partnership ads, and turns comments into DMs that carry a tracked link to a page that matches the format.
 
 **Window:** Monday 26 Oct 2026 (paid beta launch) to Sunday 24 Jan 2027 (day 90).

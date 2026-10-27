@@ -1,7 +1,7 @@
 {
   "meta": {
     "version": "2026-10-26",
-    "built": "26 Oct 2026 (day 1 of the paid beta)",
+    "built": "26 Oct 2026 (pre-launch day −3; the paid beta opens Thu 29 Oct 2026 at 21:00 CET)",
     "masterPlan": "plan/strategy.md and data/plan.json (ICP ids icp1-icp5, channel ids ch-*, budget ids b1-b9, beat ids beat-*, decisions D1-D19, growth asks ga1-ga22)",
     "status": "Drafts only. Nothing has been sent, posted, submitted or bought. The owner sends or approves every message.",
     "mergeFields": "{curly} fields are filled per recipient; [square] fields are verified numbers filled on the day, or the sentence is cut.",
@@ -140,7 +140,7 @@
         "The {specificVideo} and {specificDetail} lines are mandatory. No identical mass messages (Instagram and TikTok treat them as spam; Meta's messaging policy covers automated sends).",
         "If sent by email: add EMAIL_FOOTER (identity, postal address, opt-out). See the email law matrix; do not cold-email creators in Germany or Austria unless their page invites commercial enquiries.",
         "No payment until the spend gate is met (/go/ links, first-touch storage, mb_src/mb_campaign/mb_aff on the Makeborne-created checkout).",
-        "Written agreement: 2 videos, 60 days of Spark or partnership-ad rights, a draft review 48 h before posting, disclosure, live features only, payment terms.",
+        "Written agreement: 2 videos, 60 days of Spark or partnership-ad rights, a draft review 48 h before posting, disclosure, live features only, payment terms, and the music rule: TikTok sounds from TikTok's Commercial Music Library; Reels use original audio or Meta's royalty-free library only. No Instagram licensed music. (Reels with licensed Instagram music cannot run as partnership ads.)",
         "Rates may be below market (market posts reportedly $175-290 [S, unverified]). Fallback from the plan: 4 creators at $75 and keep the other lines.",
         "Keep creator contact details in a private sheet, never in this repo.",
         "Live features only: AI websites published on a Makeborne address, AI books, AI decks, client review links (anonymous comments, Approve), basic CRM with lead finder, manual GitHub export, projects library.",
@@ -196,7 +196,7 @@
         "icp": "icp1/icp2"
       },
       "subject": "Makeborne brief: 2 videos, what to show, what not to say",
-      "body": "Thanks for doing this, {firstName}. Here's everything on one page.\n\nYOUR LINKS\n- Link: makeborne.com/go/c-{handle}\n- Affiliate code: {affiliateCode} (works once our affiliate setup passes its test; we'll confirm)\n\nWHAT EVERY VIDEO SHOWS\n1. Frame 0: the finished site, deck or book, on screen.\n2. The brief typed into Makeborne, with a visible timer.\n3. The real build. If you speed it up, write 'sped up 4x' on screen.\n4. One live edit.\n5. Publish to the Makeborne address (sites), or open the deck in PowerPoint (decks).\n6. Back to frame 0 so it loops.\nLane A videos also show the review link: the client comments, then taps Approve on a phone.\n\nHOOKS YOU CAN USE (pick or rewrite)\n- \"This website took [real time]. Watch.\"\n- \"Freelancers: steal this client-approval trick.\"\n- \"POV: the client says 'make it pop' for the 9th time.\"\n- \"I found 20 local businesses to pitch in [real time].\" (the lead finder, shown live)\n- \"40-email feedback thread vs one link.\"\n- \"Pitch deck from one brief.\" / \"It's a real chart, not a picture.\"\n\nPLEASE DON'T\n- say free, trial or 'start free' (there is no free plan)\n- show or promise generated images, custom domains, automatic GitHub sync, credit top-ups or AI lead research (not live yet)\n- say 'I replaced my agency' or 'you don't need a designer'\n- name the AI models behind Makeborne, or say it's better than another tool\n- show anyone's real client data, emails or personal details\n\nDISCLOSURE (required by law and by each platform)\n- TikTok: turn on the commercial content disclosure toggle.\n- Instagram: the Paid partnership label.\n- YouTube: tick 'Paid promotion' in Studio.\n- Also say or show 'ad' or 'paid partnership with Makeborne' in the video itself, not only in the caption.\n- Start the caption with #ad, say 'ad' in the first 3 seconds, and use #ad on any post (paid or organic) that carries your affiliate code or link. A platform label alone is not enough in the UK (ASA/CAP).\n\nPRICE LINE (if you mention price)\n\"From $20 a month + tax. Full refund until you use credits.\"\n\nPROCESS\nSend the draft 48 h before posting. We check facts only, not your style. Payment: half now, half on delivery. Views bonus paid weekly on verified 7-day views.",
+      "body": "Thanks for doing this, {firstName}. Here's everything on one page.\n\nYOUR LINKS\n- Link: makeborne.com/go/c-{handle}\n- Affiliate code: {affiliateCode} (works once our affiliate setup passes its test; we'll confirm)\n\nWHAT EVERY VIDEO SHOWS\n1. Frame 0: the finished site, deck or book, on screen.\n2. The brief typed into Makeborne, with a visible timer.\n3. The real build. If you speed it up, write 'sped up 4x' on screen.\n4. One live edit.\n5. Publish to the Makeborne address (sites), or open the deck in PowerPoint (decks).\n6. Back to frame 0 so it loops.\nLane A videos also show the review link: the client comments, then taps Approve on a phone.\n\nHOOKS YOU CAN USE (pick or rewrite)\n- \"This website took [real time]. Watch.\"\n- \"Freelancers: steal this client-approval trick.\"\n- \"POV: the client says 'make it pop' for the 9th time.\"\n- \"I found 20 local businesses to pitch in [real time].\" (the lead finder, shown live)\n- \"40-email feedback thread vs one link.\"\n- \"Pitch deck from one brief.\" / \"It's a real chart, not a picture.\"\n\nPLEASE DON'T\n- say free, trial or 'start free' (Makeborne is paid plans only)\n- show or promise generated images, custom domains, automatic GitHub sync, credit top-ups or AI lead research (not live yet)\n- say 'I replaced my agency' or 'you don't need a designer'\n- name the AI models behind Makeborne, or say it's better than another tool\n- show anyone's real client data, emails or personal details\n\nSOUND (so the video can also run as a Spark or partnership ad)\n- TikTok: use sounds from TikTok's Commercial Music Library.\n- Reels use original audio or Meta's royalty-free library only. No Instagram licensed music.\n\nDISCLOSURE (required by law and by each platform)\n- TikTok: turn on the commercial content disclosure toggle.\n- Instagram: the Paid partnership label.\n- YouTube: tick 'Paid promotion' in Studio.\n- Also say or show 'ad' or 'paid partnership with Makeborne' in the video itself, not only in the caption.\n- Start the caption with #ad, say 'ad' in the first 3 seconds, and use #ad on any post (paid or organic) that carries your affiliate code or link. A platform label alone is not enough in the UK (ASA/CAP).\n\nPRICE LINE (if you mention price)\n\"From $20 a month + tax. Full refund until you use credits.\"\n\nPROCESS\nSend the draft 48 h before posting. We check facts only, not your style. Payment: half now, half on delivery. Views bonus paid weekly on verified 7-day views.",
       "followUp": "If no draft 3 days before the agreed date: one reminder with the shot list. If a post goes live without disclosure: ask for it to be fixed within 24 h; unpaid until fixed.",
       "rules": [
         "Disclosure sources: FTC Disclosures 101 (Nov 2019): disclose in the video itself, avoid vague tags such as 'collab' or 'sp' [https://www.ftc.gov/business-guidance/resources/disclosures-101-social-media-influencers, read 26 Oct 2026]; TikTok Branded Content Policy (published 4 Aug 2026, in force 31 Aug 2026) requires the disclosure toggle [https://www.tiktok.com/legal/page/global/bc-policy/en, read 26 Oct 2026]; YouTube paid promotion checkbox [https://support.google.com/youtube/answer/154235, read 26 Oct 2026].",
@@ -457,7 +457,7 @@
         "icp": "all"
       },
       "subject": "Listing submission: Makeborne, an AI studio for client work",
-      "body": "Hi,\n\nPlease consider Makeborne for {directoryName}.\n\nURL: makeborne.com/go/{directoryCode}\nTagline: The AI studio for client work.\nDescription: see launchCopy.directoryListing.shortDescription\nCategory: AI website builder / presentations / ebooks / client approval\nPricing: Paid, from $20 a month. No free plan. Full refund until credits are used.\nContact: {pressEmail}\n\nThank you.\n{founderName}\nFounder, Makeborne (makeborne.com)\nZORBY&CO D.O.O., {companyAddress}, Sarajevo, Bosnia and Herzegovina",
+      "body": "Hi,\n\nPlease consider Makeborne for {directoryName}.\n\nURL: makeborne.com/go/{directoryCode}\nTagline: The AI studio for client work.\nDescription: see launchCopy.directoryListing.shortDescription\nCategory: AI website builder / presentations / ebooks / client approval\nPricing: Paid plans only, from $20 a month. Full refund until credits are used.\nContact: {pressEmail}\n\nThank you.\n{founderName}\nFounder, Makeborne (makeborne.com)\nZORBY&CO D.O.O., {companyAddress}, Sarajevo, Bosnia and Herzegovina",
       "followUp": "None for free directories. For a listing that's wrong, send one correction email.",
       "rules": [
         "TAAFT first, before any other listing, to keep the $300 launch-first PPC bonus: it applies only if the tool has appeared on no other platform first [V, https://theresanaiforthat.com/get-featured/, read 26 Oct 2026]. Hold AlternativeTo, SaaSHub, Microlaunch, Future Tools and the Product Hunt coming-soon page until the TAAFT listing is live.",
@@ -521,7 +521,7 @@
     {
       "id": "t16-press-regional",
       "channel": "Email from the owner to regional tech and business editors (Netokracija, Bloomberg Adria, Startit, BiH portals)",
-      "purpose": "Free regional press in launch week (day 5): 'a Sarajevo studio launches an AI studio for client work and sells worldwide'.",
+      "purpose": "Regional press in launch week (day 6, Tue 3 Nov): 'a Sarajevo studio launches an AI studio for client work and sells worldwide'.",
       "audience": "Regional editors and reporters",
       "planRefs": {
         "budgetLines": [],
@@ -532,8 +532,8 @@
         "decision": "D11, D19"
       },
       "subject": "Sarajevski studio lansirao AI alat za klijentske web stranice, prezentacije i knjige, i prodaje ga cijelom svijetu",
-      "body": "Poštovani/a {editorName},\n\nZORBY&CO iz Sarajeva danas je pokrenuo plaćenu beta verziju Makeborne-a (makeborne.com), AI studija za klijentske poslove. Od jednog opisa Makeborne pravi web stranicu, prezentaciju ili knjigu. Klijent stranicu komentariše preko linka za pregled, bez otvaranja računa, i odobrava je jednim klikom.\n\nZašto je ovo priča:\n- Alat je napravljen u Sarajevu, a prodaje se kupcima širom svijeta, uglavnom freelancerima i malim agencijama.\n- Nema besplatnog paketa, namjerno. Cijene počinju od 20 USD mjesečno, uz povrat cijelog iznosa dok se krediti ne iskoriste.\n- Osnivač javno objavljuje brojke: koliko je ljudi platilo, povrate novca i troškove, nakon 30 i nakon 90 dana.\n\nU prilogu su tri stvarna rezultata (stranica, prezentacija i knjiga, svaka s izvornim opisom) i fotografija osnivača. Rado ću organizovati kratku demonstraciju uživo ili razgovor.\n\nS poštovanjem,\n{founderName}\nFounder, Makeborne (makeborne.com)\nZORBY&CO D.O.O., {companyAddress}, Sarajevo, Bosnia and Herzegovina",
-      "bodyEnglish": "Dear {editorName},\n\nSarajevo-based ZORBY&CO today opened the paid beta of Makeborne (makeborne.com), an AI studio for client work. From one brief, Makeborne makes a website, a deck or a book. The client comments on the site through a review link, with no account, and approves it in one click.\n\nWhy it's a story:\n- Built in Sarajevo, sold worldwide, mainly to freelancers and small agencies.\n- No free tier, on purpose. Plans start at $20 a month + tax, with a full refund until credits are used.\n- The founder publishes the numbers (payers, refunds, costs) at day 30 and day 90.\n\nAttached: three real outputs (site, deck, book, each with its original brief) and a founder photo. Happy to arrange a short live demo or a call.\n\n{founderName}\nFounder, Makeborne (makeborne.com)\nZORBY&CO D.O.O., {companyAddress}, Sarajevo, Bosnia and Herzegovina",
+      "body": "Poštovani/a {editorName},\n\nZORBY&CO iz Sarajeva u četvrtak, 29. oktobra, pokrenuo je plaćenu beta verziju Makeborne-a (makeborne.com), AI studija za klijentske poslove. Od jednog opisa Makeborne pravi web stranicu, prezentaciju ili knjigu. Klijent stranicu komentariše preko linka za pregled, bez otvaranja računa, i odobrava je jednim klikom.\n\nZašto je ovo priča:\n- Alat je napravljen u Sarajevu, a prodaje se kupcima širom svijeta, uglavnom freelancerima i malim agencijama.\n- Samo plaćeni paketi, namjerno. Cijene počinju od 20 USD mjesečno, uz povrat cijelog iznosa dok se krediti ne iskoriste.\n- Osnivač javno objavljuje brojke: koliko je ljudi platilo, povrate novca i troškove, nakon 30 i nakon 90 dana.\n\nU prilogu su tri stvarna rezultata (stranica, prezentacija i knjiga, svaka s izvornim opisom) i fotografija osnivača. Rado ću organizovati kratku demonstraciju uživo ili razgovor.\n\nS poštovanjem,\n{founderName}\nFounder, Makeborne (makeborne.com)\nZORBY&CO D.O.O., {companyAddress}, Sarajevo, Bosnia and Herzegovina",
+      "bodyEnglish": "Dear {editorName},\n\nSarajevo-based ZORBY&CO opened the paid beta of Makeborne (makeborne.com), an AI studio for client work, on Thursday 29 October. From one brief, Makeborne makes a website, a deck or a book. The client comments on the site through a review link, with no account, and approves it in one click.\n\nWhy it's a story:\n- Built in Sarajevo, sold worldwide, mainly to freelancers and small agencies.\n- Paid plans only, on purpose. Plans start at $20 a month + tax, with a full refund until credits are used.\n- The founder publishes the numbers (payers, refunds, costs) at day 30 and day 90.\n\nAttached: three real outputs (site, deck, book, each with its original brief) and a founder photo. Happy to arrange a short live demo or a call.\n\n{founderName}\nFounder, Makeborne (makeborne.com)\nZORBY&CO D.O.O., {companyAddress}, Sarajevo, Bosnia and Herzegovina",
       "followUp": "One follow-up after 3 business days with one new fact (for example, the first countries where customers paid). Then pitch again only at day 30 (beat:day30).",
       "rules": [
         "The owner sends. A native speaker checks the local-language text before sending (Bosnian shown; adapt for Croatian or Serbian outlets).",
@@ -559,8 +559,8 @@
         ],
         "icp": "all"
       },
-      "subject": "[N] days, every number: a bootstrapped AI studio from Sarajevo, no free tier",
-      "body": "Hi {reporterFirstName},\n\nYou wrote about {relevantArticle}, so this may be useful.\n\nMakeborne, from Sarajevo, sells an AI studio for client work: one brief becomes a client website, deck or book, which the client approves through a review link. We launched paid-only on 28 October with $1,000 of marketing money and no free tier, and we publish every number.\n\nAfter [N] days: [paying customers], [refund rate], [MRR], [top country], [what failed]. Screenshots are on makeborne.com/press with buyer details removed.\n\nThe bigger question we can speak to: can a small team outside the usual hubs sell an AI product worldwide without a free tier, when the category leaders grew on free plans?\n\n{founderName}\nFounder, Makeborne (makeborne.com)\nZORBY&CO D.O.O., {companyAddress}, Sarajevo, Bosnia and Herzegovina",
+      "subject": "[N] days, every number: a bootstrapped AI studio from Sarajevo, paid plans only",
+      "body": "Hi {reporterFirstName},\n\nYou wrote about {relevantArticle}, so this may be useful.\n\nMakeborne, from Sarajevo, sells an AI studio for client work: one brief becomes a client website, deck or book, which the client approves through a review link. We launched on 29 October with paid plans only and $1,000 of marketing money, and we publish every number.\n\nAfter [N] days: [paying customers], [refund rate], [MRR], [top country], [what failed]. Screenshots are on makeborne.com/press with buyer details removed.\n\nThe bigger question we can speak to: can a small team outside the usual hubs sell an AI product worldwide on paid plans only, when the category leaders grew by giving theirs away?\n\n{founderName}\nFounder, Makeborne (makeborne.com)\nZORBY&CO D.O.O., {companyAddress}, Sarajevo, Bosnia and Herzegovina",
       "followUp": "One follow-up after 4 business days. Never chase twice.",
       "rules": [
         "Fill the brackets with verified Whop numbers only; crop buyer data from every screenshot.",
@@ -738,7 +738,7 @@
         "tagline": "The AI studio for client work",
         "text": "One brief becomes a client website, deck or book, and your client approves it through a review link. Paid plans are live at makeborne.com today; follow for our full launch."
       },
-      "firstComment": "Hi Product Hunt, I'm {founderFirstName}, and I build Makeborne from Sarajevo.\n\nWho it's for: freelancers and small studios who make things for clients, and anyone who needs a deck or a guide without starting from a blank page.\n\nWhat it does: one brief becomes a website, a deck and a book in the same brand. As of today, all three come with their own generated images, with full-image slides and quality and aspect controls.\n\nWhat your client sees: a review link. They comment on the live site without an account and tap Approve. No 40-email threads.\n\nWhat you own: download the source at any time, or export it to GitHub.\n\nHonest pricing: no free plan, on purpose. Plans are $20, $49 and $99 a month. The most a request can cost is shown before it starts, and you get a full refund until you use credits. Code PH100 adds 100 credits to your first paid month this week.\n\nNot there yet: {notYetLiveList, e.g. 'your own domain (coming soon)'}.\n\nOne question for you: what would you send a client first, the site, the deck or the guide?",
+      "firstComment": "Hi Product Hunt, I'm {founderFirstName}, and I build Makeborne from Sarajevo.\n\nWho it's for: freelancers and small studios who make things for clients, and anyone who needs a deck or a guide without starting from a blank page.\n\nWhat it does: one brief becomes a website, a deck and a book in the same brand. As of today, all three come with their own generated images, with full-image slides and quality and aspect controls.\n\nWhat your client sees: a review link. They comment on the live site without an account and tap Approve. No 40-email threads.\n\nWhat you own: download the source at any time, or export it to GitHub.\n\nHonest pricing: paid plans only, on purpose. Plans are $20, $49 and $99 a month. The most a request can cost is shown before it starts, and you get a full refund until you use credits. Code PH100 adds 100 credits to your first paid month this week.\n\nNot there yet: {notYetLiveList, e.g. 'your own domain (coming soon)'}.\n\nOne question for you: what would you send a client first, the site, the deck or the guide?",
       "gallery": [
         {
           "n": 0,
@@ -802,7 +802,7 @@
         "No legible 'Tern' brand name, no real client data, no vendor names.",
         "Headlines in Inter display with one Newsreader Italic accent word; no purple-blue AI gradients."
       ],
-      "makerStory": "I'm {founderFirstName}, and I run a small studio, ZORBY&CO, in Sarajevo.\n\nEvery client project I saw went the same way: the work took days, and the approval took weeks. Screenshots in email, 'make it pop', version 9 of a PDF. The tools were getting faster at building, but nobody was fixing the part where a real client says yes.\n\nSo Makeborne does both. One brief becomes the site, the pitch deck and the client guide, in one brand. Then the client gets a link where they comment and approve, without making an account.\n\nWe launched paid-only on 28 October, with $1,000 of marketing money and no free plan. That was deliberate: every build costs real money to run, and I'd rather show you the uncut build and refund you in full until you use a credit than pretend it's free. Since then: [N] paying customers in [N] countries, [N]% refunds, and [the most surprising thing a customer made].\n\nWe publish every number. Today's launch is the first big feature since then: images, generated for your site, deck and book from the same brief.",
+      "makerStory": "I'm {founderFirstName}, and I run a small studio, ZORBY&CO, in Sarajevo.\n\nEvery client project I saw went the same way: the work took days, and the approval took weeks. Screenshots in email, 'make it pop', version 9 of a PDF. The tools were getting faster at building, but nobody was fixing the part where a real client says yes.\n\nSo Makeborne does both. One brief becomes the site, the pitch deck and the client guide, in one brand. Then the client gets a link where they comment and approve, without making an account.\n\nWe launched on 29 October with paid plans only and $1,000 of marketing money. That was deliberate: every build costs real money to run, and I'd rather show you the uncut build and refund you in full until you use a credit than give it away. Since then: [N] paying customers in [N] countries, [N]% refunds, and [the most surprising thing a customer made].\n\nWe publish every number. Today's launch is the first big feature since then: images, generated for your site, deck and book from the same brief.",
       "rules": [
         "Tagline at most 60 characters, description at most 500, no emoji in the name, up to 3 tags (suggested: Website Builder, Presentations, Artificial Intelligence) [V].",
         "Never ask anyone for upvotes; ask for feedback. No vote swaps, launch services, paid hunters or new accounts.",
@@ -814,7 +814,7 @@
       "status": "HOLD. Post only when people can try something without paying: the D2 capped preview, or a no-login demo. HN asks for things people can try, 'ideally without barriers such as signups', and treats landing and sign-up pages as off-topic [V, https://news.ycombinator.com/showhn.html, read 26 Oct 2026]. Most AI-builder Show HNs since 2025 scored 1-12 points [F].",
       "earliest": "Phase 3 (from 25 Dec), and only if D2 says yes",
       "title": "Show HN: Makeborne – one brief to a website, a deck and a book, checked against golden briefs",
-      "body": "Hi HN, I'm {founderFirstName}. I built Makeborne with a small team in Sarajevo. You can try a capped first build here without paying: {previewLink}\n\nIt takes one brief and produces a website (published on a Makeborne address), a deck that exports to PPTX with native, editable charts rather than pictures, and a book as a PDF. Clients approve the site through a review link that needs no account.\n\nA few things that were harder than expected, and that you might find interesting:\n\n1. Keeping quality from drifting. Every release is checked against a fixed set of golden briefs before it ships. [one concrete example of a regression this caught, or cut this line]\n\n2. Showing the worst case before you spend. Each request shows the most it can cost in credits before it starts. Getting that bound tight without refusing reasonable requests took [N] iterations.\n\n3. Native PPTX charts. We emit real chart objects, so the numbers can be edited in PowerPoint.\n\n4. Long documents. Keeping a [N]-page book consistent in voice and structure meant [approach].\n\nPricing is $20-99 a month. The paid plans have no free tier, which is why the capped preview exists. You can download the source of any site, or export it to GitHub.\n\nI'm here all day for questions, especially the critical ones.",
+      "body": "Hi HN, I'm {founderFirstName}. I built Makeborne with a small team in Sarajevo. You can try a capped first build here without paying: {previewLink}\n\nIt takes one brief and produces a website (published on a Makeborne address), a deck that exports to PPTX with native, editable charts rather than pictures, and a book as a PDF. Clients approve the site through a review link that needs no account.\n\nA few things that were harder than expected, and that you might find interesting:\n\n1. Keeping quality from drifting. Every release is checked against a fixed set of golden briefs before it ships. [one concrete example of a regression this caught, or cut this line]\n\n2. Showing the worst case before you spend. Each request shows the most it can cost in credits before it starts. Getting that bound tight without refusing reasonable requests took [N] iterations.\n\n3. Native PPTX charts. We emit real chart objects, so the numbers can be edited in PowerPoint.\n\n4. Long documents. Keeping a [N]-page book consistent in voice and structure meant [approach].\n\nPricing is $20-99 a month, paid plans only, which is why the capped preview exists. You can download the source of any site, or export it to GitHub.\n\nI'm here all day for questions, especially the critical ones.",
       "rules": [
         "First person, technical, no marketing adjectives. Never ask friends to upvote or comment (HN treats it as a voting ring).",
         "Decide before posting how to answer 'which models do you use?' [O]; customer copy never names vendors.",
@@ -824,23 +824,23 @@
     "reddit": [
       {
         "subreddit": "r/SideProject",
-        "when": "Day 3 (Fri 30 Oct), after reading the sidebar, rules and pinned posts by hand; one follow-up at beat:images",
+        "when": "Day 3 (Sat 31 Oct, 17:00), after reading the sidebar, rules and pinned posts by hand; one follow-up at beat:images",
         "title": "I built an AI studio that turns one brief into a client website, a deck and a book. Launched paid-only this week",
-        "body": "I'm the maker (founder, small studio in Sarajevo). Disclosing up front.\n\nWhat it does: you write one brief, and it builds a website (published on a Makeborne address), a deck you can open and edit in PowerPoint, or a short book as a PDF. The part I care about most is the client side: your client opens a review link, comments on the live site without an account, and taps Approve.\n\n[GIF: brief, real-speed build, review link, Approve on a phone]\n\nThings I learned building it:\n- The build was never the slow part of client work; the approval was.\n- Showing the maximum cost of a request before it runs changed how people use it.\n- No free tier was the hardest call. Every build costs real money to run, so we refund in full until you use a credit instead.\n\nNumbers so far: [N] paid, [N] refunds. I'll post an update at day 30.\n\nQuestion for you: would you rather have a capped free preview, or a full refund promise? Honest answers welcome.\n\n(Link in the comments if anyone wants it.)",
+        "body": "I'm the maker (founder, small studio in Sarajevo). Disclosing up front.\n\nWhat it does: you write one brief, and it builds a website (published on a Makeborne address), a deck you can open and edit in PowerPoint, or a short book as a PDF. The part I care about most is the client side: your client opens a review link, comments on the live site without an account, and taps Approve.\n\n[GIF: brief, real-speed build, review link, Approve on a phone]\n\nThings I learned building it:\n- The build was never the slow part of client work; the approval was.\n- Showing the maximum cost of a request before it runs changed how people use it.\n- Paid plans only was the hardest call. Every build costs real money to run, so instead of giving it away we refund in full until you use a credit.\n\nNumbers so far: [N] paid, [N] refunds. I'll post an update at day 30.\n\nQuestion for you: would you rather try a capped preview first, or have a full refund promise? Honest answers welcome.\n\n(Link in the comments if anyone wants it.)",
         "rulesNote": "Third-party audits found no posted promotion rule; another guide suggests one launch post plus one per major milestone, with maker status disclosed [S]. Rules were not read at the source (Reddit blocks automated fetches) [U]. Link in a comment unless the sidebar allows it in the post."
       },
       {
         "subreddit": "r/indiehackers",
-        "when": "Day 7 (Tue 3 Nov) or the following week",
-        "title": "Launched with no free tier, on purpose. Day-7 numbers, refunds included",
-        "body": "Maker here. Makeborne turns one brief into a client site, deck or book, with a review link where the client approves.\n\nWhy paid-only: every build costs us real AI money, so a free tier would be paid for by marketing money we don't have ($1,000 total). Instead: from $20 a month + tax, a full refund until you use credits, and uncut build videos so you can see the product before paying.\n\nDay 7, unedited:\n- visits: [N]\n- paid: [N] (Create/Studio/Scale: [N]/[N]/[N])\n- refunds: [N]\n- first build within 10 minutes of paying: [N]%\n- what broke: [one honest thing]\n\nWhat I'm testing next: [next test]. Would you have done the free tier?",
+        "when": "Day 7 (Wed 4 Nov, 15:00) or the following week",
+        "title": "Launched with paid plans only, on purpose. Day-7 numbers, refunds included",
+        "body": "Maker here. Makeborne turns one brief into a client site, deck or book, with a review link where the client approves.\n\nWhy paid-only: every build costs us real AI money, so giving it away would be paid for with marketing money we don't have ($1,000 total). Instead: from $20 a month + tax, a full refund until you use credits, and uncut build videos so you can see the product before paying.\n\nDay 7, unedited:\n- visits: [N]\n- paid: [N] (Create/Studio/Scale: [N]/[N]/[N])\n- refunds: [N]\n- first build within 10 minutes of paying: [N]%\n- what broke: [one honest thing]\n\nWhat I'm testing next: [next test]. Would you have launched paid-only?",
         "rulesNote": "Reportedly one self-promotion post per product, with the Self Promotion flair [S]. Confirm by hand [U]. Numbers must match Whop, with buyer data cropped."
       },
       {
         "subreddit": "r/SaaS",
-        "when": "Week 2, once only (reported limit: one mention or three links per 60 days, affiliation disclosed; alt accounts count as the same person [S, read 10 Sep 2026])",
-        "title": "Roast my pricing: $20 / $49 / $99 a month in credits, no free tier, refund until you use credits",
-        "body": "I'm the founder of the product, so I'm biased; that's why I'm asking.\n\nPlans: 300, 750 and 1,550 credits a month for $20, $49 and $99. Yearly is 20% off. Unused credits carry over for two months. No free tier and no trial: you get a full refund until you use a credit. Each request shows its maximum cost before it runs.\n\nThe product makes client websites, decks and books from a brief. The middle plan is aimed at freelancers and small agencies.\n\nWhat I'm unsure about:\n1. Does 'credits' put you off compared with 'X sites a month'?\n2. Is a refund promise a real substitute for a free preview?\n3. Would you pay $49 for the client-review workflow alone?\n\nNo link in the post. I'll answer everything in the comments.",
+        "when": "Do not post in r/SaaS: its rule 11 bans promoting content-generation and lead-detection SaaS, with a permanent ban (content/hype-playbook.md §2.4). The pricing roast goes to r/roastmystartup on Mon 2 Nov 15:00 with the hype playbook's text (§2.3, post 3). (Earlier note: once only, reported limit one mention or three links per 60 days [S, read 10 Sep 2026].)",
+        "title": "Roast my pricing: $20 / $49 / $99 a month in credits, paid plans only, refund until you use credits",
+        "body": "I'm the founder of the product, so I'm biased; that's why I'm asking.\n\nPlans: 300, 750 and 1,550 credits a month for $20, $49 and $99. Yearly is 20% off. Unused credits carry over for two months. Paid plans only: you get a full refund until you use a credit. Each request shows its maximum cost before it runs.\n\nThe product makes client websites, decks and books from a brief. The middle plan is aimed at freelancers and small agencies.\n\nWhat I'm unsure about:\n1. Does 'credits' put you off compared with 'X sites a month'?\n2. Is a refund promise a real substitute for trying it first?\n3. Would you pay $49 for the client-review workflow alone?\n\nNo link in the post. I'll answer everything in the comments.",
         "rulesNote": "Disclose affiliation; no link in the post; personal account only; never repost."
       },
       {
@@ -854,7 +854,7 @@
         "subreddit": "r/startups",
         "when": "Monthly 'Share Your Startup' thread only",
         "title": "(comment in the monthly thread)",
-        "body": "Makeborne (makeborne.com): an AI studio for client work. One brief becomes a client website, deck or book, and the client approves it through a review link without an account.\nStage: paid beta, launched 28 Oct. Bootstrapped, Sarajevo.\nLooking for: feedback from freelancers and agency owners on the review-link workflow.\nI'm the founder.",
+        "body": "Makeborne (makeborne.com): an AI studio for client work. One brief becomes a client website, deck or book, and the client approves it through a review link without an account.\nStage: paid beta, launched 29 Oct. Bootstrapped, Sarajevo.\nLooking for: feedback from freelancers and agency owners on the review-link workflow.\nI'm the founder.",
         "rulesNote": "Promotion only in the monthly thread [S]; elsewhere, lessons only and no links."
       },
       {
@@ -882,7 +882,7 @@
         "subreddit": "r/SideProject (follow-up)",
         "when": "beat:images, after the gate",
         "title": "Update: the site, deck and book now come with their own images (same brief, before and after)",
-        "body": "Maker again. When I posted on [date], several of you asked about images. They're live now.\n\n[before/after GIF from the same brief]\n\nWhat changed: [N] days of quality runs against [N] golden briefs before we shipped it. Numbers since launch: [N] paid, [N]% refunds.\n\nSame question as last time, with new data: free preview or refund promise?",
+        "body": "Maker again. When I posted on [date], several of you asked about images. They're live now.\n\n[before/after GIF from the same brief]\n\nWhat changed: [N] days of quality runs against [N] golden briefs before we shipped it. Numbers since launch: [N] paid, [N]% refunds.\n\nSame question as last time, with new data: a capped preview first, or a refund promise?",
         "rulesNote": "Only one milestone post per major update; never the same text twice.",
         "beat": "beat:images"
       }
@@ -891,14 +891,15 @@
       "r/marketing (zero tolerance; advertisers go to Reddit Ads) [S]",
       "r/selfpublish, r/KDP (author communities hostile to AI books)",
       "r/lovable, r/vibecoding, r/Bolt and other competitor communities: answer only when someone asks for an alternative for websites or client work, and disclose",
-      "r/GrowthHacking before 100+ community karma [S]"
+      "r/GrowthHacking before 100+ community karma [S]",
+      "r/SaaS (rule 11 bans promoting content-generation and lead-detection SaaS: permanent ban; content/hype-playbook.md §2.4)"
     ],
     "linkedin": [
       {
         "id": "li-day1",
         "when": "Day 1, Thu 29 Oct, 21:15 Sarajevo",
         "format": "Text post plus a 30-45 s real build clip; link in the first comment",
-        "body": "Today I launched Makeborne.\n\nIt's an AI studio for client work. You write one brief. It builds the website, and your client gets a link where they comment on the live site and tap Approve. No account for them, and no screenshot threads for you.\n\nThe same brief can also become the pitch deck (it opens in PowerPoint, and the charts are real) or a client guide as a PDF.\n\nWho it's for: freelancers and small studios who make things for clients.\n\nPrice: from $20 a month. Studio, for client work, is $49. There's no free plan, on purpose. If you don't use a credit, you get every cent back.\n\nIt's built by a small team in Sarajevo, sold worldwide, and I'll post every number here, good or bad.\n\nWhat should I build first in public? Comment a client brief and I'll pick three.",
+        "body": "Today I launched Makeborne.\n\nIt's an AI studio for client work. You write one brief. It builds the website, and your client gets a link where they comment on the live site and tap Approve. No account for them, and no screenshot threads for you.\n\nThe same brief can also become the pitch deck (it opens in PowerPoint, and the charts are real) or a client guide as a PDF.\n\nWho it's for: freelancers and small studios who make things for clients.\n\nPrice: from $20 a month. Studio, for client work, is $49. It's paid plans only, on purpose. If you don't use a credit, you get every cent back.\n\nIt's built by a small team in Sarajevo, sold worldwide, and I'll post every number here, good or bad.\n\nWhat should I build first in public? Comment a client brief and I'll pick three.",
         "firstComment": "Here it is: makeborne.com/go/li-0101"
       },
       {
@@ -920,12 +921,12 @@
         "id": "li-no-free-tier",
         "when": "Week 1",
         "format": "Text post",
-        "body": "Everyone told me to add a free plan. I didn't. Here's why.\n\nEvery build costs real money to run. A free tier would be paid for with marketing money, and I have $1,000 of it.\n\nSo instead:\n- you can watch the full uncut build before you pay\n- you see the most a request can cost before it starts\n- if you don't use a credit, you get a full refund\n\nMaybe I'm wrong. I'll publish the conversion numbers at day 30 either way.",
+        "body": "Everyone told me to give it away first. I didn't: Makeborne is paid plans only, on purpose. Here's why.\n\nEvery build costs real money to run. Giving it away would be paid for with marketing money, and I have $1,000 of it.\n\nSo instead:\n- you can watch the full uncut build before you pay\n- you see the most a request can cost before it starts\n- if you don't use a credit, you get a full refund\n\nMaybe I'm wrong. I'll publish the conversion numbers at day 30 either way.",
         "firstComment": "makeborne.com/go/li-0105"
       },
       {
         "id": "li-day7-numbers",
-        "when": "Day 7, Tue 3 Nov",
+        "when": "Day 7, Wed 4 Nov",
         "format": "Text post plus a cropped Whop screenshot",
         "body": "Day 7: here's exactly how many people paid.\n\n- paying customers: [N]\n- on Studio (the client-work plan): [N]\n- refunds: [N]\n- countries: [N]\n- marketing spent: $[N] of $1,000\n- what broke: [one honest thing], fixed in [N] hours\n\nThe lesson so far: [one lesson].",
         "firstComment": "If you want to try it: makeborne.com/go/li-0107",
@@ -973,7 +974,7 @@
           "The site publishes on a Makeborne address. Your client needs no account to comment.\n\n[clip: comment, fix, Approve on a phone]",
           "The same brief becomes a deck that opens in PowerPoint. The charts are real chart objects, so you can click and edit them.\n\n[clip]",
           "Or a short book for screen and PDF: a client welcome guide, a lead magnet, a family recipe book.\n\n[clip]",
-          "Pricing: $20 / $49 / $99 a month in credits. No free plan, on purpose.\n\nYou see the most a request can cost before it starts, and you get a full refund until you use a credit.",
+          "Pricing: $20 / $49 / $99 a month in credits. Paid plans only, on purpose.\n\nYou see the most a request can cost before it starts, and you get a full refund until you use a credit.",
           "Built by a small team in Sarajevo. I'll post every number here.\n\nComment a brief and I'll build three of them on camera this week."
         ],
         "firstReply": "makeborne.com/go/x-0101"
@@ -982,7 +983,7 @@
         "id": "x-day7",
         "when": "Day 7",
         "thread": [
-          "Day 7 of selling an AI studio from Sarajevo with $1,000 of marketing money and no free tier.\n\nEvery number:",
+          "Day 7 of selling an AI studio from Sarajevo with $1,000 of marketing money and paid plans only.\n\nEvery number:",
           "Paid: [N]\nStudio share: [N]%\nRefunds: [N]\nSpent: $[N]\nBest source: [source]\nFirst build within 10 min of paying: [N]%",
           "What broke: [thing]. Fixed in [N] h.\nWhat I'm killing: [thing].\nWhat I'm doubling: [thing].",
           "Next week's test: [test]. Same post next Sunday."
@@ -1043,9 +1044,9 @@
       }
     ],
     "indieHackers": {
-      "when": "Day 3 (Fri 30 Oct); then weekly numbers updates; a Product Hunt postmortem after beat:images; the 30-day report at beat:day30",
-      "title": "Launched paid-only, no free tier, on purpose: an AI studio for client work from Sarajevo",
-      "body": "Hi IH. I'm {founderFirstName}, and I just launched Makeborne.\n\n**What it is.** An AI studio for client work. One brief becomes a website (published on a Makeborne address), a deck that opens in PowerPoint with editable charts, or a book for screen and PDF. The client approves the site through a review link without making an account. There's also a basic CRM with a lead finder, and a manual export to GitHub.\n\n**Who it's for.** Freelancers and small agencies first. They're the ones with a client waiting for a yes.\n\n**The bet: no free tier.** Every build costs us real AI money. A free tier would need marketing money we don't have: the whole budget is $1,000. So we do three things instead:\n1. Uncut build videos, so you can see exactly what you'd get.\n2. The maximum cost of every request, shown before it starts.\n3. A full refund until you use a credit.\n\n**Pricing.** $20 / $49 / $99 a month for 300 / 750 / 1,550 credits. Yearly is 20% off. Unused credits carry over for two months.\n\n**The $1,000.** $79 on two launch directories, $530 on small creator tests that only get paid once our attribution works, $200 to boost posts that have already sold something, and $191 for DM tooling, payout fees and a reserve. Everything after that has to come from revenue.\n\n**Numbers so far.** [N] paid, [N] refunds. I'll post every week, including the bad weeks.\n\n**What I'd love from you.** Is the refund promise a real substitute for a free tier, or am I fooling myself? What would make you pay on the first visit?",
+      "when": "Day 3 (Sat 31 Oct, 16:00); then weekly numbers updates; a Product Hunt postmortem after beat:images; the 30-day report at beat:day30",
+      "title": "Launched with paid plans only, on purpose: an AI studio for client work from Sarajevo",
+      "body": "Hi IH. I'm {founderFirstName}, and I just launched Makeborne.\n\n**What it is.** An AI studio for client work. One brief becomes a website (published on a Makeborne address), a deck that opens in PowerPoint with editable charts, or a book for screen and PDF. The client approves the site through a review link without making an account. There's also a basic CRM with a lead finder, and a manual export to GitHub.\n\n**Who it's for.** Freelancers and small agencies first. They're the ones with a client waiting for a yes.\n\n**The bet: paid plans only.** Every build costs us real AI money. Giving it away would need marketing money we don't have: the whole budget is $1,000. So we do three things instead:\n1. Uncut build videos, so you can see exactly what you'd get.\n2. The maximum cost of every request, shown before it starts.\n3. A full refund until you use a credit.\n\n**Pricing.** $20 / $49 / $99 a month for 300 / 750 / 1,550 credits. Yearly is 20% off. Unused credits carry over for two months.\n\n**The $1,000.** $79 on two launch directories, $530 on small creator tests that only get paid once our attribution works, $200 to boost posts that have already sold something, and $191 for DM tooling, payout fees and a reserve. Everything after that has to come from revenue.\n\n**Numbers so far.** [N] paid, [N] refunds. I'll post every week, including the bad weeks.\n\n**What I'd love from you.** Is the refund promise a real substitute for trying it first, or am I fooling myself? What would make you pay on the first visit?",
       "rules": [
         "Numbers match Whop and the plan's budget; update the $1,000 split if the owner changes it.",
         "Link at the end of the post or in the profile, per IH norms; no link-only posts."
@@ -1075,15 +1076,15 @@
       ]
     },
     "pressPitch": {
-      "angle": "A small studio in Sarajevo launches an AI studio for client work, sells it worldwide with no free tier and $1,000 of marketing money, and publishes every number.",
+      "angle": "A small studio in Sarajevo launches an AI studio for client work, sells it worldwide on paid plans only with $1,000 of marketing money, and publishes every number.",
       "headlineOptions": [
         "Sarajevo studio launches an AI studio for client work and sells it worldwide",
-        "No free tier, $1,000 of marketing, every number public: a Bosnian AI launch",
+        "Paid plans only, $1,000 of marketing, every number public: a Bosnian AI launch",
         "From one brief to a client's approval: Sarajevo's Makeborne bets on the part AI builders skip"
       ],
       "regional": {
         "templateId": "t16-press-regional",
-        "when": "Day 6 (Mon 2 Nov)",
+        "when": "Day 6 (Tue 3 Nov)",
         "outlets": [
           "Netokracija",
           "Bloomberg Adria",
@@ -1102,7 +1103,7 @@
         "Makes: websites (published on a Makeborne address), decks (PPTX with editable charts), books (screen and PDF)",
         "Client side: review links with comments without an account, and Approve",
         "Also: basic CRM with a lead finder, manual GitHub export, projects library",
-        "Pricing: $20 / $49 / $99 a month; yearly 20% off; no free tier; full refund until credits are used",
+        "Pricing: $20 / $49 / $99 a month; yearly 20% off; paid plans only; full refund until credits are used",
         "Sold: worldwide"
       ],
       "assets": [
@@ -1133,7 +1134,7 @@
       "taglineLong": "One brief in. A client-ready website, deck or book out.",
       "shortDescription": "Makeborne turns one brief into a website, a deck or a book, then lets your client comment and approve through a review link, no account needed.",
       "longDescription": "Makeborne is an AI studio for freelancers, agencies and anyone who makes things for clients.\n\nWrite one brief and Makeborne builds:\n- a website, published on a Makeborne address, with downloadable source and a manual export to GitHub\n- a deck that opens in PowerPoint, with real, editable charts\n- a book for screen and PDF: guides, lead magnets, client welcome books\n\nThen send your client a review link. They comment on the live site without making an account and tap Approve, so there are no screenshot threads.\n\nA basic CRM with a lead finder helps you find local businesses that need a better site and track the follow-up. Every project lives in one projects library.\n\nPricing: Create $20/month (300 credits), Studio $49/month (750 credits, best for client work), Scale $99/month (1,550 credits). Yearly is 20% off. The most a request can cost is shown before it starts. Unused credits carry over for two months. Full refund until you use credits.",
-      "pricingModel": "Paid (no free plan, no trial)",
+      "pricingModel": "Paid (subscription plans only)",
       "startingPrice": "$20/month",
       "categories": [
         "AI website builder",
@@ -1178,8 +1179,8 @@
       "alternativesNote": "On AlternativeTo, list Makeborne as an alternative for websites and decks only. Do not claim to replace app builders (logins, databases).",
       "faq": [
         {
-          "q": "Is there a free plan?",
-          "a": "No. Plans start at $20 a month, and you get a full refund until you use credits."
+          "q": "Can I try it before I pay?",
+          "a": "Makeborne is paid plans only, from $20 a month. You get a full refund until you use credits, and you can watch uncut builds before you buy."
         },
         {
           "q": "Can I use my own domain?",
@@ -1458,7 +1459,7 @@
       "v9 'Fly-over' film in 9:16 and 16:9 (after checking that it matches the live home page and its end card is true)",
       "Approved hook list and the creator brief (t03)",
       "Brand kit: logo, cream canvas #F8F7F4, Inter display with one Newsreader Italic accent word",
-      "Price and refund line, FAQ answers (domains, images, free plan) and the disclosure guide",
+      "Price and refund line, FAQ answers (domains, images, paid plans only) and the disclosure guide",
       "Monthly partner update with what's newly live (beats), so partners never promote what isn't"
     ]
   }

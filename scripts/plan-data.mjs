@@ -11,7 +11,7 @@ const toUtc = (iso) => {
 };
 export const addDays = (iso, n) => new Date(toUtc(iso) + n * DAY_MS).toISOString().slice(0, 10);
 const diff = (a, b) => Math.round((toUtc(a) - toUtc(b)) / DAY_MS);
-const START = '2026-10-26'; // Mon of week 1 (pre-launch day −2); weeks run Monday to Sunday
+const START = '2026-10-26'; // Mon of week 1 (pre-launch day −3); weeks run Monday to Sunday
 export const LAUNCH = '2026-10-29'; // the public launch, Thu 29 Oct 2026 at 21:00 CET (day 1)
 export const DAY90 = '2027-01-26'; // day 90 and the day-90 review, inside week 13
 const WEEKDAYS = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
@@ -96,9 +96,10 @@ export function postingFor(posting, post, date) {
     laterFiles: !after ? it.files.map((f) => f.later).filter(Boolean) : [],
     folder: it.folder ?? posting.folder,
     cover: it.cover,
-    caption: it.caption,
+    // After its own day a repost drops the dated closing line and that day's note.
+    caption: after && it.captionAfter ? it.captionAfter : it.caption,
     hashtags: it.hashtags,
-    captionNote: it.captionNote,
+    captionNote: after && it.captionAfter ? null : it.captionNote,
     ytTitle: it.ytTitle,
     keyword: it.keyword,
     disclosure: it.disclosure,

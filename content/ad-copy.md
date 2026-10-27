@@ -1,6 +1,6 @@
 # Makeborne ad copy matrices
 
-Written 26 Oct 2026 (paid beta launch day). Companion to `data/creatives.json` (creative IDs C01-C48) and `content/creatives.md`. Plan of record: `plan/strategy.md`.
+Written 26 Oct 2026, before the launch (Thu 29 Oct 2026, 21:00 CET); dates updated 27 Oct. Companion to `data/creatives.json` (creative IDs C01-C48) and `content/creatives.md`. Plan of record: `plan/strategy.md`.
 
 **Labels:** [F] read at the platform's own page on 26 Oct 2026 · [S] secondary or third-party source · [E] our estimate · [O] owner decision · [U] unverified.
 
@@ -40,7 +40,7 @@ Written 26 Oct 2026 (paid beta launch day). Companion to `data/creatives.json` (
 | A2 | icp1 | Approval without e-mail chaos | C02, C03, C09 | F2 POV 'make it pop'; A3 40 e-mails vs one link |
 | A3 | icp1 | One plan, every client site (fair use) | C11, C30 | client-sites counter in the projects library |
 | A4 | icp1 | One brief, three deliverables | C29 | one brief, three outputs, 30 s |
-| A5 | icp1 | Honest billing and refund | C30, C12 (organic) | P3 'here's why I didn't add a free plan' (organic only) |
+| A5 | icp1 | Honest billing and refund | C30, C12 (organic) | P3 'why paid plans only' (organic only) |
 | D1 | icp2 | A real chart, not a picture (.pptx) | C17 | D3 PPTX chart click |
 | D2 | icp2 | Notes in, editable deck out | C18, C19 | D1 pitch deck from one brief |
 | D3 | icp2 | Change one thing, only that changes | C16 | one-value chart edit |

@@ -4,7 +4,7 @@
 
 
 **Window:** pre-launch Mon 26 - Wed 28 October 2026, public launch Thursday 29 October 2026 at 21:00 CET, to the day-90 review on Tuesday 26 January 2027.
-**Day numbering:** day 1 = Thu 29 Oct (launch 21:00 CET); Mon 26, Tue 27 and Wed 28 Oct are pre-launch days −3, −2 and −1. Launch week = days 1-7 (29 Oct - 4 Nov). Phase 1 = days 6-28 (2-24 Nov, sharing 2-3 Nov with launch days 6-7). Phase 2 = days 29-58 (25 Nov - 24 Dec). Phase 3 = days 59-90 (25 Dec - 25 Jan). The day-90 review is Mon 25 Jan.
+**Day numbering:** day 1 = Thu 29 Oct (launch 21:00 CET); Mon 26, Tue 27 and Wed 28 Oct are pre-launch days −3, −2 and −1. Launch week = days 1-7 (29 Oct - 4 Nov). Phase 1 = days 8-27 (5-24 Nov). Phase 2 = days 28-57 (25 Nov - 24 Dec). Phase 3 = days 58-90 (25 Dec - 26 Jan). The day-90 review is Tue 26 Jan.
 **Cash budget:** $1,000, allocated exactly in section 6. Everything after it is paid from revenue under a reinvestment rule (an owner decision).
 **Status:** final plan for owner review. Nothing in it has been posted, bought, submitted or sent. Every pitch, listing, payment and creator contact is something the owner does or approves.
 **Built from:** `plan/draft-creator-led.md` (the judges' spine), `plan/draft-launch-events.md` (calendar and gates) and `plan/draft-agency-community.md` (buyer, loops and partner terms), with every flaw the three judges raised fixed. Evidence is in `research/*.md`, whose Verification sections override their bodies.
@@ -22,7 +22,7 @@
 
 ## 1. Executive summary
 
-1. **The honest target.** $1M ARR is about $83.3k MRR, or about 2,050 active subscribers at a Studio-heavy $41 blend (about 2,260 at $36.90). No company in our research reached $1M ARR within 3 months from a cold start with no free tier [F/S, `research/case-studies-ai-builders.md`]. Lovable's "$1M ARR in a week" (Nov 2024) came with a free tier and a 50k-star open-source audience [F]. Base44's "$1M in 3 weeks" is from Lenny's show notes; the founder self-reports a $1.5M ARR goal hit in four weeks (CEO Insider, 4 Aug 2025) [V]. No audited data. Never in public copy. **The plan of record is the base case: about $174k ARR (about $14.5k MRR) at the day-90 review on 24 January** (calculator, `data/funnel.json`). If creator traffic converts like average traffic, base falls to about $134k ARR and paid CAC to about $100 (the "strict research inputs" column in 14.2); the 16 Nov and 30 Nov checks decide which applies. $1M is a breakout scenario with named conditions (section 15). It is not the plan.
+1. **The honest target.** $1M ARR is about $83.3k MRR, or about 2,050 active subscribers at a Studio-heavy $41 blend (about 2,260 at $36.90). No company in our research reached $1M ARR within 3 months from a cold start with no free tier [F/S, `research/case-studies-ai-builders.md`]. Lovable's "$1M ARR in a week" (Nov 2024) came with a free tier and a 50k-star open-source audience [F]. Base44's "$1M in 3 weeks" is from Lenny's show notes; the founder self-reports a $1.5M ARR goal hit in four weeks (CEO Insider, 4 Aug 2025) [V]. No audited data. Never in public copy. **The plan of record is the base case: about $174k ARR (about $14.5k MRR) at the day-90 review on Tue 26 January** (calculator day 91, `data/funnel.json`). If creator traffic converts like average traffic, base falls to about $134k ARR and paid CAC to about $100 (the "strict research inputs" column in 14.2); the 16 Nov and 30 Nov checks decide which applies. $1M is a breakout scenario with named conditions (section 15). It is not the plan.
 2. **Who we sell to first.** Freelancers and small agencies who build sites for clients, sold on **Studio $49**. Everything they need is live today: AI sites published on a Makeborne address, client review links with anonymous comments and Approve, a basic CRM with a lead finder, manual GitHub export and a projects library. Studio earns about $33 a month of contribution against about $13 for Create [E, `research/product-funnel-audit.md` §8.2], so every Studio buyer is worth about 2.5 Create buyers.
 3. **What we say.** *"The AI studio for client work. Build it. Send the link. Get the yes."* Short-form line: *"One brief in. A finished website, deck or book out."* Proof line: *"From $20/month + tax. Full refund until you use credits."*
 4. **The engine.** It comes from the creator-led draft. Every post shows the product working: the finished output in frame 0, a visible timer, one live edit, publish, and a loop back to frame 0. That traffic goes through Instagram comment-keyword DMs (SITE, DECK, BOOK, CLIENT) to landing pages that match the format, with "use my brief" deep links. Small paid creator waves follow, then boosts only for posts that already sold, then revenue-funded Content Rewards at about $1.60 per 1,000 views (a Lovable clipping campaign run by Virality, now paused: $26,119 for 16.7M approved views [F]).
@@ -96,7 +96,7 @@ For freelancers and small agencies who make things for clients, Makeborne turns 
 | Short-form, on screen | **One brief in. A finished website, deck or book out.** |
 | Proof line (end cards, DMs, landing pages) | **From $20/month + tax where applicable. Full refund until you use credits.** (Launch checkout shows prices before tax, so EU and UK consumer-facing ads must say tax is added or show VAT-inclusive prices [U], section 16 risk 27. Update everywhere if the owner changes the refund rule, D1 in section 17.) |
 | Founder series | "Day N: building an AI studio for client work from Sarajevo, with $1,000 and every number in public." |
-| Contrarian (press, Indie Hackers) | "No free tier, on purpose. Watch the uncut build. If you don't use a credit, you get every cent back." |
+| Contrarian (press, Indie Hackers) | "Paid plans only, on purpose. Watch the uncut build. If you don't use a credit, you get every cent back." |
 
 ### 4.2 Pillars and proof (all live today)
 
@@ -128,7 +128,7 @@ v13 and v14 are built on concept imagery. The v14 end card says "Start free", wh
 - D3 "It's a real chart, not a picture." (PPTX)
 - B4 "Your notes app is full of book ideas. Here's one, finished."
 - P2 "Day 7: here's exactly how many people paid."
-- P3 "Everyone said 'add a free plan'. Here's why I didn't."
+- P3 "Everyone said 'give it away first'. Here's why I didn't."
 
 ### 4.4 Objection handling
 
@@ -239,12 +239,12 @@ Target: live by Thu 29 Oct. Organic posting does not wait. If engineering slips,
 
 | # | Item | USD | When | Owner | Kill rule | Scale rule |
 |---|---|---|---|---|---|---|
-| 1 | **TAAFT listing**, submitted before any other listing to keep the launch-first $300 PPC bonus (check on the form that it applies to the $49 tier) [F/U] | **$49** | Mon 26 Oct (day 1) | Owner | Sunk. No TAAFT upgrades unless it brings 3+ tracked net payers in 30 days | The $437 bundle only from revenue, and only if it converts [O] |
+| 1 | **TAAFT listing**, submitted before any other listing to keep the launch-first $300 PPC bonus (check on the form that it applies to the $49 tier) [F/U] | **$49** | Thu 29 Oct (day 1), right after the 21:00 launch posts | Owner | Sunk. No TAAFT upgrades unless it brings 3+ tracked net payers in 30 days | The $437 bundle only from revenue, and only if it converts [O] |
 | 2 | **Wave-1 creator flat fees**: 5 creators × $60 for 2 videos. 3 Lane A (freelance web design or "sell sites to local businesses", at least 1 on LinkedIn) and 2 Lane B (decks or productivity, side-hustle). 2k-50k followers, at least 60% of the audience in US, UK, EU, CA or AU (screenshot required). Each gets a comped Studio month, a `/go/c-<handle>` link, a use-my-brief link, a custom affiliate code and **60 days of Spark or partnership-ad rights**. Half paid on signing, half on delivery, and only after the gate | **$300** | Recruit 27 Oct - 6 Nov; posts 9-22 Nov | Owner (contacts), founder (briefs) | **Per creator** (each costs at most $140: $60 flat, half on signing and half on delivery, plus up to $80 of view bonus, so a signed contract cannot be stopped at $100): **no rehire** if 0 net payers 14 days after video 2; **rehire only** at 1 net payer per $40. The $100 / $150 kill rule applies to boosts, rehires and reserve spend | Rehire from the reserve, then from revenue; move to the 30% founding-partner rate |
 | 3 | **Wave-1 per-view bonus pool**: $1.50 per 1,000 views in each video's first 7 days, capped at $40 a video | **$90** | Paid weekly from 16 Nov | Founder | Pay on verified views only; watch for views clustering at the cap | Overflow beyond $90 is paid from the reserve (overflow means a winner) |
 | 4 | **Wave-2 visual creators**: 2 × $60 for 2 videos, plus a $20 bonus pool, for image-led sites, decks and books | **$140** | Only after **images pass the gate**. **If images are not live by 30 Nov**, rehire the best wave-1 creator instead | Owner, founder | Same as line 2 | Same as line 2 |
 | 5 | **Boosts of gated winners**: TikTok Spark ($52/day × 2 days; the floor is "more than $50" a day [F]) and a Meta partnership ad (about $24/day × 4 days, Reels and Feed). Geos: US, UK, CA, AU, IE, NZ, DACH, Nordics, Benelux. **Qualify:** 3x or more the account's median views in 48 h, a 65%+ 3-second hold, **and** at least 1 tracked sale or 5+ link clicks per 1,000 views. **Precondition:** confirm by 9 Nov that both ad accounts can be registered and billed from Bosnia and Herzegovina [U]. If they can't, move the line into creator rehires | **$200** | Slot A no earlier than 9 Nov; slot B from 3 Dec. **None 20 Nov - 2 Dec** (Black Friday CPMs) | Founder | Stop after $30-50 if link CTR is under 0.5% or CPC is over $2. Stop a source at $100 with 0 net payers | +20-30% at most every 48-72 h, and only at CAC ≤$50 over 3+ net payers. A 2-day burst is a lottery ticket, not a clean read: judge it on `/go/` sales |
-| 6 | **Uneed** pick-your-date slot for the images Product Hunt day [S] | **$30** | Book only after the 1 Nov images go/no-go, or first confirm Uneed allows rescheduling [U]; runs on the images day | Owner | — | Fallback if images slip: move the slot to the next beat that passes the gate |
+| 6 | **Uneed** pick-your-date slot for the images Product Hunt day [S] | **$30** | Book only after the Wed 4 Nov images go/no-go, or first confirm Uneed allows rescheduling [U]; runs on the images day | Owner | — | Fallback if images slip: move the slot to the next beat that passes the gate |
 | 7 | **Instagram DM automation**: start on the free tier; upgrade only when the free tier is outgrown [A, price unverified] | **$30** | When needed | Founder | Unspent money rolls into the reserve on 1 Dec | — |
 | 8 | **Creator payout fees and FX**: lines 2-4 pay up to 9 people abroad from a BiH company. Prefer one low-fee transfer service or batch payments, and never a $30 SWIFT wire. Payout tax checks are in the owner's private notes [A] | **$25** | With each payout | Owner | Unspent money rolls into the reserve | — |
 | 9 | **Reserve**: released only by the scale rule. Uses, in order: (a) bonus overflow on a breakout video, (b) rehire the creator with the lowest CAC, (c) extend a winning Spark or partnership ad, (d) a small Whop Content Rewards pilot (Whop's docs list no minimum and no fee [F, read 26 Oct 2026]) | **$136** | Weeks 3-8 | Owner approves | Unspent at day 60 goes to the best source | Released when a source shows CAC ≤$50 over 3+ net payers |
@@ -302,87 +302,89 @@ Plan at **$1.60 per 1,000 views**. Lovable's effective rate was $1.56 against a 
 
 ---
 
-## 7. Launch week, day by day (26 Oct - 1 Nov 2026)
+## 7. Launch week, day by day (pre-launch 26-28 Oct, then 29 Oct - 4 Nov 2026)
 
-Times are Sarajevo (CET, UTC+1). The EU changed clocks on 25 Oct and the US changes on Sun 1 Nov. Product Hunt's 12:01 am Pacific is 08:01 Sarajevo before 1 Nov and 09:01 from 1 Nov [F].
+Times are Sarajevo (CET, UTC+1). The EU changed clocks on 25 Oct and the US changes on Sun 1 Nov. Product Hunt's 12:01 am Pacific is 08:01 Sarajevo before 1 Nov and 09:01 from 1 Nov [F]. The public launch is **Thu 29 Oct at 21:00**, when makeborne.com's countdown ends. Today (`data/calendar.json`) has every post and action below with its exact time.
 
-### Day 1 - Monday 26 Oct (launch)
-- **Before any post:**
-  - confirm the three copy fixes and the "coming soon" labels are live, or hide the copy (section 11, ask 3)
-  - raise the AI daily limit for the day (D6)
-  - confirm support cover and a 4-hour reply target
-- **Submit TAAFT ($49) first.** Hold AlternativeTo, SaaSHub, the Product Hunt coming-soon page and every other listing until the TAAFT listing is live [F].
-- Ask engineering for asks 1-4 today (section 11).
+### Pre-launch - Mon 26 to Wed 28 Oct (days −3 to −1)
+- **Nothing public says "we launched"**, "live", "Wed 28 Oct" or "19:00". The teasers T3-T6 and Stories S1-S3 have the old time burned in and are never posted.
 - **Set up accounts:**
   - TikTok business account, Instagram professional account, YouTube channel and LinkedIn page
   - bios say "From $20/month + tax. Full refund until you use credits."
-  - Instagram DM keywords on the free tier
-- **Check the v9 Fly-over** (9:16). It must match today's home page and its end card must be true. If needed, add a 2 s card: "makeborne.com · from $20/mo + tax · full refund until you use credits". Then pin it on TikTok and Instagram.
-- **Founder posts:**
-  - LinkedIn "Day 1": what it is, who it's for (client work), price, the refund rule, one real build clip, "comment what you want built first"
-  - an X thread with a real-speed build, link in the first reply
-- 2 brand TikToks using fixture businesses: a site (R3) and a deck (D1).
-- Personal one-to-one messages to 30-50 people in the founder's network, asking for feedback and introductions to agency owners. No mass sends.
-- **Evening:**
-  - reply to every comment
-  - log "build mine" requests and consent in a private sheet (never in this repo)
-  - start the market-access checklist (owner's private notes)
-
-### Day 2 - Tuesday 27 Oct
-- **When the TAAFT listing is live:**
-  - free directories: AlternativeTo (as an alternative to Lovable, Gamma, Framer and Wix), SaaSHub, Microlaunch, Future Tools
-  - the Product Hunt coming-soon page, and start collecting followers there
+  - Instagram DM keywords (GO first, then SITE, DECK, CLIENT and BOOK) on the free tier of the DM tool
 - **Record 4-6 real-speed captures** at 2x UI scale:
   1. lead finder, then demo site, then review link
   2. client comment, then fix, then Approve, on a phone
   3. one brief to a site, a deck and a book
   4. PPTX chart edit
   5. GitHub export
-- The first comment-reply speedruns (R2), with consent.
-- Build a creator shortlist of 30. Check audience geography, quality and past disclosure habits.
 - **Verify the checkout path:** list every link in bios and posts and confirm none points to a Whop store page.
+- **Check the v9 Fly-over** (9:16). It must match today's home page and its end card must be true. If needed, add a 2 s card: "makeborne.com · from $20/mo + tax · full refund until you use credits".
+- **Teasers:** Tue 27 Oct 19:00 Story S4 (the new time, with the real countdown); Wed 28 Oct 12:00 Story S5 (something is hidden behind the countdown) and 21:00 T8 "Guess the build time", captioned "Makeborne opens tomorrow, Thu 29 Oct, 21:00 CET".
+- Set up the ad accounts from Bosnia with no money spent, and prepare the Bosnian press (the embargoed release goes out Thu 08:30; `content/bosnia-guerrilla-press.md`).
 
-### Day 3 - Wednesday 28 Oct
+### Day 1 - Thursday 29 Oct (launch at 21:00)
+- **Before any post:**
+  - confirm the three copy fixes and the "coming soon" labels are live, or hide the copy (section 11, ask 3)
+  - raise the AI daily limit for the day (D6)
+  - confirm support cover and a 4-hour reply target
+- **Launch sequence:** 20:59:45 start the phone recording of the countdown reaching zero; 21:00 T7 "We're live", only once makeborne.com is open; 21:01 the reveal Story; 21:15 founder LinkedIn "Day 1" (what it is, who it's for, price, the refund rule, one real build clip, "comment what you want built first") and an X thread with a real-speed build, link in the first reply; 21:30 the v9 Fly-over (V01), pinned on TikTok and Instagram.
+- 2 brand TikToks using fixture businesses: a site (R3) at 22:00 and a deck (D1) at 22:30.
+- **Submit TAAFT ($49) right after the 21:00 posts.** Hold AlternativeTo, SaaSHub, the Product Hunt coming-soon page and every other listing until the TAAFT listing is live [F].
+- **Attribution target day:** asks 1 and 4 should be live. If they are not, the "How did you hear" field ships today and creator spend waits. Ask engineering for asks 1-4 today (section 11).
+- The sample review link ("play the client"), if it is ready. Posts that point to it (C07, C12, V11) wait until it is live (ask 5).
+- Personal one-to-one messages to 30-50 people in the founder's network, asking for feedback and introductions to agency owners. No mass sends.
+- **Evening:**
+  - reply to every comment
+  - log "build mine" requests and consent in a private sheet (never in this repo)
+  - start the market-access checklist (owner's private notes)
+
+### Day 2 - Friday 30 Oct
+- **When the TAAFT listing is live:**
+  - free directories: AlternativeTo (as an alternative to Lovable, Gamma, Framer and Wix), SaaSHub, Microlaunch, Future Tools
+  - the Product Hunt coming-soon page, and start collecting followers there
+- The first comment-reply speedrun (R2), with consent.
+- Build a creator shortlist of 30. Check audience geography, quality and past disclosure habits.
+
+### Day 3 - Saturday 31 Oct
 - A freelancer POV (F2): the review link and Approve on a phone. Post it on TikTok, Reels and founder LinkedIn.
-- An Indie Hackers launch post ("Launched paid-only, no free tier, on purpose").
+- An Indie Hackers launch post ("Launched with paid plans only, on purpose").
 - An r/SideProject founder story, but only after the sidebar has been read by hand.
-- Draft `/press` and a local-language release (Bosnian, Croatian or Serbian).
+- Draft `/press` from the Bosnia press kit; the Bosnian, Croatian and Serbian releases already went out on launch day.
 - Join one agency community and contribute only, with no links.
 - The owner contacts the top 10 creators from their own accounts. This plan contacts no one.
 
-### Day 4 - Thursday 29 Oct
-- **Attribution target day.** Asks 1 and 4 should be live. If they are not, the "How did you hear" field ships today and creator spend waits.
-- The sample review link ("play the client"), if it is ready. Posts that point to it (C07, C12, V11) wait until it is live (ask 5).
+### Day 4 - Sunday 1 Nov (US clocks change)
 - The first Instagram carousel ("5 sites from one brief", real outputs only).
 - 2-3 customer video calls with the first payers. Fix whatever broke within 24 h.
-- Do not book Uneed yet: book after the 1 Nov images go/no-go, unless Uneed confirms the slot can be rescheduled [U] (line 6).
+- Do not book Uneed yet: book after the Wed 4 Nov images go/no-go, unless Uneed confirms the slot can be rescheduled [U] (line 6).
 
-### Day 5 - Friday 30 Oct
-- **Regional press pitch (the owner sends):** Netokracija, Bloomberg Adria, Startit and BiH business portals. Send the local-language release, 3 real outputs and a founder photo. Angle: "a Sarajevo studio launches an AI studio for client work and sells worldwide". Use Lovable only as contrast, never as "better than".
+### Day 5 - Monday 2 Nov
 - The first 48-hour read: re-cut every post above 3x the median with 2 new hooks.
 - A "Day 5: exact numbers" post on LinkedIn and X.
 - A deck proof (D3) and a lead-finder video (F4).
 
-### Day 6 - Saturday 31 Oct
-- Batch-film 10 videos for next week.
+### Day 6 - Tuesday 3 Nov
+- **Regional press pitch (the owner sends):** Netokracija, Bloomberg Adria, Startit and the other ex-Yugoslav tech and business outlets. Send the local-language release, 3 real outputs and a founder photo. Angle: "a Sarajevo studio launches an AI studio for client work and sells worldwide". Use Lovable only as contrast, never as "better than".
+- Batch-film the rest of next week's videos.
 - Sign the first creator agreements, with payment on the gate.
 - Write the images-beat Product Hunt copy: 3 taglines of 60 characters or fewer, the maker first comment and a gallery shot list.
 
-### Day 7 - Sunday 1 Nov (US clocks change)
-- "Day 7: exactly how many people paid" (P2) with real Whop numbers, refunds included and buyer data cropped. Post it on LinkedIn, X, TikTok and Indie Hackers.
-- **First Sunday review (90 minutes):**
+### Day 7 - Wednesday 4 Nov
+- "Day 7: exactly how many people paid" (P2) with real Whop numbers, refunds included and buyer data cropped. Post it on LinkedIn, X, TikTok, Reels and Indie Hackers.
+- **First weekly review (90 minutes):**
   - the scorecard (section 13)
   - keep the top 2 formats and retire the bottom half
-  - move the evening slot to 20:00-00:00 Sarajevo
+  - keep the TikTok evening slot inside 20:00-00:00 Sarajevo (21:30 from 1 Nov)
 - **Images go/no-go:** is it in production and passing 10 golden briefs? If so, pick the PH day and book Uneed for it: Tue-Thu with 400+ committed supporters, otherwise Sat-Sun [F/S].
 - Confirm the wave-1 lineup.
 
-**Week-1 targets (base):**
+**Launch-week targets (base, days 1-7):**
 - about 3,500 qualified visits
 - about 35 gross payers
 - ≥80% start a first build within 10 minutes (≥90% from week 2)
 - refunds ≤15%
-- attribution live by 29 Oct
+- attribution live on launch day (29 Oct)
 - 25-30 owned posts
 - 5 customer calls
 - 100+ Product Hunt coming-soon followers
@@ -392,7 +394,7 @@ Times are Sarajevo (CET, UTC+1). The EU changed clocks on 25 Oct and the US chan
 
 ## 8. Phases
 
-### Phase 1 - Find the format and land the first spike (days 8-30, 2-24 Nov)
+### Phase 1 - Find the format and land the first spike (days 8-27, 5-24 Nov)
 
 **Goals:**
 - find 2-3 house formats that produce at least 1 net payer per 10,000 views
@@ -437,7 +439,7 @@ Times are Sarajevo (CET, UTC+1). The EU changed clocks on 25 Oct and the US chan
 - attribution covers ≥90% of purchases
 - the sources at or under $50 CAC are named
 
-### Phase 2 - Proof, Black Friday, loops on (days 31-60, 25 Nov - 24 Dec)
+### Phase 2 - Proof, Black Friday, loops on (days 28-57, 25 Nov - 24 Dec)
 
 **Goals:**
 - 15%+ of new payers from loops (review page, badge, referral, affiliates)
@@ -468,7 +470,7 @@ Times are Sarajevo (CET, UTC+1). The EU changed clocks on 25 Oct and the US chan
 - at least one creator rehired on the scale rule
 - the consent banner live
 
-### Phase 3 - Holiday bank, January pipeline, scale what pays (days 61-90, 25 Dec - 23 Jan)
+### Phase 3 - Holiday bank, January pipeline, scale what pays (days 58-90, 25 Dec - 26 Jan)
 
 **Goals:**
 - base-case MRR of about $14k or better
@@ -487,7 +489,7 @@ Times are Sarajevo (CET, UTC+1). The EU changed clocks on 25 Oct and the US chan
 - **With consent live:** move winning Spark and partnership ads to purchase-optimised campaigns, and run small retargeting of consenting `/go/` visitors, from revenue only.
 - Scale Content Rewards and creator retainers under the reinvestment rule, at +20-30% steps.
 - **Add accounts only now, and only if earned:** the faceless outputs account or the freelancer-niche TikTok, once the editor is in place. A language clone only after a format has 3+ wins and output quality in that language is checked (D16).
-- **Sun 24 Jan - day-90 report and review:**
+- **Tue 26 Jan (day 90) - day-90 report and review:**
   - net payers, MRR, CAC by source, refunds, month-2 renewal, loop share
   - which surfaces to keep
   - the free-tier and preview decision for the next quarter
@@ -515,7 +517,7 @@ Times are Sarajevo (CET, UTC+1). The EU changed clocks on 25 Oct and the US chan
 | AI lead research | Jan | "Find the clients whose websites need you, and show up with a better one." | Live research, 3 pitch sites, one session | 2 |
 | Two-way GitHub sync | Any time | "Edit in Makeborne or in your code. Both stay in sync." | One X thread and one YouTube split-screen demo | 3 |
 | 30-day numbers (no feature) | Wed 25 Nov | "30 days of an AI studio from Sarajevo, every number in public." | Redacted Whop screenshots, the funnel, refunds | Press |
-| Day-90 report (no feature) | Sun 24 Jan | "90 days, every number." | The same, plus what failed | Press |
+| Day-90 report (no feature) | Tue 26 Jan | "90 days, every number." | The same, plus what failed | Press |
 
 ---
 
@@ -646,7 +648,7 @@ North star: weekly activated payers
 | 10 | 28 Dec - 3 Jan | 2,500 | 25 | 350 | 276 | $10.2k | 16% | 12-15 |
 | 11 | 4-10 Jan | 4,500 | 45 | 395 | 308 | $11.4k | 18% | 25-30 |
 | 12 | 11-17 Jan | 5,000 | 50 | 445 | 345 | $12.7k | 19% | 25-30 |
-| 13 | 18-24 Jan | 5,500 | 55 | 500 | 385 | $14.2k | 20% | 25-30 |
+| 13 | 18-26 Jan | 5,500 | 55 | 500 | 385 | $14.2k | 20% | 25-30 |
 
 **Every week:**
 - refunds ≤15%
@@ -676,7 +678,7 @@ North star: weekly activated payers
 
 ### 14.2 Scenarios
 
-Every figure below comes from the calculator (`python data/funnel_model.py`, the same model as the site's Funnel page), regenerated on 26 Oct 2026. MRR is read at day 91 (Sun 24 Jan, the day-90 review). Visits include loop-implied visits.
+Every figure below comes from the calculator (`python data/funnel_model.py`, the same model as the site's Funnel page), regenerated on 26 Oct 2026. MRR is read at model day 91 (Wed 27 Jan, the day after the day-90 review; model day 1 = the launch, Thu 29 Oct). Visits include loop-implied visits.
 
 | | Low | **Base (plan of record)** | Base, strict research inputs | High | Breakout ($1M) |
 |---|---|---|---|---|---|
@@ -689,10 +691,10 @@ Every figure below comes from the calculator (`python data/funnel_model.py`, the
 | Paid CAC | ~$1,271 | **~$48** | ~$103 (D4 never releases money) | ~$20 | ~$11 |
 | Gross new paid | 56 | **~497** | ~386 | ~1,429 | ~2,319 |
 | Active at day 91 | 41 | **~394** | ~304 | ~1,200 | ~2,027 |
-| **MRR, day 30 (24 Nov)** | ~$0.4k | **~$3.8k** | ~$3.4k | ~$8.9k | ~$8.6k |
-| **MRR, day 60 (24 Dec)** | ~$0.9k | **~$8.6k** | ~$7.1k | ~$23.2k | ~$31.7k |
-| **MRR, day 91 (24 Jan)** | ~$1.3k | **~$14.5k** | ~$11.2k | ~$47.1k | ~$83.4k |
-| **ARR run-rate, 24 Jan** | **~$16k** | **~$174k** | **~$134k** | **~$565k** | **~$1.00M** |
+| **MRR, day 30 (27 Nov)** | ~$0.4k | **~$3.8k** | ~$3.4k | ~$8.9k | ~$8.6k |
+| **MRR, day 60 (27 Dec)** | ~$0.9k | **~$8.6k** | ~$7.1k | ~$23.2k | ~$31.7k |
+| **MRR, day 91 (27 Jan)** | ~$1.3k | **~$14.5k** | ~$11.2k | ~$47.1k | ~$83.4k |
+| **ARR run-rate, 27 Jan** | **~$16k** | **~$174k** | **~$134k** | **~$565k** | **~$1.00M** |
 
 Breakout's organic visits were raised 2% on 26 Oct so it clears $1M in the calculator (before that it gave $0.99M; `data/funnel.json` consistency note 6).
 

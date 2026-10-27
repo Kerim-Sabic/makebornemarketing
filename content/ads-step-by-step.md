@@ -38,19 +38,32 @@ Rules that never bend [plan]:
 
 ---
 
-## ⚠ Plan needs a change: what the research found
+## What the research found, and what we do (settled 27 Oct)
 
-None of these change a card's money. Each needs an owner decision.
+None of these change a card's money. The owner settled all seven on 27 Oct; the last column is the rule.
 
-| # | Finding | Evidence | What it means for the plan |
+| # | Finding | Evidence | What we do |
 |---|---|---|---|
-| 1 | **Meta now charges "location fees" on top of the budget**: 2% for ads shown in the UK, 3% France/Italy/Spain, 5% Austria and Turkey, from 1 July 2026. They appear as a separate invoice line, outside the campaign budget. | Reuters via [Vaizle, 11 Mar 2026](https://insights.vaizle.com/news/meta-to-add-new-ad-fees-in-six-countries-starting-july-2026); [Digital Applied, 3 Jul 2026](https://digitalapplied.com/blog/meta-europe-location-fees-july-2026-advertiser-guide); Meta page cited by them: business.facebook.com/business/help/1238737454289085 (not opened) [S, unverified] | A01 targets the UK (GB) and Austria (AT). The card stays $96 of ad delivery, but the **charge will be slightly more**: typically under $1, at most $4.80 if every impression went to Austria [E]. Decide which line pays the fee (the reserve b9 is the obvious one). Log it separately. |
+| 1 | **Meta now charges "location fees" on top of the budget**: 2% for ads shown in the UK, 3% France/Italy/Spain, 5% Austria and Turkey, from 1 July 2026. They appear as a separate invoice line, outside the campaign budget. | Reuters via [Vaizle, 11 Mar 2026](https://insights.vaizle.com/news/meta-to-add-new-ad-fees-in-six-countries-starting-july-2026); [Digital Applied, 3 Jul 2026](https://digitalapplied.com/blog/meta-europe-location-fees-july-2026-advertiser-guide); Meta page cited by them: business.facebook.com/business/help/1238737454289085 (not opened) [S, unverified] | A01 targets the UK (GB) and Austria (AT). The card stays $96 of ad delivery, but the **charge will be slightly more**: typically under $1, at most $4.80 if every impression went to Austria [E]. **The reserve b9 pays the fee.** Log it as its own line in the spend log. |
 | 2 | **A Meta daily budget is an average, not a cap.** Meta may spend up to 75% more than the daily budget on a good day; the cap is 7 × daily budget per calendar week. | [Jon Loomer](https://www.jonloomer.com/updates-to-meta-ads-budgeting/) quoting Meta; [AdAdvisor, 16 Oct 2026](https://adadvisor.ai/blog/meta-ads-account-spending-limit) [S, unverified] | A01 at $24/day could spend up to $42 on one day, and a 4-day run that ends mid-week can go over $96. **Add a hard cap:** a campaign spending limit of **$96** (A01), **$104** (A02 if it falls back to Meta), **$50** (A03 on Meta). The money in the plan does not change; the cap only enforces it. |
-| 3 | **Instagram content with licensed music cannot run as a partnership ad.** | Meta's own creator page: "Content that includes licensed music cannot be run as a partnership ad, so be sure to use royalty-free music" [F, [creators.instagram.com](https://creators.instagram.com/earn-money/partnership-ads)] | The creator brief and contract (`content/outreach.md`) have a TikTok music rule but **no Instagram music rule**. Add: "Reels use original audio or Meta's royalty-free library only. No Instagram licensed music." Without it, a winning creator Reel can be impossible to boost. |
+| 3 | **Instagram content with licensed music cannot run as a partnership ad.** | Meta's own creator page: "Content that includes licensed music cannot be run as a partnership ad, so be sure to use royalty-free music" [F, [creators.instagram.com](https://creators.instagram.com/earn-money/partnership-ads)] | **Rule:** "Reels use original audio or Meta's royalty-free library only. No Instagram licensed music." It is in the creator brief and contract (`content/outreach.md`) and on Today (Mon 2 Nov). Without it, a winning creator Reel can be impossible to boost. |
 | 4 | **TikTok from Bosnia and Herzegovina is likely blocked.** BiH is **not** on either of TikTok's self-serve lists (Business Center creation: 79 countries, including Serbia, Croatia, Slovenia; ad account creation in Business Center: 59 countries). Both updated Nov 2025. | [F, TikTok: Business Center countries](https://ads.tiktok.com/resources/help/article/business-center-self-serve-creation-countries-and-regions); [F, TikTok: ad account creation in BC](https://ads.tiktok.com/resources/help/article/available-countries-and-regions-for-ad-account-creation-in-bc). The plain Ads Manager sign-up form asks for "Country or region" [F, [TikTok sign-up guide, Jun 2026](https://ads.tiktok.com/help/article/create-tiktok-ads-manager-account)], but whether BiH is in that list is [unverified]. Where you can target depends on the registration country [F, [TikTok locations page, Jun 2025](https://ads.tiktok.com/help/article/placements-available-locations?lang=en)]. | The plan's fallback already covers this (A02 runs on Meta at $26/day × 4 = $104). **Expect to use it.** Try TikTok today (1.12) so you know by Mon 9 Nov. No money change. |
 | 5 | **TikTok's manual campaign flow changed** ("upgraded Smart+ experience", updated Oct 2026). For a manual campaign you now choose **Budget strategy → Ad group budget**; the campaign-level budget option is for fully automated campaigns. | [F, TikTok help, Oct 2026](https://ads.tiktok.com/help/article/how-to-create-a-campaign-in-the-upgraded-smart-experience) | A02's step "Campaign budget: Daily $52" becomes "Ad group budget: Daily $52". Same money. Floors still apply: campaign more than $50/day, ad group more than $20/day [F, [TikTok budget page, Jul 2026](https://ads.tiktok.com/resources/help/article/budget)]. |
 | 6 | **TikTok needs DSA "payer" information** for any ad shown in the EU, EEA or Switzerland, or it will not publish. | [F, TikTok help, May 2025](https://ads.tiktok.com/help/article/fill-payer-information-in-tiktok-account-setup-eu-eea-switzerland?lang=en) | Add to A02's click path (done below). No money change. |
-| 7 | **BiH VAT may apply to ads bought from abroad** (reverse charge at 17% for a VAT-registered company receiving advertising services). | Consultancy commentary only: [Unija](https://unija.com/bs/primljene-usluge-od-pravnih-lica-iz-inostranstva/) [S, unverified] | Ask the company's accountant before 12 Nov. If it applies and is not deductible, the real cost of each card rises. No change to ad budgets without an owner decision. |
+| 7 | **BiH VAT may apply to ads bought from abroad** (reverse charge at 17% for a VAT-registered company receiving advertising services). | Consultancy commentary only: [Unija](https://unija.com/bs/primljene-usluge-od-pravnih-lica-iz-inostranstva/) [S, unverified] | **Ask the accountant by Fri 30 Oct** (question below). If it applies, the VAT is booked as a company tax cost, outside the $1,000; the ad budgets stay as they are. |
+
+**The accountant question (send by Fri 30 Oct):**
+```text
+Poštovani,
+
+ZORBY&CO D.O.O. će od novembra kupovati oglase od Mete (Facebook i Instagram) i možda TikToka, plaćene karticom firme u američkim dolarima. Ukupno do kraja decembra najviše oko 260 USD.
+
+1. Da li na te usluge iz inostranstva obračunavamo PDV kao primalac usluge (17%)?
+2. Ako da, možemo li ga odbiti kao ulazni porez?
+3. Koje dokumente (fakture, izvode) trebate od nas i do kada?
+
+Hvala.
+```
 
 **Checked and fine (no change needed):**
 - Meta ad accounts support **USD** (BAM is not supported) and the **Europe/Sarajevo** time zone (TZ_EUROPE_SARAJEVO) [F, [Meta currencies](https://developers.facebook.com/documentation/ads-commerce/marketing-api/currencies); [Meta time zones](https://developers.facebook.com/docs/marketing-api/reference/ad-account/timezone-ids/)].
@@ -290,7 +303,7 @@ You can usually advertise before verification finishes [unverified], but do it n
 - [ ] Branded content approval on (1.10)
 - [ ] Dataset created, **no code on the site** (1.11)
 - [ ] TikTok attempt done and result written down (1.12)
-- [ ] Accountant asked about BiH VAT on foreign ads (finding 7)
+- [ ] Accountant asked about BiH VAT on foreign ads (finding 7; the question is above)
 
 ---
 

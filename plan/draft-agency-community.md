@@ -1,5 +1,7 @@
 # Makeborne 90-day growth plan: the agency and freelancer wedge
 
+> **Superseded draft (kept for reference).** This was one of three competing drafts written on 26 Oct 2026 for a Mon 26 Oct launch. The plan of record is `plan/strategy.md`, and the dated plan is Today (`data/calendar.json`): the public launch is **Thu 29 Oct 2026 at 21:00 CET** (day 1) and day 90 is Tue 26 Jan 2027. Dates, day numbers and prices below are the draft's and are not updated.
+
 **Draft angle:** B2B wedge through agencies and freelancers. LinkedIn and X build-in-public, Reddit and communities, client review links as a viral loop, an affiliate program for agency owners and YouTubers, templates and case studies.
 
 **Window:** Monday 26 October 2026 (paid beta launch, day 0) to Sunday 24 January 2027 (day 90).

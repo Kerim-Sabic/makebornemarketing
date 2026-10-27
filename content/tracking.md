@@ -3,7 +3,7 @@
 > **Launch moved again (owner decision, 27 Oct 2026).** The public launch is **Thursday 29 October 2026 at 21:00 Sarajevo time** (CET, 20:00 UTC); makeborne.com counts down to that moment. Day 1 = Thu 29 Oct; Mon 26, Tue 27 and Wed 28 Oct are pre-launch days −3, −2 and −1. The launch week moved 1 more day (days 1-7 = 29 Oct - 4 Nov); launch day runs around 21:00 (T7 "We're live" at 21:00, V01 at 21:30). The countdown teasers T3-T6 and Stories S1-S3 have the old Wednesday time burned in and are not posted; "Guess the build time" (T8) is the Wed 28 Oct 21:00 post, and screen-recording Stories S4-S8 use the real countdown. Everything after the launch week keeps its date (ads A01 12-15 Nov and A02 3-4 Dec, creator waves, the no-boost window 20 Nov - 2 Dec, Black Friday, the 22 Nov and 20 Dec checkpoints). The 90 days run Thu 29 Oct 2026 - Tue 26 Jan 2027 (day 90, the day-90 review). `data/calendar.json` and the war room are the source of truth; dates and day numbers in the text below that disagree are from before the move.
 
 
-**Version:** 26 October 2026 (paid beta launch day). **Window:** 26 Oct 2026 to 24 Jan 2027.
+**Version:** 26 October 2026 (dates updated 27 Oct for the Thursday launch). **Window:** Thu 29 Oct 2026 (day 1) to Tue 26 Jan 2027 (day 90), after the pre-launch days Mon 26 - Wed 28 Oct.
 **Companion files:** `data/kpis.json` (targets and alerts), `data/funnel.json` (calculator inputs and formulas), `data/actuals.template.json` (daily log). The master plan is `plan/strategy.md`. Where this file and the plan disagree, the plan wins and this file should be corrected.
 
 **Labels:** [F] verified at the source, [S] secondary source, [V] vendor claim, [E] our estimate, [A] assumption to replace with week 1-2 data, [O] owner decision, [U] unverified.
@@ -336,14 +336,14 @@ Boost decision on posts at 48 h (qualification in §7.3); creator payouts on ver
 | Date | Checkpoint |
 |---|---|
 | Thu 29 Oct | Attribution live (asks 1 and 4). If not, survey fallback ships; paid lines wait |
-| Sun 1 Nov | First Sunday review; images go/no-go check |
+| Wed 4 Nov | First weekly review (day 7); images go/no-go check |
 | Mon 16 Nov | **Offer check on organic conversion** (§7.5) |
 | Mon 30 Nov | **Paid-CAC offer check** (§7.5) |
 | Sun 22 Nov | **Re-forecast gate:** cumulative gross paid under 100 / 100-200 / 200+ |
 | Wed 25 Nov | Day-30 public numbers post (redacted) |
 | About 6 Dec | Consent banner and server-side purchase events (§5) |
 | Sun 20 Dec | Breakout check: about 750 cumulative gross payers needed |
-| Sun 24 Jan | Day-90 report and review |
+| Tue 26 Jan | Day-90 report and review (day 90) |
 
 ---
 

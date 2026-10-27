@@ -3,7 +3,7 @@
 > **Launch moved again (owner decision, 27 Oct 2026).** The public launch is **Thursday 29 October 2026 at 21:00 Sarajevo time** (CET, 20:00 UTC); makeborne.com counts down to that moment. Day 1 = Thu 29 Oct; Mon 26, Tue 27 and Wed 28 Oct are pre-launch days −3, −2 and −1. The launch week moved 1 more day (days 1-7 = 29 Oct - 4 Nov); launch day runs around 21:00 (T7 "We're live" at 21:00, V01 at 21:30). The countdown teasers T3-T6 and Stories S1-S3 have the old Wednesday time burned in and are not posted; "Guess the build time" (T8) is the Wed 28 Oct 21:00 post, and screen-recording Stories S4-S8 use the real countdown. Everything after the launch week keeps its date (ads A01 12-15 Nov and A02 3-4 Dec, creator waves, the no-boost window 20 Nov - 2 Dec, Black Friday, the 22 Nov and 20 Dec checkpoints). The 90 days run Thu 29 Oct 2026 - Tue 26 Jan 2027 (day 90, the day-90 review). `data/calendar.json` and the war room are the source of truth; dates and day numbers in the text below that disagree are from before the move.
 
 
-**Written:** Monday 26 October 2026, day 1 of the paid beta. **Window:** weeks 1-13 (26 Oct 2026 - 24 Jan 2027), matching `plan/strategy.md`.
+**Written:** Monday 26 October 2026 (dates updated 27 Oct for the Thursday launch). **Window:** weeks 1-13 (Mon 26 Oct 2026 - Tue 26 Jan 2027; day 1 = Thu 29 Oct, day 90 = Tue 26 Jan), matching `plan/strategy.md`.
 **Machine-readable version:** `data/videos.json` (one object per video, same IDs). This file is generated from the same data, so the two always agree.
 **Status:** plan only. Nothing here has been filmed, posted, paid for or sent. Creator contacts, payments and every post are the owner's or founder's call.
 
@@ -63,21 +63,23 @@ These come from the master plan (§4.4 copy hygiene, §5.5, §9, §16) and the r
 
 ## 2. Launch week: what to film and post, day by day
 
-Times are Sarajevo (CET). Brand TikTok posts at about 13:00 and 21:00 (move the evening slot to 20:00-00:00 from Sun 1 Nov, when US clocks change); LinkedIn at 16:00-17:00. Each P0 master is re-edited natively for Reels and Shorts, so the 10 P0s plus re-edits and the comment-reply episodes give the plan's 25-30 owned posts for the week.
+Times are Sarajevo (CET). On launch night the TikToks go out between 21:01 and 22:30. After that, brand TikTok posts at about 13:00 and 21:30 (the evening slot sits in 20:00-00:00 from Sun 1 Nov, when US clocks change); LinkedIn at 09:30. Each P0 master is re-edited natively for Reels and Shorts, so the 10 P0s plus re-edits and the comment-reply episodes give the plan's 25-30 owned posts for the week.
 
 | Day | Film or edit | Post | Video |
 |---|---|---|---|
-| **Mon 26 Oct** (day 1) | Add the end card and hook text to the v9 Fly-over; record the bakery site build and the deck build; founder Day 1 to camera | Pin V01 on TikTok and Instagram; V02 and V03 as the two brand TikToks (+ Reels/Shorts re-edits); V08 on LinkedIn and X | V01, V02, V03, V08 |
-| **Tue 27 Oct** | The plan's 4-6 real-speed captures at 2x UI scale: lead finder → demo site → review link; client comment → fix → Approve on a phone; one brief → site, deck, book; PPTX chart edit; GitHub export | First comment-reply speedrun (with consent); one-brief-three-deliverables | V04 (episode 1), V10 |
-| **Wed 28 Oct** | Cut the POV from Tuesday's phone capture | Freelancer POV on TikTok, Reels and founder LinkedIn | V05 |
-| **Thu 29 Oct** | Batch-film day (8-10 videos): comment-reply episodes 2-4, V30 change-one-thing, V16 carousel frames | V04 episodes as requests come in | V04 |
-| **Fri 30 Oct** | — | Deck proof and lead-finder video; LinkedIn/X "Day 5: exact numbers" text post | V06, V07 |
-| **Sat 31 Oct** | Batch-film 10 videos for week 2 (V11-V16, V18, V21, V29, V44) | — | — |
-| **Sun 1 Nov** (day 7) | Founder Day 7 with real Whop numbers, refunds included, buyer data cropped | LinkedIn, X, TikTok, Indie Hackers | V09 |
+| **Tue 27 Oct** (pre-launch −2) | The plan's 4-6 real-speed captures at 2x UI scale: lead finder → demo site → review link; client comment → fix → Approve on a phone; one brief → site, deck, book; PPTX chart edit; GitHub export | Story S4 (the new time, 19:00) | — |
+| **Wed 28 Oct** (pre-launch −1) | Add the end card and hook text to the v9 Fly-over; record the bakery site build and the deck build; founder Day 1 to camera; edit V02, V03 and V08 | T8 "Guess the build time" at 21:00 (already rendered; TikTok 21:05, Shorts 21:10) | T8 |
+| **Thu 29 Oct** (day 1, launch 21:00) | Cut the POV from the phone capture (V05) | T7 "We're live" at 21:00; pin V01 (21:30) on TikTok and Instagram; V02 (22:00) and V03 (22:30) as the two brand TikToks (+ Reels/Shorts re-edits of V01); V08 on LinkedIn and C08 on X at 21:15 | T7, V01, V02, V03, V08 |
+| **Fri 30 Oct** (day 2) | — | First comment-reply speedrun (with consent); V02 re-edits for Reels and Shorts | V04 (episode 1) |
+| **Sat 31 Oct** (day 3) | — | Freelancer POV on TikTok, Reels and founder LinkedIn; the r/SideProject story with V10 | V05, V10 |
+| **Sun 1 Nov** (day 4) | — | One-brief-three-deliverables on TikTok and Shorts | V10 |
+| **Mon 2 Nov** (day 5) | Film V44 and V11 (they post on Tuesday); record next week's videos | Deck proof and lead-finder video; LinkedIn/X "Day 5: exact numbers" | V06, V07 |
+| **Tue 3 Nov** (day 6) | Batch-edit week 2 (V04, V13-V16, V18, V30) | "Who's behind this?" on TikTok; V11 on LinkedIn; V04 episode 2 | V44, V11, V04 |
+| **Wed 4 Nov** (day 7) | Founder Day 7 with real Whop numbers, refunds included, buyer data cropped | LinkedIn, X, TikTok, Reels, Indie Hackers | V09 |
 
 **P0 order of priority if time runs short:** V02, V05, V04, V01, V08, V09, V03, V06, V07, V10. The first three test the two strongest formats (speedrun and client-work POV) and the series that feeds itself.
 
-**Sunday review (1 Nov):** keep the top 2 formats, re-cut every post above 3x the account median with 2 new hooks, retire the bottom half (strategy §7, day 7). Boost candidates (`b5`) qualify only from 9 Nov and only with a tracked sale.
+**First weekly review (Wed 4 Nov, day 7):** keep the top 2 formats, re-cut every post above 3x the account median with 2 new hooks, retire the bottom half (strategy §7, day 7). Boost candidates (`b5`) qualify only from 9 Nov and only with a tracked sale.
 
 
 ## 3. Launch week: the 10 P0 videos, specs
@@ -797,7 +799,7 @@ Within each format, live videos come first (by week), then beat videos, which mu
 
 | ID | Title | Pri | Week | Tag |
 |---|---|---|---|---|
-| V11 | Founder: why there's no free plan | P1 | 2 | `live` |
+| V11 | Founder: why paid plans only | P1 | 2 | `live` |
 | V31 | Founder Day 14: what broke this week | P1 | 2 | `live` |
 | V44 | Who's behind this? A small studio in Sarajevo | P1 | 2 | `live` |
 | V45 | I answered the first 100 support tickets myself. The top 3 questions. | P2 | 4 | `live` |
@@ -805,25 +807,25 @@ Within each format, live videos come first (by week), then beat videos, which mu
 | V43 | Founder Day 90: every number, including what failed | P1 | 13 | `live` |
 | V54 | We're on Product Hunt today: the real thing, no upvote ask | P1 | 3 | `beat:images` |
 
-#### V11 · Founder: why there's no free plan
+#### V11 · Founder: why paid plans only
 
 `founder` · **P1** · week 2 (2-8 Nov) · `live` · icp1 · lane A · 50 s · effort low
 
 **Platforms:** LinkedIn, X, TikTok, Instagram Reels
 
-**Hook (first 2 s):** "Everyone said 'add a free plan'. Here's why I didn't."  
+**Hook (first 2 s):** "Everyone said 'give it away first'. Here's why I didn't."  
 *Visual:* Frame 0: founder to camera, pricing page on the laptop behind, the three plan cards readable.
 
 | Time | Picture | On screen | Voice-over |
 |---|---|---|---|
-| 0-2s | Founder to camera | Everyone said 'add a free plan'. | Everyone told me to add a free plan. |
-| 2-15s | Founder; cut to the pricing page | Every build costs real money. | Every build costs us real money, so free users would be paid for by paying ones. |
+| 0-2s | Founder to camera | Everyone said 'give it away first'. | Everyone told me to give it away first. |
+| 2-15s | Founder; cut to the pricing page | Every build costs real money. | Every build costs us real money, so people who don't pay would be paid for by the ones who do. |
 | 15-30s | Screen: the most a request can cost, shown before Send | You see the max cost before it runs. | Instead you see the most a request can cost before it starts. |
 | 30-42s | Screen: sample review link, the examples gallery or an uncut build | Watch it first. Play the client. | Watch a full uncut build first, or open our sample review link and play the client. |
 | 42-50s | Founder | Full refund until you use credits. | And if you don't use a credit, you get every cent back. |
 
 - **CTA:** Link in first comment to the uncut build page.
-- **Caption:** No free tier, on purpose. Watch the uncut build, play the client on our sample review link, and if you don't use a credit you get every cent back.
+- **Caption:** Paid plans only, on purpose. Watch the uncut build, play the client on our sample review link (once it is live), and if you don't use a credit you get every cent back.
 - **Hashtags:** #buildinpublic #saas #pricing #startup
 - **Sound:** Founder voice, no music or a very low bed; LinkedIn plays muted by default, so burned-in captions carry it.
 - **Shot list:** Face to camera; Pricing page; Cost-before-send UI; Uncut build or sample review link
@@ -943,7 +945,7 @@ Within each format, live videos come first (by week), then beat videos, which mu
 
 #### V43 · Founder Day 90: every number, including what failed
 
-`founder` · **P1** · week 13 (18-24 Jan) · `live` · icp1 · lane A · 120 s · effort med
+`founder` · **P1** · week 13 (18-26 Jan) · `live` · icp1 · lane A · 120 s · effort med
 
 **Platforms:** LinkedIn, X, YouTube, TikTok
 
@@ -964,7 +966,7 @@ Within each format, live videos come first (by week), then beat videos, which mu
 - **Shot list:** Face to camera; Deck
 - **Assets needed:** Day-90 report
 - **Reuse from the films folder:** none (new capture)
-- **Checks before posting:** Sun 24 Jan 2027 · Compare honestly to the base case (~$14.5k MRR at day 91, calculator; $14.2k in the weekly table) and to $1M ARR
+- **Checks before posting:** Tue 26 Jan 2027 · Compare honestly to the base case (~$14.5k MRR at day 91, calculator; $14.2k in the weekly table) and to $1M ARR
 - **Tracking:** `makeborne.com/go/li-v43`, `makeborne.com/go/tt-v43`, `makeborne.com/go/x-v43`, `makeborne.com/go/yt-v43`; `utm_campaign=day90`, `utm_content=<surface>-v43-p8`
 - **Why it works:** Day-90 report beat (strategy §9); press angle.
 
@@ -1978,11 +1980,11 @@ Whop Content Rewards opens only after a source shows CAC ≤$50 on 3+ payers and
 
 | Episode | Date (Sarajevo) | Video | Hook | Surfaces |
 |---|---|---|---|---|
-| Day 1: we launched | Mon 26 Oct | V08 | "We launched today. Comment what you want built first." | LinkedIn, TikTok, Reels, X |
-| Day 5: exact numbers | Fri 30 Oct | (text post per plan; a 30 s face-cam version is optional) | "Day 5: exact numbers." | LinkedIn, X |
-| Day 7: who paid | Sun 1 Nov | V09 | "Day 7: here's exactly how many people paid." | LinkedIn, X, TikTok, IH |
+| Day 1: we launched | Thu 29 Oct, 21:15 | V08 | "We launched today. Comment what you want built first." | LinkedIn, TikTok, Reels, X |
+| Day 5: exact numbers | Mon 2 Nov | (text post per plan; a 30 s face-cam version is optional) | "Day 5: exact numbers." | LinkedIn, X |
+| Day 7: who paid | Wed 4 Nov | V09 | "Day 7: here's exactly how many people paid." | LinkedIn, X, TikTok, IH |
 | Who's behind this | week 2 | V44 | "You're paying a company in Sarajevo. Here's who we are." | TikTok, Reels, LinkedIn |
-| No free plan, on purpose | week 2 | V11 | "Everyone said 'add a free plan'. Here's why I didn't." | LinkedIn, X, TikTok |
+| Paid plans only, on purpose | week 2 | V11 | "Everyone said 'give it away first'. Here's why I didn't." | LinkedIn, X, TikTok |
 | Your questions | week 2 | V21 | "You asked if it's just templates. Let's check." | TikTok, Reels, LinkedIn |
 | Day 14: what broke | Sun 8 Nov | V31 | "Day 14: three things broke. Here's what I did." | LinkedIn, X, TikTok |
 | Day 21: the offer check | Mon 16 Nov | (new episode from V31's template) | "Day 21: are people buying? The honest answer." | LinkedIn, X |
@@ -1990,7 +1992,7 @@ Whop Content Rewards opens only after a source shows CAC ≤$50 on 3+ payers and
 | Images launch day | images beat | V54 | "Today Makeborne makes the images too." | X, LinkedIn |
 | Day 30: every number | Wed 25 Nov | V39 | "30 days, $1,000, every number." | LinkedIn, X, TikTok, Shorts |
 | Day 60 note | around Thu 24 Dec | (template from V39) | "Day 60: what the holidays did to sales." | LinkedIn, X |
-| Day 90: including what failed | Sun 24 Jan | V43 | "90 days. Every number, including what failed." | LinkedIn, X, YouTube, TikTok |
+| Day 90: including what failed | Tue 26 Jan | V43 | "90 days. Every number, including what failed." | LinkedIn, X, YouTube, TikTok |
 
 Cadence between numbered episodes: one face-to-camera a week on LinkedIn and TikTok (the plan's 15% "Day N" share of video output), filmed on the Monday or Thursday batch day.
 

@@ -17,7 +17,7 @@
 1. **Say "one brief".** Every real output came from a 500-1,000-character brief, so never describe the input as shorter than that.
 2. **Only live features.** Websites on a Makeborne address, books, decks, client review links, the basic CRM and lead finder, manual GitHub export, the projects library. Custom domains, credit top-ups, automatic GitHub sync, agency tools and AI lead research: "coming soon", no date.
 3. **Banned words and claims:** "free", "trial", vendor or AI-model names, "better than X". Say "paid plans only, on purpose" and "full refund if you haven't used your credits". (This matches the live terms on makeborne.com: a payment is refundable while none of its credits are used [F, makeborne.com/billing/terms].)
-4. **Do not quote credit counts or yearly prices** until the owner fixes a conflict (owner decisions, item 1).
+4. **Prices exactly as the plans page shows them at launch:** Create $20 a month (300 credits), Studio $49 (750 credits), Scale $99 (1,550 credits). Yearly is 20% off: $192, $470.40 and $950.40 a year. Any tax or checkout fee is shown by Whop before payment. Unused plan credits carry over for two months. Check makeborne.com/billing once at 21:03 on launch night; if anything differs, stop quoting numbers and tell Codex.
 5. **The 9 hidden countdown designs are not Makeborne output.** "Something is hidden behind our countdown" is fine. Never say or imply Makeborne made them. Never put them in a header, gallery or Product Hunt image.
 6. **Build times are real and from test runs:** website Crux Yard 2:07, deck 0:43, book 1:23 (invented businesses, 555 phone numbers). Show the timer, or write "sped up" on screen. T8 shows its own build and answer; don't re-caption it with another time.
 7. **Never post T3-T6** or anything that says "Wed 28 Oct" or "19:00" [war room].
@@ -29,7 +29,7 @@
 
 ## 1. Day-by-day schedule
 
-How to read it: each row is one action at one time. "Copy" names the block in this file. The same rows are in `hype-actions.json`.
+How to read it: each row is one action at one time. "Copy" names the block in this file. The same rows are on Today in the war room, with copy buttons.
 
 ### The Instagram Stories plan (countdown sticker and hide-and-seek)
 
@@ -53,7 +53,7 @@ Thu 29 Oct, 08:00 (founder):
 3. "Coming soon" labels and the copy fixes are live, or that copy is hidden [war room].
 4. Open each `/go/` code you will use tonight in a private window. Each must land on makeborne.com with its tags. Any that fail: use the long URL printed in this file.
 5. Drafts ready: X thread (9 parts, media attached), LinkedIn V08, Threads, V01 uploaded.
-6. Ask the owner the two decisions for tonight: waitlist email at 21:00 and the AI daily cap.
+6. Check with Codex: sales open at 21:00 and the launch-weekend AI limit is set (decision 2). The waitlist invite is ready for 21:05 (decision 3).
 
 ### Tue 27 Oct: the new date (pre-launch −2)
 
@@ -198,7 +198,7 @@ Link sticker: makeborne.com
 | CET | Platform | Who | Do this | Copy | Link |
 |---|---|---|---|---|---|
 | 08:00 | Ops | Founder | Launch checklist (playbook §1, Thu 08:00): countdown, support inbox, copy fixes and 'coming soon' labels, /go/ test in a private window (if a /go/ link fails, use the long URLs in this file), drafts loaded for X, LinkedIn, Threads. | — | — |
-| 08:30 | Ops | Owner | Owner decisions for tonight: (1) say 'send invites' for the 21:00 waitlist email or not; (2) the daily AI limit for 29 Oct-1 Nov (owner decision, playbook §7 item 2; numbers in the owner's private notes). | — | — |
+| 08:30 | Ops | Owner | Confirm with Codex: sales open at 21:00, and the daily AI limit is raised for 29 Oct-1 Nov (decision 2; numbers in the owner's private notes). The waitlist invite goes out at 21:05 (decision 3). | — | — |
 | 09:15 | Instagram Stories | Founder | Story S6 'Today, 21:00' with countdown sticker [war room]. | — | `makeborne.com (war room UTM ig-s6)` |
 | 10:00 | Engagement | Founder | Engagement block, no links anywhere: X 20 replies (10 at 14:00-15:00, 10 at 20:30-21:00), LinkedIn 15 comments on agency-owner and web-designer posts, Reddit 5 helpful comments in the subs you will post in, Product Hunt 3 thoughtful comments on today's launches, 1 useful answer in your agency community (no link). No LinkedIn post today until 21:15. | — | — |
 | 12:00 | X | Founder | 'Today' post with a 10 s countdown recording. No link needed. | `x-1029-today` (below) | — |
@@ -211,8 +211,9 @@ Link sticker: makeborne.com
 | 20:59 | Ops | Founder | At 20:59:45 start the phone screen recording of makeborne.com hitting zero (for S8). | — | — |
 | 21:00 | Instagram Reels | Founder | T7 'We're live' on Reels, only once makeborne.com is open signed out (TikTok 21:01, Shorts 21:02) [war room T7]. | — | `makeborne.com (war room UTMs ig-t7 / tt-t7 / yt-t7)` |
 | 21:01 | Instagram Stories | Founder | Story S8 'We're live' (the real reveal recording, 15 s, link sticker) [war room]. | — | `makeborne.com (war room UTM ig-s8)` |
+| 21:03 | Ops | Founder | Open makeborne.com/billing signed out: Create $20 / 300 credits, Studio $49 / 750, Scale $99 / 1,550, and the Yearly switch shows $192, $470.40 and $950.40. If anything differs, quote no numbers tonight and tell Codex (rule 4). | — | `https://makeborne.com/billing` |
 | 21:05 | Instagram Stories | Founder | Story C15 keyword CLIENT [war room]. | — | `makeborne.com/go/ig-c15-client` |
-| 21:05 | Email | Owner | Waitlist invite email, only if the owner said 'send invites'. Owner decision. | — | — |
+| 21:05 | Email | Owner | Waitlist invite from admin@makeborne.com, once makeborne.com is open signed out: say "send invites" (decision 3). | — | — |
 | 21:10 | Directories | Owner | Submit TAAFT first ($49, budget line b1, already allocated). Hold every other listing until it is live [war room]. **Cost $49.** | — | `makeborne.com/go/taaft` |
 | 21:15 | X | Founder | Launch thread C08: post all 9 parts as one thread (media per playbook §3.3). Pin post 1. [war room X C08] | `x-c08-1` (§3.3) | `makeborne.com/go/x-c08 \| fallback: https://makeborne.com/?utm_source=x&utm_medium=organic&utm_campaign=launch-2026-10&utm_content=x-c08-p1` |
 | 21:15 | LinkedIn | Founder | Launch post V08 with the 30-45 s real build clip. Link in the first comment. [war room LinkedIn V08] | `li-v08` (§4.1) | `makeborne.com/go/li-v08 \| fallback: https://makeborne.com/?utm_source=linkedin&utm_medium=organic&utm_campaign=launch-2026-10&utm_content=li-v08-p4` |
@@ -469,7 +470,7 @@ Body:
 ```text
 Da odmah kažem: ja sam osnivač, ovo je moj projekat.
 
-Zove se Makeborne. Napišete jedan kratak opis (brif), a on napravi gotovu web stranicu na Makeborne adresi, prezentaciju koja se otvara u PowerPointu (grafikoni se mogu uređivati) ili dizajniranu e-knjigu u PDF-u. Klijentu pošaljete link, on komentariše direktno na stranici bez pravljenja računa i klikne Odobri.
+Zove se Makeborne. Napišete jedan opis (brif), a on napravi gotovu web stranicu na Makeborne adresi, prezentaciju koja se otvara u PowerPointu (grafikoni se mogu uređivati) ili dizajniranu e-knjigu u PDF-u. Klijentu pošaljete link, on komentariše direktno na stranici bez pravljenja računa i klikne Odobri.
 
 Pravimo ga u Sarajevu, a prodajemo svuda. Lansirali smo ga u četvrtak, 29. oktobra.
 
@@ -1042,13 +1043,13 @@ First comment:
 The tool in the image is Makeborne, which I make: makeborne.com/go/li-c01
 ```
 
-**Sat 31 Oct to Fri 6 Nov:** war-room posts V05 (`li-f2-review-link` copy), C07, C37, V11, V09 (`li-day7-numbers`), C20, C29, with copy in `data/outreach.json` launchCopy.linkedin. One edit to make in V11 and `li-no-free-tier`: replace "no free plan" with "paid plans only, on purpose" (rule 3).
+**Sat 31 Oct to Fri 6 Nov:** war-room posts V05 (`li-f2-review-link` copy), C07, C37, V11, V09 (`li-day7-numbers`), C20, C29, with copy in `data/outreach.json` launchCopy.linkedin. V11 and `li-no-free-tier` say "paid plans only, on purpose" (rule 3).
 
 **Tue 3 Nov 12:00, Bosnian post** (same day as the regional press pitch; 2.5 hours after the 09:30 post [E]; also paste on your personal Facebook profile):
 ```text
 Prošle sedmice smo iz Sarajeva lansirali Makeborne.
 
-Napišete jedan kratak opis (brif), a Makeborne napravi gotovu web stranicu, prezentaciju koja se otvara u PowerPointu ili dizajniranu e-knjigu. Klijentu pošaljete link: komentariše direktno na stranici, bez pravljenja računa, i klikne Odobri.
+Napišete jedan opis (brif), a Makeborne napravi gotovu web stranicu, prezentaciju koja se otvara u PowerPointu ili dizajniranu e-knjigu. Klijentu pošaljete link: komentariše direktno na stranici, bez pravljenja računa, i klikne Odobri.
 
 Pravimo ga ovdje, a prodajemo cijelom svijetu. Paketi su od 20 dolara mjesečno, samo plaćeni, namjerno. Ako ne iskoristite kredite, dobijete puni povrat novca.
 
@@ -1112,10 +1113,10 @@ Product URL field: https://makeborne.com (no UTMs: Product Hunt rejects tracking
 5. **Media** (record in the Tue 3 Nov batch-film day): thumbnail 240×240, under 3 MB, static first frame; 2+ gallery images at 1270×760 (real outputs and real UI only); a YouTube video, not private, full URL [F]. Interactive demo encouraged; Arcade, Storylane and others are free for Product Hunt launches [F].
 6. **Text:** name only; tagline up to 60 characters; description up to 500; up to 3 tags; product URL with **no UTMs or shortened links** (Product Hunt rejects them) [F]. Taglines and descriptions: `data/outreach.json` launchCopy.productHunt.
 7. **First comment:** ready in advance (70% of Product of the Day, Week or Month winners had a maker first comment) [F]. Ask for feedback, not upvotes [F].
-8. **Offer:** a promo code needs offer, code and expiry date [F]. The PH100 bonus credits are an owner decision (item 5).
+8. **Offer:** PH100 (100 bonus credits on the first paid month) only if ga10 is live and tested by Fri 13 Nov (decision 5); otherwise none. Product Hunt needs the offer, the code and an expiry date [F].
 9. **Scheduling:** up to 1 month ahead [F]. Schedule 00:01 PST.
 10. **Launch day:** reply to every comment within 10 minutes; share on X, LinkedIn and Instagram asking for feedback; don't run any contest that rewards upvotes [F]. Don't suddenly post on Reddit or Indie Hackers on launch day if you haven't been active there; Product Hunt calls that spam [F].
-11. **Capacity:** the AI daily cap must be raised for the day (owner decision item 2) [repo].
+11. **Capacity:** raise the daily AI limit for the Product Hunt day, as for launch weekend (decision 2) [repo].
 
 ### 4.4 Hacker News (Show HN): skip in this window
 
@@ -1123,7 +1124,7 @@ Show HN asks that people can try the project, ideally without sign-ups or email 
 
 ### 4.5 Indie Hackers
 
-**Steps:** personal account; launch post Sat 31 Oct 16:00 [war room IH C12]; Day 7 update Wed 4 Nov 16:00 and weekly update Sun 8 Nov 16:00 [war room]; reply to every comment the same day. Rules page could not be read (403) [U]: link once, at the end, never a link-only post [repo]. The credit counts and "Yearly is 20% off" lines in the repo version are removed here (owner decisions item 1).
+**Steps:** personal account; launch post Sat 31 Oct 16:00 [war room IH C12]; Day 7 update Wed 4 Nov 16:00 and weekly update Sun 8 Nov 16:00 [war room]; reply to every comment the same day. Rules page could not be read (403) [U]: link once, at the end, never a link-only post [repo]. Prices and credits as in rule 4.
 
 Title:
 ```text
@@ -1144,7 +1145,7 @@ Hi IH. I'm {founderFirstName}, and on Thursday I launched Makeborne.
 2. The maximum cost of every request, shown before it starts.
 3. A full refund if you haven't used your credits.
 
-**Pricing.** $20 / $49 / $99 a month.
+**Pricing.** $20 / $49 / $99 a month for 300 / 750 / 1,550 credits. Yearly is 20% off. Unused credits carry over for two months.
 
 **The $1,000.** $79 on two launch directories, $530 on small creator tests that only get paid once our attribution works, $200 to boost posts that have already sold something, and $191 for DM tooling, payout fees and a reserve. Everything after that has to come from revenue.
 
@@ -1203,7 +1204,7 @@ Plans start at $20 a month. If you do client work, I'd love your honest feedback
 ```text
 Pozdrav! Ja sam osnivač Makeborne-a i admin je odobrio ovu objavu.
 
-U Sarajevu smo napravili alat koji od jednog kratkog opisa (brifa) napravi gotovu web stranicu, prezentaciju ili e-knjigu. Web stranicu klijent odobri preko linka, bez pravljenja računa.
+U Sarajevu smo napravili alat koji od jednog opisa (brifa) napravi gotovu web stranicu, prezentaciju ili e-knjigu. Web stranicu klijent odobri preko linka, bez pravljenja računa.
 
 Paketi su od 20 dolara mjesečno. Ako radite za klijente, rado bih čuo vaše mišljenje, posebno kritike: [link]
 ```
@@ -1224,14 +1225,14 @@ Paketi su od 20 dolara mjesečno. Ako radite za klijente, rado bih čuo vaše mi
 
 Optional Wed 28 Oct personal Facebook post:
 ```text
-Sutra u 21:00 lansiramo Makeborne. Od jednog kratkog opisa (brifa) napravi gotovu web stranicu, prezentaciju ili e-knjigu.
+Sutra u 21:00 lansiramo Makeborne. Od jednog opisa (brifa) napravi gotovu web stranicu, prezentaciju ili e-knjigu.
 
 Do tada: na makeborne.com se iza odbrojavanja nešto krije. Pomjerajte kursor (na mobitelu: pritisnite, držite i povucite).
 ```
 
 One-to-one message, Bosnian and English:
 ```text
-Ćao [ime], večeras u 21:00 sam lansirao Makeborne, projekat na kojem radim. Od jednog kratkog opisa napravi web stranicu, prezentaciju ili e-knjigu.
+Ćao [ime], večeras u 21:00 sam lansirao Makeborne, projekat na kojem radim. Od jednog opisa (brifa) napravi web stranicu, prezentaciju ili e-knjigu.
 
 Ne tražim ništa osim iskrenog mišljenja: pogledaj kad stigneš i reci mi šta ti je prvo zasmetalo. makeborne.com
 ```
@@ -1249,7 +1250,7 @@ I'm not asking for anything except an honest opinion: have a look when you can a
 - Don't post T3-T6 or anything with "Wed 28 Oct" or "19:00" [war room].
 - Don't use the hidden countdown designs or the v14 stills as Makeborne output.
 - Don't say "free", "trial", vendor or model names, don't describe the brief as shorter than it was, "better than X", or anything about custom domains, top-ups, auto-sync, agency tools or AI lead research except "coming soon".
-- Don't quote credit counts or yearly prices (owner decisions item 1).
+- Don't quote a price, credit count or yearly figure other than the ones in rule 4.
 - Don't ask for upvotes, likes, reposts or follows. Don't run contests for engagement.
 - Don't use alt accounts, friends on cue, pods or paid engagement.
 - Don't post customer names, emails or real client data. Crop Whop screenshots.
@@ -1323,16 +1324,16 @@ I'm not asking for anything except an honest opinion: have a look when you can a
 
 ---
 
-## 7. Owner decisions
+## 7. Decisions (settled by the owner, 27 Oct 2026)
 
-1. **Credit counts and yearly prices:** confirm them before anyone quotes them in public (details in the owner's private notes). Until then this playbook names no credit counts and no yearly prices. Cost $0.
-2. **AI capacity for launch days (optional):** decide whether to raise the daily AI limit for Thu 29 Oct to Sun 1 Nov (cost and numbers in the owner's private notes). If it is not raised, failed builds on launch night become public replies. Same question again for the Product Hunt day.
-3. **Waitlist email at Thu 21:00:** say "send invites" or not. Cost $0.
-4. **Day-N numbers in public** (Mon 2 Nov, Wed 4 Nov, Sun 8 Nov, Reddit and Indie Hackers posts): approve the numbers each time.
-5. **Product Hunt:** no launch on 29 Oct; Sun 15 Nov 09:01 CET if images pass on 4 Nov (Uneed $30, line b6, already allocated). The PH100 offer (100 bonus credits) costs about $3 of AI per redeemer at full use [repo] and is not in the $1,000: decide yes or no before the launch page is built.
-6. **War-room wording:** C12, V11 and the repo's `li-no-free-tier` say "No free tier"; the truth rules ban "free". Approve the swap to "Paid plans only, on purpose".
-7. **BetaList** is paid with unlisted prices: skipped. Say so if you want it priced.
-8. **Regional press date:** the war room has Tue 3 Nov; `where-to-post.md` still says Fri 30 Oct. This playbook follows the war room.
+1. **Prices and credits:** the launch numbers in rule 4. Check them once on makeborne.com/billing at 21:03 on launch night.
+2. **AI capacity:** the daily AI limit is raised for Thu 29 Oct to Sun 1 Nov and goes back on Mon 2 Nov (numbers in the owner's private notes). Codex sets it with the launch. Same again for the Product Hunt day.
+3. **Waitlist email:** it goes out at 21:05 on Thu 29 Oct from admin@makeborne.com, once makeborne.com is open signed out. The owner gives the word ("send invites") at that moment.
+4. **Day-N numbers in public** (Mon 2 Nov, Wed 4 Nov, Sun 8 Nov, the Reddit and Indie Hackers posts): post only numbers the owner has checked against the admin page that day.
+5. **Product Hunt:** no launch on 29 Oct. Sun 15 Nov 09:01 CET if images pass on Wed 4 Nov (Uneed $30, line b6, already allocated). Tue 17 Nov only with 400+ committed supporters. PH100 (100 bonus credits on the first paid month, D12) runs only if the per-wave code feature (ga10) is live and tested by Fri 13 Nov; otherwise there is no code, and the PH100 line comes out of every template (cost in the owner's private notes).
+6. **Wording:** "Paid plans only, on purpose" replaces "No free tier" everywhere in the war room (rule 3).
+7. **BetaList:** skipped (paid, prices not shown).
+8. **Regional press date:** Tue 3 Nov, as in the war room and `where-to-post.md`.
 
 ---
 

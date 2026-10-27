@@ -1,5 +1,7 @@
 # Makeborne 90-day growth plan: event-driven launch waves
 
+> **Superseded draft (kept for reference).** This was one of three competing drafts written on 26 Oct 2026 for a Mon 26 Oct launch. The plan of record is `plan/strategy.md`, and the dated plan is Today (`data/calendar.json`): the public launch is **Thu 29 Oct 2026 at 21:00 CET** (day 1) and day 90 is Tue 26 Jan 2027. Dates, day numbers and prices below are the draft's and are not updated.
+
 **Draft angle:** growth through a calendar of news beats. Each capability that is "coming in days" gets its own launch wave: Product Hunt launches, a Show HN only when there is a fair way to try the product, directories, newsletters, a press story ("a founder in Sarajevo takes on Lovable"), and small paid boosts for posts that have already won organically.
 
 **Window:** Monday 26 October 2026 (paid beta launch, day 0) to Sunday 24 January 2027 (day 90).

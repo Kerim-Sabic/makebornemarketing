@@ -3,7 +3,7 @@
 > **Launch moved again (owner decision, 27 Oct 2026).** The public launch is **Thursday 29 October 2026 at 21:00 Sarajevo time** (CET, 20:00 UTC); makeborne.com counts down to that moment. Day 1 = Thu 29 Oct; Mon 26, Tue 27 and Wed 28 Oct are pre-launch days −3, −2 and −1. The launch week moved 1 more day (days 1-7 = 29 Oct - 4 Nov); launch day runs around 21:00 (T7 "We're live" at 21:00, V01 at 21:30). The countdown teasers T3-T6 and Stories S1-S3 have the old Wednesday time burned in and are not posted; "Guess the build time" (T8) is the Wed 28 Oct 21:00 post, and screen-recording Stories S4-S8 use the real countdown. Everything after the launch week keeps its date (ads A01 12-15 Nov and A02 3-4 Dec, creator waves, the no-boost window 20 Nov - 2 Dec, Black Friday, the 22 Nov and 20 Dec checkpoints). The 90 days run Thu 29 Oct 2026 - Tue 26 Jan 2027 (day 90, the day-90 review). `data/calendar.json` and the war room are the source of truth; dates and day numbers in the text below that disagree are from before the move.
 
 
-**Written:** Monday 26 October 2026 (launch day). **Window:** 26 Oct 2026 to 24 Jan 2027.
+**Written:** Monday 26 October 2026 (dates updated 27 Oct for the Thursday launch). **Window:** Thu 29 Oct 2026 (day 1) to Tue 26 Jan 2027 (day 90), after the pre-launch days Mon 26 - Wed 28 Oct.
 **Machine-readable twin:** `data/ads.json`.
 **Plan of record:** `plan/strategy.md` §6 (the $1,000) and `content/tracking.md` §§1, 5, 7 (links, consent, kill and scale). Where this file and the plan disagree, the plan wins and this file should be corrected. Copy ids come from `content/ad-copy.md`; post ids from `data/videos.json` and `data/creatives.json`.
 
@@ -173,7 +173,7 @@ When several qualify, rank by tracked net sales, then by `/go/` clicks per 1,000
 
 **Campaign**
 2. TikTok Ads Manager → **Campaign → Create** → choose a **manual** campaign (not Smart+) → objective **Traffic**.
-3. Campaign name: `mb-tt-traffic-<slot>-<yyyymmdd>`. Campaign budget: **Daily $52** (TikTok's campaign floor is more than $50 a day; $50.00 may be refused [F, ads.tiktok.com/resources/help/article/budget, updated Jul 2026]). Campaign budget optimisation: off.
+3. Campaign name: `mb-tt-traffic-<slot>-<yyyymmdd>`. Budget strategy: **Ad group budget**; ad group budget **Daily $52** (TikTok's manual flow changed in Oct 2026: a manual campaign now sets its budget on the ad group, see `content/ads-step-by-step.md` finding 5). The floor is more than $50 a day; $50.00 may be refused [F, ads.tiktok.com/resources/help/article/budget, updated Jul 2026]. If an older screen still shows a campaign budget switch, leave campaign budget optimisation off.
 
 **Ad group**
 4. Ad group name: `t1en-broad-tiktokonly-52d`.
@@ -240,7 +240,7 @@ Why:
 | Books (V15, V27, C23, C26) | B1-M1, B2-M1 | B1-T1, B2-T1 |
 | Site speedruns (V02, V04, V16) | S1-M1 | S1-T1 / S1-T2 |
 
-A5 (the "no free tier" contrarian line) never runs paid (ad-copy §8).
+The P3 contrarian line ("Paid plans only, on purpose") never runs paid (ad-copy §8).
 
 ### 4.8 Meta Advantage+ sales campaigns: later, not now
 
@@ -322,7 +322,7 @@ Sources: seodata.dev keyword pages read 26 Oct 2026 (gamma-alternative, ai-prese
 | 6 | 30 Nov-6 Dec | **Slot B ($104 or $96) from Thu 3 Dec** | The best post with a tracked sale from weeks 3-5 (wave-1 second videos are prime candidates) on the other platform | **Mon 30 Nov paid-CAC check**; consent banner target about 6 Dec |
 | 7-8 | 7-20 Dec | Reserve b9 (c) only | Extend slot B's ad by +20% steps if CAC ≤ $50 over 3+ net payers | Scale rule |
 | 9-10 | 21 Dec-3 Jan | $0 | Half cadence; bank January creatives | — |
-| 11-13 | 4-24 Jan | From revenue (D4) | With consent and CAPI live: purchase-optimised versions of proven posts (4.8); small retargeting of consenting `/go/` visitors; Google G1 if needed; optional G2 decks probe | D4 weekly; refund brake |
+| 11-13 | 4-26 Jan | From revenue (D4) | With consent and CAPI live: purchase-optimised versions of proven posts (4.8); small retargeting of consenting `/go/` visitors; Google G1 if needed; optional G2 decks probe | D4 weekly; refund brake |
 
 ---
 

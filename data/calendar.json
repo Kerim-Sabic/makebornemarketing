@@ -157,7 +157,7 @@
    },
    {
     "type": "press",
-    "what": "16:00 Press: Read and approve bosnia-guerrilla-press.md and owner decisions OD1-OD11 (§8). Core cash line 214 KM ($122.42), outside the $1,000; options up to 354 KM ($202.50).",
+    "what": "16:00 Press: Plan approved (owner, 27 Oct): OD1-OD11 are settled in bosnia-guerrilla-press.md §8. Core cash line 214 KM ($122.42), outside the $1,000; book each amount on the day it is spent.",
     "owner": "Owner",
     "doc": "bosnia-guerrilla-press"
    },
@@ -166,7 +166,7 @@
     "what": "16:30 Guerrilla: Ask venues in person: S2 launch night (Thu 29 Oct 20:30-22:30), S3 press demo (Fri 30 Oct 10:00-12:00), S6 a Baščaršija ćevabdžinica (Fri 30 Oct 12:30-13:15). Hand over the letter and get the venue consent signed. Fallback for S2 and S3: the office at Vilsonovo šetalište 10.",
     "owner": "Owner",
     "doc": "bosnia-guerrilla-press",
-    "copy": "Poštovani,\n\nja sam [ime i prezime], iz sarajevske firme ZORBY&CO. U četvrtak, 29. oktobra pokrećemo Makeborne, alat koji od jednog kratkog pisanog opisa (briefa) za nekoliko minuta napravi web stranicu.\n\nPitamo vas možemo li u vašem lokalu [dan, od-do sati] organizovati [kratak opis: mali skup uz odbrojavanje / test uživo za novinare / izradu web stranice za vaš lokal]. Treba nam jedan sto, struja i [vaš TV / naš ekran]. Ne koristimo prostor ispred lokala, ne puštamo glasnu muziku i ništa ne lijepimo na zidove, fasadu ili izlog.\n\nAko želite, za vaš lokal napravit ćemo web stranicu na Makeborne adresi, kao poklon za otvaranje. Sadržaj stranice odobravate vi.\n\nAko se slažete, molimo vas da potpišete kratku saglasnost u prilogu.\n\nHvala,\n[ime i prezime], [telefon]\nZORBY&CO D.O.O., Vilsonovo šetalište 10, Sarajevo\n\n---\n\nSAGLASNOST VLASNIKA PROSTORA\n\nJa, [ime i prezime], [vlasnik/ca ili ovlašteno lice] lokala [naziv, adresa], saglasan/na sam da ZORBY&CO D.O.O. dana [datum], od [sat] do [sat], u mom lokalu organizuje [opis].\n\nZORBY&CO ne koristi prostor izvan lokala, ne pušta glasnu muziku i ne postavlja ništa na fasadu ili izlog. Svi koji se snimaju prethodno potpisuju saglasnost.\n\nMjesto i datum: ____________________\nPotpis: ____________________"
+    "copy": "Poštovani,\n\nja sam [ime i prezime], iz sarajevske firme ZORBY&CO. U četvrtak, 29. oktobra pokrećemo Makeborne, alat koji od jednog pisanog opisa (briefa) za nekoliko minuta napravi web stranicu.\n\nPitamo vas možemo li u vašem lokalu [dan, od-do sati] organizovati [kratak opis: mali skup uz odbrojavanje / test uživo za novinare / izradu web stranice za vaš lokal]. Treba nam jedan sto, struja i [vaš TV / naš ekran]. Ne koristimo prostor ispred lokala, ne puštamo glasnu muziku i ništa ne lijepimo na zidove, fasadu ili izlog.\n\nAko želite, za vaš lokal napravit ćemo web stranicu na Makeborne adresi, kao poklon za otvaranje. Sadržaj stranice odobravate vi.\n\nAko se slažete, molimo vas da potpišete kratku saglasnost u prilogu.\n\nHvala,\n[ime i prezime], [telefon]\nZORBY&CO D.O.O., Vilsonovo šetalište 10, Sarajevo\n\n---\n\nSAGLASNOST VLASNIKA PROSTORA\n\nJa, [ime i prezime], [vlasnik/ca ili ovlašteno lice] lokala [naziv, adresa], saglasan/na sam da ZORBY&CO D.O.O. dana [datum], od [sat] do [sat], u mom lokalu organizuje [opis].\n\nZORBY&CO ne koristi prostor izvan lokala, ne pušta glasnu muziku i ne postavlja ništa na fasadu ili izlog. Svi koji se snimaju prethodno potpisuju saglasnost.\n\nMjesto i datum: ____________________\nPotpis: ____________________"
    },
    {
     "type": "guerrilla",
@@ -182,9 +182,10 @@
    },
    {
     "type": "ads",
-    "what": "16:00 Ads: Set up the ad accounts from Bosnia today, no money spent. Meta Business portfolio in the exact legal name ZORBY&CO D.O.O. with two-factor for everyone and a second admin. Ad account \"Makeborne USD\" in USD and Europe/Sarajevo time. Company card added with an account spending limit of $96. Beneficiary and payer set to ZORBY&CO D.O.O. Domain TXT record sent to engineering. Business verification submitted. Branded content approval on. A dataset created with no code on the site. One TikTok Ads sign-up attempt, result written down. Ask the accountant whether BiH VAT applies to ads bought abroad. Every screen and field is in Ads, click by click, section 1.",
+    "what": "16:00 Ads: Set up the ad accounts from Bosnia today, no money spent. Meta Business portfolio in the exact legal name ZORBY&CO D.O.O. with two-factor for everyone and a second admin. Ad account \"Makeborne USD\" in USD and Europe/Sarajevo time. Company card added with an account spending limit of $96. Beneficiary and payer set to ZORBY&CO D.O.O. Domain TXT record sent to engineering. Business verification submitted. Branded content approval on. A dataset created with no code on the site. One TikTok Ads sign-up attempt, result written down. Send the accountant the VAT question (copy below; answer needed by Fri 30 Oct). Every screen and field is in Ads, click by click, section 1.",
     "owner": "Owner",
-    "doc": "ads-step-by-step"
+    "doc": "ads-step-by-step",
+    "copy": "Poštovani,\n\nZORBY&CO D.O.O. će od novembra kupovati oglase od Mete (Facebook i Instagram) i možda TikToka, plaćene karticom firme u američkim dolarima. Ukupno do kraja decembra najviše oko 260 USD.\n\n1. Da li na te usluge iz inostranstva obračunavamo PDV kao primalac usluge (17%)?\n2. Ako da, možemo li ga odbiti kao ulazni porez?\n3. Koje dokumente (fakture, izvode) trebate od nas i do kada?\n\nHvala."
    }
   ],
   "kpiCheck": "Pre-launch: nothing public says Wed 28 Oct or 19:00 any more; the countdown shows Thu 29 Oct 21:00 CET; DM keywords answer from a second account; every bio and post link checked."
@@ -352,7 +353,7 @@
     "what": "20:00 Facebook (personal): Optional: Bosnian post on your own Facebook profile with the countdown recording.",
     "owner": "Founder",
     "doc": "hype-playbook",
-    "copy": "Sutra u 21:00 lansiramo Makeborne. Od jednog kratkog opisa (brifa) napravi gotovu web stranicu, prezentaciju ili e-knjigu.\n\nDo tada: na makeborne.com se iza odbrojavanja nešto krije. Pomjerajte kursor (na mobitelu: pritisnite, držite i povucite).",
+    "copy": "Sutra u 21:00 lansiramo Makeborne. Od jednog opisa (brifa) napravi gotovu web stranicu, prezentaciju ili e-knjigu.\n\nDo tada: na makeborne.com se iza odbrojavanja nešto krije. Pomjerajte kursor (na mobitelu: pritisnite, držite i povucite).",
     "link": "makeborne.com"
    },
    {
@@ -399,7 +400,7 @@
    },
    {
     "type": "press",
-    "what": "11:30 Press: Read every Bosnian text aloud. Fill the founder quote, name, contact lines and venues in c01-c09. Print 30 consent forms and 20 fact sheets. Cost: 15 KM = $8.58, owner decision OD1 (owner decision).",
+    "what": "11:30 Press: Read every Bosnian text aloud. Send from the filled versions in the owner's private notes (name, phone, press-kit link). Print 30 consent forms and 20 fact sheets. Cost: 15 KM = $8.58, approved, OD1.",
     "owner": "Owner",
     "doc": "bosnia-guerrilla-press",
     "copy": "SAGLASNOST ZA SNIMANJE I OBJAVU\n\nJa, [ime i prezime / naziv radnje], dajem saglasnost firmi ZORBY&CO D.O.O., Vilsonovo šetalište 10, Sarajevo, da (označite):\n\n[ ] snima fotografije i video u [mjesto] dana [datum];\n[ ] objavi te snimke na profilima Makebornea (Instagram, TikTok, YouTube, LinkedIn, X) i ustupi ih medijima uz izvještaj o ovom događaju;\n[ ] objavi web stranicu za moju radnju na Makeborne adresi, sa sadržajem koji sam odobrio/la;\n[ ] navede naziv moje radnje uz te objave.\n\nSaglasnost je dobrovoljna. Mogu je povući kad god želim, porukom na [e-mail]. ZORBY&CO tada u roku od 7 dana uklanja snimke sa svojih profila i stranicu s interneta. Ono što su mediji već objavili ZORBY&CO ne može ukloniti.\n\nZa osobe mlađe od 18 godina potpisuje roditelj ili staratelj.\n\nMjesto i datum: ____________________\nIme i prezime: ____________________\nPotpis: ____________________"
@@ -409,7 +410,7 @@
     "what": "12:00 Press: Send the media advisory for the Fri 30 Oct 10:30 press demo to lists TV, EMB and all agencies (FENA fena@fena.ba with 'Za najave događaja' in the subject, NAP, SRNA).",
     "owner": "Owner",
     "doc": "bosnia-guerrilla-press",
-    "copy": "Naslov e-maila: NAJAVA | Petak, 30. 10. u 10:30: zadajte brief, a sarajevski AI alat pravi web stranicu pred kamerama\n\nNAJAVA ZA MEDIJE\n\nŠta: Predstavljanje Makebornea, alata zasnovanog na umjetnoj inteligenciji, koji je razvila sarajevska firma ZORBY&CO D.O.O. Makeborne od jednog briefa pravi web stranicu, e-knjigu ili prezentaciju. Javno se pokreće u četvrtak, 29. oktobra u 21:00.\n\nKada: petak, 30. oktobar 2026, od 10:30 do 11:30\nGdje: [naziv mjesta, adresa], Sarajevo\n\nProgram:\n10:30 Kratko predstavljanje (5 minuta)\n10:35 Test uživo: novinari zadaju brief, a stranica nastaje pred kamerama, sa štopericom na ekranu\n11:00 Izjave za medije i pitanja\n\nIzjave daje: [ime i prezime], osnivač Makebornea\nZa snimanje: veliki ekran sa štopericom, laptop, kadar preko ramena. Wi-Fi i struja su osigurani.\n\nPotvrda dolaska i pitanja: [ime i prezime], [e-mail], [telefon]",
+    "copy": "Naslov e-maila: NAJAVA | Petak, 30. 10. u 10:30: zadajte brief, a sarajevski AI alat pravi web stranicu pred kamerama\n\nNAJAVA ZA MEDIJE\n\nŠta: Predstavljanje Makebornea, alata zasnovanog na umjetnoj inteligenciji, koji je razvila sarajevska firma ZORBY&CO D.O.O. Makeborne od jednog briefa pravi web stranicu, e-knjigu ili prezentaciju. Javno se pokreće u četvrtak, 29. oktobra u 21:00.\n\nKada: petak, 30. oktobar 2026, od 10:30 do 11:30\nGdje: ured firme ZORBY&CO, Vilsonovo šetalište 10, Sarajevo\n\nProgram:\n10:30 Kratko predstavljanje (5 minuta)\n10:35 Test uživo: novinari zadaju brief, a stranica nastaje pred kamerama, sa štopericom na ekranu\n11:00 Izjave za medije i pitanja\n\nIzjave daje: [ime i prezime], osnivač Makebornea\nZa snimanje: veliki ekran sa štopericom, laptop, kadar preko ramena. Wi-Fi i struja su osigurani.\n\nPotvrda dolaska i pitanja: [ime i prezime], [e-mail], [telefon]",
     "link": "makeborne.com/go/press-adv | fallback: https://makeborne.com/?utm_source=press-adv&utm_medium=press&utm_campaign=launch-2026-10"
    },
    {
@@ -739,7 +740,7 @@
    },
    {
     "type": "product",
-    "what": "08:30 Ops: Owner decisions for tonight: (1) say 'send invites' for the 21:00 waitlist email or not; (2) the daily AI limit for 29 Oct-1 Nov (owner decision, playbook §7 item 2; numbers in the owner's private notes).",
+    "what": "08:30 Ops: Confirm with Codex: sales open at 21:00, and the daily AI limit is raised for 29 Oct-1 Nov (decision 2; numbers in the owner's private notes). The waitlist invite goes out at 21:05 (decision 3).",
     "owner": "Owner",
     "doc": "hype-playbook"
    },
@@ -798,8 +799,15 @@
     "doc": "hype-playbook"
    },
    {
+    "type": "product",
+    "what": "21:03 Ops: Open makeborne.com/billing signed out: Create $20 / 300 credits, Studio $49 / 750, Scale $99 / 1,550, and the Yearly switch shows $192, $470.40 and $950.40. If anything differs, quote no numbers tonight and tell Codex (playbook rule 4).",
+    "owner": "Founder",
+    "doc": "hype-playbook",
+    "link": "https://makeborne.com/billing"
+   },
+   {
     "type": "outreach",
-    "what": "21:05 Email: Waitlist invite email, only if the owner said 'send invites'. Owner decision.",
+    "what": "21:05 Email: Waitlist invite from admin@makeborne.com, once makeborne.com is open signed out: say \"send invites\" (decision 3).",
     "owner": "Owner",
     "doc": "hype-playbook"
    },
@@ -831,7 +839,7 @@
     "what": "21:45 Viber/WhatsApp: 30 personal one-to-one messages to people you know (Bosnian or English template; change the first line for each person). Never a group blast, never 'please share'.",
     "owner": "Founder",
     "doc": "hype-playbook",
-    "copy": "Ćao [ime], večeras u 21:00 sam lansirao Makeborne, projekat na kojem radim. Od jednog kratkog opisa napravi web stranicu, prezentaciju ili e-knjigu.\n\nNe tražim ništa osim iskrenog mišljenja: pogledaj kad stigneš i reci mi šta ti je prvo zasmetalo. makeborne.com\n\n[English version]\nHi [name], I launched Makeborne tonight at 21:00. One brief in, a finished website, deck or ebook out.\n\nI'm not asking for anything except an honest opinion: have a look when you can and tell me the first thing that bothered you. makeborne.com",
+    "copy": "Ćao [ime], večeras u 21:00 sam lansirao Makeborne, projekat na kojem radim. Od jednog opisa (brifa) napravi web stranicu, prezentaciju ili e-knjigu.\n\nNe tražim ništa osim iskrenog mišljenja: pogledaj kad stigneš i reci mi šta ti je prvo zasmetalo. makeborne.com\n\n[English version]\nHi [name], I launched Makeborne tonight at 21:00. One brief in, a finished website, deck or ebook out.\n\nI'm not asking for anything except an honest opinion: have a look when you can and tell me the first thing that bothered you. makeborne.com",
     "link": "makeborne.com"
    },
    {
@@ -847,7 +855,7 @@
     "what": "08:30 Press: Send the embargoed Bosnian release (embargo 21:00) to list EMB: Klix, N1, Radiosarajevo, Oslobođenje, Avaz, Bloomberg Adria BiH, Forbes BiH (own contact only), FENA, Akta, Biznisinfo, Face. Send the English version to Sarajevo Times.",
     "owner": "Owner",
     "doc": "bosnia-guerrilla-press",
-    "copy": "Naslov e-maila: EMBARGO do četvrtka, 29. 10. u 21:00 | Sarajevska firma lansira Makeborne: od jednog briefa do web stranice za nekoliko minuta\n\nSAOPĆENJE ZA MEDIJE\nEMBARGO: molimo da ne objavljujete prije četvrtka, 29. oktobra 2026. u 21:00.\n\nSarajevska firma lansira Makeborne: od jednog briefa do web stranice za nekoliko minuta\n\nSarajevo, 29. oktobar 2026. Sarajevska firma ZORBY&CO D.O.O. večeras u 21:00 pokreće Makeborne (makeborne.com), alat zasnovan na umjetnoj inteligenciji. Korisnik napiše jedan brief, odnosno kratak pisani opis onoga što mu treba. Makeborne od tog briefa napravi gotovu web stranicu, dizajniranu e-knjigu ili prezentaciju.\n\nU našim testnim izradama web stranica je bila gotova za dvije do četiri minute. Prezentacija je bila gotova za 43 sekunde, a e-knjiga za minutu i 23 sekunde. Web stranica se objavljuje na Makeborne adresi i odmah je dostupna na internetu.\n\nMakeborne se od prvog dana prodaje kupcima u cijelom svijetu. Postoje samo plaćeni paketi: Create za 20, Studio za 49 i Scale za 99 američkih dolara mjesečno.\n\nNajpoznatiji alati ove vrste dolaze iz Silicijske doline i Stockholma, gdje je sjedište švedskog Lovablea. Makeborne u tu utakmicu ulazi iz Sarajeva.\n\n„[CITAT OSNIVAČA: vlasnik potvrđuje ili mijenja prije slanja] Makeborne smo napravili u Sarajevu, za ljude kojima treba gotov posao, a ne još jedan program koji moraju učiti. Napišete jedan brief i za nekoliko minuta imate web stranicu, prezentaciju ili knjigu. Želimo pokazati da se softver za cijeli svijet može praviti i odavde“, kaže [ime i prezime], osnivač Makebornea.\n\nKako Makeborne radi:\n1. Korisnik napiše jedan brief: za koga je stranica, šta nudi i kakav utisak treba ostaviti.\n2. Makeborne napravi web stranicu, prezentaciju ili e-knjigu.\n3. Korisnik pregleda rezultat i objavi stranicu na Makeborne adresi.\n\nTestirajte Makeborne uživo: u petak, 30. oktobra u 10:30, u [naziv mjesta, adresa], zadajte nam svoj brief. Stranica će nastati pred vama, sa štopericom na ekranu.\n\nO firmi\nZORBY&CO D.O.O. je firma iz Sarajeva, sa sjedištem na Vilsonovom šetalištu 10. Razvija Makeborne i prodaje ga kupcima širom svijeta.\n\nNapomene za urednike\n- Fotografije, snimci ekrana i činjenice: [link na press kit]\n- Cijene u KM: otprilike 35, 86 i 173 KM mjesečno (kurs CBBiH od 27. 10. 2026), plus porez gdje se primjenjuje.\n- Dizajni skriveni iza odbrojavanja na makeborne.com nisu napravljeni u Makeborneu. Molimo da ih ne predstavljate kao rezultat alata.\n- Kontakt za medije: [ime i prezime], [e-mail], [telefon]\n\n---\n\nEmail subject: EMBARGOED until Thu 29 Oct, 21:00 CET | Sarajevo company launches Makeborne: from one brief to a finished website in minutes\n[Post-launch: delete \"EMBARGOED until Thu 29 Oct, 21:00 CET |\" from the subject.]\n\nPRESS RELEASE\nEMBARGOED until Thursday 29 October 2026, 21:00 CET.\n[Post-launch: replace this line with \"For immediate release\".]\n\nSarajevo company launches Makeborne: from one brief to a finished website in minutes\n\nSarajevo, 29 October 2026. ZORBY&CO D.O.O., a company from Sarajevo, Bosnia and Herzegovina, launches Makeborne (makeborne.com) tonight at 21:00 CET.\n[Post-launch: \"...launched Makeborne (makeborne.com) on Thursday 29 October at 21:00 CET.\"]\nMakeborne is an AI tool. You write one brief: a short written description of what you need. Makeborne turns it into a finished website, a designed ebook or a slide deck.\n\nIn our test runs, a website was ready in about two to four minutes, a deck in 43 seconds and a book in 1 minute 23 seconds. Websites are published on a Makeborne address and are online straight away.\n\nMakeborne sells worldwide from day one. There are paid plans only: Create at $20, Studio at $49 and Scale at $99 a month, plus tax where applicable.\n\nThe best-known tools of this kind come from Silicon Valley and Stockholm, home of Sweden's Lovable. Makeborne joins that race from Sarajevo.\n\n\"[FOUNDER QUOTE: owner confirms or rewrites before sending] We built Makeborne in Sarajevo for people who need finished work, not another tool to learn. Write one brief, and in a few minutes you have a website, a deck or a book. We want to show that software for the whole world can be made here too,\" says [first and last name], founder of Makeborne.\n\nHow it works:\n1. Write one brief: who the site is for, what you offer and the impression it should leave.\n2. Makeborne makes the website, deck or ebook.\n3. Review the result and publish the site on a Makeborne address.\n\nTest it live: on Friday 30 October at 10:30, at [venue, address], Sarajevo, give us your brief and watch the site being built, with a stopwatch on screen.\n\nAbout ZORBY&CO D.O.O.\nZORBY&CO D.O.O. is a company from Sarajevo, at Vilsonovo šetalište 10. It builds Makeborne and sells it to customers worldwide.\n\nNotes for editors\n- Photos, screenshots and facts: [press kit link]\n- The designs hidden behind the countdown on makeborne.com were not made with Makeborne. Please don't present them as its output.\n- Media contact: [name], [email], [phone]",
+    "copy": "Naslov e-maila: EMBARGO do četvrtka, 29. 10. u 21:00 | Sarajevska firma lansira Makeborne: od jednog briefa do web stranice za nekoliko minuta\n\nSAOPĆENJE ZA MEDIJE\nEMBARGO: molimo da ne objavljujete prije četvrtka, 29. oktobra 2026. u 21:00.\n\nSarajevska firma lansira Makeborne: od jednog briefa do web stranice za nekoliko minuta\n\nSarajevo, 29. oktobar 2026. Sarajevska firma ZORBY&CO D.O.O. večeras u 21:00 pokreće Makeborne (makeborne.com), alat zasnovan na umjetnoj inteligenciji. Korisnik napiše jedan brief, odnosno pisani opis onoga što mu treba. Makeborne od tog briefa napravi gotovu web stranicu, dizajniranu e-knjigu ili prezentaciju.\n\nU našim testnim izradama web stranica je bila gotova za 2 minute i 7 sekundi. Prezentacija je bila gotova za 43 sekunde, a e-knjiga za minutu i 23 sekunde. Web stranica se objavljuje na Makeborne adresi i odmah je dostupna na internetu.\n\nMakeborne se od prvog dana prodaje kupcima u cijelom svijetu. Postoje samo plaćeni paketi: Create za 20, Studio za 49 i Scale za 99 američkih dolara mjesečno.\n\nNajpoznatiji alati ove vrste dolaze iz Silicijske doline i Stockholma, gdje je sjedište švedskog Lovablea. Makeborne u tu utakmicu ulazi iz Sarajeva.\n\n„Makeborne smo napravili u Sarajevu, za ljude kojima treba gotov posao, a ne još jedan program koji moraju učiti. Napišete jedan brief i za nekoliko minuta imate web stranicu, prezentaciju ili knjigu. Želimo pokazati da se softver za cijeli svijet može praviti i odavde“, kaže [ime i prezime], osnivač Makebornea.\n\nKako Makeborne radi:\n1. Korisnik napiše jedan brief: za koga je stranica, šta nudi i kakav utisak treba ostaviti.\n2. Makeborne napravi web stranicu, prezentaciju ili e-knjigu.\n3. Korisnik pregleda rezultat i objavi stranicu na Makeborne adresi.\n\nTestirajte Makeborne uživo: u petak, 30. oktobra u 10:30, u našem uredu na Vilsonovom šetalištu 10, zadajte nam svoj brief. Stranica će nastati pred vama, sa štopericom na ekranu.\n\nO firmi\nZORBY&CO D.O.O. je firma iz Sarajeva, sa sjedištem na Vilsonovom šetalištu 10. Razvija Makeborne i prodaje ga kupcima širom svijeta.\n\nNapomene za urednike\n- Fotografije, snimci ekrana i činjenice: [link na press kit]\n- Cijene u KM: otprilike 35, 86 i 173 KM mjesečno (kurs CBBiH od 27. 10. 2026), plus porez gdje se primjenjuje.\n- Dizajni skriveni iza odbrojavanja na makeborne.com nisu napravljeni u Makeborneu. Molimo da ih ne predstavljate kao rezultat alata.\n- Kontakt za medije: [ime i prezime], admin@makeborne.com, [telefon]\n\n---\n\nEmail subject: EMBARGOED until Thu 29 Oct, 21:00 CET | Sarajevo company launches Makeborne: from one brief to a finished website in minutes\n[Post-launch: delete \"EMBARGOED until Thu 29 Oct, 21:00 CET |\" from the subject.]\n\nPRESS RELEASE\nEMBARGOED until Thursday 29 October 2026, 21:00 CET.\n[Post-launch: replace this line with \"For immediate release\".]\n\nSarajevo company launches Makeborne: from one brief to a finished website in minutes\n\nSarajevo, 29 October 2026. ZORBY&CO D.O.O., a company from Sarajevo, Bosnia and Herzegovina, launches Makeborne (makeborne.com) tonight at 21:00 CET.\n[Post-launch: \"...launched Makeborne (makeborne.com) on Thursday 29 October at 21:00 CET.\"]\nMakeborne is an AI tool. You write one brief: a written description of what you need. Makeborne turns it into a finished website, a designed ebook or a slide deck.\n\nIn our test runs, a website was ready in 2 minutes 7 seconds, a deck in 43 seconds and a book in 1 minute 23 seconds. Websites are published on a Makeborne address and are online straight away.\n\nMakeborne sells worldwide from day one. There are paid plans only: Create at $20, Studio at $49 and Scale at $99 a month, plus tax where applicable.\n\nThe best-known tools of this kind come from Silicon Valley and Stockholm, home of Sweden's Lovable. Makeborne joins that race from Sarajevo.\n\n\"We built Makeborne in Sarajevo for people who need finished work, not another tool to learn. Write one brief, and in a few minutes you have a website, a deck or a book. We want to show that software for the whole world can be made here too,\" says [first and last name], founder of Makeborne.\n\nHow it works:\n1. Write one brief: who the site is for, what you offer and the impression it should leave.\n2. Makeborne makes the website, deck or ebook.\n3. Review the result and publish the site on a Makeborne address.\n\nTest it live: on Friday 30 October at 10:30, at our office, Vilsonovo šetalište 10, Sarajevo, give us your brief and watch the site being built, with a stopwatch on screen.\n\nAbout ZORBY&CO D.O.O.\nZORBY&CO D.O.O. is a company from Sarajevo, at Vilsonovo šetalište 10. It builds Makeborne and sells it to customers worldwide.\n\nNotes for editors\n- Photos, screenshots and facts: [press kit link]\n- The designs hidden behind the countdown on makeborne.com were not made with Makeborne. Please don't present them as its output.\n- Media contact: [name], admin@makeborne.com, [phone]",
     "link": "makeborne.com/go/press-emb | fallback: https://makeborne.com/?utm_source=press-emb&utm_medium=press&utm_campaign=launch-2026-10"
    },
    {
@@ -855,7 +863,7 @@
     "what": "10:00 TV: Send the morning-show pitch, one email per show: N1 Novi dan (websa@n1info.com), TVSA Sarajevsko jutro (pitajte@tvsa.ba), FTV Dobro jutro for 4-6 Nov (redakcija@federalna.ba), Hayat (digitala@hayat.ba), Face (web@facetv.ba), RTV TK, RTV Zenica, ATV. DM Nova BH Naše jutro; phone RTRS.",
     "owner": "Owner",
     "doc": "bosnia-guerrilla-press",
-    "copy": "Naslov e-maila: Prijedlog gosta za [naziv emisije]: voditelj zadaje brief, a web stranica nastaje uživo u studiju\n\nPoštovani,\n\npredlažem kratko gostovanje u emisiji [naziv emisije] u periodu od 30. oktobra do 6. novembra. [Za FTV: \"Čestitamo na 25 godina programa. Predlažem gostovanje od 4. do 6. novembra.\"]\n\nSarajevska firma ZORBY&CO u četvrtak, 29. oktobra u 21:00 pokreće Makeborne, alat zasnovan na umjetnoj inteligenciji. Od jednog briefa pravi web stranicu, e-knjigu ili prezentaciju. U našim testnim izradama web stranica je bila gotova za dvije do četiri minute.\n\nPrijedlog za studio: na početku razgovora voditelj zada brief, na primjer za pekaru iz komšiluka. Dok razgovaramo, stranica nastaje na laptopu. Na kraju je pokažemo, objavljenu na internetu. Donosimo vlastiti laptop i mobilni internet. Za kadar je dovoljan jedan ekran ili snimak ekrana.\n\nGost: [ime i prezime], osnivač Makebornea. Teme: kako se iz Sarajeva pravi proizvod za cijeli svijet, šta umjetna inteligencija znači za male firme i web dizajnere, i šta alat ne radi.\n\nFotografije i činjenice: [link na press kit]\n\nS poštovanjem,\n[ime i prezime]\nZORBY&CO D.O.O., Vilsonovo šetalište 10, Sarajevo\n[telefon]",
+    "copy": "Naslov e-maila: Prijedlog gosta za [naziv emisije]: voditelj zadaje brief, a web stranica nastaje uživo u studiju\n\nPoštovani,\n\npredlažem kratko gostovanje u emisiji [naziv emisije] u periodu od 30. oktobra do 6. novembra. [Za FTV: \"Čestitamo na 25 godina programa. Predlažem gostovanje od 4. do 6. novembra.\"]\n\nSarajevska firma ZORBY&CO u četvrtak, 29. oktobra u 21:00 pokreće Makeborne, alat zasnovan na umjetnoj inteligenciji. Od jednog briefa pravi web stranicu, e-knjigu ili prezentaciju. U našim testnim izradama web stranica je bila gotova za 2 minute i 7 sekundi.\n\nPrijedlog za studio: na početku razgovora voditelj zada brief, na primjer za pekaru iz komšiluka. Dok razgovaramo, stranica nastaje na laptopu. Na kraju je pokažemo, objavljenu na internetu. Donosimo vlastiti laptop i mobilni internet. Za kadar je dovoljan jedan ekran ili snimak ekrana.\n\nGost: [ime i prezime], osnivač Makebornea. Teme: kako se iz Sarajeva pravi proizvod za cijeli svijet, šta umjetna inteligencija znači za male firme i web dizajnere, i šta alat ne radi.\n\nFotografije i činjenice: [link na press kit]\n\nS poštovanjem,\n[ime i prezime]\nZORBY&CO D.O.O., Vilsonovo šetalište 10, Sarajevo\n[telefon]",
     "link": "makeborne.com/go/tv-pitch | fallback: https://makeborne.com/?utm_source=tv-pitch&utm_medium=press&utm_campaign=launch-2026-10"
    },
    {
@@ -863,12 +871,12 @@
     "what": "10:30 Radio: Send the radio pitch to Radio M (redakcija@radiom.ba), Radio FBiH (redakcija@federalna.ba) and BiG Radio; phone Kalman Radio ('Tema dana', 10:30) and Nes Radio ('Dizalica').",
     "owner": "Owner",
     "doc": "bosnia-guerrilla-press",
-    "copy": "Naslov e-maila: Prijedlog za [naziv emisije]: slušalac opiše svoju radnju, a web stranica nastaje dok traje emisija\n\nPoštovani,\n\npredlažem gostovanje u emisiji [naziv emisije] između 2. i 13. novembra.\n\nSarajevska firma ZORBY&CO je 29. oktobra pokrenula Makeborne, alat zasnovan na umjetnoj inteligenciji. Od jednog briefa pravi web stranicu, e-knjigu ili prezentaciju. U našim testnim izradama web stranica je bila gotova za dvije do četiri minute.\n\nPrijedlog: slušalac se javi i opiše svoju radnju ili zanat. Dok razgovaramo, pravimo stranicu. Prije kraja emisije pročitamo adresu na kojoj je objavljena. Ako slušalac želi, stranica mu ostaje kao poklon.\n\nGost: [ime i prezime], osnivač Makebornea. Možemo doći u studio ili se uključiti telefonom.\n\nFotografije i činjenice: [link na press kit]\n\nS poštovanjem,\n[ime i prezime]\n[telefon]",
+    "copy": "Naslov e-maila: Prijedlog za [naziv emisije]: slušalac opiše svoju radnju, a web stranica nastaje dok traje emisija\n\nPoštovani,\n\npredlažem gostovanje u emisiji [naziv emisije] između 2. i 13. novembra.\n\nSarajevska firma ZORBY&CO je 29. oktobra pokrenula Makeborne, alat zasnovan na umjetnoj inteligenciji. Od jednog briefa pravi web stranicu, e-knjigu ili prezentaciju. U našim testnim izradama web stranica je bila gotova za 2 minute i 7 sekundi.\n\nPrijedlog: slušalac se javi i opiše svoju radnju ili zanat. Dok razgovaramo, pravimo stranicu. Prije kraja emisije pročitamo adresu na kojoj je objavljena. Ako slušalac želi, stranica mu ostaje kao poklon.\n\nGost: [ime i prezime], osnivač Makebornea. Možemo doći u studio ili se uključiti telefonom.\n\nFotografije i činjenice: [link na press kit]\n\nS poštovanjem,\n[ime i prezime]\n[telefon]",
     "link": "makeborne.com/go/radio-pitch | fallback: https://makeborne.com/?utm_source=radio-pitch&utm_medium=press&utm_campaign=launch-2026-10"
    },
    {
     "type": "guerrilla",
-    "what": "12:00 Guerrilla: Dry run at the launch-night venue: screen, HDMI, Wi-Fi and a 4G hotspot; makeborne.com open signed out. Top up mobile data for all live builds in this plan. Cost: 20 KM = $11.44, owner decision OD1 (owner decision).",
+    "what": "12:00 Guerrilla: Dry run at the launch-night venue: screen, HDMI, Wi-Fi and a 4G hotspot; makeborne.com open signed out. Top up mobile data for all live builds in this plan. Cost: 20 KM = $11.44, approved, OD1.",
     "owner": "Founder",
     "doc": "bosnia-guerrilla-press"
    },
@@ -899,7 +907,7 @@
     "what": "21:05 Press: Send the post-launch release: Bosnian to list BIH; the Croatian adaptation (§3.4) to list HR; the Serbian ijekavica adaptation to list RS and SRNA.",
     "owner": "Owner",
     "doc": "bosnia-guerrilla-press",
-    "copy": "Naslov e-maila: Sarajevska firma lansirala Makeborne: od jednog briefa do web stranice za nekoliko minuta\n\nSAOPĆENJE ZA MEDIJE\nZa objavu odmah\n\nSarajevska firma lansirala Makeborne: od jednog briefa do web stranice za nekoliko minuta\n\nSarajevo, [datum slanja]. Sarajevska firma ZORBY&CO D.O.O. u četvrtak, 29. oktobra u 21:00 pokrenula je Makeborne (makeborne.com), alat zasnovan na umjetnoj inteligenciji. Korisnik napiše jedan brief, odnosno kratak pisani opis onoga što mu treba. Makeborne od tog briefa napravi gotovu web stranicu, dizajniranu e-knjigu ili prezentaciju.\n\nU našim testnim izradama web stranica je bila gotova za dvije do četiri minute. Prezentacija je bila gotova za 43 sekunde, a e-knjiga za minutu i 23 sekunde. Web stranica se objavljuje na Makeborne adresi i odmah je dostupna na internetu.\n\nMakeborne se od prvog dana prodaje kupcima u cijelom svijetu. Postoje samo plaćeni paketi: Create za 20, Studio za 49 i Scale za 99 američkih dolara mjesečno.\n\nNajpoznatiji alati ove vrste dolaze iz Silicijske doline i Stockholma, gdje je sjedište švedskog Lovablea. Makeborne u tu utakmicu ulazi iz Sarajeva.\n\n„[CITAT OSNIVAČA: vlasnik potvrđuje ili mijenja prije slanja] Makeborne smo napravili u Sarajevu, za ljude kojima treba gotov posao, a ne još jedan program koji moraju učiti. Napišete jedan brief i za nekoliko minuta imate web stranicu, prezentaciju ili knjigu. Želimo pokazati da se softver za cijeli svijet može praviti i odavde“, kaže [ime i prezime], osnivač Makebornea.\n\nKako Makeborne radi:\n1. Korisnik napiše jedan brief: za koga je stranica, šta nudi i kakav utisak treba ostaviti.\n2. Makeborne napravi web stranicu, prezentaciju ili e-knjigu.\n3. Korisnik pregleda rezultat i objavi stranicu na Makeborne adresi.\n\nTestirajte Makeborne uživo: u petak, 30. oktobra u 10:30, u [naziv mjesta, adresa], zadajte nam svoj brief. Stranica će nastati pred vama, sa štopericom na ekranu. [Obrišite ovaj pasus ako šaljete nakon petka u 11:30.]\n\nO firmi\nZORBY&CO D.O.O. je firma iz Sarajeva, sa sjedištem na Vilsonovom šetalištu 10. Razvija Makeborne i prodaje ga kupcima širom svijeta.\n\nNapomene za urednike\n- Fotografije, snimci ekrana i činjenice: [link na press kit]\n- Cijene u KM: otprilike 35, 86 i 173 KM mjesečno (kurs CBBiH od 27. 10. 2026), plus porez gdje se primjenjuje.\n- Kontakt za medije: [ime i prezime], [e-mail], [telefon]",
+    "copy": "Naslov e-maila: Sarajevska firma lansirala Makeborne: od jednog briefa do web stranice za nekoliko minuta\n\nSAOPĆENJE ZA MEDIJE\nZa objavu odmah\n\nSarajevska firma lansirala Makeborne: od jednog briefa do web stranice za nekoliko minuta\n\nSarajevo, [datum slanja]. Sarajevska firma ZORBY&CO D.O.O. u četvrtak, 29. oktobra u 21:00 pokrenula je Makeborne (makeborne.com), alat zasnovan na umjetnoj inteligenciji. Korisnik napiše jedan brief, odnosno pisani opis onoga što mu treba. Makeborne od tog briefa napravi gotovu web stranicu, dizajniranu e-knjigu ili prezentaciju.\n\nU našim testnim izradama web stranica je bila gotova za 2 minute i 7 sekundi. Prezentacija je bila gotova za 43 sekunde, a e-knjiga za minutu i 23 sekunde. Web stranica se objavljuje na Makeborne adresi i odmah je dostupna na internetu.\n\nMakeborne se od prvog dana prodaje kupcima u cijelom svijetu. Postoje samo plaćeni paketi: Create za 20, Studio za 49 i Scale za 99 američkih dolara mjesečno.\n\nNajpoznatiji alati ove vrste dolaze iz Silicijske doline i Stockholma, gdje je sjedište švedskog Lovablea. Makeborne u tu utakmicu ulazi iz Sarajeva.\n\n„Makeborne smo napravili u Sarajevu, za ljude kojima treba gotov posao, a ne još jedan program koji moraju učiti. Napišete jedan brief i za nekoliko minuta imate web stranicu, prezentaciju ili knjigu. Želimo pokazati da se softver za cijeli svijet može praviti i odavde“, kaže [ime i prezime], osnivač Makebornea.\n\nKako Makeborne radi:\n1. Korisnik napiše jedan brief: za koga je stranica, šta nudi i kakav utisak treba ostaviti.\n2. Makeborne napravi web stranicu, prezentaciju ili e-knjigu.\n3. Korisnik pregleda rezultat i objavi stranicu na Makeborne adresi.\n\nTestirajte Makeborne uživo: u petak, 30. oktobra u 10:30, u našem uredu na Vilsonovom šetalištu 10, zadajte nam svoj brief. Stranica će nastati pred vama, sa štopericom na ekranu. [Obrišite ovaj pasus ako šaljete nakon petka u 11:30.]\n\nO firmi\nZORBY&CO D.O.O. je firma iz Sarajeva, sa sjedištem na Vilsonovom šetalištu 10. Razvija Makeborne i prodaje ga kupcima širom svijeta.\n\nNapomene za urednike\n- Fotografije, snimci ekrana i činjenice: [link na press kit]\n- Cijene u KM: otprilike 35, 86 i 173 KM mjesečno (kurs CBBiH od 27. 10. 2026), plus porez gdje se primjenjuje.\n- Kontakt za medije: [ime i prezime], admin@makeborne.com, [telefon]",
     "link": "makeborne.com/go/press-bih | fallback: https://makeborne.com/?utm_source=press-bih&utm_medium=press&utm_campaign=launch-2026-10"
    },
    {
@@ -1068,12 +1076,12 @@
     "what": "08:00 TV: Send the same-day reminder for the 10:30 press demo to TV desks and agencies only.",
     "owner": "Owner",
     "doc": "bosnia-guerrilla-press",
-    "copy": "Naslov e-maila: DANAS u 10:30 | Test uživo: novinari zadaju brief, sarajevski AI alat pravi web stranicu\n\nPoštovani,\n\npodsjećamo: danas u 10:30, u [naziv mjesta, adresa], predstavljamo Makeborne. Sarajevska firma ZORBY&CO pokrenula ga je sinoć u 21:00. Zadajte brief i gledajte kako stranica nastaje, sa štopericom na ekranu. Izjave za medije su od 11:00.\n\nPotvrda dolaska: [telefon]\n\nS poštovanjem,\n[ime i prezime]",
+    "copy": "Naslov e-maila: DANAS u 10:30 | Test uživo: novinari zadaju brief, sarajevski AI alat pravi web stranicu\n\nPoštovani,\n\npodsjećamo: danas u 10:30, u našem uredu na Vilsonovom šetalištu 10, predstavljamo Makeborne. Sarajevska firma ZORBY&CO pokrenula ga je sinoć u 21:00. Zadajte brief i gledajte kako stranica nastaje, sa štopericom na ekranu. Izjave za medije su od 11:00.\n\nPotvrda dolaska: [telefon]\n\nS poštovanjem,\n[ime i prezime]",
     "link": "makeborne.com/go/press-adv | fallback: https://makeborne.com/?utm_source=press-adv&utm_medium=press&utm_campaign=launch-2026-10"
    },
    {
     "type": "guerrilla",
-    "what": "10:00 Guerrilla: Set up S3: big screen with a browser stopwatch, consent forms, 10 printed fact sheets with the press-kit QR code, coffee and water. Cost: 40 KM = $22.88, owner decision OD1 (owner decision).",
+    "what": "10:00 Guerrilla: Set up S3: big screen with a browser stopwatch, consent forms, 10 printed fact sheets with the press-kit QR code, coffee and water. Cost: 40 KM = $22.88, approved, OD1.",
     "owner": "Owner",
     "doc": "bosnia-guerrilla-press",
     "link": "makeborne.com/go/g-pressdemo | fallback: https://makeborne.com/?utm_source=g-pressdemo&utm_medium=guerrilla&utm_campaign=launch-2026-10"
@@ -1093,7 +1101,7 @@
    },
    {
     "type": "guerrilla",
-    "what": "12:30 Guerrilla: Run S6 in the ćevabdžinica that signed: order ten ćevapi, start the stopwatch when the order goes to the grill, build the shop's site from the owner's brief. Film the real result, whichever finishes first. Inside only. Cost: 50 KM = $28.6, owner decision OD1; about 1 gifted build from the D14 demo-build line, not cash (owner decision).",
+    "what": "12:30 Guerrilla: Run S6 in the ćevabdžinica that signed: order ten ćevapi, start the stopwatch when the order goes to the grill, build the shop's site from the owner's brief. Film the real result, whichever finishes first. Inside only. Cost: 50 KM = $28.6, approved, OD1; about 1 gifted build from the D14 demo-build line, not cash.",
     "owner": "Founder",
     "doc": "bosnia-guerrilla-press",
     "link": "makeborne.com/go/g-cevapi | fallback: https://makeborne.com/?utm_source=g-cevapi&utm_medium=guerrilla&utm_campaign=launch-2026-10"
@@ -1204,7 +1212,7 @@
     "account": "Founder X (personal)",
     "contentId": "C12",
     "time": "20:00 CET (Europe/Sarajevo, UTC+1)",
-    "notes": "PREREQUISITE ga5 (sample review link). Until it is live, say 'Watch the uncut build' and drop 'Play the client'. No free tier, on purpose (P3 stance). Link in first reply. Until /go/ is live (target Thu 29 Oct) use the full makeborne.com URL with these UTMs; never a Whop store or tracking link.",
+    "notes": "PREREQUISITE ga5 (sample review link). Until it is live, say 'Watch the uncut build' and drop 'Play the client'. Paid plans only, on purpose (P3 stance). Link in first reply. Until /go/ is live (target Thu 29 Oct) use the full makeborne.com URL with these UTMs; never a Whop store or tracking link.",
     "tag": "live",
     "slot": "original",
     "link": "makeborne.com/go/x-c12",
@@ -1221,7 +1229,7 @@
     "account": "Founder Indie Hackers",
     "contentId": "C12",
     "time": "16:00 CET (Europe/Sarajevo, UTC+1)",
-    "notes": "PREREQUISITE ga5 (sample review link). Until it is live, say 'Watch the uncut build' and drop 'Play the client'. Post launchCopy.indieHackers 'Launched paid-only, no free tier, on purpose'. Until /go/ is live (target Thu 29 Oct) use the full makeborne.com URL with these UTMs; never a Whop store or tracking link.",
+    "notes": "PREREQUISITE ga5 (sample review link). Until it is live, say 'Watch the uncut build' and drop 'Play the client'. Post launchCopy.indieHackers 'Launched with paid plans only, on purpose'. Until /go/ is live (target Thu 29 Oct) use the full makeborne.com URL with these UTMs; never a Whop store or tracking link.",
     "tag": "live",
     "slot": "original",
     "link": "makeborne.com/go/ih-c12",
@@ -1455,7 +1463,7 @@
     "what": "11:00 Reddit: r/bih post in Bosnian, only if mods said yes, or gave no answer and the sidebar still has no promotion ban. Link in the first comment.",
     "owner": "Founder",
     "doc": "hype-playbook",
-    "copy": "Da odmah kažem: ja sam osnivač, ovo je moj projekat.\n\nZove se Makeborne. Napišete jedan kratak opis (brif), a on napravi gotovu web stranicu na Makeborne adresi, prezentaciju koja se otvara u PowerPointu (grafikoni se mogu uređivati) ili dizajniranu e-knjigu u PDF-u. Klijentu pošaljete link, on komentariše direktno na stranici bez pravljenja računa i klikne Odobri.\n\nPravimo ga u Sarajevu, a prodajemo svuda. Lansirali smo ga u četvrtak, 29. oktobra.\n\nIskreno o tome šta ima, a šta nema:\n- Samo plaćeni paketi: 20, 49 ili 99 dolara mjesečno. Ako ne iskoristite kredite, dobijete puni povrat novca.\n- Vlastite domene još ne podržavamo, to dolazi uskoro.\n- Stvarna vremena iz testiranja: web stranica 2:07, prezentacija 0:43, knjiga 1:23.\n\nPitanje za one koji ovdje rade web stranice ili prezentacije za klijente: da li bi vam ovo uštedjelo vrijeme, i šta bi vas prvo odbilo?\n\nLink stavljam u komentar.",
+    "copy": "Da odmah kažem: ja sam osnivač, ovo je moj projekat.\n\nZove se Makeborne. Napišete jedan opis (brif), a on napravi gotovu web stranicu na Makeborne adresi, prezentaciju koja se otvara u PowerPointu (grafikoni se mogu uređivati) ili dizajniranu e-knjigu u PDF-u. Klijentu pošaljete link, on komentariše direktno na stranici bez pravljenja računa i klikne Odobri.\n\nPravimo ga u Sarajevu, a prodajemo svuda. Lansirali smo ga u četvrtak, 29. oktobra.\n\nIskreno o tome šta ima, a šta nema:\n- Samo plaćeni paketi: 20, 49 ili 99 dolara mjesečno. Ako ne iskoristite kredite, dobijete puni povrat novca.\n- Vlastite domene još ne podržavamo, to dolazi uskoro.\n- Stvarna vremena iz testiranja: web stranica 2:07, prezentacija 0:43, knjiga 1:23.\n\nPitanje za one koji ovdje rade web stranice ili prezentacije za klijente: da li bi vam ovo uštedjelo vrijeme, i šta bi vas prvo odbilo?\n\nLink stavljam u komentar.",
     "link": "https://makeborne.com/?utm_source=reddit&utm_medium=organic&utm_campaign=launch-2026-10&utm_content=rd-bih"
    },
    {
@@ -1481,7 +1489,7 @@
    },
    {
     "type": "guerrilla",
-    "what": "18:00 Guerrilla: Decide OD2 (gifted sites: 12 months live recommended, no cost to recipients, removal within 7 days on request) once the founder confirms the product supports it. Pick the S7 venue on Kazandžiluk.",
+    "what": "18:00 Guerrilla: Pick the S7 venue on Kazandžiluk. The gifted-site terms are settled (OD2): 12 months live, no cost to the recipient, removal within 7 days of a request, built from the team's own workspace.",
     "owner": "Owner",
     "doc": "bosnia-guerrilla-press"
    }
@@ -1624,10 +1632,10 @@
     "account": "Makeborne brand Instagram (professional)",
     "contentId": "T8",
     "time": "19:00 CET (Europe/Sarajevo, UTC+1)",
-    "notes": "\"Guess the build time\": the real Hollis site, the answer (4:36) at 0:04, then \"How long would it take you? Comment it.\" The music and sound effects are in the video: keep the original sound and add no platform music (skip TikTok's \"add sound\"). Reply to some of the guesses. Works any evening Thu 29 Oct to Sun 1 Nov, 18:00-20:00 CET.",
+    "notes": "\"Guess the build time\": the real Hollis site, the answer (4:36) at 0:04, then \"How long would it take you? Comment it.\" The music and sound effects are in the video: keep the original sound and add no platform music (skip TikTok's \"add sound\"). Reply to some of the guesses. Works any evening this week, 18:00-20:00 CET.",
     "tag": "live",
     "slot": "teaser",
-    "requires": "you want one more comment game this week (it works any evening Thu 29 Oct to Sun 1 Nov)",
+    "requires": "you want one more comment game this week (it works any evening this week)",
     "link": "makeborne.com",
     "utm": {
      "utm_source": "instagram",
@@ -1641,10 +1649,10 @@
     "account": "Makeborne brand TikTok (business account)",
     "contentId": "T8",
     "time": "19:05 CET (Europe/Sarajevo, UTC+1)",
-    "notes": "\"Guess the build time\": the real Hollis site, the answer (4:36) at 0:04, then \"How long would it take you? Comment it.\" The music and sound effects are in the video: keep the original sound and add no platform music (skip TikTok's \"add sound\"). Reply to some of the guesses. Works any evening Thu 29 Oct to Sun 1 Nov, 18:00-20:00 CET.",
+    "notes": "\"Guess the build time\": the real Hollis site, the answer (4:36) at 0:04, then \"How long would it take you? Comment it.\" The music and sound effects are in the video: keep the original sound and add no platform music (skip TikTok's \"add sound\"). Reply to some of the guesses. Works any evening this week, 18:00-20:00 CET.",
     "tag": "live",
     "slot": "teaser",
-    "requires": "you want one more comment game this week (it works any evening Thu 29 Oct to Sun 1 Nov)",
+    "requires": "you want one more comment game this week (it works any evening this week)",
     "link": "makeborne.com",
     "utm": {
      "utm_source": "tiktok",
@@ -1658,10 +1666,10 @@
     "account": "Makeborne YouTube channel",
     "contentId": "T8",
     "time": "19:10 CET (Europe/Sarajevo, UTC+1)",
-    "notes": "\"Guess the build time\": the real Hollis site, the answer (4:36) at 0:04, then \"How long would it take you? Comment it.\" The music and sound effects are in the video: keep the original sound and add no platform music (skip TikTok's \"add sound\"). Reply to some of the guesses. Works any evening Thu 29 Oct to Sun 1 Nov, 18:00-20:00 CET.",
+    "notes": "\"Guess the build time\": the real Hollis site, the answer (4:36) at 0:04, then \"How long would it take you? Comment it.\" The music and sound effects are in the video: keep the original sound and add no platform music (skip TikTok's \"add sound\"). Reply to some of the guesses. Works any evening this week, 18:00-20:00 CET.",
     "tag": "live",
     "slot": "teaser",
-    "requires": "you want one more comment game this week (it works any evening Thu 29 Oct to Sun 1 Nov)",
+    "requires": "you want one more comment game this week (it works any evening this week)",
     "link": "makeborne.com",
     "utm": {
      "utm_source": "youtube",
@@ -1731,16 +1739,8 @@
     "what": "10:00 Guerrilla: Start craftsmen visits on Kazandžiluk with the letter; target 20 signed consents by Thu 5 Nov. Write down only the details each craftsman chooses to publish.",
     "owner": "Owner",
     "doc": "bosnia-guerrilla-press",
-    "copy": "Poštovani,\n\nu subotu, 7. novembra, od 10 do 16 sati, u [radnja ili lokal, adresa] pravimo web stranice za zanatlije s Baščaršije. Svaka stranica nastaje za nekoliko minuta, od vašeg kratkog opisa: šta pravite, od kada radite, gdje ste i kako vas kupci mogu kontaktirati.\n\nStranica se objavljuje na Makeborne adresi. To je naš poklon povodom pokretanja Makebornea. Ne plaćate ništa, ni sada ni kasnije. Stranica ostaje objavljena najmanje [vlasnik upisuje: npr. 12 mjeseci]. Prije objave stranicu pregledate i odobrite. Možete tražiti da je uklonimo kad god želite.\n\nOvo nije nagradna igra: stranicu dobije svako ko dođe tog dana.\n\nAko želite, snimit ćemo kako stranica nastaje i objaviti snimak na našim profilima, samo uz vaš potpis na saglasnosti. Snimanje nije uslov za stranicu.\n\nPonesite podatke koje želite na stranici. Slike za sada ne pravimo. [Osnivač potvrđuje: možemo li dodati vaše fotografije.]\n\nHvala,\n[ime i prezime], [telefon]\nZORBY&CO D.O.O., Vilsonovo šetalište 10, Sarajevo\n\n---\n\nSAGLASNOST ZA SNIMANJE I OBJAVU\n\nJa, [ime i prezime / naziv radnje], dajem saglasnost firmi ZORBY&CO D.O.O., Vilsonovo šetalište 10, Sarajevo, da (označite):\n\n[ ] snima fotografije i video u [mjesto] dana [datum];\n[ ] objavi te snimke na profilima Makebornea (Instagram, TikTok, YouTube, LinkedIn, X) i ustupi ih medijima uz izvještaj o ovom događaju;\n[ ] objavi web stranicu za moju radnju na Makeborne adresi, sa sadržajem koji sam odobrio/la;\n[ ] navede naziv moje radnje uz te objave.\n\nSaglasnost je dobrovoljna. Mogu je povući kad god želim, porukom na [e-mail]. ZORBY&CO tada u roku od 7 dana uklanja snimke sa svojih profila i stranicu s interneta. Ono što su mediji već objavili ZORBY&CO ne može ukloniti.\n\nZa osobe mlađe od 18 godina potpisuje roditelj ili staratelj.\n\nMjesto i datum: ____________________\nIme i prezime: ____________________\nPotpis: ____________________",
+    "copy": "Poštovani,\n\nu subotu, 7. novembra, od 10 do 16 sati, u [radnja ili lokal, adresa] pravimo web stranice za zanatlije s Baščaršije. Svaka stranica nastaje za nekoliko minuta, od vašeg opisa: šta pravite, od kada radite, gdje ste i kako vas kupci mogu kontaktirati.\n\nStranica se objavljuje na Makeborne adresi. To je naš poklon povodom pokretanja Makebornea. Ne plaćate ništa, ni sada ni kasnije. Stranica ostaje objavljena najmanje 12 mjeseci. Prije objave stranicu pregledate i odobrite. Možete tražiti da je uklonimo kad god želite.\n\nOvo nije nagradna igra: stranicu dobije svako ko dođe tog dana.\n\nAko želite, snimit ćemo kako stranica nastaje i objaviti snimak na našim profilima, samo uz vaš potpis na saglasnosti. Snimanje nije uslov za stranicu.\n\nPonesite podatke koje želite na stranici. Slike za sada ne pravimo. [Osnivač potvrđuje: možemo li dodati vaše fotografije.]\n\nHvala,\n[ime i prezime], [telefon]\nZORBY&CO D.O.O., Vilsonovo šetalište 10, Sarajevo\n\n---\n\nSAGLASNOST ZA SNIMANJE I OBJAVU\n\nJa, [ime i prezime / naziv radnje], dajem saglasnost firmi ZORBY&CO D.O.O., Vilsonovo šetalište 10, Sarajevo, da (označite):\n\n[ ] snima fotografije i video u [mjesto] dana [datum];\n[ ] objavi te snimke na profilima Makebornea (Instagram, TikTok, YouTube, LinkedIn, X) i ustupi ih medijima uz izvještaj o ovom događaju;\n[ ] objavi web stranicu za moju radnju na Makeborne adresi, sa sadržajem koji sam odobrio/la;\n[ ] navede naziv moje radnje uz te objave.\n\nSaglasnost je dobrovoljna. Mogu je povući kad god želim, porukom na [e-mail]. ZORBY&CO tada u roku od 7 dana uklanja snimke sa svojih profila i stranicu s interneta. Ono što su mediji već objavili ZORBY&CO ne može ukloniti.\n\nZa osobe mlađe od 18 godina potpisuje roditelj ili staratelj.\n\nMjesto i datum: ____________________\nIme i prezime: ____________________\nPotpis: ____________________",
     "link": "makeborne.com/go/g-kazandziluk | fallback: https://makeborne.com/?utm_source=g-kazandziluk&utm_medium=guerrilla&utm_campaign=launch-2026-10"
-   },
-   {
-    "type": "guerrilla",
-    "what": "10:30 Guerrilla: Optional S11: place 100 A6 table cards 'Brief na kartici' in 1-2 partner cafés, with each owner's written yes. Cards inside only. Cost: 40 KM = $22.88, owner decision OD1; optional, OD1b (owner decision).",
-    "owner": "Owner",
-    "doc": "bosnia-guerrilla-press",
-    "copy": "SAGLASNOST VLASNIKA PROSTORA\n\nJa, [ime i prezime], [vlasnik/ca ili ovlašteno lice] lokala [naziv, adresa], saglasan/na sam da ZORBY&CO D.O.O. dana [datum], od [sat] do [sat], u mom lokalu organizuje [opis].\n\nZORBY&CO ne koristi prostor izvan lokala, ne pušta glasnu muziku i ne postavlja ništa na fasadu ili izlog. Svi koji se snimaju prethodno potpisuju saglasnost.\n\nMjesto i datum: ____________________\nPotpis: ____________________",
-    "link": "makeborne.com/go/g-cafe-name | fallback: https://makeborne.com/?utm_source=g-cafe-name&utm_medium=guerrilla&utm_campaign=launch-2026-10"
    },
    {
     "type": "ads",
@@ -1888,7 +1888,7 @@
    },
    {
     "type": "launch",
-    "what": "Batch-film 10 videos for week 2 (V11, V13, V14, V15, V16, V18, V30, V44 and two V04/V29 episodes).",
+    "what": "Batch-film the rest of week 2 (V13, V14, V15, V16, V18, V30 and two V04/V29 episodes). V11 and V44 were filmed on Mon 2 Nov, because they post today.",
     "owner": "Founder"
    },
    {
@@ -1937,7 +1937,7 @@
     "what": "12:00 LinkedIn: Bosnian post for the local network (same day as the press pitch). Also paste it on your personal Facebook profile.",
     "owner": "Founder",
     "doc": "hype-playbook",
-    "copy": "Prošle sedmice smo iz Sarajeva lansirali Makeborne.\n\nNapišete jedan kratak opis (brif), a Makeborne napravi gotovu web stranicu, prezentaciju koja se otvara u PowerPointu ili dizajniranu e-knjigu. Klijentu pošaljete link: komentariše direktno na stranici, bez pravljenja računa, i klikne Odobri.\n\nPravimo ga ovdje, a prodajemo cijelom svijetu. Paketi su od 20 dolara mjesečno, samo plaćeni, namjerno. Ako ne iskoristite kredite, dobijete puni povrat novca.\n\nAko radite za klijente, napišite mi u komentaru šta vam najviše oduzima vrijeme. Iz toga najviše učimo.",
+    "copy": "Prošle sedmice smo iz Sarajeva lansirali Makeborne.\n\nNapišete jedan opis (brif), a Makeborne napravi gotovu web stranicu, prezentaciju koja se otvara u PowerPointu ili dizajniranu e-knjigu. Klijentu pošaljete link: komentariše direktno na stranici, bez pravljenja računa, i klikne Odobri.\n\nPravimo ga ovdje, a prodajemo cijelom svijetu. Paketi su od 20 dolara mjesečno, samo plaćeni, namjerno. Ako ne iskoristite kredite, dobijete puni povrat novca.\n\nAko radite za klijente, napišite mi u komentaru šta vam najviše oduzima vrijeme. Iz toga najviše učimo.",
     "link": "makeborne.com/go/li-1103-bs | fallback: https://makeborne.com/?utm_source=linkedin&utm_medium=organic&utm_campaign=launch-2026-10&utm_content=li-1103-bs"
    },
    {
@@ -2400,7 +2400,7 @@
     "what": "18:00 Facebook groups: Post only in groups where an admin said yes (English or Bosnian copy). One group per hour, each text slightly different.",
     "owner": "Founder",
     "doc": "hype-playbook",
-    "copy": "Hi all, I'm the founder of Makeborne (the admin OK'd this post).\n\nIt turns one brief into a finished website, deck or ebook, and your client approves the site through a link, no account needed. Real build times from our test runs: website 2:07, deck 0:43, book 1:23.\n\nPlans start at $20 a month. If you do client work, I'd love your honest feedback, especially the critical kind: [link]\n\n[Bosnian version]\nPozdrav! Ja sam osnivač Makeborne-a i admin je odobrio ovu objavu.\n\nU Sarajevu smo napravili alat koji od jednog kratkog opisa (brifa) napravi gotovu web stranicu, prezentaciju ili e-knjigu. Web stranicu klijent odobri preko linka, bez pravljenja računa.\n\nPaketi su od 20 dolara mjesečno. Ako radite za klijente, rado bih čuo vaše mišljenje, posebno kritike: [link]",
+    "copy": "Hi all, I'm the founder of Makeborne (the admin OK'd this post).\n\nIt turns one brief into a finished website, deck or ebook, and your client approves the site through a link, no account needed. Real build times from our test runs: website 2:07, deck 0:43, book 1:23.\n\nPlans start at $20 a month. If you do client work, I'd love your honest feedback, especially the critical kind: [link]\n\n[Bosnian version]\nPozdrav! Ja sam osnivač Makeborne-a i admin je odobrio ovu objavu.\n\nU Sarajevu smo napravili alat koji od jednog opisa (brifa) napravi gotovu web stranicu, prezentaciju ili e-knjigu. Web stranicu klijent odobri preko linka, bez pravljenja računa.\n\nPaketi su od 20 dolara mjesečno. Ako radite za klijente, rado bih čuo vaše mišljenje, posebno kritike: [link]",
     "link": "makeborne.com/go/com-fb-1105 | fallback: https://makeborne.com/?utm_source=community-facebook&utm_medium=organic&utm_campaign=launch-2026-10&utm_content=com-fb-1105"
    },
    {
@@ -2475,7 +2475,7 @@
     "account": "Makeborne brand Instagram (professional)",
     "contentId": "V15",
     "time": "20:15 CET (Europe/Sarajevo, UTC+1)",
-    "notes": "Posting-time test: this Reel goes out at 20:15 CET instead of the usual 13:15 (Wed 4 and Fri 6 Nov, moved from Tue 3 / Wed 4 Nov with the launch; compare reach with the 13:15 Reels at the Sunday review on 8 Nov: 96 h for Wed 4, 48 h for Fri 6). HIGGSFIELD VERSION: HF05, HF06, HF04 in the HyperFrames slots; 'AI-generated scene' label on screen; TikTok AI-generated content on / YouTube altered or synthetic = Yes / Meta AI label. Native re-edit of the same-week piece (new cover/caption, no TikTok watermark). CTA: 'Comment BOOK' (keyword DM t21 returns the /go/ link, 3 briefs, a 30 s uncut build and the refund line).",
+    "notes": "Posting-time test: this Reel goes out at 20:15 CET instead of the usual 13:15 (the pair is Fri 6 and Mon 9 Nov, moved with the launch; compare 24-hour reach with the 13:15 Reels: a first read at the Sunday review on 8 Nov, the full result on 15 Nov). HIGGSFIELD VERSION: HF05, HF06, HF04 in the HyperFrames slots; 'AI-generated scene' label on screen; TikTok AI-generated content on / YouTube altered or synthetic = Yes / Meta AI label. Native re-edit of the same-week piece (new cover/caption, no TikTok watermark). CTA: 'Comment BOOK' (keyword DM t21 returns the /go/ link, 3 briefs, a 30 s uncut build and the refund line).",
     "tag": "live",
     "slot": "re-edit",
     "link": "makeborne.com/go/ig-v15",
@@ -2632,7 +2632,7 @@
    },
    {
     "type": "guerrilla",
-    "what": "15:00 Guerrilla: Dry run at the S7 venue; print 20 laminated A5 cards with each shop's QR code. Cost: 40 KM = $22.88, owner decision OD1 (owner decision).",
+    "what": "15:00 Guerrilla: Dry run at the S7 venue; print 20 laminated A5 cards with each shop's QR code. Cost: 40 KM = $22.88, approved, OD1.",
     "owner": "Founder",
     "doc": "bosnia-guerrilla-press",
     "link": "makeborne.com/go/g-kazandziluk | fallback: https://makeborne.com/?utm_source=g-kazandziluk&utm_medium=guerrilla&utm_campaign=launch-2026-10"
@@ -2711,7 +2711,7 @@
    },
    {
     "type": "guerrilla",
-    "what": "10:00 Guerrilla: Run S7 'Kazandžiluk online' 10:00-16:00: each craftsman tells, you write the brief, build with the stopwatch, the craftsman approves every line before publishing. Every craftsman who comes gets a site; no selection. Move the war-room Saturday items to the evening. Cost: 30 KM = $17.16, owner decision OD1; about 20 gifted builds from the D14 demo-build line, not cash (owner decision).",
+    "what": "10:00 Guerrilla: Run S7 'Kazandžiluk online' 10:00-16:00: each craftsman tells, you write the brief, build with the stopwatch, the craftsman approves every line before publishing. Every craftsman who comes gets a site; no selection. Move the war-room Saturday items to the evening. Cost: 30 KM = $17.16, approved, OD1; about 20 gifted builds from the D14 demo-build line, not cash.",
     "owner": "Founder",
     "doc": "bosnia-guerrilla-press",
     "link": "makeborne.com/go/g-kazandziluk | fallback: https://makeborne.com/?utm_source=g-kazandziluk&utm_medium=guerrilla&utm_campaign=launch-2026-10"
@@ -2794,7 +2794,7 @@
     "account": "Makeborne brand TikTok (business account)",
     "contentId": "V31",
     "time": "21:30 CET (Europe/Sarajevo, UTC+1)",
-    "notes": "Founder Day 14 episode (extra TikTok this week).",
+    "notes": "Founder Day 11 episode (extra TikTok this week).",
     "tag": "live",
     "slot": "original",
     "link": "makeborne.com/go/tt-v31",
@@ -3037,7 +3037,7 @@
    },
    {
     "type": "guerrilla",
-    "what": "11:00 Guerrilla: S9: board a westbound tram at the Baščaršija stop with a consenting shop's brief, build on the laptop, walk into the shop at Marijin Dvor and show the live site. Handheld 9:16, no other passenger identifiable. Cost: 4 KM = $2.29, owner decision OD1; about 1 gifted build from the D14 demo-build line, not cash (owner decision).",
+    "what": "11:00 Guerrilla: S9: board a westbound tram at the Baščaršija stop with a consenting shop's brief, build on the laptop, walk into the shop at Marijin Dvor and show the live site. Handheld 9:16, no other passenger identifiable. Cost: 4 KM = $2.29, approved, OD1; about 1 gifted build from the D14 demo-build line, not cash.",
     "owner": "Founder",
     "doc": "bosnia-guerrilla-press",
     "link": "makeborne.com/go/g-tram | fallback: https://makeborne.com/?utm_source=g-tram&utm_medium=guerrilla&utm_campaign=launch-2026-10"
@@ -3538,7 +3538,7 @@
    },
    {
     "type": "outreach",
-    "what": "12:00 Community: S8 'Brief za dobro' workshop (90 minutes) at the university that agreed: every team's brief is built live; associations keep their site if they want it; certificates of participation, no winners or prizes. Cost: 15 KM = $8.58, owner decision OD1; about 10 gifted builds from the D14 demo-build line, not cash (owner decision).",
+    "what": "12:00 Community: S8 'Brief za dobro' workshop (90 minutes) at the university that agreed: every team's brief is built live; associations keep their site if they want it; certificates of participation, no winners or prizes. Cost: 15 KM = $8.58, approved, OD1; about 10 gifted builds from the D14 demo-build line, not cash.",
     "owner": "Founder",
     "doc": "bosnia-guerrilla-press",
     "copy": "Studentska radionica „Brief za dobro“\n\nStudenti u timovima pišu brief za stvarno udruženje ili malu firmu iz Sarajeva kojoj treba bolja web stranica. Makeborne pravi stranicu od briefa svakog tima, uživo, pred svima. Svako udruženje dobije svoju stranicu ako je želi.\n\nNema pobjednika, nagrada ni žrebanja. Studenti dobiju potvrdu o učešću.\n\nTrajanje: 90 minuta. Za fakultet nema troškova.\nPotrebno: sala, projektor, internet i saglasnost udruženja čija se stranica pravi.",
@@ -4221,7 +4221,7 @@
     "account": "Founder Product Hunt (self-hunt, account 1+ week old)",
     "contentId": "C40",
     "time": "09:01 CET (Europe/Sarajevo, UTC+1)",
-    "notes": "MAIN PH LAUNCH (beat:images), self-hunted, maker first comment + real video (V50 16:9), gallery C40 (5 images). PH100 code (ga10), /launch/images page (ga11). No upvote asks, no vote swaps, no paid hunters. If the go/no-go found <400 committed supporters, move to Sat 21 Nov.",
+    "notes": "MAIN PH LAUNCH (beat:images), self-hunted, maker first comment + real video (V50 16:9), gallery C40 (5 images). PH100 code only if ga10 is live and tested by Fri 13 Nov (hype playbook decision 5); /launch/images page (ga11). No upvote asks, no vote swaps, no paid hunters. With fewer than 400 committed supporters, launch on Sun 15 Nov 09:01 instead (hype playbook §4.3).",
     "tag": "beat:images",
     "slot": "beat-placeholder",
     "trigger": "Only after beat-images has passed the six-box gate (plan section 9) and its Launch Week has run; until then post fallbackContentId (or nothing if null). Dates are placeholders that move with the beat.",
@@ -4239,7 +4239,7 @@
   "actions": [
    {
     "type": "launch",
-    "what": "IMAGES BEAT (placeholder): PH main launch 09:01 CET from the founder's account; Uneed slot runs today; PH100 code live; /launch/images live; t15 notices to opted-in supporters (feedback, never upvotes); changelog email for the beat.",
+    "what": "IMAGES BEAT (placeholder): PH main launch 09:01 CET from the founder's account; Uneed slot runs today; PH100 code live only if ga10 passed by Fri 13 Nov (hype playbook decision 5); /launch/images live; t15 notices to opted-in supporters (feedback, never upvotes); changelog email for the beat.",
     "budgetLineId": "b6",
     "owner": "Founder"
    },
@@ -5517,7 +5517,7 @@
   "actions": [
    {
     "type": "launch",
-    "what": "DAY-30 PUBLIC NUMBERS (beat-day30): MRR, payers, refunds, AI cost per build, lessons; Indie Hackers, LinkedIn (C38 doc), X; redacted Whop screenshots.",
+    "what": "DAY-30 PUBLIC NUMBERS (beat-day30): MRR, payers, refunds, AI cost per build, lessons; Indie Hackers, LinkedIn (C38 doc), X; redacted Whop screenshots. Launch was Thu 29 Oct, so today is day 28: say \"Day 28\" or \"4 weeks in\" in public, never \"Day 30\".",
     "owner": "Founder"
    },
    {
@@ -8745,7 +8745,7 @@
   "weekday": "Mon",
   "week": 9,
   "phase": "phase-2",
-  "focus": "Week 9: Half cadence: banked content, customer calls continue, day-60 note (Thu 24 Dec, day 58). Batch-film day + client-work and comment-reply posts.",
+  "focus": "Week 9: Half cadence: banked content, customer calls continue, day-60 note (Thu 24 Dec, day 57). Batch-film day + client-work and comment-reply posts.",
   "posts": [
    {
     "channel": "TikTok",
@@ -8846,7 +8846,7 @@
   "weekday": "Tue",
   "week": 9,
   "phase": "phase-2",
-  "focus": "Week 9: Half cadence: banked content, customer calls continue, day-60 note (Thu 24 Dec, day 58). Deck day.",
+  "focus": "Week 9: Half cadence: banked content, customer calls continue, day-60 note (Thu 24 Dec, day 57). Deck day.",
   "posts": [
    {
     "channel": "Instagram carousel",
@@ -8921,7 +8921,7 @@
   "weekday": "Wed",
   "week": 9,
   "phase": "phase-2",
-  "focus": "Week 9: Half cadence: banked content, customer calls continue, day-60 note (Thu 24 Dec, day 58). Founder 'Day N' + speedrun. Beat placeholder(s) today: beat:images (each post has a live fallback).",
+  "focus": "Week 9: Half cadence: banked content, customer calls continue, day-60 note (Thu 24 Dec, day 57). Founder 'Day N' + speedrun. Beat placeholder(s) today: beat:images (each post has a live fallback).",
   "posts": [
    {
     "channel": "TikTok",
@@ -9001,7 +9001,7 @@
   "weekday": "Thu",
   "week": 9,
   "phase": "phase-2",
-  "focus": "Week 9: Half cadence: banked content, customer calls continue, day-60 note (Thu 24 Dec, day 58). Batch-film day + book post + carousel.",
+  "focus": "Week 9: Half cadence: banked content, customer calls continue, day-60 note (Thu 24 Dec, day 57). Batch-film day + book post + carousel.",
   "posts": [
    {
     "channel": "X",
@@ -9041,7 +9041,7 @@
   "actions": [
    {
     "type": "analysis",
-    "what": "Day 58 (24 Dec): draft the day-60 note; unspent reserve (b9) moves to the best source by CAC; loops share check (exit gate 15%).",
+    "what": "Day 57 (24 Dec): draft the day-60 note; unspent reserve (b9) moves to the best source by CAC; loops share check (exit gate 15%).",
     "budgetLineId": "b9",
     "owner": "Owner"
    },
@@ -9064,7 +9064,7 @@
   "weekday": "Fri",
   "week": 9,
   "phase": "phase-3",
-  "focus": "Week 9: Half cadence: banked content, customer calls continue, day-60 note (Thu 24 Dec, day 58). Client-work post, winner re-cut, boost/payout decisions.",
+  "focus": "Week 9: Half cadence: banked content, customer calls continue, day-60 note (Thu 24 Dec, day 57). Client-work post, winner re-cut, boost/payout decisions.",
   "posts": [
    {
     "channel": "TikTok",
@@ -9125,7 +9125,7 @@
   "weekday": "Sat",
   "week": 9,
   "phase": "phase-3",
-  "focus": "Week 9: Half cadence: banked content, customer calls continue, day-60 note (Thu 24 Dec, day 58). Carousel + light X; no TikTok.",
+  "focus": "Week 9: Half cadence: banked content, customer calls continue, day-60 note (Thu 24 Dec, day 57). Carousel + light X; no TikTok.",
   "posts": [
    {
     "channel": "Instagram Reels",
@@ -9160,7 +9160,7 @@
   "weekday": "Sun",
   "week": 9,
   "phase": "phase-3",
-  "focus": "Week 9: Half cadence: banked content, customer calls continue, day-60 note (Thu 24 Dec, day 58). Sunday review ritual + winner reel + weekly numbers.",
+  "focus": "Week 9: Half cadence: banked content, customer calls continue, day-60 note (Thu 24 Dec, day 57). Sunday review ritual + winner reel + weekly numbers.",
   "posts": [
    {
     "channel": "TikTok",
@@ -12199,13 +12199,14 @@
     "owner": "Founder"
    }
   ],
-  "kpiCheck": "Week 13 scorecard vs base (kpis.json): qualified visits 5500, gross paid 55, net paid 47, activated payers 33, cumulative gross 500, active subs 385, MRR $14198, loop share 20%, owned posts 25-30, creators active 22, CAC <=$50. Guardrails: refunds <=15% (per-source brake 20%), attribution coverage >=90% from week 2, activated >=60% of net payers (weeks 1-4) / >=70% after, IG DM keyword replies >=3 per 1,000 views, MRR below 80% of target two Sundays running -> re-forecast. (Week 13 ends Sun 24 Jan, day 91, where the day-90 review runs.)"
+  "kpiCheck": "Week 13 scorecard vs base (kpis.json): qualified visits 5500, gross paid 55, net paid 47, activated payers 33, cumulative gross 500, active subs 385, MRR $14198, loop share 20%, owned posts 25-30, creators active 22, CAC <=$50. Guardrails: refunds <=15% (per-source brake 20%), attribution coverage >=90% from week 2, activated >=60% of net payers (weeks 1-4) / >=70% after, IG DM keyword replies >=3 per 1,000 views, MRR below 80% of target two Sundays running -> re-forecast. (Week 13 runs to Tue 26 Jan, day 90, when the day-90 review runs.)"
  },
  {
   "date": "2027-01-24",
   "day": 88,
   "weekday": "Sun",
   "week": 13,
+  "phase": "phase-3",
   "focus": "Week 13: the last Sunday review and the final day-90 report prep (the report posts Tue 26 Jan). No new posts.",
   "posts": [],
   "actions": [

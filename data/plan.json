@@ -328,7 +328,7 @@
         "usd": 136,
         "when": "Weeks 3-8, released only by the scale rule",
         "channel": "reserve",
-        "killRule": "Unspent on 24 Dec (day 58) moves to the best source",
+        "killRule": "Unspent on 24 Dec (day 57) moves to the best source",
         "scaleRule": "Released when a source shows CAC <=$50 over 3+ net payers"
       }
     ],
@@ -2057,6 +2057,16 @@
         "time": "21:01",
         "text": "Post the reveal Story S8, then the C15 Story at 21:05 (\"Reply CLIENT\")",
         "how": "S8: trim the recording to 15 s, link sticker makeborne.com, text \"We're live.\" C15: link sticker /go/ig-c15-client, or the long makeborne.com link until /go/ is live."
+      },
+      {
+        "time": "21:03",
+        "text": "Check the plans page: $20 / $49 / $99 a month, 300 / 750 / 1,550 credits, Yearly $192 / $470.40 / $950.40",
+        "how": "Open makeborne.com/billing signed out on the phone. If any number or the Yearly switch differs, quote no numbers tonight and tell Codex."
+      },
+      {
+        "time": "21:05",
+        "text": "Owner: say \"send invites\" for the waitlist email from admin@makeborne.com",
+        "how": "Only once makeborne.com is open signed out. One email per waitlist address, each with its own unsubscribe link. Nothing goes out before the owner says it."
       },
       {
         "time": "21:10",

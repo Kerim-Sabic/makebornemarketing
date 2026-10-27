@@ -24,7 +24,7 @@
 3. **TV and radio:** pitch morning shows on Thu 29 Oct for 2-6 Nov. The hook is a site built live in the studio: the host gives the brief.
 4. **Two anchor stunts:** a press demo where **journalists give the brief** (Fri 30 Oct 10:30), and **"Kazandžiluk online"**, websites for Baščaršija craftsmen in one day (Sat 7 Nov).
 5. **No street stunts in the window.** Municipal public-space permits take 20-60 days ([Stari Grad, 20 days](https://starigrad.ba/datoteke/uploads/2025/10/11-ODLUKA-O-IZMJENAMA-I-DOPUNAMA-ODLUKE-O-PRIVREMENOM-KORISTENJU-JAVNIH-POVRSINA-NA-PODRUCJU-OSGS.pdf); [Centar, decision within 30 days](https://www.centar.ba/upload/modules/documents/2026/dac45103cd5b5b26a7814a0e880ceaed.pdf); [Novo Sarajevo, 60 days](https://ereg.novosarajevo.ba/view/98/Izdavanje-odobrenja-za-privremeno-korištenje-javnih-površina-na-području-Općine-Novo-Sarajevo,-te-utvrđivanje-naknade-za-korištenje-iste)). Every stunt runs **indoors, on private premises, with the owner's written yes**.
-6. **Money:** 214 KM ($122.42) core, up to 354 KM ($202.50) with options, plus about 45 extra builds from the demo-build line D14 (cost in the owner's private notes). Owner decisions in §8. Rate used: **1 USD = 1.748150 KM** ([CBBH, 27 Oct 2026](https://www.cbbh.ba/CurrencyExchange/)).
+6. **Money:** 214 KM ($122.42) core, up to 354 KM ($202.50) with options, plus about 45 extra builds from the demo-build line D14 (cost in the owner's private notes). Decisions settled in §8 (owner, 27 Oct). Rate used: **1 USD = 1.748150 KM** ([CBBH, 27 Oct 2026](https://www.cbbh.ba/CurrencyExchange/)).
 
 **The week you are launching into:** BiH held general elections on 4 Oct 2026 and government formation still leads the front pages ([Wikipedia](https://en.wikipedia.org/wiki/2026_Bosnian_general_election); N1, 26 Oct). FTV is celebrating its 25th anniversary from 27 Oct to 1 Nov with special programming ([federalna.ba](https://www.federalna.ba/dobro-jutro-bosno-i-hercegovino-27102026-nnii2)). A cloud and AI conference by allOps runs on 29 Oct ([Poslovne novine, 26 Oct](https://poslovnenovine.ba/)). So: aim at the **tech and business sections** and the **morning shows**, not the front page, and put the TV-friendly event on **Friday morning**.
 
@@ -37,13 +37,13 @@
 | Rank | Angle | Bosnian headline (ijekavica, Latin) | English headline | Why this rank |
 |---|---|---|---|---|
 | 1 | **Local company, global product.** A Sarajevo company launches an AI tool sold worldwide, in a race led by Silicon Valley and Stockholm. | **Iz Sarajeva za cijeli svijet: domaća firma lansira AI alat koji od jednog briefa pravi web stranicu za nekoliko minuta** · Alt: **Sarajevski Makeborne ulazi u utakmicu sa Silicijskom dolinom i Stockholmom** | **From Sarajevo to the world: local company launches an AI tool that turns one brief into a website in minutes** · Alt: **Sarajevo's Makeborne joins the race with Silicon Valley and Stockholm** | BiH outlets favour "local wins abroad" stories: international programmes, foreign investors, global markets (Klix Startupi, 9 Oct 2026, [link](https://www.klix.ba/biznis/startupi/osam-startupa-iz-bih-uslo-u-novu-generaciju-techstars-founder-catalyst-programa/261009124)). It works on launch day. |
-| 2 | **The stopwatch test.** Journalists give the brief and time the build themselves. | **Četiri minute od briefa do web stranice: sarajevski AI alat testiran uživo pred novinarima** (use only the time seen live: "Za X minuta...") | **Four minutes from brief to website: Sarajevo AI tool tested live in front of journalists** | It turns a claim into something the reporter saw. TV gets pictures. N1's morning show had AI guests on 14 and 17 Oct 2026 ([N1](https://n1info.ba/magazin/tehnologija/sarajevo-naredna-dva-dana-centar-umjetne-inteligencije-stizu-strucnjaci-svjetskih-tehnoloskih-giganata)). Runs Fri 30 Oct. |
+| 2 | **The stopwatch test.** Journalists give the brief and time the build themselves. | **Za X minuta od briefa do web stranice: sarajevski AI alat testiran uživo pred novinarima** (X = the time seen live) | **X minutes from brief to website: Sarajevo AI tool tested live in front of journalists** | It turns a claim into something the reporter saw. TV gets pictures. N1's morning show had AI guests on 14 and 17 Oct 2026 ([N1](https://n1info.ba/magazin/tehnologija/sarajevo-naredna-dva-dana-centar-umjetne-inteligencije-stizu-strucnjaci-svjetskih-tehnoloskih-giganata)). Runs Fri 30 Oct. |
 | 3 | **Tradition meets AI.** Baščaršija craftsmen get websites in minutes, as a launch gift. | **Kazandžiluk online: zanatlije s Baščaršije dobile web stranice za nekoliko minuta** | **Kazandžiluk goes online: Baščaršija craftsmen get websites in minutes** | The most visual story and the best TV fit, but it needs a week of preparation. It is the second news beat (Sat 7 Nov). |
 
 **Bonus headline (only if it really happens):** **Brže od ćevapa: web stranica za ćevabdžinicu gotova prije nego što je stigao tanjir** / **Faster than ćevapi: a website for a Baščaršija grill was live before the plate arrived.** If the ćevapi win, publish that instead. Never stage the result.
 
 **Words to use and avoid**
-- Say "jedan brief" (one brief), or "jedan brief, odnosno kratak pisani opis". Every real build came from a 500-1,000-character brief, so never call it "jedna rečenica".
+- Say "jedan brief" (one brief), or "jedan brief, odnosno pisani opis". Never "kratak" (short). Every real build came from a 500-1,000-character brief, so never call it "jedna rečenica".
 - Say "ulazi u utakmicu" (joins the race). Never "bolji od Lovablea" (better than Lovable), "bosanski Lovable" or "klon".
 - Say "u našim testnim izradama" (in our test runs) before any build time.
 - Say "postoje samo plaćeni paketi" (paid plans only). Never use "besplatno", "probni period", "free" or "trial", even to say Makeborne doesn't have them.
@@ -210,7 +210,7 @@ Keep these for the day-30 numbers on Wed 25 Nov (template t17), as the plan says
 
 ## 3. Press release and press kit
 
-The owner is a native speaker: read every Bosnian line aloud once before sending. Fill every [bracket] or delete the line.
+The owner is a native speaker: read every Bosnian line aloud once before sending. The filled, ready-to-send versions (founder name, phone, press-kit link) are in the owner's private notes: send those. If the press demo moves from the office to a café, change the venue line in `c01`-`c05`.
 
 ### 3.1 Embargoed release, Bosnian (Thu 29 Oct, 08:30, list EMB)
 
@@ -223,22 +223,22 @@ EMBARGO: molimo da ne objavljujete prije četvrtka, 29. oktobra 2026. u 21:00.
 
 Sarajevska firma lansira Makeborne: od jednog briefa do web stranice za nekoliko minuta
 
-Sarajevo, 29. oktobar 2026. Sarajevska firma ZORBY&CO D.O.O. večeras u 21:00 pokreće Makeborne (makeborne.com), alat zasnovan na umjetnoj inteligenciji. Korisnik napiše jedan brief, odnosno kratak pisani opis onoga što mu treba. Makeborne od tog briefa napravi gotovu web stranicu, dizajniranu e-knjigu ili prezentaciju.
+Sarajevo, 29. oktobar 2026. Sarajevska firma ZORBY&CO D.O.O. večeras u 21:00 pokreće Makeborne (makeborne.com), alat zasnovan na umjetnoj inteligenciji. Korisnik napiše jedan brief, odnosno pisani opis onoga što mu treba. Makeborne od tog briefa napravi gotovu web stranicu, dizajniranu e-knjigu ili prezentaciju.
 
-U našim testnim izradama web stranica je bila gotova za dvije do četiri minute. Prezentacija je bila gotova za 43 sekunde, a e-knjiga za minutu i 23 sekunde. Web stranica se objavljuje na Makeborne adresi i odmah je dostupna na internetu.
+U našim testnim izradama web stranica je bila gotova za 2 minute i 7 sekundi. Prezentacija je bila gotova za 43 sekunde, a e-knjiga za minutu i 23 sekunde. Web stranica se objavljuje na Makeborne adresi i odmah je dostupna na internetu.
 
 Makeborne se od prvog dana prodaje kupcima u cijelom svijetu. Postoje samo plaćeni paketi: Create za 20, Studio za 49 i Scale za 99 američkih dolara mjesečno.
 
 Najpoznatiji alati ove vrste dolaze iz Silicijske doline i Stockholma, gdje je sjedište švedskog Lovablea. Makeborne u tu utakmicu ulazi iz Sarajeva.
 
-„[CITAT OSNIVAČA: vlasnik potvrđuje ili mijenja prije slanja] Makeborne smo napravili u Sarajevu, za ljude kojima treba gotov posao, a ne još jedan program koji moraju učiti. Napišete jedan brief i za nekoliko minuta imate web stranicu, prezentaciju ili knjigu. Želimo pokazati da se softver za cijeli svijet može praviti i odavde“, kaže [ime i prezime], osnivač Makebornea.
+„Makeborne smo napravili u Sarajevu, za ljude kojima treba gotov posao, a ne još jedan program koji moraju učiti. Napišete jedan brief i za nekoliko minuta imate web stranicu, prezentaciju ili knjigu. Želimo pokazati da se softver za cijeli svijet može praviti i odavde“, kaže [ime i prezime], osnivač Makebornea.
 
 Kako Makeborne radi:
 1. Korisnik napiše jedan brief: za koga je stranica, šta nudi i kakav utisak treba ostaviti.
 2. Makeborne napravi web stranicu, prezentaciju ili e-knjigu.
 3. Korisnik pregleda rezultat i objavi stranicu na Makeborne adresi.
 
-Testirajte Makeborne uživo: u petak, 30. oktobra u 10:30, u [naziv mjesta, adresa], zadajte nam svoj brief. Stranica će nastati pred vama, sa štopericom na ekranu.
+Testirajte Makeborne uživo: u petak, 30. oktobra u 10:30, u našem uredu na Vilsonovom šetalištu 10, zadajte nam svoj brief. Stranica će nastati pred vama, sa štopericom na ekranu.
 
 O firmi
 ZORBY&CO D.O.O. je firma iz Sarajeva, sa sjedištem na Vilsonovom šetalištu 10. Razvija Makeborne i prodaje ga kupcima širom svijeta.
@@ -247,7 +247,7 @@ Napomene za urednike
 - Fotografije, snimci ekrana i činjenice: [link na press kit]
 - Cijene u KM: otprilike 35, 86 i 173 KM mjesečno (kurs CBBiH od 27. 10. 2026), plus porez gdje se primjenjuje.
 - Dizajni skriveni iza odbrojavanja na makeborne.com nisu napravljeni u Makeborneu. Molimo da ih ne predstavljate kao rezultat alata.
-- Kontakt za medije: [ime i prezime], [e-mail], [telefon]
+- Kontakt za medije: [ime i prezime], admin@makeborne.com, [telefon]
 ```
 
 ### 3.2 Post-launch release, Bosnian (Thu 29 Oct, 21:05, lists BIH; HR and RS get the adapted versions in §3.4)
@@ -261,22 +261,22 @@ Za objavu odmah
 
 Sarajevska firma lansirala Makeborne: od jednog briefa do web stranice za nekoliko minuta
 
-Sarajevo, [datum slanja]. Sarajevska firma ZORBY&CO D.O.O. u četvrtak, 29. oktobra u 21:00 pokrenula je Makeborne (makeborne.com), alat zasnovan na umjetnoj inteligenciji. Korisnik napiše jedan brief, odnosno kratak pisani opis onoga što mu treba. Makeborne od tog briefa napravi gotovu web stranicu, dizajniranu e-knjigu ili prezentaciju.
+Sarajevo, [datum slanja]. Sarajevska firma ZORBY&CO D.O.O. u četvrtak, 29. oktobra u 21:00 pokrenula je Makeborne (makeborne.com), alat zasnovan na umjetnoj inteligenciji. Korisnik napiše jedan brief, odnosno pisani opis onoga što mu treba. Makeborne od tog briefa napravi gotovu web stranicu, dizajniranu e-knjigu ili prezentaciju.
 
-U našim testnim izradama web stranica je bila gotova za dvije do četiri minute. Prezentacija je bila gotova za 43 sekunde, a e-knjiga za minutu i 23 sekunde. Web stranica se objavljuje na Makeborne adresi i odmah je dostupna na internetu.
+U našim testnim izradama web stranica je bila gotova za 2 minute i 7 sekundi. Prezentacija je bila gotova za 43 sekunde, a e-knjiga za minutu i 23 sekunde. Web stranica se objavljuje na Makeborne adresi i odmah je dostupna na internetu.
 
 Makeborne se od prvog dana prodaje kupcima u cijelom svijetu. Postoje samo plaćeni paketi: Create za 20, Studio za 49 i Scale za 99 američkih dolara mjesečno.
 
 Najpoznatiji alati ove vrste dolaze iz Silicijske doline i Stockholma, gdje je sjedište švedskog Lovablea. Makeborne u tu utakmicu ulazi iz Sarajeva.
 
-„[CITAT OSNIVAČA: vlasnik potvrđuje ili mijenja prije slanja] Makeborne smo napravili u Sarajevu, za ljude kojima treba gotov posao, a ne još jedan program koji moraju učiti. Napišete jedan brief i za nekoliko minuta imate web stranicu, prezentaciju ili knjigu. Želimo pokazati da se softver za cijeli svijet može praviti i odavde“, kaže [ime i prezime], osnivač Makebornea.
+„Makeborne smo napravili u Sarajevu, za ljude kojima treba gotov posao, a ne još jedan program koji moraju učiti. Napišete jedan brief i za nekoliko minuta imate web stranicu, prezentaciju ili knjigu. Želimo pokazati da se softver za cijeli svijet može praviti i odavde“, kaže [ime i prezime], osnivač Makebornea.
 
 Kako Makeborne radi:
 1. Korisnik napiše jedan brief: za koga je stranica, šta nudi i kakav utisak treba ostaviti.
 2. Makeborne napravi web stranicu, prezentaciju ili e-knjigu.
 3. Korisnik pregleda rezultat i objavi stranicu na Makeborne adresi.
 
-Testirajte Makeborne uživo: u petak, 30. oktobra u 10:30, u [naziv mjesta, adresa], zadajte nam svoj brief. Stranica će nastati pred vama, sa štopericom na ekranu. [Obrišite ovaj pasus ako šaljete nakon petka u 11:30.]
+Testirajte Makeborne uživo: u petak, 30. oktobra u 10:30, u našem uredu na Vilsonovom šetalištu 10, zadajte nam svoj brief. Stranica će nastati pred vama, sa štopericom na ekranu. [Obrišite ovaj pasus ako šaljete nakon petka u 11:30.]
 
 O firmi
 ZORBY&CO D.O.O. je firma iz Sarajeva, sa sjedištem na Vilsonovom šetalištu 10. Razvija Makeborne i prodaje ga kupcima širom svijeta.
@@ -284,7 +284,7 @@ ZORBY&CO D.O.O. je firma iz Sarajeva, sa sjedištem na Vilsonovom šetalištu 10
 Napomene za urednike
 - Fotografije, snimci ekrana i činjenice: [link na press kit]
 - Cijene u KM: otprilike 35, 86 i 173 KM mjesečno (kurs CBBiH od 27. 10. 2026), plus porez gdje se primjenjuje.
-- Kontakt za medije: [ime i prezime], [e-mail], [telefon]
+- Kontakt za medije: [ime i prezime], admin@makeborne.com, [telefon]
 ```
 
 ### 3.3 English release (Sarajevo Times; Kapital.mk; any outlet that asks)
@@ -302,22 +302,22 @@ Sarajevo company launches Makeborne: from one brief to a finished website in min
 
 Sarajevo, 29 October 2026. ZORBY&CO D.O.O., a company from Sarajevo, Bosnia and Herzegovina, launches Makeborne (makeborne.com) tonight at 21:00 CET.
 [Post-launch: "...launched Makeborne (makeborne.com) on Thursday 29 October at 21:00 CET."]
-Makeborne is an AI tool. You write one brief: a short written description of what you need. Makeborne turns it into a finished website, a designed ebook or a slide deck.
+Makeborne is an AI tool. You write one brief: a written description of what you need. Makeborne turns it into a finished website, a designed ebook or a slide deck.
 
-In our test runs, a website was ready in about two to four minutes, a deck in 43 seconds and a book in 1 minute 23 seconds. Websites are published on a Makeborne address and are online straight away.
+In our test runs, a website was ready in 2 minutes 7 seconds, a deck in 43 seconds and a book in 1 minute 23 seconds. Websites are published on a Makeborne address and are online straight away.
 
 Makeborne sells worldwide from day one. There are paid plans only: Create at $20, Studio at $49 and Scale at $99 a month, plus tax where applicable.
 
 The best-known tools of this kind come from Silicon Valley and Stockholm, home of Sweden's Lovable. Makeborne joins that race from Sarajevo.
 
-"[FOUNDER QUOTE: owner confirms or rewrites before sending] We built Makeborne in Sarajevo for people who need finished work, not another tool to learn. Write one brief, and in a few minutes you have a website, a deck or a book. We want to show that software for the whole world can be made here too," says [first and last name], founder of Makeborne.
+"We built Makeborne in Sarajevo for people who need finished work, not another tool to learn. Write one brief, and in a few minutes you have a website, a deck or a book. We want to show that software for the whole world can be made here too," says [first and last name], founder of Makeborne.
 
 How it works:
 1. Write one brief: who the site is for, what you offer and the impression it should leave.
 2. Makeborne makes the website, deck or ebook.
 3. Review the result and publish the site on a Makeborne address.
 
-Test it live: on Friday 30 October at 10:30, at [venue, address], Sarajevo, give us your brief and watch the site being built, with a stopwatch on screen.
+Test it live: on Friday 30 October at 10:30, at our office, Vilsonovo šetalište 10, Sarajevo, give us your brief and watch the site being built, with a stopwatch on screen.
 
 About ZORBY&CO D.O.O.
 ZORBY&CO D.O.O. is a company from Sarajevo, at Vilsonovo šetalište 10. It builds Makeborne and sells it to customers worldwide.
@@ -325,7 +325,7 @@ ZORBY&CO D.O.O. is a company from Sarajevo, at Vilsonovo šetalište 10. It buil
 Notes for editors
 - Photos, screenshots and facts: [press kit link]
 - The designs hidden behind the countdown on makeborne.com were not made with Makeborne. Please don't present them as its output.
-- Media contact: [name], [email], [phone]
+- Media contact: [name], admin@makeborne.com, [phone]
 ```
 
 ### 3.4 Croatian (Mostar) and Serbian ijekavica (Banja Luka) adaptations
@@ -356,7 +356,7 @@ NAJAVA ZA MEDIJE
 Šta: Predstavljanje Makebornea, alata zasnovanog na umjetnoj inteligenciji, koji je razvila sarajevska firma ZORBY&CO D.O.O. Makeborne od jednog briefa pravi web stranicu, e-knjigu ili prezentaciju. Javno se pokreće u četvrtak, 29. oktobra u 21:00.
 
 Kada: petak, 30. oktobar 2026, od 10:30 do 11:30
-Gdje: [naziv mjesta, adresa], Sarajevo
+Gdje: ured firme ZORBY&CO, Vilsonovo šetalište 10, Sarajevo
 
 Program:
 10:30 Kratko predstavljanje (5 minuta)
@@ -377,7 +377,7 @@ Naslov e-maila: DANAS u 10:30 | Test uživo: novinari zadaju brief, sarajevski A
 
 Poštovani,
 
-podsjećamo: danas u 10:30, u [naziv mjesta, adresa], predstavljamo Makeborne. Sarajevska firma ZORBY&CO pokrenula ga je sinoć u 21:00. Zadajte brief i gledajte kako stranica nastaje, sa štopericom na ekranu. Izjave za medije su od 11:00.
+podsjećamo: danas u 10:30, u našem uredu na Vilsonovom šetalištu 10, predstavljamo Makeborne. Sarajevska firma ZORBY&CO pokrenula ga je sinoć u 21:00. Zadajte brief i gledajte kako stranica nastaje, sa štopericom na ekranu. Izjave za medije su od 11:00.
 
 Potvrda dolaska: [telefon]
 
@@ -395,7 +395,7 @@ Poštovani,
 
 predlažem kratko gostovanje u emisiji [naziv emisije] u periodu od 30. oktobra do 6. novembra. [Za FTV: "Čestitamo na 25 godina programa. Predlažem gostovanje od 4. do 6. novembra."]
 
-Sarajevska firma ZORBY&CO u četvrtak, 29. oktobra u 21:00 pokreće Makeborne, alat zasnovan na umjetnoj inteligenciji. Od jednog briefa pravi web stranicu, e-knjigu ili prezentaciju. U našim testnim izradama web stranica je bila gotova za dvije do četiri minute.
+Sarajevska firma ZORBY&CO u četvrtak, 29. oktobra u 21:00 pokreće Makeborne, alat zasnovan na umjetnoj inteligenciji. Od jednog briefa pravi web stranicu, e-knjigu ili prezentaciju. U našim testnim izradama web stranica je bila gotova za 2 minute i 7 sekundi.
 
 Prijedlog za studio: na početku razgovora voditelj zada brief, na primjer za pekaru iz komšiluka. Dok razgovaramo, stranica nastaje na laptopu. Na kraju je pokažemo, objavljenu na internetu. Donosimo vlastiti laptop i mobilni internet. Za kadar je dovoljan jedan ekran ili snimak ekrana.
 
@@ -419,7 +419,7 @@ Poštovani,
 
 predlažem gostovanje u emisiji [naziv emisije] između 2. i 13. novembra.
 
-Sarajevska firma ZORBY&CO je 29. oktobra pokrenula Makeborne, alat zasnovan na umjetnoj inteligenciji. Od jednog briefa pravi web stranicu, e-knjigu ili prezentaciju. U našim testnim izradama web stranica je bila gotova za dvije do četiri minute.
+Sarajevska firma ZORBY&CO je 29. oktobra pokrenula Makeborne, alat zasnovan na umjetnoj inteligenciji. Od jednog briefa pravi web stranicu, e-knjigu ili prezentaciju. U našim testnim izradama web stranica je bila gotova za 2 minute i 7 sekundi.
 
 Prijedlog: slušalac se javi i opiše svoju radnju ili zanat. Dok razgovaramo, pravimo stranicu. Prije kraja emisije pročitamo adresu na kojoj je objavljena. Ako slušalac želi, stranica mu ostaje kao poklon.
 
@@ -474,7 +474,7 @@ S poštovanjem,
 [telefon]
 ```
 
-### 3.10 Press kit contents (one shared folder link; owner decides where it lives, OD9)
+### 3.10 Press kit contents (one view-only shared folder link, OD9)
 
 **Files**
 1. **Logo:** SVG and PNG, light and dark.
@@ -497,14 +497,14 @@ S poštovanjem,
 | Proizvod / Product | Makeborne, makeborne.com, Instagram @makeborne | Makeborne, makeborne.com, Instagram @makeborne |
 | Pokretanje / Launch | četvrtak, 29. oktobar 2026, 21:00 | Thursday 29 October 2026, 21:00 CET |
 | Šta pravi / What it makes | Od jednog briefa: web stranicu (objavljenu na Makeborne adresi), dizajniranu e-knjigu ili prezentaciju | From one brief: a website (published on a Makeborne address), a designed ebook or a slide deck |
-| Vrijeme izrade / Build times | U testnim izradama: web stranica oko 2-4 minute, prezentacija 43 sekunde, e-knjiga 1 minuta i 23 sekunde | In test runs: website about 2-4 minutes, deck 43 seconds, ebook 1 minute 23 seconds |
+| Vrijeme izrade / Build times | U testnim izradama: web stranica 2 minute i 7 sekundi, prezentacija 43 sekunde, e-knjiga 1 minuta i 23 sekunde | In test runs: website 2 minutes 7 seconds, deck 43 seconds, ebook 1 minute 23 seconds |
 | Cijene / Prices | Create 20 USD, Studio 49 USD, Scale 99 USD mjesečno, plus porez gdje se primjenjuje (oko 35, 86 i 173 KM). Samo plaćeni paketi. | Create $20, Studio $49, Scale $99 a month, plus tax where applicable. Paid plans only. |
 | Tržište / Market | Cijeli svijet | Worldwide |
 | Konkurencija / Competition | Najpoznatiji alati ove vrste dolaze iz Silicijske doline i Stockholma (npr. švedski Lovable) | The best-known tools of this kind come from Silicon Valley and Stockholm (e.g. Sweden's Lovable) |
-| Kontakt / Contact | [ime i prezime], [e-mail], [telefon] | [name], [email], [phone] |
-| Pravila povrata novca / Refunds | [vlasnik potvrđuje važeći tekst, odluka D1] | [owner confirms current wording, decision D1] |
+| Kontakt / Contact | [ime i prezime], admin@makeborne.com, [telefon] | [name], admin@makeborne.com, [phone] |
+| Pravila povrata novca / Refunds | Uplata se vraća u cijelosti dok nijedan kredit iz nje nije iskorišten. | A payment is refunded in full while none of its credits have been used. |
 
-**Founder bio (placeholder, 60 words, owner confirms):**
+**Founder bio (60 words; the filled version is in the owner's private notes):**
 "[Ime i prezime] je osnivač Makebornea i [uloga] u firmi ZORBY&CO D.O.O. iz Sarajeva. [Jedna rečenica o iskustvu, samo provjerene činjenice.] Makeborne gradi sa idejom da se softver za cijeli svijet može praviti iz Sarajeva."
 
 **Q&A sheet (Bosnian answers, for the founder and owner)**
@@ -514,12 +514,12 @@ S poštovanjem,
 | Koji AI model koristite? | "Ne objavljujemo koje dobavljače koristimo. Makeborne je naš proizvod i mi odgovaramo za rezultat." |
 | Jeste li bolji od Lovablea? | "Ne tvrdimo da smo bolji od bilo koga. Dajte nam brief, pa procijenite sami." |
 | Zašto nema besplatnog paketa? (The journalist may use the word; you don't.) | "Od prvog dana se plaća. Tako odmah znamo da pravimo nešto za šta ljudi zaista daju novac." |
-| Koliko imate korisnika i prihoda? | "Brojke planiramo objaviti nakon 30 dana [vlasnik potvrđuje, odluka D11]." No number before the owner approves it. |
+| Koliko imate korisnika i prihoda? | "Brojke objavljujemo javno: prvi put nakon sedam dana (4. novembra), pa nakon četiri sedmice (25. novembra)." No number before the owner has checked it that day. |
 | Hoće li AI ostaviti web dizajnere bez posla? | "Makeborne je napravljen i za dizajnere i male agencije, da brže dođu do prvog prijedloga za klijenta. Odluku i dalje donosi čovjek." |
 | Mogu li koristiti svoju domenu? | "Za sada se stranice objavljuju na Makeborne adresi. Vlastite domene dolaze kasnije; datum još ne najavljujemo." |
 | Radi li na bosanskom? | "[Osnivač upisuje rezultat testa od utorka, 27. oktobra.]" |
 | Šta su dizajni iza odbrojavanja? | "Mala igra za radoznale. Nisu napravljeni u Makeborneu." |
-| Ko je investitor? | "[Vlasnik upisuje ili kaže: 'O tome ne govorimo.']" |
+| Ko je investitor? | "Nemamo vanjskih investitora. Makeborne razvijamo vlastitim sredstvima." |
 | Koliko to košta u KM? | "Cijene su u dolarima: 20, 49 i 99 USD mjesečno, plus porez gdje se primjenjuje. To je otprilike 35, 86 i 173 KM." |
 
 ---
@@ -534,7 +534,7 @@ S poštovanjem,
 - **No contests with prizes.** In the Federation, a prize contest or prize game needs Federal Ministry of Finance approval requested at least 30 days ahead, plus 6% of the prize value ([FMF](https://fmf.gov.ba/Content/Read/igre-na-srecu)). So every gift goes to **everyone who comes**, with no selection, no "best", no draw [interpretation, U].
 - **Consent:** written consent (`c11`) from every identifiable person and business filmed or given a site. Parents sign for anyone under 18. The new data-protection law ([SG BiH 12/25, AZLP](https://www.azlp.ba/Novi_zakon_i_obavjestenje/Default.aspx?id=4462&langTag=bs-BA)) wants consent that is voluntary, specific, informed and unambiguous [F].
 - **Truth:** real timers only. If a build fails, say so on camera and run it again. Never present a pre-built site as live. Never show the countdown designs as output.
-- **Gifted sites** are real Makeborne builds, published on a Makeborne address, with content the recipient approved. The owner sets how long they stay up (OD2). The founder first confirms that a gifted site can stay published at no cost to the recipient, and whether a shop's own photos can be added. Generated images are not live, so promise no pictures.
+- **Gifted sites** are real Makeborne builds, published on a Makeborne address, with content the recipient approved. They stay up for at least 12 months (OD2). The founder first confirms that a gifted site can stay published at no cost to the recipient, and whether a shop's own photos can be added. Generated images are not live, so promise no pictures.
 - **Language:** the founder tests a Bosnian brief on Tue 27 Oct (site, deck, book). If Bosnian output is weak, run demos in English and say why.
 - **Tracking codes** (founder registers them in the private code register on Wed 28 Oct; until /go/ works, use the long makeborne.com URL with `utm_source=<code>&utm_medium=press|guerrilla|community&utm_campaign=launch-2026-10`): press `press-emb`, `press-bih`, `press-hr`, `press-rs`, `press-reg`; TV and radio `tv-<show>`, `radio-<show>`; stunts `g-launchnight`, `g-pressdemo`, `g-cevapi`, `g-kazandziluk`, `g-tram`, `g-cafe-<name>`; community `uni-etf`, `uni-ssst`, `uni-ius`, `uni-ibu`, `com-gdg`, `com-briefzadobro`. Each goes as a QR code on that event's fact sheet or card.
 - **Cost** below = cash + AI build credits at about $1 (1.75 KM) per build [E, strategy D14 "demo builds about $1"]. Expected coverage = my estimate of published items (web articles, TV or radio segments) [E].
@@ -554,7 +554,7 @@ S poštovanjem,
 | 7 | **"Kazandžiluk online"**, websites for craftsmen (anchor) | Sat 7 Nov | 70 ($40.04) | 20 | 105 | 4-10 | 15 |
 | 8 | "Brief za dobro" student workshop for NGOs | Thu 12 Nov | 15 ($8.58) | 10 | 32.5 | 1-3 | 16.3 |
 | 9 | "Do sljedeće stanice": a site built on the tram | Mon 9 Nov | 4 ($2.29) | 1 | 5.75 | 0-1 | 19 |
-| 10 | Public stand "Web stranica za 4 minute" (SCC square or a permitted spot) | After 15 Nov | 8 + SCC quote ≤150 | 20 | ≤193 | 2-6 | ≤48 |
+| 10 | Public stand "Web stranica za nekoliko minuta" (SCC square or a permitted spot) | After 15 Nov | 8 + SCC quote ≤150 | 20 | ≤193 | 2-6 | ≤48 |
 | 11 | Café table cards "Brief na kartici" | 2-15 Nov | 40 ($22.88) | 5 | 48.75 | 0-1 | 163 |
 
 Shared costs: consent forms and printouts 15 KM ($8.58); mobile data backup for live builds 20 KM ($11.44).
@@ -654,7 +654,7 @@ Shared costs: consent forms and printouts 15 KM ($8.58); mobile data backup for 
 - **Filming:** 9:16, the laptop timer and the window, then the shop door. Blur any other face.
 - **Why journalists cover it:** they mostly won't. It's social content with a Sarajevo backdrop that works abroad.
 
-#### S10. Public stand "Web stranica za 4 minute" (after 15 Nov, only with written approval)
+#### S10. Public stand "Web stranica za nekoliko minuta" (after 15 Nov, only with written approval)
 - **What happens:** a table, laptop and screen. Passers-by who own a business give a brief and walk away with a live site.
 - **Where and permits:**
   - **SCC square:** private, booked through SCC's promotions form, which asks for dates, hours, type of event, organiser and expected attendance. No prices are published, and SCC says it "supports non-commercial events" ([scc.ba](https://scc.ba/en/premises_leasing/promotions.html)). Owner asks for a quote, approves only if ≤150 KM ($85.80) all-in (OD4).
@@ -691,7 +691,7 @@ Copy ID: `c10`
 ```text
 Poštovani,
 
-ja sam [ime i prezime], iz sarajevske firme ZORBY&CO. U četvrtak, 29. oktobra pokrećemo Makeborne, alat koji od jednog kratkog pisanog opisa (briefa) za nekoliko minuta napravi web stranicu.
+ja sam [ime i prezime], iz sarajevske firme ZORBY&CO. U četvrtak, 29. oktobra pokrećemo Makeborne, alat koji od jednog pisanog opisa (briefa) za nekoliko minuta napravi web stranicu.
 
 Pitamo vas možemo li u vašem lokalu [dan, od-do sati] organizovati [kratak opis: mali skup uz odbrojavanje / test uživo za novinare / izradu web stranice za vaš lokal]. Treba nam jedan sto, struja i [vaš TV / naš ekran]. Ne koristimo prostor ispred lokala, ne puštamo glasnu muziku i ništa ne lijepimo na zidove, fasadu ili izlog.
 
@@ -746,9 +746,9 @@ Copy ID: `c13`
 ```text
 Poštovani,
 
-u subotu, 7. novembra, od 10 do 16 sati, u [radnja ili lokal, adresa] pravimo web stranice za zanatlije s Baščaršije. Svaka stranica nastaje za nekoliko minuta, od vašeg kratkog opisa: šta pravite, od kada radite, gdje ste i kako vas kupci mogu kontaktirati.
+u subotu, 7. novembra, od 10 do 16 sati, u [radnja ili lokal, adresa] pravimo web stranice za zanatlije s Baščaršije. Svaka stranica nastaje za nekoliko minuta, od vašeg opisa: šta pravite, od kada radite, gdje ste i kako vas kupci mogu kontaktirati.
 
-Stranica se objavljuje na Makeborne adresi. To je naš poklon povodom pokretanja Makebornea. Ne plaćate ništa, ni sada ni kasnije. Stranica ostaje objavljena najmanje [vlasnik upisuje: npr. 12 mjeseci]. Prije objave stranicu pregledate i odobrite. Možete tražiti da je uklonimo kad god želite.
+Stranica se objavljuje na Makeborne adresi. To je naš poklon povodom pokretanja Makebornea. Ne plaćate ništa, ni sada ni kasnije. Stranica ostaje objavljena najmanje 12 mjeseci. Prije objave stranicu pregledate i odobrite. Možete tražiti da je uklonimo kad god želite.
 
 Ovo nije nagradna igra: stranicu dobije svako ko dođe tog dana.
 
@@ -952,17 +952,17 @@ S poštovanjem,
 
 ## 6. Calendar, Tue 27 Oct to Sun 15 Nov
 
-Every dated action is also in `bosnia-actions.json`. Costs are owner decisions (§8). Founder tasks fit around the war-room schedule in `hype-playbook.md`.
+Every dated action is also on Today in the war room, with its copy. Costs are approved in §8. Founder tasks fit around the war-room schedule in `hype-playbook.md`.
 
 | Date | CET | Who | What | Cost |
 |---|---|---|---|---|
-| **Tue 27 Oct** | 16:00 | Owner | Read and approve this plan and the decisions in §8. | 0 |
+| **Tue 27 Oct** | 16:00 | Owner | Plan and decisions in §8 approved (owner, 27 Oct). Book each amount on the day it is spent. | 0 |
 | | 16:30 | Owner | Ask the venues for S2 (Thu night), S3 (Fri morning) and S6 (ćevabdžinica) in person with `c10`. Get `c12` signed. Fallback for S2 and S3: the office. | 0 |
 | | 17:00 | Founder | Test one Bosnian brief end to end (site, deck, book). Write the result into the Q&A. Decide: demos in Bosnian or English. | 3 builds |
 | | 20:00 | Owner | Build the BCC groups EMB, BIH, HR, RS, TV, RADIO, REG from §2. | 0 |
 | **Wed 28 Oct** | 09:00 | Founder | Founder photos on Vilsonovo šetalište; record an uncut, real-speed website build with the timer. | 1 build |
 | | 11:00 | Founder | Assemble the press kit (§3.10). The owner checks every file and that no countdown design is shown as output. | 0 |
-| | 11:30 | Owner | Read all Bosnian copy aloud. Fill the founder quote, contact lines and venue. Print consent forms and fact sheets. | 15 KM ($8.58) |
+| | 11:30 | Owner | Read all Bosnian copy aloud. Send from the filled versions in the owner's private notes. Print consent forms and fact sheets. | 15 KM ($8.58) |
 | | 12:00 | Owner | Send the advisory `c04` (TV, agencies, EMB). To FENA, add "Za najave događaja" to the subject. | 0 |
 | | 13:00 | Owner | Send university pitches `c15` + `c16` to ETF, SSST, IUS, IBU. | 0 |
 | | 14:00 | Owner | Send the GDG Cloud Sarajevo contact form `c17`. | 0 |
@@ -984,10 +984,9 @@ Every dated action is also in `bosnia-actions.json`. Costs are owner decisions (
 | | 14:00 | Founder | Post the ćevapi reel `c19`. Then the war-room items moved from the morning (Product Hunt coming soon 14:30, r/bih modmail 14:45). | 0 |
 | | 16:00 | Owner | Start the coverage log: outlet, link, date, type, /go/press-* clicks. | 0 |
 | **Sat 31 Oct** | 10:00 | Owner | Send thank-you `c22` to every outlet that published. Update the log. | 0 |
-| **Sun 1 Nov** | 18:00 | Owner | Decide the craftsmen terms (OD2) and pick the S7 venue. | 0 |
+| **Sun 1 Nov** | 18:00 | Owner | Pick the S7 venue. The craftsmen terms are settled (OD2). | 0 |
 | **Mon 2 Nov** | 07:00 | Founder | Morning-show window (if booked): S1 live build. | 1 build |
 | | 10:00 | Owner | Start craftsmen visits on Kazandžiluk with `c13`; target 20 signed consents by Thu. | 0 |
-| | 10:30 | Owner | Put table cards in 1-2 partner cafés (S11, optional). | 40 KM ($22.88) |
 | **Tue 3 Nov** | 09:00 | Owner | One follow-up `c08` to outlets that didn't reply or publish. | 0 |
 | | 10:00 | Owner | War-room regional pitch (t16) to §2.9. Add week-1 coverage links as proof. | 0 |
 | **Wed 4 Nov** | 07:00 | Founder | FTV Dobro jutro window (4-6 Nov), if booked. | 1 build |
@@ -1043,23 +1042,23 @@ Every dated action is also in `bosnia-actions.json`. Costs are owner decisions (
 
 ---
 
-## 8. Owner decisions
+## 8. Decisions (settled by the owner, 27 Oct 2026)
 
-| # | Decision | Amount | Recommendation |
+| # | Decision | Amount | Settled |
 |---|---|---|---|
-| OD1 | **Local launch cash line**: consent forms and printouts 15 KM, mobile data 20 KM, S3 coffee 40 KM, S6 ćevapi 50 KM, S7 cards and coffee 70 KM, S8 certificates 15 KM, S9 tickets 4 KM | **214 KM ($122.42)** | Approve, **outside the $1,000** (b1-b9 are fully allocated; reserve b9, $136, is released only by the scale rule). The return: 10-25 published items [E] at about 9-21 KM each, local credibility and backlinks, and footage (ćevapi, craftsmen) that travels abroad. Honest limit: BiH press will bring few paying customers. |
-| OD1a | Launch-night tab (S2), only if the venue asks for a minimum spend | 100 KM ($57.20) | Say no unless the venue insists |
-| OD1b | Café table cards (S11) | 40 KM ($22.88) | Optional; lowest return |
-| OD2 | **Gifted sites**: up to 20 craftsmen (S7), up to 10 associations (S8), 1 ćevabdžinica (S6), radio callers (S1). How long they stay live, whether the recipient ever pays, removal on request. About 45 builds in all | Inside the D14 demo-build line (AI cost in the owner's private notes) | 12 months live, no cost to the recipient, removal within 7 days of a request. The founder first confirms the product supports it |
-| OD3 | Grow the craftsmen gift from 20 to 100 sites (after this window) | About $100 (175 KM) of AI cost | Decide on Sun 15 Nov from S7's results |
+| OD1 | **Local launch cash line**: consent forms and printouts 15 KM, mobile data 20 KM, S3 coffee 40 KM, S6 ćevapi 50 KM, S7 cards and coffee 70 KM, S8 certificates 15 KM, S9 tickets 4 KM | **214 KM ($122.42)** | **Approved**, **outside the $1,000** (b1-b9 are fully allocated; reserve b9, $136, is released only by the scale rule). The return: 10-25 published items [E] at about 9-21 KM each, local credibility and backlinks, and footage (ćevapi, craftsmen) that travels abroad. Honest limit: BiH press will bring few paying customers. |
+| OD1a | Launch-night tab (S2), only if the venue asks for a minimum spend | 100 KM ($57.20) | No, unless the venue insists |
+| OD1b | Café table cards (S11) | 40 KM ($22.88) | Skipped (lowest return) |
+| OD2 | **Gifted sites**: up to 20 craftsmen (S7), up to 10 associations (S8), 1 ćevabdžinica (S6), radio callers (S1). How long they stay live, whether the recipient ever pays, removal on request. About 45 builds in all | Inside the D14 demo-build line (AI cost in the owner's private notes) | 12 months live, no cost to the recipient, removal within 7 days of a request. Built and published from the team's own workspace; the founder checks that before S6 (Fri 30 Oct) |
+| OD3 | Grow the craftsmen gift from 20 to 100 sites (after this window) | About $100 (175 KM) of AI cost | Decided on Sun 15 Nov from S7's results |
 | OD4 | SCC square stand (S10): ask SCC for a quote | ≤150 KM ($85.80) + 8 KM ($4.58) Centar admin tax if a public spot is used | Ask for the quote after 15 Nov; approve only with written approval and a total of ≤150 KM |
-| OD5 | Founder quote, founder name and bio in the release | — | Confirm or rewrite the placeholders in `c01`-`c03` by Wed 28 Oct 11:30 |
-| OD6 | Who is the media contact (name, email, phone) | — | The owner |
-| OD7 | Use the warm routes from earlier coverage (owner's private notes) | — | The owner's call; one line at most |
+| OD5 | Founder quote, founder name and bio in the release | — | The quote in `c01`-`c03` stands as written; name and bio are in the owner's private notes. The owner reads it aloud on Wed 28 Oct 11:30 |
+| OD6 | Who is the media contact (name, email, phone) | — | The owner, at admin@makeborne.com; the phone number is in the owner's private notes |
+| OD7 | Use the warm routes from earlier coverage (owner's private notes) | — | Yes: one true line in the cover note to those three outlets only (text in the owner's private notes) |
 | OD8 | The embargo list (EMB) | — | As in §2; add any journalist the owner already knows |
-| OD9 | Where the press kit lives (shared folder or makeborne.com/press) | — | A shared folder now; /press later |
-| OD10 | Venues: the office at Vilsonovo šetalište 10 for S2 and S3, or a café | — | The office if it holds 12-15 people |
-| OD11 | Refund wording in the fact sheet (D1) | — | Confirm or leave the line out |
+| OD9 | Where the press kit lives (shared folder or makeborne.com/press) | — | A view-only shared folder now (the owner makes it on Wed 28 Oct 11:00); /press later |
+| OD10 | Venues: the office at Vilsonovo šetalište 10 for S2 and S3, or a café | — | The office for S3 if it holds 12-15 people, otherwise the café that said yes; S2 at the café that said yes, otherwise the office |
+| OD11 | Refund wording in the fact sheet (D1) | — | Keep the line, in the live terms' words (fact sheet, §3.10) |
 
 **Totals:** core 214 KM ($122.42); with every option 354 KM ($202.50); plus the gifted builds from the D14 demo-build line (AI cost in the owner's private notes).
 

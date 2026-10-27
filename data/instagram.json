@@ -233,7 +233,27 @@
   {
    "position": 1,
    "date": "2026-10-28",
-   "time": "19:00",
+   "time": "21:00",
+   "contentId": "T8",
+   "format": "Reel (teaser)",
+   "cover": "The real Hollis site and its build time (the teaser's own cover); text \"Guess the build time.\"",
+   "keyword": "GO",
+   "dmLink": "makeborne.com"
+  },
+  {
+   "position": 2,
+   "date": "2026-10-29",
+   "time": "21:00",
+   "contentId": "T7",
+   "format": "Reel (teaser)",
+   "cover": "The countdown reaching zero (the teaser's own cover); text \"We're live.\"",
+   "keyword": "GO",
+   "dmLink": "makeborne.com"
+  },
+  {
+   "position": 3,
+   "date": "2026-10-29",
+   "time": "21:30",
    "contentId": "V01",
    "format": "Reel 17 s",
    "cover": "Frame 0 of the v9 Fly-over (real home page lifting); text \"We launched today.\"",
@@ -241,8 +261,8 @@
    "dmLink": "makeborne.com/go/ig-v01-site"
   },
   {
-   "position": 2,
-   "date": "2026-10-29",
+   "position": 4,
+   "date": "2026-10-30",
    "time": "13:15",
    "contentId": "V02",
    "format": "Reel 32 s",
@@ -251,8 +271,8 @@
    "dmLink": "makeborne.com/go/ig-v02-site"
   },
   {
-   "position": 3,
-   "date": "2026-10-30",
+   "position": 5,
+   "date": "2026-10-31",
    "time": "13:15",
    "contentId": "V05",
    "format": "Reel 28 s",
@@ -261,8 +281,8 @@
    "dmLink": "makeborne.com/go/ig-v05-client"
   },
   {
-   "position": 4,
-   "date": "2026-10-31",
+   "position": 6,
+   "date": "2026-11-01",
    "time": "18:00",
    "contentId": "C06",
    "format": "Carousel, 7 slides, music on",
@@ -271,8 +291,8 @@
    "dmLink": "makeborne.com/go/ig-c06-site"
   },
   {
-   "position": 5,
-   "date": "2026-11-01",
+   "position": 7,
+   "date": "2026-11-02",
    "time": "13:15",
    "contentId": "V07",
    "format": "Reel 40 s",
@@ -281,8 +301,8 @@
    "dmLink": "makeborne.com/go/ig-v07-client"
   },
   {
-   "position": 6,
-   "date": "2026-11-02",
+   "position": 8,
+   "date": "2026-11-03",
    "time": "12:00",
    "contentId": "C05",
    "format": "Carousel, 8 slides, music on",
@@ -291,8 +311,8 @@
    "dmLink": "makeborne.com/go/ig-c05-client"
   },
   {
-   "position": 7,
-   "date": "2026-11-03",
+   "position": 9,
+   "date": "2026-11-04",
    "time": "19:00",
    "contentId": "V09",
    "format": "Reel 60 s",
@@ -301,17 +321,7 @@
    "dmLink": "makeborne.com/go/ig-v09-client"
   },
   {
-   "position": 8,
-   "date": "2026-11-04",
-   "time": "20:15 (time test)",
-   "contentId": "V16",
-   "format": "Reel 15 s",
-   "cover": "First of the five sites, full bleed; text \"5 sites. 5 briefs.\"",
-   "keyword": "SITE",
-   "dmLink": "makeborne.com/go/ig-v16-site"
-  },
-  {
-   "position": 9,
+   "position": 10,
    "date": "2026-11-05",
    "time": "18:00",
    "contentId": "C18",
@@ -321,7 +331,7 @@
    "dmLink": "makeborne.com/go/ig-c18-deck"
   },
   {
-   "position": 10,
+   "position": 11,
    "date": "2026-11-06",
    "time": "20:15 (time test)",
    "contentId": "V15",
@@ -329,9 +339,19 @@
    "cover": "Finished typographic book cover; text \"Notes app to book.\"",
    "keyword": "BOOK",
    "dmLink": "makeborne.com/go/ig-v15-book"
+  },
+  {
+   "position": 12,
+   "date": "2026-11-07",
+   "time": "12:00",
+   "contentId": "C23",
+   "format": "Carousel, 7 slides, music on",
+   "cover": "Slide 1 type card \"Your notes app is full of book ideas. Here's one, finished.\"",
+   "keyword": "BOOK",
+   "dmLink": "makeborne.com/go/ig-c23-book"
   }
  ],
- "conversionGridNote": "All 12 are live by Fri 6 Nov, before wave-1 creators (from 10 Nov) and boost slot A (from 9 Nov). Covers: title inside the centred 1080x1350 block so it survives the 3:4 grid, the 4:5 feed and a 1:1 check.",
+ "conversionGridNote": "All 12 are live by Sat 7 Nov, before boost slot A (from Mon 9 Nov) and the wave-1 creators (from Tue 10 Nov). Covers: title inside the centred 1080x1350 block so it survives the 3:4 grid, the 4:5 feed and a 1:1 check.",
  "cadence": {
   "reelsPerWeek": 5,
   "carouselsPerWeek": 2,
@@ -856,13 +876,13 @@
     "format": "Carousel, 7 slides, music on",
     "keyword": "SITE",
     "link": "makeborne.com/go/ig-c06-site",
-    "pin": "Pin 2 until Sat",
+    "pin": "Pin 2 until Tue 3 Nov (C05 replaces it)",
     "cover": "Slide 1 type card \"5 websites. 5 briefs.\"",
     "caption": "5 AI websites, each from one brief. Unedited, with the time and credits each one used. Swipe and tell me which one wins. Every site publishes on a Makeborne address. From $20/month + tax. Full refund until you use credits. Comment SITE and I'll send all 5 briefs. #aiwebsitebuilder #webdesigninspiration #websitedesign #smallbusiness"
    },
    "checklist": [
     "If /go/ shipped today: switch every DM link from long URLs to /go/ codes",
-    "09:00 Story build of the day (link /go/ig-s1029-site)",
+    "09:00 Story build of the day (link /go/ig-s1101-site)",
     "13:20 Story C09 only if the sample review link is live; otherwise skip",
     "18:00 post C06 with music and alt text on every slide; pin it (Pin 2)",
     "Reply to every comment for 60 minutes",
@@ -872,7 +892,7 @@
     {
      "time": "09:00",
      "template": "Build of the day",
-     "link": "makeborne.com/go/ig-s1029-site"
+     "link": "makeborne.com/go/ig-s1101-site"
     },
     {
      "time": "13:20",
@@ -1307,7 +1327,7 @@
    "why": "Wed 4 Nov is launch day 7 (V09); the 20:15 time test is now Fri 6 and Mon 9 Nov"
   }
  ],
- "kickoffNote": "Launch moved to Thu 29 Oct 21:00 CET: kick-off days 1-7 moved 1 day later (29 Oct - 4 Nov) with their content; day 1 posts T7 at 21:00 and V01 at 21:30. Launch moved to Thu 29 Oct 21:00 CET: kick-off days 1-7 moved 2 days later (28 Oct - 3 Nov); the old days 8 and 9 (V44 on Mon 2 Nov, V12 / V18 on Tue 3 Nov) are banked because launch days 6 and 7 use those Instagram slots; the rest keep their dates and are renumbered by launch day. The 20:15 time test is now Wed 4 and Fri 6 Nov.",
+ "kickoffNote": "Launch moved to Thu 29 Oct 21:00 CET (owner, 27 Oct). Kick-off days 1-7 run Thu 29 Oct - Wed 4 Nov: day 1 posts T7 at 21:00 and V01 at 21:30. V44, V12 / V18 (the old days 8 and 9) and V16 are banked; Today shows them when they come back. The 20:15 time test is Fri 6 and Mon 9 Nov.",
  "conversionGridBanked": [
   {
    "position": 8,
@@ -1328,6 +1348,16 @@
    "cover": "V12: sample review page with a comment pin, \"Be my client.\" V18: split screen, \"40 e-mails vs one link.\"",
    "keyword": "CLIENT",
    "dmLink": "makeborne.com/go/ig-v12-client or makeborne.com/go/ig-v18-client"
+  },
+  {
+   "position": null,
+   "date": null,
+   "time": "20:15 (time test)",
+   "contentId": "V16",
+   "format": "Reel 15 s",
+   "cover": "First of the five sites, full bleed; text \"5 sites. 5 briefs.\"",
+   "keyword": "SITE",
+   "dmLink": "makeborne.com/go/ig-v16-site"
   }
  ]
 }

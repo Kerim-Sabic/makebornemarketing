@@ -543,20 +543,20 @@
     "platform": "X + Indie Hackers + LinkedIn (organic only)",
     "size": "1600x900",
     "icp": "icp1",
-    "concept": "Contrarian founder stance (P3): no free tier on purpose, with the three trial substitutes",
-    "headline": "No free tier, on purpose.",
+    "concept": "Contrarian founder stance (P3): paid plans only, on purpose, with the three trial substitutes",
+    "headline": "Paid plans only, on purpose.",
     "subcopy": "Watch the uncut build. Play the client. If you don't use a credit, you get every cent back.",
     "cta": "Read why",
     "slides": [],
-    "visualDirection": "Big statement left; right column of three numbered substitutes. Organic only: never as a paid ad or search ad (the word 'free' attracts the wrong searches).",
-    "generationPrompt": "A 16:9 founder statement card on warm canvas #F8F7F4. Top-left at the 7% margin: the flat vector Makeborne \"m\" mark in #18181B, 44 px tall, and beside it the wordmark \"Makeborne\" in the grotesk at 24 px; clear space around the mark of at least 1/5 of its width; the mark is never shadowed, rotated or gradient-filled. Left 55% (y 22%-70%): \"No free tier,\" in the grotesk 104 px ink #18181B and on the next line \"on\" in the grotesk followed by \"purpose.\" in the serif filled with a flat left-to-right gradient #2858CB to #6355CF (the only gradient anywhere in the image). Right 38%: three rows in the grotesk 34 px, numbers in #5C616D, 1 px #E4E1DA rules: \"01  Watch the uncut build\" / \"02  Play the client on our sample review link\" / \"03  Don't use a credit? Every cent back.\". Bottom-left y 90%: \"Day [N] · building in public from Sarajevo\" 24 px #5C616D, [N] filled on posting day. Flat, straight-on 16:9 graphic filling the entire 1600x900 canvas edge to edge: no device mock-up unless stated, no hands, no desk, no perspective, no 3D tilt. Quiet editorial print-studio design, margins of at least 7% of the width, one idea per frame, subtle 2% film grain, no bloom. All text spelled exactly as given, perfectly legible, correctly kerned, no extra words, no garbled letters, no lorem ipsum. Forbidden: purple-blue gradient fields, glowing prompt boxes, glass cards, orbs, particles, lens flare, sparkles, robots, photoreal people, stock laptops.",
+    "visualDirection": "Big statement left; right column of three numbered substitutes. Organic only: never as a paid ad or search ad.",
+    "generationPrompt": "A 16:9 founder statement card on warm canvas #F8F7F4. Top-left at the 7% margin: the flat vector Makeborne \"m\" mark in #18181B, 44 px tall, and beside it the wordmark \"Makeborne\" in the grotesk at 24 px; clear space around the mark of at least 1/5 of its width; the mark is never shadowed, rotated or gradient-filled. Left 55% (y 22%-70%): \"Paid plans only,\" in the grotesk 92 px ink #18181B and on the next line \"on\" in the grotesk followed by \"purpose.\" in the serif filled with a flat left-to-right gradient #2858CB to #6355CF (the only gradient anywhere in the image). Right 38%: three rows in the grotesk 34 px, numbers in #5C616D, 1 px #E4E1DA rules: \"01  Watch the uncut build\" / \"02  Play the client on our sample review link\" / \"03  Don't use a credit? Every cent back.\". Bottom-left y 90%: \"Day [N] · building in public from Sarajevo\" 24 px #5C616D, [N] filled on posting day. Flat, straight-on 16:9 graphic filling the entire 1600x900 canvas edge to edge: no device mock-up unless stated, no hands, no desk, no perspective, no 3D tilt. Quiet editorial print-studio design, margins of at least 7% of the width, one idea per frame, subtle 2% film grain, no bloom. All text spelled exactly as given, perfectly legible, correctly kerned, no extra words, no garbled letters, no lorem ipsum. Forbidden: purple-blue gradient fields, glowing prompt boxes, glass cards, orbs, particles, lens flare, sparkles, robots, photoreal people, stock laptops.",
     "useAs": "organic",
     "adCopyVariants": [
       {
-        "primary": "Everyone said add a free plan. Here's why I didn't, and what you get instead.",
-        "headline": "No free tier, on purpose",
-        "primaryChars": 77,
-        "headlineChars": 24
+        "primary": "Everyone said give it away first. Here's why I didn't, and what you get instead.",
+        "headline": "Paid plans only, on purpose",
+        "primaryChars": 80,
+        "headlineChars": 27
       }
     ],
     "tag": "live",

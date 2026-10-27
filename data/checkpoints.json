@@ -11,7 +11,7 @@
       "title": "Pre-launch: countdown, teasers and DM keywords",
       "detail": "Countdown live on makeborne.com to Thu 29 Oct 21:00 CET; nothing says Wed 28 Oct or 19:00 any more; teasers never say it is live; DM keywords answer from a second account; Wednesday and Thursday scheduled.",
       "decisions": [],
-      "source": "Owner decision 26 Oct 2026: launch Thu 29 Oct 21:00 CET"
+      "source": "Owner decision 27 Oct 2026: launch Thu 29 Oct 21:00 CET"
     },
     {
       "date": "2026-10-29",
@@ -85,7 +85,7 @@
     {
       "date": "2026-11-25",
       "title": "Day-30 public numbers post",
-      "detail": "Publish redacted real numbers (if the owner approves D11). Black Friday message is only 'yearly is 20% off' (D5) from 27 Nov.",
+      "detail": "Publish redacted real numbers (if the owner approves D11). 25 Nov is day 28 since the 29 Oct launch: the post says \"Day 28\" or \"4 weeks in\", never \"Day 30\". Black Friday message is only 'yearly is 20% off' (D5) from 27 Nov.",
       "decisions": [
         "D11",
         "D5"
@@ -128,7 +128,7 @@
     },
     {
       "date": "2026-12-24",
-      "title": "Day 58 (24 Dec): reserve and loops check",
+      "title": "Day 57 (24 Dec): reserve and loops check",
       "detail": "Unspent reserve (b9) moves to the best source by CAC; loop share exit gate 15%.",
       "decisions": [],
       "source": "calendar 2026-12-24"

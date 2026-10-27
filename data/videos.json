@@ -937,7 +937,7 @@
   },
   {
     "id": "V11",
-    "title": "Founder: why there's no free plan",
+    "title": "Founder: why paid plans only",
     "format": "founder",
     "platforms": [
       "LinkedIn",
@@ -949,21 +949,21 @@
     "lane": "A",
     "lengthSec": 50,
     "hook": {
-      "line": "Everyone said 'add a free plan'. Here's why I didn't.",
+      "line": "Everyone said 'give it away first'. Here's why I didn't.",
       "visual": "Frame 0: founder to camera, pricing page on the laptop behind, the three plan cards readable."
     },
     "script": [
       {
         "t": "0-2s",
         "visual": "Founder to camera",
-        "onScreenText": "Everyone said 'add a free plan'.",
-        "voiceover": "Everyone told me to add a free plan."
+        "onScreenText": "Everyone said 'give it away first'.",
+        "voiceover": "Everyone told me to give it away first."
       },
       {
         "t": "2-15s",
         "visual": "Founder; cut to the pricing page",
         "onScreenText": "Every build costs real money.",
-        "voiceover": "Every build costs us real money, so free users would be paid for by paying ones."
+        "voiceover": "Every build costs us real money, so people who don't pay would be paid for by the ones who do."
       },
       {
         "t": "15-30s",
@@ -985,7 +985,7 @@
       }
     ],
     "cta": "Link in first comment to the uncut build page.",
-    "caption": "No free tier, on purpose. Watch the uncut build, play the client on our sample review link (once it is live), and if you don't use a credit you get every cent back.",
+    "caption": "Paid plans only, on purpose. Watch the uncut build, play the client on our sample review link (once it is live), and if you don't use a credit you get every cent back.",
     "hashtags": [
       "#buildinpublic",
       "#saas",

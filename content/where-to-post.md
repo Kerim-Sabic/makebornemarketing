@@ -3,7 +3,7 @@
 > **Launch moved again (owner decision, 27 Oct 2026).** The public launch is **Thursday 29 October 2026 at 21:00 Sarajevo time** (CET, 20:00 UTC); makeborne.com counts down to that moment. Day 1 = Thu 29 Oct; Mon 26, Tue 27 and Wed 28 Oct are pre-launch days −3, −2 and −1. The launch week moved 1 more day (days 1-7 = 29 Oct - 4 Nov); launch day runs around 21:00 (T7 "We're live" at 21:00, V01 at 21:30). The countdown teasers T3-T6 and Stories S1-S3 have the old Wednesday time burned in and are not posted; "Guess the build time" (T8) is the Wed 28 Oct 21:00 post, and screen-recording Stories S4-S8 use the real countdown. Everything after the launch week keeps its date (ads A01 12-15 Nov and A02 3-4 Dec, creator waves, the no-boost window 20 Nov - 2 Dec, Black Friday, the 22 Nov and 20 Dec checkpoints). The 90 days run Thu 29 Oct 2026 - Tue 26 Jan 2027 (day 90, the day-90 review). `data/calendar.json` and the war room are the source of truth; dates and day numbers in the text below that disagree are from before the move.
 
 
-**Written:** Monday 26 October 2026. **Window:** 26 Oct 2026 to 24 Jan 2027.
+**Written:** Monday 26 October 2026 (dates updated 27 Oct for the Thursday launch). **Window:** Thu 29 Oct 2026 (day 1) to Tue 26 Jan 2027 (day 90), after the pre-launch days Mon 26 - Wed 28 Oct.
 **What it is:** one sheet for every channel the plan uses: the exact account or community, the time, the frequency, the content type, the `/go/` link and who posts. Day-by-day posts and ids live in `data/calendar.json` (the authority for dates); this sheet is the standing pattern behind it. Detail: `content/instagram-playbook.md` (Instagram), `content/ads-playbook.md` (paid), `content/tracking.md` (links), `data/outreach.json` (launch copy and templates).
 
 **Labels:** [F] read at the source on 26 Oct 2026 · [S] secondary · [E] estimate · [A] assumption · [O] owner decision · [U] unverified.
@@ -20,7 +20,7 @@
 
 ## 1. The weekly table (standard week, from week 2)
 
-Launch week (26 Oct-1 Nov) follows `data/calendar.json` day by day (extra LinkedIn post, Indie Hackers and Reddit launch posts, the press pitch on Fri 30 Oct). Holiday weeks 9-10 (21 Dec-3 Jan) run at half cadence.
+Launch week (Thu 29 Oct - Wed 4 Nov, after the pre-launch days Mon 26 - Wed 28 Oct) follows `data/calendar.json` day by day (extra LinkedIn posts, the Indie Hackers and r/SideProject launch posts on Sat 31 Oct, the regional press pitch on Tue 3 Nov). Holiday weeks 9-10 (21 Dec-3 Jan) run at half cadence.
 
 | CET | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
 |---|---|---|---|---|---|---|---|
@@ -98,27 +98,27 @@ Launch week (26 Oct-1 Nov) follows `data/calendar.json` day by day (extra Linked
 
 ### Reddit (founder's personal account, maker disclosed)
 - **Full playbook (27 Oct):** every subreddit with its rules, the exact titles and bodies, the first comments and what to do if a post is removed: `content/hype-playbook.md` §2 (Library › Hype playbook). The dates there win over this card.
-- **Where and when:** **r/SideProject** on Wed 28 Oct 17:00 CET (outreach `launchCopy.reddit`, code `/go/rd-v10`) and once at the images beat; **r/indiehackers** one self-promotion post with the Self Promotion flair (week 2-3); **r/EntrepreneurRideAlong** weekly ride-along updates with real numbers (optional, from week 3); **r/SaaS** one "roast my pricing" feedback post in week 4 (one mention per 60 days, affiliation disclosed [S]). Member counts and rules are third-party audits [S, `research/platforms-community.md` §4.2]: **read every sidebar, rule and pinned post by hand before posting [U].**
+- **Where and when:** **r/SideProject** on Sat 31 Oct 17:00 CET (outreach `launchCopy.reddit`, code `/go/rd-v10`) and once at the images beat; **r/roastmystartup** one roast post on Mon 2 Nov 15:00; **r/indiehackers** one self-promotion post with the Self Promotion flair (the Day-7 numbers on Wed 4 Nov 15:00); **r/EntrepreneurRideAlong** weekly ride-along updates with real numbers (optional, from week 3); **not r/SaaS**: its rule 11 bans promoting content-generation and lead-detection SaaS, with a permanent ban (hype playbook §2.4). Member counts and rules are third-party audits [S, `research/platforms-community.md` §4.2]: **read every sidebar, rule and pinned post by hand before posting [U].**
 - **Never:** r/marketing, r/Entrepreneur promotion, r/smallbusiness links, competitor tool subs (r/lovable and similar), r/selfpublish or r/KDP at launch, the same text twice, alt accounts, vote asks.
 - **Links:** where the rules allow, `/go/rd-<post>`, often in a comment.
 - **Paid:** $0.
 
 ### Indie Hackers (founder)
-- **When:** launch post Wed 28 Oct 16:00 CET ("Launched paid-only, no free tier, on purpose", `/go/ih-c12`); **weekly numbers update every Sunday 16:00** (`/go/ih-c37`, then `-e02`, `-e03`...); Product Hunt post-mortem after the images launch; the 30-day report on Wed 25 Nov.
+- **When:** launch post Sat 31 Oct 16:00 CET ("Launched with paid plans only, on purpose", `/go/ih-c12`); **weekly numbers update**: Day 7 on Wed 4 Nov, then every Sunday 16:00 from 8 Nov (`/go/ih-c37`, then `-e02`, `-e03`...); Product Hunt post-mortem after the images launch; the 30-day report on Wed 25 Nov.
 - **Content:** real numbers, refunds included; the contrarian pricing decision.
 
 ### Product Hunt (founder's personal account, self-hunted)
-- **Now:** the **coming-soon page** once the TAAFT listing is live (from Tue 27 Oct), `/go/ph-soon`; target 100+ followers by 1 Nov and 400+ committed supporters before any Tue-Thu launch.
+- **Now:** the **coming-soon page** once the TAAFT listing is live (from Fri 30 Oct), `/go/ph-soon`; target 100+ followers by Wed 4 Nov (day 7) and 400+ committed supporters before any Tue-Thu launch.
 - **Main launch:** **only at the images beat**, after the six-box gate, at **09:01 CET**, with a real video, the maker's first comment and the PH100 code; Tue-Thu with 400+ supporters, otherwise Sat-Sun [F/S]. Link `/go/ph-images` (created only then).
 - **Never:** upvote asks, vote swaps, paid hunters [F, Product Hunt launch guide].
 
 ### Directories (owner submits)
 | When | Directory | Cost | Link |
 |---|---|---|---|
-| **Mon 26 Oct, first, before anything else** | There's An AI For That (TAAFT) | $49 (b1); keep the launch-first bonus [F/U] | `/go/taaft` |
-| Tue 27 Oct, once TAAFT is live | AlternativeTo (as an alternative to Lovable, Gamma, Framer and Wix), SaaSHub, Microlaunch, Future Tools | $0 | `/go/alt`, `/go/saashub`, `/go/microlaunch`, `/go/futuretools` (the tracking.md §1.2 codes, also used in outreach `directoryListing`) |
+| **Thu 29 Oct, right after the 21:00 launch posts, before any other listing** | There's An AI For That (TAAFT) | $49 (b1); keep the launch-first bonus [F/U] | `/go/taaft` |
+| Fri 30 Oct, once TAAFT is live | AlternativeTo (as an alternative to Lovable, Gamma, Framer and Wix), SaaSHub, Microlaunch, Future Tools | $0 | `/go/alt`, `/go/saashub`, `/go/microlaunch`, `/go/futuretools` (the tracking.md §1.2 codes, also used in outreach `directoryListing`) |
 | Week 1-2 | The Rundown Supertools (free by email) | $0 | `/go/rundown` |
-| Images Product Hunt day | Uneed pick-your-date slot | $30 (b6), booked after the 1 Nov go/no-go | `/go/uneed` |
+| Images Product Hunt day | Uneed pick-your-date slot | $30 (b6), booked after the Wed 4 Nov images go/no-go | `/go/uneed` |
 - **Not used:** TopAI, Fazier, Futurepedia and other paid listings (strategy §6.2 "cut on purpose").
 
 ### One agency community (founder)
@@ -129,8 +129,8 @@ Launch week (26 Oct-1 Nov) follows `data/calendar.json` day by day (extra Linked
 
 ### Press (owner sends)
 - **Full plan (27 Oct):** the Bosnian and regional media list, the embargoed and post-launch releases in Bosnian, Croatian, Serbian and English, the TV and radio pitches and the Sarajevo stunts: `content/bosnia-guerrilla-press.md` (Library › Bosnia press and guerrilla). BiH outlets get the release on launch day, Thu 29 Oct; the Tue 3 Nov pitch is for the regional tech outlets. The dates there win over this card.
-- **Week 1, Fri 30 Oct:** local-language release to **Netokracija, Bloomberg Adria, Startit** and BiH business portals (template t16), with 3 real outputs and a founder photo; links `/go/press-<outlet>`.
-- **Wed 25 Nov:** the 30-day numbers post as a follow-up (`utm_campaign=day30`); **Sun 24 Jan:** the day-90 report (`day90`); a European follow-up at the images beat (t17).
+- **Tue 3 Nov (day 6):** the regional pitch to **Netokracija, Bloomberg Adria, Startit** and the other ex-Yugoslav tech and business outlets in Bosnia press §2.9 (template t16), with 3 real outputs and a founder photo; links `/go/press-<outlet>`. BiH business portals get the Bosnian release on launch day.
+- **Wed 25 Nov:** the 30-day numbers post as a follow-up (`utm_campaign=day30`); **Tue 26 Jan:** the day-90 report (`day90`); a European follow-up at the images beat (t17).
 
 ### Customer email (founder; owner signs off the first send)
 - 1 changelog a week + 1 per beat; opt-out in every email; `/go/em-<yyyymmdd>`.

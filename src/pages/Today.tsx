@@ -262,7 +262,7 @@ function buildGroups(day: CalendarDay, x: TodayExtra, date: string): Record<Grou
   const g: Record<GroupId, Item[]> = { post: [], make: [], ads: [], reach: [], log: [] };
 
   /* ---------- Post ---------- */
-  // Before the public launch (Thu 29 Oct 21:00 CET) the calendar holds only the countdown teasers and Stories.
+  // Before the public launch (Thu 29 Oct 01:30 CET) the calendar holds only the countdown teasers and Stories.
   day.posts.forEach((p, i) => {
     const e = x.posts[i];
     const t = hm(p.time);
@@ -497,8 +497,10 @@ function PostHow({ post, e, ig, date }: { post: CalendarPost; e: TodayExtra['pos
             {post.contentId === 'T7'
               ? 'Post it only once makeborne.com is open: load it signed out first and check the countdown is gone.'
               : post.contentId === 'S8'
-                ? 'The real reveal: record makeborne.com from 20:59:45 and post it the moment the site is open.'
-                : date > LAUNCH_DAY
+                ? 'The real reveal: record makeborne.com from 01:29:45 and post it the moment the site is open.'
+                : post.contentId === 'S6'
+                  ? 'After the 01:30 launch: makeborne.com open, signed out, with a link sticker. Skip it if the site is not open (Plan B).'
+                  : date > LAUNCH_DAY
                   ? 'An after-launch extra: real builds and a question to comment on. Link: makeborne.com.'
                   : 'It says when, never that it is live: no price, no "we launched". Link: makeborne.com (the countdown and the waitlist).'}
             {/^T\d/.test(post.contentId ?? '') && ' The music is in the video: keep the original sound and add no platform music.'}
@@ -574,7 +576,7 @@ function useLaunchCountdown() {
   return Math.max(0, Math.floor((target - now) / 1000));
 }
 
-/** The countdown to Thu 29 Oct 21:00 CET, in the war room's stat-card style; makeborne.com counts down to the same moment. */
+/** The countdown to Thu 29 Oct 01:30 CET, in the war room's stat-card style; makeborne.com counts down to the same moment. */
 function Countdown() {
   const s = useLaunchCountdown();
   const parts: [number, string][] = [
@@ -585,7 +587,7 @@ function Countdown() {
   ];
   return (
     <div className={`countdown${s === 0 ? ' is-live' : ''}`} role="timer" aria-label={s === 0 ? 'Makeborne is live' : `Launch in ${parts.map(([n, u]) => `${n} ${u}`).join(', ')}`}>
-      <span className="today-stat-label">{s === 0 ? 'Live since Thu 29 Oct, 21:00 CET' : 'Launch in'}</span>
+      <span className="today-stat-label">{s === 0 ? 'Live since Thu 29 Oct, 01:30 CET' : 'Launch in'}</span>
       {s > 0 ? (
         <span className="countdown-digits num" aria-hidden="true">
           {parts.map(([n, u]) => (
@@ -598,12 +600,12 @@ function Countdown() {
       ) : (
         <span className="today-stat-value">We are live.</span>
       )}
-      <span className="today-stat-sub">Public launch Thu 29 Oct 2026, 21:00 Sarajevo time (20:00 UTC). makeborne.com counts down to the same moment.</span>
+      <span className="today-stat-sub">Public launch Thu 29 Oct 2026, 01:30 Sarajevo time (00:30 UTC; moved from 21:00 on Wed 28 Oct). makeborne.com counts down to the same moment.</span>
     </div>
   );
 }
 
-/** Launch day: "LAUNCH — 21:00 CET" and the minute-by-minute run of show (data/plan.json launch), each step a tick box. */
+/** Launch day: "LAUNCH — 01:30 CET" and the minute-by-minute run of show (data/plan.json launch), each step a tick box. */
 function LaunchCard({ launch, date, checks, toggle }: { launch: LaunchInfo; date: string; checks: Record<string, boolean>; toggle: (k: string) => void }) {
   return (
     <section className="tgroup launch-card" aria-labelledby="launch-h">

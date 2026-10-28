@@ -1,6 +1,6 @@
 # Makeborne creative library: images, carousels and ads
 
-Written 26 Oct 2026, before the launch (Thu 29 Oct 2026, 21:00 CET); dates updated 27 Oct. The machine-readable source is `data/creatives.json`; ad copy matrices are in `content/ad-copy.md`; the plan of record is `plan/strategy.md`. Nothing here has been made, posted or bought yet.
+Written 26 Oct 2026, before the launch (Thu 29 Oct 2026, 01:30 CET since the 28 Oct move); dates updated 27 Oct. The machine-readable source is `data/creatives.json`; ad copy matrices are in `content/ad-copy.md`; the plan of record is `plan/strategy.md`. Nothing here has been made, posted or bought yet.
 
 **Labels:** [F] verified at the source or in our own files · [S] secondary · [V] vendor claim · [E] our estimate · [A] assumption · [O] owner decision · [U] unverified.
 

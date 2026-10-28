@@ -91,7 +91,7 @@
       {
         "week": 1,
         "dates": "2026-10-26 to 2026-11-01",
-        "note": "Launch week follows the day-by-day plan (content/production.md section 13). The launch is Thu 29 Oct at 21:00 CET, so each make-list item below is done the day before its post. The Higgsfield sign-up is Tue 27 Oct and the first shots are Wed 28 Oct 09:00.",
+        "note": "Launch week follows the day-by-day plan (content/production.md section 13). The launch is Thu 29 Oct at 01:30 CET, so each make-list item below is done the day before its post. The Higgsfield sign-up is Tue 27 Oct and the first shots are Wed 28 Oct 09:00.",
         "items": [
           {
             "day": "Tue",
@@ -13761,13 +13761,13 @@
       },
       {
         "date": "Thu 29 Oct",
-        "posts": "IG story S6 09:15, IG story S7 20:00, IG T7 21:00, TT T7 21:01, YT T7 21:02, IG story S8 21:01, IG story C15 21:05, LI V08 21:15, X C08 21:15, TT V01 21:30, IG V01 21:30, YT V01 21:30, TT V02 22:00, TT V03 22:30",
+        "posts": "IG story S7 00:30, IG T7 01:30, TT T7 01:31, YT T7 01:32, IG story S8 01:31, LI V08 08:45, IG story S6 09:15, X C08 14:00, IG story C15 21:05, TT V01 21:30, IG V01 21:30, YT V01 21:30, TT V02 22:00, TT V03 22:30",
         "blocks": [
           "Daytime: C01 proof static (T09 lay-proof with Wednesday's capture, 50 min); V04 only if a real 'build mine' request came in (capture 45 min, edit 75 min), otherwise the V02 full build (60-150 s) goes out on Friday. Never stage a comment.",
           "Capture block B (2 h): V06 fresh fictional deck + chat edit 'change Q2 to 21' + PowerPoint Edit Data; V07 lead finder (dentists, Austin; blur); V10 the garden-studio brief in Website, Presentation and Book mode (three uncut builds). Then C03 text-only static and C02 static from the phone capture (1 h), and the V05 edit (T08 inbox prop + review part, renders 9:16 and LinkedIn 4:5, captions, no music; 3 h).",
-          "18:00 Final prep: V01, V02, V03 and V08 uploaded as drafts; the X thread saved with media; phone charged; support inbox open.",
-          "20:59:45 Start the phone screen recording of makeborne.com reaching zero (it becomes S8). 21:00 T7, only once makeborne.com is open; 21:01 S8; 21:05 C15; 21:15 V08 on LinkedIn and C08 on X; 21:30 V01 (TikTok, Reels, Shorts; pin it after the end-card check); 22:00 V02 and 22:30 V03 on TikTok.",
-          "21:15-22:30 Replies and the private 'build mine' request log (source for V04).",
+          "Wed night: T7 ready and the phone charged before 00:30. Thu 08:00: V08 and the X thread saved with media; 18:00: V01, V02 and V03 uploaded as drafts; support inbox open.",
+          "Overnight: 01:29:45 start the phone screen recording of makeborne.com reaching zero (it becomes S8). 01:30 T7, only once makeborne.com is open; 01:31 S8. Daytime: 08:45 V08 on LinkedIn; 14:00 C08 on X. Evening: 21:05 C15; 21:30 V01 (TikTok, Reels, Shorts; pin it after the end-card check); 22:00 V02 and 22:30 V03 on TikTok.",
+          "01:30-02:15 and 21:30-22:30 Replies and the private 'build mine' request log (source for V04).",
           "If anything slips: V03 moves to Fri 21:30 and V04 to Sat; never post a draft that fails the quality bar."
         ]
       },

@@ -1,6 +1,6 @@
 # Instagram playbook: @makeborne
 
-> **Launch moved again (owner decision, 27 Oct 2026).** The public launch is **Thursday 29 October 2026 at 21:00 Sarajevo time** (CET, 20:00 UTC); makeborne.com counts down to that moment. Day 1 = Thu 29 Oct; Mon 26, Tue 27 and Wed 28 Oct are pre-launch days −3, −2 and −1. The launch week moved 1 more day (days 1-7 = 29 Oct - 4 Nov); launch day runs around 21:00 (T7 "We're live" at 21:00, V01 at 21:30). The countdown teasers T3-T6 and Stories S1-S3 have the old Wednesday time burned in and are not posted; "Guess the build time" (T8) is the Wed 28 Oct 21:00 post, and screen-recording Stories S4-S8 use the real countdown. Everything after the launch week keeps its date (ads A01 12-15 Nov and A02 3-4 Dec, creator waves, the no-boost window 20 Nov - 2 Dec, Black Friday, the 22 Nov and 20 Dec checkpoints). The 90 days run Thu 29 Oct 2026 - Tue 26 Jan 2027 (day 90, the day-90 review). `data/calendar.json` and the war room are the source of truth; dates and day numbers in the text below that disagree are from before the move.
+> **Launch moved again (owner decision, Wed 28 Oct 2026, 22:00).** The public launch is **Thursday 29 October 2026 at 01:30 Sarajevo time** (CET, 00:30 UTC), overnight; makeborne.com counts down to that moment. The launch posts (T7, S8) and the waitlist invite go out at 01:30-01:35; Thursday's daytime and evening posts say it is open (LinkedIn 08:45, X thread 14:00, V01 21:30). On 27 Oct it had moved to Thu 21:00. Day 1 = Thu 29 Oct; Mon 26, Tue 27 and Wed 28 Oct are pre-launch days −3, −2 and −1. The launch week moved 1 more day (days 1-7 = 29 Oct - 4 Nov); launch day runs around 21:00 (T7 "We're live" at 21:00, V01 at 21:30). The countdown teasers T3-T6 and Stories S1-S3 have the old Wednesday time burned in and are not posted; "Guess the build time" (T8) is the Wed 28 Oct 21:00 post, and screen-recording Stories S4-S8 use the real countdown. Everything after the launch week keeps its date (ads A01 12-15 Nov and A02 3-4 Dec, creator waves, the no-boost window 20 Nov - 2 Dec, Black Friday, the 22 Nov and 20 Dec checkpoints). The 90 days run Thu 29 Oct 2026 - Tue 26 Jan 2027 (day 90, the day-90 review). `data/calendar.json` and the war room are the source of truth; dates and day numbers in the text below that disagree are from before the move.
 
 
 **Written:** Monday 26 October 2026 (dates updated 27 Oct for the Thursday launch). **Window:** Thu 29 Oct 2026 (day 1) to Tue 26 Jan 2027 (day 90), after the pre-launch days Mon 26 - Wed 28 Oct.
@@ -156,7 +156,7 @@ Until C05 posts on Tue 3 Nov, pin slot 2 holds C06 (Sun 1 Nov). The teasers T8 (
 | # | Publish (CET) | Id | Format | Cover frame (from `data/production.json` by id) | Cover text | Keyword | Link in DM |
 |---|---|---|---|---|---|---|---|
 | 1 | Wed 28 Oct 21:00 | **T8** | Reel (teaser) | The real Hollis site and its build time (the teaser's own cover) | Guess the build *time*. | GO | makeborne.com |
-| 2 | Thu 29 Oct 21:00 | **T7** | Reel (teaser) | The countdown reaching zero (the teaser's own cover) | We're *live*. | GO | makeborne.com |
+| 2 | Thu 29 Oct 01:30 | **T7** | Reel (teaser) | The countdown reaching zero (the teaser's own cover) | We're *live*. | GO | makeborne.com |
 | 3 | Thu 29 Oct 21:30 | **V01** | Reel 17 s | Frame 0 of the v9 Fly-over: the real home page already lifting | We launched *today*. | SITE | `/go/ig-v01-site` |
 | 4 | Fri 30 Oct 13:15 | **V02** | Reel 32 s | The finished bakery site on a phone (frame 0 = the result) | One brief. Whole *website*. | SITE | `/go/ig-v02-site` |
 | 5 | Sat 31 Oct 13:15 | **V05** | Reel 28 s | Phone at 390 px with "Approve this version" visible | "Make it *pop*." (9th time) | CLIENT | `/go/ig-v05-client` |
@@ -518,24 +518,26 @@ Retire the bottom 50% of formats each Sunday (strategy §18). Never delete a pos
 
 **Simple version:** `data/instagram.json` → `kickoffDays` has one checklist card per launch day (a one-line summary: day, date, time, post id, keyword; then the tick-list, the caption, the cover and the link). The days below are the same cards written out, after the three pre-launch days.
 
-All times CET (Sarajevo). The launch is **Thu 29 Oct at 21:00**; day 1 is that Thursday and Mon 26, Tue 27 and Wed 28 Oct are pre-launch days −3, −2 and −1. Post ids and default times are from `data/calendar.json` (Today); the time-test slots are marked. Stories at 09:00 and 20:30 are this playbook's additions (not counted in the cadence). Every link below is the `/go/` code; until `/go/` is live (target Thu 29 Oct) use the long URL with the same UTMs.
+All times CET (Sarajevo). The launch is **Thu 29 Oct at 01:30**, overnight (moved from 21:00 on Wed 28 Oct at 22:00); day 1 is that Thursday and Mon 26, Tue 27 and Wed 28 Oct are pre-launch days −3, −2 and −1. Post ids and default times are from `data/calendar.json` (Today); the time-test slots are marked. Stories at 09:00 and 20:30 are this playbook's additions (not counted in the cadence). Every link below is the `/go/` code; until `/go/` is live (target Thu 29 Oct) use the long URL with the same UTMs.
 
 ### Pre-launch · Mon 26 - Wed 28 Oct (nothing says "we launched")
 - **Mon 26 or Tue 27 (45 min):** section 1 in full (name, bio 1, 5 links with slot 5 empty, photo, category, contact, settings, highlights "Start here", "Pricing", "FAQ" with their first stories). Set up and test the DM automations: **GO** first (every teaser asks for it; the reply sends makeborne.com, the countdown and the waitlist), then SITE and CLIENT (section 5.2 step 9).
 - **Tue 27 Oct, 19:00 · Story S4** "New time": a 10-second screen recording of the real makeborne.com countdown with a countdown sticker set to Thu 29 Oct 21:00. If Story S1 or anything else that says "Wed 28 Oct" or "19:00" is up, delete it first. T3-T6 are never posted.
 - **Wed 28 Oct, 09:00 · Story** "Tomorrow" with a fresh countdown sticker. **12:00 · Story S5** "something is hidden behind our countdown" (a screen recording of the cursor finding one design; never say or imply Makeborne made the hidden designs). **18:00 · Story** hint with a poll sticker.
 - **Wed 28 Oct, 21:00 · Reel T8** "Guess the build time" (date-free), with "Makeborne opens tomorrow, Thu 29 Oct, 21:00 CET (16:00 New York, 13:00 Los Angeles)." added to its caption. For an hour, answer every GO and reply to a few guesses.
+- **Wed 28 Oct, 22:30 · Story** "New time: tonight, 01:30 CET" with a NEW countdown sticker ending Thu 29 Oct 01:30. **22:45:** edit the T8 caption's last line to "Makeborne opens tonight, Thu 29 Oct, 01:30 CET (Wed 20:30 New York, 17:30 Los Angeles)."
 
-### Day 1 · Thu 29 Oct (launch at 21:00)
+### Day 1 · Thu 29 Oct (launch at 01:30, overnight)
 **Before posting:** confirm the copy fixes and "coming soon" labels are live (strategy §7 day 1); check the profile, highlights and DM automations once from a phone.
-- **09:15 · Story S6** "Today, 21:00" (a 10-second countdown recording with the sticker). **13:00 · Story:** repost finds from the hide-and-seek (with permission) + countdown sticker. **17:00 · Story** "4 hours". **20:00 · Story S7** "1 hour".
-- **20:59:45:** start the phone screen recording of makeborne.com reaching zero (it becomes S8).
-- **21:00 · Reel T7** "We're live", only once makeborne.com is open (load it signed out first). **21:01 · Story S8:** the reveal recording.
+- **00:30 · Story S7** "1 hour" (countdown sticker ending 01:30).
+- **01:29:45:** start the phone screen recording of makeborne.com reaching zero (it becomes S8). No GO by 01:20: Plan B, nothing that says live (Today has the steps).
+- **01:30 · Reel T7** "We're live", only once makeborne.com is open (load it signed out first). **01:31 · Story S8:** the reveal recording. Answer every GO until 02:15.
+- **09:15 · Story S6** "We're open" (a 10-second recording of makeborne.com open, link sticker). **13:00 · Story:** repost finds from the hide-and-seek (with permission), "You found them. Makeborne is open now."
 - **21:05 · Story C15** "Reply CLIENT" (`/go/ig-c15-client`).
 - **21:30 · Reel V01** (17 s), cover: home-page frame 0, "We launched *today*." **Pin 1.**
   Caption: "AI studio for client work: websites, decks and books from one brief. We launched Makeborne today. Describe it once and get a finished website, pitch deck or book. Then send your client a review link: they comment on the live page and tap Approve, no account needed. From $20/month + tax. Full refund until you use credits. Comment SITE and I'll DM you the link and 3 briefs to copy. #makeborne #websitedesign #pitchdeck #buildinpublic"
   Pinned comment: the CTA comment from section 3.6. Keyword SITE → `/go/ig-v01-site`.
-- **21:15-22:15:** reply to every comment. **22:15-22:45:** engagement routine.
+- **21:30-22:30:** reply to every comment. **22:30-22:45:** engagement routine.
 - **22:45 · Story, behind the scenes:** founder at the desk, "Day 1. We launched. Ask me anything" + question box.
 
 ### Day 2 · Fri 30 Oct

@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Dated decision checkpoints",
-    "version": "2026-10-27 (launch moved to Thu 29 Oct 21:00 CET)",
+    "version": "2026-10-28 (launch moved to Thu 29 Oct 01:30 CET)",
     "source": "content/tracking.md section 6.5 (dated checkpoints) and 7.5, plan/strategy.md sections 6 and 17, data/calendar.json actions. Collected for the war-room 'next decision due' card; edit freely.",
     "note": "Dates marked approx are planning guesses from the plan, not commitments. Decisions are owner decisions [O] unless stated."
   },
@@ -9,13 +9,13 @@
     {
       "date": "2026-10-27",
       "title": "Pre-launch: countdown, teasers and DM keywords",
-      "detail": "Countdown live on makeborne.com to Thu 29 Oct 21:00 CET; nothing says Wed 28 Oct or 19:00 any more; teasers never say it is live; DM keywords answer from a second account; Wednesday and Thursday scheduled.",
+      "detail": "Countdown live on makeborne.com to Thu 29 Oct 01:30 CET (moved from 21:00 on Wed 28 Oct, 22:00); nothing says Wed 28 Oct or 19:00 any more; teasers never say it is live; DM keywords answer from a second account; Wednesday and Thursday scheduled.",
       "decisions": [],
-      "source": "Owner decision 27 Oct 2026: launch Thu 29 Oct 21:00 CET"
+      "source": "Owner decisions 27 Oct 2026 (Thu 21:00) and 28 Oct 2026 (Thu 01:30 CET)"
     },
     {
       "date": "2026-10-29",
-      "title": "Launch-day owner calls (21:00 CET launch)",
+      "title": "Launch-day owner calls (01:30 CET launch)",
       "detail": "Set the AI daily limit for launch day, confirm support cover with a 4 h reply target, approve operating costs outside the $1,000 (demo builds, comped creator credits).",
       "decisions": [
         "D6",

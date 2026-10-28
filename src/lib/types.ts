@@ -84,7 +84,7 @@ export interface CalendarPost {
   channel: string; account: string; contentId: string | null; time: string; notes: string; tag: string; slot: string;
   link: string; utm: Record<string, string>; episode?: number; requires?: string; fallbackContentId?: string;
 }
-/** Launch day: Thu 29 Oct 2026 at 21:00 CET (data/plan.json launch). */
+/** Launch day: Thu 29 Oct 2026 at 01:30 CET (data/plan.json launch). */
 export interface LaunchInfo { label: string; timeCet: string; utc: string; runOfShow: { time: string; text: string; how: string }[] }
 /**
  * One dated action. `copy` is the exact text to post or send, `link` the link that goes with it, and `doc` the Library

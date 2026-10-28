@@ -254,7 +254,7 @@
         "id": "b1",
         "item": "TAAFT listing, submitted before any other listing (launch-first bonus; check it applies to the $49 tier)",
         "usd": 49,
-        "when": "Thu 29 Oct 2026 (day 1, 21:00 CET)",
+        "when": "Thu 29 Oct 2026 (day 1, right after the 01:30 CET launch posts, 08:00 at the latest)",
         "channel": "directories",
         "killRule": "Sunk cost; no TAAFT upgrades unless 3+ tracked net payers in 30 days",
         "scaleRule": "$437 bundle only from revenue, only if the listing converts [O]"
@@ -444,9 +444,9 @@
       "date": "2026-10-29",
       "weekday": "Thu",
       "actions": [
-        "21:00 public launch: T7 sting and the reveal Story; 21:05 Story; 21:15 LinkedIn and X; 21:30 V01 on Reels, TikTok and Shorts",
+        "01:30 public launch (overnight): T7 sting and the reveal Story S8; 01:35 waitlist invite. Daytime \"now open\" push: 08:30 press release (no embargo), 08:45 LinkedIn, 14:00 X thread; evening: 21:05 Story C15, 21:30 V01 on Reels, TikTok and Shorts",
         "Confirm copy fixes and 'coming soon' labels live; raise AI daily limit; confirm support cover",
-        "Submit TAAFT ($49) before any other listing, right after the 21:00 posts",
+        "Submit TAAFT ($49) before any other listing, right after the 01:30 posts (08:00 at the latest)",
         "Ask engineering for asks 1-4",
         "Check v9 Fly-over end card and home-page match, then pin",
         "Founder LinkedIn 'Day 1' and X launch thread",
@@ -1968,7 +1968,7 @@
   ],
   "meta": {
     "window": "2026-10-29 to 2027-01-26 (pre-launch 26-28 Oct)",
-    "dayNumbering": "day 1 = Thu 29 Oct 2026 (public launch 21:00 CET); Mon 26, Tue 27 and Wed 28 Oct are pre-launch days -3, -2 and -1; day 90 = Tue 26 Jan 2027",
+    "dayNumbering": "day 1 = Thu 29 Oct 2026 (public launch 01:30 CET); Mon 26, Tue 27 and Wed 28 Oct are pre-launch days -3, -2 and -1; day 90 = Tue 26 Jan 2027",
     "builtFrom": [
       "plan/draft-creator-led.md",
       "plan/draft-launch-events.md",
@@ -2021,72 +2021,96 @@
       "actions": [
         "12:00 Story S5 \"Something is hidden behind our countdown\"",
         "21:00 \"Guess the build time\" (T8) on Reels, TikTok 21:05, Shorts 21:10, captioned \"opens tomorrow 21:00 CET\"",
-        "Schedule Thursday (S6 09:15, S7 20:00; by hand: T7 21:00, S8 21:01, V01 21:30)",
-        "Check the countdown again: it ends Thu 29 Oct 21:00 CET"
+        "Schedule Thursday (S6 \"We're open\" 09:15; by hand: S7 00:30, T7 01:30, S8 01:31, V01 21:30)",
+        "Check the countdown again: it now ends Thu 29 Oct 01:30 CET",
+        "22:00 Launch moved to tonight: Thu 29 Oct 01:30 CET (owner decision, 28 Oct). makeborne.com counts down to 01:30",
+        "22:15 Check the new countdown on a phone and a laptop: it ends at 01:30",
+        "22:30 Story \"New time: tonight, 01:30 CET\" with a new countdown sticker; correct the T8 captions and the X, LinkedIn, Threads and Facebook posts that say 21:00",
+        "00:30 The launch run of show starts (Thursday's Today page)"
       ]
     }
   ],
   "launch": {
     "date": "2026-10-29",
-    "timeCet": "21:00",
-    "utc": "2026-10-29T20:00:00Z",
-    "label": "Public launch: Thursday 29 October 2026, 21:00 Sarajevo time (CET, 20:00 UTC)",
-    "decided": "Owner decision, 27 Oct 2026: the public launch moves from Wed 28 Oct 19:00 to Thu 29 Oct 21:00 CET. makeborne.com counts down to that moment (live since 27 Oct).",
+    "timeCet": "01:30",
+    "utc": "2026-10-29T00:30:00Z",
+    "label": "Public launch: Thursday 29 October 2026, 01:30 Sarajevo time (CET, 00:30 UTC; Wed 20:30 New York)",
+    "decided": "Owner decision, Wed 28 Oct 2026 22:00: the public launch moves from Thu 29 Oct 21:00 to Thu 29 Oct 01:30 CET, tonight. makeborne.com counts down to that moment. (On 27 Oct it had moved from Wed 28 Oct 19:00 to Thu 21:00.)",
     "runOfShow": [
       {
-        "time": "20:00",
-        "text": "Post Story S7 \"1 hour\"",
-        "how": "Screen-record makeborne.com at about 59:30 to go, add the countdown sticker and a link sticker to makeborne.com. Never says it is live."
+        "time": "00:30",
+        "text": "Post Story S7 \"1 hour\" and the X post \"1 hour.\"",
+        "how": "Screen-record makeborne.com at about 59:30 to go, add Instagram's countdown sticker (ends Thu 29 Oct 01:30) and a link sticker to makeborne.com. Never says it is live."
       },
       {
-        "time": "20:30",
-        "text": "Final checks: makeborne.com live, the plans open at checkout, the countdown about to hit zero, DM keywords on",
-        "how": "Open makeborne.com on a phone and a laptop; open each plan as far as the Makeborne-created checkout (never a Whop store page); the countdown must reach zero at 21:00 and then show the live page; send GO, SITE, DECK, CLIENT and BOOK from a second account and check each DM answers. Have T7, V01, the captions and the launch thread open and ready."
+        "time": "00:50",
+        "text": "Final checks: makeborne.com counting down to 01:30, DM keywords on, T7 ready",
+        "how": "Open makeborne.com on a phone and a laptop: the countdown must end at 01:30. Send GO, SITE, DECK, CLIENT and BOOK from a second account and check each DM answers. Have T7 (WED-1900_live_9x16.mp4) and its three captions open and ready; phone charged; support inbox open."
       },
       {
-        "time": "20:40",
-        "text": "Wait for the owner's GO (Codex confirms plans open at 21:00)",
-        "how": "GO comes after the 20:00 real-card test on makeborne.com. No GO by 20:50 is Plan B: post nothing that says live (no T7, no V01). At 21:00 post one Story, \"Doors open in a moment. Join the waitlist: you get the invite first.\", and answer comments the same way. makeborne.com holds on \"Makeborne opens in a moment\" by itself."
+        "time": "01:10",
+        "text": "Wait for the owner's GO (engineering confirms plans open at 01:30)",
+        "how": "GO comes after the owner's real-card test on makeborne.com. No GO by 01:20 is Plan B: post nothing that says live (no T7, no S8). At 01:30 post one Story, \"Doors open in a moment. Join the waitlist: you'll get the invite first.\", and answer comments the same way. makeborne.com holds on \"Makeborne opens in a moment\" by itself. Hold the 08:30 press release until the owner picks the new time."
       },
       {
-        "time": "20:59",
+        "time": "01:29",
         "text": "Start the screen recording of makeborne.com on your phone (Story S8)",
-        "how": "Start at 20:59:45 and record until about 21:00:15: the countdown hits zero and the site opens. This real reveal is the S8 Story and the clip for X and LinkedIn."
+        "how": "Start at 01:29:45 and record until about 01:30:15: the countdown hits zero and the site opens. This real reveal is the S8 Story and the clip for LinkedIn and X later today."
       },
       {
-        "time": "21:00",
-        "text": "Post T7 \"We're live\" once makeborne.com is open (Reels 21:00, TikTok 21:01, Shorts 21:02)",
+        "time": "01:30",
+        "text": "Post T7 \"We're live\" once makeborne.com is open (Reels 01:30, TikTok 01:31, Shorts 01:32)",
         "how": "Load makeborne.com signed out first: the countdown must be gone. File: WED-1900_live_9x16.mp4 (the file name is old; the video has no date or time in it). From now on answer every GO comment with the link straight away."
       },
       {
-        "time": "21:01",
-        "text": "Post the reveal Story S8, then the C15 Story at 21:05 (\"Reply CLIENT\")",
-        "how": "S8: trim the recording to 15 s, link sticker makeborne.com, text \"We're live.\" C15: link sticker /go/ig-c15-client, or the long makeborne.com link until /go/ is live."
+        "time": "01:31",
+        "text": "Post the reveal Story S8",
+        "how": "Trim the recording to 15 s, link sticker makeborne.com, text \"We're live.\" Keep the clip: it goes under the LinkedIn post (08:45) and the X thread (14:00)."
       },
       {
-        "time": "21:03",
+        "time": "01:33",
         "text": "Check the plans page: $20 / $49 / $99 a month, 300 / 750 / 1,550 credits, Yearly $192 / $470.40 / $950.40",
-        "how": "Open makeborne.com/billing signed out on the phone. If any number or the Yearly switch differs, quote no numbers tonight and tell Codex."
+        "how": "Open makeborne.com/billing signed out on the phone. If any number or the Yearly switch differs, quote no numbers today and tell engineering."
       },
       {
-        "time": "21:05",
+        "time": "01:35",
         "text": "Owner: say \"send invites\" for the waitlist email from admin@makeborne.com",
         "how": "Only once makeborne.com is open signed out. One email per waitlist address, each with its own unsubscribe link. Nothing goes out before the owner says it."
       },
       {
-        "time": "21:10",
+        "time": "01:40",
         "text": "Owner: submit the TAAFT listing first, before any other directory",
-        "how": "There's An AI For That, $49 (b1). Hold every other listing until it is live."
+        "how": "There's An AI For That, $49 (b1). If it is too late tonight, do it at 08:00, still before any other listing."
       },
       {
-        "time": "21:15",
-        "text": "Post on LinkedIn (V08, \"Day 1\") and X (C08, the launch thread), then reply to every comment for 60 minutes (until 22:15)",
-        "how": "Captions are under each post on this page. Link in the first comment on LinkedIn and the first reply on X; the reveal clip goes as a reply. Log \"build mine\" requests and consent in the private sheet, never in this repo."
+        "time": "01:45",
+        "text": "Answer every GO and comment until 02:15, log the first numbers, then sleep",
+        "how": "Whop: paid, refunds, money in. Each platform: views, link clicks, comments. Type them into the day sheet on Results for Thu 29 Oct. Engineering watches payments and errors overnight."
+      },
+      {
+        "time": "08:30",
+        "text": "Owner: send the press release, no embargo (\"Makeborne opened tonight at 01:30\")",
+        "how": "Bosnian release to EMB and BIH, Croatian to HR, Serbian ijekavica to RS and SRNA, English to Sarajevo Times (Bosnia press plan, section 3). If there was no GO at 01:10, hold it until the owner picks the new time."
+      },
+      {
+        "time": "08:45",
+        "text": "Post on LinkedIn (V08, \"Day 1\"), link in the first comment, then reply for an hour",
+        "how": "Caption under the post on this page. Attach the 30-45 s real build clip; the S8 reveal clip goes as a comment."
+      },
+      {
+        "time": "14:00",
+        "text": "Post the X launch thread (C08) and pin post 1, then reply to every comment for 60 minutes",
+        "how": "14:00 CET = 13:00 London = 09:00 New York. Link in the first reply; the reveal clip goes as a reply. Threads launch post at 14:05. Log \"build mine\" requests and consent in the private sheet, never in this repo."
+      },
+      {
+        "time": "21:00",
+        "text": "Launch-day evening push: the venue evening, then Story C15 at 21:05 (\"Reply CLIENT\")",
+        "how": "makeborne.com open on the big screen at the venue, live builds for the room (Bosnia press plan S2). C15: link sticker /go/ig-c15-client, or the long makeborne.com link until /go/ is live."
       },
       {
         "time": "21:30",
         "text": "Post V01 on Reels, TikTok and Shorts",
-        "how": "V01 files: V01_reel_9x16.mp4, V01_tiktok_9x16.mp4, V01_shorts_9x16.mp4 (not the _justlaunched files, those are for Fri 30 Oct onwards). Pin V01 on TikTok and Instagram (Pin 1)."
+        "how": "V01 files: V01_reel_9x16.mp4, V01_tiktok_9x16.mp4, V01_shorts_9x16.mp4 (not the _justlaunched files, those are for Fri 30 Oct onwards). They say \"We launched today\", true all Thursday. Pin V01 on TikTok and Instagram (Pin 1)."
       },
       {
         "time": "22:00",
@@ -2095,13 +2119,13 @@
       },
       {
         "time": "23:00",
-        "text": "Log the first numbers",
+        "text": "Log the day's numbers",
         "how": "Whop: paid, refunds, money in. Each platform: views, link clicks, comments. Type them into the day sheet on Results for Thu 29 Oct."
       }
     ]
   },
   "launchMove": {
-    "summary": "Launch moved again, from Wed 28 Oct 19:00 to Thu 29 Oct 2026, 21:00 CET (owner decision, 27 Oct). Launch day 1 = Thu 29 Oct; Mon 26, Tue 27 and Wed 28 Oct are pre-launch days −3, −2 and −1. The launch week (days 1-7, 29 Oct - 4 Nov) moved 1 day later with its content; launch day is re-timed around 21:00. The teasers T3-T6 and the Stories S1-S3 have the old Wednesday time burned in and are dropped (the owner chose not to re-render them); \"Guess the build time\" (T8) moves to Wed 28 Oct 21:00; screen-recording Stories S4-S8 of the real makeborne.com countdown take their place. Everything after the launch week keeps its date (ads, creator waves, the no-boost window, Black Friday, checkpoints); day numbers are recomputed. The 90-day window runs Thu 29 Oct 2026 - Tue 26 Jan 2027 (day 90, the day-90 review).",
+    "summary": "Launch moved a third time on Wed 28 Oct at 22:00 (owner decision): from Thu 29 Oct 21:00 to Thu 29 Oct 01:30 CET, overnight. Day numbers are unchanged (day 1 = Thu 29 Oct). The launch posts (T7, S8) and the waitlist invite go out at 01:30-01:35; the reach moments stay in Thursday's daytime and evening as \"now open\" posts (press 08:30 without embargo, LinkedIn 08:45, X thread 14:00, V01 21:30). Before that: Launch moved again, from Wed 28 Oct 19:00 to Thu 29 Oct 2026, 21:00 CET (owner decision, 27 Oct). Launch day 1 = Thu 29 Oct; Mon 26, Tue 27 and Wed 28 Oct are pre-launch days −3, −2 and −1. The launch week (days 1-7, 29 Oct - 4 Nov) moved 1 day later with its content; launch day is re-timed around 21:00. The teasers T3-T6 and the Stories S1-S3 have the old Wednesday time burned in and are dropped (the owner chose not to re-render them); \"Guess the build time\" (T8) moves to Wed 28 Oct 21:00; screen-recording Stories S4-S8 of the real makeborne.com countdown take their place. Everything after the launch week keeps its date (ads, creator waves, the no-boost window, Black Friday, checkpoints); day numbers are recomputed. The 90-day window runs Thu 29 Oct 2026 - Tue 26 Jan 2027 (day 90, the day-90 review).",
     "timeTest": "The 20:15 posting-time test moved from Wed 4 / Fri 6 Nov to Fri 6 / Mon 9 Nov (Wed 4 Nov is launch day 7; V19's Monday Reel moves from 13:15 to 20:15).",
     "pinned": [
       "Attribution target and the sample review link stay on Thu 29 Oct (engineering target, now launch day 1).",

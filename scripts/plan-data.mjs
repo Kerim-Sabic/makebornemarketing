@@ -12,7 +12,7 @@ const toUtc = (iso) => {
 export const addDays = (iso, n) => new Date(toUtc(iso) + n * DAY_MS).toISOString().slice(0, 10);
 const diff = (a, b) => Math.round((toUtc(a) - toUtc(b)) / DAY_MS);
 const START = '2026-10-26'; // Mon of week 1 (pre-launch day −3); weeks run Monday to Sunday
-export const LAUNCH = '2026-10-29'; // the public launch, Thu 29 Oct 2026 at 21:00 CET (day 1)
+export const LAUNCH = '2026-10-29'; // the public launch, Thu 29 Oct 2026 at 01:30 CET (day 1)
 export const DAY90 = '2027-01-26'; // day 90 and the day-90 review, inside week 13
 const WEEKDAYS = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
 const weekOf = (iso) => Math.min(13, Math.floor(diff(iso, START) / 7) + 1);

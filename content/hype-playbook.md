@@ -1,6 +1,6 @@
 # Makeborne launch: the build-hype-online playbook
 
-**Written:** Tue 27 Oct 2026. **Window:** Tue 27 Oct to Sun 8 Nov 2026. **Launch:** Thu 29 Oct 2026, 21:00 CET (Sarajevo) = 20:00 UTC = 20:00 London = 16:00 New York = 13:00 Los Angeles.
+**Written:** Tue 27 Oct 2026. **Window:** Tue 27 Oct to Sun 8 Nov 2026. **Launch:** Thu 29 Oct 2026, 01:30 CET (Sarajevo) = 00:30 UTC = 00:30 London = Wed 20:30 New York = Wed 17:30 Los Angeles. (Moved from Thu 21:00 by the owner on Wed 28 Oct at 22:00: the launch posts go out overnight, the reach moments stay in Thursday's day and evening as "now open" posts.)
 **Who:** the founder posts on owned channels and in communities. The owner sends press, submits directories and approves anything that costs money or emails people. This playbook posts nothing.
 **Fits with:** the war room calendar (`data/calendar.json`), `content/where-to-post.md`, `data/outreach.json` launchCopy and `content/tracking.md`. Where the war room already schedules a post, this playbook uses the same time and its ID, marked **[war room ID]**. This playbook adds the hype layer around it: the pre-launch X, LinkedIn and Threads posts, the Stories between the war-room ones, Reddit beyond r/SideProject, the reply strategy, Product Hunt timing and the community and Bosnian posts.
 **On Today:** every dated action below is on its day in the war room (Today), with the exact text and a copy button.
@@ -17,7 +17,7 @@
 1. **Say "one brief".** Every real output came from a 500-1,000-character brief, so never describe the input as shorter than that.
 2. **Only live features.** Websites on a Makeborne address, books, decks, client review links, the basic CRM and lead finder, manual GitHub export, the projects library. Custom domains, credit top-ups, automatic GitHub sync, agency tools and AI lead research: "coming soon", no date.
 3. **Banned words and claims:** "free", "trial", vendor or AI-model names, "better than X". Say "paid plans only, on purpose" and "full refund if you haven't used your credits". (This matches the live terms on makeborne.com: a payment is refundable while none of its credits are used [F, makeborne.com/billing/terms].)
-4. **Prices exactly as the plans page shows them at launch:** Create $20 a month (300 credits), Studio $49 (750 credits), Scale $99 (1,550 credits). Yearly is 20% off: $192, $470.40 and $950.40 a year. Any tax or checkout fee is shown by Whop before payment. Unused plan credits carry over for two months. Check makeborne.com/billing once at 21:03 on launch night; if anything differs, stop quoting numbers and tell Codex.
+4. **Prices exactly as the plans page shows them at launch:** Create $20 a month (300 credits), Studio $49 (750 credits), Scale $99 (1,550 credits). Yearly is 20% off: $192, $470.40 and $950.40 a year. Any tax or checkout fee is shown by Whop before payment. Unused plan credits carry over for two months. Check makeborne.com/billing once at 01:33 on launch night; if anything differs, stop quoting numbers and tell engineering.
 5. **The 9 hidden countdown designs are not Makeborne output.** "Something is hidden behind our countdown" is fine. Never say or imply Makeborne made them. Never put them in a header, gallery or Product Hunt image.
 6. **Build times are real and from test runs:** website Crux Yard 2:07, deck 0:43, book 1:23 (invented businesses, 555 phone numbers). Show the timer, or write "sped up" on screen. T8 shows its own build and answer; don't re-caption it with another time.
 7. **Never post T3-T6** or anything that says "Wed 28 Oct" or "19:00" [war room].
@@ -33,7 +33,7 @@ How to read it: each row is one action at one time. "Copy" names the block in th
 
 ### The Instagram Stories plan (countdown sticker and hide-and-seek)
 
-**Countdown sticker, every time:** open Stories, film or upload a 10-second phone screen recording of makeborne.com counting down, tap the sticker icon, choose **Countdown**, name it **Makeborne launch**, set the end to **Thu 29 Oct, 21:00** with the phone set to Sarajevo time, pick the brand colour, place it bottom-centre [S, Social Media Examiner; Sked Social]. Viewers tap it to get a reminder when it ends [S]. A Story lasts 24 hours, so each countdown Story needs a fresh sticker. Save every one to a **Launch** Highlight.
+**Countdown sticker, every time:** open Stories, film or upload a 10-second phone screen recording of makeborne.com counting down, tap the sticker icon, choose **Countdown**, name it **Makeborne launch**, set the end to **Thu 29 Oct, 01:30** (from Wed 22:30; the stickers posted before then end at 21:00) with the phone set to Sarajevo time, pick the brand colour, place it bottom-centre [S, Social Media Examiner; Sked Social]. Viewers tap it to get a reminder when it ends [S]. A Story lasts 24 hours, so each countdown Story needs a fresh sticker. Save every one to a **Launch** Highlight.
 
 **Link sticker:** makeborne.com (pre-launch: the countdown and waitlist). Use the war-room UTM where the war room set one.
 
@@ -41,19 +41,21 @@ How to read it: each row is one action at one time. "Copy" names the block in th
 - Wed 12:00, S5 [war room]: the phone recording of press, hold, drag until a design appears.
 - Wed 12:15 on X and Threads: the laptop recording (cursor reveal).
 - Wed 18:00: the hint Story with a poll.
-- Thu 13:00: repost 2-4 finds people sent, only after asking each sender "Can we repost your screenshot?".
+- Thu 13:00: repost 2-4 finds people sent, only after asking each sender "Can we repost your screenshot?" (by then the site is open).
 - Every challenge Story carries the small line **"Easter-egg designs, not Makeborne builds."**
 - Never tell people the designs show what Makeborne makes. After launch the countdown is gone; don't reuse the designs.
 
-### Launch-day checklist
+### Launch-night checklist
 
-Thu 29 Oct, 08:00 (founder):
-1. Open makeborne.com signed out on a phone and a laptop. The countdown ends 21:00 CET and nothing says "live" yet.
-2. Support inbox open; reply target 4 hours (tonight: 10 minutes).
+Thu 29 Oct, 00:50 (founder):
+1. Open makeborne.com signed out on a phone and a laptop. The countdown ends at 01:30 CET and nothing says "live" yet.
+2. Support inbox open; reply target tonight: 10 minutes until 02:15, then 4 hours from 08:00.
 3. "Coming soon" labels and the copy fixes are live, or that copy is hidden [war room].
-4. Open each `/go/` code you will use tonight in a private window. Each must land on makeborne.com with its tags. Any that fail: use the long URL printed in this file.
-5. Drafts ready: X thread (9 parts, media attached), LinkedIn V08, Threads, V01 uploaded.
-6. Check with Codex: sales open at 21:00 and the launch-weekend AI limit is set (decision 2). The waitlist invite is ready for 21:05 (decision 3).
+4. Open each `/go/` code you will use in a private window. Each must land on makeborne.com with its tags. Any that fail: use the long URL printed in this file.
+5. Ready: T7 and its three captions, the S8 screen recording, DM keywords answering from a second account.
+6. 01:10: the owner's GO (engineering confirms plans open at 01:30). No GO by 01:20 is Plan B: nothing that says live, one Story "Doors open in a moment. Join the waitlist: you'll get the invite first.", and the 08:30 press release waits for the new time.
+
+Thu 29 Oct, 08:00 (founder): makeborne.com open signed out, overnight sign-ups and payments, support inbox, drafts ready for LinkedIn V08 (08:45), the X thread (14:00, 9 parts, media attached) and Threads (14:05), V01 uploaded for 21:30. Check with engineering that the launch-weekend AI limit is set (decision 2).
 
 ### Tue 27 Oct: the new date (pre-launch −2)
 
@@ -118,6 +120,40 @@ The countdown (and the waitlist until Thursday): https://makeborne.com/?utm_sour
 | 21:20 | Threads | Founder | T8 on Threads. | `th-1028-24h` (§4.2) | `https://makeborne.com/?utm_source=threads&utm_medium=organic&utm_campaign=launch-2026-10&utm_content=th-1028-24h` |
 | 21:30 | Instagram Stories | Founder | '24 hours' Story with countdown sticker and slider sticker. Then answer every GO comment for an hour [war room]. | `ig-1028-24h` (below) | `https://makeborne.com/?utm_source=instagram&utm_medium=organic&utm_campaign=launch-2026-10&utm_content=ig-s1028-24h` |
 | 22:00 | X | Founder | 10 replies to US accounts (16:00-17:00 New York). No links. | — | — |
+| 22:30 | Instagram Stories | Founder | 'New time' Story: 10 s phone screen recording of the new countdown, a NEW countdown sticker 'Makeborne launch' ending Thu 29 Oct 01:30 (the earlier stickers still end at 21:00), link sticker. Add it to the 'Launch' Highlight. | `ig-1028-newtime` (below) | `https://makeborne.com/?utm_source=instagram&utm_medium=organic&utm_campaign=launch-2026-10&utm_content=ig-s1028-newtime` |
+| 22:35 | X | Founder | Post the new time as a quote of your pinned new-date post and pin it; reply to tonight's '24 hours' post with the same text. | `x-1028-newtime` (below) | `https://makeborne.com/?utm_source=x&utm_medium=organic&utm_campaign=launch-2026-10&utm_content=x-1028-newtime` |
+| 22:40 | Threads | Founder | Reply under tonight's T8 post with the new time. | `x-1028-newtime` (same as 22:35) | `https://makeborne.com/?utm_source=threads&utm_medium=organic&utm_campaign=launch-2026-10&utm_content=th-1028-newtime` |
+| 22:45 | LinkedIn | Founder | Edit this morning's teaser: 'Tomorrow at 21:00 CET I launch Makeborne.' becomes 'Tonight at 01:30 CET I launch Makeborne.', and 'Thursday, 21:00 Sarajevo, 16:00 New York.' becomes 'Thursday 01:30 Sarajevo, Wednesday 20:30 New York.' | — | — |
+| 22:45 | Instagram Reels | Founder | Edit the T8 captions on Reels and Shorts: the last line becomes the new time. On TikTok, if the caption cannot be edited, pin a comment with it. | `t8-newtime` (below) | — |
+| 22:50 | Facebook (personal) | Founder | If you posted the Bosnian Facebook post this evening, edit its first line to the new time. | `fb-1028-newtime` (below) | — |
+
+**Update, Wed 28 Oct 22:00:** the owner moved the launch to **tonight, Thu 29 Oct 01:30 CET**. The rows from 22:30 correct what already went out with "21:00". The launch run of show starts at 00:30 on Thursday's page.
+
+**22:30 Instagram Stories** `ig-1028-newtime`:
+```text
+Text: "New time: tonight, 01:30 CET."
+Countdown sticker "Makeborne launch" (Thu 29 Oct 01:30).
+Link sticker: makeborne.com
+```
+
+**22:35 X** `x-1028-newtime`:
+```text
+New time: Makeborne opens tonight at 01:30 CET.
+
+00:30 London · 20:30 New York · 17:30 Los Angeles (Wednesday).
+
+makeborne.com
+```
+
+**22:45 T8 caption line** `t8-newtime`:
+```text
+Makeborne opens tonight, Thu 29 Oct, 01:30 CET (Wed 20:30 New York, 17:30 Los Angeles).
+```
+
+**22:50 Facebook** `fb-1028-newtime`:
+```text
+Noćas u 01:30 lansiramo Makeborne.
+```
 
 **09:00 Instagram Stories** `ig-1028-tomorrow`:
 ```text
@@ -195,63 +231,51 @@ Link sticker: makeborne.com
 
 ### Thu 29 Oct: LAUNCH DAY, hour by hour (day 1)
 
+The launch is overnight at **01:30 CET** (owner, Wed 28 Oct 22:00). The night is short: S7, the GO gate, T7 and S8, the plans check and the waitlist invite, then sleep. The reach moments move to the day and evening and say it is open: LinkedIn 08:45, the X thread 14:00, the venue evening, V01 21:30.
+
 | CET | Platform | Who | Do this | Copy | Link |
 |---|---|---|---|---|---|
-| 08:00 | Ops | Founder | Launch checklist (playbook §1, Thu 08:00): countdown, support inbox, copy fixes and 'coming soon' labels, /go/ test in a private window (if a /go/ link fails, use the long URLs in this file), drafts loaded for X, LinkedIn, Threads. | — | — |
-| 08:30 | Ops | Owner | Confirm with Codex: sales open at 21:00, and the daily AI limit is raised for 29 Oct-1 Nov (decision 2; numbers in the owner's private notes). The waitlist invite goes out at 21:05 (decision 3). | — | — |
-| 09:15 | Instagram Stories | Founder | Story S6 'Today, 21:00' with countdown sticker [war room]. | — | `makeborne.com (war room UTM ig-s6)` |
-| 10:00 | Engagement | Founder | Engagement block, no links anywhere: X 20 replies (10 at 14:00-15:00, 10 at 20:30-21:00), LinkedIn 15 comments on agency-owner and web-designer posts, Reddit 5 helpful comments in the subs you will post in, Product Hunt 3 thoughtful comments on today's launches, 1 useful answer in your agency community (no link). No LinkedIn post today until 21:15. | — | — |
-| 12:00 | X | Founder | 'Today' post with a 10 s countdown recording. No link needed. | `x-1029-today` (below) | — |
-| 12:05 | Threads | Founder | Same 'Today' post. | `x-1029-today` (same as 12:00) | — |
-| 13:00 | Instagram Stories | Founder | Repost finds from the hide-and-seek (with permission) + countdown sticker. | `ig-1029-finds` (below) | — |
-| 17:00 | Instagram Stories | Founder | '4 hours' Story. | `ig-1029-4h` (below) | `https://makeborne.com/?utm_source=instagram&utm_medium=organic&utm_campaign=launch-2026-10&utm_content=ig-s1029-4h` |
-| 18:00 | Ops | Founder | Final prep: X thread (9 posts) saved as drafts with media attached; LinkedIn V08 and Threads drafts; V01 uploaded and ready; phone charged; support inbox open. | — | — |
-| 20:00 | Instagram Stories | Founder | Story S7 '1 hour' [war room]. | — | `makeborne.com (war room UTM ig-s7)` |
-| 20:00 | X | Founder | '1 hour.' with a 10 s recording of the clock rolling. | `x-1029-1h` (below) | — |
-| 20:59 | Ops | Founder | At 20:59:45 start the phone screen recording of makeborne.com hitting zero (for S8). | — | — |
-| 21:00 | Instagram Reels | Founder | T7 'We're live' on Reels, only once makeborne.com is open signed out (TikTok 21:01, Shorts 21:02) [war room T7]. | — | `makeborne.com (war room UTMs ig-t7 / tt-t7 / yt-t7)` |
-| 21:01 | Instagram Stories | Founder | Story S8 'We're live' (the real reveal recording, 15 s, link sticker) [war room]. | — | `makeborne.com (war room UTM ig-s8)` |
-| 21:03 | Ops | Founder | Open makeborne.com/billing signed out: Create $20 / 300 credits, Studio $49 / 750, Scale $99 / 1,550, and the Yearly switch shows $192, $470.40 and $950.40. If anything differs, quote no numbers tonight and tell Codex (rule 4). [war room run of show] | — | `https://makeborne.com/billing` |
+| 00:30 | Instagram Stories | Founder | Story S7 '1 hour' with the countdown sticker (ends 01:30) [war room]. | — | `makeborne.com (war room UTM ig-s7)` |
+| 00:30 | X | Founder | '1 hour.' with a 10 s recording of the clock rolling. | `x-1029-1h` (below) | — |
+| 00:50 | Ops | Founder | Final checks (playbook §1): the countdown ends at 01:30 on phone and laptop, support inbox open, /go/ test in a private window (if a /go/ link fails, use the long URLs in this file), T7 and its three captions ready, the DM keywords answer from a second account. | — | — |
+| 01:10 | Ops | Owner | GO or Plan B: the owner gives GO after the real-card test (engineering confirms plans open at 01:30). No GO by 01:20: nothing that says live; at 01:30 one Story, 'Doors open in a moment. Join the waitlist: you'll get the invite first.' [war room run of show] | — | — |
+| 01:29 | Ops | Founder | At 01:29:45 start the phone screen recording of makeborne.com hitting zero (for S8). | — | — |
+| 01:30 | Instagram Reels | Founder | T7 'We're live' on Reels, only once makeborne.com is open signed out (TikTok 01:31, Shorts 01:32) [war room T7]. | — | `makeborne.com (war room UTMs ig-t7 / tt-t7 / yt-t7)` |
+| 01:31 | Instagram Stories | Founder | Story S8 'We're live' (the real reveal recording, 15 s, link sticker) [war room]. | — | `makeborne.com (war room UTM ig-s8)` |
+| 01:33 | Ops | Founder | Open makeborne.com/billing signed out: Create $20 / 300 credits, Studio $49 / 750, Scale $99 / 1,550, and the Yearly switch shows $192, $470.40 and $950.40. If anything differs, quote no numbers today and tell engineering (rule 4). [war room run of show] | — | `https://makeborne.com/billing` |
+| 01:35 | Email | Owner | Waitlist invite from admin@makeborne.com, once makeborne.com is open signed out: say "send invites" (decision 3). [war room run of show] | — | — |
+| 01:40 | Directories | Owner | Submit TAAFT first ($49, budget line b1, already allocated); if it is too late tonight, at 08:00, still first. Hold every other listing until it is live [war room]. **Cost $49.** | — | `makeborne.com/go/taaft` |
+| 01:45 | All | Founder | Answer every GO and every comment on Instagram, TikTok and YouTube until 02:15. Then log the first numbers on Results and sleep; engineering watches payments and errors overnight. | — | — |
+| 08:00 | Ops | Founder | Launch-morning checklist (playbook §1): makeborne.com open signed out on phone and laptop, overnight sign-ups and payments look right, support inbox answered, copy fixes and 'coming soon' labels, /go/ test in a private window, drafts loaded for LinkedIn, X and Threads. | — | — |
+| 08:30 | Ops | Owner | Confirm with engineering: every overnight payment matched a Makeborne grant, and the daily AI limit is raised for 29 Oct-1 Nov (decision 2; numbers in the owner's private notes). The press release goes out now (Bosnia press plan). | — | — |
+| 08:45 | LinkedIn | Founder | Launch post V08 with the 30-45 s real build clip. Link in the first comment; the S8 reveal clip as a comment. [war room LinkedIn V08] | `li-v08` (§4.1) | `makeborne.com/go/li-v08 \| fallback: https://makeborne.com/?utm_source=linkedin&utm_medium=organic&utm_campaign=launch-2026-10&utm_content=li-v08-p4` |
+| 08:46 | LinkedIn | Founder | First comment under the launch post. | `li-v08-c1` (§4.1) | `makeborne.com/go/li-v08 \| fallback: https://makeborne.com/?utm_source=linkedin&utm_medium=organic&utm_campaign=launch-2026-10&utm_content=li-v08-p4` |
+| 09:15 | Instagram Stories | Founder | Story S6 'We're open' (screen recording of makeborne.com open, link sticker) [war room]. | — | `makeborne.com (war room UTM ig-s6)` |
+| 10:00 | Engagement | Founder | Engagement block, no links anywhere: X 20 replies (10 at 14:00-15:00, 10 at 20:30-21:00), LinkedIn 15 comments on agency-owner and web-designer posts, Reddit 5 helpful comments in the subs you will post in, Product Hunt 3 thoughtful comments on today's launches, 1 useful answer in your agency community (no link). Answer under your LinkedIn post first. | — | — |
+| 13:00 | Instagram Stories | Founder | Repost finds from the hide-and-seek (with permission) and say it is open. | `ig-1029-finds` (below) | `https://makeborne.com/?utm_source=instagram&utm_medium=organic&utm_campaign=launch-2026-10&utm_content=ig-s1029-finds` |
+| 14:00 | X | Founder | Launch thread C08: post all 9 parts as one thread (media per playbook §3.3). Pin post 1. [war room X C08] | `x-c08-1` (§3.3) | `makeborne.com/go/x-c08 \| fallback: https://makeborne.com/?utm_source=x&utm_medium=organic&utm_campaign=launch-2026-10&utm_content=x-c08-p1` |
+| 14:05 | Threads | Founder | Launch post with the website build clip; link in a reply. | `th-1029-launch` (§4.2) | `makeborne.com/go/th-1029-launch \| fallback: https://makeborne.com/?utm_source=threads&utm_medium=organic&utm_campaign=launch-2026-10&utm_content=th-1029-launch` |
+| 18:00 | Ops | Founder | Evening prep: V01 uploaded and ready, V02 and V03 drafts on TikTok, phone charged, support inbox open. | — | — |
 | 21:05 | Instagram Stories | Founder | Story C15 keyword CLIENT [war room]. | — | `makeborne.com/go/ig-c15-client` |
-| 21:05 | Email | Owner | Waitlist invite from admin@makeborne.com, once makeborne.com is open signed out: say "send invites" (decision 3). [war room run of show] | — | — |
-| 21:10 | Directories | Owner | Submit TAAFT first ($49, budget line b1, already allocated). Hold every other listing until it is live [war room]. **Cost $49.** | — | `makeborne.com/go/taaft` |
-| 21:15 | X | Founder | Launch thread C08: post all 9 parts as one thread (media per playbook §3.3). Pin post 1. [war room X C08] | `x-c08-1` (§3.3) | `makeborne.com/go/x-c08 \| fallback: https://makeborne.com/?utm_source=x&utm_medium=organic&utm_campaign=launch-2026-10&utm_content=x-c08-p1` |
-| 21:15 | LinkedIn | Founder | Launch post V08 with the 30-45 s real build clip. Link in the first comment. [war room LinkedIn V08] | `li-v08` (§4.1) | `makeborne.com/go/li-v08 \| fallback: https://makeborne.com/?utm_source=linkedin&utm_medium=organic&utm_campaign=launch-2026-10&utm_content=li-v08-p4` |
-| 21:16 | LinkedIn | Founder | First comment under the launch post. | `li-v08-c1` (§4.1) | `makeborne.com/go/li-v08 \| fallback: https://makeborne.com/?utm_source=linkedin&utm_medium=organic&utm_campaign=launch-2026-10&utm_content=li-v08-p4` |
-| 21:20 | Threads | Founder | Launch post with the website build clip; link in a reply. | `th-1029-launch` (§4.2) | `makeborne.com/go/th-1029-launch \| fallback: https://makeborne.com/?utm_source=threads&utm_medium=organic&utm_campaign=launch-2026-10&utm_content=th-1029-launch` |
 | 21:30 | Instagram Reels | Founder | V01 launch film on TikTok, Reels and Shorts [war room V01]. | — | `makeborne.com/go/ig-v01 / makeborne.com/go/tt-v01 / makeborne.com/go/yt-v01` |
 | 21:31 | X | Founder | Reply to post 1 of your thread with V01 uploaded natively. | `x-c08-v01` (§3.3) | — |
 | 21:45 | Viber/WhatsApp | Founder | 30 personal one-to-one messages to people you know (Bosnian or English template; change the first line for each person). Never a group blast, never 'please share'. | `dm-1029-bs` (§4.9) | `makeborne.com` |
-| 22:00 | All | Founder | Reply to every comment on X, LinkedIn, Instagram, TikTok within 10 minutes until 00:30. TikTok V02 at 22:00 and V03 at 22:30 [war room]. Log questions, bugs and 'build mine' requests in the private sheet. | — | — |
+| 22:00 | All | Founder | Reply to every comment on X, LinkedIn, Instagram, TikTok within 10 minutes until 23:30. TikTok V02 at 22:00 and V03 at 22:30 [war room]. Log questions, bugs and 'build mine' requests in the private sheet. | — | — |
 | 22:30 | X | Founder | Post one short version of thread part 1 (text + T7 video) into the single most relevant X Community you joined (audience: that Community). Only if its rules allow showcase posts. | `x-c08-1-community` (below) | `makeborne.com/go/x-c08 \| fallback: https://makeborne.com/?utm_source=x&utm_medium=organic&utm_campaign=launch-2026-10&utm_content=x-c08-p1` |
 
-**12:00 X** `x-1029-today`:
+Dropped with the move to 01:30: the 12:00 'Today' posts on X and Threads and the 17:00 '4 hours' Story (the site is already open by then).
+
+**00:30 X** `x-1029-1h`:
 ```text
-Today.
-
-21:00 Sarajevo · 20:00 London · 16:00 New York · 13:00 Los Angeles.
-
-Makeborne: one brief in, a finished website, deck or book out.
+1 hour.
 ```
 
 **13:00 Instagram Stories** `ig-1029-finds`:
 ```text
 Repost 2-4 screenshots people sent of the hidden designs (ask each sender first: "Can we repost your screenshot?").
-Text: "You found them. 8 hours."
+Text: "You found them. Makeborne is open now."
 Small text: "Easter-egg designs, not Makeborne builds."
-Countdown sticker "Makeborne launch".
-```
-
-**17:00 Instagram Stories** `ig-1029-4h`:
-```text
-Text: "4 hours."
-Countdown sticker "Makeborne launch".
 Link sticker: makeborne.com
-```
-
-**20:00 X** `x-1029-1h`:
-```text
-1 hour.
 ```
 
 **22:30 X** `x-c08-1-community`:
@@ -718,8 +742,8 @@ Use it in r/roastmystartup (and as the tone everywhere):
 - **Location:** Sarajevo, Bosnia and Herzegovina
 - **Link:** `makeborne.com/go/x-bio` once `/go/` works; until then the long URL in section 6.
 - **Photo:** a real photo of you. No AI avatar.
-- **Header (1500×500):** until Thu 21:00, a still of the real makeborne.com countdown with "Thu 29 Oct · 21:00 CET". From Thu 21:15, a collage of real outputs: the Crux Yard site on a phone, one deck slide, one book spread. Never the hidden designs, never the v14 stills.
-- **Pinned post:** Tue to Thu, the new-date post. From Thu 21:15, post 1 of the launch thread.
+- **Header (1500×500):** until Thu 01:30, a still of the real makeborne.com countdown (from Wed 22:35 with "Thu 29 Oct · 01:30 CET"). From Thu 14:00, a collage of real outputs: the Crux Yard site on a phone, one deck slide, one book spread. Never the hidden designs, never the v14 stills.
+- **Pinned post:** Tue to Thu, the new-date post (from Wed 22:35, the new-time quote). From Thu 14:00, post 1 of the launch thread.
 
 ### 3.2 Build-in-public cadence
 
@@ -727,7 +751,7 @@ Use it in r/roastmystartup (and as the tone everywhere):
 - **Weekly:** a numbers post (Day 5, Day 7, then every Sunday), a "what broke" post, one real build.
 - **Rules:** real numbers only, owner OKs them, buyer data cropped. Post the bad weeks too. Space your own posts 3+ hours apart: X's ranker scores each additional post by the same author in a feed lower and lower [F, xai-org/x-algorithm README].
 
-### 3.3 The launch thread, Thu 29 Oct 21:15 [war room X C08]
+### 3.3 The launch thread, Thu 29 Oct 14:00 [war room X C08]
 
 Post all 9 parts as one thread. Pin part 1. The link goes in part 9, never in part 1.
 
@@ -952,7 +976,7 @@ I could not verify any specific Community. X only lets you search Communities fr
 | EU morning | 08:00-10:00 | 08:00-10:00 |
 | US East morning | 14:00-16:00 (09:00-11:00 New York) | 14:00-16:00 (08:00-10:00 New York) |
 | Overlap: US afternoon + EU evening | 20:00-21:30 (15:00-16:30 New York) | 20:00-21:30 (14:00-15:30 New York) |
-| Launch moment | Thu 21:00 (16:00 New York, 13:00 LA) | n/a |
+| Launch moment | Thu 01:30 (Wed 20:30 New York, 17:30 LA); the X thread at Thu 14:00 (09:00 New York) | n/a |
 
 ### 3.8 What the 2026 algorithm and rules punish
 
@@ -983,7 +1007,7 @@ Penalties range from restricted reach (posts removed from the For You and Follow
 
 ### 4.1 LinkedIn (founder's personal profile)
 
-**Steps:** headline "Founder, Makeborne: the AI studio for client work"; website field and Featured to the long UTM link (`li-bio`); one post a day at 09:30 CET (war room) plus the Wed teaser and the Thu 21:15 launch post; link always in the first comment [repo]; 15 comments a day on agency-owner and web-designer posts, no pitch.
+**Steps:** headline "Founder, Makeborne: the AI studio for client work"; website field and Featured to the long UTM link (`li-bio`); one post a day at 09:30 CET (war room) plus the Wed teaser and the Thu 08:45 launch post; link always in the first comment [repo]; 15 comments a day on agency-owner and web-designer posts, no pitch.
 
 **Policy** [F, LinkedIn Professional Community Policies]: no untargeted or unwanted messages; no promotional connection invitations to strangers; no lotteries, contests or giveaways; no artificially inflated engagement, including agreeing in advance to like or reshare each other's posts (no pods). Link reach in the post body: [U]; keep links in the first comment.
 
@@ -1004,7 +1028,7 @@ First comment:
 The countdown: https://makeborne.com/?utm_source=linkedin&utm_medium=organic&utm_campaign=launch-2026-10&utm_content=li-1028-tomorrow
 ```
 
-**Thu 29 Oct 21:15, launch post [war room V08]** (with the 30-45 s real build clip):
+**Thu 29 Oct 08:45, launch post [war room V08]** (with the 30-45 s real build clip):
 ```text
 Today I launched Makeborne.
 
@@ -1095,7 +1119,7 @@ Makeborne opens tomorrow, Thu 29 Oct, 21:00 CET.
 
 ### 4.3 Product Hunt
 
-**Verdict: do not launch on Thu 29 Oct.** Product Hunt's day runs midnight to midnight Pacific and it recommends launching at 12:01 am Pacific so a product gets the full day [F, Product Hunt "Preparing for launch"]. Thu 21:00 CET is 13:00 PDT: you would lose 13 of 24 hours, the morning is already decided, and the coming-soon page has had no time to collect followers. The plan also keeps the main launch for the generated-images beat [repo strategy §2.4].
+**Verdict: do not launch on Thu 29 Oct.** Product Hunt's day runs midnight to midnight Pacific and it recommends launching at 12:01 am Pacific so a product gets the full day [F, Product Hunt "Preparing for launch"]. Thu 01:30 CET is Wed 17:30 PDT, the day before Product Hunt's Thursday even starts; the 21:00 time would have lost 13 of 24 hours, the morning is already decided, and the coming-soon page has had no time to collect followers. The plan also keeps the main launch for the generated-images beat [repo strategy §2.4].
 
 **Recommended date: Sun 15 Nov 2026, 09:01 CET (00:01 PST), if images pass the war-room go/no-go on Wed 4 Nov.** Why Sunday: last weekend's #1 needed 285-319 points [repo, PH leaderboards read 26 Oct], weekend products get 15% more Visit-button clicks [F], and you won't have 400 committed supporters with week-old accounts by then [E]. Use Tue 17 Nov (the war-room placeholder) only with 400+ committed supporters by Fri 13 Nov. If images don't pass: no Product Hunt launch; keep the coming-soon page and pick the first Saturday or Sunday at least 7 days after images pass. Launching the live-only version now would spend the launch without the visual "wow"; relaunches are allowed for significant new iterations and may need Product Hunt's review [S, Product Hunt forum post with a Product Hunt staff reply].
 
@@ -1167,7 +1191,7 @@ Next week's test: [test].
 ### 4.6 BetaList and the directories already in the plan
 
 - **BetaList: skip.** Every plan is paid and nothing is published before you pay (Lite about 14 days, Standard about 3, Premium about 1), and prices are not shown until checkout [F, betalist.com/agent]. The $1,000 is fully allocated.
-- **Directories (owner submits), unchanged from the plan:** TAAFT first, Thu 29 Oct right after the 21:00 posts ($49, line b1) [war room]. Once it's live: AlternativeTo, SaaSHub, Microlaunch, Future Tools (Fri 30 Oct), The Rundown tools submission (week 1-2), Uneed only on the Product Hunt day ($30, line b6). Copy: `data/outreach.json` directoryListing. Links: `/go/taaft`, `/go/alt`, `/go/saashub`, `/go/microlaunch`, `/go/futuretools`, `/go/rundown`, `/go/uneed`.
+- **Directories (owner submits), unchanged from the plan:** TAAFT first, Thu 29 Oct right after the 01:30 posts, 08:00 at the latest ($49, line b1) [war room]. Once it's live: AlternativeTo, SaaSHub, Microlaunch, Future Tools (Fri 30 Oct), The Rundown tools submission (week 1-2), Uneed only on the Product Hunt day ($30, line b6). Copy: `data/outreach.json` directoryListing. Links: `/go/taaft`, `/go/alt`, `/go/saashub`, `/go/microlaunch`, `/go/futuretools`, `/go/rundown`, `/go/uneed`.
 
 ### 4.7 Discord and Slack communities [U]
 
@@ -1232,12 +1256,12 @@ Do tada: na makeborne.com se iza odbrojavanja nešto krije. Pomjerajte kursor (n
 
 One-to-one message, Bosnian and English:
 ```text
-Ćao [ime], večeras u 21:00 sam lansirao Makeborne, projekat na kojem radim. Od jednog opisa (brifa) napravi web stranicu, prezentaciju ili e-knjigu.
+Ćao [ime], danas sam lansirao Makeborne, projekat na kojem radim. Od jednog opisa (brifa) napravi web stranicu, prezentaciju ili e-knjigu.
 
 Ne tražim ništa osim iskrenog mišljenja: pogledaj kad stigneš i reci mi šta ti je prvo zasmetalo. makeborne.com
 ```
 ```text
-Hi [name], I launched Makeborne tonight at 21:00. One brief in, a finished website, deck or ebook out.
+Hi [name], I launched Makeborne today. One brief in, a finished website, deck or ebook out.
 
 I'm not asking for anything except an honest opinion: have a look when you can and tell me the first thing that bothered you. makeborne.com
 ```
@@ -1292,7 +1316,7 @@ I'm not asking for anything except an honest opinion: have a look when you can a
 **Rule.** Every link carries `utm_source=<platform>&utm_medium=organic&utm_campaign=launch-2026-10&utm_content=<code>` [repo tracking.md §1]. Where the war room already set a code, use it. New codes from this playbook follow the repo format `<surface>-<mmdd>-<slug>` (lowercase, hyphens, under 32 characters). Add each new code to the private code register before posting.
 
 **Which form to use:**
-- **Before Thu 29 Oct 21:00:** the long URL (makeborne.com shows the countdown and waitlist). `/go/` is not confirmed live.
+- **Before Thu 29 Oct 01:30:** the long URL (makeborne.com shows the countdown and waitlist). `/go/` is not confirmed live.
 - **From Thu 29 Oct:** `makeborne.com/go/<code>` once it lands correctly in a private window; otherwise the long URL.
 - **Reddit:** always the long URL. **Product Hunt:** plain `https://makeborne.com` in the product field (PH rejects UTMs) [F]; share the PH page itself as `/go/ph-soon`.
 - **Long URL pattern:** `https://makeborne.com/?utm_source=x&utm_medium=organic&utm_campaign=launch-2026-10&utm_content=x-1027-date`
@@ -1326,9 +1350,9 @@ I'm not asking for anything except an honest opinion: have a look when you can a
 
 ## 7. Decisions (settled by the owner, 27 Oct 2026)
 
-1. **Prices and credits:** the launch numbers in rule 4. Check them once on makeborne.com/billing at 21:03 on launch night.
+1. **Prices and credits:** the launch numbers in rule 4. Check them once on makeborne.com/billing at 01:33 on launch night.
 2. **AI capacity:** the daily AI limit is raised for Thu 29 Oct to Sun 1 Nov and goes back on Mon 2 Nov (numbers in the owner's private notes). Codex sets it with the launch. Same again for the Product Hunt day.
-3. **Waitlist email:** it goes out at 21:05 on Thu 29 Oct from admin@makeborne.com, once makeborne.com is open signed out. The owner gives the word ("send invites") at that moment.
+3. **Waitlist email:** it goes out at 01:35 on Thu 29 Oct (overnight launch) from admin@makeborne.com, once makeborne.com is open signed out. The owner gives the word ("send invites") at that moment.
 4. **Day-N numbers in public** (Mon 2 Nov, Wed 4 Nov, Sun 8 Nov, the Reddit and Indie Hackers posts): post only numbers the owner has checked against the admin page that day.
 5. **Product Hunt:** no launch on 29 Oct. Sun 15 Nov 09:01 CET if images pass on Wed 4 Nov (Uneed $30, line b6, already allocated). Tue 17 Nov only with 400+ committed supporters. PH100 (100 bonus credits on the first paid month, D12) runs only if the per-wave code feature (ga10) is live and tested by Fri 13 Nov; otherwise there is no code, and the PH100 line comes out of every template (cost in the owner's private notes).
 6. **Wording:** "Paid plans only, on purpose" replaces "No free tier" everywhere in the war room (rule 3).

@@ -1,6 +1,6 @@
 # Makeborne war room
 
-A private, static website for the Makeborne 90-day growth plan: public launch **Thu 29 Oct 2026 at 21:00 Sarajevo time** (CET, 20:00 UTC; day 1) to the day-90 review on Tue 26 Jan 2027. Mon 26, Tue 27 and Wed 28 Oct are pre-launch days −3, −2 and −1. The founder opens it every day to see today's posts and actions, pace against the weekly targets, budget spent against plan, and the next decision due.
+A private, static website for the Makeborne 90-day growth plan: public launch **Thu 29 Oct 2026 at 01:30 Sarajevo time** (CET, 00:30 UTC; day 1; moved from 21:00 on Wed 28 Oct) to the day-90 review on Tue 26 Jan 2027. Mon 26, Tue 27 and Wed 28 Oct are pre-launch days −3, −2 and −1. The founder opens it every day to see today's posts and actions, pace against the weekly targets, budget spent against plan, and the next decision due.
 
 It reads the plan's own files at build time (`data/*.json`, `plan/*.md`, `research/*.md`, `content/*.md`), so editing the plan updates the site. There is no backend, no tracker and no runtime network call: fonts, data and code are bundled, and a strict Content Security Policy in the built page forbids external origins.
 

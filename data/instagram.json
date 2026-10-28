@@ -243,7 +243,7 @@
   {
    "position": 2,
    "date": "2026-10-29",
-   "time": "21:00",
+   "time": "01:30",
    "contentId": "T7",
    "format": "Reel (teaser)",
    "cover": "The countdown reaching zero (the teaser's own cover); text \"We're live.\"",
@@ -753,7 +753,7 @@
    "day": 1,
    "date": "2026-10-29",
    "weekday": "Thu",
-   "title": "Launch at 21:00: \"We're live\", then the Fly-over at 21:30, pin it",
+   "title": "Launch at 01:30: \"We're live\", then the Fly-over at 21:30, pin it",
    "main": {
     "time": "21:30",
     "contentId": "V01",
@@ -767,10 +767,10 @@
    "checklist": [
     "Profile, highlights and the SITE / CLIENT DM automations: done on Mon 26 / Tue 27 Oct (check them once from a phone)",
     "Confirm copy fixes and \"coming soon\" labels are live",
-    "21:00 post T7 \"We're live\" and the reveal Story S8 (21:01); 21:30 post V01, then pin it (Pin 1)",
+    "01:30 post T7 \"We're live\" and the reveal Story S8 (01:31), overnight; 21:30 post V01, then pin it (Pin 1)",
     "Write the pinned CTA comment",
     "21:05 Story C15 \"Reply CLIENT\" (link /go/ig-c15-client)",
-    "21:15-22:15 reply to every comment",
+    "01:30-02:15 and 21:30-22:30 reply to every comment",
     "22:15-22:45 engagement routine",
     "22:45 Story: founder BTS + question box \"Ask me anything\""
    ],
@@ -1327,7 +1327,7 @@
    "why": "Wed 4 Nov is launch day 7 (V09); the 20:15 time test is now Fri 6 and Mon 9 Nov"
   }
  ],
- "kickoffNote": "Launch moved to Thu 29 Oct 21:00 CET (owner, 27 Oct). Kick-off days 1-7 run Thu 29 Oct - Wed 4 Nov: day 1 posts T7 at 21:00 and V01 at 21:30. V44, V12 / V18 (the old days 8 and 9) and V16 are banked; Today shows them when they come back. The 20:15 time test is Fri 6 and Mon 9 Nov.",
+ "kickoffNote": "Launch moved to Thu 29 Oct 01:30 CET (owner, 28 Oct; it was 21:00 from 27 Oct). Kick-off days 1-7 run Thu 29 Oct - Wed 4 Nov: day 1 posts T7 at 01:30 and V01 at 21:30. V44, V12 / V18 (the old days 8 and 9) and V16 are banked; Today shows them when they come back. The 20:15 time test is Fri 6 and Mon 9 Nov.",
  "conversionGridBanked": [
   {
    "position": 8,

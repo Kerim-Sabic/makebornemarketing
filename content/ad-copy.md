@@ -1,6 +1,6 @@
 # Makeborne ad copy matrices
 
-Written 26 Oct 2026, before the launch (Thu 29 Oct 2026, 21:00 CET); dates updated 27 Oct. Companion to `data/creatives.json` (creative IDs C01-C48) and `content/creatives.md`. Plan of record: `plan/strategy.md`.
+Written 26 Oct 2026, before the launch (Thu 29 Oct 2026, 01:30 CET since the 28 Oct move); dates updated 27 Oct. Companion to `data/creatives.json` (creative IDs C01-C48) and `content/creatives.md`. Plan of record: `plan/strategy.md`.
 
 **Labels:** [F] read at the platform's own page on 26 Oct 2026 · [S] secondary or third-party source · [E] our estimate · [O] owner decision · [U] unverified.
 

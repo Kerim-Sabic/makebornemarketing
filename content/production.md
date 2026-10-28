@@ -56,7 +56,7 @@ The rest is creators (they film themselves, we check the draft) and the two bran
 - [ ] Tue: owner signs up for Higgsfield Plus, monthly, himself ($49 from the production budget, not the $1,000; 10 min). No credit packs, no auto-refill; write down the renewal date
 - [ ] Wed: finish the launch film V01 with its end card (60 min), post Thu 21:30 [V01](#v01)
 - [ ] Wed: record the screen for V02 + V03 + V05 and the C01 site (1 h 45 min) [V02](#v02) [V03](#v03) [V05](#v05) [C01](#c01)
-- [ ] Wed: film V08 to camera (25 min); edit V02 (80 min, post Thu 22:00), V08 (1 h 45 min, post LinkedIn Thu 21:15), V03 (3 h 45 min, post Thu 22:30) [V08](#v08) [V02](#v02) [V03](#v03)
+- [ ] Wed: film V08 to camera (25 min); edit V02 (80 min, post Thu 22:00), V08 (1 h 45 min, post LinkedIn Thu 08:45), V03 (3 h 45 min, post Thu 22:30) [V08](#v08) [V02](#v02) [V03](#v03)
 - [ ] Wed: picture posts C15 (20 min) and C08 (30 min) [C15](#c15) [C08](#c08)
 - [ ] Wed 09:00: generate 6 Higgsfield shots for V07, V14, V15 (HF01, HF02, HF03, HF04, HF05, HF06; prompts in the sheet, ~313 credits) [V07](#v07) [V14](#v14) [V15](#v15) · shots [HF01](#hf01) [HF02](#hf02) [HF03](#hf03) [HF04](#hf04) [HF05](#hf05) [HF06](#hf06)
 - [ ] Thu: C01 picture post (50 min); V04 only if a real request came in (2 h), else post the V02 long version [C01](#c01) [V04](#v04)
@@ -1192,7 +1192,7 @@ Each template is a HyperFrames project skeleton that follows the composition con
 
 #### V08
 
-**Founder Day 1: we launched, comment what to build first** · P0 · week 1 · 45 s · first post 2026-10-29 21:15 LinkedIn · **readiness: now**
+**Founder Day 1: we launched, comment what to build first** · P0 · week 1 · 45 s · first post 2026-10-29 08:45 LinkedIn · **readiness: now**
 
 - **Make with:** real only. **Pipeline / template:** P4-founder / T05-founder. **Tools:** Makeborne (real run), phone camera, HyperFrames, platform music library.
 - **Capture in the app:**
@@ -3217,7 +3217,7 @@ Two separate pots. The $1,000 ads and growth budget is fully allocated in data/p
 
 ## 13. Launch week, day by day (Tue 27 Oct - Wed 4 Nov)
 
-The launch is **Thu 29 Oct at 21:00**. The ten P0 videos post in launch week: V01, V02, V03 and V08 (Thu 29 Oct), V04 (Fri), V05 and V10 (Sat), V06 and V07 (Mon 2 Nov), V09 (Wed 4 Nov). Each make day comes before its posts, as in the make-list on Today, so Wednesday 28 Oct is the long day. Times are Sarajevo (CET).
+The launch is **Thu 29 Oct at 01:30** (overnight; moved from 21:00 on Wed 28 Oct). The ten P0 videos post in launch week: V01, V02, V03 and V08 (Thu 29 Oct), V04 (Fri), V05 and V10 (Sat), V06 and V07 (Mon 2 Nov), V09 (Wed 4 Nov). Each make day comes before its posts, as in the make-list on Today, so Wednesday 28 Oct is the long day. Times are Sarajevo (CET).
 
 ### Launch week day by day
 
@@ -3236,13 +3236,13 @@ The launch is **Thu 29 Oct at 21:00**. The ten P0 videos post in launch week: V0
 - C08 Day-1 card (T09 type-only, 30 min).
 - 21:00 T8 goes out (it is already rendered); answer every GO for an hour. Nothing says it is live.
 
-**Thu 29 Oct (day 1, launch at 21:00).** Posts: IG story S6 09:15, IG story S7 20:00, IG T7 21:00, TT T7 21:01, YT T7 21:02, IG story S8 21:01, IG story C15 21:05, LI V08 21:15, X C08 21:15, TT V01 21:30, IG V01 21:30, YT V01 21:30, TT V02 22:00, TT V03 22:30.
+**Thu 29 Oct (day 1, launch at 01:30).** Posts: IG story S7 00:30, IG T7 01:30, TT T7 01:31, YT T7 01:32, IG story S8 01:31, LI V08 08:45, IG story S6 09:15, X C08 14:00, IG story C15 21:05, TT V01 21:30, IG V01 21:30, YT V01 21:30, TT V02 22:00, TT V03 22:30.
 
 - Daytime: C01 proof static (T09 lay-proof with Wednesday's capture, 50 min); V04 only if a real 'build mine' request came in (capture 45 min, edit 75 min), otherwise the V02 full build (60-150 s) goes out on Friday. Never stage a comment.
 - Capture block B (2 h): V06 fresh fictional deck + chat edit 'change Q2 to 21' + PowerPoint Edit Data; V07 lead finder (dentists, Austin; blur); V10 the garden-studio brief in Website, Presentation and Book mode (three uncut builds). Then C03 text-only static and C02 static from the phone capture (1 h), and the V05 edit (T08 inbox prop + review part, renders 9:16 and LinkedIn 4:5, captions, no music; 3 h).
 - 18:00 Final prep: V01, V02, V03 and V08 uploaded as drafts; the X thread saved with media; phone charged; support inbox open.
-- 20:59:45 Start the phone screen recording of makeborne.com reaching zero (it becomes S8). 21:00 T7, only once makeborne.com is open; 21:01 S8; 21:05 C15; 21:15 V08 on LinkedIn and C08 on X; 21:30 V01 (TikTok, Reels, Shorts; pin it after the end-card check); 22:00 V02 and 22:30 V03 on TikTok.
-- 21:15-22:30 Replies and the private 'build mine' request log (source for V04).
+- Overnight: 01:29:45 start the phone screen recording of makeborne.com reaching zero (it becomes S8). 01:30 T7, only once makeborne.com is open; 01:31 S8. Daytime: 08:45 V08 on LinkedIn; 14:00 C08 on X. Evening: 21:05 C15; 21:30 V01 (TikTok, Reels, Shorts; pin it after the end-card check); 22:00 V02 and 22:30 V03 on TikTok.
+- 01:30-02:15 and 21:30-22:30 Replies and the private 'build mine' request log (source for V04).
 - If anything slips: V03 moves to Fri 21:30 and V04 to Sat; never post a draft that fails the quality bar.
 
 **Fri 30 Oct (day 2).** Posts: LI C01 09:30, TT V04 13:00, IG V02 re-edit 13:15, YT V02 re-edit 13:30, X C03 20:00.
@@ -3302,7 +3302,7 @@ The launch is **Thu 29 Oct at 21:00**. The ten P0 videos post in launch week: V0
 | P-D5 | Voice for brand videos | The founder's own voice everywhere; no ElevenLabs, no synthetic VO, no voice clone. | Now |
 | P-D6 | Lock one ink value | #18181B (already used by every template and the creative library). | Now |
 | P-D7 | CapCut | Do not use for this plan: HyperFrames covers the edit and captions, and the reported CapCut terms are too broad for unreleased product or creator footage. | Now |
-| P-D8 | V08 LinkedIn slot on day 1 | Post it at 21:15 on launch night (Thu 29 Oct), edited on Wed 28 Oct with the real V02 and V05 b-roll. | Wed 28 Oct |
+| P-D8 | V08 LinkedIn slot on day 1 | Post it at 08:45 on launch day (Thu 29 Oct, after the 01:30 launch), edited on Wed 28 Oct with the real V02 and V05 b-roll. | Wed 28 Oct |
 | P-D9 | Render disk | Free at least 20 GB on a local SSD for renders and captures before the first render (the editing machine's main drive had well under 1 GB free on 26 Oct). | Tue 27 Oct, before 07:30 |
 | P-D10 | v14 'Anything' film | Approve the fixes (end card, readable concept line, production address, names) and hold it for the images beat (already the strategy's call). | Before the images beat |
 | P-D11 | Editor | Hire a part-time editor from revenue when MRR reaches about $2k (strategy); the templates and this sheet are written so an editor can take over P1, P2, P5 and P7 in a day. | When MRR ~ $2k |

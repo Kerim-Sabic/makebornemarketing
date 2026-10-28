@@ -1,7 +1,7 @@
 {
   "meta": {
     "version": "2026-10-26",
-    "built": "26 Oct 2026 (pre-launch day −3; the paid beta opens Thu 29 Oct 2026 at 21:00 CET)",
+    "built": "26 Oct 2026 (pre-launch day −3; the paid beta opens Thu 29 Oct 2026 at 01:30 CET)",
     "masterPlan": "plan/strategy.md and data/plan.json (ICP ids icp1-icp5, channel ids ch-*, budget ids b1-b9, beat ids beat-*, decisions D1-D19, growth asks ga1-ga22)",
     "status": "Drafts only. Nothing has been sent, posted, submitted or bought. The owner sends or approves every message.",
     "mergeFields": "{curly} fields are filled per recipient; [square] fields are verified numbers filled on the day, or the sentence is cut.",

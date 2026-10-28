@@ -1,6 +1,6 @@
 # Makeborne short-form video library
 
-> **Launch moved again (owner decision, 27 Oct 2026).** The public launch is **Thursday 29 October 2026 at 21:00 Sarajevo time** (CET, 20:00 UTC); makeborne.com counts down to that moment. Day 1 = Thu 29 Oct; Mon 26, Tue 27 and Wed 28 Oct are pre-launch days −3, −2 and −1. The launch week moved 1 more day (days 1-7 = 29 Oct - 4 Nov); launch day runs around 21:00 (T7 "We're live" at 21:00, V01 at 21:30). The countdown teasers T3-T6 and Stories S1-S3 have the old Wednesday time burned in and are not posted; "Guess the build time" (T8) is the Wed 28 Oct 21:00 post, and screen-recording Stories S4-S8 use the real countdown. Everything after the launch week keeps its date (ads A01 12-15 Nov and A02 3-4 Dec, creator waves, the no-boost window 20 Nov - 2 Dec, Black Friday, the 22 Nov and 20 Dec checkpoints). The 90 days run Thu 29 Oct 2026 - Tue 26 Jan 2027 (day 90, the day-90 review). `data/calendar.json` and the war room are the source of truth; dates and day numbers in the text below that disagree are from before the move.
+> **Launch moved again (owner decision, Wed 28 Oct 2026, 22:00).** The public launch is **Thursday 29 October 2026 at 01:30 Sarajevo time** (CET, 00:30 UTC), overnight; makeborne.com counts down to that moment. The launch posts (T7, S8) and the waitlist invite go out at 01:30-01:35; Thursday's daytime and evening posts say it is open (LinkedIn 08:45, X thread 14:00, V01 21:30). On 27 Oct it had moved to Thu 21:00. Day 1 = Thu 29 Oct; Mon 26, Tue 27 and Wed 28 Oct are pre-launch days −3, −2 and −1. The launch week moved 1 more day (days 1-7 = 29 Oct - 4 Nov); launch day runs around 21:00 (T7 "We're live" at 21:00, V01 at 21:30). The countdown teasers T3-T6 and Stories S1-S3 have the old Wednesday time burned in and are not posted; "Guess the build time" (T8) is the Wed 28 Oct 21:00 post, and screen-recording Stories S4-S8 use the real countdown. Everything after the launch week keeps its date (ads A01 12-15 Nov and A02 3-4 Dec, creator waves, the no-boost window 20 Nov - 2 Dec, Black Friday, the 22 Nov and 20 Dec checkpoints). The 90 days run Thu 29 Oct 2026 - Tue 26 Jan 2027 (day 90, the day-90 review). `data/calendar.json` and the war room are the source of truth; dates and day numbers in the text below that disagree are from before the move.
 
 
 **Written:** Monday 26 October 2026 (dates updated 27 Oct for the Thursday launch). **Window:** weeks 1-13 (Mon 26 Oct 2026 - Tue 26 Jan 2027; day 1 = Thu 29 Oct, day 90 = Tue 26 Jan), matching `plan/strategy.md`.
@@ -63,13 +63,13 @@ These come from the master plan (§4.4 copy hygiene, §5.5, §9, §16) and the r
 
 ## 2. Launch week: what to film and post, day by day
 
-Times are Sarajevo (CET). On launch night the TikToks go out between 21:01 and 22:30. After that, brand TikTok posts at about 13:00 and 21:30 (the evening slot sits in 20:00-00:00 from Sun 1 Nov, when US clocks change); LinkedIn at 09:30. Each P0 master is re-edited natively for Reels and Shorts, so the 10 P0s plus re-edits and the comment-reply episodes give the plan's 25-30 owned posts for the week.
+Times are Sarajevo (CET). On launch night T7 goes out at 01:30-01:32; on launch evening the TikToks go out between 21:30 and 22:30. After that, brand TikTok posts at about 13:00 and 21:30 (the evening slot sits in 20:00-00:00 from Sun 1 Nov, when US clocks change); LinkedIn at 09:30. Each P0 master is re-edited natively for Reels and Shorts, so the 10 P0s plus re-edits and the comment-reply episodes give the plan's 25-30 owned posts for the week.
 
 | Day | Film or edit | Post | Video |
 |---|---|---|---|
 | **Tue 27 Oct** (pre-launch −2) | The plan's 4-6 real-speed captures at 2x UI scale: lead finder → demo site → review link; client comment → fix → Approve on a phone; one brief → site, deck, book; PPTX chart edit; GitHub export | Story S4 (the new time, 19:00) | — |
 | **Wed 28 Oct** (pre-launch −1) | Add the end card and hook text to the v9 Fly-over; record the bakery site build and the deck build; founder Day 1 to camera; edit V02, V03 and V08 | T8 "Guess the build time" at 21:00 (already rendered; TikTok 21:05, Shorts 21:10) | T8 |
-| **Thu 29 Oct** (day 1, launch 21:00) | Cut the POV from the phone capture (V05) | T7 "We're live" at 21:00; pin V01 (21:30) on TikTok and Instagram; V02 (22:00) and V03 (22:30) as the two brand TikToks (+ Reels/Shorts re-edits of V01); V08 on LinkedIn and C08 on X at 21:15 | T7, V01, V02, V03, V08 |
+| **Thu 29 Oct** (day 1, launch 01:30) | Cut the POV from the phone capture (V05) | T7 "We're live" at 01:30 (overnight); pin V01 (21:30) on TikTok and Instagram; V02 (22:00) and V03 (22:30) as the two brand TikToks (+ Reels/Shorts re-edits of V01); V08 on LinkedIn at 08:45 and C08 on X at 14:00 | T7, V01, V02, V03, V08 |
 | **Fri 30 Oct** (day 2) | — | First comment-reply speedrun (with consent); V02 re-edits for Reels and Shorts | V04 (episode 1) |
 | **Sat 31 Oct** (day 3) | — | Freelancer POV on TikTok, Reels and founder LinkedIn; the r/SideProject story with V10 | V05, V10 |
 | **Sun 1 Nov** (day 4) | — | One-brief-three-deliverables on TikTok and Shorts | V10 |
@@ -1980,7 +1980,7 @@ Whop Content Rewards opens only after a source shows CAC ≤$50 on 3+ payers and
 
 | Episode | Date (Sarajevo) | Video | Hook | Surfaces |
 |---|---|---|---|---|
-| Day 1: we launched | Thu 29 Oct, 21:15 | V08 | "We launched today. Comment what you want built first." | LinkedIn, TikTok, Reels, X |
+| Day 1: we launched | Thu 29 Oct, 08:45 | V08 | "We launched today. Comment what you want built first." | LinkedIn, TikTok, Reels, X |
 | Day 5: exact numbers | Mon 2 Nov | (text post per plan; a 30 s face-cam version is optional) | "Day 5: exact numbers." | LinkedIn, X |
 | Day 7: who paid | Wed 4 Nov | V09 | "Day 7: here's exactly how many people paid." | LinkedIn, X, TikTok, IH |
 | Who's behind this | week 2 | V44 | "You're paying a company in Sarajevo. Here's who we are." | TikTok, Reels, LinkedIn |

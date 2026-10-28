@@ -54,7 +54,7 @@ export default function Strategy({ params }: RouteProps) {
 
   return (
     <Page
-      eyebrow="Plan of record · launch Thu 29 Oct 2026, 21:00 CET – day 90 Tue 26 Jan 2027"
+      eyebrow="Plan of record · launch Thu 29 Oct 2026, 01:30 CET – day 90 Tue 26 Jan 2027"
       title={
         <>
           Sell Studio to the people who <em>make things</em> for clients

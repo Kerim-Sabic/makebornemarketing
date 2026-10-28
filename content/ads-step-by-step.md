@@ -671,13 +671,13 @@ Use the **destination** click metrics, not "all clicks", for the CTR and CPC rul
 
 **Confirmed: $0 on paid ads in launch week.** The plan's ad calendar has **$0 of ad spend** in week 1 (26 Oct-1 Nov) and week 2 (2-8 Nov) [plan, `data/ads.json` adCalendar]. The only money in launch week is non-ad spend: the TAAFT directory listing (b1, $49) and, only if needed, the DM tool (b7, $15). No boost, no "test" ad, no "account warm-up" spend. **Warm-up in this guide means organic posting**, which builds each account's median views and produces the posts that may later qualify.
 
-**Note:** the launch is **Thu 29 Oct 21:00 CET** (the war room was re-anchored on 27 Oct). Ad dates after launch week are unchanged.
+**Note:** the launch is **Thu 29 Oct 01:30 CET**, overnight (moved from 21:00 on Wed 28 Oct; the war room was re-anchored on 27 Oct). Still no paid ads in launch week; spending caps unchanged. Ad dates after launch week are unchanged.
 
 | Day | What to do for ads |
 |---|---|
 | **Tue 27 Oct** (today) | Section 1 checklist (1.14). |
 | **Wed 28 Oct** | Card hold passed? Verification submitted? TikTok result written down? Domain TXT added by engineering? Ask the accountant about VAT. |
-| **Thu 29 Oct** (day 1, launch 21:00) | No ads. Spend gate (attribution) target day [plan]. Do not open Ads Manager except to check the card test. |
+| **Thu 29 Oct** (day 1, launch 01:30) | No ads. Spend gate (attribution) target day [plan]. Do not open Ads Manager except to check the card test. |
 | **Fri 30 Oct - Sun 1 Nov** | Organic posts. Check business verification status. First Sunday review (1 Nov). |
 | **Mon 2 Nov - Wed 4 Nov** | Creator contracts (recruiting runs 27 Oct-6 Nov [plan b2]) with the clauses in section 5, including the **Instagram music rule**. Register every creator's `/go/c-<handle>`, `-p` and `-s` codes privately. |
 

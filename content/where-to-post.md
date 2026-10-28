@@ -1,6 +1,6 @@
 # Where, when and what: the master posting sheet
 
-> **Launch moved again (owner decision, 27 Oct 2026).** The public launch is **Thursday 29 October 2026 at 21:00 Sarajevo time** (CET, 20:00 UTC); makeborne.com counts down to that moment. Day 1 = Thu 29 Oct; Mon 26, Tue 27 and Wed 28 Oct are pre-launch days −3, −2 and −1. The launch week moved 1 more day (days 1-7 = 29 Oct - 4 Nov); launch day runs around 21:00 (T7 "We're live" at 21:00, V01 at 21:30). The countdown teasers T3-T6 and Stories S1-S3 have the old Wednesday time burned in and are not posted; "Guess the build time" (T8) is the Wed 28 Oct 21:00 post, and screen-recording Stories S4-S8 use the real countdown. Everything after the launch week keeps its date (ads A01 12-15 Nov and A02 3-4 Dec, creator waves, the no-boost window 20 Nov - 2 Dec, Black Friday, the 22 Nov and 20 Dec checkpoints). The 90 days run Thu 29 Oct 2026 - Tue 26 Jan 2027 (day 90, the day-90 review). `data/calendar.json` and the war room are the source of truth; dates and day numbers in the text below that disagree are from before the move.
+> **Launch moved again (owner decision, Wed 28 Oct 2026, 22:00).** The public launch is **Thursday 29 October 2026 at 01:30 Sarajevo time** (CET, 00:30 UTC), overnight; makeborne.com counts down to that moment. The launch posts (T7, S8) and the waitlist invite go out at 01:30-01:35; Thursday's daytime and evening posts say it is open (LinkedIn 08:45, X thread 14:00, V01 21:30). On 27 Oct it had moved to Thu 21:00. Day 1 = Thu 29 Oct; Mon 26, Tue 27 and Wed 28 Oct are pre-launch days −3, −2 and −1. The launch week moved 1 more day (days 1-7 = 29 Oct - 4 Nov); launch day runs around 21:00 (T7 "We're live" at 21:00, V01 at 21:30). The countdown teasers T3-T6 and Stories S1-S3 have the old Wednesday time burned in and are not posted; "Guess the build time" (T8) is the Wed 28 Oct 21:00 post, and screen-recording Stories S4-S8 use the real countdown. Everything after the launch week keeps its date (ads A01 12-15 Nov and A02 3-4 Dec, creator waves, the no-boost window 20 Nov - 2 Dec, Black Friday, the 22 Nov and 20 Dec checkpoints). The 90 days run Thu 29 Oct 2026 - Tue 26 Jan 2027 (day 90, the day-90 review). `data/calendar.json` and the war room are the source of truth; dates and day numbers in the text below that disagree are from before the move.
 
 
 **Written:** Monday 26 October 2026 (dates updated 27 Oct for the Thursday launch). **Window:** Thu 29 Oct 2026 (day 1) to Tue 26 Jan 2027 (day 90), after the pre-launch days Mon 26 - Wed 28 Oct.
@@ -115,7 +115,7 @@ Launch week (Thu 29 Oct - Wed 4 Nov, after the pre-launch days Mon 26 - Wed 28 O
 ### Directories (owner submits)
 | When | Directory | Cost | Link |
 |---|---|---|---|
-| **Thu 29 Oct, right after the 21:00 launch posts, before any other listing** | There's An AI For That (TAAFT) | $49 (b1); keep the launch-first bonus [F/U] | `/go/taaft` |
+| **Thu 29 Oct, right after the 01:30 launch posts (08:00 at the latest), before any other listing** | There's An AI For That (TAAFT) | $49 (b1); keep the launch-first bonus [F/U] | `/go/taaft` |
 | Fri 30 Oct, once TAAFT is live | AlternativeTo (as an alternative to Lovable, Gamma, Framer and Wix), SaaSHub, Microlaunch, Future Tools | $0 | `/go/alt`, `/go/saashub`, `/go/microlaunch`, `/go/futuretools` (the tracking.md §1.2 codes, also used in outreach `directoryListing`) |
 | Week 1-2 | The Rundown Supertools (free by email) | $0 | `/go/rundown` |
 | Images Product Hunt day | Uneed pick-your-date slot | $30 (b6), booked after the Wed 4 Nov images go/no-go | `/go/uneed` |
@@ -128,7 +128,7 @@ Launch week (Thu 29 Oct - Wed 4 Nov, after the pre-launch days Mon 26 - Wed 28 O
 - **Never:** promote in Lovable's Discord or any competitor's community.
 
 ### Press (owner sends)
-- **Full plan (27 Oct):** the Bosnian and regional media list, the embargoed and post-launch releases in Bosnian, Croatian, Serbian and English, the TV and radio pitches and the Sarajevo stunts: `content/bosnia-guerrilla-press.md` (Library › Bosnia press and guerrilla). BiH outlets get the release on launch day, Thu 29 Oct; the Tue 3 Nov pitch is for the regional tech outlets. The dates there win over this card.
+- **Full plan (27 Oct):** the Bosnian and regional media list, the post-launch releases in Bosnian, Croatian, Serbian and English (no embargo since the 01:30 launch; they go out Thu 08:30), the TV and radio pitches and the Sarajevo stunts: `content/bosnia-guerrilla-press.md` (Library › Bosnia press and guerrilla). BiH outlets get the release on launch day, Thu 29 Oct; the Tue 3 Nov pitch is for the regional tech outlets. The dates there win over this card.
 - **Tue 3 Nov (day 6):** the regional pitch to **Netokracija, Bloomberg Adria, Startit** and the other ex-Yugoslav tech and business outlets in Bosnia press §2.9 (template t16), with 3 real outputs and a founder photo; links `/go/press-<outlet>`. BiH business portals get the Bosnian release on launch day.
 - **Wed 25 Nov:** the 30-day numbers post as a follow-up (`utm_campaign=day30`); **Tue 26 Jan:** the day-90 report (`day90`); a European follow-up at the images beat (t17).
 

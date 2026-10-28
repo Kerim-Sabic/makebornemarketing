@@ -1,14 +1,14 @@
 # Makeborne in Bosnia and Herzegovina: guerrilla and press plan
 
 **Written:** Tue 27 Oct 2026. **Window:** Tue 27 Oct to Sun 15 Nov 2026. **Times:** CET (Sarajevo).
-**Launch:** Thu 29 Oct 2026, 21:00 CET. makeborne.com shows "Thursday 29 October · 21:00 CET" and a waitlist (read on the site, 27 Oct).
+**Launch:** Thu 29 Oct 2026, **01:30 CET** (overnight; the owner moved it from 21:00 on Wed 28 Oct at 22:00). makeborne.com counts down to 01:30 with a waitlist.
 **Who:** the **owner** sends every press email, signs every venue or consent paper and approves money. The **founder** runs social channels, builds live and speaks on camera.
 **Status:** plan only. Nothing here was sent, booked, submitted or posted. No one was contacted.
 
 **Labels:** [F] read at the source on 27 Oct 2026 · [S] secondary source · [E] my estimate · [U] unverified · [O] owner decision.
 
 **Two notes before you start**
-- The launch is **Thu 29 Oct 21:00 CET**; makeborne.com and the war room both count down to it.
+- The launch is **Thu 29 Oct 01:30 CET**; makeborne.com and the war room both count down to it. There is no embargo any more: the release goes out at 08:30, after the launch.
 - The war room (`content/hype-playbook.md`) keeps the regional press pitch (t16) on **Tue 3 Nov 10:00**. This plan adds a **Bosnian layer before it**: BiH outlets get the release on launch day (Thu 29 Oct). The Tue 3 Nov slot now covers only the ex-Yugoslav tech outlets (Netokracija, Startit and others in §2.9).
 - Research limit: the shared web-search budget ran out during research. Every outlet, rule and event below was checked at its own page unless marked [U]. The owner can close the [U] items with one phone call each (list in §9).
 
@@ -18,8 +18,7 @@
 
 1. **The story:** a Sarajevo company launches an AI tool that sells worldwide and joins the race with Silicon Valley and Stockholm. It is backed by things journalists can test: one brief, a stopwatch, a live site.
 2. **Press, in three waves:**
-   - Thu 29 Oct 08:30: an **embargoed** release to 12 trusted outlets (embargo 21:00).
-   - Thu 29 Oct 21:05: the **post-launch** release to every BiH outlet (Bosnian, Croatian for Mostar, Serbian ijekavica for Banja Luka).
+   - Thu 29 Oct 08:30: the **post-launch** release, no embargo, to every BiH outlet at once: the 12 trusted outlets first (list EMB), then the rest (Bosnian, Croatian for Mostar, Serbian ijekavica for Banja Luka). If there was no GO at 01:10, it waits for the owner's new time.
    - Tue 3 Nov 10:00: the regional tech pitch (war room slot), with what happened in week 1.
 3. **TV and radio:** pitch morning shows on Thu 29 Oct for 2-6 Nov. The hook is a site built live in the studio: the host gives the brief.
 4. **Two anchor stunts:** a press demo where **journalists give the brief** (Fri 30 Oct 10:30), and **"Kazandžiluk online"**, websites for Baščaršija craftsmen in one day (Sat 7 Nov).
@@ -62,13 +61,13 @@
 - **TV morning shows:** pitch 3-7 working days ahead and reconfirm the day before [E]. No BiH show publishes a "suggest a topic" page [F]; use the generic desk addresses.
 - **TV news crews:** a weekday event at 10:00-12:00 in central Sarajevo gives crews time to cut for news at 18:30-19:30 [E]. Main news: BHT1 19:00, FTV and RTRS 19:30, Nova BH 18:30, Hayat around 18:52 [S, raspored.tv listings, 27 Oct 2026].
 - **Invite everyone at once.** BiH and regional journalist associations publicly criticise selective invitations ([021.rs example](https://www.021.rs/info/srbija/314885/uns-srpska-lista-samo-pojedine-medije-zvala-na-konferenciju)) [S].
-- **Embargoes:** the BiH press code does not mention them ([VZS kodeks](https://vzs.ba/kodeks-za-stampane-i-online-medije-bih/)) [F]. Don't rely on one. A broken embargo costs little here: the countdown and waitlist are live, so an early story still sends people to the waitlist.
+- **Embargoes:** not used since the launch moved to 01:30 (the release goes out after it). For later news: the BiH press code does not mention embargoes ([VZS kodeks](https://vzs.ba/kodeks-za-stampane-i-online-medije-bih/)) [F]. Don't rely on one. A broken embargo costs little here: the countdown and waitlist are live, so an early story still sends people to the waitlist.
 
 **Lists used in the calendar (owner's mail program, always BCC, never CC; at most 20 addresses per send):**
-- **EMB** (embargo, Thu 08:30): Klix, N1, Radiosarajevo, Oslobođenje, Avaz, Bloomberg Adria BiH, Forbes BiH (owner's own contact if any), FENA, Akta, Biznisinfo, Sarajevo Times, Face.
-- **BIH** (Thu 21:05): every other address in §2.1-2.3 and §2.6.
-- **HR** (Thu 21:05, Croatian version): §2.4.
-- **RS** (Thu 21:05, Serbian ijekavica, Latin): §2.5 and SRNA.
+- **EMB** (first send, Thu 08:30, no embargo): Klix, N1, Radiosarajevo, Oslobođenje, Avaz, Bloomberg Adria BiH, Forbes BiH (owner's own contact if any), FENA, Akta, Biznisinfo, Sarajevo Times, Face.
+- **BIH** (Thu 08:30, right after EMB): every other address in §2.1-2.3 and §2.6.
+- **HR** (Thu 08:30, Croatian version): §2.4.
+- **RS** (Thu 08:30, Serbian ijekavica, Latin): §2.5 and SRNA.
 - **TV** (advisory Wed 12:00, morning-show pitch Thu 10:00): §2.7.
 - **RADIO** (Thu 10:30): §2.8.
 - **REG** (Tue 3 Nov 10:00, war-room slot): §2.9.
@@ -79,7 +78,7 @@
 |---|---|---|---|---|---|
 | **FENA** (Federation news agency) | General news, economy; English service; "Najave" (event advisories) | fena@fena.ba (Redakcija Sarajevo), desk.mostar@fena.ba, desk phone +387 33 445-336, on [fena.ba/page/kontakt](https://www.fena.ba/page/kontakt) | Advisory the day before by 12:00; release at once | Covered Sarajevo IT startups' Vienna support ([21 Apr 2026](https://fena.ba/article/1676086/it-startups-form-sarajevo-win-vienna-support-and-access-to-viennaup-investor-platform)); AI forum ([4 Jun 2026](https://fena.ba/article/1682060/)) | [F] active 27 Oct. How it takes advisories is not stated on its site [U] |
 | **NAP** (Novinska agencija Patria) | Sarajevo agency since 2014; economy | redakcija@nap.ba, [nap.ba/impressum](https://nap.ba/impressum) | Same as FENA | Economy and policy | [F] active 26 Oct |
-| **SRNA** (RS agency, Bijeljina) | General news, Cyrillic site | srna@srna.rs, banjaluka@srna.rs, [srna.rs/kontakt](https://www.srna.rs/kontakt) | Serbian version, Thu 21:05 | RS economy | [F] active 27 Oct |
+| **SRNA** (RS agency, Bijeljina) | General news, Cyrillic site | srna@srna.rs, banjaluka@srna.rs, [srna.rs/kontakt](https://www.srna.rs/kontakt) | Serbian version, Thu 08:30 | RS economy | [F] active 27 Oct |
 | **Anadolu Agency BHS** | Science and technology section | Only the Ankara corporate address on [the impressum](https://www.aa.com.tr/ba/p/impressum); Sarajevo desk [U] | Skip unless the owner finds the Sarajevo desk | Tech programmes, e.g. [27 Oct 2026](https://www.aa.com.tr/ba/nauka-i-tehnologija/google-cloud-i-tursko-tehnološko-udruženje-pokreću-program-stručnog-usavršavanja/4102357) | [F] active; contact [U] |
 
 ### 2.2 Sarajevo and national portals (Bosnian)
@@ -212,45 +211,11 @@ Keep these for the day-30 numbers on Wed 25 Nov (template t17), as the plan says
 
 The owner is a native speaker: read every Bosnian line aloud once before sending. The filled, ready-to-send versions (founder name, phone, press-kit link) are in the owner's private notes: send those. If the press demo moves from the office to a café, change the venue line in `c01`-`c05`.
 
-### 3.1 Embargoed release, Bosnian (Thu 29 Oct, 08:30, list EMB)
+### 3.1 Embargoed release, Bosnian: not used
 
-Copy ID: `c01`
-```text
-Naslov e-maila: EMBARGO do četvrtka, 29. 10. u 21:00 | Sarajevska firma lansira Makeborne: od jednog briefa do web stranice za nekoliko minuta
+Copy ID: `c01` (retired). The launch moved to Thu 29 Oct 01:30 CET, so nothing goes out under embargo: at 08:30 every list gets the post-launch release `c02` (§3.2), and Sarajevo Times gets the English `c03` (§3.3). Under Plan B (no GO at 01:10) the release waits for the owner's new time.
 
-SAOPĆENJE ZA MEDIJE
-EMBARGO: molimo da ne objavljujete prije četvrtka, 29. oktobra 2026. u 21:00.
-
-Sarajevska firma lansira Makeborne: od jednog briefa do web stranice za nekoliko minuta
-
-Sarajevo, 29. oktobar 2026. Sarajevska firma ZORBY&CO D.O.O. večeras u 21:00 pokreće Makeborne (makeborne.com), alat zasnovan na umjetnoj inteligenciji. Korisnik napiše jedan brief, odnosno pisani opis onoga što mu treba. Makeborne od tog briefa napravi gotovu web stranicu, dizajniranu e-knjigu ili prezentaciju.
-
-U našim testnim izradama web stranica je bila gotova za 2 minute i 7 sekundi. Prezentacija je bila gotova za 43 sekunde, a e-knjiga za minutu i 23 sekunde. Web stranica se objavljuje na Makeborne adresi i odmah je dostupna na internetu.
-
-Makeborne se od prvog dana prodaje kupcima u cijelom svijetu. Postoje samo plaćeni paketi: Create za 20, Studio za 49 i Scale za 99 američkih dolara mjesečno.
-
-Najpoznatiji alati ove vrste dolaze iz Silicijske doline i Stockholma, gdje je sjedište švedskog Lovablea. Makeborne u tu utakmicu ulazi iz Sarajeva.
-
-„Makeborne smo napravili u Sarajevu, za ljude kojima treba gotov posao, a ne još jedan program koji moraju učiti. Napišete jedan brief i za nekoliko minuta imate web stranicu, prezentaciju ili knjigu. Želimo pokazati da se softver za cijeli svijet može praviti i odavde“, kaže [ime i prezime], osnivač Makebornea.
-
-Kako Makeborne radi:
-1. Korisnik napiše jedan brief: za koga je stranica, šta nudi i kakav utisak treba ostaviti.
-2. Makeborne napravi web stranicu, prezentaciju ili e-knjigu.
-3. Korisnik pregleda rezultat i objavi stranicu na Makeborne adresi.
-
-Testirajte Makeborne uživo: u petak, 30. oktobra u 10:30, u našem uredu na Vilsonovom šetalištu 10, zadajte nam svoj brief. Stranica će nastati pred vama, sa štopericom na ekranu.
-
-O firmi
-ZORBY&CO D.O.O. je firma iz Sarajeva, sa sjedištem na Vilsonovom šetalištu 10. Razvija Makeborne i prodaje ga kupcima širom svijeta.
-
-Napomene za urednike
-- Fotografije, snimci ekrana i činjenice: [link na press kit]
-- Cijene u KM: otprilike 35, 86 i 173 KM mjesečno (kurs CBBiH od 27. 10. 2026), plus porez gdje se primjenjuje.
-- Dizajni skriveni iza odbrojavanja na makeborne.com nisu napravljeni u Makeborneu. Molimo da ih ne predstavljate kao rezultat alata.
-- Kontakt za medije: [ime i prezime], admin@makeborne.com, [telefon]
-```
-
-### 3.2 Post-launch release, Bosnian (Thu 29 Oct, 21:05, lists BIH; HR and RS get the adapted versions in §3.4)
+### 3.2 Post-launch release, Bosnian (Thu 29 Oct, 08:30, lists EMB then BIH; HR and RS get the adapted versions in §3.4)
 
 Copy ID: `c02`
 ```text
@@ -261,7 +226,7 @@ Za objavu odmah
 
 Sarajevska firma lansirala Makeborne: od jednog briefa do web stranice za nekoliko minuta
 
-Sarajevo, [datum slanja]. Sarajevska firma ZORBY&CO D.O.O. u četvrtak, 29. oktobra u 21:00 pokrenula je Makeborne (makeborne.com), alat zasnovan na umjetnoj inteligenciji. Korisnik napiše jedan brief, odnosno pisani opis onoga što mu treba. Makeborne od tog briefa napravi gotovu web stranicu, dizajniranu e-knjigu ili prezentaciju.
+Sarajevo, [datum slanja]. Sarajevska firma ZORBY&CO D.O.O. u četvrtak, 29. oktobra u 01:30 pokrenula je Makeborne (makeborne.com), alat zasnovan na umjetnoj inteligenciji. Korisnik napiše jedan brief, odnosno pisani opis onoga što mu treba. Makeborne od tog briefa napravi gotovu web stranicu, dizajniranu e-knjigu ili prezentaciju.
 
 U našim testnim izradama web stranica je bila gotova za 2 minute i 7 sekundi. Prezentacija je bila gotova za 43 sekunde, a e-knjiga za minutu i 23 sekunde. Web stranica se objavljuje na Makeborne adresi i odmah je dostupna na internetu.
 
@@ -291,17 +256,14 @@ Napomene za urednike
 
 Copy ID: `c03`
 ```text
-Email subject: EMBARGOED until Thu 29 Oct, 21:00 CET | Sarajevo company launches Makeborne: from one brief to a finished website in minutes
-[Post-launch: delete "EMBARGOED until Thu 29 Oct, 21:00 CET |" from the subject.]
+Email subject: Sarajevo company launches Makeborne: from one brief to a finished website in minutes
 
 PRESS RELEASE
-EMBARGOED until Thursday 29 October 2026, 21:00 CET.
-[Post-launch: replace this line with "For immediate release".]
+For immediate release.
 
 Sarajevo company launches Makeborne: from one brief to a finished website in minutes
 
-Sarajevo, 29 October 2026. ZORBY&CO D.O.O., a company from Sarajevo, Bosnia and Herzegovina, launches Makeborne (makeborne.com) tonight at 21:00 CET.
-[Post-launch: "...launched Makeborne (makeborne.com) on Thursday 29 October at 21:00 CET."]
+Sarajevo, 29 October 2026. ZORBY&CO D.O.O., a company from Sarajevo, Bosnia and Herzegovina, launched Makeborne (makeborne.com) on Thursday 29 October at 01:30 CET.
 Makeborne is an AI tool. You write one brief: a written description of what you need. Makeborne turns it into a finished website, a designed ebook or a slide deck.
 
 In our test runs, a website was ready in 2 minutes 7 seconds, a deck in 43 seconds and a book in 1 minute 23 seconds. Websites are published on a Makeborne address and are online straight away.
@@ -340,7 +302,7 @@ Take `c02` and change only these words. The owner or a native speaker checks the
 | 29. oktobra / 30. oktobra | 29. listopada / 30. listopada | 29. oktobra / 30. oktobra |
 | web stranica | web-stranica | veb-sajt (or sajt) |
 | šta nudi | što nudi | šta nudi |
-| u 21:00 | u 21 sat | u 21 čas |
+| u 01:30 | u 1.30 | u 1.30 |
 | sa sjedištem na Vilsonovom šetalištu 10 | sa sjedištem na Vilsonovom šetalištu 10 | sa sjedištem na Vilsonovom šetalištu 10 |
 | kurs CBBiH | tečaj CBBiH | kurs CBBiH |
 | porez gdje se primjenjuje | porez gdje se primjenjuje | porez gdje se primjenjuje |
@@ -377,7 +339,7 @@ Naslov e-maila: DANAS u 10:30 | Test uživo: novinari zadaju brief, sarajevski A
 
 Poštovani,
 
-podsjećamo: danas u 10:30, u našem uredu na Vilsonovom šetalištu 10, predstavljamo Makeborne. Sarajevska firma ZORBY&CO pokrenula ga je sinoć u 21:00. Zadajte brief i gledajte kako stranica nastaje, sa štopericom na ekranu. Izjave za medije su od 11:00.
+podsjećamo: danas u 10:30, u našem uredu na Vilsonovom šetalištu 10, predstavljamo Makeborne. Sarajevska firma ZORBY&CO pokrenula ga je u četvrtak, 29. oktobra. Zadajte brief i gledajte kako stranica nastaje, sa štopericom na ekranu. Izjave za medije su od 11:00.
 
 Potvrda dolaska: [telefon]
 
@@ -395,7 +357,7 @@ Poštovani,
 
 predlažem kratko gostovanje u emisiji [naziv emisije] u periodu od 30. oktobra do 6. novembra. [Za FTV: "Čestitamo na 25 godina programa. Predlažem gostovanje od 4. do 6. novembra."]
 
-Sarajevska firma ZORBY&CO u četvrtak, 29. oktobra u 21:00 pokreće Makeborne, alat zasnovan na umjetnoj inteligenciji. Od jednog briefa pravi web stranicu, e-knjigu ili prezentaciju. U našim testnim izradama web stranica je bila gotova za 2 minute i 7 sekundi.
+Sarajevska firma ZORBY&CO u četvrtak, 29. oktobra u 01:30 pokrenula je Makeborne, alat zasnovan na umjetnoj inteligenciji. Od jednog briefa pravi web stranicu, e-knjigu ili prezentaciju. U našim testnim izradama web stranica je bila gotova za 2 minute i 7 sekundi.
 
 Prijedlog za studio: na početku razgovora voditelj zada brief, na primjer za pekaru iz komšiluka. Dok razgovaramo, stranica nastaje na laptopu. Na kraju je pokažemo, objavljenu na internetu. Donosimo vlastiti laptop i mobilni internet. Za kadar je dovoljan jedan ekran ili snimak ekrana.
 
@@ -482,7 +444,7 @@ S poštovanjem,
 3. **Real output screenshots:** 1 website, 1 deck, 1 book. Each comes with its original brief shown next to it. Use real outputs only.
 4. **Build screenshot:** a website mid-build with the timer visible.
 5. **Video:** a 30-60 s real-speed screen recording of a website build, uncut, with the timer. Anything shorter must say "ubrzano" / "sped up" on screen.
-6. **Launch-night photo:** the countdown hitting zero (added Thu 21:30).
+6. **Launch-evening photo:** a live build on the big screen at the venue (added Thu 21:30).
 7. **Fact sheet** (below) and **founder bio** (placeholder below), Bosnian and English.
 8. **Q&A sheet** (below): for the founder and owner before any interview. It is not sent to journalists.
 9. **Caption file:** one line per photo, plus "Slobodno za objavu uz potpis: Makeborne / ZORBY&CO".
@@ -495,7 +457,7 @@ S poštovanjem,
 |---|---|---|
 | Firma / Company | ZORBY&CO D.O.O., Vilsonovo šetalište 10, Sarajevo, Bosna i Hercegovina | ZORBY&CO D.O.O., Vilsonovo šetalište 10, Sarajevo, Bosnia and Herzegovina |
 | Proizvod / Product | Makeborne, makeborne.com, Instagram @makeborne | Makeborne, makeborne.com, Instagram @makeborne |
-| Pokretanje / Launch | četvrtak, 29. oktobar 2026, 21:00 | Thursday 29 October 2026, 21:00 CET |
+| Pokretanje / Launch | četvrtak, 29. oktobar 2026, 01:30 | Thursday 29 October 2026, 01:30 CET |
 | Šta pravi / What it makes | Od jednog briefa: web stranicu (objavljenu na Makeborne adresi), dizajniranu e-knjigu ili prezentaciju | From one brief: a website (published on a Makeborne address), a designed ebook or a slide deck |
 | Vrijeme izrade / Build times | U testnim izradama: web stranica 2 minute i 7 sekundi, prezentacija 43 sekunde, e-knjiga 1 minuta i 23 sekunde | In test runs: website 2 minutes 7 seconds, deck 43 seconds, ebook 1 minute 23 seconds |
 | Cijene / Prices | Create 20 USD, Studio 49 USD, Scale 99 USD mjesečno, plus porez gdje se primjenjuje (oko 35, 86 i 173 KM). Samo plaćeni paketi. | Create $20, Studio $49, Scale $99 a month, plus tax where applicable. Paid plans only. |
@@ -546,7 +508,7 @@ S poštovanjem,
 | Rank | Stunt | Date | Cash KM (USD) | Builds | Total KM | Expected items [E] | KM per item |
 |---|---|---|---|---|---|---|---|
 | 1 | Studio and newsroom live builds: "Voditelj zadaje brief" | 30 Oct - 13 Nov | 0 | 4 | 7 | 2-7 | 1.6 |
-| 2 | The 21:00 moment at a partner venue | Thu 29 Oct | 0 (optional 100 KM / $57.20) | 1 | 1.75 | 0-2 | 1.75 |
+| 2 | The launch evening at a partner venue | Thu 29 Oct | 0 (optional 100 KM / $57.20) | 1 | 1.75 | 0-2 | 1.75 |
 | 3 | **Press demo: "Novinari zadaju brief"** (anchor) | Fri 30 Oct 10:30 | 40 ($22.88) | 6 | 50.5 | 4-12 | 6.3 |
 | 4 | GDG Cloud Sarajevo live build | Sun 8 Nov | 0 | 2 | 3.5 | 0-1 | 7 |
 | 5 | University live demos (ETF, SSST, IUS, IBU) | 9-13 Nov | 0 | 12 | 21 | 1-4 | 8.4 |
@@ -572,15 +534,16 @@ Shared costs: consent forms and printouts 15 KM ($8.58); mobile data backup for 
 - **Filming for social:** record the laptop screen with the timer (screen capture). Post the broadcaster's own link or clip only with its permission; never re-upload its footage.
 - **Why journalists cover it:** live, visual, local and on the AI theme the shows already run. The stopwatch gives the segment tension and an ending.
 
-#### S2. The 21:00 moment at a partner venue (Thu 29 Oct, 20:30-22:30)
-- **What happens:** 15-30 invited people (friends, local designers and developers, customers, any journalist who wants to come) watch the real makeborne.com countdown hit zero on a big screen. The owner hosts. The founder posts the war-room launch sequence from a corner table (20:59:45 to 21:30). The owner photographs the room and screen at 21:00 for the press kit. If the founder is ahead of the posting schedule at about 22:40, one live build from a brief the room chooses.
+#### S2. The launch evening at a partner venue (Thu 29 Oct, 20:30-22:30)
+- **What happens:** the site opened at 01:30 the night before, so this is the launch evening, not a countdown. 15-30 invited people (friends, local designers and developers, customers, any journalist who wants to come) see makeborne.com live on a big screen. At about 21:00 one guest gives a brief and the founder builds it live, stopwatch visible. The owner hosts and photographs the room and screen for the press kit. The founder runs the evening push from a corner table (21:05 C15, 21:30 V01).
+- **Guests already invited for the countdown:** the owner tells them on Wed 28 Oct (22:50) that the site opens at 01:30 and Thursday 20:30 stays as the launch evening with live builds.
 - **Where:** the ZORBY&CO office at Vilsonovo šetalište 10, if it holds 15 people and has a screen [O]. Otherwise a café in Centar or Novo Sarajevo with a TV, booked for a quiet corner with the owner's written yes (`c10`, `c12`).
 - **Permits:** none indoors. No screen facing the street (a window-facing screen may count as an advert under Centar's 2026 rules, [SN KS 19/26](https://www.centar.ba/upload/modules/documents/2026/d43b304dae54c823a914537c5e83a4e4.pdf)) [U]. The venue's normal music only. Nobody gathers outside.
-- **Cost:** 0 KM (guests pay their own drinks). Optional: 100 KM ($57.20) tab if the venue asks for a minimum spend (OD1). About 1 build.
+- **Cost:** 0 KM (guests pay their own drinks). Optional: 100 KM ($57.20) tab if the venue asks for a minimum spend (OD1). About 1-2 builds.
 - **Materials:** venue TV or monitor, HDMI cable, laptop with makeborne.com open signed out, 4G backup, door sign `c23`, consent sheet `c11`.
-- **People:** owner (host, photos), founder (posting), 1 volunteer (video).
-- **Filming:** 9:16 video of the last 10 seconds on the big screen, with the room seen from behind. Close-ups only of people who signed.
-- **Why journalists cover it:** they mostly won't come at 21:00, but Friday's stories need a "moment" photo. That photo is the return.
+- **People:** owner (host, photos), founder (live build, posting), 1 volunteer (video).
+- **Filming:** 9:16 video of the last 10 seconds of the live build on the big screen, with the room seen from behind. Close-ups only of people who signed.
+- **Why journalists cover it:** they mostly won't come in the evening, but Friday's stories need a "moment" photo. That photo is the return.
 
 #### S3. Press demo: "Novinari zadaju brief" (Fri 30 Oct, 10:30-11:30) — anchor
 - **What happens:**
@@ -805,12 +768,12 @@ Baščaršija craftsmen, one brief each, one day. [N] websites, real timers.
 makeborne.com
 ```
 
-Launch-night Story text (founder, Thu 20:55, from the venue):
+Launch-evening Story text (founder, Thu 20:55, from the venue):
 
 Copy ID: `c21`
 ```text
-Sarajevo, još 5 minuta.
-Uživo iz [mjesto].
+Sarajevo, Makeborne je otvoren od noćas.
+Večeras gradimo uživo iz [mjesto].
 ```
 
 Thank-you note to journalists who published (owner, Sat 31 Oct; no ask):
@@ -967,15 +930,15 @@ Every dated action is also on Today in the war room, with its copy. Costs are ap
 | | 13:00 | Owner | Send university pitches `c15` + `c16` to ETF, SSST, IUS, IBU. | 0 |
 | | 14:00 | Owner | Send the GDG Cloud Sarajevo contact form `c17`. | 0 |
 | | 16:00 | Founder | Register every /go/ code used here in the private code register. Make the QR codes. | 0 |
-| **Thu 29 Oct** | 08:30 | Owner | Send the embargoed release `c01` to EMB (Sarajevo Times gets `c03`). | 0 |
+| | 22:50 | Owner | Tell the venue and anyone invited to the Thursday countdown: the site opens tonight at 01:30; Thursday 20:30 stays as the launch evening with live builds. | 0 |
+| **Thu 29 Oct** | 08:30 | Owner | Send the post-launch release `c02`, no embargo: EMB first, then BIH; Croatian version to HR; Serbian ijekavica version to RS and SRNA; Sarajevo Times gets `c03`. Only after the 01:30 GO. | 0 |
 | | 10:00 | Owner | Send morning-show pitches `c06` (one per show): N1 Novi dan, TVSA Sarajevsko jutro, FTV Dobro jutro (for 4-6 Nov), Hayat Dobar dan BiH, Face, RTV TK, RTV Zenica, ATV. DM Nova BH Naše jutro. Phone RTRS. | 0 |
 | | 10:30 | Owner | Send radio pitches `c07`: Radio M, Radio FBiH, BiG. Phone Kalman Radio (Tema dana) and Nes Radio. | 0 |
-| | 12:00 | Founder | Dry run at the launch-night venue: screen, HDMI, Wi-Fi and 4G. | 20 KM ($11.44) data |
+| | 12:00 | Founder | Dry run at the launch-evening venue: screen, HDMI, Wi-Fi and 4G. | 20 KM ($11.44) data |
 | | 20:15 | Owner | Open the venue: door sign `c23`, consent sheet, screen showing makeborne.com. | 0 (optional tab 100 KM) |
-| | 20:55 | Founder | Story `c21`, then the war-room launch sequence from the venue. | 0 |
-| | 21:00 | Owner | Photograph the screen hitting zero and the room. | 0 |
-| | 21:05 | Owner | Send the post-launch release `c02` to BIH; Croatian version to HR; Serbian ijekavica version to RS. | 0 |
-| | 21:30 | Owner | Add the launch-night photo to the press kit. Send it to EMB in one short line. | 0 |
+| | 20:55 | Founder | Story `c21`, then the evening push from the venue (21:05 C15, 21:30 V01). | 0 |
+| | 21:00 | Both | Live build for the room; the owner photographs the screen and the room. | 0 |
+| | 21:30 | Owner | Add the launch-evening photo to the press kit. Send it to EMB in one short line. | 0 |
 | **Fri 30 Oct** | 08:00 | Owner | Send reminder `c05` to TV desks and agencies. | 0 |
 | | 10:00 | Both | Set up S3: stopwatch on screen, consent forms, fact sheets. | 40 KM ($22.88) |
 | | 10:30 | Both | **S3 press demo**. Founder builds; owner hosts. | 6 builds |
@@ -1052,10 +1015,10 @@ Every dated action is also on Today in the war room, with its copy. Costs are ap
 | OD2 | **Gifted sites**: up to 20 craftsmen (S7), up to 10 associations (S8), 1 ćevabdžinica (S6), radio callers (S1). How long they stay live, whether the recipient ever pays, removal on request. About 45 builds in all | Inside the D14 demo-build line (AI cost in the owner's private notes) | 12 months live, no cost to the recipient, removal within 7 days of a request. Built and published from the team's own workspace; the founder checks that before S6 (Fri 30 Oct) |
 | OD3 | Grow the craftsmen gift from 20 to 100 sites (after this window) | About $100 (175 KM) of AI cost | Decided on Sun 15 Nov from S7's results |
 | OD4 | SCC square stand (S10): ask SCC for a quote | ≤150 KM ($85.80) + 8 KM ($4.58) Centar admin tax if a public spot is used | Ask for the quote after 15 Nov; approve only with written approval and a total of ≤150 KM |
-| OD5 | Founder quote, founder name and bio in the release | — | The quote in `c01`-`c03` stands as written; name and bio are in the owner's private notes. The owner reads it aloud on Wed 28 Oct 11:30 |
+| OD5 | Founder quote, founder name and bio in the release | — | The quote in `c02`-`c03` stands as written (`c01` is retired); name and bio are in the owner's private notes. The owner reads it aloud on Wed 28 Oct 11:30 |
 | OD6 | Who is the media contact (name, email, phone) | — | The owner, at admin@makeborne.com; the phone number is in the owner's private notes |
 | OD7 | Use the warm routes from earlier coverage (owner's private notes) | — | Yes: one true line in the cover note to those three outlets only (text in the owner's private notes) |
-| OD8 | The embargo list (EMB) | — | As in §2; add any journalist the owner already knows |
+| OD8 | The first list (EMB; no embargo since the 01:30 launch) | — | As in §2; add any journalist the owner already knows |
 | OD9 | Where the press kit lives (shared folder or makeborne.com/press) | — | A view-only shared folder now (the owner makes it on Wed 28 Oct 11:00); /press later |
 | OD10 | Venues: the office at Vilsonovo šetalište 10 for S2 and S3, or a café | — | The office for S3 if it holds 12-15 people, otherwise the café that said yes; S2 at the café that said yes, otherwise the office |
 | OD11 | Refund wording in the fact sheet (D1) | — | Keep the line, in the live terms' words (fact sheet, §3.10) |

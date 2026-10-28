@@ -88,9 +88,9 @@ export function fmtCompact(n: number) {
 
 /** First day of the calendar and of week 1 (Mon 26 Oct 2026, pre-launch day −3). Weeks run Monday to Sunday from here. */
 export const WINDOW_START = '2026-10-26';
-/** The public launch: Thu 29 Oct 2026 at 21:00 Sarajevo time (CET, 20:00 UTC). Day 1 of the 90 days. */
+/** The public launch: Thu 29 Oct 2026 at 01:30 Sarajevo time (CET, 00:30 UTC), moved from 21:00 on Wed 28 Oct. Day 1 of the 90 days. */
 export const LAUNCH_DAY = '2026-10-29';
-export const LAUNCH_AT_UTC = '2026-10-29T20:00:00Z';
+export const LAUNCH_AT_UTC = '2026-10-29T00:30:00Z';
 /** Day 90 and the day-90 review: Tue 26 Jan 2027 (the last calendar day; Mon 25 and Tue 26 Jan sit inside week 13). */
 export const DAY90 = '2027-01-26';
 export const WINDOW_DAYS = 90;

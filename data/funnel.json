@@ -2,7 +2,7 @@
   "meta": {
     "title": "Makeborne funnel and ARR calculator inputs",
     "version": "2026-10-26",
-    "window": "2026-10-29 to 2027-01-27 (13 weeks, 91 model days; day 1 = Thu 29 Oct 2026, the public launch at 21:00 CET; the day-90 review is Tue 26 Jan 2027)",
+    "window": "2026-10-29 to 2027-01-27 (13 weeks, 91 model days; day 1 = Thu 29 Oct 2026, the public launch at 01:30 CET; the day-90 review is Tue 26 Jan 2027)",
     "currency": "USD",
     "labels": {
       "F": "verified fact",
